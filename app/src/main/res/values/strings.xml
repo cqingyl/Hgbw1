@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hgbw</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_my_ticket">MyTicketActivity</string>
+    <string name="title_activity_details">DetailsActivity</string>
+
+    <string name="rmb_display">¥%.2f</string>
+    <string name="startlocation">开始定位</string>
+    <string name="stoplocation">停止定位</string>
+</resources>

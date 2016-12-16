@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_bar_h"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/top_bar_color" >
+
+        <!-- android:drawableLeft="@drawable/arrow_back" -->
+
+        <TextView
+            android:id="@+id/tv_top_left"
+            style="@style/MyTextView14"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+           
+            android:gravity="center_vertical"
+            android:minWidth="60dp"
+            android:paddingLeft="@dimen/left_right_10"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_top_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_bighuge" />
+
+        <TextView
+            android:id="@+id/tv_top_right"
+            style="@style/MyTextView16"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:minWidth="60dp"
+            android:paddingRight="@dimen/left_right_10"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>
