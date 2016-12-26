@@ -175,6 +175,10 @@ OnClickListener {
 			if (!to.isAdded()) {
 				ft.add(content, to);
 			}
+//			if (to == HgbwApplication.getCarFragment()) {
+//				ft.replace(content, currentFragment).commit();
+//				return;
+//			}
 			ft.show(to);
 			ft.commitAllowingStateLoss();
 		}
@@ -212,6 +216,7 @@ OnClickListener {
 				R.anim.push_right_out).add(R.id.fl_content, to)
 				.addToBackStack(null).commitAllowingStateLoss();
 	}
+
 
 	public FragmentTransaction hideMainFragment() {
 		FragmentTransaction fragmentTransaction = manager.beginTransaction();

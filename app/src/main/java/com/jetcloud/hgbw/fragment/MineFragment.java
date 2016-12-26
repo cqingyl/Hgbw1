@@ -1,14 +1,5 @@
 package com.jetcloud.hgbw.fragment;
 
-import com.jetcloud.hgbw.activity.LoginActivity;
-import com.jetcloud.hgbw.activity.MainActivity;
-import com.jetcloud.hgbw.activity.MyTicketActivity;
-import com.jetcloud.hgbw.activity.RegisterActivity;
-import com.jetcloud.hgbw.utils.Out;
-import com.jetcloud.hgbw.view.CircleImageView;
-import com.jetcloud.hgbw.view.TopBar;
-import com.jetcolud.hgbw.R;
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Intent;
@@ -19,6 +10,13 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.jetcloud.hgbw.activity.LoginActivity;
+import com.jetcloud.hgbw.activity.MainActivity;
+import com.jetcloud.hgbw.activity.MyTicketActivity;
+import com.jetcloud.hgbw.activity.RegisterActivity;
+import com.jetcloud.hgbw.utils.Out;
+import com.jetcolud.hgbw.R;
 
 @SuppressLint("ResourceAsColor")
 public class MineFragment extends BaseFragment{
@@ -35,7 +33,7 @@ public class MineFragment extends BaseFragment{
 	@Override
 	public View initRootView(LayoutInflater inflater, ViewGroup container) {
 		// TODO Auto-generated method stub
-		return View.inflate(getActivity(), R.layout.minefragment, null);
+		return View.inflate(getActivity(), R.layout.fragment_mine, null);
 	}
 
 	@Override

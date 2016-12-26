@@ -12,6 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.jetcloud.hgbw.bean.GoodsInfo;
+
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
@@ -23,10 +25,10 @@ import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     private Context context ;
-    private List<Good> data;
+    private List<GoodsInfo> data;
     private int goodNum;
     static   int goodId;
-    public MyAdapter(Context context, List<Good> data) {
+    public MyAdapter(Context context, List<GoodsInfo> data) {
         super();
         this.context = context;
         this.data = data;
@@ -44,11 +46,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
     @Override
     public void onBindViewHolder(MyAdapter.MyViewHolder holder, int position) {
-        holder.tvIntro.setText(data.get(position).getTitle());
-        holder.tvColorSize.setText(data.get(position).getContent());
-        goodNum = data.get(position).getNumber();
-        holder.tvBuyNum.setText(String.valueOf(goodNum));
-        holder.tvPrice.setText(String.valueOf(data.get(position).getPrice()));
+//        holder.tvIntro.setText(data.get(position).getTitle());
+//        holder.tvColorSize.setText(data.get(position).getContent());
+//        goodNum = data.get(position).getNumber();
+//        holder.tvBuyNum.setText(String.valueOf(goodNum));
+//        holder.tvPrice.setText(String.valueOf(data.get(position).getPrice()));
     }
 
 

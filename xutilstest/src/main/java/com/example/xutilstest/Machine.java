@@ -1,5 +1,7 @@
 package com.example.xutilstest;
 
+import com.jetcloud.hgbw.bean.GoodsInfo;
+
 import org.xutils.DbManager;
 import org.xutils.db.annotation.Column;
 import org.xutils.db.annotation.Table;
@@ -19,8 +21,8 @@ public class Machine {
 
     @Column(name = "mid")
     private long mId;
-    public List<Good> getGoods(DbManager db) throws DbException {
-        return db.selector(Good.class).where("machineId", "=", this.id).findAll();
+    public List<GoodsInfo> getGoods(DbManager db) throws DbException {
+        return db.selector(GoodsInfo.class).where("machineId", "=", this.id).findAll();
     }
 
     public Machine(long mId) {

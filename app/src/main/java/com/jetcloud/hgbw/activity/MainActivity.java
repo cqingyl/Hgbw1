@@ -1,7 +1,6 @@
 package com.jetcloud.hgbw.activity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -118,6 +117,7 @@ public class MainActivity extends BaseActivity {
 		} else if (view == takefood) {
 			if (HgbwApplication.getTakeFoodFragment() == null) {
 				HgbwApplication.setTakeFoodFragment(TakeFoodFragment.newInstance());
+
 			}
 		
 			switchContent(HgbwApplication.getTakeFoodFragment(), R.id.fl_content);
@@ -206,9 +206,5 @@ public class MainActivity extends BaseActivity {
 			}
 		}
 	}
-	@Override
-	public void onResume() {
-		Log.i("asdasda", "onResume: ");
-		super.onResume();
-	}
+
 }

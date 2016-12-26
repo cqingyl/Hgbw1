@@ -6,18 +6,19 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Environment;
 
-import com.baidu.mapapi.SDKInitializer;
 import com.jetcloud.hgbw.fragment.HomeFragment;
 import com.jetcloud.hgbw.fragment.MineFragment;
 import com.jetcloud.hgbw.fragment.ShopCarFragment;
 import com.jetcloud.hgbw.fragment.TakeFoodFragment;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
+import com.jetcloud.hgbw.utils.XUtil;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
+import org.xutils.DbManager;
 import org.xutils.x;
 
 import java.io.File;
@@ -30,7 +31,8 @@ public class HgbwApplication extends Application{
 	private static TakeFoodFragment takeFoodFragment;
 	private static ShopCarFragment carFragment;
 	private static MineFragment mineFragment;
-
+	public DbManager.DaoConfig daoConfig;
+	public DbManager db;
 	@Override
 	public void onCreate() {
 		// TODO Auto-generated method stub
@@ -41,10 +43,12 @@ public class HgbwApplication extends Application{
 		initImageLoader(context);
 		//初始化xutils3
 		x.Ext.init(this);
+		daoConfig = XUtil.getDaoConfig();
+		db = x.getDb(daoConfig);
 		//初始化SharePreference
 		SharedPreferenceUtils.initData(getApplicationContext());
 		// 在使用 SDK 各组间之前初始化 context 信息，传入 ApplicationContext
-		SDKInitializer.initialize(getApplicationContext());
+//		SDKInitializer.initialize(this);
 	}
 	
 	public void addActivity(Activity activity) {

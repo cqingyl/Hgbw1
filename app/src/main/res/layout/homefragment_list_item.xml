@@ -29,6 +29,7 @@
             android:textSize="@dimen/text_small" />
 
         <TextView
+            android:id="@+id/tv_machine_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
@@ -45,6 +46,7 @@
         android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/tv_food_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="午餐肉套饭"
@@ -66,6 +68,7 @@
                 android:textSize="@dimen/text_small" />
 
             <TextView
+                android:id="@+id/tv_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
@@ -77,6 +80,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
@@ -109,6 +113,7 @@
                 android:background="@drawable/shopbuttonbg"
                 />
             <TextView
+                android:id="@+id/tv_btn_apply"
                 android:clickable="true"
                 android:layout_marginLeft="15dp"
                 android:layout_width="wrap_content"

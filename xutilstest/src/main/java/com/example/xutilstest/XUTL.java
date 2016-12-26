@@ -1,7 +1,8 @@
 package com.example.xutilstest;
 
 import android.content.Context;
-import android.os.Environment;
+
+import com.google.gson.Gson;
 
 import org.xutils.DbManager;
 
@@ -13,26 +14,11 @@ import java.io.File;
 
 public class XUTL {
 
-    static Context context;
     private static final String dataBaseName = "hgbw.db";
     static DbManager.DaoConfig daoConfig;
 
-    public static void setContext(Context context) {
-        XUTL.context = context;
-    }
-    // 判断SD卡是否被挂载
-    public static boolean isSDCardMounted() {
-        return Environment.getExternalStorageState().equals(
-                Environment.MEDIA_MOUNTED);
-    }
-
-    // 获取SD卡私有Cache目录的路径 或者
-    public static String getSDCardPrivateCacheDir(Context context) {
-            return isSDCardMounted() ? context.getExternalFilesDir(dataBaseName).getAbsolutePath() : context.getFilesDir().getAbsolutePath();
-    }
-
-    public static DbManager.DaoConfig getDaoConfig(){
-        File file=new File(getSDCardPrivateCacheDir(context));
+    public static DbManager.DaoConfig getDaoConfig(Context context){
+        File file = new File(context.getDir("database", 0).getAbsolutePath());
         if(daoConfig==null){
             daoConfig=new DbManager.DaoConfig()
                     .setDbName(dataBaseName)
@@ -47,6 +33,12 @@ public class XUTL {
                     });
         }
         return daoConfig;
+    }
+    static Gson gson = new Gson();
+
+
+    public static <T> T json2Obj(String json, Class<T> clazz) {
+        return gson.fromJson(json, clazz);
     }
 
 }

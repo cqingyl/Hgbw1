@@ -13,7 +13,7 @@ public class SharedPreferenceUtils {
     private static SharedPreferences.Editor editor;
     private static Context mContext;
     private final static String PACKAGE_NAME = "com.jetcloud.hgbw";
-    private static int shopCarNumber;
+    private static String SHOP_CAR_NUMBER = "shopCarNumber";
 
     public static void initData (Context context){
         mContext = context;
@@ -24,11 +24,11 @@ public class SharedPreferenceUtils {
     }
 
     public static int getShopCarNumber() {
-        return preferences.getInt("shopCarNumber", 0);
+        return preferences.getInt(SHOP_CAR_NUMBER, 0);
     }
 
     public static void setShopCarNumber(int shopCarNumber) {
-        editor.putInt("shopCarNumber", shopCarNumber).commit();
+        editor.putInt(SHOP_CAR_NUMBER, shopCarNumber).commit();
     }
 
     public static void clear() {

@@ -9,10 +9,11 @@ import org.xutils.x;
  */
 
 public class XUtilsTestApplication extends Application{
+    public String s;
     @Override
     public void onCreate() {
         super.onCreate();
         x.Ext.init(this);
-
+        s = "im in application";
     }
 }

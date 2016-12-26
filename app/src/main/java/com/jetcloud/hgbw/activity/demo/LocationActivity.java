@@ -39,9 +39,6 @@ public class LocationActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//在使用SDK各组件之前初始化context信息，传入ApplicationContext
-		//注意该方法要再setContentView方法之前实现
-		SDKInitializer.initialize(getApplicationContext());
 		setContentView(R.layout.activity_location);
 
 		//注册广播
@@ -67,7 +64,7 @@ public class LocationActivity extends Activity {
 
 	}
 
-	private void init(){
+	private void init() {
 		// 开启定位图层
 		mBaiduMap.setMyLocationEnabled(true);
 		// 定位初始化
@@ -88,14 +85,16 @@ public class LocationActivity extends Activity {
 		//显示指南针
 		mBaiduMap.getUiSettings().setCompassEnabled(true);
 		//显示位置
-		mBaiduMap.setCompassPosition(new Point(-1,-1));
+		mBaiduMap.setCompassPosition(new Point(-1, -1));
 	}
+
 	BitmapDescriptor bitmap;
+
 	// 绘制mark覆盖物
 	private void drawMark() {
 		MarkerOptions markerOptions = new MarkerOptions();
 		bitmap = BitmapDescriptorFactory.fromResource(R.drawable.icon_marka); // 描述图片
-		markerOptions.position(new LatLng(30.5513090000,104.0749530000)) // 设置位置
+		markerOptions.position(new LatLng(30.5513090000, 104.0749530000)) // 设置位置
 				.icon(bitmap) // 加载图片
 				.draggable(false); // 不支持拖拽
 		//把绘制的圆添加到百度地图上去
@@ -128,6 +127,7 @@ public class LocationActivity extends Activity {
 		mMapView.onDestroy();
 		super.onDestroy();
 	}
+
 	class MyBroadcastReceiver extends BroadcastReceiver {
 		//实现一个广播
 		@Override
@@ -137,8 +137,8 @@ public class LocationActivity extends Activity {
 			if (action.equals(SDKInitializer.SDK_BROADCAST_ACTION_STRING_NETWORK_ERROR)) {
 				Toast.makeText(LocationActivity.this, "无法连接网络", Toast.LENGTH_SHORT).show();
 				// key效验失败
-			} else if(action.equals(SDKInitializer.SDK_BROADTCAST_ACTION_STRING_PERMISSION_CHECK_ERROR)) {
-				Toast.makeText(LocationActivity.this, "百度地图key效验失败",Toast.LENGTH_SHORT).show();
+			} else if (action.equals(SDKInitializer.SDK_BROADTCAST_ACTION_STRING_PERMISSION_CHECK_ERROR)) {
+				Toast.makeText(LocationActivity.this, "百度地图key效验失败", Toast.LENGTH_SHORT).show();
 			}
 		}
 	}
@@ -173,5 +173,7 @@ public class LocationActivity extends Activity {
 		public void onReceivePoi(BDLocation poiLocation) {
 		}
 	}
+
+
 
 }

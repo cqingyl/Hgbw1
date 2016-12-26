@@ -10,10 +10,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.xutils.DbManager;
-import org.xutils.ex.DbException;
+import com.jetcloud.hgbw.bean.GoodsInfo;
+
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -80,68 +78,68 @@ public class MainActivity extends AppCompatActivity {
     public void createMachine(){
         for (int i = 0; i < 2; i++){
             machineLists.add(new Machine(i));
-            List<Good> goodList = new ArrayList<>();
+            List<GoodsInfo> goodsInfoList = new ArrayList<>();
             for (int j = 0; j <= i; j++){
-                goodList.add(new Good());
+                goodsInfoList.add(new GoodsInfo());
             }
         }
     }
     @Override
     protected void onResume() {
-            tv_db_result.setText("wait...");
-            x.task().run(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        String temp = "";
-                        XUTL.setContext(MainActivity.this);
-
-                        DbManager.DaoConfig daoConfig = XUTL.getDaoConfig();
-                        DbManager db = x.getDb(daoConfig);
-                        JSONObject jsonObject = new JSONObject(s);
-
-                        long mid = jsonObject.getInt("id");
-                        Machine machine = new Machine(mid);
-                        db.replace(machine);
-                        Good good;
-                        temp += "machine: " +  machine.getmId();
-                        JSONArray array = jsonObject.getJSONArray("results");
-                        JSONObject goodsObject;
-                        for (int i = 0; i < array.length(); i++) {
-                            goodsObject = array.getJSONObject(i);
-                            good = new Good();
-                            good.setTitle(goodsObject.getString("title"));
-                            good.setContent(goodsObject.getString("content"));
-                            number = goodsObject.getInt("num");
-                            good.setNumber(number);
-                            good.setPrice(Double.parseDouble(goodsObject.getString("price")));
-                            good.setMachineId(mid);
-                            db.replace(good);
-
-                        }
-
-                        List<Good> goods = db.selector(Good.class).findAll();
-                        temp += "good size:" + goods.size() + "\n";
-                        if (goods.size() > 0) {
-                            temp += "last good:" + goods.get(goods.size() - 1) + "\n" + db.selector(Machine.class).findAll();
-                        }
-
-                        final String result = temp;
-                        final List a = (List) db.findAll(Good.class);
-                        x.task().post(new Runnable() {
-                            @Override
-                            public void run() {
-                                mRecyclerView.setAdapter(new MyAdapter(MainActivity.this, a));
-                                tv_db_result.setText(result);
-                            }
-                        });
-                    } catch (DbException e) {
-                        e.printStackTrace();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
+//            tv_db_result.setText("wait...");
+//            x.task().run(new Runnable() {
+//                @Override
+//                public void run() {
+//                    try {
+//                        String temp = "";
+////                        XUTL.setContext(MainActivity.this);
+//
+////                        DbManager.DaoConfig daoConfig = XUTL.getDaoConfig();
+////                        DbManager db = x.getDb(daoConfig);
+//                        JSONObject jsonObject = new JSONObject(s);
+//
+//                        long mid = jsonObject.getInt("id");
+//                        Machine machine = new Machine(mid);
+////                        db.replace(machine);
+//                        GoodsInfo goodsInfo;
+//                        temp += "machine: " +  machine.getmId();
+//                        JSONArray array = jsonObject.getJSONArray("results");
+//                        JSONObject goodsObject;
+//                        for (int i = 0; i < array.length(); i++) {
+//                            goodsObject = array.getJSONObject(i);
+//                            goodsInfo = new GoodsInfo();
+////                            goodsInfo.setTitle(goodsObject.getString("title"));
+////                            goodsInfo.setContent(goodsObject.getString("content"));
+//                            number = goodsObject.getInt("num");
+////                            goodsInfo.setNumber(number);
+////                            goodsInfo.setPrice(Double.parseDouble(goodsObject.getString("price")));
+////                            goodsInfo.setMachineId(mid);
+////                            db.replace(goodsInfo);
+//
+//                        }
+//
+//                        List<GoodsInfo> goodsInfos = db.selector(GoodsInfo.class).findAll();
+//                        temp += "goodsInfo size:" + goodsInfos.size() + "\n";
+//                        if (goodsInfos.size() > 0) {
+//                            temp += "last goodsInfo:" + goodsInfos.get(goodsInfos.size() - 1) + "\n" + db.selector(Machine.class).findAll();
+//                        }
+//
+//                        final String result = temp;
+//                        final List a = (List) db.findAll(GoodsInfo.class);
+//                        x.task().post(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                mRecyclerView.setAdapter(new MyAdapter(MainActivity.this, a));
+//                                tv_db_result.setText(result);
+//                            }
+//                        });
+//                    } catch (DbException e) {
+//                        e.printStackTrace();
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            });
         super.onResume();
     }
     @Event({R.id.all_chekbox, R.id.tv_delete, R.id.tv_go_to_pay, R.id.subtitle, R.id.tv_save, R.id.tv_share})

@@ -1,71 +1,67 @@
 package com.jetcloud.hgbw.bean;
 
+import java.util.List;
+
 /**
- * Created by Cqing on 2016/12/12.
+ * Created by Cqing on 2016/12/23.
  */
 
 public class GoodsInfo {
 
-    private String title;
-    private String content;
-    private int num;
-    private double money;
-    private String imageUrl;
-    private boolean selected ;
 
-    public GoodsInfo(String title, String content, int num, double money, String imageUrl) {
-        this.title = title;
-        this.content = content;
-        this.num = num;
-        this.money = money;
-        this.imageUrl = imageUrl;
+    private List<ABean> a;
+    private List<BBean> b;
+    private List<CBean> c;
+    private List<DBean> d;
+    private List<EBean> e;
+
+    public List<ABean> getA() {
+        return a;
     }
 
-    public String getTitle() {
-        return title;
+    public void setA(List<ABean> a) {
+        this.a = a;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public List<BBean> getB() {
+        return b;
     }
 
-    public String getContent() {
-        return content;
+    public void setB(List<BBean> b) {
+        this.b = b;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public List<CBean> getC() {
+        return c;
     }
 
-    public int getNum() {
-        return num;
+    public void setC(List<CBean> c) {
+        this.c = c;
     }
 
-    public void setNum(int num) {
-        this.num = num;
+    public List<DBean> getD() {
+        return d;
     }
 
-    public double getMoney() {
-        return money;
+    public void setD(List<DBean> d) {
+        this.d = d;
     }
 
-    public void setMoney(double money) {
-        this.money = money;
+    public List<EBean> getE() {
+        return e;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public void setE(List<EBean> e) {
+        this.e = e;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
+    public static class ABean extends ShopCarInfo{}
 
-    public boolean isSelected() {
-        return selected;
-    }
+    public static class BBean extends ShopCarInfo{}
 
-    public void setSelected(boolean selected) {
-        this.selected = selected;
-    }
+    public static class CBean extends ShopCarInfo{}
+
+    public static class DBean extends ShopCarInfo{}
+
+    public static class EBean extends ShopCarInfo{}
 }

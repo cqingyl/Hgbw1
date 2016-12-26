@@ -1,5 +1,8 @@
 package com.jetcloud.hgbw.fragment;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,12 +10,18 @@ import android.widget.CheckBox;
 import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.jetcloud.hgbw.adapter.ShopCarFragmentAdapter;
-import com.jetcloud.hgbw.bean.GoodsInfo;
 import com.jetcloud.hgbw.bean.MachineInfo;
+import com.jetcloud.hgbw.bean.ShopCarInfo;
+import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
+import com.jetcloud.hgbw.utils.ShopCarUtil;
+import com.jetcolud.hgbw.HgbwApplication;
 import com.jetcolud.hgbw.R;
 
+import org.xutils.db.sqlite.WhereBuilder;
+import org.xutils.ex.DbException;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
@@ -23,120 +32,298 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@ContentView(R.layout.shopcarfragment)
-public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdapter.ModifyCountInterface, ShopCarFragmentAdapter.CheckInterface {
+import static android.content.ContentValues.TAG;
+import static com.jetcloud.hgbw.utils.SharedPreferenceUtils.getShopCarNumber;
+
+@ContentView(R.layout.fragment_shopcar)
+public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdapter.ModifyCountInterface,
+        ShopCarFragmentAdapter.CheckInterface {
     private static final String TAG_LOG = ShopCarFragment.class.getSimpleName();
-	private static ShopCarFragment shopCarFragment;
-	private ShopCarFragmentAdapter adapter;
+    private static ShopCarFragment shopCarFragment;
+    private ShopCarFragmentAdapter adapter;
     @ViewInject(R.id.elv_shopcar)
-	private ExpandableListView elv_shopCar;
+    private ExpandableListView elv_shopCar;
     @ViewInject(R.id.cb_all)
     private CheckBox allCheckbox;
     @ViewInject(R.id.tv_total_price)
     private TextView tvTotalPrice;
     @ViewInject(R.id.tv_go_to_pay)
     private TextView tvGoToPay;
-   @ViewInject(R.id.layout_car_empty)
+    @ViewInject(R.id.layout_car_empty)
     private LinearLayout carEmpty;
     private double totalPrice = 0.00;// 购买的商品总价
     private int totalCount = 0;// 购买的商品总数量
+    private int total;
     private List<MachineInfo> groups = new ArrayList<>();
-    private Map<String, List<GoodsInfo>> children = new HashMap<>();
-//    private SharedPreferences preferences;
-//    private static final String SHOP_CAR_NUM = "shop car num";
-	public static ShopCarFragment newInstance() {
-		if (shopCarFragment == null) {
-			shopCarFragment = new ShopCarFragment();
-		}
-		return shopCarFragment;
-	}
+    private Map<String, List<ShopCarInfo>> children = new HashMap<>();
+    private HgbwApplication app;
+    private boolean isFirst = true;
 
-	@Override
-	public View initRootView(LayoutInflater inflater, ViewGroup container) {
-        return x.view().inject(this, inflater, container);
-	}
+    //    private SharedPreferences preferences;
+//    private static final String SHOP_CAR_NUM = "shop car num";
+    public static ShopCarFragment newInstance() {
+        if (shopCarFragment == null) {
+            shopCarFragment = new ShopCarFragment();
+        }
+        return shopCarFragment;
+    }
+
 
     @Override
-	protected void initView() {
-		topbar.setCenterText("购物车");
+    public View initRootView(LayoutInflater inflater, ViewGroup container) {
+        return x.view().inject(this, inflater, container);
+    }
+
+    @Override
+    protected void initView() {
+        app = (HgbwApplication) getActivity().getApplication();
+//		topbar.setCenterText("购物车");
 //		elv_shopCar = getView(R.id.elv_shopcar);
-//        allCheckbox = getView(R.id.cb_all);
+//       allCheckbox = getView(R.id.cb_all);
+
+    }
+
+    @Override
+    public void initData() {
+        loadListData();
         elv_shopCar.setGroupIndicator(null);
-	}
+        adapter = new ShopCarFragmentAdapter(getActivity(), groups, children);
+        adapter.setCheckInterface(this);// 关键步骤1,设置复选框接口
+        adapter.setModifyCountInterface(this);// 关键步骤2,设置数量增减接口
+        elv_shopCar.setAdapter(adapter);
+        for (int i = 0; i < adapter.getGroupCount(); i++) {
+            elv_shopCar.expandGroup(i);// 关键步骤3,初始化时，将ExpandableListView以展开的方式呈现
+        }
+    }
 
-	@Override
-	public void initData() {
-        initListData();
-		adapter = new ShopCarFragmentAdapter(getActivity(), groups, children);
-        adapter.setCheckInterface(this);
-        adapter.setModifyCountInterface(this);
+    //判断是不是空购物车
+    private boolean isEmptyCar() {
+//        Log.i(TAG, "isEmptyCar: " + total);
+        if (total < 1) {
+            clearCart();
+            return false;
+        } else {
+            topbar.setCenterText("购物车" + "(" + total + ")");
+            carEmpty.setVisibility(View.GONE);
+            return true;
+        }
+    }
 
-		elv_shopCar.setAdapter(adapter);
-		for (int i = 0; i < adapter.getGroupCount(); i++) {
-			elv_shopCar.expandGroup(i);
-		}
+    //加载数据
+    public void loadListData() {
+//            for (int i = 0; i < 3; i++) {
+//                groups.add(new MachineInfo(i + "", (i + 1) + "号机器"));
+//                List<ShopCarInfo> products = new ArrayList<ShopCarInfo>();
+//                for (int j = 0; j <= i; j++) {
+//                    String[] img = {"http://pic.58pic
+// .com/uploadfilepic/sheji/2009-11-10/58PIC_ysjihc1990_20091110aaee42cf802a80a0.jpg","http://pic.58pic
+// .com/uploadfilepic/sheji/2009-11-10/58PIC_ysjihc1990_20091110aaee42cf802a80a0.jpg","http://pic.58pic
+// .com/uploadfilepic/sheji/2009-11-10/58PIC_ysjihc1990_20091110aaee42cf802a80a0.jpg"};
+//                    products.add(new ShopCarInfo("tudoupian", img[j], 25, i));
+//                }
+//                children.put(groups.get(i).getId(), products);// 将组元素的一个唯一值，这里取Id，作为子元素List的Key
+//            }
 
-	}
+        try {
+            List<ShopCarInfo> good = app.db.selector(ShopCarInfo.class).findAll();
+            List<MachineInfo> machine = app.db.selector(MachineInfo.class).findAll();
+            if (machine != null) {
+                groups = machine;
+                for (int i = 0; i < groups.size(); i++) {
+                    children.put(groups.get(i).getId(), good);
+                }
+//            Log.i(TAG, "good size: " +good.size() + " groups size: " + groups.size());
+//            Log.i(TAG, "initListData: " + good.get(0).getP_local_number());
+//            Log.i(TAG, "machine name: " + groups.get(0).getId());
+            }
+
+        } catch (DbException e) {
+            e.printStackTrace();
+            Log.e(TAG_LOG, "查询失败: " + e.getMessage());
+        }
+    }
+
     /**
-     *  事件
-     * */
+     * fragment 采用 add(),hide()方式，它的生命周期依赖于activity，so当切换fragment时onResume只会实现一次，
+     * so，当其他fragment变化时，点会此个fragment，此个fragment 会做出相应的变化
+     * onHiddenChanged() 在initRootView（）之前执行,在onCreate()之后执行
+     */
+
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+//        if (!isFirst)
+//        Log.i(TAG, "S onHiddenChanged: " + hidden );
+        if (hidden && !isFirst) {
+            SharedPreferenceUtils.setShopCarNumber(total);
+//            Log.i(TAG, "S onHiddenChanged: " + total);
+        } else if (!hidden && !isFirst) {
+            total = getShopCarNumber();
+//            Log.i(TAG, "S onHiddenChanged: " + total);
+            loadListData();
+            isEmptyCar();
+            adapter.notifyDataSetChanged();
+        }
+        super.onHiddenChanged(hidden);
+    }
+
+    @Override
+    public void onResume() {
+        total = SharedPreferenceUtils.getShopCarNumber();
+        //购物车角标
+        ShopCarUtil.ChangeCorner(getActivity(), total);
+        isEmptyCar();
+//        Log.i(TAG, "onResume: " + total + groups.size());
+        isFirst = false;
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        SharedPreferenceUtils.setShopCarNumber(total);
+        super.onPause();
+    }
+
+    /**
+     * 事件
+     */
     @Event(value = {R.id.cb_all, R.id.tv_go_to_pay})
     private void getEvent(View view) {
+        AlertDialog alert;
         switch (view.getId()) {
-            case R.id.cb_all :
+            case R.id.cb_all:
                 doCheckAll();
                 break;
             case R.id.tv_go_to_pay:
                 //结算
                 //弹出dialog
                 //确定后清空购物车
+                if (totalCount == 0) {
+                    Toast.makeText(getActivity(), "请选择要支付的商品", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                alert = new AlertDialog.Builder(getActivity()).create();
+                alert.setTitle("操作提示");
+                alert.setMessage("总计:\n" + totalCount + "种商品\n" + totalPrice + "元");
+                alert.setButton(DialogInterface.BUTTON_NEGATIVE, "取消",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                return;
+                            }
+                        });
+                alert.setButton(DialogInterface.BUTTON_POSITIVE, "确定",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                return;
+                            }
+                        });
+                alert.show();
                 break;
         }
     }
-    //加载虚拟数据
-    public void initListData() {
-            for (int i = 0; i < 3; i++) {
-                groups.add(new MachineInfo(i + "", (i + 1) + "号机器"));
-                List<GoodsInfo> products = new ArrayList<GoodsInfo>();
-                for (int j = 0; j <= i; j++) {
-                    String[] img = {"http://pic.58pic.com/uploadfilepic/sheji/2009-11-10/58PIC_ysjihc1990_20091110aaee42cf802a80a0.jpg","http://pic.58pic.com/uploadfilepic/sheji/2009-11-10/58PIC_ysjihc1990_20091110aaee42cf802a80a0.jpg","http://pic.58pic.com/uploadfilepic/sheji/2009-11-10/58PIC_ysjihc1990_20091110aaee42cf802a80a0.jpg"};
-                    products.add(new GoodsInfo("土豆片" + j, "味道好极了"+ j, j + 1, 25 + j, img[j]));
-                }
-                children.put(groups.get(i).getId(), products);// 将组元素的一个唯一值，这里取Id，作为子元素List的Key
-            }
-    }
+
     //点击增加按钮后
-	@Override
-	public void doIncrease(int groupPosition, int childPosition, View showCountView, boolean isChecked) {
-		GoodsInfo product = (GoodsInfo) adapter.getChild(groupPosition, childPosition);
-        int countNum = product.getNum();
-        product.setNum(++countNum);
-        ((TextView)showCountView).setText(String.valueOf(countNum));
+    @Override
+    public void doIncrease(int groupPosition, int childPosition, View showCountView, boolean isChecked) {
+        ShopCarInfo product = (ShopCarInfo) adapter.getChild(groupPosition, childPosition);
+
+        int countNum = product.getP_local_number();
+        product.setP_local_number(++countNum);
+        ShopCarUtil.ChangeCorner(getActivity(), ++total);
+        Log.i(TAG, "doIncrease: " + total);
+        isEmptyCar();
+        try {
+            app.db.saveOrUpdate(product);
+        } catch (DbException e) {
+            e.printStackTrace();
+            Log.e(TAG_LOG, " 增加数量失败： " + e.getMessage());
+        }
+//        try {
+//            ShopCarInfo goodsInfo = db.selector(ShopCarInfo.class).findFirst();
+//            Log.i(TAG_LOG, "doIncrease: " + goodsInfo.getP_numb());
+//        } catch (DbException e) {
+//            e.printStackTrace();
+//        }
+        ((TextView) showCountView).setText(String.valueOf(countNum));
         adapter.notifyDataSetChanged();
         calculate();
-	}
+    }
+
     //点击减少按钮后
-	@Override
-	public void doDecrease(int groupPosition, int childPosition, View showCountView, boolean isChecked) {
-        GoodsInfo product = (GoodsInfo) adapter.getChild(groupPosition, childPosition);
-        int countNum = product.getNum();
-        if(countNum > 1){
-            product.setNum(--countNum);
-            ((TextView)showCountView).setText(String.valueOf(countNum));
+    @Override
+    public void doDecrease(int groupPosition, int childPosition, View showCountView, boolean isChecked) {
+        ShopCarInfo product = (ShopCarInfo) adapter.getChild(groupPosition, childPosition);
+        int countNum = product.getP_local_number();
+        if (countNum > 1) {
+            product.setP_local_number(--countNum);
+//            ShopCarUtil.decCornerNum(getActivity(),1);
+            ShopCarUtil.ChangeCorner(getActivity(), --total);
+            isEmptyCar();
+            try {
+                app.db.saveOrUpdate(product);
+            } catch (DbException e) {
+                e.printStackTrace();
+                Log.e(TAG_LOG, " 减少数量失败： " + e.getMessage());
+            }
+//            try {
+//                ShopCarInfo goodsInfo = db.selector(ShopCarInfo.class).findFirst();
+//                Log.i(TAG_LOG, "doDecrease: " + goodsInfo.getP_numb());
+//            } catch (DbException e) {
+//                e.printStackTrace();
+//            }
+            ((TextView) showCountView).setText(String.valueOf(countNum));
             adapter.notifyDataSetChanged();
             calculate();
         }
-	}
-    //删除食物item
-	@Override
-	public void childDelete(int groupPosition, int childPosition) {
+    }
 
-	}
+    //删除item
+    @Override
+    public void childDelete(int groupPosition, int childPosition) {
+        int goodNum = 0;
+        try {
+
+            ShopCarInfo shopCarInfo = children.get(groups.get(groupPosition).getId()).get(childPosition);
+            goodNum = shopCarInfo.getP_local_number();
+            WhereBuilder wb = WhereBuilder.b("p_id", "=", shopCarInfo.getP_id());
+            app.db.delete(ShopCarInfo.class, wb);
+            List<ShopCarInfo> data = app.db.selector(ShopCarInfo.class).findAll();
+            Log.i(TAG, "childDelete: " + data.size());
+
+        } catch (DbException e) {
+            e.printStackTrace();
+            Log.e(TAG_LOG, " 删除child失败： " + e.getMessage());
+        }
+        children.get(groups.get(groupPosition).getId()).remove(childPosition);
+        //减少商品总量
+        total -= goodNum;
+        if (total < 0) {
+            total = 0;
+        }
+        ShopCarUtil.ChangeCorner(getActivity(), total);
+        isEmptyCar();
+        MachineInfo group = groups.get(groupPosition);
+        try {
+            List<ShopCarInfo> childs = children.get(group.getId());
+            if (childs.size() == 0) {
+                WhereBuilder wb = WhereBuilder.b("id", "=", groups.get(groupPosition).getId());
+                app.db.delete(MachineInfo.class, wb);
+                groups.remove(groupPosition);
+            }
+        } catch (DbException e) {
+            e.printStackTrace();
+            Log.e(TAG_LOG, " 删除group失败： " + e.getMessage());
+        }
+        adapter.notifyDataSetChanged();
+        //     handler.sendEmptyMessage(0);
+        calculate();
+    }
 
     @Override
     public void checkGroup(int groupPosition, boolean isChecked) {
         MachineInfo group = groups.get(groupPosition);
-        List<GoodsInfo> childs = children.get(group.getId());
+        List<ShopCarInfo> childs = children.get(group.getId());
         for (int i = 0; i < childs.size(); i++) {
             childs.get(i).setSelected(isChecked);
         }
@@ -152,7 +339,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     public void checkChild(int groupPosition, int childPosition, boolean isChecked) {
         boolean allChildSameState = true;// 判断改组下面的所有子元素是否是同一种状态
         MachineInfo group = groups.get(groupPosition);
-        List<GoodsInfo> childs = children.get(group.getId());
+        List<ShopCarInfo> childs = children.get(group.getId());
         for (int i = 0; i < childs.size(); i++) {
             // 不全选中
             if (childs.get(i).isSelected() != isChecked) {
@@ -179,10 +366,11 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     private boolean isAllCheck() {
         for (MachineInfo group : groups) {
             if (!group.isSelected())
-            return false;
+                return false;
         }
         return true;
     }
+
     /**
      * 全选与反选
      */
@@ -190,7 +378,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         for (int i = 0; i < groups.size(); i++) {
             groups.get(i).setSelected(allCheckbox.isChecked());
             MachineInfo group = groups.get(i);
-            List<GoodsInfo> childs = children.get(group.getId());
+            List<ShopCarInfo> childs = children.get(group.getId());
             for (int j = 0; j < childs.size(); j++) {
                 childs.get(j).setSelected(allCheckbox.isChecked());
             }
@@ -198,6 +386,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         adapter.notifyDataSetChanged();
         calculate();
     }
+
     /**
      * 统计操作<br>
      * 1.先清空全局计数器<br>
@@ -209,12 +398,12 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         totalPrice = 0.00;
         for (int i = 0; i < groups.size(); i++) {
             MachineInfo group = groups.get(i);
-            List<GoodsInfo> childs = children.get(group.getId());
+            List<ShopCarInfo> childs = children.get(group.getId());
             for (int j = 0; j < childs.size(); j++) {
-                GoodsInfo product = childs.get(j);
+                ShopCarInfo product = childs.get(j);
                 if (product.isSelected()) {
                     totalCount++;
-                    totalPrice += product.getMoney() * product.getNum();
+                    totalPrice += product.getP_price() * product.getP_local_number();
                 }
             }
         }
@@ -222,15 +411,16 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         tvTotalPrice.setText(getString(R.string.rmb_display, totalPrice));
         tvGoToPay.setText("去支付(" + totalCount + ")");
         //计算购物车的金额为0时候清空购物车的视图
-        if(totalCount==0){
+        if (totalCount == 0) {
             setCartNum();
-        } else{
+        } else {
 //            preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
 //            SharedPreferences.Editor editor = preferences.edit();
 //            editor.putInt(SHOP_CAR_NUM, totalCount);
-            topbar.setCenterText("购物车" + "(" + totalCount + ")");
+//            topbar.setCenterText("购物车" + "(" + totalCount + ")");
         }
     }
+
     /**
      * 设置购物车产品数量
      */
@@ -239,25 +429,35 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         for (int i = 0; i < groups.size(); i++) {
             groups.get(i).setSelected(allCheckbox.isChecked());
             MachineInfo group = groups.get(i);
-            List<GoodsInfo> childs = children.get(group.getId());
-            for (GoodsInfo goodsInfo : childs) {
+            List<ShopCarInfo> childs = children.get(group.getId());
+            for (ShopCarInfo shopCarInfo : childs) {
                 count += 1;
             }
         }
         //购物车已清空
-        if(count==0){
+        if (count == 0) {
             clearCart();
-        } else{
-            topbar.setCenterText("购物车" + "(" + count + ")");
+        } else {
+//            topbar.setCenterText("购物车" + "(" + count + ")");
         }
     }
+
     /**
      * 清空购物车
-     * */
+     */
     private void clearCart() {
         topbar.setCenterText("购物车" + "(" + 0 + ")");
 //        subtitle.setVisibility(View.GONE);
 //        llCart.setVisibility(View.GONE);
         carEmpty.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        adapter = null;
+        groups.clear();
+        totalPrice = 0;
+        children.clear();
     }
 }
