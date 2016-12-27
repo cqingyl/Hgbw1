@@ -1,7 +1,5 @@
 package com.jetcloud.hgbw.view;
 
-import com.jetcolud.hgbw.R;
-
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils.TruncateAt;
@@ -10,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.jetcolud.hgbw.R;
 
 
 public class TopBar extends RelativeLayout {
@@ -125,9 +125,6 @@ public class TopBar extends RelativeLayout {
 	 * 
 	 * @param param
 	 *            文字内容
-	 * @param leftDrawable
-	 *            图片内容
-	 * @param flag
 	 *            true图片左边显示，false图片右边显示
 	 */
 	public void setRightText(String param) {

@@ -145,7 +145,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     }
 
     /**
-     * 获取网络数据
+     * 处理json数据
      */
     private void getDataFromJson(String result) throws JSONException {
         Gson gson = new Gson();
@@ -162,10 +162,12 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         dataE = new ArrayList<>();
         dataE.addAll(goodsInfo.getE());
         adapter.notifyDataSetChanged();
+        //初始化轮播图
+//        loadAdData();
     }
 
 
-    private void getNetData(final String type) {
+    private void getNetData() {
         final RequestParams params = new RequestParams(HgbwUrl.HOME_DATA_URL);
         //缓存时间
         params.addQueryStringParameter("myR_lng", "104.06792346");
@@ -297,9 +299,9 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                     }
                     //增加商品数量
                     app.db.saveOrUpdate(carInfo);
-//                    List<ShopCarInfo> shopCarInfos = app.db.selector(ShopCarInfo.class).findAll();
-//                    List<MachineInfo> machine = app.db.selector(MachineInfo.class).findAll();
-//                    Log.i(TAG, "shopCarInfos size: " + shopCarInfos.size() + " machine size: " + machine.size());
+                    List<ShopCarInfo> shopCarInfos = app.db.selector(ShopCarInfo.class).findAll();
+                    List<MachineInfo> machine = app.db.selector(MachineInfo.class).findAll();
+                    Log.i(TAG, "shopCarInfos size: " + shopCarInfos.size() + " machine size: " + machine.size());
 //                    Log.i(TAG, "shopCarInfos first object local num: " + shopCarInfos.get(0).getP_local_number());
 //                    Log.i(TAG, "machine first object id: "+ m.get(0).getId());
 
@@ -345,16 +347,16 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     @Override
     public void initData() {
         //初始化轮播图
-        //loadAdData();
+//        loadAdData();
         //listview设置适配器
-        getNetData("a");
+        getNetData();
     }
 
     private void loadAdData() {
-        for (int i = 0; i < 3; i++) {
 
-            mImageUrl.add("http://www.suiedai.com/../images/cp01.png");
-
+        for (int i = 0; i < dataE.size(); i++) {
+            String imgPath = dataE.get(i).getP_picture();
+            mImageUrl.add(HgbwUrl.BASE_URL + imgPath);
         }
         binner.setImageResources(mImageUrl, mAdCycleViewListener, 0);
 
@@ -368,7 +370,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                 Log.i("onclick", "onClick: ");
                 Intent intent = new Intent(getActivity(), LocationActivity.class);
                 intent.putExtra("from", 0);
-                startActivity(intent);
+//                startActivity(intent);
                 break;
         }
     }

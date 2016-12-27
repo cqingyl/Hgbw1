@@ -6,8 +6,8 @@ package com.jetcolud.hgbw;
 
 public class HgbwUrl {
 
-    public final static String BASE_URL = "http://www.suiedai.com";
-//    public final static String BASE_URL = "http://192.168.3.74";
+//    public final static String BASE_URL = "http://www.suiedai.com";
+    public final static String BASE_URL = "http://192.168.3.7";
     /**
      * get
      * */
@@ -17,6 +17,7 @@ public class HgbwUrl {
      * */
     public final static String TAKE_FOOD = BASE_URL + "/order/takefood";
     public final static String ORDER = BASE_URL + "/order";
+    public final static String FOOD_DETAIL = BASE_URL + "/order/pdetail";
 
     private HgbwUrl(){}
 }

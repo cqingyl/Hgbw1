@@ -33,7 +33,6 @@ import java.util.List;
 import java.util.Map;
 
 import static android.content.ContentValues.TAG;
-import static com.jetcloud.hgbw.utils.SharedPreferenceUtils.getShopCarNumber;
 
 @ContentView(R.layout.fragment_shopcar)
 public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdapter.ModifyCountInterface,
@@ -41,7 +40,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     private static final String TAG_LOG = ShopCarFragment.class.getSimpleName();
     private static ShopCarFragment shopCarFragment;
     private ShopCarFragmentAdapter adapter;
-    @ViewInject(R.id.elv_shopcar)
+//    @ViewInject(R.id.elv_shopcar)
     private ExpandableListView elv_shopCar;
     @ViewInject(R.id.cb_all)
     private CheckBox allCheckbox;
@@ -78,19 +77,23 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     protected void initView() {
         app = (HgbwApplication) getActivity().getApplication();
 //		topbar.setCenterText("购物车");
-//		elv_shopCar = getView(R.id.elv_shopcar);
+		elv_shopCar = getView(R.id.elv_shopcar);
 //       allCheckbox = getView(R.id.cb_all);
 
     }
 
     @Override
     public void initData() {
+        groups = new ArrayList<>();
+        children = new HashMap<>();
         loadListData();
+        adapter = new ShopCarFragmentAdapter(getActivity(),groups, children);
+        Log.i(TAG, "onHiddenChanged: "+ elv_shopCar + groups + children + adapter);
+        elv_shopCar.setAdapter(adapter);
         elv_shopCar.setGroupIndicator(null);
-        adapter = new ShopCarFragmentAdapter(getActivity(), groups, children);
         adapter.setCheckInterface(this);// 关键步骤1,设置复选框接口
         adapter.setModifyCountInterface(this);// 关键步骤2,设置数量增减接口
-        elv_shopCar.setAdapter(adapter);
+
         for (int i = 0; i < adapter.getGroupCount(); i++) {
             elv_shopCar.expandGroup(i);// 关键步骤3,初始化时，将ExpandableListView以展开的方式呈现
         }
@@ -111,36 +114,31 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
 
     //加载数据
     public void loadListData() {
-//            for (int i = 0; i < 3; i++) {
-//                groups.add(new MachineInfo(i + "", (i + 1) + "号机器"));
-//                List<ShopCarInfo> products = new ArrayList<ShopCarInfo>();
-//                for (int j = 0; j <= i; j++) {
-//                    String[] img = {"http://pic.58pic
-// .com/uploadfilepic/sheji/2009-11-10/58PIC_ysjihc1990_20091110aaee42cf802a80a0.jpg","http://pic.58pic
-// .com/uploadfilepic/sheji/2009-11-10/58PIC_ysjihc1990_20091110aaee42cf802a80a0.jpg","http://pic.58pic
-// .com/uploadfilepic/sheji/2009-11-10/58PIC_ysjihc1990_20091110aaee42cf802a80a0.jpg"};
-//                    products.add(new ShopCarInfo("tudoupian", img[j], 25, i));
-//                }
-//                children.put(groups.get(i).getId(), products);// 将组元素的一个唯一值，这里取Id，作为子元素List的Key
-//            }
-
         try {
-            List<ShopCarInfo> good = app.db.selector(ShopCarInfo.class).findAll();
-            List<MachineInfo> machine = app.db.selector(MachineInfo.class).findAll();
-            if (machine != null) {
-                groups = machine;
-                for (int i = 0; i < groups.size(); i++) {
-                    children.put(groups.get(i).getId(), good);
-                }
-//            Log.i(TAG, "good size: " +good.size() + " groups size: " + groups.size());
-//            Log.i(TAG, "initListData: " + good.get(0).getP_local_number());
-//            Log.i(TAG, "machine name: " + groups.get(0).getId());
-            }
 
+            List<MachineInfo> machine = app.db.selector(MachineInfo.class).findAll();
+            Log.i(TAG, "loadListData: ");
+            if (machine != null) {
+                groups.clear();
+                groups.addAll(machine);
+                for (int i = 0; i < groups.size(); i++) {
+                    children.clear();
+                    List<ShopCarInfo> good = app.db.selector(ShopCarInfo.class).where("p_machine", "=", groups.get(i).getId()).findAll();
+
+                    children.put(groups.get(i).getId(), good);
+//                        Log.i(TAG, "loadListData: " + children.get());
+
+
+//                adapter.notifyDataSetChanged();
+//            Log.i(TAG, "machine name: " + groups.get(0).getId());
+//            Log.i(TAG, "machine name: " + children.get(groups.get(0).getId()).get(0).getP_local_number());
+                }
+            }
         } catch (DbException e) {
             e.printStackTrace();
             Log.e(TAG_LOG, "查询失败: " + e.getMessage());
         }
+
     }
 
     /**
@@ -151,28 +149,30 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
 
     @Override
     public void onHiddenChanged(boolean hidden) {
-//        if (!isFirst)
-//        Log.i(TAG, "S onHiddenChanged: " + hidden );
+        if (!isFirst)
+        Log.i(TAG, "S onHiddenChanged: " + hidden );
         if (hidden && !isFirst) {
             SharedPreferenceUtils.setShopCarNumber(total);
-//            Log.i(TAG, "S onHiddenChanged: " + total);
+            Log.i(TAG, "S onHiddenChanged: " + total);
         } else if (!hidden && !isFirst) {
-            total = getShopCarNumber();
-//            Log.i(TAG, "S onHiddenChanged: " + total);
-            loadListData();
-            isEmptyCar();
-            adapter.notifyDataSetChanged();
+            if (total != SharedPreferenceUtils.getShopCarNumber()){
+                total = SharedPreferenceUtils.getShopCarNumber();
+                Log.i(TAG, "S onHiddenChanged: " + total);
+                initData();
+                isEmptyCar();
+            }
         }
         super.onHiddenChanged(hidden);
     }
 
     @Override
     public void onResume() {
+
         total = SharedPreferenceUtils.getShopCarNumber();
         //购物车角标
         ShopCarUtil.ChangeCorner(getActivity(), total);
         isEmptyCar();
-//        Log.i(TAG, "onResume: " + total + groups.size());
+//        Log.i(TAG, "onResume: " + total);
         isFirst = false;
         super.onResume();
     }
@@ -281,21 +281,54 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     //删除item
     @Override
     public void childDelete(int groupPosition, int childPosition) {
-        int goodNum = 0;
+//        int goodNum = 0;
+//        try {
+//
+//            ShopCarInfo shopCarInfo = children.get(groups.get(groupPosition).getId()).get(childPosition);
+//            goodNum = shopCarInfo.getP_local_number();
+//            WhereBuilder wb = WhereBuilder.b("p_id", "=", shopCarInfo.getP_id());
+//            app.db.delete(ShopCarInfo.class, wb);
+//            List<ShopCarInfo> data = app.db.selector(ShopCarInfo.class).findAll();
+//            Log.i(TAG, "childDelete: " + data.size());
+//
+//        } catch (DbException e) {
+//            e.printStackTrace();
+//            Log.e(TAG_LOG, " 删除child失败： " + e.getMessage());
+//        }
+//        children.get(groups.get(groupPosition).getId()).remove(childPosition);
+//        //减少商品总量
+//        total -= goodNum;
+//        if (total < 0) {
+//            total = 0;
+//        }
+//        ShopCarUtil.ChangeCorner(getActivity(), total);
+//        isEmptyCar();
+//        MachineInfo group = groups.get(groupPosition);
+//        try {
+//            List<ShopCarInfo> childs = children.get(group.getId());
+//            if (childs.size() == 0) {
+//                WhereBuilder wb = WhereBuilder.b("id", "=", groups.get(groupPosition).getId());
+//                app.db.delete(MachineInfo.class, wb);
+//                children.remove(groups.get(groupPosition).getId());
+//                groups.remove(groupPosition);
+//            }
+//        } catch (DbException e) {
+//            e.printStackTrace();
+//            Log.e(TAG_LOG, " 删除group失败： " + e.getMessage());
+//        }
+//        adapter.notifyDataSetChanged();
+//        Log.i(TAG, "childDelete: " +groups.size()+children.size());
+//        //     handler.sendEmptyMessage(0);
+//        calculate();
+        ShopCarInfo shopCarInfo = children.get(groups.get(groupPosition).getId()).remove(childPosition);
+        WhereBuilder wbc = WhereBuilder.b("p_id", "=", shopCarInfo.getP_id());
+        int goodNum = shopCarInfo.getP_local_number();
         try {
-
-            ShopCarInfo shopCarInfo = children.get(groups.get(groupPosition).getId()).get(childPosition);
-            goodNum = shopCarInfo.getP_local_number();
-            WhereBuilder wb = WhereBuilder.b("p_id", "=", shopCarInfo.getP_id());
-            app.db.delete(ShopCarInfo.class, wb);
-            List<ShopCarInfo> data = app.db.selector(ShopCarInfo.class).findAll();
-            Log.i(TAG, "childDelete: " + data.size());
-
+            app.db.delete(ShopCarInfo.class, wbc);
         } catch (DbException e) {
             e.printStackTrace();
             Log.e(TAG_LOG, " 删除child失败： " + e.getMessage());
         }
-        children.get(groups.get(groupPosition).getId()).remove(childPosition);
         //减少商品总量
         total -= goodNum;
         if (total < 0) {
@@ -304,18 +337,20 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         ShopCarUtil.ChangeCorner(getActivity(), total);
         isEmptyCar();
         MachineInfo group = groups.get(groupPosition);
-        try {
-            List<ShopCarInfo> childs = children.get(group.getId());
-            if (childs.size() == 0) {
-                WhereBuilder wb = WhereBuilder.b("id", "=", groups.get(groupPosition).getId());
-                app.db.delete(MachineInfo.class, wb);
-                groups.remove(groupPosition);
+        List<ShopCarInfo> childs = children.get(group.getId());
+        if (childs.size() == 0) {
+            WhereBuilder wbg = WhereBuilder.b("id", "=", groups.get(groupPosition).getId());
+            try {
+                app.db.delete(MachineInfo.class, wbg);
+            } catch (DbException e) {
+                e.printStackTrace();
+                Log.e(TAG_LOG, " 删除group失败： " + e.getMessage());
             }
-        } catch (DbException e) {
-            e.printStackTrace();
-            Log.e(TAG_LOG, " 删除group失败： " + e.getMessage());
+            children.remove(groups.get(groupPosition).getId());
+            groups.remove(groupPosition);
         }
         adapter.notifyDataSetChanged();
+        Log.i(TAG, "childDelete: " +groups.size()+children.size());
         //     handler.sendEmptyMessage(0);
         calculate();
     }

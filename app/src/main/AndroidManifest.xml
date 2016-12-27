@@ -54,9 +54,10 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        >
-        <!--android:theme="@android:style/Theme.Black.NoTitleBar"-->
+        android:theme="@style/AppTheme">
+
+        <!-- android:theme="@android:style/Theme.Black.NoTitleBar" -->
+
 
         <!-- meta-data需要写在application中 -->
         <meta-data
@@ -64,8 +65,8 @@
             android:value="BhEHt7ZYz3BdXuefKU9oEd6iHi6XEqfs"/> <!-- http://lbsyun.baidu.com/apiconsole/key -->
         <activity
             android:name="com.jetcloud.hgbw.activity.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -90,7 +91,6 @@
         </activity>
         <activity android:name="com.jetcloud.hgbw.activity.demo.LocationActivity"/>
 
-
         <!-- 百度地图server -->
         <service
             android:name="com.baidu.location.f"
@@ -102,6 +102,12 @@
             </intent-filter>
         </service>
 
+        <activity android:name="com.jetcloud.hgbw.activity.QRCodeActivity">
+        </activity>
+        <activity android:name="com.jetcloud.hgbw.activity.PayActivity">
+        </activity>
+        <activity android:name="com.jetcloud.hgbw.activity.PayNextActivity">
+        </activity>
     </application>
 
 </manifest>

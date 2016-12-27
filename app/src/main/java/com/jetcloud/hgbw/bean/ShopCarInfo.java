@@ -4,11 +4,14 @@ import org.xutils.DbManager;
 import org.xutils.db.annotation.Column;
 import org.xutils.db.annotation.Table;
 
+import java.io.Serializable;
+
 /**
  * Created by Cqing on 2016/12/20.
  */
 @Table(name = "good")
-public class ShopCarInfo {
+public class ShopCarInfo implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     /**
      * p_id : 1

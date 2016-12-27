@@ -89,8 +89,9 @@ public class HomeFragmentAdapter extends BaseAdapter {
 
             @Override
             public void onClick(View arg0) {
-                // TODO Auto-generated method stub
-                MainActivity.mainActivity.startActivity(new Intent(context, DetailsActivity.class));
+                Intent i = new Intent(new Intent(context, DetailsActivity.class));
+                i.putExtra(DetailsActivity.FOOD_OBJECT,shopCarInfo);
+                MainActivity.mainActivity.startActivity(i);
             }
         });
         return convertView;

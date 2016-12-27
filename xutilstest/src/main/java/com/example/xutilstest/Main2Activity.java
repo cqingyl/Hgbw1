@@ -217,10 +217,12 @@ public class Main2Activity extends AppCompatActivity {
 
 
     private void getAData() {
-        final RequestParams params = new RequestParams("http://192.168.3.134:80/order");
+        final RequestParams params = new RequestParams("http://www.suiedai.com/order/takefood");
         //缓存时间
-        params.addQueryStringParameter("order_m_id", "a43a467afdf-5");
-        params.addQueryStringParameter("type", "1");
+//        params.addQueryStringParameter("order_m_id", "a43a467afdf-5");
+//        params.addQueryStringParameter("type", "1");
+        params.addBodyParameter("order_m_id", "a43a467afdf-5");
+        params.addBodyParameter("type", "1");
         params.setCacheMaxAge(1000 * 60);
         x.task().run(new Runnable() {
             @Override
@@ -270,13 +272,13 @@ public class Main2Activity extends AppCompatActivity {
                         progress.dismiss();
                         if (!hasError && result != null) {
                     Log.i(TAG_LOG, "onFinished: " + result);
-                            try {
-                                getDataFromJson(result);
+//                            try {
+//                                getDataFromJson(result);
 
 
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
+//                            } catch (JSONException e) {
+//                                e.printStackTrace();
+//                            }
 //                    List<GoodsInfo> data = new ArrayList<GoodsInfo>();
 //                    data.add(goodsInfo);
                         }

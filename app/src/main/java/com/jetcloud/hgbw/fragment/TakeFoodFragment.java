@@ -6,16 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.jetcloud.hgbw.adapter.TakeFoodFragmentAdapter;
-import com.jetcloud.hgbw.bean.ShopCarInfo;
+import com.jetcloud.hgbw.bean.TakeFoodInfo;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 import com.jetcloud.hgbw.view.MyListView;
 import com.jetcolud.hgbw.HgbwUrl;
 import com.jetcolud.hgbw.R;
 
-import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.xutils.common.Callback;
 import org.xutils.ex.HttpException;
 import org.xutils.http.RequestParams;
@@ -30,6 +29,7 @@ public class TakeFoodFragment extends BaseFragment{
 	private MyListView lv_takefood;
 	private TakeFoodFragmentAdapter adapter;
 	private CustomProgressDialog progress;
+	List<TakeFoodInfo.MealBean>data = new ArrayList<TakeFoodInfo.MealBean>();
 	public static TakeFoodFragment newInstance() {
 		if (takeFoodFragment == null) {
 			takeFoodFragment = new TakeFoodFragment();
@@ -52,11 +52,9 @@ public class TakeFoodFragment extends BaseFragment{
 	@Override
 	public void initData() {
 		// TODO Auto-generated method stub
-		List<String>list = new ArrayList<String>();
-		list.add(";");
-		list.add(";");
-		list.add(";");
-		adapter = new TakeFoodFragmentAdapter(getActivity(), list);
+		data = new ArrayList<TakeFoodInfo.MealBean>();
+
+		adapter = new TakeFoodFragmentAdapter(getActivity(), data);
 		lv_takefood.setAdapter(adapter);
 		getNetData();
 	}
@@ -64,7 +62,9 @@ public class TakeFoodFragment extends BaseFragment{
 	private void getNetData() {
 		final RequestParams params = new RequestParams(HgbwUrl.TAKE_FOOD);
 		//缓存时间
+//		params.addBodyParameter("m_id", "ok2SdwCTyMl0B2Vou5NVsv7GCgr4");
 		params.addBodyParameter("m_id", "a43a467afdf-5");
+		params.addBodyParameter("type", "1");
 		params.setCacheMaxAge(1000 * 60);
 
 		x.task().run(new Runnable() {
@@ -79,7 +79,7 @@ public class TakeFoodFragment extends BaseFragment{
 					@Override
 					public boolean onCache(String result) {
 						this.result = result;
-						return true; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
+						return false; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
 					}
 
 					@Override
@@ -114,18 +114,14 @@ public class TakeFoodFragment extends BaseFragment{
 					public void onFinished() {
 						progress.dismiss();
 						if (!hasError && result != null) {
-                    Log.i(TAG_LOG, "onFinished: " + result);
-//							try {
-//								getDataFromJson(result);
-//								adapter = new TakeFoodFragmentAdapter(getActivity(), null);
-//								adapter.notifyDataSetChanged();
-//
-//								lv_takefood.setAdapter(adapter);
-//
-//							} catch (JSONException e) {
-//								e.printStackTrace();
-//								Log.e(TAG_LOG, " json error: " + e.getMessage());
-//							}
+//                    	Log.i(TAG_LOG, "onFinished: " + result);
+							try {
+								getDataFromJson(result);
+
+							} catch (JSONException e) {
+								e.printStackTrace();
+								Log.e(TAG_LOG, " json error: " + e.getMessage());
+							}
 						}
 					}
 
@@ -142,26 +138,12 @@ public class TakeFoodFragment extends BaseFragment{
 
 	}
 	/**
-	 * 获取网络数据
+	 * 处理json数据
 	 * */
 	private void getDataFromJson(String result) throws JSONException {
-		JSONArray jsonArray = new JSONArray(result);
-		for (int i = 0; i < jsonArray.length(); i++) {
-			JSONObject jsonObject = jsonArray.getJSONObject(i);
-			ShopCarInfo shopCarInfo = new ShopCarInfo();
-			shopCarInfo.setP_id(jsonObject.getInt("p_id"));
-			shopCarInfo.setP_type(jsonObject.getString("p_type"));
-			shopCarInfo.setP_machine(jsonObject.getString("p_machine"));
-			shopCarInfo.setP_name(jsonObject.getString("p_name"));
-			shopCarInfo.setP_picture(jsonObject.getString("p_picture"));
-			shopCarInfo.setP_price(jsonObject.getInt("p_price"));
-			shopCarInfo.setP_address(jsonObject.getString("p_address"));
-//			shopCarInfo.setP_numb(0);
-//            shopCarInfo.setP_numb(jsonObject.getInt("p_numb"));
-//            shopCarInfo.setP_number(jsonObject.getInt("p_number"));
-//			data = new ArrayList<>();
-//			if (shopCarInfo.getP_type().equals(type))
-//				data.add(shopCarInfo);
-		}
+		Gson gson = new Gson();
+		TakeFoodInfo takeFoodInfo = gson.fromJson(result, TakeFoodInfo.class);
+		data.addAll(takeFoodInfo.getMeal());
+        adapter.notifyDataSetChanged();
 	}
 }

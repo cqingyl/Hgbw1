@@ -3,7 +3,6 @@ package com.jetcloud.hgbw.adapter;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
@@ -14,17 +13,13 @@ import android.widget.TextView;
 
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
-import com.jetcolud.hgbw.HgbwUrl;
 import com.jetcolud.hgbw.R;
 
-import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
 import java.util.List;
 import java.util.Map;
-
-import static android.content.ContentValues.TAG;
 
 public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
     private static final String TAG_LOG = ShopCarFragmentAdapter.class.getSimpleName();
@@ -42,11 +37,19 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
         this.modifyCountInterface = modifyCountInterface;
     }
 
-    public ShopCarFragmentAdapter(Context context, List<MachineInfo> groups, Map<String, List<ShopCarInfo>> children) {
+    public ShopCarFragmentAdapter(Context context,List<MachineInfo> groups, Map<String, List<ShopCarInfo>> children) {
         super();
         this.context = context;
         this.groups = groups;
         this.children = children;
+    }
+
+    public void setData(List<MachineInfo> newGroups, Map<String, List<ShopCarInfo>> newChildren){
+        groups.clear();
+        children.clear();
+        groups.addAll(newGroups);
+        children.putAll(newChildren);
+        this.notifyDataSetChanged();
     }
 
     @Override
@@ -57,12 +60,15 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getGroupCount() {
-        return groups.size();
+//        Log.i(TAG, "getGroupCount: " + groups.size());
+//        Log.i(TAG, "getChildrenCount: "+ children.get(groups.get(0).getId()).get(0).getP_id());
+        return (groups != null) ? groups.size():0;
     }
 
     @Override
     public int getChildrenCount(int groupPosition) {
         String groupId = groups.get(groupPosition).getId();
+//        Log.i(TAG, "getChildrenCount: ");
         return children.get(groupId).size();
     }
 
@@ -103,8 +109,9 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
             groupViewHolder = (GroupViewHolder) convertView.getTag();
         }
         final MachineInfo machineInfo = (MachineInfo) getGroup(groupPosition);
-
-        groupViewHolder.tvMachineTitle.setText(machineInfo.getName());
+        String machineName = machineInfo.getId();
+        String machineNum = machineName.substring(machineName.length() - 3, machineName.length());
+        groupViewHolder.tvMachineTitle.setText(String.format(context.getString(R.string.machine_name),"成都",machineNum));
         groupViewHolder.cbGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -130,14 +137,16 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
             childViewHolder = (ChildViewHolder) convertView.getTag();
         }
 
+//        Log.i(TAG, "getChildView: " );
         final ShopCarInfo shopCarInfo = (ShopCarInfo) getChild(groupPosition, childPosition);
         //如果食物不为空
         if (shopCarInfo != null) {
-            ImageOptions imageOptions = new ImageOptions.Builder()
-                    .setFailureDrawableId(R.drawable.ic_launcher)
-                    .build();
-            x.image().bind(childViewHolder.imgFood, HgbwUrl.BASE_URL + shopCarInfo.getP_picture(), imageOptions);
-            Log.i(TAG, "getChildView: " +  HgbwUrl.BASE_URL + shopCarInfo.getP_picture());
+//            ImageOptions imageOptions = new ImageOptions.Builder()
+//                    .setFailureDrawableId(R.drawable.ic_launcher)
+//                    .build();
+//            x.image().bind(childViewHolder.imgFood, HgbwUrl.BASE_URL + shopCarInfo.getP_picture(), imageOptions);
+//            Log.i(TAG, "getChildView: " +  HgbwUrl.BASE_URL + shopCarInfo.getP_picture());
+            childViewHolder.imgFood.setImageResource(R.drawable.jietu);
             childViewHolder.tvFoodTitle.setText(String.valueOf(shopCarInfo.getP_name()));
             childViewHolder.tvMoney.setText(context.getString(R.string.rmb_display, shopCarInfo.getP_price()  ));
             childViewHolder.tvNum.setText(String.valueOf(shopCarInfo.getP_local_number()));
@@ -250,8 +259,8 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
         /**
          * 删除子item
          *
-         * @param groupPosition
-         * @param childPosition
+         * @param groupPosition 组元素位置
+         * @param childPosition 子元素位置
          */
         void childDelete(int groupPosition, int childPosition);
     }
