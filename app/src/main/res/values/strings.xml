@@ -16,4 +16,5 @@
     <string name="take_food_total">合计: ¥%.2f元</string>
     <string name="take_food_order_num">订单号:%d</string>
     <string name="take_food_num">x%d</string>
+    <string name="pay_money">%.2f RMB</string>
 </resources>

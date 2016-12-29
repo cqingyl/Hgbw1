@@ -5,7 +5,8 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.jetcolud.hgbw.R;
+import com.jetcloud.hgbw.R;
+
 
 /**
  * Created by Cqing on 2016/12/22.
@@ -25,23 +26,5 @@ public class ShopCarUtil {
             tvCorner.setText(String.valueOf(total));
         }
     }
-    //增加购物车数量
-//    public static void addCornerNum(Activity context) {
-//        int shopCarNumber = SharedPreferenceUtils.getShopCarNumber();
-//        SharedPreferenceUtils.setShopCarNumber(++shopCarNumber);
-//        ChangeCorner(context);
-//    }
-    //减少购物车数量
-//    public static void decCornerNum(Activity context, int goodNum) {
-//        int shopCarNumber = SharedPreferenceUtils.getShopCarNumber();
-//        if (shopCarNumber > 0) {
-//            shopCarNumber -= goodNum;
-//            Log.i(TAG, "decCornerNum: " + shopCarNumber);
-//            if (shopCarNumber <= 0) {
-//                shopCarNumber = 0;
-//            }
-//        }
-//        SharedPreferenceUtils.setShopCarNumber(shopCarNumber);
-//        ChangeCorner(context);
-//    }
+
 }

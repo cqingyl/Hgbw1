@@ -12,9 +12,9 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
-import com.jetcolud.hgbw.HgbwUrl;
-import com.jetcolud.hgbw.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;

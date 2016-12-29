@@ -8,13 +8,13 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.fragment.HomeFragment;
 import com.jetcloud.hgbw.fragment.MineFragment;
 import com.jetcloud.hgbw.fragment.ShopCarFragment;
 import com.jetcloud.hgbw.fragment.TakeFoodFragment;
 import com.jetcloud.hgbw.utils.Out;
-import com.jetcolud.hgbw.HgbwApplication;
-import com.jetcolud.hgbw.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

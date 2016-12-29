@@ -7,18 +7,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.app.HgbwApplication;
+import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.FoodDetail;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
-import com.jetcolud.hgbw.HgbwApplication;
-import com.jetcolud.hgbw.HgbwUrl;
-import com.jetcolud.hgbw.R;
 
 import org.json.JSONException;
 import org.xutils.common.Callback;
@@ -32,7 +33,7 @@ import java.util.ArrayList;
 
 public class DetailsActivity extends BaseActivity {
 	private final static String TAG_LOG = DetailsActivity.class.getSimpleName();
-	private TextView tv_up,tv_down,number,tv_content,tv_total_price,tv_add_car,tv_go_to_pay;
+	private TextView tv_up,tv_down,number,tv_content,tv_total_price,tv_add_car,tv_go_to_pay,tv_phone;
 	private int poductNum = 1;
 	private CustomProgressDialog progress;
 	public final static String FOOD_OBJECT = "food_object";
@@ -43,6 +44,7 @@ public class DetailsActivity extends BaseActivity {
 	private HgbwApplication app;
 	private double totalPrice;
 	private ShopCarInfo shopCarInfo;
+	private LinearLayout ll_nav_bottom;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,8 @@ public class DetailsActivity extends BaseActivity {
 		if (shopCarInfo != null) {
 			titleText = shopCarInfo.getP_name();
 			topbar.setCenterText(titleText);
+		} else {
+			ll_nav_bottom.setVisibility(View.GONE);
 		}
 		Resources resources = DetailsActivity.this.getResources();
 		Drawable drawable = resources.getDrawable(R.drawable.fanhui);
@@ -69,13 +73,41 @@ public class DetailsActivity extends BaseActivity {
 		tv_go_to_pay = getViewWithClick(R.id.tv_go_to_pay);
 		tv_up = getViewWithClick(R.id.tv_up);
 		tv_down = getViewWithClick(R.id.tv_down);
+		tv_phone = getView(R.id.tv_phone);
 		number = getViewWithClick(R.id.number);
 	}
-
+	String result = "{ \"p_meal\" : [\n" +
+			"                                                                      {\n" +
+			"                                                                        \"p_id\": 1,\n" +
+			"                                                                        \"s_name\": \"小炒杏鲍菇\",\n" +
+			"                                                                        \"s_picture\": \"../images/小炒杏鲍菇" +
+			".png\",\n" +
+			"                                                                        \"s_price\": 15,\n" +
+			"                                                                        \"s_total\": null,\n" +
+			"                                                                        \"s_totalprice\": null,\n" +
+			"                                                                        \"s_introduce\": " +
+			"\"端上一盘红烧肉，满屋飘香口水流。此菜本非人间有，天上佳肴落街头。北宋大文豪苏东坡也对你推崇备至，焖你的皮，煮你的肉，既酥又烂，吃后口齿流香。他与你友好合作，发明创造了流传百世的\\\"东坡肉\\\"；敝人的祖先更绝，数百年前元兵南侵，我祖从中原南阳逃难，在南下的颠沛流离中，竟然还携带令人垂涎三尺的\\\"东坡肉\\\"！\",\n" +
+			"                                                                        \"s_phone\": 12321231\n" +
+			"                                                                      }\n" +
+			"                                                                    ]\n" +
+			"}";
 	@Override
 	protected void loadData() {
 		// TODO Auto-generated method stub
-			getNetData();
+//			getNetData();
+		try {
+			getDataFromJson(result);
+			bean = detail.getP_meal().get(0);
+			tv_content.setText(bean.getS_introduce());
+			tv_total_price.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), (double)bean.getS_price()));
+			iv_food.setImageResource(R.drawable.longredmeet);
+			tv_phone.setText(String.valueOf(bean.getS_phone()));
+			shopCarInfo.setP_local_number(1);
+			shopCarInfo.setP_price(bean.getS_price());
+			shopCarInfo.setP_name(bean.getS_name());
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
 	}
 	@Override
 	public void onClick(View view) {
@@ -86,6 +118,7 @@ public class DetailsActivity extends BaseActivity {
 				if (bean != null) {
 					totalPrice = bean.getS_price() * poductNum;
 					tv_total_price.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), totalPrice));
+					shopCarInfo.setP_local_number(poductNum);
 				}
 				break;
 			case R.id.tv_down:
@@ -95,6 +128,7 @@ public class DetailsActivity extends BaseActivity {
 					if (bean != null) {
 						totalPrice = bean.getS_price() * poductNum;
 						tv_total_price.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), totalPrice));
+						shopCarInfo.setP_local_number(poductNum);
 					}
 				}
 				break;
@@ -102,7 +136,7 @@ public class DetailsActivity extends BaseActivity {
 			case R.id.tv_go_to_pay:
 				ArrayList<ShopCarInfo> listObj = new ArrayList<ShopCarInfo>();
 				listObj.add(shopCarInfo);
-				Intent i = new Intent(DetailsActivity.this, PayActivity.class);
+				Intent i = new Intent(DetailsActivity.this, DetailPayActivity.class);
 				i.putExtra(FOOD_OBJECT, listObj);
 				startActivity(i);
 				break;

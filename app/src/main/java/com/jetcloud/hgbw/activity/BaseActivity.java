@@ -16,11 +16,11 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.manager.SystemBarTintManager;
 import com.jetcloud.hgbw.view.TopBar;
 import com.jetcloud.hgbw.view.TopBar.ITopBarClickListener;
-import com.jetcolud.hgbw.HgbwApplication;
-import com.jetcolud.hgbw.R;
 
 
 public abstract class BaseActivity extends FragmentActivity implements

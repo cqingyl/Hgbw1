@@ -7,12 +7,12 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.adapter.TakeFoodFragmentAdapter;
+import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.TakeFoodInfo;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 import com.jetcloud.hgbw.view.MyListView;
-import com.jetcolud.hgbw.HgbwUrl;
-import com.jetcolud.hgbw.R;
 
 import org.json.JSONException;
 import org.xutils.common.Callback;

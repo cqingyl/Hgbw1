@@ -1,8 +1,5 @@
 package com.jetcloud.hgbw.activity;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 import android.annotation.TargetApi;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -20,8 +17,11 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.utils.Out;
-import com.jetcolud.hgbw.R;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 public class RegisterActivity extends BaseActivity {

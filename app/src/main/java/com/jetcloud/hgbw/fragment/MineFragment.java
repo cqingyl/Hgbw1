@@ -11,12 +11,13 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.LoginActivity;
 import com.jetcloud.hgbw.activity.MainActivity;
 import com.jetcloud.hgbw.activity.MyTicketActivity;
+import com.jetcloud.hgbw.activity.MyWalletActivity;
 import com.jetcloud.hgbw.activity.RegisterActivity;
 import com.jetcloud.hgbw.utils.Out;
-import com.jetcolud.hgbw.R;
 
 @SuppressLint("ResourceAsColor")
 public class MineFragment extends BaseFragment{
@@ -71,7 +72,7 @@ public class MineFragment extends BaseFragment{
 		}else if (view==mypoint) {
 			Out.Toast(getActivity(), "我的卡积分");
 		}else if (view==mymoney) {
-			Out.Toast(getActivity(), "我的钱包");
+			startActivity(new Intent(getActivity(), MyWalletActivity.class));
 		}else if (view==aboutus) {
 			Out.Toast(getActivity(), "关于我们");
 		}else if (view==tv_login) {

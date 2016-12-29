@@ -1,23 +1,18 @@
 package com.jetcloud.hgbw.activity;
 
-import com.jetcloud.hgbw.utils.Out;
-import com.jetcolud.hgbw.R;
-import com.jetcolud.hgbw.R.layout;
-import com.jetcolud.hgbw.R.menu;
-
-import android.os.Bundle;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
+import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.utils.Out;
 
 @SuppressLint("NewApi")
 public class LoginActivity extends BaseActivity {

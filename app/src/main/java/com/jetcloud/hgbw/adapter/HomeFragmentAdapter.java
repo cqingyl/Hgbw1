@@ -9,17 +9,19 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.DetailsActivity;
+import com.jetcloud.hgbw.activity.HomePayActivity;
 import com.jetcloud.hgbw.activity.MainActivity;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
-import com.jetcolud.hgbw.R;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import static com.jetcolud.hgbw.R.id.iv_detils;
+import static com.jetcloud.hgbw.activity.DetailsActivity.FOOD_OBJECT;
 
 public class HomeFragmentAdapter extends BaseAdapter {
     private Activity context;
@@ -90,8 +92,18 @@ public class HomeFragmentAdapter extends BaseAdapter {
             @Override
             public void onClick(View arg0) {
                 Intent i = new Intent(new Intent(context, DetailsActivity.class));
-                i.putExtra(DetailsActivity.FOOD_OBJECT,shopCarInfo);
+                i.putExtra(FOOD_OBJECT,shopCarInfo);
                 MainActivity.mainActivity.startActivity(i);
+            }
+        });
+        holder.tvBtnApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ArrayList<ShopCarInfo> listObj = new ArrayList<ShopCarInfo>();
+                listObj.add(shopCarInfo);
+                Intent i = new Intent(context, HomePayActivity.class);
+                i.putExtra(FOOD_OBJECT, listObj);
+                context.startActivity(i);
             }
         });
         return convertView;
@@ -101,9 +113,6 @@ public class HomeFragmentAdapter extends BaseAdapter {
         public void addGoodNumber(ShopCarInfo shopCarInfo);
     }
 
-    public AddGoodNumberInterface getNumberInterface() {
-        return numberInterface;
-    }
 
     public void setNumberInterface(AddGoodNumberInterface numberInterface) {
         this.numberInterface = numberInterface;
@@ -119,7 +128,7 @@ public class HomeFragmentAdapter extends BaseAdapter {
 
 
     class ViewHolder {
-        @ViewInject(iv_detils)
+        @ViewInject(R.id.iv_detils)
         private ImageView ivDetils;
         @ViewInject(R.id.tv_btn_apply)
         private TextView tvBtnApply;

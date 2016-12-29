@@ -1,16 +1,12 @@
 package com.jetcloud.hgbw.activity;
 
-import com.jetcloud.hgbw.adapter.MyticketAdapter;
-import com.jetcloud.hgbw.view.MyListView;
-import com.jetcolud.hgbw.R;
-import com.jetcolud.hgbw.R.layout;
-import com.jetcolud.hgbw.R.menu;
-
-import android.os.Bundle;
-import android.app.Activity;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
-import android.view.Menu;
+import android.os.Bundle;
+
+import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.adapter.MyticketAdapter;
+import com.jetcloud.hgbw.view.MyListView;
 
 public class MyTicketActivity extends BaseActivity {
 	private MyListView lv_myticket;

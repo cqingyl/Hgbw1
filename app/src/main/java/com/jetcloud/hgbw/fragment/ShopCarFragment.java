@@ -12,13 +12,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.adapter.ShopCarFragmentAdapter;
+import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.utils.ShopCarUtil;
-import com.jetcolud.hgbw.HgbwApplication;
-import com.jetcolud.hgbw.R;
 
 import org.xutils.db.sqlite.WhereBuilder;
 import org.xutils.ex.DbException;
@@ -281,45 +281,6 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     //删除item
     @Override
     public void childDelete(int groupPosition, int childPosition) {
-//        int goodNum = 0;
-//        try {
-//
-//            ShopCarInfo shopCarInfo = children.get(groups.get(groupPosition).getId()).get(childPosition);
-//            goodNum = shopCarInfo.getP_local_number();
-//            WhereBuilder wb = WhereBuilder.b("p_id", "=", shopCarInfo.getP_id());
-//            app.db.delete(ShopCarInfo.class, wb);
-//            List<ShopCarInfo> data = app.db.selector(ShopCarInfo.class).findAll();
-//            Log.i(TAG, "childDelete: " + data.size());
-//
-//        } catch (DbException e) {
-//            e.printStackTrace();
-//            Log.e(TAG_LOG, " 删除child失败： " + e.getMessage());
-//        }
-//        children.get(groups.get(groupPosition).getId()).remove(childPosition);
-//        //减少商品总量
-//        total -= goodNum;
-//        if (total < 0) {
-//            total = 0;
-//        }
-//        ShopCarUtil.ChangeCorner(getActivity(), total);
-//        isEmptyCar();
-//        MachineInfo group = groups.get(groupPosition);
-//        try {
-//            List<ShopCarInfo> childs = children.get(group.getId());
-//            if (childs.size() == 0) {
-//                WhereBuilder wb = WhereBuilder.b("id", "=", groups.get(groupPosition).getId());
-//                app.db.delete(MachineInfo.class, wb);
-//                children.remove(groups.get(groupPosition).getId());
-//                groups.remove(groupPosition);
-//            }
-//        } catch (DbException e) {
-//            e.printStackTrace();
-//            Log.e(TAG_LOG, " 删除group失败： " + e.getMessage());
-//        }
-//        adapter.notifyDataSetChanged();
-//        Log.i(TAG, "childDelete: " +groups.size()+children.size());
-//        //     handler.sendEmptyMessage(0);
-//        calculate();
         ShopCarInfo shopCarInfo = children.get(groups.get(groupPosition).getId()).remove(childPosition);
         WhereBuilder wbc = WhereBuilder.b("p_id", "=", shopCarInfo.getP_id());
         int goodNum = shopCarInfo.getP_local_number();

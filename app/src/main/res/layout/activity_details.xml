@@ -50,8 +50,7 @@
                         android:lineSpacingExtra="3dp"
                         android:padding="15dp"
                         tools:text="红烧肉啊是大厦科技时代好卡技术的就喀什的接口那是肯定就会卡机收到贺卡收到江
-                红烧肉啊是大厦科技时代好卡技术的就喀什的接口那是肯定就会卡机收到贺卡收到江岸上看接电话呢卡
-                红烧肉啊是大厦科技时代好卡技术的就喀什的接口那是肯定就会卡机收到贺卡收到江岸上看接电话呢卡岸上看接电话呢卡技术的可能就啊还是大口径hands看啊速度很快就ask但看时间的河卡死的你"
+                红烧肉啊是大厦科技时代好定就会卡机收到贺接口那是肯定就会卡机收到贺卡收到江岸上看接电话呢卡岸上看接电话呢卡技术的可能就啊还是大口径hands看啊速度很快就ask但看时间的河卡死的你"
                         android:textColor="@color/text_b2"
                         android:textSize="@dimen/text_huge"/>
                 </LinearLayout>
@@ -62,10 +61,19 @@
                     android:layout_margin="15dp"
                     android:orientation="horizontal">
 
-                    <View
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/phone"/>
+                    <TextView
+                        android:id="@+id/tv_phone"
                         android:layout_width="0dp"
-                        android:layout_height="1dp"
-                        android:layout_weight="1"/>
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        tools:text="15715484521"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_huge"/>
 
                     <TextView
                         android:id="@+id/tv_down"
@@ -104,6 +112,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll_nav_bottom"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottom_bar_h"
         android:gravity="center"

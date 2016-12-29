@@ -1,26 +1,16 @@
 package com.jetcloud.hgbw.fragment;
 
-import com.jetcloud.hgbw.view.TopBar;
-import com.jetcloud.hgbw.view.TopBar.ITopBarClickListener;
-import com.jetcolud.hgbw.R;
-
-import android.animation.Animator;
-import android.animation.Animator.AnimatorListener;
-import android.animation.AnimatorInflater;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.View.OnClickListener;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
+
+import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.view.TopBar;
 
 public abstract class BaseFragment extends Fragment implements OnClickListener {
 

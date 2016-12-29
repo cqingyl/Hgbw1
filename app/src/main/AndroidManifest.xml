@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.jetcolud.hgbw"
+          package="com.jetcloud.hgbw"
           android:versionCode="1"
           android:versionName="1.0">
 
@@ -50,7 +50,7 @@
     </uses-permission>
 
     <application
-        android:name=".HgbwApplication"
+        android:name=".app.HgbwApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -64,7 +64,7 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="BhEHt7ZYz3BdXuefKU9oEd6iHi6XEqfs"/> <!-- http://lbsyun.baidu.com/apiconsole/key -->
         <activity
-            android:name="com.jetcloud.hgbw.activity.MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -74,22 +74,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.jetcloud.hgbw.activity.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:label="@string/title_activity_login">
         </activity>
         <activity
-            android:name="com.jetcloud.hgbw.activity.RegisterActivity"
+            android:name=".activity.RegisterActivity"
             android:label="@string/title_activity_register">
         </activity>
         <activity
-            android:name="com.jetcloud.hgbw.activity.MyTicketActivity"
+            android:name=".activity.MyTicketActivity"
             android:label="@string/title_activity_my_ticket">
         </activity>
         <activity
-            android:name="com.jetcloud.hgbw.activity.DetailsActivity"
+            android:name=".activity.DetailsActivity"
             android:label="@string/title_activity_details">
         </activity>
-        <activity android:name="com.jetcloud.hgbw.activity.demo.LocationActivity"/>
+        <activity android:name=".activity.demo.LocationActivity"/>
 
         <!-- 百度地图server -->
         <service
@@ -102,11 +102,21 @@
             </intent-filter>
         </service>
 
-        <activity android:name="com.jetcloud.hgbw.activity.QRCodeActivity">
+        <activity android:name=".activity.QRCodeActivity">
         </activity>
-        <activity android:name="com.jetcloud.hgbw.activity.PayActivity">
+        <activity android:name=".activity.HomePayActivity">
         </activity>
-        <activity android:name="com.jetcloud.hgbw.activity.PayNextActivity">
+        <activity android:name=".activity.PayNextActivity">
+        </activity>
+        <activity android:name=".activity.DetailPayActivity">
+        </activity>
+        <activity android:name=".activity.MyWalletActivity">
+        </activity>
+        <activity android:name=".activity.BindingActivity">
+        </activity>
+        <activity android:name=".activity.BindNextActivity">
+        </activity>
+        <activity android:name=".activity.CarPayActivity">
         </activity>
     </application>
 

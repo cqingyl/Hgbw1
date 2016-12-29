@@ -8,9 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.QRCodeActivity;
 import com.jetcloud.hgbw.bean.TakeFoodInfo;
-import com.jetcolud.hgbw.R;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;

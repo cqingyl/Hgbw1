@@ -1,14 +1,7 @@
 package com.jetcloud.hgbw.view;
 
-import java.util.ArrayList;
-
-import com.jetcloud.hgbw.utils.ImageLoaderCfg;
-import com.jetcolud.hgbw.R;
-import com.nostra13.universalimageloader.core.ImageLoader;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -22,6 +15,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
+
+import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.utils.ImageLoaderCfg;
+import com.nostra13.universalimageloader.core.ImageLoader;
+
+import java.util.ArrayList;
 
 /**
  * 广告图片自动轮播控件</br>

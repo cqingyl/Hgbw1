@@ -10,7 +10,7 @@ android {
 
     }
     defaultConfig {
-        applicationId "com.jetcolud.hgbw"
+        applicationId "com.jetcloud.hgbw"
         minSdkVersion 14
         targetSdkVersion 18
     }
@@ -34,4 +34,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'org.xutils:xutils:3.3.38'
     compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
 }

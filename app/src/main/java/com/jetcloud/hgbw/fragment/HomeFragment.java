@@ -11,9 +11,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.MainActivity;
 import com.jetcloud.hgbw.activity.demo.LocationActivity;
 import com.jetcloud.hgbw.adapter.HomeFragmentAdapter;
+import com.jetcloud.hgbw.app.HgbwApplication;
+import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.GoodsInfo;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
@@ -24,9 +27,6 @@ import com.jetcloud.hgbw.view.CustomProgressDialog;
 import com.jetcloud.hgbw.view.ImageCycleView;
 import com.jetcloud.hgbw.view.ImageCycleView.ImageCycleViewListener;
 import com.jetcloud.hgbw.view.MyListView;
-import com.jetcolud.hgbw.HgbwApplication;
-import com.jetcolud.hgbw.HgbwUrl;
-import com.jetcolud.hgbw.R;
 
 import org.json.JSONException;
 import org.xutils.common.Callback;
@@ -124,6 +124,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     @Override
     protected void initView() {
+        Log.i(TAG, "initView: " +    System.currentTimeMillis());
 
         app = (HgbwApplication) getActivity().getApplication();
         binner = getView(R.id.binner);
@@ -263,21 +264,8 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                 MachineInfo machineInfo = new MachineInfo();
 
                 try {
-                    switch (type) {
-                        case NEW_FOOD:
-                            carInfo = app.db.selector(ShopCarInfo.class).where("p_id", "=", shopCarInfoId).findFirst();
-                            break;
-                        case HOT_FOOD:
-                            carInfo = app.db.selector(ShopCarInfo.class).where("p_id", "=", shopCarInfoId).findFirst();
-                            break;
-                        case SET_MEAL:
-                            carInfo = app.db.selector(ShopCarInfo.class).where("p_id", "=", shopCarInfoId).findFirst();
-                            break;
-                        case DRINK:
-                            carInfo = app.db.selector(ShopCarInfo.class).where("p_id", "=", shopCarInfoId).findFirst();
-                            break;
-                        default:
-                    }
+                    carInfo = app.db.selector(ShopCarInfo.class).where("p_id", "=", shopCarInfoId).findFirst();
+
                     //如果数据库里不存在，数量为1,并向数据库添加一项；存在，就取出来+1再存回去
                     int num;
                     if (carInfo == null) {

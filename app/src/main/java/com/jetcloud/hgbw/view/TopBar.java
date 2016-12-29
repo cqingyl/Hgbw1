@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.jetcolud.hgbw.R;
+import com.jetcloud.hgbw.R;
 
 
 public class TopBar extends RelativeLayout {

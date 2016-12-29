@@ -40,25 +40,18 @@
 		<LinearLayout
 			android:id="@+id/ll_info"
 			android:layout_width="0dp"
-			android:layout_height="wrap_content"
+			android:layout_height="match_parent"
 			android:layout_weight="3"
 			>
 
 			<LinearLayout
 				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
+				android:layout_height="match_parent"
 				android:layout_marginRight="20dp"
 				android:layout_weight="1"
-				android:orientation="vertical"
+				android:gravity="right|center_vertical"
+				android:orientation="horizontal"
 				>
-
-				<LinearLayout
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:gravity="right"
-					android:orientation="horizontal"
-					>
-
 					<TextView
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
@@ -76,16 +69,7 @@
 						android:textColor="@color/orangered"
 						android:textSize="16sp"
 						android:textStyle="bold"/>
-				</LinearLayout>
 
-				<TextView
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:gravity="right"
-					android:text="不含运费"
-					android:textColor="@color/gray"
-					android:textSize="16sp"
-					android:textStyle="bold"/>
 			</LinearLayout>
 
 			<TextView
@@ -93,13 +77,14 @@
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:layout_weight="3"
-				android:background="@color/orange"
+				android:background="@drawable/bg_tv_go_to_pay"
 				android:clickable="true"
 				android:gravity="center"
 				android:text="结算(0)"
 				android:textColor="#FAFAFA"
 
 				/>
+
 		</LinearLayout>
 	</LinearLayout>
 </LinearLayout>

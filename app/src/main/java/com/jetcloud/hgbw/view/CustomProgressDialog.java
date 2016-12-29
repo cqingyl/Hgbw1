@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jetcolud.hgbw.R;
+import com.jetcloud.hgbw.R;
 
 
 /**
@@ -27,7 +27,7 @@ public class CustomProgressDialog extends ProgressDialog {
     private int mResid;
 
     public CustomProgressDialog(Context context, String content, int id) {
-        super(context,R.style.iphone_progress_dialog);
+        super(context, R.style.iphone_progress_dialog);
         this.mContext = context;
         this.mLoadingTip = content;
         this.mResid = id;

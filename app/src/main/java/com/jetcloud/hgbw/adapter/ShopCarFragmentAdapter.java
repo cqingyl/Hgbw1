@@ -11,9 +11,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
-import com.jetcolud.hgbw.R;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
