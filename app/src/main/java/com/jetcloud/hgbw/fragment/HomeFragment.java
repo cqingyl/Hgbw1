@@ -20,6 +20,7 @@ import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.GoodsInfo;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
+import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.utils.ShopCarUtil;
 import com.jetcloud.hgbw.utils.TakeInShopCarAnim;
@@ -164,7 +165,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         dataE.addAll(goodsInfo.getE());
         adapter.notifyDataSetChanged();
         //初始化轮播图
-//        loadAdData();
+        loadAdData();
     }
 
 
@@ -280,6 +281,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                         carInfo.setP_address(shopCarInfo.getP_address());
                         carInfo.setP_local_number(1);
                         carInfo.setP_number(shopCarInfo.getP_number());
+                        carInfo.setP_vr9(shopCarInfo.getP_vr9());
                         app.db.saveOrUpdate(machineInfo);
                     } else {
                         num = carInfo.getP_local_number();
@@ -287,9 +289,9 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                     }
                     //增加商品数量
                     app.db.saveOrUpdate(carInfo);
-                    List<ShopCarInfo> shopCarInfos = app.db.selector(ShopCarInfo.class).findAll();
-                    List<MachineInfo> machine = app.db.selector(MachineInfo.class).findAll();
-                    Log.i(TAG, "shopCarInfos size: " + shopCarInfos.size() + " machine size: " + machine.size());
+//                    List<ShopCarInfo> shopCarInfos = app.db.selector(ShopCarInfo.class).findAll();
+//                    List<MachineInfo> machine = app.db.selector(MachineInfo.class).findAll();
+//                    Log.i(TAG, "shopCarInfos size: " + shopCarInfos.size() + " machine size: " + machine.size());
 //                    Log.i(TAG, "shopCarInfos first object local num: " + shopCarInfos.get(0).getP_local_number());
 //                    Log.i(TAG, "machine first object id: "+ m.get(0).getId());
 
@@ -298,7 +300,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                         public void run() {
                             //        改变购物车角标
                             ShopCarUtil.ChangeCorner(getActivity(), ++total);
-
+//                            SharedPreferenceUtils.setShopCarNumber(total);
                         }
                     });
                 } catch (DbException e) {
@@ -334,17 +336,18 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     @Override
     public void initData() {
-        //初始化轮播图
-//        loadAdData();
-        //listview设置适配器
         getNetData();
     }
 
     private void loadAdData() {
 
         for (int i = 0; i < dataE.size(); i++) {
-            String imgPath = dataE.get(i).getP_picture();
-            mImageUrl.add(HgbwUrl.BASE_URL + imgPath);
+//            String imgPath = dataE.get(i).getP_picture();
+//            mImageUrl.add(HgbwUrl.BASE_URL + imgPath);
+
+            String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + dataE.get(i).getP_picture());
+            Log.i(TAG, "loadAdData: " + imgPath);
+            mImageUrl.add(imgPath);
         }
         binner.setImageResources(mImageUrl, mAdCycleViewListener, 0);
 

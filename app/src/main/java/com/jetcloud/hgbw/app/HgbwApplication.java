@@ -50,7 +50,7 @@ public class HgbwApplication extends Application{
 		// 在使用 SDK 各组间之前初始化 context 信息，传入 ApplicationContext
 //		SDKInitializer.initialize(this);
 	}
-	
+
 	public void addActivity(Activity activity) {
 		activityList.add(activity);
 	}

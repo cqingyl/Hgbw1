@@ -18,6 +18,7 @@ import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.FoodDetail;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
+import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 
@@ -26,6 +27,7 @@ import org.xutils.common.Callback;
 import org.xutils.ex.DbException;
 import org.xutils.ex.HttpException;
 import org.xutils.http.RequestParams;
+import org.xutils.image.ImageOptions;
 import org.xutils.x;
 
 import java.util.ArrayList;
@@ -94,20 +96,20 @@ public class DetailsActivity extends BaseActivity {
 	@Override
 	protected void loadData() {
 		// TODO Auto-generated method stub
-//			getNetData();
-		try {
-			getDataFromJson(result);
-			bean = detail.getP_meal().get(0);
-			tv_content.setText(bean.getS_introduce());
-			tv_total_price.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), (double)bean.getS_price()));
-			iv_food.setImageResource(R.drawable.longredmeet);
-			tv_phone.setText(String.valueOf(bean.getS_phone()));
-			shopCarInfo.setP_local_number(1);
-			shopCarInfo.setP_price(bean.getS_price());
-			shopCarInfo.setP_name(bean.getS_name());
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
+			getNetData();
+//		try {
+//			getDataFromJson(result);
+//			bean = detail.getP_meal().get(0);
+//			tv_content.setText(bean.getS_introduce());
+//			tv_total_price.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), (double)bean.getS_price()));
+//			iv_food.setImageResource(R.drawable.longredmeet);
+//			tv_phone.setText(String.valueOf(bean.getS_phone()));
+//			shopCarInfo.setP_local_number(1);
+//			shopCarInfo.setP_price(bean.getS_price());
+//			shopCarInfo.setP_name(bean.getS_name());
+//		} catch (JSONException e) {
+//			e.printStackTrace();
+//		}
 	}
 	@Override
 	public void onClick(View view) {
@@ -220,7 +222,15 @@ public class DetailsActivity extends BaseActivity {
 						bean = detail.getP_meal().get(0);
 						tv_content.setText(bean.getS_introduce());
 						tv_total_price.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), (double)bean.getS_price()));
-						iv_food.setImageResource(R.drawable.longredmeet);
+						ImageOptions imageOptions = new ImageOptions.Builder()
+								.setFailureDrawableId(R.drawable.ic_launcher)
+								.build();
+						String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + shopCarInfo.getP_picture());
+						x.image().bind(iv_food, imgPath, imageOptions);
+						tv_phone.setText(bean.getS_phone());
+						shopCarInfo.setP_local_number(1);
+						shopCarInfo.setP_price(bean.getS_price());
+						shopCarInfo.setP_name(bean.getS_name());
 					}
 				});
 
@@ -265,6 +275,7 @@ public class DetailsActivity extends BaseActivity {
 						carInfo.setP_address(shopCarInfo.getP_address());
 						carInfo.setP_local_number(1);
 						carInfo.setP_number(shopCarInfo.getP_number());
+						carInfo.setP_vr9(shopCarInfo.getP_vr9());
 						app.db.saveOrUpdate(machineInfo);
 					} else {
 						int oldNum = carInfo.getP_local_number();

@@ -342,6 +342,7 @@
     <color name="text_left_account">#464646</color>
     <color name="text_bom_account">#464646</color>
     <!-- 品质生活 商品列表 -->
+    <color name="bottom_nav_text_color_pressed">#ed3b3b</color>
     <color name="text_price_red">#ed3b3b</color>
     <color name="text_sold_greay">#b0b0b0</color>
     <color name="text_title_black">#232323</color>

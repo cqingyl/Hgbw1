@@ -1,6 +1,6 @@
 package com.jetcloud.hgbw.fragment;
 
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.activity.CarPayActivity;
 import com.jetcloud.hgbw.adapter.ShopCarFragmentAdapter;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.bean.MachineInfo;
@@ -27,12 +28,14 @@ import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import static android.content.ContentValues.TAG;
+import static com.jetcloud.hgbw.R.id.cb_all;
 
 @ContentView(R.layout.fragment_shopcar)
 public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdapter.ModifyCountInterface,
@@ -42,7 +45,8 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     private ShopCarFragmentAdapter adapter;
 //    @ViewInject(R.id.elv_shopcar)
     private ExpandableListView elv_shopCar;
-    @ViewInject(R.id.cb_all)
+    private ArrayList<ShopCarInfo> listObj;
+    @ViewInject(cb_all)
     private CheckBox allCheckbox;
     @ViewInject(R.id.tv_total_price)
     private TextView tvTotalPrice;
@@ -51,12 +55,16 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     @ViewInject(R.id.layout_car_empty)
     private LinearLayout carEmpty;
     private double totalPrice = 0.00;// 购买的商品总价
+    private double totalGcb;
     private int totalCount = 0;// 购买的商品总数量
     private int total;
     private List<MachineInfo> groups = new ArrayList<>();
     private Map<String, List<ShopCarInfo>> children = new HashMap<>();
     private HgbwApplication app;
     private boolean isFirst = true;
+    public final static String MACHINE_OBJECT = "machine_object";
+    public final static String PRODUC_OBJECT = "product_object";
+
 
     //    private SharedPreferences preferences;
 //    private static final String SHOP_CAR_NUM = "shop car num";
@@ -78,7 +86,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         app = (HgbwApplication) getActivity().getApplication();
 //		topbar.setCenterText("购物车");
 		elv_shopCar = getView(R.id.elv_shopcar);
-//       allCheckbox = getView(R.id.cb_all);
+       allCheckbox = getView(R.id.cb_all);
 
     }
 
@@ -88,7 +96,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         children = new HashMap<>();
         loadListData();
         adapter = new ShopCarFragmentAdapter(getActivity(),groups, children);
-        Log.i(TAG, "onHiddenChanged: "+ elv_shopCar + groups + children + adapter);
+//        Log.i(TAG, "onHiddenChanged: "+ elv_shopCar + groups + children + adapter);
         elv_shopCar.setAdapter(adapter);
         elv_shopCar.setGroupIndicator(null);
         adapter.setCheckInterface(this);// 关键步骤1,设置复选框接口
@@ -149,15 +157,20 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
 
     @Override
     public void onHiddenChanged(boolean hidden) {
-        if (!isFirst)
-        Log.i(TAG, "S onHiddenChanged: " + hidden );
+//        if (!isFirst)
+//        Log.i(TAG, "S onHiddenChanged: " + hidden );
         if (hidden && !isFirst) {
             SharedPreferenceUtils.setShopCarNumber(total);
-            Log.i(TAG, "S onHiddenChanged: " + total);
+//            Log.i(TAG, "S onHiddenChanged: " + total);
         } else if (!hidden && !isFirst) {
             if (total != SharedPreferenceUtils.getShopCarNumber()){
                 total = SharedPreferenceUtils.getShopCarNumber();
                 Log.i(TAG, "S onHiddenChanged: " + total);
+                totalPrice = 0;
+                totalGcb = 0;
+                allCheckbox.setChecked(false);
+                tvGoToPay.setText("去支付(" + 0 + ")");
+                tvTotalPrice.setText(getString(R.string.take_food_total, totalPrice));
                 initData();
                 isEmptyCar();
             }
@@ -186,11 +199,11 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     /**
      * 事件
      */
-    @Event(value = {R.id.cb_all, R.id.tv_go_to_pay})
+    @Event(value = {cb_all, R.id.tv_go_to_pay})
     private void getEvent(View view) {
         AlertDialog alert;
         switch (view.getId()) {
-            case R.id.cb_all:
+            case cb_all:
                 doCheckAll();
                 break;
             case R.id.tv_go_to_pay:
@@ -201,24 +214,17 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
                     Toast.makeText(getActivity(), "请选择要支付的商品", Toast.LENGTH_LONG).show();
                     return;
                 }
-                alert = new AlertDialog.Builder(getActivity()).create();
-                alert.setTitle("操作提示");
-                alert.setMessage("总计:\n" + totalCount + "种商品\n" + totalPrice + "元");
-                alert.setButton(DialogInterface.BUTTON_NEGATIVE, "取消",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                return;
-                            }
-                        });
-                alert.setButton(DialogInterface.BUTTON_POSITIVE, "确定",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                return;
-                            }
-                        });
-                alert.show();
+                Intent intent = new Intent(getActivity(), CarPayActivity.class);
+                intent.putExtra("totalPrice", totalPrice);
+                intent.putExtra("totalGcb", totalGcb);
+                for (int i = 0; i < groups.size(); i ++){
+                    if (groups.get(i).isSelected()){
+
+                    }
+                }
+                intent.putExtra(PRODUC_OBJECT, (Serializable) children);
+                intent.putExtra(MACHINE_OBJECT, (Serializable) groups);
+                startActivity(intent);
                 break;
         }
     }
@@ -392,6 +398,8 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     private void calculate() {
         totalCount = 0;
         totalPrice = 0.00;
+        totalGcb = 0.00;
+
         for (int i = 0; i < groups.size(); i++) {
             MachineInfo group = groups.get(i);
             List<ShopCarInfo> childs = children.get(group.getId());
@@ -400,11 +408,12 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
                 if (product.isSelected()) {
                     totalCount++;
                     totalPrice += product.getP_price() * product.getP_local_number();
+                    totalGcb += product.getP_vr9() * product.getP_local_number();
                 }
             }
         }
 
-        tvTotalPrice.setText(getString(R.string.rmb_display, totalPrice));
+        tvTotalPrice.setText(getString(R.string.take_food_total, totalPrice));
         tvGoToPay.setText("去支付(" + totalCount + ")");
         //计算购物车的金额为0时候清空购物车的视图
         if (totalCount == 0) {
@@ -454,6 +463,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         adapter = null;
         groups.clear();
         totalPrice = 0;
+        totalGcb = 0;
         children.clear();
     }
 }

@@ -55,7 +55,7 @@ public class BindNextActivity extends BaseActivity {
             if (passwordInputView.getText().length() == 6){
                 //发送
 //                getNetData();
-                SharedPreferenceUtils.setBindStatus(1);
+//                SharedPreferenceUtils.setBindStatus(1);
                 finish();
                 startActivity(new Intent(BindNextActivity.this, MyWalletActivity.class));
 

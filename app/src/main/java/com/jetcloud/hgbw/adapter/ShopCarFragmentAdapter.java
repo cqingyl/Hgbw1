@@ -12,9 +12,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
+import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 
+import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
@@ -141,12 +144,11 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
         final ShopCarInfo shopCarInfo = (ShopCarInfo) getChild(groupPosition, childPosition);
         //如果食物不为空
         if (shopCarInfo != null) {
-//            ImageOptions imageOptions = new ImageOptions.Builder()
-//                    .setFailureDrawableId(R.drawable.ic_launcher)
-//                    .build();
-//            x.image().bind(childViewHolder.imgFood, HgbwUrl.BASE_URL + shopCarInfo.getP_picture(), imageOptions);
-//            Log.i(TAG, "getChildView: " +  HgbwUrl.BASE_URL + shopCarInfo.getP_picture());
-            childViewHolder.imgFood.setImageResource(R.drawable.jietu);
+            ImageOptions imageOptions = new ImageOptions.Builder()
+                    .setFailureDrawableId(R.drawable.ic_launcher)
+                    .build();
+            String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + shopCarInfo.getP_picture());
+            x.image().bind(childViewHolder.imgFood, imgPath, imageOptions);
             childViewHolder.tvFoodTitle.setText(String.valueOf(shopCarInfo.getP_name()));
             childViewHolder.tvMoney.setText(context.getString(R.string.rmb_display, shopCarInfo.getP_price()  ));
             childViewHolder.tvNum.setText(String.valueOf(shopCarInfo.getP_local_number()));

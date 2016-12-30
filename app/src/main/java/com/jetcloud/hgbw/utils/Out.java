@@ -1,5 +1,6 @@
 package com.jetcloud.hgbw.utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 
@@ -31,5 +32,9 @@ public class Out {
 		} catch (Exception e) {
 
 		}
+	}
+
+	public static boolean isActivityClosed(Context context) {
+		return ((Activity) context).isFinishing();
 	}
 }

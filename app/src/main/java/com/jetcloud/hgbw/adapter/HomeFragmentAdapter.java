@@ -13,8 +13,11 @@ import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.DetailsActivity;
 import com.jetcloud.hgbw.activity.HomePayActivity;
 import com.jetcloud.hgbw.activity.MainActivity;
+import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
+import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 
+import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
@@ -67,6 +70,11 @@ public class HomeFragmentAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
+        ImageOptions imageOptions = new ImageOptions.Builder()
+                .setFailureDrawableId(R.drawable.ic_launcher)
+                .build();
+        String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + list.get(position).getP_picture());
+        x.image().bind(holder.imgFood, imgPath, imageOptions);
         holder.tvFoodName.setText(list.get(position).getP_name());
         holder.tvMachineName.setText(list.get(position).getP_machine());
         holder.tvAddress.setText(list.get(position).getP_address());

@@ -10,8 +10,11 @@ import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.QRCodeActivity;
+import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.TakeFoodInfo;
+import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 
+import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
@@ -52,8 +55,12 @@ public class TakeFoodFragmentAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-//        holder.img_food
         TakeFoodInfo.MealBean mealBean = list.get(position);
+        ImageOptions imageOptions = new ImageOptions.Builder()
+                .setFailureDrawableId(R.drawable.ic_launcher)
+                .build();
+        String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + mealBean.getP_picture());
+        x.image().bind(holder.img_food, imgPath, imageOptions);
         String machineName = mealBean.getT_jiqi();
         String machineNum = machineName.substring(machineName.length() - 3, machineName.length());
         holder.tv_machine_name.setText(String.format(context.getString(R.string.machine_name), "成都",machineNum));

@@ -118,6 +118,8 @@
         </activity>
         <activity android:name=".activity.CarPayActivity">
         </activity>
+        <activity android:name=".activity.MyOrderActivity">
+        </activity>
     </application>
 
 </manifest>

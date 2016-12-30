@@ -5,6 +5,7 @@ import org.xutils.db.annotation.Column;
 import org.xutils.db.annotation.Table;
 import org.xutils.ex.DbException;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -12,7 +13,7 @@ import java.util.List;
  */
 
 @Table(name="machine")
-public class MachineInfo {
+public class MachineInfo implements Serializable{
     @Column(name="id",isId=true,autoGen=false)
     private String id;
     @Column(name="name")

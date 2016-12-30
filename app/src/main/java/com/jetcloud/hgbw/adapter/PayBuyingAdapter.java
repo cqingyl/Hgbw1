@@ -30,7 +30,6 @@ public class PayBuyingAdapter extends BaseExpandableListAdapter {
     private int productNum = 1;
     private static final String TAG_LOG = ShopCarFragmentAdapter.class.getSimpleName();
     private Context context;
-    private ModifyCountInterface modifyCountInterface;
     private List<MachineInfo> groups;
     private Map<String, List<ShopCarInfo>> children;
 
@@ -41,80 +40,6 @@ public class PayBuyingAdapter extends BaseExpandableListAdapter {
         this.context = context;
         this.groups = groups;
         this.children = children;
-    }
-
-    public void setModifyCountInterface(ModifyCountInterface modifyCountInterface) {
-        this.modifyCountInterface = modifyCountInterface;
-    }
-
-
-
-
-
-
-
-//    @Override
-//    public View getView(final int i, View view, ViewGroup viewGroup) {
-//        ViewHolder holder = null;
-//        if (view == null){
-//            view = mLayoutInflater.inflate(R.layout.item_pay_buying, null);
-//            holder = new ViewHolder(view);
-//            view.setTag(holder);
-//        } else {
-//            holder = (ViewHolder) view.getTag();
-//        }
-//
-//        holder.tvFoodTitle.setText(getItem(i).getP_name());
-//        final TextView tvNum = holder.tvNum;
-//        final TextView tvMoney = holder.tvMoney;
-//        productNum = getItem(i).getP_local_number();
-//        tvNum.setText(String.valueOf(productNum));
-//        holder.tvBtnAdd.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                float totalPrice = getItem(i).getP_price() * (++productNum);
-//                tvNum.setText(String.valueOf(productNum));
-//                tvMoney.setText(String.format(context.getString(R.string.rmb_display),totalPrice));
-//                modifyCountInterface.getNumber(productNum);
-//            }
-//        });
-//        holder.tvBtnDec.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (productNum > 1){
-//                    float totalPrice = getItem(i).getP_price() * (--productNum);
-//                    tvNum.setText(String.valueOf(productNum));
-//                    tvMoney.setText(String.format(context.getString(R.string.rmb_display),totalPrice));
-//                    modifyCountInterface.getNumber(productNum);
-//                }
-//            }
-//        });
-//        return view;
-//    }
-
-    private class ViewHolder {
-        @ViewInject(R.id.img_food)
-        ImageView imgFood;
-        @ViewInject(R.id.cb_item)
-        CheckBox cb_item;
-        @ViewInject(R.id.tv_food_title)
-        TextView tvFoodTitle;
-        @ViewInject(R.id.tv_btn_dec)
-        TextView tvBtnDec;
-        @ViewInject(R.id.tv_btn_add)
-        TextView tvBtnAdd;
-        @ViewInject(R.id.tv_num)
-        TextView tvNum;
-        @ViewInject(R.id.tv_money)
-        TextView tvMoney;
-
-        ViewHolder(View view) {
-            x.view().inject(this, view);
-        }
-    }
-
-    public interface ModifyCountInterface {
-        public void getNumber(int productNum);
     }
 
     @Override
@@ -174,15 +99,8 @@ public class PayBuyingAdapter extends BaseExpandableListAdapter {
         String machineName = machineInfo.getId();
         String machineNum = machineName.substring(machineName.length() - 3, machineName.length());
         groupViewHolder.tvMachineTitle.setText(String.format(context.getString(R.string.machine_name),"成都",machineNum));
-        groupViewHolder.cbGroup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean isGroupSelected = ((CheckBox) view).isChecked();
-                machineInfo.setSelected(isGroupSelected);
-            }
-        });
-        groupViewHolder.cbGroup.setChecked(machineInfo.isSelected());
-        notifyDataSetChanged();
+        groupViewHolder.cbGroup.setChecked(true);
+        groupViewHolder.cbGroup.setClickable(false);
         return convertView;
     }
 
@@ -209,20 +127,9 @@ public class PayBuyingAdapter extends BaseExpandableListAdapter {
 //            Log.i(TAG, "getChildView: " +  HgbwUrl.BASE_URL + shopCarInfo.getP_picture());
             childViewHolder.imgFood.setImageResource(R.drawable.jietu);
             childViewHolder.tvFoodTitle.setText(String.valueOf(shopCarInfo.getP_name()));
-            childViewHolder.tvMoney.setText(context.getString(R.string.rmb_display, shopCarInfo.getP_price()  ));
-            childViewHolder.tvNum.setText(String.valueOf(shopCarInfo.getP_local_number()));
-            childViewHolder.tvBtnAdd.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+            childViewHolder.tvMoney.setText(context.getString(R.string.rmb_display, shopCarInfo.getP_price()));
+            childViewHolder.tvNum.setText(String.format(context.getString(R.string.take_food_num), shopCarInfo.getP_local_number()));
 
-                }
-            });
-            childViewHolder.tvBtnDec.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                }
-            });
         }
 
         return convertView;
@@ -250,10 +157,6 @@ public class PayBuyingAdapter extends BaseExpandableListAdapter {
         ImageView imgFood;
         @ViewInject(R.id.tv_food_title)
         TextView tvFoodTitle;
-        @ViewInject(R.id.tv_btn_dec)
-        TextView tvBtnDec;
-        @ViewInject(R.id.tv_btn_add)
-        TextView tvBtnAdd;
         @ViewInject(R.id.tv_num)
         TextView tvNum;
         @ViewInject(R.id.tv_money)

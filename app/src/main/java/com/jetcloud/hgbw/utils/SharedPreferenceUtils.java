@@ -13,9 +13,12 @@ public class SharedPreferenceUtils {
     private static SharedPreferences.Editor editor;
     private static Context mContext;
     private final static String PACKAGE_NAME = "com.jetcloud.hgbw";
-    private static String SHOP_CAR_NUMBER = "shopCarNumber";
-    private static String MY_ACCOUNT = "my_account";
-    private static String BIND_STATUS = "bind_status";
+    private final static String SHOP_CAR_NUMBER = "shopCarNumber";
+    private final static String MY_ACCOUNT = "my_account";
+    private final static String TRADE_ACCOUNT = "trade_account";
+    private final static String BIND_STATUS = "bind_status";
+    public final static String BINDING_STATE = "binding_state";
+    public final static String UNBINDING_STATE = "unbinding-State";
 
     public static void initData (Context context){
         mContext = context;
@@ -41,12 +44,20 @@ public class SharedPreferenceUtils {
         editor.putString(MY_ACCOUNT, phoneNum).commit();
     }
 
-    public static int getBindStatus() {
-        return preferences.getInt(BIND_STATUS, 0);
+    public static String getBindStatus() {
+        return preferences.getString(BIND_STATUS, UNBINDING_STATE);
     }
 
-    public static void setBindStatus(int bindStatus) {
-        editor.putInt(BIND_STATUS, bindStatus).commit();
+    public static void setBindStatus(String bindStatus) {
+        editor.putString(BIND_STATUS, bindStatus).commit();
+    }
+
+    public static String getTradeAccount() {
+        return preferences.getString(TRADE_ACCOUNT, "without login");
+    }
+
+    public static void setTradeAccount(String tradePhoneNum) {
+        editor.putString(TRADE_ACCOUNT, tradePhoneNum).commit();
     }
 
     public static void clear() {

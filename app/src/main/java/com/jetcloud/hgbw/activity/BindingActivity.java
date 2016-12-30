@@ -160,27 +160,21 @@ public class BindingActivity extends BaseActivity  {
         });
     }
 
-    private void unBindAccount() {
-        final RequestParams params = new RequestParams(HgbwUrl.TRADE_UNBIND);
-        //缓存时间
-        params.addQueryStringParameter("referer_id", SharedPreferenceUtils.getMyAccount());
-        params.addQueryStringParameter("mobile", et_user_count.getText().toString());
-        params.addQueryStringParameter("referer", "android_hgbw");
-        params.setCacheMaxAge(1000 * 60);
-
-        x.task().run(new Runnable() {
-            @Override
-            public void run() {
-//                x.http().request(HttpMethod.PUT, new RequestParams);
-            }
-        });
-    }
     /**
      * 处理json数据
+     * "status": "201", "message": "\u8bf7\u4e0d\u7528\u91cd\u590d\u7ed1\u5b9a"
+     *  201 : 请不用重复绑定
      */
     private void getDataFromJson(String result) throws JSONException {
         JSONObject jsonObject = new JSONObject(result);
-        finish();
-        startActivity(new Intent(BindingActivity.this, MyWalletActivity.class));
+        Log.i(TAG_LOG, "getDataFromJson: " + jsonObject.getString("message"));
+        Out.Toast(BindingActivity.this, jsonObject.getString("message"));
+        String status = jsonObject.getString("status");
+        if (status.equals("200") || status.equals("201")){
+            SharedPreferenceUtils.setTradeAccount(et_user_count.getText().toString());
+            SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.BINDING_STATE);
+            finish();
+            startActivity(new Intent(BindingActivity.this, MyWalletActivity.class));
+        }
     }
 }

@@ -12,9 +12,20 @@
     <string name="startlocation">开始定位</string>
     <string name="stoplocation">停止定位</string>
     <string name="rmb_display">¥%.2f元</string>
+    <string name="gcb_display">%fGCB</string>
     <string name="machine_name"><xliff:g id="location">%1$s</xliff:g>-<xliff:g name="num">%2$s</xliff:g></string>
     <string name="take_food_total">合计: ¥%.2f元</string>
+    <string name="take_food_gcb_total">合计: %fGCB</string>
     <string name="take_food_order_num">订单号:%d</string>
     <string name="take_food_num">x%d</string>
     <string name="pay_money">%.2f RMB</string>
+
+    <!-- 充值 -->
+    <string name="charge_amount">充值金额(CNY)</string>
+    <string name="please_enter_charge_amount">请输入充值金额</string>
+    <string name="please_enter_pay_password">请输入支付密码</string>
+    <string name="number">0.00</string>
+    <string name="china_merchants_bank_card">卡号（8888 8888 8888 8888）</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
 </resources>

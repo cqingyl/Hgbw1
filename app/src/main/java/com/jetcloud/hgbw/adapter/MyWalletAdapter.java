@@ -29,13 +29,9 @@ public class MyWalletAdapter extends BaseAdapter {
         mLayoutInflater = LayoutInflater.from(context);
         mData = data;
     }
-//    @Override
-//    public int getCount() {
-//        return mData == null ? 0 : mData.size();
-//    }
     @Override
     public int getCount() {
-        return 1;
+        return mData == null ? 0 : mData.size();
     }
 
 

@@ -22,6 +22,7 @@ public class ShopCarInfo implements Serializable {
      * p_price : 15
      * p_address : 成都市新希望国际
      * p_number : 8
+     * p_vr9: 0.0001
      */
     @Column(name = "p_id", isId = true, autoGen = false)
     private int p_id;
@@ -43,6 +44,8 @@ public class ShopCarInfo implements Serializable {
     //商品最大数量
     @Column(name = "p_number")
     private int p_number;
+    @Column(name = "p_vr9")
+    private double p_vr9;
     private boolean selected ;
 
 
@@ -128,5 +131,13 @@ public class ShopCarInfo implements Serializable {
 
     public void setSelected(boolean selected) {
         this.selected = selected;
+    }
+
+    public double getP_vr9() {
+        return p_vr9;
+    }
+
+    public void setP_vr9(double p_vr9) {
+        this.p_vr9 = p_vr9;
     }
 }

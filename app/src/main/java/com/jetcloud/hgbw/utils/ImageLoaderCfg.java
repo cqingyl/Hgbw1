@@ -60,4 +60,48 @@ public class ImageLoaderCfg {
 			// .displayer(new RoundedBitmapDisplayer(20))//是否设置为圆角，弧度为多少
 			.displayer(new FadeInBitmapDisplayer(1))// 是否图片加载好后渐入的动画时间
 			.build();// 构建完成
+
+	private static final String HEX_STRING = "0123456789ABCDEF";
+
+	/**
+	 * 把中文字符转换为带百分号的浏览器编码
+	 *
+	 * @param word
+	 * @return
+	 */
+	public static String toBrowserCode(String word) {
+		byte[] bytes = word.getBytes();
+
+		//不包含中文，不做处理
+		if (bytes.length == word.length())
+			return word;
+
+		StringBuilder browserUrl = new StringBuilder();
+		String tempStr = "";
+
+		for (int i = 0; i < word.length(); i++) {
+			char currentChar = word.charAt(i);
+
+			//不需要处理
+			if ((int) currentChar <= 256) {
+
+				if (tempStr.length() > 0) {
+					byte[] cBytes = tempStr.getBytes();
+
+					for (int j = 0; j < cBytes.length; j++) {
+						browserUrl.append('%');
+						browserUrl.append(HEX_STRING.charAt((cBytes[j] & 0xf0) >> 4));
+						browserUrl.append(HEX_STRING.charAt((cBytes[j] & 0x0f) >> 0));
+					}
+					tempStr = "";
+				}
+
+				browserUrl.append(currentChar);
+			} else {
+				//把要处理的字符，添加到队列中
+				tempStr += currentChar;
+			}
+		}
+		return browserUrl.toString();
+	}
 }

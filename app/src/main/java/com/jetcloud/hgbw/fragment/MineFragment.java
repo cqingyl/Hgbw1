@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.LoginActivity;
 import com.jetcloud.hgbw.activity.MainActivity;
+import com.jetcloud.hgbw.activity.MyOrderActivity;
 import com.jetcloud.hgbw.activity.MyTicketActivity;
 import com.jetcloud.hgbw.activity.MyWalletActivity;
 import com.jetcloud.hgbw.activity.RegisterActivity;
@@ -65,7 +66,7 @@ public class MineFragment extends BaseFragment{
 		if (view==takefood) {
 			Out.Toast(getActivity(), "订餐须知");
 		}else if (view==myorder) {
-			Out.Toast(getActivity(), "我的订单");
+			startActivity(new Intent(getActivity(),MyOrderActivity.class));
 		}else if (view==myticket) {
 			startActivity(new Intent(getActivity(),MyTicketActivity.class));
 			Out.Toast(getActivity(), "我的卡券");

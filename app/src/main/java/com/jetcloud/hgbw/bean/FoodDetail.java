@@ -7,7 +7,6 @@ import java.util.List;
  */
 
 public class FoodDetail {
-
     private List<PMealBean> p_meal;
 
     public List<PMealBean> getP_meal() {
@@ -28,7 +27,8 @@ public class FoodDetail {
          * s_totalprice : null
          * s_introduce :
          * 端上一盘红烧肉，满屋飘香口水流。此菜本非人间有，天上佳肴落街头。北宋大文豪苏东坡也对你推崇备至，焖你的皮，煮你的肉，既酥又烂，吃后口齿流香。他与你友好合作，发明创造了流传百世的"东坡肉"；敝人的祖先更绝，数百年前元兵南侵，我祖从中原南阳逃难，在南下的颠沛流离中，竟然还携带令人垂涎三尺的"东坡肉"！
-         * s_phone : 12321231
+         * s_phone : 13922394832
+         * s_vr9 : 0.5
          */
 
         private int p_id;
@@ -38,7 +38,8 @@ public class FoodDetail {
         private Object s_total;
         private Object s_totalprice;
         private String s_introduce;
-        private int s_phone;
+        private String s_phone;
+        private double s_vr9;
 
         public int getP_id() {
             return p_id;
@@ -96,12 +97,20 @@ public class FoodDetail {
             this.s_introduce = s_introduce;
         }
 
-        public int getS_phone() {
+        public String getS_phone() {
             return s_phone;
         }
 
-        public void setS_phone(int s_phone) {
+        public void setS_phone(String s_phone) {
             this.s_phone = s_phone;
+        }
+
+        public double getS_vr9() {
+            return s_vr9;
+        }
+
+        public void setS_vr9(double s_vr9) {
+            this.s_vr9 = s_vr9;
         }
     }
 }

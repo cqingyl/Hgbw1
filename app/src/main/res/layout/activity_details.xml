@@ -15,7 +15,9 @@
         <include
             android:id="@+id/include"
             layout="@layout/top_bar"/>
-
+        <View android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/line"/>
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,8 +41,9 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:scaleType="centerCrop"
+                        android:scaleType="centerInside"
                         tools:src="@drawable/longredmeet"
+                        android:adjustViewBounds="true"
                         android:id="@+id/iv_food"/>
 
                     <TextView
