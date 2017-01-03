@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_car_pay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.jetcloud.hgbw.activity.CarPayActivity">
+    <LinearLayout
+        android:layout_above="@+id/ll_lav_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <include layout="@layout/top_bar"/>
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <View
+                    android:id="@+id/view_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/main_bg" />
+
+                <com.jetcloud.hgbw.view.MyExpandableListView
+                    android:id="@+id/elv_buying"
+                    style="@style/MyListView"
+                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="我的优惠券"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black"/>
+                <View style="@style/lineView"/>
+                <com.jetcloud.hgbw.view.MyListView
+                    android:id="@+id/lv_my_ticket"
+                    style="@style/MyListView"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:text="支付方式"
+                    android:textColor="@color/black"/>
+
+                <View style="@style/lineView"/>
+                <LinearLayout
+                    android:id="@+id/ll_gcb"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:paddingLeft="8dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:text="全球付GCB支付"/>
+                    <TextView
+                        android:id="@+id/tv_gcb_num"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical|end"
+                        android:paddingRight="3dp"
+                        android:textColor="@color/black"
+
+                        android:text="15个"/>
+                    <CheckBox
+                        android:id="@+id/cb_gcb"
+                        android:layout_width="0dp"
+                        android:checked="false"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                        android:visibility="visible"
+                        android:button="@drawable/check_box_bg" />
+
+                </LinearLayout>
+                <View
+                    android:layout_marginLeft="25dp"
+                    style="@style/lineView"/>
+                <LinearLayout
+                    android:id="@+id/ll_weixin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:paddingLeft="8dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:text="微信支付"/>
+                    <TextView
+                        android:id="@+id/tv_wei_num"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical|end"
+                        android:paddingRight="3dp"
+                        android:textColor="@color/black"
+
+                        tools:text="60.00元"/>
+                    <CheckBox
+                        android:id="@+id/cb_weixin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                        android:visibility="visible"
+                        android:button="@drawable/check_box_bg" />
+
+                </LinearLayout>
+                <View
+                    android:layout_marginLeft="25dp"
+                    style="@style/lineView"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_lav_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_bar_h"
+        android:background="@color/background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:textColor="@color/bottom_nav_text_color_check"
+            android:textSize="@dimen/text_huge"
+            tools:text="合计：¥60.00元"/>
+
+
+        <TextView
+            android:id="@+id/tv_go_to_pay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_tv_go_to_pay"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="结算"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_huge"/>
+    </LinearLayout>
+
+</RelativeLayout>

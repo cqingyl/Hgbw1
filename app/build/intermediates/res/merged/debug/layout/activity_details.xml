@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clipToPadding="true"
+                android:fitsSystemWindows="true"
+                tools:context="com.jetcloud.hgbw.activity.DetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/top_bar"/>
+        <View android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/line"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/include"
+            android:layout_marginBottom="@dimen/bottom_bar_h"
+            android:background="@color/main_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        tools:src="@drawable/longredmeet"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/iv_food"/>
+
+                    <TextView
+                        android:id="@+id/tv_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="3dp"
+                        android:padding="15dp"
+                        tools:text="红烧肉啊是大厦科技时代好卡技术的就喀什的接口那是肯定就会卡机收到贺卡收到江
+                红烧肉啊是大厦科技时代好定就会卡机收到贺接口那是肯定就会卡机收到贺卡收到江岸上看接电话呢卡岸上看接电话呢卡技术的可能就啊还是大口径hands看啊速度很快就ask但看时间的河卡死的你"
+                        android:textColor="@color/text_b2"
+                        android:textSize="@dimen/text_huge"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/phone"/>
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        tools:text="15715484521"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_huge"/>
+
+                    <TextView
+                        android:id="@+id/tv_down"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/upanddown_bg"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_huge"/>
+
+                    <TextView
+                        android:id="@+id/number"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_huge"/>
+
+                    <TextView
+                        android:id="@+id/tv_up"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/upanddown_bg"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_huge"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_nav_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_bar_h"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            tools:text="¥60.00元"
+            android:background="@color/background"
+            android:textColor="@color/bottom_nav_text_color_check"
+            android:textSize="@dimen/text_huge"/>
+
+        <TextView
+            android:id="@+id/tv_add_car"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_tv_add_shop_car"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="加入购物车"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_big"/>
+
+        <TextView
+            android:id="@+id/tv_go_to_pay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_tv_go_to_pay"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="立即购买"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_huge"/>
+    </LinearLayout>
+
+</RelativeLayout>

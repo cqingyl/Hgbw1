@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <View
+        style="@style/lineView"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+         >
+
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/tv_machine_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:singleLine="true"
+            tools:text="3号贩卖机"
+            android:textColor="@color/text_b1"
+            android:textSize="@dimen/text_huge" />
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/tv_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:singleLine="true"
+            android:layout_marginLeft="3dp"
+            tools:text="订单号:2016110252135"
+            android:textColor="@color/text_b2"
+            android:textSize="@dimen/text_normal" />
+        <View 
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/tv_btn_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:singleLine="true"
+            android:text="扫二维码取餐"
+            android:textColor="@color/bottom_nav_text_color_check"
+            android:background="@drawable/tv_btn_qr_code"
+            android:textSize="@dimen/text_normal" />
+    </LinearLayout>
+<View 
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/line"
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_food"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:src="@drawable/jietu" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="bottom"
+                android:singleLine="true"
+                tools:text="交易时间:2016.06.15 10:11"
+                android:textColor="@color/text_b2"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="3"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_good_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="午餐肉套饭"
+                    android:textColor="@color/text_b1"
+                    android:textSize="@dimen/text_huge" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="¥60.00元"
+                        android:textColor="@color/text_b2"
+                        android:textSize="@dimen/text_huge" />
+
+                    <TextView
+                        android:id="@+id/tv_good_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="8dp"
+                        tools:text="X2"
+                        android:textColor="@color/text_b2"
+                        android:textSize="@dimen/text_huge" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="bottom"
+                    android:singleLine="true"
+                    tools:text="@string/take_food_total"
+                    android:textColor="@color/text_b1"
+                    android:textSize="@dimen/text_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

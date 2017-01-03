@@ -4,16 +4,14 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ExpandableListView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
-import com.jetcloud.hgbw.adapter.MyOrderAdapter;
+import com.jetcloud.hgbw.adapter.MyOrderOutAdapter;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.GoodsInfo;
-import com.jetcloud.hgbw.bean.MachineInfo;
-import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 
 import org.json.JSONException;
@@ -23,19 +21,15 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
 
 
 public class MyOrderActivity extends BaseActivity {
 
     private final static String TAG_LOG = MyOrderActivity.class.getSimpleName();
     private CustomProgressDialog progress;
-    MyOrderAdapter adapter;
-    List<MachineInfo> groups;
-    Map<String, List<ShopCarInfo>> children;
-    ExpandableListView elv_order_all;
+    MyOrderOutAdapter adapter;
+    ListView lv_my_order_out;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_my_order);
@@ -47,18 +41,14 @@ public class MyOrderActivity extends BaseActivity {
         Resources resources = this.getResources();
         Drawable drawable = resources.getDrawable(R.drawable.fanhui);
         topbar.setLeftDrawable(false, drawable);
-        elv_order_all = getView(R.id.elv_order_all);
 
-        groups = new ArrayList<>();
-        children = new HashMap<>();
+        lv_my_order_out = getView(R.id.lv_my_order_out);
+
         initDatas();
-        adapter = new MyOrderAdapter(this, groups, children);
-        elv_order_all.setAdapter(adapter);
-        elv_order_all.setGroupIndicator(null);
-        for (int i = 0; i < adapter.getGroupCount(); i++) {
-            elv_order_all.expandGroup(i);// 关键步骤3,初始化时，将ExpandableListView以展开的方式呈现
-        }
-        getNetData();
+        adapter = new MyOrderOutAdapter(this, new ArrayList<String>());
+        lv_my_order_out.setAdapter(adapter);
+
+//        getNetData();
     }
 
     @Override
@@ -67,18 +57,18 @@ public class MyOrderActivity extends BaseActivity {
     }
 
     private void initDatas() {
-        for (int i = 0; i < 3; i++) {
-            MachineInfo machineInfo = new MachineInfo();
-            machineInfo.setId("天猫店铺" + (i + 1) + "号店");
-            groups.add(machineInfo);
-            List<ShopCarInfo> products = new ArrayList<ShopCarInfo>();
-            for (int j = 0; j <= i; j++) {
-                ShopCarInfo shopCarInfo = new ShopCarInfo();
-                shopCarInfo.setP_name(groups.get(i).getName());
-                products.add(shopCarInfo);
-            }
-            children.put(groups.get(i).getId(), products);// 将组元素的一个唯一值，这里取Id，作为子元素List的Key
-        }
+//        for (int i = 0; i < 3; i++) {
+//            MachineInfo machineInfo = new MachineInfo();
+//            machineInfo.setId("天猫店铺" + (i + 1) + "号店");
+//            groups.add(machineInfo);
+//            List<ShopCarInfo> products = new ArrayList<ShopCarInfo>();
+//            for (int j = 0; j <= i; j++) {
+//                ShopCarInfo shopCarInfo = new ShopCarInfo();
+//                shopCarInfo.setP_name(groups.get(i).getName());
+//                products.add(shopCarInfo);
+//            }
+//            children.put(groups.get(i).getId(), products);// 将组元素的一个唯一值，这里取Id，作为子元素List的Key
+//        }
     }
 
     /**
@@ -92,17 +82,17 @@ public class MyOrderActivity extends BaseActivity {
 
 
     private void getNetData() {
-        final RequestParams params = new RequestParams(HgbwUrl.HOME_DATA_URL);
+        final RequestParams params = new RequestParams(HgbwUrl.MY_ORDER);
         //缓存时间
-        params.addQueryStringParameter("myR_lng", "104.06792346");
-        params.addQueryStringParameter("myR_lat", "30.67994285");
-        params.addQueryStringParameter("type", "mobile");
+        params.addBodyParameter("myR_lng", "104.06792346");
+        params.addBodyParameter("myR_lat", "30.67994285");
+        params.addBodyParameter("type", "mobile");
         params.setCacheMaxAge(1000 * 60);
 
         x.task().run(new Runnable() {
             @Override
             public void run() {
-                x.http().get(params, new Callback.CacheCallback<String>() {
+                x.http().post(params, new Callback.CacheCallback<String>() {
 
                     private boolean hasError = false;
                     private String result = null;

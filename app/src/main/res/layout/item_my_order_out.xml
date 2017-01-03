@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_light"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="北京-001"
+            android:textColor="@color/text_b1"
+            android:textSize="@dimen/text_huge"
+            android:id="@+id/tv_machine_name"/>
+
+        <TextView
+            android:id="@+id/tv_order_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginLeft="8dp"
+            android:text="订单号：5564151224"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_big"/>
+
+        <TextView
+            android:id="@+id/tv_btn_apply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="3dp"
+            android:gravity="center"
+            android:text="待支付"
+            android:background="@drawable/tv_btn_qr_code"
+            android:textColor="@color/bottom_nav_text_color_check"
+            android:textSize="@dimen/text_big"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        />
+    <com.jetcloud.hgbw.view.MyListView
+        android:id="@+id/lv_myorder_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            tools:text="交易时间:2016-12-15 11:37"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_big"/>
+
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="3dp"
+            android:gravity="center_vertical|end"
+            android:text="合计：¥45.00元"
+            android:background="@drawable/tv_btn_qr_code"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_big"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|right"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="取消订单"
+            android:textColor="@color/black"
+            android:background="@drawable/shopbuttonbg"
+            android:textSize="@dimen/text_big"/>
+
+
+        <Button
+            android:id="@+id/btn_go_to_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="支付"
+            android:textColor="@color/white"
+            android:background="@drawable/bybuttonbg"
+            android:textSize="@dimen/text_big"/>
+
+    </LinearLayout>
+</LinearLayout>
