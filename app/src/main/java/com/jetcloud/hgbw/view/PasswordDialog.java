@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.utils.Out;
 
-import passwordinputview.PasswordInputView;
+import com.jetcloud.hgbw.view.passwordinputview.PasswordInputView;
 
 import static com.jetcloud.hgbw.utils.Out.isActivityClosed;
 

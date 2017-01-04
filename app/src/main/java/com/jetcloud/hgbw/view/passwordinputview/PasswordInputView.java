@@ -1,4 +1,4 @@
-package passwordinputview;
+package com.jetcloud.hgbw.view.passwordinputview;
 
 
 import android.content.Context;

@@ -5,22 +5,32 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="168164514262998"
+    timestamp="168541360579788"
     token="-4339596543094837819"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="368" />
+        duration="478" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="120" />
     <task
         name="verifier"
-        duration="0" />
+        duration="4" />
+
+    <artifact
+        location="F:\work\Hgbw1\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+        type="DEX" />
+    <artifact
+        location="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
+        type="DEX" />
 
     <build
         timestamp="167413969895760"
@@ -37,7 +47,17 @@
             type="DEX" />
     </build>
     <build
-        timestamp="168164514262998"
-        verifier="COLD_SWAP_REQUESTED" />
+        timestamp="168541360579788"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="F:\work\Hgbw1\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
+        <artifact
+            location="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
+            type="DEX" />
+    </build>
 
 </instant-run>
