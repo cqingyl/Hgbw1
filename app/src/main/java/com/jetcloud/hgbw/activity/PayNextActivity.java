@@ -1,6 +1,5 @@
 package com.jetcloud.hgbw.activity;
 
-import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -11,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
@@ -32,9 +32,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.jetcloud.hgbw.fragment.ShopCarFragment.MACHINE_OBJECT;
-import static com.jetcloud.hgbw.fragment.ShopCarFragment.PRODUC_OBJECT;
-
 public class PayNextActivity extends BaseActivity {
     private final static String TAG_LOG = PayNextActivity.class.getSimpleName();
     private List<ShopCarInfo> listObj;
@@ -49,6 +46,7 @@ public class PayNextActivity extends BaseActivity {
     private String orderNum;
     private BigDecimal bdGcb;
     private String intentResource;
+    private HgbwApplication app;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(com.jetcloud.hgbw.R.layout.activity_comfirm_pay);
@@ -57,37 +55,31 @@ public class PayNextActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+        app = (HgbwApplication) getApplication();
         topbar.setCenterText("支付");
         Resources resources = this.getResources();
         Drawable drawable = resources.getDrawable(R.drawable.fanhui);
         topbar.setLeftDrawable(false, drawable);
         tv_price = getView(R.id.tv_price);
         btn_pay = getViewWithClick(R.id.btn_pay);
-        //产生订单号
-        orderNum = String.valueOf(System.currentTimeMillis());
     }
 
     @Override
     protected void loadData() {
-        Intent i = getIntent();
-        children = (Map<String, List<ShopCarInfo>>) i.getSerializableExtra(PRODUC_OBJECT);
-        groups = (List<MachineInfo>) i.getSerializableExtra(MACHINE_OBJECT);
-        money = i.getDoubleExtra("money",0.00);
-        payWay  = i.getStringExtra("payway");
-        if (i.hasExtra("resource")) {
-            intentResource = i.getStringExtra("resource");
+        groups = app.getGroups();
+        children = app.getChildren();
+        payWay  = app.getType();
+        if (payWay.equals(PayNextActivity.this.getString(R.string.pay_way_gcb))) {
+            money = app.getTotalGcb();
+            if (children != null) {
+                tv_price.setText(getString(R.string.gcb_display, money));
+            }
+        } else {
+            money =  app.getTotalPrice();
+            if (children != null) {
+                tv_price.setText(getString(R.string.pay_money, money));
+            }
         }
-//        for (int i = 0; i < groups.size(); i++) {
-//            listObj = children.get(groups.get(i).getId());
-//        }
-//        Log.i(TAG_LOG, "initView: " + listObj.size());
-//        //只有一件商品
-//        if (listObj != null) {
-//            shopCarInfo = listObj.get(0);
-//            topbar.setCenterText(shopCarInfo.getP_name());
-//            float totalNum = shopCarInfo.getP_price() * shopCarInfo.getP_local_number();
-//            tv_price.setText(getString(R.string.pay_money, totalNum));
-//        }
     }
 
     @Override
@@ -100,19 +92,27 @@ public class PayNextActivity extends BaseActivity {
                 passwordDialog.setNegativeButton("取消", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-
+                        passwordDialog.dismiss();
                     }
                 });
                 passwordDialog.setPositiveButton("确定", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-//                        Log.i(TAG_LOG, "balance_type: " + payWay);
-//                        Log.i(TAG_LOG, "mobile: " + SharedPreferenceUtils.getTradeAccount());
-//                        Log.i(TAG_LOG, "paypwd: " + passwordDialog.getPasswordInputView().toString());
-//                        Log.i(TAG_LOG, "source_id: " + orderNum);
-                        bdGcb = BigDecimal.valueOf(money);
-//                        Log.i(TAG_LOG, "amount: " + bdGcb);
-                        getNetData(passwordDialog.getPasswordInputView().toString(), orderNum, String.valueOf(bdGcb));
+
+                        String paypwd = passwordDialog.getPasswordInputView().toString();
+                        if (paypwd.length() == 6) {
+                            //产生订单号
+                            orderNum = String.valueOf(System.currentTimeMillis());
+
+                            Log.i(TAG_LOG, "balance_type: " + payWay);
+                            Log.i(TAG_LOG, "mobile: " + SharedPreferenceUtils.getTradeAccount());
+                            Log.i(TAG_LOG, "paypwd: " + passwordDialog.getPasswordInputView().toString());
+                            Log.i(TAG_LOG, "source_id: " + orderNum);
+//                        bdGcb = BigDecimal.valueOf(money);
+                            Log.i(TAG_LOG, "amount: " + money);
+
+//                            getNetData(paypwd, orderNum, String.valueOf(bdGcb));
+                        }
                     }
                 });
                 passwordDialog.show();
@@ -131,7 +131,7 @@ public class PayNextActivity extends BaseActivity {
         Log.i(TAG_LOG, "getDataFromJson: " + jsonObject.getString("message"));
         Out.Toast(PayNextActivity.this, jsonObject.getString("message"));
         if (jsonObject.getString("status").equals("200")){
-            uploadOrder();
+//            uploadOrder();
         }
     }
 
@@ -224,7 +224,7 @@ public class PayNextActivity extends BaseActivity {
 
     }
     /***
-     * 上传订单号，以及相关信息，未完成
+     * 上传订单号，以及相关信息
      * */
     private void uploadOrder() {
         final RequestParams params = new RequestParams(HgbwUrl.TRADE_PAY);

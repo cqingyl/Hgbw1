@@ -28,7 +28,6 @@ import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -214,21 +213,41 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
                     Toast.makeText(getActivity(), "请选择要支付的商品", Toast.LENGTH_LONG).show();
                     return;
                 }
+                    saveListToApp();
                 Intent intent = new Intent(getActivity(), CarPayActivity.class);
-                intent.putExtra("totalPrice", totalPrice);
-                intent.putExtra("totalGcb", totalGcb);
-                for (int i = 0; i < groups.size(); i ++){
-                    if (groups.get(i).isSelected()){
-
-                    }
-                }
-                intent.putExtra(PRODUC_OBJECT, (Serializable) children);
-                intent.putExtra(MACHINE_OBJECT, (Serializable) groups);
                 startActivity(intent);
                 break;
         }
     }
 
+    /**
+     * 保存数据到全局list
+     * **/
+    public void saveListToApp() {
+        List<MachineInfo> newGroupsList = new ArrayList<>();
+        Map<String,List<ShopCarInfo>> newList = new HashMap<>();
+        for (int i = 0; i < groups.size(); i ++){
+            MachineInfo machineInfo = groups.get(i);
+//            if (groups.is)
+            List<ShopCarInfo> shopCarInfos = children.get(machineInfo.getId());
+            List<ShopCarInfo> newInfoList = new ArrayList<>();
+            for (int j = 0; j < shopCarInfos.size(); j ++){
+                ShopCarInfo shopCarInfo = shopCarInfos.get(j);
+                //挑出被选中的商品保存到全局
+                if ( shopCarInfo.isSelected()) {
+                    newInfoList.add(shopCarInfo);
+                }
+            }
+            if ( newInfoList.size() > 0){
+                newGroupsList.add(machineInfo);
+                newList.put(machineInfo.getId(), newInfoList);
+            }
+        }
+        app.setGroups(newGroupsList);
+        app.setChildren(newList);
+        app.setTotalGcb(totalGcb);
+        app.setTotalPrice(totalPrice);
+    }
     //点击增加按钮后
     @Override
     public void doIncrease(int groupPosition, int childPosition, View showCountView, boolean isChecked) {

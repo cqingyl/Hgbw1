@@ -52,11 +52,13 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     private TextView tvTopSearch;
     private RadioGroup radioGroup;
     private CustomProgressDialog progress;
+    //////////////暂时无用，先保留
     private static final int NEW_FOOD = 0;
     private static final int HOT_FOOD = 1;
     private static final int SET_MEAL = 2;
     private static final int DRINK = 3;
     int type = NEW_FOOD;
+    ////////////
     List<ShopCarInfo> dataA = new ArrayList<>();
     List<ShopCarInfo> dataB = new ArrayList<>();
     List<ShopCarInfo> dataC = new ArrayList<>();
@@ -64,6 +66,128 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     List<ShopCarInfo> dataE = new ArrayList<>();
     private HgbwApplication app;
     private int total;
+    private String result = "{ \n" +
+            "    \"a\": [ \n" +
+            "        { \n" +
+            "            \"p_id\": 1, \n" +
+            "            \"p_type\": \"a\", \n" +
+            "            \"p_machine\": \"hg010100001\", \n" +
+            "            \"p_name\": \"小炒杏鲍菇\", \n" +
+            "            \"p_picture\": \"../images/小炒杏鲍菇.png\", \n" +
+            "            \"p_price\": 15, \n" +
+            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
+            "            \"p_number\": 4, \n" +
+            "            \"p_vr9\": 0.075\n" +
+            "        }, \n" +
+            "        { \n" +
+            "            \"p_id\": 7, \n" +
+            "            \"p_type\": \"a\", \n" +
+            "            \"p_machine\": \"hg010100001\", \n" +
+            "            \"p_name\": \"香菇炖鸡\", \n" +
+            "            \"p_picture\": \"../images/香菇炖鸡.png\", \n" +
+            "            \"p_price\": 25, \n" +
+            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
+            "            \"p_number\": 10, \n" +
+            "            \"p_vr9\": 0.09\n" +
+            "        }\n" +
+            "    ], \n" +
+            "    \"b\": [ \n" +
+            "        { \n" +
+            "            \"p_id\": 2, \n" +
+            "            \"p_type\": \"b\", \n" +
+            "            \"p_machine\": \"hg010100001\", \n" +
+            "            \"p_name\": \"番茄炒蛋\", \n" +
+            "            \"p_picture\": \"../images/番茄炒蛋.png\", \n" +
+            "            \"p_price\": 20, \n" +
+            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
+            "            \"p_number\": 1, \n" +
+            "            \"p_vr9\": 0.08\n" +
+            "        }, \n" +
+            "        { \n" +
+            "            \"p_id\": 5, \n" +
+            "            \"p_type\": \"b\", \n" +
+            "            \"p_machine\": \"hg010100001\", \n" +
+            "            \"p_name\": \"酸辣粉\", \n" +
+            "            \"p_picture\": \"../images/酸辣粉.jpg\", \n" +
+            "            \"p_price\": 25, \n" +
+            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
+            "            \"p_number\": 5, \n" +
+            "            \"p_vr9\": 0.09\n" +
+            "        }\n" +
+            "    ], \n" +
+            "    \"c\": [ \n" +
+            "        { \n" +
+            "            \"p_id\": 3, \n" +
+            "            \"p_type\": \"c\", \n" +
+            "            \"p_machine\": \"hg010100001\", \n" +
+            "            \"p_name\": \"红烧肉\", \n" +
+            "            \"p_picture\": \"../images/红烧肉.png\", \n" +
+            "            \"p_price\": 30, \n" +
+            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
+            "            \"p_number\": -7, \n" +
+            "            \"p_vr9\": 0.15\n" +
+            "        }\n" +
+            "    ], \n" +
+            "    \"d\": [ \n" +
+            "        { \n" +
+            "            \"p_id\": 4, \n" +
+            "            \"p_type\": \"d\", \n" +
+            "            \"p_machine\": \"hg010100001\", \n" +
+            "            \"p_name\": \"红烧豆腐\", \n" +
+            "            \"p_picture\": \"../images/红烧豆腐.jpg\", \n" +
+            "            \"p_price\": 25, \n" +
+            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
+            "            \"p_number\": 5, \n" +
+            "            \"p_vr9\": 0.09\n" +
+            "        }, \n" +
+            "        { \n" +
+            "            \"p_id\": 8, \n" +
+            "            \"p_type\": \"d\", \n" +
+            "            \"p_machine\": \"hg010100001\", \n" +
+            "            \"p_name\": \"香辣翅根\", \n" +
+            "            \"p_picture\": \"../images/香辣翅根.png\", \n" +
+            "            \"p_price\": 25, \n" +
+            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
+            "            \"p_number\": 5, \n" +
+            "            \"p_vr9\": 0.09\n" +
+            "        }\n" +
+            "    ], \n" +
+            "    \"e\": [ \n" +
+            "        { \n" +
+            "            \"p_id\": 6, \n" +
+            "            \"p_type\": \"e\", \n" +
+            "            \"p_machine\": \"hg010100001\", \n" +
+            "            \"p_name\": \"香芹肉丝\", \n" +
+            "            \"p_picture\": \"../images/香芹肉丝.jpg\", \n" +
+            "            \"p_price\": 25, \n" +
+            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
+            "            \"p_number\": 5, \n" +
+            "            \"p_vr9\": 0.09\n" +
+            "        }, \n" +
+            "        { \n" +
+            "            \"p_id\": 11, \n" +
+            "            \"p_type\": \"e\", \n" +
+            "            \"p_machine\": \"hg010100001\", \n" +
+            "            \"p_name\": \"麻辣香锅\", \n" +
+            "            \"p_picture\": \"../images/麻辣香锅.jpg\", \n" +
+            "            \"p_price\": 25, \n" +
+            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
+            "            \"p_number\": 5, \n" +
+            "            \"p_vr9\": 0.09\n" +
+            "        }, \n" +
+            "        { \n" +
+            "            \"p_id\": 13, \n" +
+            "            \"p_type\": \"e\", \n" +
+            "            \"p_machine\": \"hg010100001\", \n" +
+            "            \"p_name\": \"地三鲜\", \n" +
+            "            \"p_picture\": \"../images/地三鲜.jpg\", \n" +
+            "            \"p_price\": 12, \n" +
+            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
+            "            \"p_number\": 5, \n" +
+            "            \"p_vr9\": 0.06\n" +
+            "        }\n" +
+            "    ]\n" +
+            "}\n";
     //轮播图点击事件
     private ImageCycleViewListener mAdCycleViewListener = new ImageCycleViewListener() {
 
@@ -252,7 +376,6 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
      * 添加goods和machine到数据库 或者 增加商品数量
      * 更新数据库
      */
-
     @Override
     public void addGoodNumber(final ShopCarInfo shopCarInfo) {
         x.task().run(new Runnable() {
@@ -339,6 +462,9 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         getNetData();
     }
 
+    /**
+     * 加载轮播数据
+     * **/
     private void loadAdData() {
 
         for (int i = 0; i < dataE.size(); i++) {
@@ -353,7 +479,9 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     }
 
-    //点击导航栏
+    /**
+     * 点击导航栏
+     */
     @Event(R.id.tv_top_search)
     private void onTopClick(View view) {
         switch (view.getId()) {

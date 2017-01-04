@@ -1,4 +1,4 @@
-#Tue Jan 03 11:23:53 CST 2017
+#Wed Jan 04 10:33:22 CST 2017
 base.0=F\:\\work\\Hgbw1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_0649e7b3d31cac927947fc89324e40ebfaa63724
 renamed.1=classes2.dex
 renamed.0=classes.dex

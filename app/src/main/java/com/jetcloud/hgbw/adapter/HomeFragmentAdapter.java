@@ -13,7 +13,9 @@ import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.DetailsActivity;
 import com.jetcloud.hgbw.activity.HomePayActivity;
 import com.jetcloud.hgbw.activity.MainActivity;
+import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwUrl;
+import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 
@@ -22,15 +24,16 @@ import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-
-import static com.jetcloud.hgbw.activity.DetailsActivity.FOOD_OBJECT;
+import java.util.Map;
 
 public class HomeFragmentAdapter extends BaseAdapter {
     private Activity context;
     private List<ShopCarInfo> list;
     private HolderClickListener mHolderClickListener;
     private AddGoodNumberInterface numberInterface;
+    private HgbwApplication app;
     @Override
     public int getCount() {
         // TODO Auto-generated method stub
@@ -45,6 +48,7 @@ public class HomeFragmentAdapter extends BaseAdapter {
         super();
         this.context = context;
         this.list = list;
+        app = (HgbwApplication) context.getApplication();
     }
 
     @Override
@@ -100,23 +104,32 @@ public class HomeFragmentAdapter extends BaseAdapter {
             @Override
             public void onClick(View arg0) {
                 Intent i = new Intent(new Intent(context, DetailsActivity.class));
-                i.putExtra(FOOD_OBJECT,shopCarInfo);
+                saveListToApp(shopCarInfo);
                 MainActivity.mainActivity.startActivity(i);
             }
         });
         holder.tvBtnApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ArrayList<ShopCarInfo> listObj = new ArrayList<ShopCarInfo>();
-                listObj.add(shopCarInfo);
                 Intent i = new Intent(context, HomePayActivity.class);
-                i.putExtra(FOOD_OBJECT, listObj);
+                saveListToApp(shopCarInfo);
                 context.startActivity(i);
             }
         });
         return convertView;
     }
 
+    private void saveListToApp(ShopCarInfo shopCarInfo) {
+        List<MachineInfo> newGroupsList = new ArrayList<>();
+        Map<String,List<ShopCarInfo>> newList = new HashMap<>();
+        List<ShopCarInfo> newInfoList = new ArrayList<>();
+        MachineInfo machineInfo = new MachineInfo();
+        newGroupsList.add(machineInfo);
+        newInfoList.add(shopCarInfo);
+        newList.put(machineInfo.getId(), newInfoList);
+        app.setGroups(newGroupsList);
+        app.setChildren(newList);
+    }
     public interface AddGoodNumberInterface {
         public void addGoodNumber(ShopCarInfo shopCarInfo);
     }

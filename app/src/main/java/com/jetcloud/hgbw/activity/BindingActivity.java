@@ -23,13 +23,13 @@ import org.xutils.ex.HttpException;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
-public class BindingActivity extends BaseActivity  {
+public class BindingActivity extends BaseActivity {
 
     private final static String TAG_LOG = BindingActivity.class.getSimpleName();
-    public final static String JIAOYIBAO_ACCOUNT = "jiaoyibaozhanghao";
     private EditText et_user_count;
     private CustomProgressDialog progress;
     private TextView tv_btn_ok, tv_myaccount;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_binding);
@@ -47,9 +47,10 @@ public class BindingActivity extends BaseActivity  {
         tv_btn_ok = getViewWithClick(R.id.tv_btn_ok);
         et_user_count = getView(R.id.et_user_count);
 
-        /******/
+        /***********************************************
+         * 注册后删除*******/
         SharedPreferenceUtils.setMyAccount("13340902246");
-        /******/
+        /******************************************************/
         tv_myaccount.setText(SharedPreferenceUtils.getMyAccount());
     }
 
@@ -57,16 +58,16 @@ public class BindingActivity extends BaseActivity  {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_btn_ok:
-            if (et_user_count.getText().toString().length() == 11 ) {
+                if (et_user_count.getText().toString().length() == 11) {
 //                Intent i = new Intent(BindingActivity.this, BindNextActivity.class);
 //                i.putExtra(JIAOYIBAO_ACCOUNT, et_user_count.getText().toString());
 //                startActivity(i);
 //                finish();
-                getNetData();
-            } else {
-                Out.Toast(BindingActivity.this, "账号格式不对");
-            }
-            break;
+                    getNetData();
+                } else {
+                    Out.Toast(BindingActivity.this, "账号格式不对");
+                }
+                break;
         }
     }
 
@@ -74,6 +75,7 @@ public class BindingActivity extends BaseActivity  {
     protected void loadData() {
 
     }
+
     private void getNetData() {
         final RequestParams params = new RequestParams(HgbwUrl.TRADE_BIND);
         JSONObject js_request = new JSONObject();//服务器需要传参的json对象
@@ -163,18 +165,25 @@ public class BindingActivity extends BaseActivity  {
     /**
      * 处理json数据
      * "status": "201", "message": "\u8bf7\u4e0d\u7528\u91cd\u590d\u7ed1\u5b9a"
-     *  201 : 请不用重复绑定
+     * 201 : 请不用重复绑定
      */
     private void getDataFromJson(String result) throws JSONException {
         JSONObject jsonObject = new JSONObject(result);
         Log.i(TAG_LOG, "getDataFromJson: " + jsonObject.getString("message"));
         Out.Toast(BindingActivity.this, jsonObject.getString("message"));
         String status = jsonObject.getString("status");
-        if (status.equals("200") || status.equals("201")){
+        if (status.equals("200") || status.equals("201")) {
             SharedPreferenceUtils.setTradeAccount(et_user_count.getText().toString());
             SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.BINDING_STATE);
             finish();
-            startActivity(new Intent(BindingActivity.this, MyWalletActivity.class));
+            String jumpResource = BindingActivity.this.getIntent().getStringExtra(BindingActivity.this.getString(R.string.jump_resource));
+            if (jumpResource.isEmpty()) {
+                startActivity(new Intent(BindingActivity.this, MyWalletActivity.class));
+            } else if (jumpResource.equals(CarPayActivity.class.getSimpleName()) || jumpResource.equals
+                    (HomePayActivity.class.getSimpleName()) || jumpResource.equals(DetailPayActivity.class
+                    .getSimpleName())) {//如果来源为结算
+                startActivity(new Intent(BindingActivity.this, PayNextActivity.class));
+            }
         }
     }
 }

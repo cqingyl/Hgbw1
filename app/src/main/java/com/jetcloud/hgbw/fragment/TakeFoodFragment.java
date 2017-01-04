@@ -114,7 +114,7 @@ public class TakeFoodFragment extends BaseFragment{
 					public void onFinished() {
 						progress.dismiss();
 						if (!hasError && result != null) {
-//                    	Log.i(TAG_LOG, "onFinished: " + result);
+                    	Log.i(TAG_LOG, "onFinished: " + result);
 							try {
 								getDataFromJson(result);
 

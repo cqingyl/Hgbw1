@@ -6,6 +6,8 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Environment;
 
+import com.jetcloud.hgbw.bean.MachineInfo;
+import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.fragment.HomeFragment;
 import com.jetcloud.hgbw.fragment.MineFragment;
 import com.jetcloud.hgbw.fragment.ShopCarFragment;
@@ -23,6 +25,8 @@ import org.xutils.x;
 
 import java.io.File;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class HgbwApplication extends Application{
 	private static Context context;
@@ -33,6 +37,12 @@ public class HgbwApplication extends Application{
 	private static MineFragment mineFragment;
 	public DbManager.DaoConfig daoConfig;
 	public DbManager db;
+
+	public List<MachineInfo> groups;//被选中的机器
+	public Map<String, List<ShopCarInfo>> children;//被选中的商品
+	public double totalPrice;//被选中的商品的总人民币价格
+	public double totalGcb;//被选中的商品总gcb价格
+	public String type;//被选中的商品的支付类型
 	@Override
 	public void onCreate() {
 		// TODO Auto-generated method stub
@@ -99,6 +109,47 @@ public class HgbwApplication extends Application{
 	public static void setMineFragment(MineFragment mineFragment) {
 		HgbwApplication.mineFragment = mineFragment;
 	}
+
+	public Map<String, List<ShopCarInfo>> getChildren() {
+		return children;
+	}
+
+	public void setChildren(Map<String, List<ShopCarInfo>> children) {
+		this.children = children;
+	}
+
+	public List<MachineInfo> getGroups() {
+		return groups;
+	}
+
+	public void setGroups(List<MachineInfo> groups) {
+		this.groups = groups;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public double getTotalGcb() {
+		return totalGcb;
+	}
+
+	public void setTotalGcb(double totalGcb) {
+		this.totalGcb = totalGcb;
+	}
+
+	public double getTotalPrice() {
+		return totalPrice;
+	}
+
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
 	//配置imageloader属性
 	private void initImageLoader(Context context) {
 		ImageLoaderConfiguration.Builder config = new ImageLoaderConfiguration.Builder(

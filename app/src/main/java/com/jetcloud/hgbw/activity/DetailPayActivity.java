@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.adapter.PayTicketAdapter;
+import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
@@ -26,15 +27,10 @@ import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static com.jetcloud.hgbw.activity.DetailsActivity.FOOD_OBJECT;
-import static com.jetcloud.hgbw.fragment.ShopCarFragment.PRODUC_OBJECT;
 
 public class DetailPayActivity extends BaseActivity {
 
@@ -63,13 +59,14 @@ public class DetailPayActivity extends BaseActivity {
     @ViewInject(R.id.tv_num)
     private TextView tv_num;
 
-    private ArrayList<ShopCarInfo> listObj;
+    private List<ShopCarInfo> listObj;
     private Map<String, List<ShopCarInfo>> children = new HashMap<>();
     private List<MachineInfo> groups = new ArrayList<>();
     private List<String> wayData;
-    private float totalPrice;
+    private double totalPrice;
+    private double totalGcb;
     private ShopCarInfo shopCarInfo;
-    private BigDecimal totalGcb;
+    private HgbwApplication app;
 
 
     @Override
@@ -81,6 +78,7 @@ public class DetailPayActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+        app = (HgbwApplication) getApplication();
         topbar.setCenterText("结算");
         Resources resources = this.getResources();
         Drawable drawable = resources.getDrawable(R.drawable.fanhui);
@@ -124,12 +122,15 @@ public class DetailPayActivity extends BaseActivity {
                         alert.show();
                     }
                 } else {
-                    listObj.clear();
-                    listObj.add(shopCarInfo);
-                    //只有一个产品
-                    children.put(shopCarInfo.getP_machine(), listObj);
+                    //只有一种产品
+                    app.setTotalGcb(totalGcb);
+                    app.setTotalPrice(totalPrice);
+                    if (cb_gcb.isChecked()){
+                        app.setType(DetailPayActivity.this.getString(R.string.pay_way_gcb));
+                    } else {
+                        app.setType(DetailPayActivity.this.getString(R.string.pay_way_weixin));
+                    }
                     Intent i = new Intent(DetailPayActivity.this, PayNextActivity.class);
-                    i.putExtra(PRODUC_OBJECT, (Serializable) children);
                     startActivity(i);
                 }
             }
@@ -141,21 +142,22 @@ public class DetailPayActivity extends BaseActivity {
     }
 
     private void initListData() {
-        listObj = (ArrayList<ShopCarInfo>) getIntent().getSerializableExtra(FOOD_OBJECT);
         wayData = new ArrayList<>();
         wayData.add("20元卡券一张，可抵扣20元");
         wayData.add("40元卡券一张，可抵扣40元");
         lv_my_ticket.setAdapter(new PayTicketAdapter(this, wayData));
-        Log.i(TAG_LOG, "initView: " + listObj.size());
 
-        //只有一件商品
+        groups = app.getGroups();
+        listObj = app.getChildren().get(groups.get(0).getId());
+        Log.i(TAG_LOG, "initView: " + listObj.size());
+        //只有一种商品
         shopCarInfo = listObj.get(0);
         int count = shopCarInfo.getP_local_number();
         totalPrice = shopCarInfo.getP_price() * count;
         tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
         tv_wei_num.setText(context.getString(R.string.rmb_display, totalPrice));
-        totalGcb = BigDecimal.valueOf(shopCarInfo.getP_vr9() * count);
-        Log.i(TAG_LOG, "initListData: " + totalGcb);
+        totalGcb = shopCarInfo.getP_vr9() * count;
+//        Log.i(TAG_LOG, "initListData: " + totalGcb);
         tv_gcb_num.setText(context.getString(R.string.gcb_display, totalGcb));
         tv_money.setText(String.valueOf(context.getString(R.string.rmb_display, totalPrice)));
         tv_num.setText(String.format(getString(R.string.take_food_num), count));

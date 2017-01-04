@@ -31,6 +31,7 @@ import org.xutils.image.ImageOptions;
 import org.xutils.x;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class DetailsActivity extends BaseActivity {
@@ -38,15 +39,18 @@ public class DetailsActivity extends BaseActivity {
 	private TextView tv_up,tv_down,number,tv_content,tv_total_price,tv_add_car,tv_go_to_pay,tv_phone;
 	private int poductNum = 1;
 	private CustomProgressDialog progress;
-	public final static String FOOD_OBJECT = "food_object";
 	private String titleText;
 	private ImageView iv_food;
 	private FoodDetail detail;
 	private FoodDetail.PMealBean bean;
 	private HgbwApplication app;
-	private double totalPrice;
 	private ShopCarInfo shopCarInfo;
 	private LinearLayout ll_nav_bottom;
+
+	private double totalPrice;
+	private double totalGcb;
+	private List<ShopCarInfo> listObj;
+	private List<MachineInfo> groups = new ArrayList<>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,16 +62,10 @@ public class DetailsActivity extends BaseActivity {
 	@Override
 	protected void initView() {
 		app = (HgbwApplication) getApplication();
-		shopCarInfo = (ShopCarInfo) getIntent().getSerializableExtra(FOOD_OBJECT);
-		if (shopCarInfo != null) {
-			titleText = shopCarInfo.getP_name();
-			topbar.setCenterText(titleText);
-		} else {
-			ll_nav_bottom.setVisibility(View.GONE);
-		}
 		Resources resources = DetailsActivity.this.getResources();
 		Drawable drawable = resources.getDrawable(R.drawable.fanhui);
 		topbar.setLeftDrawable(false, drawable);
+
 		iv_food = getView(R.id.iv_food);
 		tv_content = getView(R.id.tv_content);
 		tv_total_price = getView(R.id.tv_total_price);
@@ -95,7 +93,16 @@ public class DetailsActivity extends BaseActivity {
 			"}";
 	@Override
 	protected void loadData() {
-		// TODO Auto-generated method stub
+		//只有一件商品
+		groups = app.getGroups();
+		listObj = app.getChildren().get(groups.get(0).getId());
+		shopCarInfo = listObj.get(0);
+		if (shopCarInfo != null) {
+			titleText = shopCarInfo.getP_name();
+			topbar.setCenterText(titleText);
+		} else {
+			ll_nav_bottom.setVisibility(View.GONE);
+		}
 			getNetData();
 //		try {
 //			getDataFromJson(result);
@@ -136,10 +143,7 @@ public class DetailsActivity extends BaseActivity {
 				break;
 			//立即购买
 			case R.id.tv_go_to_pay:
-				ArrayList<ShopCarInfo> listObj = new ArrayList<ShopCarInfo>();
-				listObj.add(shopCarInfo);
 				Intent i = new Intent(DetailsActivity.this, DetailPayActivity.class);
-				i.putExtra(FOOD_OBJECT, listObj);
 				startActivity(i);
 				break;
 			//添加到购物车
@@ -211,7 +215,7 @@ public class DetailsActivity extends BaseActivity {
 					public void onFinished() {
 						progress.dismiss();
 						if (!hasError && result != null) {
-//                        Log.i(TAG_LOG, "onFinished: " + result);
+                        Log.i(TAG_LOG, "onFinished: " + result);
 							try {
 								getDataFromJson(result);
 							} catch (JSONException e) {

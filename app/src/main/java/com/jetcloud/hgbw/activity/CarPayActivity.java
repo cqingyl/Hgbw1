@@ -14,21 +14,18 @@ import android.widget.TextView;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.adapter.PayBuyingAdapter;
 import com.jetcloud.hgbw.adapter.PayTicketAdapter;
+import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.MyExpandableListView;
 import com.jetcloud.hgbw.view.MyListView;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static com.jetcloud.hgbw.fragment.ShopCarFragment.MACHINE_OBJECT;
-import static com.jetcloud.hgbw.fragment.ShopCarFragment.PRODUC_OBJECT;
 
 public class CarPayActivity extends BaseActivity {
     private final static String TAG_LOG = CarPayActivity.class.getSimpleName();
@@ -47,6 +44,7 @@ public class CarPayActivity extends BaseActivity {
     private double totalPrice;
     private double totalGcb;
     private List<String> wayData;
+    private HgbwApplication app;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +54,7 @@ public class CarPayActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+        app = (HgbwApplication) getApplication();
         topbar.setCenterText("结算");
         Resources resources = this.getResources();
         Drawable drawable = resources.getDrawable(R.drawable.fanhui);
@@ -73,12 +72,10 @@ public class CarPayActivity extends BaseActivity {
 
     @Override
     protected void loadData() {
-        groups = new ArrayList<>();
-        children = new HashMap<>();
-        groups = (List<MachineInfo>) getIntent().getSerializableExtra(MACHINE_OBJECT);
-        children = (Map<String, List<ShopCarInfo>>) getIntent().getSerializableExtra(PRODUC_OBJECT);
-        totalPrice = getIntent().getDoubleExtra("totalPrice",0.00);
-        totalGcb = getIntent().getDoubleExtra("totalGcb",0.00);
+        groups = app.getGroups();
+        children = app.getChildren();
+        totalPrice = app.getTotalPrice();
+        totalGcb = app.getTotalGcb();
         Log.i(TAG_LOG, "loadData: " + totalGcb);
 //        for (int i = 0; i < groups.size(); i ++) {
 //            List<ShopCarInfo> scList = children.get(groups.get(i).getId());
@@ -127,8 +124,6 @@ public class CarPayActivity extends BaseActivity {
             cb_weixin.setClickable(false);
             tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
         } else if(view.getId() == R.id.tv_go_to_pay)  {
-            {
-                {
                     if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
                         if (cb_gcb.isChecked()){
                             alert = new AlertDialog.Builder(context).create();
@@ -146,18 +141,18 @@ public class CarPayActivity extends BaseActivity {
                                     new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
-                                            Intent intent = new Intent(CarPayActivity.this, PayNextActivity.class);
-                                            intent.putExtra("resource", "settlement");
-                                            intent.putExtra(PRODUC_OBJECT, (Serializable) children);
-                                            intent.putExtra(MACHINE_OBJECT, (Serializable) groups);
-                                            if (cb_gcb.isChecked()){
-                                                intent.putExtra("payway", "vr9");
-                                                intent.putExtra("money", totalGcb);
-
-                                            } else {
-                                                intent.putExtra("payway", "weixin");
-                                                intent.putExtra("money", totalPrice);
-                                            }
+                                            Intent intent = new Intent(CarPayActivity.this, BindingActivity.class);
+                                            intent.putExtra(CarPayActivity.this.getString(R.string.jump_resource), CarPayActivity.class.getSimpleName());
+//                                            intent.putExtra(PRODUC_OBJECT, (Serializable) children);
+//                                            intent.putExtra(MACHINE_OBJECT, (Serializable) groups);
+//                                            if (cb_gcb.isChecked()){
+//                                                intent.putExtra("payway", "vr9");
+//                                                intent.putExtra("money", totalGcb);
+//
+//                                            } else {
+//                                                intent.putExtra("payway", "weixin");
+//                                                intent.putExtra("money", totalPrice);
+//                                            }
                                             startActivity(intent);
                                         }
                                     });
@@ -165,20 +160,13 @@ public class CarPayActivity extends BaseActivity {
                         }
                     } else {
                         Intent i = new Intent(CarPayActivity.this, PayNextActivity.class);
-                        i.putExtra(PRODUC_OBJECT, (Serializable) children);
-                        i.putExtra(MACHINE_OBJECT, (Serializable) groups);
                         if (cb_gcb.isChecked()){
-                            i.putExtra("payway", "vr9");
-                            i.putExtra("money", totalGcb);
-
+                            app.setType(CarPayActivity.this.getString(R.string.pay_way_gcb));
                         } else {
-                            i.putExtra("payway", "weixin");
-                            i.putExtra("money", totalPrice);
+                            app.setType(CarPayActivity.this.getString(R.string.pay_way_weixin));
                         }
                         startActivity(i);
                     }
                 }
-            }
-        }
     }
 }

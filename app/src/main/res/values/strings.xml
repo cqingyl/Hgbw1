@@ -28,4 +28,10 @@
     <string name="china_merchants_bank_card">卡号（8888 8888 8888 8888）</string>
     <string name="ok">确定</string>
     <string name="cancel">取消</string>
+
+    <!-- 静态变量 -->
+    <string name="pay_way_gcb">vr9</string>
+    <string name="pay_way_weixin">weixin</string>
+    <string name="weixin">weixin</string>
+    <string name="jump_resource">jump resource</string>
 </resources>

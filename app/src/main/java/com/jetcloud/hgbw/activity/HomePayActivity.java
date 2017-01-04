@@ -15,7 +15,9 @@ import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.adapter.PayTicketAdapter;
+import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwUrl;
+import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
@@ -25,15 +27,11 @@ import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static com.jetcloud.hgbw.activity.DetailsActivity.FOOD_OBJECT;
-import static com.jetcloud.hgbw.fragment.ShopCarFragment.PRODUC_OBJECT;
 
 
 public class HomePayActivity extends BaseActivity {
@@ -66,14 +64,16 @@ public class HomePayActivity extends BaseActivity {
     @ViewInject(R.id.tv_btn_add)
     private TextView tv_btn_add;
 
-    private ArrayList<ShopCarInfo> listObj;
-    private Map<String, List<ShopCarInfo>> children = new HashMap<>();
+    private List<ShopCarInfo> listObj;
     private List<String> wayData;
     private float totalPrice;
     private double totalGcb;
     private BigDecimal gcbBigDecimal;
     private int count = 1;
     private ShopCarInfo shopCarInfo;
+    private HgbwApplication app;
+    private List<MachineInfo> groups = new ArrayList<>();
+    private Map<String, List<ShopCarInfo>> children = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +84,7 @@ public class HomePayActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+        app = (HgbwApplication) getApplication();
         topbar.setCenterText("结算");
         Resources resources = this.getResources();
         Drawable drawable = resources.getDrawable(R.drawable.fanhui);
@@ -120,18 +121,24 @@ public class HomePayActivity extends BaseActivity {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    return;
+
+                                    Intent intent = new Intent(HomePayActivity.this, BindingActivity.class);
+                                    intent.putExtra(HomePayActivity.this.getString(R.string.jump_resource), CarPayActivity.class.getSimpleName());
+                                    startActivity(intent);
                                 }
                             });
                     alert.show();
                 }
             } else {
-                listObj.clear();
-                listObj.add(shopCarInfo);
-                //只有一个产品
-                children.put(shopCarInfo.getP_machine(), listObj);
+                //只有一种产品
+                app.setTotalGcb(totalGcb);
+                app.setTotalPrice(totalPrice);
+                if (cb_gcb.isChecked()){
+                    app.setType(HomePayActivity.this.getString(R.string.pay_way_gcb));
+                } else {
+                    app.setType(HomePayActivity.this.getString(R.string.pay_way_weixin));
+                }
                 Intent i = new Intent(HomePayActivity.this, PayNextActivity.class);
-                i.putExtra(PRODUC_OBJECT, (Serializable) children);
                 startActivity(i);
             }
         }
@@ -142,14 +149,16 @@ public class HomePayActivity extends BaseActivity {
     }
 
     private void initListData() {
-        listObj = (ArrayList<ShopCarInfo>) getIntent().getSerializableExtra(FOOD_OBJECT);
+
         wayData = new ArrayList<>();
         wayData.add("20元卡券一张，可抵扣20元");
         wayData.add("40元卡券一张，可抵扣40元");
         lv_my_ticket.setAdapter(new PayTicketAdapter(this, wayData));
-        Log.i(TAG_LOG, "initView: " + listObj.size());
 
         //只有一件商品
+        groups = app.getGroups();
+        listObj = app.getChildren().get(groups.get(0).getId());
+        Log.i(TAG_LOG, "initView: " + listObj.size());
         shopCarInfo = listObj.get(0);
         totalPrice = shopCarInfo.getP_price() * count;
         totalGcb = shopCarInfo.getP_vr9() * count;

@@ -118,8 +118,6 @@
         </activity>
         <activity android:name="com.jetcloud.hgbw.activity.BindingActivity" >
         </activity>
-        <activity android:name="com.jetcloud.hgbw.activity.BindNextActivity" >
-        </activity>
         <activity android:name="com.jetcloud.hgbw.activity.CarPayActivity" >
         </activity>
         <activity android:name="com.jetcloud.hgbw.activity.MyOrderActivity" >

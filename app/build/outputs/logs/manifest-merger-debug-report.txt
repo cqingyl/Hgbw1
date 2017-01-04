@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:2:1-125:12
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:2:1-123:12
 	package
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:3:11-38
 		INJECTED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml
@@ -100,7 +100,7 @@ ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:49:5-50:23
 	android:name
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:49:22-81
 application
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:52:5-123:19
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:52:5-121:19
 MERGED from [com.android.support:appcompat-v7:25.0.1] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:25.0.1] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-fragment:25.0.1] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\AndroidManifest.xml:25:5-20
@@ -213,18 +213,14 @@ activity#com.jetcloud.hgbw.activity.BindingActivity
 ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:115:9-116:20
 	android:name
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:115:19-59
-activity#com.jetcloud.hgbw.activity.BindNextActivity
+activity#com.jetcloud.hgbw.activity.CarPayActivity
 ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:117:9-118:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:117:19-60
-activity#com.jetcloud.hgbw.activity.CarPayActivity
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:117:19-58
+activity#com.jetcloud.hgbw.activity.MyOrderActivity
 ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:119:9-120:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:119:19-58
-activity#com.jetcloud.hgbw.activity.MyOrderActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:121:9-122:20
-	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:121:19-59
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:119:19-59
 uses-sdk
 INJECTED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:25.0.1] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\AndroidManifest.xml:21:5-23:78
