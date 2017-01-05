@@ -106,10 +106,10 @@ public class HomePayActivity extends BaseActivity {
             cb_weixin.setClickable(false);
         } else if (view.getId() == R.id.tv_go_to_pay) {
             if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
-                if (cb_gcb.isChecked()){
                     alert = new AlertDialog.Builder(context).create();
                     alert.setTitle("操作提示");
                     alert.setMessage("您还未绑定交易宝账号");
+                    alert.getWindow().setBackgroundDrawableResource(R.color.white);
                     alert.setButton(DialogInterface.BUTTON_NEGATIVE, "取消",
                             new DialogInterface.OnClickListener() {
                                 @Override
@@ -128,7 +128,6 @@ public class HomePayActivity extends BaseActivity {
                                 }
                             });
                     alert.show();
-                }
             } else {
                 //只有一种产品
                 app.setTotalGcb(totalGcb);

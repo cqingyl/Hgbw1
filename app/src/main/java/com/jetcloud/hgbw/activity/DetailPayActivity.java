@@ -101,10 +101,10 @@ public class DetailPayActivity extends BaseActivity {
         } else if (view.getId() == R.id.tv_go_to_pay) {
             {
                 if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
-                    if (cb_gcb.isChecked()){
                         alert = new AlertDialog.Builder(context).create();
                         alert.setTitle("操作提示");
                         alert.setMessage("您还未绑定交易宝账号");
+                        alert.getWindow().setBackgroundDrawableResource(R.color.white);
                         alert.setButton(DialogInterface.BUTTON_NEGATIVE, "取消",
                                 new DialogInterface.OnClickListener() {
                                     @Override
@@ -116,11 +116,12 @@ public class DetailPayActivity extends BaseActivity {
                                 new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        startActivity( new Intent(DetailPayActivity.this, PayNextActivity.class));
+                                        Intent intent = new Intent(DetailPayActivity.this, BindingActivity.class);
+                                        intent.putExtra(DetailPayActivity.this.getString(R.string.jump_resource), CarPayActivity.class.getSimpleName());
+                                        startActivity(intent);
                                     }
                                 });
                         alert.show();
-                    }
                 } else {
                     //只有一种产品
                     app.setTotalGcb(totalGcb);

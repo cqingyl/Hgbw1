@@ -44,10 +44,6 @@
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_favorite_infowindow.xml",
-        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_favorite_infowindow.xml"
-    },
-    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_details.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_details.xml"
     },
@@ -74,10 +70,6 @@
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\car_empty.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\car_empty.xml"
-    },
-    {
-        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_favorite.xml",
-        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_favorite.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
@@ -244,10 +236,6 @@
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_favorite_alert.xml",
-        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_favorite_alert.xml"
-    },
-    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_car_pay.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_car_pay.xml"
     },
@@ -322,10 +310,6 @@
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_action_mode_close_item_material.xml"
-    },
-    {
-        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_daohang.xml",
-        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_daohang.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",

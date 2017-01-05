@@ -104,7 +104,7 @@ public class CarPayActivity extends BaseActivity {
         tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
         tv_wei_num.setText(context.getString(R.string.rmb_display, totalPrice));
         BigDecimal db = BigDecimal.valueOf(totalGcb);
-        Log.i(TAG_LOG, "initListData: " + db);
+//        Log.i(TAG_LOG, "initListData: " + db);
         tv_gcb_num.setText(context.getString(R.string.gcb_display, db));
     }
 
@@ -125,7 +125,6 @@ public class CarPayActivity extends BaseActivity {
             tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
         } else if(view.getId() == R.id.tv_go_to_pay)  {
                     if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
-                        if (cb_gcb.isChecked()){
                             alert = new AlertDialog.Builder(context).create();
                             alert.setTitle("操作提示");
                             alert.setMessage("您还未绑定交易宝账号");
@@ -143,21 +142,10 @@ public class CarPayActivity extends BaseActivity {
                                         public void onClick(DialogInterface dialog, int which) {
                                             Intent intent = new Intent(CarPayActivity.this, BindingActivity.class);
                                             intent.putExtra(CarPayActivity.this.getString(R.string.jump_resource), CarPayActivity.class.getSimpleName());
-//                                            intent.putExtra(PRODUC_OBJECT, (Serializable) children);
-//                                            intent.putExtra(MACHINE_OBJECT, (Serializable) groups);
-//                                            if (cb_gcb.isChecked()){
-//                                                intent.putExtra("payway", "vr9");
-//                                                intent.putExtra("money", totalGcb);
-//
-//                                            } else {
-//                                                intent.putExtra("payway", "weixin");
-//                                                intent.putExtra("money", totalPrice);
-//                                            }
                                             startActivity(intent);
                                         }
                                     });
                             alert.show();
-                        }
                     } else {
                         Intent i = new Intent(CarPayActivity.this, PayNextActivity.class);
                         if (cb_gcb.isChecked()){

@@ -28,6 +28,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+
 public class HgbwApplication extends Application{
 	private static Context context;
 	private LinkedList<Activity> activityList;
@@ -45,7 +46,6 @@ public class HgbwApplication extends Application{
 	public String type;//被选中的商品的支付类型
 	@Override
 	public void onCreate() {
-		// TODO Auto-generated method stub
 		super.onCreate();
 		activityList = new LinkedList<Activity>();
 		context = getApplicationContext();

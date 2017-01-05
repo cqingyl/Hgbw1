@@ -489,7 +489,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                 Log.i("onclick", "onClick: ");
                 Intent intent = new Intent(getActivity(), LocationActivity.class);
                 intent.putExtra("from", 0);
-//                startActivity(intent);
+                startActivity(intent);
                 break;
         }
     }
