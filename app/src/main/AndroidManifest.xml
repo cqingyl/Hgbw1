@@ -116,6 +116,8 @@
         </activity>
         <activity android:name=".activity.MyOrderActivity">
         </activity>
+        <activity android:name=".activity.MachineListActivity">
+        </activity>
     </application>
 
 </manifest>

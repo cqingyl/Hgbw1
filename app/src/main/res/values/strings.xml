@@ -34,4 +34,8 @@
     <string name="pay_way_weixin">weixin</string>
     <string name="weixin">weixin</string>
     <string name="jump_resource">jump resource</string>
+    <!-- machine list -->
+    <string name="machine_list_name">%d号售餐机</string>
+    <string name="machine_list_num">售货机编号：%s</string>
+    <string name="machine_list_address">地址：%s</string>
 </resources>

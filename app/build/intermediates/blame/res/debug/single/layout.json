@@ -124,6 +124,10 @@
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_big_media_custom.xml"
     },
     {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_machine_list.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_machine_list.xml"
+    },
+    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_comfirm_pay.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_comfirm_pay.xml"
     },
@@ -154,6 +158,10 @@
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qrcode.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_qrcode.xml"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_machine_list.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\item_machine_list.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\shopcarfragmentlist_child_item.xml",

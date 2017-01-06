@@ -7,12 +7,17 @@ package com.jetcloud.hgbw.app;
 public class HgbwUrl {
 
     public final static String BASE_URL = "http://www.suiedai.com";
+    public final static String HOME_URL = "http://192.168.3.34:9000";
 //    public final static String BASE_URL = "http://192.168.3.7";
     public final static String TRADE_BASE_URL = "http://120.76.137.157:8089";
     /**
      * get
      * */
     public final static String HOME_DATA_URL = BASE_URL + "/getindexhtml.do";
+    public final static String MACHINE_DATA_URL = HOME_URL + "/post/mechine";
+    public final static String FOOD_BY_MACHINE_URL = HOME_URL + "/foodByMechine";
+    public final static String VERIFICATION_URL = HOME_URL + "/common/phone?phone=18628376454";
+
     /**
      * post
      * */

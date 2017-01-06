@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.activity.MachineListActivity;
 import com.jetcloud.hgbw.activity.MainActivity;
-import com.jetcloud.hgbw.activity.demo.LocationActivity;
 import com.jetcloud.hgbw.adapter.HomeFragmentAdapter;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwUrl;
@@ -487,7 +487,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         switch (view.getId()) {
             case R.id.tv_top_search:
                 Log.i("onclick", "onClick: ");
-                Intent intent = new Intent(getActivity(), LocationActivity.class);
+                Intent intent = new Intent(getActivity(), MachineListActivity.class);
                 intent.putExtra("from", 0);
                 startActivity(intent);
                 break;

@@ -120,6 +120,8 @@
         </activity>
         <activity android:name="com.jetcloud.hgbw.activity.MyOrderActivity" >
         </activity>
+        <activity android:name="com.jetcloud.hgbw.activity.MachineListActivity" >
+        </activity>
     </application>
 
 </manifest>
