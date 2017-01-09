@@ -19,6 +19,8 @@ public class SharedPreferenceUtils {
     private final static String BIND_STATUS = "bind_status";
     public final static String BINDING_STATE = "binding_state";
     public final static String UNBINDING_STATE = "unbinding-State";
+    public final static String IDENTITY = "identity";
+    public final static String WITHOUT_LOGIN = "without_login";
 
     public static void initData (Context context){
         mContext = context;
@@ -37,7 +39,7 @@ public class SharedPreferenceUtils {
     }
 
     public static String getMyAccount() {
-        return preferences.getString(MY_ACCOUNT, "without login");
+        return preferences.getString(MY_ACCOUNT, WITHOUT_LOGIN);
     }
 
     public static void setMyAccount(String phoneNum) {
@@ -53,12 +55,21 @@ public class SharedPreferenceUtils {
     }
 
     public static String getTradeAccount() {
-        return preferences.getString(TRADE_ACCOUNT, "without login");
+        return preferences.getString(TRADE_ACCOUNT, WITHOUT_LOGIN);
     }
 
     public static void setTradeAccount(String tradePhoneNum) {
         editor.putString(TRADE_ACCOUNT, tradePhoneNum).commit();
     }
+
+    public static String getIdentity() {
+        return preferences.getString(IDENTITY, WITHOUT_LOGIN);
+    }
+
+    public static void setIdentity(String identity) {
+        editor.putString(IDENTITY, identity).commit();
+    }
+
 
     public static void clear() {
         editor.clear();

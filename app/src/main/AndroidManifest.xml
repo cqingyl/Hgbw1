@@ -118,6 +118,12 @@
         </activity>
         <activity android:name=".activity.MachineListActivity">
         </activity>
+        <activity android:name=".activity.RegisterSuccessActivity">
+        </activity>
+        <activity android:name=".activity.SettingActivity">
+        </activity>
+        <activity android:name=".activity.ForgotPasswordActivity">
+        </activity>
     </application>
 
 </manifest>

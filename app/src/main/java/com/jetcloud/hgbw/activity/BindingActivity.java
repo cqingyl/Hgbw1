@@ -49,7 +49,7 @@ public class BindingActivity extends BaseActivity {
 
         /***********************************************
          * 注册后删除*******/
-        SharedPreferenceUtils.setMyAccount("13340902246");
+//        SharedPreferenceUtils.setMyAccount("13340902246");
         /******************************************************/
         tv_myaccount.setText(SharedPreferenceUtils.getMyAccount());
     }

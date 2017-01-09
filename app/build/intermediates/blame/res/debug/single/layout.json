@@ -1,11 +1,11 @@
 [
     {
-        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\takefoodfragment_list_item.xml",
-        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\takefoodfragment_list_item.xml"
-    },
-    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\takefoodfragment_list_item.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\takefoodfragment_list_item.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
@@ -18,6 +18,10 @@
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_home.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_forget_password.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_forget_password.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
@@ -220,6 +224,10 @@
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\item_my_order_in.xml"
     },
     {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_setting.xml"
+    },
+    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_location.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_location.xml"
     },
@@ -326,5 +334,9 @@
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\progress_dialog.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\progress_dialog.xml"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register_success.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_register_success.xml"
     }
 ]

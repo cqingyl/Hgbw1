@@ -1,6 +1,7 @@
 package com.jetcloud.hgbw.activity;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -9,6 +10,7 @@ import android.os.Handler;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -16,15 +18,26 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.utils.Out;
+import com.jetcloud.hgbw.view.CustomProgressDialog;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.xutils.common.Callback;
+import org.xutils.ex.HttpException;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 public class RegisterActivity extends BaseActivity {
+	private final static String TAG_LOG = RegisterActivity.class.getSimpleName();
 	private EditText et_username,et_vernumber,et_password,et_passwordag;
 	private CheckBox cb_agree;
 	private Button bt_register;
@@ -35,6 +48,7 @@ public class RegisterActivity extends BaseActivity {
 	private Handler mHandler = new Handler();
 	private boolean isCheck = false;
 	private MyEditeListener editeListener ;
+	private CustomProgressDialog progress;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
@@ -60,7 +74,7 @@ public class RegisterActivity extends BaseActivity {
 		et_passwordag=getView(R.id.et_passwordag);
 		et_passwordag.addTextChangedListener(editeListener);
 		cb_agree=getView(R.id.cb_agree);
-		bt_register=getView(R.id.bt_register);
+		bt_register=getViewWithClick(R.id.bt_register);
 		tv_getver=getViewWithClick(R.id.tv_getver);
 		//chebox监听
 		cb_agree.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -96,18 +110,28 @@ public class RegisterActivity extends BaseActivity {
 		// TODO Auto-generated method stub
 		super.onClick(view);
 		if (view==tv_getver) {
-			getVer();
+			if (TextUtils.isEmpty(et_username.getText().toString())) {
+				Out.Toast(context, "请输入手机号");
+			} else if (et_username.getText().toString().length() != 11) {
+				Out.Toast(context,"手机号位数不对");
+			} else {
+				getVer();
+			}
+		} else if (view == bt_register){
+			if (et_username.getText().toString().length() != 11) {
+				Out.Toast(context,"手机号格式不对");
+			} else if (!et_password.getText().toString().equals(et_passwordag.getText().toString())){
+				Out.Toast(context, "两次密码不一样");
+			} else {
+				getNetData();
+			}
 		}
 	}
 	//获取验证码
 	private void getVer() {
-		
-		if (TextUtils.isEmpty(et_username.getText().toString())) {
-			Out.Toast(context, "请输入手机号");
-			return;
-		}
+
 		tv_getver.setEnabled(false);
-		
+		verificationRequest();
 
 		mTimer = new Timer();
 		mTask = new TimerTask() {
@@ -171,4 +195,160 @@ public class RegisterActivity extends BaseActivity {
 			// TODO Auto-generated method stub
 
 		}}
+	/***
+	 * 验证码请求
+	 * */
+	private void verificationRequest() {
+		final RequestParams params = new RequestParams(HgbwUrl.VERIFICATION_URL);
+		//缓存时间
+		params.addQueryStringParameter("phone",et_username.getText().toString());
+		params.setCacheMaxAge(1000 * 60);
+		x.task().run(new Runnable() {
+			@Override
+			public void run() {
+				x.http().get(params, new Callback.CacheCallback<String>() {
+
+					private boolean hasError = false;
+					private String result = null;
+
+					@Override
+					public boolean onCache(String result) {
+						this.result = result;
+						return true; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
+					}
+
+					@Override
+					public void onSuccess(String result) {
+						// 注意: 如果服务返回304 或 onCache 选择了信任缓存, 这时result为null.
+						if (result != null) {
+							this.result = result;
+						}
+					}
+
+					@Override
+					public void onError(Throwable ex, boolean isOnCallback) {
+						hasError = true;
+						Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
+						Log.e(TAG_LOG, "onError: " + ex.getMessage());
+						if (ex instanceof HttpException) { // 网络错误
+							HttpException httpEx = (HttpException) ex;
+							int responseCode = httpEx.getCode();
+							String responseMsg = httpEx.getMessage();
+							String errorResult = httpEx.getResult();
+							Log.e(TAG_LOG, "onError " + " code: " + responseCode + " message: " + responseMsg);
+						} else { // 其他错误
+						}
+					}
+
+					@Override
+					public void onCancelled(CancelledException cex) {
+						Toast.makeText(x.app(), "cancelled", Toast.LENGTH_LONG).show();
+					}
+
+					@Override
+					public void onFinished() {
+						if (!hasError && result != null) {
+							Log.i(TAG_LOG, "onFinished: " + result);
+
+						}
+					}
+				});
+			}
+		});
+	}
+
+	/***
+	 * 注册请求
+	 * */
+	private void getNetData() {
+		final RequestParams params = new RequestParams(HgbwUrl.REGISTER_URL);
+		//缓存时间
+		params.addBodyParameter("phone",et_username.getText().toString());
+		params.addBodyParameter("pwd",et_password.getText().toString());
+		params.addBodyParameter("code",et_vernumber.getText().toString());
+		params.setCacheMaxAge(1000 * 60);
+		x.task().run(new Runnable() {
+			@Override
+			public void run() {
+				x.http().post(params, new Callback.CacheCallback<String>() {
+
+					private boolean hasError = false;
+					private String result = null;
+
+					@Override
+					public boolean onCache(String result) {
+						this.result = result;
+						return true; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
+					}
+
+					@Override
+					public void onSuccess(String result) {
+						// 注意: 如果服务返回304 或 onCache 选择了信任缓存, 这时result为null.
+						if (result != null) {
+							this.result = result;
+						}
+					}
+
+					@Override
+					public void onError(Throwable ex, boolean isOnCallback) {
+						hasError = true;
+						Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
+						Log.e(TAG_LOG, "onError: " + ex.getMessage());
+						if (ex instanceof HttpException) { // 网络错误
+							HttpException httpEx = (HttpException) ex;
+							int responseCode = httpEx.getCode();
+							String responseMsg = httpEx.getMessage();
+							String errorResult = httpEx.getResult();
+							Log.e(TAG_LOG, "onError " + " code: " + responseCode + " message: " + responseMsg);
+						} else { // 其他错误
+						}
+					}
+
+					@Override
+					public void onCancelled(CancelledException cex) {
+						Toast.makeText(x.app(), "cancelled", Toast.LENGTH_LONG).show();
+					}
+
+					@Override
+					public void onFinished() {
+						progress.dismiss();
+						if (!hasError && result != null) {
+							Log.i(TAG_LOG, "onFinished: " + result);
+							try {
+								getDataFromJson(result);
+							} catch (JSONException e) {
+								e.printStackTrace();
+								Log.e(TAG_LOG, " json error: " + e.getMessage());
+							}
+						}
+					}
+
+				});
+				x.task().post(new Runnable() {
+					@Override
+					public void run() {
+						progress = new CustomProgressDialog(context, "请稍后", R.drawable.fram2);
+						progress.show();
+					}
+				});
+			}
+		});
+
+	}
+	/**
+	 * 处理json数据
+	 */
+	private void getDataFromJson(String result) throws JSONException {
+		JSONObject jsonObject = new JSONObject(result);
+		Out.Toast(context, jsonObject.getString("status"));
+		if (jsonObject.getString("code").equals("302")){
+			Out.Toast(context,"不需要重复注册");
+		} else if (jsonObject.getString("status").equals("success")) {
+			startActivity(new Intent(context, RegisterSuccessActivity.class));
+			finish();
+		}
+
+	}
+
 }
+

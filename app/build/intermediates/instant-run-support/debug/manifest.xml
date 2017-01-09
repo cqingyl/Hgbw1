@@ -123,6 +123,12 @@
         </activity>
         <activity android:name="com.jetcloud.hgbw.activity.MachineListActivity" >
         </activity>
+        <activity android:name="com.jetcloud.hgbw.activity.RegisterSuccessActivity" >
+        </activity>
+        <activity android:name="com.jetcloud.hgbw.activity.SettingActivity" >
+        </activity>
+        <activity android:name="com.jetcloud.hgbw.activity.ForgotPasswordActivity" >
+        </activity>
     </application>
 
 </manifest>
