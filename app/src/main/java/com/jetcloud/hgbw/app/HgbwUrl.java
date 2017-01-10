@@ -17,9 +17,6 @@ public class HgbwUrl {
     public final static String MACHINE_DATA_URL = HOME_URL + "/post/mechine";
     public final static String FOOD_BY_MACHINE_URL = HOME_URL + "/foodByMechine";
     public final static String VERIFICATION_URL = HOME_URL + "/common/phone";
-    public final static String REGISTER_URL = HOME_URL + "/user/register";
-    public final static String RESET_PWD_URL = HOME_URL + "/user/resetpwd";
-    public final static String LOGIN_URL = HOME_URL + "/user/login";
 
     /**
      * post
@@ -29,7 +26,11 @@ public class HgbwUrl {
     public final static String FOOD_DETAIL = BASE_URL + "/order/pdetail";
     public final static String TRADE_BIND = TRADE_BASE_URL + "/gateway/bind_profile";
     public final static String TRADE_PAY = TRADE_BASE_URL + "/gateway/pay";
+    public final static String REGISTER_URL = HOME_URL + "/user/register";
+    public final static String LOGIN_URL = HOME_URL + "/user/login";
+    public final static String RESET_PWD_URL = HOME_URL + "/user/resetpwd";
     public final static String LOGOUT_URL = HOME_URL + "/user/logout";
+    public final static String PIC_AND_NICK_URL = HOME_URL + "/user/info";//"pic","nickname"
 
     /***
      * Put

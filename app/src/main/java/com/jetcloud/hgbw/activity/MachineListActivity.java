@@ -1,5 +1,6 @@
 package com.jetcloud.hgbw.activity;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.activity.demo.LocationActivity;
 import com.jetcloud.hgbw.adapter.MachineListAdapter;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwUrl;
@@ -53,6 +55,8 @@ public class MachineListActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
     }
 
+
+
     @Override
     protected void initView() {
         context = MachineListActivity.this;
@@ -61,11 +65,15 @@ public class MachineListActivity extends BaseActivity {
         Resources resources = this.getResources();
         Drawable drawable = resources.getDrawable(R.drawable.fanhui);
         topbar.setLeftDrawable(false, drawable);
+
+
+        btn_shenghui.setOnClickListener(this);
+
     }
 
     @Override
     protected void loadData() {
-        getNetData();
+//        getNetData();
     }
 
     /**
@@ -94,13 +102,17 @@ public class MachineListActivity extends BaseActivity {
      */
     @Override
     public void onClick(View view) {
-        for (int i = 0; i < data.size(); i++) {
-            if (view == btns[i]) {
-                MachineListBean.DataBean dataBean = data.get(i);
-                Log.i(TAG_LOG, "onClick: " + dataBean.getNumber());
+        if (btn_shenghui == view) {
+            startActivity(new Intent(MachineListActivity.this, LocationActivity.class));
+        } else {
+            for (int i = 0; i < data.size(); i++) {
+                if (view == btns[i]) {
+                    MachineListBean.DataBean dataBean = data.get(i);
+                    Log.i(TAG_LOG, "onClick: " + dataBean.getNumber());
 //                getMachineListFromNet(dataBean.getNumber());
-                adapter = new MachineListAdapter(context,data);
-                lv_machine.setAdapter(adapter);
+                    adapter = new MachineListAdapter(context, data);
+                    lv_machine.setAdapter(adapter);
+                }
             }
         }
     }

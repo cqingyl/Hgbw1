@@ -129,6 +129,8 @@
         </activity>
         <activity android:name="com.jetcloud.hgbw.activity.ForgotPasswordActivity" >
         </activity>
+        <activity android:name="com.jetcloud.hgbw.activity.EditAccountActivity" >
+        </activity>
     </application>
 
 </manifest>

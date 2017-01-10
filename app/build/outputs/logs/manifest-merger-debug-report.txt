@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:2:1-129:12
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:2:1-131:12
 	package
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:3:11-38
 		INJECTED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml
@@ -96,7 +96,7 @@ ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:48:5-49:23
 	android:name
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:48:22-81
 application
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:51:5-127:19
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:51:5-129:19
 MERGED from [com.android.support:appcompat-v7:25.0.1] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:25.0.1] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-fragment:25.0.1] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\AndroidManifest.xml:25:5-20
@@ -231,6 +231,10 @@ activity#com.jetcloud.hgbw.activity.ForgotPasswordActivity
 ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:125:9-126:20
 	android:name
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:125:19-66
+activity#com.jetcloud.hgbw.activity.EditAccountActivity
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:127:9-128:20
+	android:name
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:127:19-63
 uses-sdk
 INJECTED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:25.0.1] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\AndroidManifest.xml:21:5-23:78

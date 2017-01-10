@@ -171,6 +171,7 @@ public class LocationActivity extends Activity {
 		}
 
 		public void onReceivePoi(BDLocation poiLocation) {
+
 		}
 	}
 

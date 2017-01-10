@@ -16,11 +16,10 @@
             style="@style/MyTextView14"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-           
             android:gravity="center_vertical"
             android:minWidth="60dp"
             android:paddingLeft="@dimen/left_right_10"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/tv_top_search"
@@ -33,13 +32,13 @@
 
         <TextView
             android:id="@+id/tv_top_right"
-            style="@style/MyTextView16"
+            style="@style/MyTextView14"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:gravity="center"
             android:minWidth="60dp"
             android:paddingRight="@dimen/left_right_10"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:visibility="visible" />
     </RelativeLayout>
 

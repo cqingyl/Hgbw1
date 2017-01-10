@@ -14,6 +14,7 @@ import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.MachineListActivity;
 import com.jetcloud.hgbw.activity.MainActivity;
+import com.jetcloud.hgbw.activity.demo.BaiduLocation;
 import com.jetcloud.hgbw.adapter.HomeFragmentAdapter;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwUrl;
@@ -41,17 +42,18 @@ import org.xutils.x;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.content.ContentValues.TAG;
 
 @ContentView(R.layout.fragment_home)
-public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.AddGoodNumberInterface {
+public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.AddGoodNumberInterface, BaiduLocation.MyLocationListener {
     private final static String TAG_LOG = HomeFragment.class.getSimpleName();
     private static HomeFragment homeFragment;
     private ImageCycleView binner;
     private HomeFragmentAdapter adapter;
     private TextView tvTopSearch;
+    private TextView tv_city;
     private RadioGroup radioGroup;
     private CustomProgressDialog progress;
+
     //////////////暂时无用，先保留
     private static final int NEW_FOOD = 0;
     private static final int HOT_FOOD = 1;
@@ -233,6 +235,9 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     @Override
     public void onResume() {
+        BaiduLocation.setMyLocationListener(this);
+        BaiduLocation.getLocation(app);
+
         total = SharedPreferenceUtils.getShopCarNumber();
         //购物车角标
         ShopCarUtil.ChangeCorner(getActivity(),total);
@@ -249,10 +254,10 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     @Override
     protected void initView() {
-        Log.i(TAG, "initView: " +    System.currentTimeMillis());
 
         app = (HgbwApplication) getActivity().getApplication();
         binner = getView(R.id.binner);
+        tv_city = getView(R.id.tv_city);
         listView = getView(R.id.lv_home);
         adapter = new HomeFragmentAdapter(getActivity(), dataA);
         adapter.setNumberInterface(HomeFragment.this);
@@ -289,7 +294,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         dataE.addAll(goodsInfo.getE());
         adapter.notifyDataSetChanged();
         //初始化轮播图
-        loadAdData();
+//        loadAdData();
     }
 
 
@@ -428,7 +433,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                     });
                 } catch (DbException e) {
                     e.printStackTrace();
-                    Log.e(TAG, "添加失败: " + e.getMessage());
+                    Log.e(TAG_LOG, "添加失败: " + e.getMessage());
                 }
             }
         });
@@ -472,7 +477,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 //            mImageUrl.add(HgbwUrl.BASE_URL + imgPath);
 
             String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + dataE.get(i).getP_picture());
-            Log.i(TAG, "loadAdData: " + imgPath);
+            Log.i(TAG_LOG, "loadAdData: " + imgPath);
             mImageUrl.add(imgPath);
         }
         binner.setImageResources(mImageUrl, mAdCycleViewListener, 0);
@@ -494,4 +499,12 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         }
     }
 
+    /**
+     *  获取location
+     * */
+    @Override
+    public void myLocation(double mylongitude, double mylatitude, String city, String street) {
+//        Log.i(TAG_LOG, "myLocation: " + mylatitude);
+        tv_city.setText(city);
+    }
 }

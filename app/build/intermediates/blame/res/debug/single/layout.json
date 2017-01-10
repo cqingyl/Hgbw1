@@ -12,16 +12,20 @@
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_media_custom.xml"
     },
     {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_choosephoto.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\dialog_choosephoto.xml"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_forget_password.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_forget_password.xml"
+    },
+    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_passwordinputview.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\dialog_passwordinputview.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_home.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\fragment_home.xml"
-    },
-    {
-        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_forget_password.xml",
-        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_forget_password.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
@@ -74,6 +78,10 @@
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\car_empty.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\car_empty.xml"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_edit_account.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_edit_account.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",

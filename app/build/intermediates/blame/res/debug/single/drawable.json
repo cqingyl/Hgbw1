@@ -72,6 +72,10 @@
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_my_ed.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\bg_my_ed.xml"
+    },
+    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fram2.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\fram2.xml"
     },
@@ -82,6 +86,10 @@
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radiobutton.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\radiobutton.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",

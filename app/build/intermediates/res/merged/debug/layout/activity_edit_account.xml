@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edit_account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/gray_light"
+    tools:context="com.jetcloud.hgbw.activity.EditAccountActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/top_bar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:paddingRight="20dp"
+            android:background="@color/white">
+            <TextView
+                style="@style/MyTextView2"
+                android:layout_centerVertical="true"
+                android:text="用户名"
+                android:textColor="@color/black"/>
+            <EditText
+                style="@style/MyEditText2"
+                android:layout_marginLeft="90dp"
+                android:hint="请输入用户名"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:id="@+id/et_account"/>
+            <View style="@style/lineView"
+                  android:layout_alignParentBottom="true"
+                  android:background="@color/gray_light"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

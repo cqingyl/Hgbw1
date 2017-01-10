@@ -6,6 +6,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Environment;
 
+import com.baidu.mapapi.SDKInitializer;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.fragment.HomeFragment;
@@ -58,7 +59,7 @@ public class HgbwApplication extends Application{
 		//初始化SharePreference
 		SharedPreferenceUtils.initData(getApplicationContext());
 		// 在使用 SDK 各组间之前初始化 context 信息，传入 ApplicationContext
-//		SDKInitializer.initialize(this);
+		SDKInitializer.initialize(this);
 	}
 
 	public void addActivity(Activity activity) {

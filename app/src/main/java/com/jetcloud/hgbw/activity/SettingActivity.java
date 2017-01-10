@@ -82,7 +82,7 @@ public class SettingActivity extends BaseActivity {
                     @Override
                     public boolean onCache(String result) {
                         this.result = result;
-                        return true; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
+                        return false; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
                     }
 
                     @Override
@@ -146,7 +146,7 @@ public class SettingActivity extends BaseActivity {
     private void getDataFromJson(String result) throws JSONException {
         JSONObject jsonObject = new JSONObject(result);
         Out.Toast(context, jsonObject.getString("status"));
-        if (jsonObject.getString("status").equals("success")) {
+        if (jsonObject.has("status") && jsonObject.getString("status").equals("success")) {
             SharedPreferenceUtils.setIdentity(SharedPreferenceUtils.WITHOUT_LOGIN);
             SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.UNBINDING_STATE);
             SharedPreferenceUtils.setMyAccount(SharedPreferenceUtils.WITHOUT_LOGIN);

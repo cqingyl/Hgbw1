@@ -70,6 +70,7 @@ public class MainActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 	}
 
+
 	@Override
 	protected void initView() {
 		// TODO Auto-generated method stub
