@@ -8,7 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
-import com.jetcloud.hgbw.bean.MachineListBean;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -22,11 +21,11 @@ import java.util.List;
 public class MachineListAdapter extends BaseAdapter {
     private static final String TAG_LOG = MachineListAdapter.class.getSimpleName();
     private LayoutInflater mLayoutInflater;
-    private List<MachineListBean.DataBean> data;
+    private List<String> data;
     private Context context;
 
 
-    public MachineListAdapter(Context context, List<MachineListBean.DataBean> data) {
+    public MachineListAdapter(Context context, List<String> data) {
         super();
         mLayoutInflater = LayoutInflater.from(context);
         this.context = context;
@@ -39,8 +38,8 @@ public class MachineListAdapter extends BaseAdapter {
     }
 
     @Override
-    public MachineListBean.DataBean getItem(int i) {
-        return data.get(i);
+    public Object getItem(int i) {
+        return null;
     }
 
     @Override
@@ -58,9 +57,6 @@ public class MachineListAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) view.getTag();
         }
-        holder.tv_machine_name.setText(context.getString(R.string.machine_list_name, i + 1));
-        holder.tv_machine_num.setText(context.getString(R.string.machine_list_num, getItem(i).getNumber()));
-        holder.tv_machine_address.setText(context.getString(R.string.machine_list_address, getItem(i).getLocate()));
         return view;
     }
 

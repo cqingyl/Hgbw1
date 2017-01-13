@@ -30,7 +30,6 @@ import com.jetcloud.hgbw.activity.MyOrderActivity;
 import com.jetcloud.hgbw.activity.MyTicketActivity;
 import com.jetcloud.hgbw.activity.MyWalletActivity;
 import com.jetcloud.hgbw.activity.RegisterActivity;
-import com.jetcloud.hgbw.activity.SettingActivity;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 import com.jetcloud.hgbw.utils.ImagePath;
@@ -55,7 +54,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URLDecoder;
 
-import static android.content.ContentValues.TAG;
 
 
 @SuppressLint("ResourceAsColor")
@@ -83,12 +81,12 @@ public class MineFragment extends BaseFragment {
     LinearLayout mymoney;
     @ViewInject(R.id.aboutus)
     LinearLayout aboutus;
-    @ViewInject(R.id.setting)
-    LinearLayout setting;
     @ViewInject(R.id.civ_head)
     CircleImageView civ_head;
     @ViewInject(R.id.tv_nick)
     TextView tv_nick;
+    @ViewInject(R.id.ll_logout)
+    LinearLayout ll_logout;
 
     boolean isFirst = true;
     private AlertDialog dialog2;
@@ -128,9 +126,9 @@ public class MineFragment extends BaseFragment {
         aboutus.setOnClickListener(this);
         tv_login.setOnClickListener(this);
         tv_register.setOnClickListener(this);
-        setting.setOnClickListener(this);
         civ_head.setOnClickListener(this);
         tv_nick.setOnClickListener(this);
+        ll_logout.setOnClickListener(this);
 
     }
 
@@ -142,8 +140,8 @@ public class MineFragment extends BaseFragment {
     @Override
     public void onResume() {
         isFirst = false;
-        isHideBtnResiterAndLogin();
-        getPicAndTitle();
+        if (!isHideBtnResiterAndLogin())
+            getPicAndTitle();
         super.onResume();
     }
 
@@ -151,7 +149,7 @@ public class MineFragment extends BaseFragment {
     public void onHiddenChanged(boolean hidden) {
         Log.i(TAG_LOG, "H onHiddenChanged: " + hidden);
         if (!hidden && !isFirst) {
-            isHideBtnResiterAndLogin();
+            if (!isHideBtnResiterAndLogin())
             getPicAndTitle();
         }
         super.onHiddenChanged(hidden);
@@ -164,10 +162,12 @@ public class MineFragment extends BaseFragment {
         if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)) {
             ll_login_layout.setVisibility(View.GONE);
             ll_logout_layout.setVisibility(View.VISIBLE);
+            ll_logout.setVisibility(View.GONE);
             return true;
         } else {
             ll_login_layout.setVisibility(View.VISIBLE);
             ll_logout_layout.setVisibility(View.GONE);
+            ll_logout.setVisibility(View.VISIBLE);
             return false;
         }
     }
@@ -208,8 +208,9 @@ public class MineFragment extends BaseFragment {
             startActivity(new Intent(getActivity(), LoginActivity.class));
         } else if (view == tv_register) {
             startActivity(new Intent(getActivity(), RegisterActivity.class));
-        } else if (view == setting) {
-            startActivity(new Intent(getActivity(), SettingActivity.class));
+        } else if (view == ll_logout) {
+            getLogout();
+//            startActivity(new Intent(getActivity(), SettingActivity.class));
         } else if (view == tv_nick) {
             startActivity(new Intent(getActivity(), EditAccountActivity.class));
         } else if (view == civ_head) {
@@ -534,7 +535,7 @@ public class MineFragment extends BaseFragment {
                             Log.i(TAG_LOG, "get nick and pic onFinished: " + result);
                             try {
                                 JSONObject jsonObject = new JSONObject(result);
-                                Log.i(TAG, "onFinished: "  + jsonObject.getString("nickname") + "\n" + jsonObject.getString("pic"));
+                                Log.i(TAG_LOG, "onFinished: "  + jsonObject.getString("nickname") + "\n" + jsonObject.getString("pic"));
                                 tv_nick.setText(jsonObject.getString("nickname"));
                                 ImageLoader.getInstance().displayImage(
                                         URLDecoder.decode(HgbwUrl.HOME_URL + jsonObject.getString("pic")),
@@ -550,6 +551,98 @@ public class MineFragment extends BaseFragment {
             }
         });
 
+    }
+
+    /***
+     * 注销请求
+     */
+    private void getLogout() {
+        final RequestParams params = new RequestParams(HgbwUrl.LOGOUT_URL);
+        //缓存时间
+        params.addBodyParameter("identity", SharedPreferenceUtils.getIdentity());
+        params.setCacheMaxAge(1000 * 60);
+        x.task().run(new Runnable() {
+            @Override
+            public void run() {
+                x.http().post(params, new Callback.CacheCallback<String>() {
+
+                    private boolean hasError = false;
+                    private String result = null;
+
+                    @Override
+                    public boolean onCache(String result) {
+                        this.result = result;
+                        return false; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
+                    }
+
+                    @Override
+                    public void onSuccess(String result) {
+                        // 注意: 如果服务返回304 或 onCache 选择了信任缓存, 这时result为null.
+                        if (result != null) {
+                            this.result = result;
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable ex, boolean isOnCallback) {
+                        hasError = true;
+                        Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
+                        Log.e(TAG_LOG, "onError: " + ex.getMessage());
+                        if (ex instanceof HttpException) { // 网络错误
+                            HttpException httpEx = (HttpException) ex;
+                            int responseCode = httpEx.getCode();
+                            String responseMsg = httpEx.getMessage();
+                            String errorResult = httpEx.getResult();
+                            Log.e(TAG_LOG, "onError " + " code: " + responseCode + " message: " + responseMsg);
+                        } else { // 其他错误
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(CancelledException cex) {
+                        Toast.makeText(x.app(), "cancelled", Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onFinished() {
+                        progress.dismiss();
+                        if (!hasError && result != null) {
+                            Log.i(TAG_LOG, "onFinished: " + result);
+                            try {
+                                getDataFromJson(result);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                Log.e(TAG_LOG, " json error: " + e.getMessage());
+                            }
+                        }
+                    }
+
+                });
+                x.task().post(new Runnable() {
+                    @Override
+                    public void run() {
+                        progress = new CustomProgressDialog(getActivity(), "请稍后", R.drawable.fram2);
+                        progress.show();
+                    }
+                });
+            }
+        });
+
+    }
+
+    /**
+     * 处理json数据
+     */
+    private void getDataFromJson(String result) throws JSONException {
+        JSONObject jsonObject = new JSONObject(result);
+        Out.Toast(getActivity(), jsonObject.getString("status"));
+        if (jsonObject.has("status") && jsonObject.getString("status").equals("success")) {
+            SharedPreferenceUtils.setIdentity(SharedPreferenceUtils.WITHOUT_LOGIN);
+            SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.UNBINDING_STATE);
+            SharedPreferenceUtils.setMyAccount(SharedPreferenceUtils.WITHOUT_LOGIN);
+            SharedPreferenceUtils.setTradeAccount(SharedPreferenceUtils.WITHOUT_LOGIN);
+            isHideBtnResiterAndLogin();
+        }
     }
 
     @TargetApi(19)

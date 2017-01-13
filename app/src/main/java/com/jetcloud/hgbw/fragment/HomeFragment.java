@@ -1,27 +1,38 @@
 package com.jetcloud.hgbw.fragment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.provider.Settings;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
-import com.jetcloud.hgbw.activity.MachineListActivity;
 import com.jetcloud.hgbw.activity.MainActivity;
 import com.jetcloud.hgbw.activity.demo.BaiduLocation;
+import com.jetcloud.hgbw.activity.demo.LocationActivity;
 import com.jetcloud.hgbw.adapter.HomeFragmentAdapter;
+import com.jetcloud.hgbw.adapter.MyWheelAdapter;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwUrl;
-import com.jetcloud.hgbw.bean.GoodsInfo;
+import com.jetcloud.hgbw.bean.FoodBean;
 import com.jetcloud.hgbw.bean.MachineInfo;
+import com.jetcloud.hgbw.bean.MachineLocationBean;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
-import com.jetcloud.hgbw.utils.ImageLoaderCfg;
+import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.utils.ShopCarUtil;
 import com.jetcloud.hgbw.utils.TakeInShopCarAnim;
@@ -29,6 +40,7 @@ import com.jetcloud.hgbw.view.CustomProgressDialog;
 import com.jetcloud.hgbw.view.ImageCycleView;
 import com.jetcloud.hgbw.view.ImageCycleView.ImageCycleViewListener;
 import com.jetcloud.hgbw.view.MyListView;
+import com.wx.wheelview.widget.WheelView;
 
 import org.json.JSONException;
 import org.xutils.common.Callback;
@@ -42,6 +54,8 @@ import org.xutils.x;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.xutils.x.http;
+
 
 @ContentView(R.layout.fragment_home)
 public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.AddGoodNumberInterface, BaiduLocation.MyLocationListener {
@@ -54,12 +68,19 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     private RadioGroup radioGroup;
     private CustomProgressDialog progress;
 
-    //////////////暂时无用，先保留
-    private static final int NEW_FOOD = 0;
-    private static final int HOT_FOOD = 1;
-    private static final int SET_MEAL = 2;
-    private static final int DRINK = 3;
-    int type = NEW_FOOD;
+    private WheelView wheelView;
+    private PopupWindow window;
+    String machineNum;
+    String nickName;
+    List<MachineLocationBean.MechinesBean> mechinesBeanList;
+    List<FoodBean.DataBean> foodBeanDataBeanList;
+    MachineLocationBean.MechinesBean mechinesBean;
+    private static final int CHOOSE_NEW_FOOD = 0;
+    private static final int CHOOSE_HOT_FOOD = 1;
+    private static final int CHOOSE_SET_MEAL = 2;
+    private static final int CHOOSE_DRINK = 3;
+    private LinearLayout ll_choose_machine;
+    private TextView tv_machine_name;
     ////////////
     List<ShopCarInfo> dataA = new ArrayList<>();
     List<ShopCarInfo> dataB = new ArrayList<>();
@@ -68,128 +89,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     List<ShopCarInfo> dataE = new ArrayList<>();
     private HgbwApplication app;
     private int total;
-    private String result = "{ \n" +
-            "    \"a\": [ \n" +
-            "        { \n" +
-            "            \"p_id\": 1, \n" +
-            "            \"p_type\": \"a\", \n" +
-            "            \"p_machine\": \"hg010100001\", \n" +
-            "            \"p_name\": \"小炒杏鲍菇\", \n" +
-            "            \"p_picture\": \"../images/小炒杏鲍菇.png\", \n" +
-            "            \"p_price\": 15, \n" +
-            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
-            "            \"p_number\": 4, \n" +
-            "            \"p_vr9\": 0.075\n" +
-            "        }, \n" +
-            "        { \n" +
-            "            \"p_id\": 7, \n" +
-            "            \"p_type\": \"a\", \n" +
-            "            \"p_machine\": \"hg010100001\", \n" +
-            "            \"p_name\": \"香菇炖鸡\", \n" +
-            "            \"p_picture\": \"../images/香菇炖鸡.png\", \n" +
-            "            \"p_price\": 25, \n" +
-            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
-            "            \"p_number\": 10, \n" +
-            "            \"p_vr9\": 0.09\n" +
-            "        }\n" +
-            "    ], \n" +
-            "    \"b\": [ \n" +
-            "        { \n" +
-            "            \"p_id\": 2, \n" +
-            "            \"p_type\": \"b\", \n" +
-            "            \"p_machine\": \"hg010100001\", \n" +
-            "            \"p_name\": \"番茄炒蛋\", \n" +
-            "            \"p_picture\": \"../images/番茄炒蛋.png\", \n" +
-            "            \"p_price\": 20, \n" +
-            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
-            "            \"p_number\": 1, \n" +
-            "            \"p_vr9\": 0.08\n" +
-            "        }, \n" +
-            "        { \n" +
-            "            \"p_id\": 5, \n" +
-            "            \"p_type\": \"b\", \n" +
-            "            \"p_machine\": \"hg010100001\", \n" +
-            "            \"p_name\": \"酸辣粉\", \n" +
-            "            \"p_picture\": \"../images/酸辣粉.jpg\", \n" +
-            "            \"p_price\": 25, \n" +
-            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
-            "            \"p_number\": 5, \n" +
-            "            \"p_vr9\": 0.09\n" +
-            "        }\n" +
-            "    ], \n" +
-            "    \"c\": [ \n" +
-            "        { \n" +
-            "            \"p_id\": 3, \n" +
-            "            \"p_type\": \"c\", \n" +
-            "            \"p_machine\": \"hg010100001\", \n" +
-            "            \"p_name\": \"红烧肉\", \n" +
-            "            \"p_picture\": \"../images/红烧肉.png\", \n" +
-            "            \"p_price\": 30, \n" +
-            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
-            "            \"p_number\": -7, \n" +
-            "            \"p_vr9\": 0.15\n" +
-            "        }\n" +
-            "    ], \n" +
-            "    \"d\": [ \n" +
-            "        { \n" +
-            "            \"p_id\": 4, \n" +
-            "            \"p_type\": \"d\", \n" +
-            "            \"p_machine\": \"hg010100001\", \n" +
-            "            \"p_name\": \"红烧豆腐\", \n" +
-            "            \"p_picture\": \"../images/红烧豆腐.jpg\", \n" +
-            "            \"p_price\": 25, \n" +
-            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
-            "            \"p_number\": 5, \n" +
-            "            \"p_vr9\": 0.09\n" +
-            "        }, \n" +
-            "        { \n" +
-            "            \"p_id\": 8, \n" +
-            "            \"p_type\": \"d\", \n" +
-            "            \"p_machine\": \"hg010100001\", \n" +
-            "            \"p_name\": \"香辣翅根\", \n" +
-            "            \"p_picture\": \"../images/香辣翅根.png\", \n" +
-            "            \"p_price\": 25, \n" +
-            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
-            "            \"p_number\": 5, \n" +
-            "            \"p_vr9\": 0.09\n" +
-            "        }\n" +
-            "    ], \n" +
-            "    \"e\": [ \n" +
-            "        { \n" +
-            "            \"p_id\": 6, \n" +
-            "            \"p_type\": \"e\", \n" +
-            "            \"p_machine\": \"hg010100001\", \n" +
-            "            \"p_name\": \"香芹肉丝\", \n" +
-            "            \"p_picture\": \"../images/香芹肉丝.jpg\", \n" +
-            "            \"p_price\": 25, \n" +
-            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
-            "            \"p_number\": 5, \n" +
-            "            \"p_vr9\": 0.09\n" +
-            "        }, \n" +
-            "        { \n" +
-            "            \"p_id\": 11, \n" +
-            "            \"p_type\": \"e\", \n" +
-            "            \"p_machine\": \"hg010100001\", \n" +
-            "            \"p_name\": \"麻辣香锅\", \n" +
-            "            \"p_picture\": \"../images/麻辣香锅.jpg\", \n" +
-            "            \"p_price\": 25, \n" +
-            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
-            "            \"p_number\": 5, \n" +
-            "            \"p_vr9\": 0.09\n" +
-            "        }, \n" +
-            "        { \n" +
-            "            \"p_id\": 13, \n" +
-            "            \"p_type\": \"e\", \n" +
-            "            \"p_machine\": \"hg010100001\", \n" +
-            "            \"p_name\": \"地三鲜\", \n" +
-            "            \"p_picture\": \"../images/地三鲜.jpg\", \n" +
-            "            \"p_price\": 12, \n" +
-            "            \"p_address\": \"成都市武侯区武科东二路\", \n" +
-            "            \"p_number\": 5, \n" +
-            "            \"p_vr9\": 0.06\n" +
-            "        }\n" +
-            "    ]\n" +
-            "}\n";
+
     //轮播图点击事件
     private ImageCycleViewListener mAdCycleViewListener = new ImageCycleViewListener() {
 
@@ -235,8 +135,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     @Override
     public void onResume() {
-        BaiduLocation.setMyLocationListener(this);
-        BaiduLocation.getLocation(app);
+
 
         total = SharedPreferenceUtils.getShopCarNumber();
         //购物车角标
@@ -254,12 +153,36 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     @Override
     protected void initView() {
+        // 判断 存储的machineName 是不是默认的值，如果是说明是未定位
+        PackageManager pm = getActivity().getPackageManager();
+        AlertDialog alert;
+        boolean permission = (PackageManager.PERMISSION_GRANTED ==
+                pm.checkPermission("android.permission.RECORD_AUDIO", getActivity().getPackageName()));
+        if (!permission) {
+            Out.Toast(getActivity(),"木有这个权限");
+            alert = new AlertDialog.Builder(getActivity()).create();
+            alert.setTitle("操作提示");
+            alert.setMessage("请打开GPS后再尝试");
+            alert.getWindow().setBackgroundDrawableResource(R.color.white);
+
+            alert.setButton(DialogInterface.BUTTON_POSITIVE, "去开启",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                        }
+                    });
+            alert.show();
+        }
 
         app = (HgbwApplication) getActivity().getApplication();
         binner = getView(R.id.binner);
         tv_city = getView(R.id.tv_city);
         listView = getView(R.id.lv_home);
-        adapter = new HomeFragmentAdapter(getActivity(), dataA);
+        ll_choose_machine = getView(R.id.ll_choose_machine);
+        tv_machine_name = getView(R.id.tv_machine_name);
+
+        adapter = new HomeFragmentAdapter(getActivity());
         adapter.setNumberInterface(HomeFragment.this);
         listView.setAdapter(adapter);
         //设置飞入动画
@@ -273,43 +196,161 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                 anim.doAnim(drawable, start_location);
             }
         });
+
+        BaiduLocation.setMyLocationListener(this);
+        BaiduLocation.getLocation(app);
+    }
+
+
+    /***
+     * 添加goods和machine到数据库 或者 增加商品数量
+     * 更新数据库
+     */
+    @Override
+    public void addGoodNumber(final FoodBean.DataBean dataBean) {
+        x.task().run(new Runnable() {
+            @Override
+            public void run() {
+
+                int shopCarInfoId = dataBean.getId();
+
+                ShopCarInfo carInfo;
+                MachineInfo machineInfo;
+                try {
+                    carInfo = app.db.selector(ShopCarInfo.class).where("id", "=", shopCarInfoId).findFirst();
+
+                    //如果数据库里不存在，数量为1,并向数据库添加一项；存在，就取出来+1再存回去
+                    int num;
+                    if (carInfo == null) {
+                        carInfo = new ShopCarInfo();
+                        machineInfo = new MachineInfo();
+                        machineInfo.setAddress(app.getGroups().get(0).getAddress());
+                        machineInfo.setNickname(app.getGroups().get(0).getNickname());
+                        machineInfo.setNumber(app.getGroups().get(0).getNumber());
+                        carInfo.setP_machine(app.getGroups().get(0).getNumber());
+                        carInfo.setId(dataBean.getId());
+                        carInfo.setName(dataBean.getName());
+                        carInfo.setPic(dataBean.getPic());
+                        carInfo.setPrice_cny(dataBean.getPrice_cny());
+                        carInfo.setP_local_number(1);
+                        carInfo.setNum(dataBean.getNum());
+                        carInfo.setPrice_vr9(dataBean.getPrice_vr9());
+                        app.db.saveOrUpdate(machineInfo);
+                    } else {
+                        num = carInfo.getP_local_number();
+                        carInfo.setP_local_number(++num);
+                    }
+                    //增加商品数量
+                    app.db.saveOrUpdate(carInfo);
+
+                    x.task().post(new Runnable() {
+                        @Override
+                        public void run() {
+                            //        改变购物车角标
+                            ShopCarUtil.ChangeCorner(getActivity(), ++total);
+//                            SharedPreferenceUtils.setShopCarNumber(total);
+                        }
+                    });
+                } catch (DbException e) {
+                    e.printStackTrace();
+                    Log.e(TAG_LOG, "添加失败: " + e.getMessage());
+                }
+            }
+        });
+    }
+
+    //    选择xx类型的商品
+    @Event(value = R.id.rdo_group, type = RadioGroup.OnCheckedChangeListener.class)
+    private void rdoBtn(RadioGroup radioGroup, int i) {
+        int type;
+        switch (i) {
+            case R.id.rb_home:
+                type = CHOOSE_NEW_FOOD;
+                break;
+            case R.id.rb_takefood:
+                type = CHOOSE_HOT_FOOD;
+                break;
+            case R.id.rb_shopcar:
+                type = CHOOSE_SET_MEAL;
+                break;
+            case R.id.rb_mine:
+                type = CHOOSE_DRINK;
+                break;
+            default:
+                type = CHOOSE_NEW_FOOD;
+        }
+        getFoodByMachine(type, machineNum, null);
+    }
+
+    @Override
+    public void initData() {
+
     }
 
     /**
-     * 处理json数据
-     */
-    private void getDataFromJson(String result) throws JSONException {
-        Gson gson = new Gson();
-        GoodsInfo goodsInfo = gson.fromJson(result, GoodsInfo.class);
+     * 加载轮播数据
+     * **/
+    private void loadAdData() {
 
-        dataA = new ArrayList<>();
-        dataA.addAll(goodsInfo.getA());
-        dataB = new ArrayList<>();
-        dataB.addAll(goodsInfo.getB());
-        dataC = new ArrayList<>();
-        dataC.addAll(goodsInfo.getC());
-        dataD = new ArrayList<>();
-        dataD.addAll(goodsInfo.getD());
-        dataE = new ArrayList<>();
-        dataE.addAll(goodsInfo.getE());
-        adapter.notifyDataSetChanged();
-        //初始化轮播图
-//        loadAdData();
+        for (int i = 0; i < dataE.size(); i++) {
+//            String imgPath = dataE.get(i).getP_picture();
+//            mImageUrl.add(HgbwUrl.BASE_URL + imgPath);
+
+//            String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + dataE.get(i).getPic());
+//            Log.i(TAG_LOG, "loadAdData: " + imgPath);
+//            mImageUrl.add(imgPath);
+        }
+        binner.setImageResources(mImageUrl, mAdCycleViewListener, 0);
+
     }
 
+    /**
+     * 点击导航栏
+     */
+    @Event({R.id.ll_location, R.id.ll_choose_machine})
+    private void onTopClick(View view) {
+        switch (view.getId()) {
+            case R.id.ll_location:
+                Intent intent = new Intent(getActivity(), LocationActivity.class);
+//                intent.putExtra("from", 0);
+                startActivity(intent);
+                break;
+            case R.id.ll_choose_machine :
+//                Log.i("onclick", "onClick: ");
 
-    private void getNetData() {
-        final RequestParams params = new RequestParams(HgbwUrl.HOME_DATA_URL);
+                if (mechinesBeanList != null) {
+                    initIntoPopwindow(mechinesBeanList);
+                }
+                break;
+        }
+    }
+
+    /**
+     *  获取location
+     * */
+    @Override
+    public void myLocation(double mylongitude, double mylatitude, String city, String street) {
+//        Log.i(TAG_LOG, "myLocation: " + mylatitude);
+        if (city != null){
+            tv_city.setText(city);
+            loadMachineList(mylongitude, mylatitude);
+        } else {
+
+        }
+    }
+
+    private void loadMachineList(double mylongitude, double mylatitude) {
+        final RequestParams params = new RequestParams(HgbwUrl.MACHINE_LOCATION_URL);
+        final CustomProgressDialog[] dialog = {null};
         //缓存时间
-        params.addQueryStringParameter("myR_lng", "104.06792346");
-        params.addQueryStringParameter("myR_lat", "30.67994285");
-        params.addQueryStringParameter("type", "mobile");
+        params.addQueryStringParameter("longitude", String.valueOf(mylongitude));
+        params.addQueryStringParameter("latitude", String.valueOf(mylatitude));
         params.setCacheMaxAge(1000 * 60);
 
         x.task().run(new Runnable() {
             @Override
             public void run() {
-                x.http().get(params, new Callback.CacheCallback<String>() {
+                http().get(params, new Callback.CacheCallback<String>() {
 
                     private boolean hasError = false;
                     private String result = null;
@@ -333,13 +374,13 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                     public void onError(Throwable ex, boolean isOnCallback) {
                         hasError = true;
                         Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
-                        Log.e(TAG_LOG, "onError: " + ex.getMessage());
+                        Log.e(TAG_LOG, "getMachineListFromJson onError: " + ex.getMessage());
                         if (ex instanceof HttpException) { // 网络错误
                             HttpException httpEx = (HttpException) ex;
                             int responseCode = httpEx.getCode();
                             String responseMsg = httpEx.getMessage();
                             String errorResult = httpEx.getResult();
-                            Log.e(TAG_LOG, "onError " + " code: " + responseCode + " message: " + responseMsg);
+                            Log.e(TAG_LOG, "getMachineListFromJson onError " + " code: " + responseCode + " message: " + responseMsg);
                         } else { // 其他错误
                         }
                     }
@@ -351,15 +392,13 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
                     @Override
                     public void onFinished() {
-                        progress.dismiss();
+                        dialog[0].dismiss();
                         if (!hasError && result != null) {
-//                        Log.i(TAG_LOG, "onFinished: " + result);
+                        Log.i(TAG_LOG, "getMachineListFromJson onFinished: " + result);
                             try {
-                                getDataFromJson(result);
-                                adapter.setData(dataA);
+                                getMachineListFromJson(result);
                             } catch (JSONException e) {
                                 e.printStackTrace();
-                                Log.e(TAG_LOG, " json error: " + e.getMessage());
                             }
                         }
                     }
@@ -368,143 +407,198 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                 x.task().post(new Runnable() {
                     @Override
                     public void run() {
-                        progress = new CustomProgressDialog(getActivity(), "请稍后", R.drawable.fram2);
-                        progress.show();
+                        dialog[0] = new CustomProgressDialog(getActivity(), "请稍后", R.drawable.fram2);
+                        dialog[0].show();
                     }
                 });
             }
         });
 
     }
+    private void getMachineListFromJson(String result) throws JSONException {
+        Gson gson = new Gson();
+        MachineLocationBean machineLocationBean = gson.fromJson(result, MachineLocationBean.class);
+        mechinesBeanList = machineLocationBean.getMechines();
+        //选择第一个作为默认机器
+        mechinesBean = mechinesBeanList.get(0);
+        machineNum = mechinesBean.getNumber();
+        nickName = mechinesBean.getNickname();
+        SharedPreferenceUtils.setMachineNum(machineNum);
+        tv_machine_name.setText(nickName);
+        MachineInfo machineInfo = mechinesBean;
+        List<MachineInfo> machineInfoList = new ArrayList<>();
+        machineInfoList.add(machineInfo);
+        app.setGroups(machineInfoList);
 
-    /***
-     * 添加goods和machine到数据库 或者 增加商品数量
-     * 更新数据库
-     */
-    @Override
-    public void addGoodNumber(final ShopCarInfo shopCarInfo) {
-        x.task().run(new Runnable() {
+        getFoodByMachine(CHOOSE_NEW_FOOD, machineNum, null);
+    }
+
+
+    /**
+     * 点击标题时的弹窗
+     * */
+    private void initIntoPopwindow(final List<MachineLocationBean.MechinesBean> data) {
+
+        View view = View.inflate(getActivity(), R.layout.popu_machine_list_choose,
+                null);
+        WindowManager wm = (WindowManager) getActivity().getSystemService(getActivity().WINDOW_SERVICE);
+        int height = wm.getDefaultDisplay().getHeight();
+        window = new PopupWindow(view, WindowManager.LayoutParams.MATCH_PARENT,
+                height /5*2);
+        // 实例化一个ColorDrawable颜色为半透明
+        ColorDrawable dw = new ColorDrawable(0xb0000000);
+        window.setBackgroundDrawable(dw);
+        window.setFocusable(true);
+        window.update();
+        window.setAnimationStyle(R.style.mypopwindow_anim_style);
+        // popwindow消失回调
+        window.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
-            public void run() {
+            public void onDismiss() {
+                WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
+                lp.alpha = 1.0f; // 0.0-1.0
+                getActivity().getWindow().setAttributes(lp);
+            }
+        });
+        window.showAtLocation(ll_choose_machine, Gravity.BOTTOM, 0, 0);
+        WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
+        lp.alpha = 0.8f; // 0.0-1.0  半透明
+        getActivity().getWindow().setAttributes(lp);
 
-                int shopCarInfoId = shopCarInfo.getP_id();
+        //添加滚动视图
+        wheelView = (WheelView) view.findViewById(R.id.wheelview);
+        wheelView.setWheelAdapter(new MyWheelAdapter(getActivity(), data));
+        // common皮肤
+        wheelView.setSkin(WheelView.Skin.Holo);
+        // 数据集合
+        wheelView.setWheelData(data);
+        // 确定按钮,点击之后跳转
+        view.findViewById(R.id.tv_save)
+                .setOnClickListener(new View.OnClickListener() {
 
-                ShopCarInfo carInfo = new ShopCarInfo();
-                MachineInfo machineInfo = new MachineInfo();
-
-                try {
-                    carInfo = app.db.selector(ShopCarInfo.class).where("p_id", "=", shopCarInfoId).findFirst();
-
-                    //如果数据库里不存在，数量为1,并向数据库添加一项；存在，就取出来+1再存回去
-                    int num;
-                    if (carInfo == null) {
-                        machineInfo.setId(shopCarInfo.getP_machine());
-                        carInfo = new ShopCarInfo();
-                        carInfo.setP_id(shopCarInfo.getP_id());
-                        carInfo.setP_type(shopCarInfo.getP_type());
-                        carInfo.setP_machine(shopCarInfo.getP_machine());
-                        carInfo.setP_name(shopCarInfo.getP_name());
-                        carInfo.setP_picture(shopCarInfo.getP_picture());
-                        carInfo.setP_price(shopCarInfo.getP_price());
-                        carInfo.setP_address(shopCarInfo.getP_address());
-                        carInfo.setP_local_number(1);
-                        carInfo.setP_number(shopCarInfo.getP_number());
-                        carInfo.setP_vr9(shopCarInfo.getP_vr9());
-                        app.db.saveOrUpdate(machineInfo);
-                    } else {
-                        num = carInfo.getP_local_number();
-                        carInfo.setP_local_number(++num);
+                    @Override
+                    public void onClick(View v) {
+                        // TODO Auto-generated method stub
+                        System.out.println(wheelView.getCurrentPosition());
+                        MachineInfo machineInfo = data.get(wheelView.getCurrentPosition());
+                        machineNum = machineInfo.getNumber();
+                        getFoodByMachine(CHOOSE_NEW_FOOD, machineNum, machineInfo);
+                        window.dismiss();
                     }
-                    //增加商品数量
-                    app.db.saveOrUpdate(carInfo);
-//                    List<ShopCarInfo> shopCarInfos = app.db.selector(ShopCarInfo.class).findAll();
-//                    List<MachineInfo> machine = app.db.selector(MachineInfo.class).findAll();
-//                    Log.i(TAG, "shopCarInfos size: " + shopCarInfos.size() + " machine size: " + machine.size());
-//                    Log.i(TAG, "shopCarInfos first object local num: " + shopCarInfos.get(0).getP_local_number());
-//                    Log.i(TAG, "machine first object id: "+ m.get(0).getId());
-
-                    x.task().post(new Runnable() {
-                        @Override
-                        public void run() {
-                            //        改变购物车角标
-                            ShopCarUtil.ChangeCorner(getActivity(), ++total);
-//                            SharedPreferenceUtils.setShopCarNumber(total);
-                        }
-                    });
-                } catch (DbException e) {
-                    e.printStackTrace();
-                    Log.e(TAG_LOG, "添加失败: " + e.getMessage());
-                }
+                });
+        view.findViewById(R.id.tv_cancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                window.dismiss();
             }
         });
     }
 
-    //    选择xx类型的商品
-    @Event(value = R.id.rdo_group, type = RadioGroup.OnCheckedChangeListener.class)
-    private void rdoBtn(RadioGroup radioGroup, int i) {
-        switch (i) {
-            case R.id.rb_home:
-                adapter.setData(dataA);
-                type = NEW_FOOD;
-                break;
-            case R.id.rb_takefood:
-                adapter.setData(dataB);
-                type = HOT_FOOD;
-                break;
-            case R.id.rb_shopcar:
-                adapter.setData(dataC);
-                type = SET_MEAL;
-                break;
-            case R.id.rb_mine:
-                adapter.setData(dataD);
-                type = DRINK;
-                break;
-        }
-    }
-
-    @Override
-    public void initData() {
-        getNetData();
-    }
-
     /**
-     * 加载轮播数据
-     * **/
-    private void loadAdData() {
-
-        for (int i = 0; i < dataE.size(); i++) {
-//            String imgPath = dataE.get(i).getP_picture();
-//            mImageUrl.add(HgbwUrl.BASE_URL + imgPath);
-
-            String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + dataE.get(i).getP_picture());
-            Log.i(TAG_LOG, "loadAdData: " + imgPath);
-            mImageUrl.add(imgPath);
-        }
-        binner.setImageResources(mImageUrl, mAdCycleViewListener, 0);
-
-    }
-
-    /**
-     * 点击导航栏
-     */
-    @Event(R.id.tv_top_search)
-    private void onTopClick(View view) {
-        switch (view.getId()) {
-            case R.id.tv_top_search:
-                Log.i("onclick", "onClick: ");
-                Intent intent = new Intent(getActivity(), MachineListActivity.class);
-                intent.putExtra("from", 0);
-                startActivity(intent);
-                break;
-        }
-    }
-
-    /**
-     *  获取location
+     * 获取食品列表
      * */
-    @Override
-    public void myLocation(double mylongitude, double mylatitude, String city, String street) {
-//        Log.i(TAG_LOG, "myLocation: " + mylatitude);
-        tv_city.setText(city);
+    public void getFoodByMachine(int type, String machineNum, final MachineInfo machineInfo){
+        final RequestParams params = new RequestParams(HgbwUrl.FOOD_BY_MACHINE_URL);
+        final CustomProgressDialog[] dialog = {null};
+        //缓存时间
+        params.addQueryStringParameter("mechine_number", machineNum);
+        switch (type) {
+            case CHOOSE_NEW_FOOD:
+                params.addQueryStringParameter("order", "id");
+                break;
+            case CHOOSE_HOT_FOOD:
+                params.addQueryStringParameter("order", "sell");
+                break;
+            case CHOOSE_SET_MEAL:
+                params.addQueryStringParameter("kind", "A");
+                break;
+            case CHOOSE_DRINK:
+                params.addQueryStringParameter("kind", "B");
+                break;
+            default:
+                params.addQueryStringParameter("order", "id");
+        }
+        params.setCacheMaxAge(1000 * 60);
+
+        x.task().run(new Runnable() {
+            @Override
+            public void run() {
+               x.http().get(params, new Callback.CacheCallback<String>() {
+
+                    private boolean hasError = false;
+                    private String result = null;
+
+
+                    @Override
+                    public boolean onCache(String result) {
+                        this.result = result;
+                        return true; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
+                    }
+
+                    @Override
+                    public void onSuccess(String result) {
+                        // 注意: 如果服务返回304 或 onCache 选择了信任缓存, 这时result为null.
+                        if (result != null) {
+                            this.result = result;
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable ex, boolean isOnCallback) {
+                        hasError = true;
+                        Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
+                        Log.e(TAG_LOG, "getFoodByMachine onError: " + ex.getMessage());
+                        if (ex instanceof HttpException) { // 网络错误
+                            HttpException httpEx = (HttpException) ex;
+                            int responseCode = httpEx.getCode();
+                            String responseMsg = httpEx.getMessage();
+                            String errorResult = httpEx.getResult();
+                            Log.e(TAG_LOG, "getFoodByMachine onError " + " code: " + responseCode + " message: " + responseMsg);
+                        } else { // 其他错误
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(CancelledException cex) {
+                        Toast.makeText(x.app(), "cancelled", Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onFinished() {
+                        dialog[0].dismiss();
+                        if (!hasError && result != null) {
+                            Log.i(TAG_LOG, "getFoodByMachineFromJson onFinished: " + result);
+                            try {
+                                //切换机器成功时调用
+                                if (machineInfo != null){
+                                    List<MachineInfo> machineInfoList = new ArrayList<MachineInfo>();
+                                    machineInfoList.add(machineInfo);
+                                    app.setGroups(machineInfoList);
+                                    tv_machine_name.setText(machineInfo.getNickname());
+                                }
+                                getFoodByMachineFromJson(result);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+
+                });
+                x.task().post(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog[0] = new CustomProgressDialog(getActivity(), "请稍后", R.drawable.fram2);
+                        dialog[0].show();
+                    }
+                });
+            }
+        });
+    }
+    public void getFoodByMachineFromJson (String result) throws JSONException{
+        Gson gson = new Gson();
+        FoodBean foodBean = gson.fromJson(result, FoodBean.class);
+        foodBeanDataBeanList = foodBean.getData();
+        adapter.setData(foodBeanDataBeanList);
+
     }
 }

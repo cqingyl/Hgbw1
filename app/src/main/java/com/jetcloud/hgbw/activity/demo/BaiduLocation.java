@@ -128,4 +128,5 @@ public class BaiduLocation {
         locationClient.requestLocation();
         Log.d("baidulocation", "baidulocation");
     }
+
 }

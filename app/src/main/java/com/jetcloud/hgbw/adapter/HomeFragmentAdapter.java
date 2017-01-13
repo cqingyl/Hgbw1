@@ -12,12 +12,14 @@ import android.widget.TextView;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.DetailsActivity;
 import com.jetcloud.hgbw.activity.HomePayActivity;
-import com.jetcloud.hgbw.activity.MainActivity;
+import com.jetcloud.hgbw.activity.LoginActivity;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwUrl;
+import com.jetcloud.hgbw.bean.FoodBean;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.utils.ImageLoaderCfg;
+import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 
 import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ViewInject;
@@ -28,26 +30,28 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 public class HomeFragmentAdapter extends BaseAdapter {
     private Activity context;
-    private List<ShopCarInfo> list;
+    private List<FoodBean.DataBean> list;
     private HolderClickListener mHolderClickListener;
     private AddGoodNumberInterface numberInterface;
     private HgbwApplication app;
+    private MachineInfo machineInfo;
     @Override
     public int getCount() {
         // TODO Auto-generated method stub
-        return list.size();
+        return list == null ? 0 : list.size();
     }
 
-    public void setData(List<ShopCarInfo> data){
+    public void setData(List<FoodBean.DataBean> data){
         this.list = data;
+        machineInfo = app.getGroups().get(0);
         this.notifyDataSetChanged();
     }
-    public HomeFragmentAdapter(Activity context, List<ShopCarInfo> list) {
+    public HomeFragmentAdapter(Activity context) {
         super();
         this.context = context;
-        this.list = list;
         app = (HgbwApplication) context.getApplication();
     }
 
@@ -77,14 +81,16 @@ public class HomeFragmentAdapter extends BaseAdapter {
         ImageOptions imageOptions = new ImageOptions.Builder()
                 .setFailureDrawableId(R.drawable.ic_launcher)
                 .build();
-        String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + list.get(position).getP_picture());
+        String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + list.get(position).getPic());
         x.image().bind(holder.imgFood, imgPath, imageOptions);
-        holder.tvFoodName.setText(list.get(position).getP_name());
-        holder.tvMachineName.setText(list.get(position).getP_machine());
-        holder.tvAddress.setText(list.get(position).getP_address());
-        holder.tvPrice.setText(String.valueOf(list.get(position).getP_price()));
+        holder.tvFoodName.setText(list.get(position).getName());
+        holder.tvMachineName.setText(machineInfo.getNumber());
+        holder.tvAddress.setText(machineInfo.getAddress());
         final ImageView img_food = holder.imgFood;
-        final ShopCarInfo shopCarInfo = list.get(position);
+        final FoodBean.DataBean dataBean = list.get(position);
+
+        holder.tv_price_vr9.setText(context.getString(R.string.rmb_display, dataBean.getPrice_cny()));
+        holder.tv_price_vr9.setText(context.getString(R.string.gcb_display, dataBean.getPrice_vr9()));
         holder.tvIncar.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -95,7 +101,7 @@ public class HomeFragmentAdapter extends BaseAdapter {
                     img_food.getLocationInWindow(start_location);//获取点击商品图片的位置
                     Drawable drawable = img_food.getDrawable();//复制一个新的商品图标
                     mHolderClickListener.onHolderClick(drawable, start_location);
-                    numberInterface.addGoodNumber(shopCarInfo);
+                    numberInterface.addGoodNumber(dataBean);
                 }
             }
         });
@@ -104,34 +110,37 @@ public class HomeFragmentAdapter extends BaseAdapter {
             @Override
             public void onClick(View arg0) {
                 Intent i = new Intent(new Intent(context, DetailsActivity.class));
-                saveListToApp(shopCarInfo);
-                MainActivity.mainActivity.startActivity(i);
+//                saveListToApp(dataBean);
+                i.putExtra("mechine_number", machineInfo.getNumber());
+                i.putExtra("food_id", String.valueOf(dataBean.getId()));
+                context.startActivity(i);
             }
         });
         holder.tvBtnApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)) {
+                    context.startActivity(new Intent(context, LoginActivity.class));
+                }
                 Intent i = new Intent(context, HomePayActivity.class);
-                saveListToApp(shopCarInfo);
+                saveListToApp(dataBean);
                 context.startActivity(i);
             }
         });
         return convertView;
     }
 
-    private void saveListToApp(ShopCarInfo shopCarInfo) {
-        List<MachineInfo> newGroupsList = new ArrayList<>();
+    private void saveListToApp(FoodBean.DataBean dataBean) {
         Map<String,List<ShopCarInfo>> newList = new HashMap<>();
         List<ShopCarInfo> newInfoList = new ArrayList<>();
-        MachineInfo machineInfo = new MachineInfo();
-        newGroupsList.add(machineInfo);
-        newInfoList.add(shopCarInfo);
-        newList.put(machineInfo.getId(), newInfoList);
-        app.setGroups(newGroupsList);
+        dataBean.setP_machine(machineInfo.getNumber());
+        newInfoList.add(dataBean);
+        newList.put(machineInfo.getNumber(), newInfoList);
+//        Log.i(TAG, "saveListToApp: " + newList.size());
         app.setChildren(newList);
     }
     public interface AddGoodNumberInterface {
-        public void addGoodNumber(ShopCarInfo shopCarInfo);
+        public void addGoodNumber(FoodBean.DataBean dataBean);
     }
 
 
@@ -155,8 +164,10 @@ public class HomeFragmentAdapter extends BaseAdapter {
         private TextView tvBtnApply;
         @ViewInject(R.id.tv_address)
         private TextView tvAddress;
-        @ViewInject(R.id.tv_price)
-        private TextView tvPrice;
+        @ViewInject(R.id.tv_price_cny)
+        private TextView tv_price_cny;
+        @ViewInject(R.id.tv_price_vr9)
+        private TextView tv_price_vr9;
         @ViewInject(R.id.tv_food_name)
         private TextView tvFoodName;
         @ViewInject(R.id.tv_machine_name)

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\btn_reduction_group.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\mipmap\\btn_reduction_group.png"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\add_group_press.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\mipmap\\add_group_press.png"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\btn_back_normal.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\mipmap\\btn_back_normal.png"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\add_group.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\mipmap\\add_group.png"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\mipmap\\btn_reduction_group_press.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\mipmap\\btn_reduction_group_press.png"
+    }
+]

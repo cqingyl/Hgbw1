@@ -70,7 +70,7 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        String groupId = groups.get(groupPosition).getId();
+        String groupId = groups.get(groupPosition).getNumber();
 //        Log.i(TAG, "getChildrenCount: ");
         return children.get(groupId).size();
     }
@@ -82,7 +82,7 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        List<ShopCarInfo> products = children.get(groups.get(groupPosition).getId());
+        List<ShopCarInfo> products = children.get(groups.get(groupPosition).getNumber());
         return products.get(childPosition);
     }
 
@@ -112,7 +112,7 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
             groupViewHolder = (GroupViewHolder) convertView.getTag();
         }
         final MachineInfo machineInfo = (MachineInfo) getGroup(groupPosition);
-        String machineName = machineInfo.getId();
+        String machineName = machineInfo.getNumber();
         String machineNum = machineName.substring(machineName.length() - 3, machineName.length());
         groupViewHolder.tvMachineTitle.setText(String.format(context.getString(R.string.machine_name),"成都",machineNum));
         groupViewHolder.cbGroup.setOnClickListener(new View.OnClickListener() {
@@ -147,10 +147,10 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
             ImageOptions imageOptions = new ImageOptions.Builder()
                     .setFailureDrawableId(R.drawable.ic_launcher)
                     .build();
-            String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + shopCarInfo.getP_picture());
+            String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + shopCarInfo.getPic());
             x.image().bind(childViewHolder.imgFood, imgPath, imageOptions);
-            childViewHolder.tvFoodTitle.setText(String.valueOf(shopCarInfo.getP_name()));
-            childViewHolder.tvMoney.setText(context.getString(R.string.rmb_display, shopCarInfo.getP_price()  ));
+            childViewHolder.tvFoodTitle.setText(String.valueOf(shopCarInfo.getName()));
+            childViewHolder.tvMoney.setText(context.getString(R.string.rmb_display, shopCarInfo.getPrice_cny()  ));
             childViewHolder.tvNum.setText(String.valueOf(shopCarInfo.getP_local_number()));
             childViewHolder.cbChild.setChecked(shopCarInfo.isSelected());
             childViewHolder.cbChild.setOnClickListener(new View.OnClickListener() {

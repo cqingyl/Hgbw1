@@ -20,7 +20,9 @@ public class SharedPreferenceUtils {
     public final static String BINDING_STATE = "binding_state";
     public final static String UNBINDING_STATE = "unbinding-State";
     public final static String IDENTITY = "identity";
+    public final static String MACHINE_NUM = "machine_num";
     public final static String WITHOUT_LOGIN = "without_login";
+    public final static String WITHOUT_LOCATION = "without_location";
 
     public static void initData (Context context){
         mContext = context;
@@ -68,6 +70,14 @@ public class SharedPreferenceUtils {
 
     public static void setIdentity(String identity) {
         editor.putString(IDENTITY, identity).commit();
+    }
+
+    public static String getMachineNum() {
+        return preferences.getString(MACHINE_NUM, WITHOUT_LOCATION);
+    }
+
+    public static void setMachineNum(String machineNum) {
+        editor.putString(MACHINE_NUM, machineNum).commit();
     }
 
 

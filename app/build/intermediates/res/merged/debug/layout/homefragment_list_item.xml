@@ -57,24 +57,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
             android:orientation="horizontal" >
 
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:text="单价:"
-                android:textColor="@color/text_b1"
-                android:textSize="@dimen/text_small" />
+                android:src="@drawable/vr9"
+                />
 
             <TextView
-                android:id="@+id/tv_price"
+                android:id="@+id/tv_price_vr9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:text="¥60.00元"
+                android:text="0.03币"
+                android:textColor="@color/bottom_nav_text_color_check"
+                android:textSize="@dimen/text_big" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/cny"
+                />
+
+            <TextView
+                android:id="@+id/tv_price_cny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="60.00元"
                 android:textColor="@color/bottom_nav_text_color_check"
                 android:textSize="@dimen/text_big" />
         </LinearLayout>

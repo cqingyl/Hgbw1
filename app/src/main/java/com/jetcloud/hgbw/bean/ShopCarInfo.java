@@ -14,59 +14,61 @@ public class ShopCarInfo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * p_id : 1
-     * p_type : a
-     * p_machine : HG010100001
-     * p_name : 午餐肉套餐
-     * p_picture : ../images/cp01.png
-     * p_price : 15
-     * p_address : 成都市新希望国际
-     * p_number : 8
-     * p_vr9: 0.0001
+     * price_cny : 15.0
+     * description : 端上一盘红烧肉，满屋飘香口水流。此菜本非人间有，天上佳肴落街头。北宋大文豪苏东坡也对你推崇备至，焖你的皮，煮你的肉，既酥又烂，吃后口齿流香。他与你友好合作，发明创造了流传百世的"东坡肉"；敝人的祖先更绝，数百年前元兵南侵，我祖从中原南阳逃难，在南下的颠沛流离中，竟然还携带令人垂涎三尺的"东坡肉"！
+     * num : 5
+     * pic : /static/food/86f0fd5c-d2f0-11e6-bc0c-6807159ba7ea.jpg
+     * kind : A
+     * name : 地三鲜
+     * price_vr9 : 0.07
+     * id : 6
+     * state : 1
      */
-    @Column(name = "p_id", isId = true, autoGen = false)
-    private int p_id;
-    @Column(name = "p_type")
-    private String p_type;
+    @Column(name = "id", isId = true, autoGen = false)
+    private int id;
+    @Column(name = "kind")
+    private String kind;
     @Column(name = "p_machine")
     private String p_machine;
-    @Column(name = "p_name")
-    private String p_name;
-    @Column(name = "p_picture")
-    private String p_picture;
-    @Column(name = "p_price")
-    private float p_price;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "pic")
+    private String pic;
+    @Column(name = "price_vr9")
+    private double price_vr9;
     @Column(name = "p_address")
     private String p_address;
     //本地可变数量
     @Column(name = "p_local_number")
     private int p_local_number;
     //商品最大数量
-    @Column(name = "p_number")
-    private int p_number;
-    @Column(name = "p_vr9")
-    private double p_vr9;
-    private boolean selected ;
+    @Column(name = "num")
+    private int num;
+    @Column(name = "price_cny")
+    private double price_cny;
 
+    private String description;
+    private String state;
+    private boolean selected ;
 
     public MachineInfo getMachine(DbManager db) throws Exception {
         return db.findById(MachineInfo.class, p_machine);
     }
 
-    public int getP_id() {
-        return p_id;
+    public int getId() {
+        return id;
     }
 
-    public void setP_id(int p_id) {
-        this.p_id = p_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getP_type() {
-        return p_type;
+    public String getKind() {
+        return kind;
     }
 
-    public void setP_type(String p_type) {
-        this.p_type = p_type;
+    public void setKind(String kind) {
+        this.kind = kind;
     }
 
     public String getP_machine() {
@@ -77,28 +79,28 @@ public class ShopCarInfo implements Serializable {
         this.p_machine = p_machine;
     }
 
-    public String getP_name() {
-        return p_name;
+    public String getName() {
+        return name;
     }
 
-    public void setP_name(String p_name) {
-        this.p_name = p_name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getP_picture() {
-        return p_picture;
+    public String getPic() {
+        return pic;
     }
 
-    public void setP_picture(String p_picture) {
-        this.p_picture = p_picture;
+    public void setPic(String pic) {
+        this.pic = pic;
     }
 
-    public float getP_price() {
-        return p_price;
+    public double getPrice_vr9() {
+        return price_vr9;
     }
 
-    public void setP_price(float p_price) {
-        this.p_price = p_price;
+    public void setPrice_vr9(double price_vr9) {
+        this.price_vr9 = price_vr9;
     }
 
     public String getP_address() {
@@ -117,12 +119,36 @@ public class ShopCarInfo implements Serializable {
         this.p_local_number = p_local_number;
     }
 
-    public int getP_number() {
-        return p_number;
+    public int getNum() {
+        return num;
     }
 
-    public void setP_number(int p_number) {
-        this.p_number = p_number;
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public double getPrice_cny() {
+        return price_cny;
+    }
+
+    public void setPrice_cny(double price_cny) {
+        this.price_cny = price_cny;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public boolean isSelected() {
@@ -131,13 +157,5 @@ public class ShopCarInfo implements Serializable {
 
     public void setSelected(boolean selected) {
         this.selected = selected;
-    }
-
-    public double getP_vr9() {
-        return p_vr9;
-    }
-
-    public void setP_vr9(double p_vr9) {
-        this.p_vr9 = p_vr9;
     }
 }

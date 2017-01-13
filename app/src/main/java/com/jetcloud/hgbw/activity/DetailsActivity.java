@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,14 +16,13 @@ import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwUrl;
-import com.jetcloud.hgbw.bean.FoodDetail;
+import com.jetcloud.hgbw.bean.FoodDetailBean;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 
-import org.json.JSONException;
 import org.xutils.common.Callback;
 import org.xutils.ex.DbException;
 import org.xutils.ex.HttpException;
@@ -36,21 +36,24 @@ import java.util.List;
 
 public class DetailsActivity extends BaseActivity {
 	private final static String TAG_LOG = DetailsActivity.class.getSimpleName();
-	private TextView tv_up,tv_down,number,tv_content,tv_total_price,tv_add_car,tv_go_to_pay,tv_phone;
+	private TextView tv_up,tv_down,number,tv_content,tv_price_vr9,tv_price_cny,tv_add_car,tv_go_to_pay,tv_phone;
 	private int poductNum = 1;
 	private CustomProgressDialog progress;
 	private String titleText;
 	private ImageView iv_food;
-	private FoodDetail detail;
-	private FoodDetail.PMealBean bean;
 	private HgbwApplication app;
 	private ShopCarInfo shopCarInfo;
 	private LinearLayout ll_nav_bottom;
+	private ScrollView sv_all_layout;
 
-	private double totalPrice;
+	private double totalPriceCny;
+	private double totalPriceVr9;
 	private double totalGcb;
 	private List<ShopCarInfo> listObj;
 	private List<MachineInfo> groups = new ArrayList<>();
+	private MachineInfo machineInfo;
+	private String machineNum;
+	private String foodId;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -68,55 +71,52 @@ public class DetailsActivity extends BaseActivity {
 
 		iv_food = getView(R.id.iv_food);
 		tv_content = getView(R.id.tv_content);
-		tv_total_price = getView(R.id.tv_total_price);
+		tv_price_vr9 = getView(R.id.tv_price_vr9);
+		tv_price_cny = getView(R.id.tv_price_cny);
 		tv_add_car = getViewWithClick(R.id.tv_add_car);
 		tv_go_to_pay = getViewWithClick(R.id.tv_go_to_pay);
 		tv_up = getViewWithClick(R.id.tv_up);
 		tv_down = getViewWithClick(R.id.tv_down);
 		tv_phone = getView(R.id.tv_phone);
 		number = getViewWithClick(R.id.number);
+		ll_nav_bottom = getView(R.id.ll_nav_bottom);
+		sv_all_layout = getView(R.id.sv_all_layout);
+
 	}
-	String result = "{ \"p_meal\" : [\n" +
-			"                                                                      {\n" +
-			"                                                                        \"p_id\": 1,\n" +
-			"                                                                        \"s_name\": \"小炒杏鲍菇\",\n" +
-			"                                                                        \"s_picture\": \"../images/小炒杏鲍菇" +
-			".png\",\n" +
-			"                                                                        \"s_price\": 15,\n" +
-			"                                                                        \"s_total\": null,\n" +
-			"                                                                        \"s_totalprice\": null,\n" +
-			"                                                                        \"s_introduce\": " +
-			"\"端上一盘红烧肉，满屋飘香口水流。此菜本非人间有，天上佳肴落街头。北宋大文豪苏东坡也对你推崇备至，焖你的皮，煮你的肉，既酥又烂，吃后口齿流香。他与你友好合作，发明创造了流传百世的\\\"东坡肉\\\"；敝人的祖先更绝，数百年前元兵南侵，我祖从中原南阳逃难，在南下的颠沛流离中，竟然还携带令人垂涎三尺的\\\"东坡肉\\\"！\",\n" +
-			"                                                                        \"s_phone\": 12321231\n" +
-			"                                                                      }\n" +
-			"                                                                    ]\n" +
-			"}";
+
 	@Override
 	protected void loadData() {
+
+		Intent i = getIntent();
+		machineNum = i.getStringExtra("mechine_number");
+		foodId = i.getStringExtra("food_id");
+		Log.i("log", "food id: " + foodId);
+		Log.i("log", "machine num: " + machineNum);
 		//只有一件商品
-		groups = app.getGroups();
-		listObj = app.getChildren().get(groups.get(0).getId());
-		shopCarInfo = listObj.get(0);
-		if (shopCarInfo != null) {
-			titleText = shopCarInfo.getP_name();
-			topbar.setCenterText(titleText);
-		} else {
-			ll_nav_bottom.setVisibility(View.GONE);
-		}
-			getNetData();
-//		try {
-//			getDataFromJson(result);
-//			bean = detail.getP_meal().get(0);
-//			tv_content.setText(bean.getS_introduce());
-//			tv_total_price.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), (double)bean.getS_price()));
-//			iv_food.setImageResource(R.drawable.longredmeet);
-//			tv_phone.setText(String.valueOf(bean.getS_phone()));
-//			shopCarInfo.setP_local_number(1);
-//			shopCarInfo.setP_price(bean.getS_price());
-//			shopCarInfo.setP_name(bean.getS_name());
-//		} catch (JSONException e) {
-//			e.printStackTrace();
+		getNetDataRequest();
+//		groups = app.getGroups();
+//		listObj = app.getChildren().get(groups.get(0).getNumber());
+//		shopCarInfo = listObj.get(0);
+//		if (shopCarInfo != null) {
+//			titleText = shopCarInfo.getName();
+//			topbar.setCenterText(titleText);
+//		} else {
+//			ll_nav_bottom.setVisibility(View.GONE);
 //		}
+//
+//
+//		tv_content.setText(shopCarInfo.getDescription());
+//		tv_total_price.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), shopCarInfo.getPrice_cny()));
+//		ImageOptions imageOptions = new ImageOptions.Builder()
+//				.setFailureDrawableId(R.drawable.ic_launcher)
+//				.build();
+//		String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + shopCarInfo.getPic());
+//		x.image().bind(iv_food, imgPath, imageOptions);
+//		tv_phone.setText("13340902246");
+//		shopCarInfo.setP_local_number(1);
+//		shopCarInfo.setPrice_cny(shopCarInfo.getPrice_cny());
+//		shopCarInfo.setName(shopCarInfo.getName());
+
 	}
 	@Override
 	public void onClick(View view) {
@@ -124,9 +124,11 @@ public class DetailsActivity extends BaseActivity {
 			case R.id.tv_up:
 				poductNum++;
 				number.setText(String.valueOf(poductNum));
-				if (bean != null) {
-					totalPrice = bean.getS_price() * poductNum;
-					tv_total_price.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), totalPrice));
+				if (shopCarInfo != null) {
+					totalPriceCny = shopCarInfo.getPrice_cny() * poductNum;
+					totalPriceVr9 = shopCarInfo.getPrice_cny() * poductNum;
+					tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), totalPriceCny));
+					tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.gcb_display), totalPriceVr9));
 					shopCarInfo.setP_local_number(poductNum);
 				}
 				break;
@@ -134,15 +136,20 @@ public class DetailsActivity extends BaseActivity {
 				if (poductNum>1) {
 					poductNum--;
 					number.setText(String.valueOf(poductNum));
-					if (bean != null) {
-						totalPrice = bean.getS_price() * poductNum;
-						tv_total_price.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), totalPrice));
+					if (shopCarInfo != null) {
+						totalPriceCny = shopCarInfo.getPrice_cny() * poductNum;
+						totalPriceVr9 = shopCarInfo.getPrice_cny() * poductNum;
+						tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), totalPriceCny));
+						tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.gcb_display), totalPriceVr9));
 						shopCarInfo.setP_local_number(poductNum);
 					}
 				}
 				break;
 			//立即购买
 			case R.id.tv_go_to_pay:
+				if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)) {
+					context.startActivity(new Intent(context, LoginActivity.class));
+				}
 				Intent i = new Intent(DetailsActivity.this, DetailPayActivity.class);
 				startActivity(i);
 				break;
@@ -154,35 +161,27 @@ public class DetailsActivity extends BaseActivity {
 
 	}
 
-	/**
-	 * 处理json数据
-	 */
-	private void getDataFromJson(String result) throws JSONException {
-		Gson gson = new Gson();
-		detail = gson.fromJson(result, FoodDetail.class);
-	}
-
-
-	private void getNetData() {
-		final RequestParams params = new RequestParams(HgbwUrl.FOOD_DETAIL);
+	/***
+	 * 详情请求
+	 * */
+	private void getNetDataRequest() {
+		final RequestParams params = new RequestParams(HgbwUrl.FOOD_DETAIL_URL);
 		//缓存时间
-		params.addBodyParameter("p_name", titleText);
-		params.addBodyParameter("type", "1");
+		params.addQueryStringParameter("food_id", foodId);
+		params.addQueryStringParameter("mechine_number", machineNum);
 		params.setCacheMaxAge(1000 * 60);
-
 		x.task().run(new Runnable() {
 			@Override
 			public void run() {
-				x.http().post(params, new Callback.CacheCallback<String>() {
+				x.http().get(params, new Callback.CacheCallback<String>() {
 
 					private boolean hasError = false;
 					private String result = null;
 
-
 					@Override
 					public boolean onCache(String result) {
 						this.result = result;
-						return true; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
+						return false; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
 					}
 
 					@Override
@@ -197,12 +196,17 @@ public class DetailsActivity extends BaseActivity {
 					public void onError(Throwable ex, boolean isOnCallback) {
 						hasError = true;
 						Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
-						Log.e(TAG_LOG, "onError: " + ex.getMessage());
+						Log.e(TAG_LOG, "getNetDataRequest onError: " + ex.getMessage());
 						if (ex instanceof HttpException) { // 网络错误
 							HttpException httpEx = (HttpException) ex;
 							int responseCode = httpEx.getCode();
 							String responseMsg = httpEx.getMessage();
-							Log.e(TAG_LOG, "onError " + " code: " + responseCode + " message: " + responseMsg);
+							String errorResult = httpEx.getResult();
+							Log.e(TAG_LOG, "getNetDataRequest onError " + " code: " + responseCode + " message: " + responseMsg);
+						} else { // 其他错误
+							ll_nav_bottom.setVisibility(View.GONE);
+							sv_all_layout.setVisibility(View.GONE);
+							topbar.setCenterText("商品不存在");
 						}
 					}
 
@@ -213,53 +217,57 @@ public class DetailsActivity extends BaseActivity {
 
 					@Override
 					public void onFinished() {
-						progress.dismiss();
 						if (!hasError && result != null) {
-                        Log.i(TAG_LOG, "onFinished: " + result);
-							try {
-								getDataFromJson(result);
-							} catch (JSONException e) {
-								e.printStackTrace();
-								Log.e(TAG_LOG, " json error: " + e.getMessage());
-							}
+							Log.i(TAG_LOG, "getNetDataRequest onFinished: " + result);
+							getDataFromJson(result);
 						}
-						bean = detail.getP_meal().get(0);
-						tv_content.setText(bean.getS_introduce());
-						tv_total_price.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), (double)bean.getS_price()));
-						ImageOptions imageOptions = new ImageOptions.Builder()
-								.setFailureDrawableId(R.drawable.ic_launcher)
-								.build();
-						String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + shopCarInfo.getP_picture());
-						x.image().bind(iv_food, imgPath, imageOptions);
-						tv_phone.setText(bean.getS_phone());
-						shopCarInfo.setP_local_number(1);
-						shopCarInfo.setP_price(bean.getS_price());
-						shopCarInfo.setP_name(bean.getS_name());
-					}
-				});
-
-				x.task().post(new Runnable() {
-					@Override
-					public void run() {
-						progress = new CustomProgressDialog(DetailsActivity.this, "请稍后", R.drawable.fram2);
-						progress.show();
 					}
 				});
 			}
 		});
 	}
-
+	/**
+	 * 获取详情数据
+	 * */
+	public void getDataFromJson(String result) {
+		Gson gson = new Gson();
+		FoodDetailBean foodDetailBean = gson.fromJson(result, FoodDetailBean.class);
+		FoodDetailBean.InfoBean infoBean = foodDetailBean.getInfo();
+		if (foodDetailBean.getStatus().equals("success") && infoBean.getNum() != 0){
+			ll_nav_bottom.setVisibility(View.VISIBLE);
+			sv_all_layout.setVisibility(View.VISIBLE);
+			shopCarInfo = infoBean;
+			titleText = shopCarInfo.getName();
+			topbar.setCenterText(titleText);
+			tv_content.setText(shopCarInfo.getDescription());
+			tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), shopCarInfo
+					.getPrice_cny()));
+			tv_price_vr9.setText(String.format(DetailsActivity.this.getString(R.string.gcb_display), shopCarInfo
+					.getPrice_vr9()));
+			ImageOptions imageOptions = new ImageOptions.Builder()
+					.setFailureDrawableId(R.drawable.ic_launcher)
+					.build();
+			String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + shopCarInfo.getPic());
+			x.image().bind(iv_food, imgPath, imageOptions);
+			tv_phone.setText("13340902246");
+			shopCarInfo.setP_local_number(1);
+			shopCarInfo.setPrice_cny(shopCarInfo.getPrice_cny());
+			shopCarInfo.setName(shopCarInfo.getName());
+		} else {
+			ll_nav_bottom.setVisibility(View.GONE);
+			sv_all_layout.setVisibility(View.GONE);
+			topbar.setCenterText("商品不存在");
+		}
+	}
 	/***
 	 * 添加goods和machine到数据库 或者 增加商品数量
 	 * 更新数据库
 	 */
-
-
 	public void addGoodNumber() {
 		x.task().run(new Runnable() {
 			@Override
 			public void run() {
-				int shopCarInfoId = shopCarInfo.getP_id();
+				int shopCarInfoId = shopCarInfo.getId();
 
 				ShopCarInfo carInfo;
 				MachineInfo machineInfo;
@@ -267,19 +275,19 @@ public class DetailsActivity extends BaseActivity {
 					carInfo = app.db.selector(ShopCarInfo.class).where("p_id", "=", shopCarInfoId).findFirst();
 					//如果数据库里不存在，数量为1,并向数据库添加一项；存在，就取出来+1再存回去
 					if (carInfo == null) {
-						machineInfo = new MachineInfo();
-						machineInfo.setId(shopCarInfo.getP_machine());
 						carInfo = new ShopCarInfo();
-						carInfo.setP_id(shopCarInfo.getP_id());
-						carInfo.setP_type(shopCarInfo.getP_type());
-						carInfo.setP_machine(shopCarInfo.getP_machine());
-						carInfo.setP_name(shopCarInfo.getP_name());
-						carInfo.setP_picture(shopCarInfo.getP_picture());
-						carInfo.setP_price(shopCarInfo.getP_price());
-						carInfo.setP_address(shopCarInfo.getP_address());
+						machineInfo = new MachineInfo();
+						machineInfo.setAddress(app.getGroups().get(0).getAddress());
+						machineInfo.setNickname(app.getGroups().get(0).getNickname());
+						machineInfo.setNumber(app.getGroups().get(0).getNumber());
+						carInfo.setP_machine(app.getGroups().get(0).getNumber());
+						carInfo.setId(shopCarInfo.getId());
+						carInfo.setName(shopCarInfo.getName());
+						carInfo.setPic(shopCarInfo.getPic());
+						carInfo.setPrice_cny(shopCarInfo.getPrice_cny());
 						carInfo.setP_local_number(1);
-						carInfo.setP_number(shopCarInfo.getP_number());
-						carInfo.setP_vr9(shopCarInfo.getP_vr9());
+						carInfo.setNum(shopCarInfo.getNum());
+						carInfo.setPrice_vr9(shopCarInfo.getPrice_vr9());
 						app.db.saveOrUpdate(machineInfo);
 					} else {
 						int oldNum = carInfo.getP_local_number();

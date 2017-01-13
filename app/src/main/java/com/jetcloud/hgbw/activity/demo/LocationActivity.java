@@ -7,6 +7,9 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.baidu.location.BDLocation;
@@ -17,14 +20,23 @@ import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
+import com.baidu.mapapi.map.GroundOverlayOptions;
+import com.baidu.mapapi.map.InfoWindow;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.MyLocationData;
+import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.model.LatLngBounds;
 import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.utils.Out;
+
+import java.util.ArrayList;
+
 
 public class LocationActivity extends Activity {
 
@@ -50,10 +62,33 @@ public class LocationActivity extends Activity {
 		filter.addAction(SDKInitializer.SDK_BROADTCAST_ACTION_STRING_PERMISSION_CHECK_ERROR);
 		registerReceiver(receiver, filter);
 		mMapView = (MapView) findViewById(R.id.bmapView);
-
 		mBaiduMap = mMapView.getMap();
 		init();
-
+		initOverlay();
+		mBaiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
+			@Override
+			public boolean onMarkerClick(Marker marker) {
+				Log.i("log", "onMarkerClick: ");
+				Out.Toast(LocationActivity.this, "hehe");
+				InfoWindow infoWindow;
+				Button button = new Button(LocationActivity.this);
+				button.setBackgroundResource(R.drawable.popup);
+				if (marker == mMarkerA) {
+					button.setText("更改位置");
+					button.setTextColor(0x0000f);
+					button.setWidth( 300 );
+					button.setOnClickListener(new View.OnClickListener() {
+						@Override
+						public void onClick(View view) {
+							Out.Toast(LocationActivity.this, "yang");
+						}
+					});
+				}
+				infoWindow = new InfoWindow(button,new LatLng(39.963175, 116.400244), 0);
+				mBaiduMap.showInfoWindow(infoWindow);
+				return true;
+			}
+		});
 		//地图渲染完成时回调
 		mBaiduMap.setOnMapRenderCallbadk(new BaiduMap.OnMapRenderCallback() {
 			@Override
@@ -92,13 +127,9 @@ public class LocationActivity extends Activity {
 
 	// 绘制mark覆盖物
 	private void drawMark() {
-		MarkerOptions markerOptions = new MarkerOptions();
-		bitmap = BitmapDescriptorFactory.fromResource(R.drawable.icon_marka); // 描述图片
-		markerOptions.position(new LatLng(30.5513090000, 104.0749530000)) // 设置位置
-				.icon(bitmap) // 加载图片
-				.draggable(false); // 不支持拖拽
-		//把绘制的圆添加到百度地图上去
-		mBaiduMap.addOverlay(markerOptions);
+
+
+
 	}
 
 	@Override
@@ -175,6 +206,84 @@ public class LocationActivity extends Activity {
 		}
 	}
 
+	public void initOverlay() {
+		// add marker overlay
+		LatLng llA = new LatLng(39.963175, 116.400244);
+		LatLng llB = new LatLng(39.942821, 116.369199);
+		LatLng llC = new LatLng(39.939723, 116.425541);
+		LatLng llD = new LatLng(39.906965, 116.401394);
 
+		MarkerOptions ooA = new MarkerOptions().position(llA).icon(bdA)
+				.zIndex(9).draggable(true);
+			// 掉下动画
+			ooA.animateType(MarkerOptions.MarkerAnimateType.drop);
+		mMarkerA = (Marker) (mBaiduMap.addOverlay(ooA));
+		MarkerOptions ooB = new MarkerOptions().position(llB).icon(bdB)
+				.zIndex(5);
+			// 掉下动画
+			ooB.animateType(MarkerOptions.MarkerAnimateType.drop);
+		mMarkerB = (Marker) (mBaiduMap.addOverlay(ooB));
+		MarkerOptions ooC = new MarkerOptions().position(llC).icon(bdC)
+				.perspective(false).anchor(0.5f, 0.5f).rotate(30).zIndex(7);
+			// 生长动画
+			ooC.animateType(MarkerOptions.MarkerAnimateType.grow);
+		mMarkerC = (Marker) (mBaiduMap.addOverlay(ooC));
+		ArrayList<BitmapDescriptor> giflist = new ArrayList<BitmapDescriptor>();
+		giflist.add(bdA);
+		giflist.add(bdB);
+		giflist.add(bdC);
+		MarkerOptions ooD = new MarkerOptions().position(llD).icons(giflist)
+				.zIndex(0).period(10);
+			// 生长动画
+			ooD.animateType(MarkerOptions.MarkerAnimateType.grow);
+		mMarkerD = (Marker) (mBaiduMap.addOverlay(ooD));
 
+		// add ground overlay
+		LatLng southwest = new LatLng(39.92235, 116.380338);
+		LatLng northeast = new LatLng(39.947246, 116.414977);
+		LatLngBounds bounds = new LatLngBounds.Builder().include(northeast)
+				.include(southwest).build();
+
+		OverlayOptions ooGround = new GroundOverlayOptions()
+				.positionFromBounds(bounds).image(bdGround).transparency(0.8f);
+		mBaiduMap.addOverlay(ooGround);
+
+		MapStatusUpdate u = MapStatusUpdateFactory
+				.newLatLng(bounds.getCenter());
+		mBaiduMap.setMapStatus(u);
+
+		mBaiduMap.setOnMarkerDragListener(new BaiduMap.OnMarkerDragListener() {
+			public void onMarkerDrag(Marker marker) {
+			}
+
+			public void onMarkerDragEnd(Marker marker) {
+				Toast.makeText(
+						LocationActivity.this,
+						"拖拽结束，新位置：" + marker.getPosition().latitude + ", "
+								+ marker.getPosition().longitude,
+						Toast.LENGTH_LONG).show();
+			}
+
+			public void onMarkerDragStart(Marker marker) {
+			}
+		});
+	}
+
+	// 初始化全局 bitmap 信息，不用时及时 recycle
+	BitmapDescriptor bdA = BitmapDescriptorFactory
+			.fromResource(R.drawable.icon_marka);
+	BitmapDescriptor bdB = BitmapDescriptorFactory
+			.fromResource(R.drawable.icon_marka);
+	BitmapDescriptor bdC = BitmapDescriptorFactory
+			.fromResource(R.drawable.icon_marka);
+	BitmapDescriptor bdD = BitmapDescriptorFactory
+			.fromResource(R.drawable.icon_marka);
+	BitmapDescriptor bd = BitmapDescriptorFactory
+			.fromResource(R.drawable.icon_marka);
+	BitmapDescriptor bdGround = BitmapDescriptorFactory
+			.fromResource(R.drawable.icon_marka);
+	private Marker mMarkerA;
+	private Marker mMarkerB;
+	private Marker mMarkerC;
+	private Marker mMarkerD;
 }

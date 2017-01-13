@@ -66,7 +66,7 @@ public class HomePayActivity extends BaseActivity {
 
     private List<ShopCarInfo> listObj;
     private List<String> wayData;
-    private float totalPrice;
+    private double totalPrice;
     private double totalGcb;
     private BigDecimal gcbBigDecimal;
     private int count = 1;
@@ -105,7 +105,7 @@ public class HomePayActivity extends BaseActivity {
             cb_gcb.setClickable(true);
             cb_weixin.setClickable(false);
         } else if (view.getId() == R.id.tv_go_to_pay) {
-            if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
+                if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
                     alert = new AlertDialog.Builder(context).create();
                     alert.setTitle("操作提示");
                     alert.setMessage("您还未绑定交易宝账号");
@@ -128,18 +128,19 @@ public class HomePayActivity extends BaseActivity {
                                 }
                             });
                     alert.show();
-            } else {
-                //只有一种产品
-                app.setTotalGcb(totalGcb);
-                app.setTotalPrice(totalPrice);
-                if (cb_gcb.isChecked()){
-                    app.setType(HomePayActivity.this.getString(R.string.pay_way_gcb));
                 } else {
-                    app.setType(HomePayActivity.this.getString(R.string.pay_way_weixin));
+                    //只有一种产品
+                    app.setTotalGcb(totalGcb);
+                    app.setTotalPrice(totalPrice);
+                    if (cb_gcb.isChecked()) {
+                        app.setType(HomePayActivity.this.getString(R.string.pay_way_gcb));
+                    } else {
+                        app.setType(HomePayActivity.this.getString(R.string.pay_way_weixin));
+                    }
+                    Intent i = new Intent(HomePayActivity.this, PayNextActivity.class);
+                    startActivity(i);
                 }
-                Intent i = new Intent(HomePayActivity.this, PayNextActivity.class);
-                startActivity(i);
-            }
+
         }
     }
     @Override
@@ -156,11 +157,11 @@ public class HomePayActivity extends BaseActivity {
 
         //只有一件商品
         groups = app.getGroups();
-        listObj = app.getChildren().get(groups.get(0).getId());
+        listObj = app.getChildren().get(groups.get(0).getNumber());
         Log.i(TAG_LOG, "initView: " + listObj.size());
         shopCarInfo = listObj.get(0);
-        totalPrice = shopCarInfo.getP_price() * count;
-        totalGcb = shopCarInfo.getP_vr9() * count;
+        totalPrice = shopCarInfo.getPrice_cny() * count;
+        totalGcb = shopCarInfo.getPrice_vr9() * count;
         gcbBigDecimal = BigDecimal.valueOf(totalGcb);
         shopCarInfo.setP_local_number(count);
         tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
@@ -168,7 +169,7 @@ public class HomePayActivity extends BaseActivity {
         tv_gcb_num.setText(context.getString(R.string.gcb_display, gcbBigDecimal));
         tv_money.setText(String.valueOf(context.getString(R.string.rmb_display, totalPrice)));
         tv_num.setText(String.valueOf(count));
-        tv_food_title.setText(shopCarInfo.getP_name());
+        tv_food_title.setText(shopCarInfo.getName());
         String machineName = shopCarInfo.getP_machine();
         String machineNum = machineName.substring(machineName.length() - 3, machineName.length());
         tv_machine_title.setText(String.format(context.getString(R.string.machine_name),"成都",machineNum));
@@ -176,7 +177,7 @@ public class HomePayActivity extends BaseActivity {
         ImageOptions imageOptions = new ImageOptions.Builder()
                 .setFailureDrawableId(R.drawable.ic_launcher)
                 .build();
-        String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + shopCarInfo.getP_picture());
+        String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + shopCarInfo.getPic());
         x.image().bind(img_food, imgPath, imageOptions);
 
         tv_btn_add.setOnClickListener(new View.OnClickListener() {
@@ -185,11 +186,11 @@ public class HomePayActivity extends BaseActivity {
                 count++;
                 tv_num.setText(String.valueOf(count));
                 shopCarInfo.setP_local_number(count);
-                totalPrice = shopCarInfo.getP_price() * count;
+                totalPrice = shopCarInfo.getPrice_cny() * count;
                 tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
                 tv_wei_num.setText(context.getString(R.string.rmb_display, totalPrice));
                 tv_money.setText(String.valueOf(context.getString(R.string.rmb_display, totalPrice)));
-                totalGcb = shopCarInfo.getP_vr9() * count;
+                totalGcb = shopCarInfo.getPrice_vr9() * count;
                 gcbBigDecimal = BigDecimal.valueOf(totalGcb);
                 tv_gcb_num.setText(context.getString(R.string.gcb_display, gcbBigDecimal));
             }
@@ -201,11 +202,11 @@ public class HomePayActivity extends BaseActivity {
                     count--;
                     tv_num.setText(String.valueOf(count));
                     shopCarInfo.setP_local_number(count);
-                    totalPrice = shopCarInfo.getP_price() * count;
+                    totalPrice = shopCarInfo.getPrice_cny() * count;
                     tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
                     tv_wei_num.setText(context.getString(R.string.rmb_display, totalPrice));
                     tv_money.setText(String.valueOf(context.getString(R.string.rmb_display, totalPrice)));
-                    totalGcb = shopCarInfo.getP_vr9() * count;
+                    totalGcb = shopCarInfo.getPrice_vr9() * count;
                     gcbBigDecimal = BigDecimal.valueOf(totalGcb);
                     tv_gcb_num.setText(context.getString(R.string.gcb_display, gcbBigDecimal));
                 }

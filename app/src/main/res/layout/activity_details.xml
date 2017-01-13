@@ -8,9 +8,90 @@
                 tools:context="com.jetcloud.hgbw.activity.DetailsActivity">
 
     <LinearLayout
+        android:id="@+id/ll_nav_bottom"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_bar_h"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.3"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vr9"
+                />
+
+            <TextView
+                android:id="@+id/tv_price_vr9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="0.03币"
+                android:textColor="@color/bottom_nav_text_color_check"
+                android:textSize="@dimen/text_big" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/cny"
+                />
+
+            <TextView
+                android:id="@+id/tv_price_cny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="60.00元"
+                android:textColor="@color/bottom_nav_text_color_check"
+                android:textSize="@dimen/text_big" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_add_car"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_tv_add_shop_car"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="加入购物车"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_big"/>
+
+        <TextView
+            android:id="@+id/tv_go_to_pay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_tv_go_to_pay"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="立即购买"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_huge"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <include
             android:id="@+id/include"
@@ -19,6 +100,8 @@
             android:layout_width="match_parent"
             android:background="@color/line"/>
         <ScrollView
+            android:visibility="gone"
+            android:id="@+id/sv_all_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -27,6 +110,7 @@
             android:background="@color/main_bg">
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/main_bg"
@@ -59,6 +143,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/ll_num_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
@@ -112,54 +197,14 @@
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_nav_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bottom_bar_h"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <TextView
-            android:id="@+id/tv_total_price"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center"
-            tools:text="¥60.00元"
-            android:background="@color/background"
-            android:textColor="@color/bottom_nav_text_color_check"
-            android:textSize="@dimen/text_huge"/>
-
-        <TextView
-            android:id="@+id/tv_add_car"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/bg_tv_add_shop_car"
-            android:gravity="center"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:text="加入购物车"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_big"/>
-
-        <TextView
-            android:id="@+id/tv_go_to_pay"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/bg_tv_go_to_pay"
-            android:gravity="center"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:text="立即购买"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_huge"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="未找到该商品"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/blue"
+                />
     </LinearLayout>
 
 </RelativeLayout>

@@ -1,6 +1,6 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-   <!--  <style name="dialogAnimation" parent="android:Animation">
+    <!--  <style name="dialogAnimation" parent="android:Animation">
         <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
         <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
     </style> -->
@@ -16,11 +16,12 @@
         <item name="android:layout_height">0.5dp</item>
         <item name="android:background">#E3E3E3</item>
     </style>
-<style name="ImageTranslucentTheme" parent="AppTheme">
-    <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
-</style>
-   
-<!-- 
+
+    <style name="ImageTranslucentTheme" parent="AppTheme">
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+    </style>
+
+    <!--
     <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
         <item name="android:progressDrawable">@drawable/order_rating_bar</item>
         <item name="android:minHeight">10dp</item>
@@ -39,6 +40,7 @@
         <item name="android:backgroundDimEnabled">true</item>
 
     </style>
+
     <style name="Dialog">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowIsFloating">true</item>
@@ -92,6 +94,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -114,7 +117,7 @@
         <item name="android:divider">@null</item>
         <item name="android:listSelector">@color/transparent</item>
     </style>
-    
+
 
     <style name="MyScrollView">
         <item name="android:layout_width">match_parent</item>
@@ -122,7 +125,13 @@
         <item name="android:fadingEdge">none</item>
         <item name="android:scrollbars">none</item>
     </style>
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popshow_anim</item>
+        <!-- 指定显示的动画xml -->
 
+        <item name="android:windowExitAnimation">@anim/pophidden_anim</item>
+        <!-- 指定消失的动画xml -->
+    </style>
     <!-- 分割线 -->
     <!-- 横 -->
     <style name="lineView">
@@ -249,12 +258,14 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">14sp</item>
     </style>
+
     <style name="MyTextView2">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/text_big</item>
         <item name="android:textColor">@color/black</item>
     </style>
+
     <style name="MyTextViewWhite" parent="MyTextView">
         <item name="android:textColor">@color/white</item>
     </style>
@@ -270,6 +281,7 @@
     <style name="MyTextViewGray" parent="MyTextView">
         <item name="android:textColor">@color/gray</item>
     </style>
+
     <style name="TextViewButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">50dp</item>
@@ -280,12 +292,14 @@
         <item name="android:layout_marginBottom">20dp</item>
         <item name="android:layout_marginLeft">20dp</item>
     </style>
+
     <style name="MyEditText2">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:textSize">@dimen/text_big</item>
         <item name="android:background">@null</item>
     </style>
+
     <style name="TextViewWatchInfo1">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -293,6 +307,7 @@
         <item name="android:textColor">@color/text_b1</item>
         <item name="android:layout_weight">1</item>
     </style>
+
     <style name="TextViewWatchInfo">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -300,22 +315,26 @@
         <item name="android:textColor">@color/text_b3</item>
         <item name="android:layout_weight">1</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <!-- 最右边可点击图标 -->
 
-   <!--  <style name="PlayTheme">
+    <!--  <style name="PlayTheme">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowAnimationStyle">@style/PlayAnimTheme</item>
     </style> -->
 
-  <!--   <style name="PlayAnimTheme" parent="@android:style/Animation">
+    <!--   <style name="PlayAnimTheme" parent="@android:style/Animation">
         <item name="android:activityOpenEnterAnimation">@anim/push_top_in</item>
         <item name="android:activityOpenExitAnimation">@anim/push_top_out</item>
         <item name="android:activityCloseEnterAnimation">@anim/push_left_in</item>
         <item name="android:activityCloseExitAnimation">@anim/push_left_out</item>
     </style> -->
 
-  <!--   <style name="Widget.SeekBar.Normal" parent="@android:style/Widget.SeekBar">
+    <!--   <style name="Widget.SeekBar.Normal" parent="@android:style/Widget.SeekBar">
         <item name="android:maxHeight">8.0dip</item>
         <item name="android:indeterminateOnly">false</item>
         <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
@@ -324,7 +343,7 @@
         <item name="android:thumb">@drawable/play_point</item>
         <item name="android:thumbOffset">10.0dip</item>
     </style> -->
-<!-- 
+    <!--
     <style name="mypopwindow_anim_style">
         <item name="android:windowEnterAnimation">@anim/popshow_anim</item>
         指定显示的动画xml

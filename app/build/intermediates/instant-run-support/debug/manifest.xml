@@ -131,6 +131,11 @@
         </activity>
         <activity android:name="com.jetcloud.hgbw.activity.EditAccountActivity" >
         </activity>
+        <activity
+            android:name="com.jetcloud.hgbw.activity.demo.BaiduMapActivity"
+            android:label="@string/title_activity_baidu_map"
+            android:theme="@style/AppTheme" >
+        </activity>
     </application>
 
 </manifest>

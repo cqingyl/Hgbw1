@@ -1,7 +1,6 @@
 package com.jetcloud.hgbw.fragment;
 
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -130,9 +129,9 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
                 groups.addAll(machine);
                 for (int i = 0; i < groups.size(); i++) {
                     children.clear();
-                    List<ShopCarInfo> good = app.db.selector(ShopCarInfo.class).where("p_machine", "=", groups.get(i).getId()).findAll();
+                    List<ShopCarInfo> good = app.db.selector(ShopCarInfo.class).where("p_machine", "=", groups.get(i).getNumber()).findAll();
 
-                    children.put(groups.get(i).getId(), good);
+                    children.put(groups.get(i).getNumber(), good);
 //                        Log.i(TAG, "loadListData: " + children.get());
 
 
@@ -200,7 +199,6 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
      */
     @Event(value = {cb_all, R.id.tv_go_to_pay})
     private void getEvent(View view) {
-        AlertDialog alert;
         switch (view.getId()) {
             case cb_all:
                 doCheckAll();
@@ -229,7 +227,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         for (int i = 0; i < groups.size(); i ++){
             MachineInfo machineInfo = groups.get(i);
 //            if (groups.is)
-            List<ShopCarInfo> shopCarInfos = children.get(machineInfo.getId());
+            List<ShopCarInfo> shopCarInfos = children.get(machineInfo.getNumber());
             List<ShopCarInfo> newInfoList = new ArrayList<>();
             for (int j = 0; j < shopCarInfos.size(); j ++){
                 ShopCarInfo shopCarInfo = shopCarInfos.get(j);
@@ -240,7 +238,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
             }
             if ( newInfoList.size() > 0){
                 newGroupsList.add(machineInfo);
-                newList.put(machineInfo.getId(), newInfoList);
+                newList.put(machineInfo.getNumber(), newInfoList);
             }
         }
         app.setGroups(newGroupsList);
@@ -306,8 +304,8 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     //删除item
     @Override
     public void childDelete(int groupPosition, int childPosition) {
-        ShopCarInfo shopCarInfo = children.get(groups.get(groupPosition).getId()).remove(childPosition);
-        WhereBuilder wbc = WhereBuilder.b("p_id", "=", shopCarInfo.getP_id());
+        ShopCarInfo shopCarInfo = children.get(groups.get(groupPosition).getNumber()).remove(childPosition);
+        WhereBuilder wbc = WhereBuilder.b("id", "=", shopCarInfo.getId());
         int goodNum = shopCarInfo.getP_local_number();
         try {
             app.db.delete(ShopCarInfo.class, wbc);
@@ -323,16 +321,16 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         ShopCarUtil.ChangeCorner(getActivity(), total);
         isEmptyCar();
         MachineInfo group = groups.get(groupPosition);
-        List<ShopCarInfo> childs = children.get(group.getId());
+        List<ShopCarInfo> childs = children.get(group.getNumber());
         if (childs.size() == 0) {
-            WhereBuilder wbg = WhereBuilder.b("id", "=", groups.get(groupPosition).getId());
+            WhereBuilder wbg = WhereBuilder.b("id", "=", groups.get(groupPosition).getNumber());
             try {
                 app.db.delete(MachineInfo.class, wbg);
             } catch (DbException e) {
                 e.printStackTrace();
                 Log.e(TAG_LOG, " 删除group失败： " + e.getMessage());
             }
-            children.remove(groups.get(groupPosition).getId());
+            children.remove(groups.get(groupPosition).getNumber());
             groups.remove(groupPosition);
         }
         adapter.notifyDataSetChanged();
@@ -344,7 +342,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     @Override
     public void checkGroup(int groupPosition, boolean isChecked) {
         MachineInfo group = groups.get(groupPosition);
-        List<ShopCarInfo> childs = children.get(group.getId());
+        List<ShopCarInfo> childs = children.get(group.getNumber());
         for (int i = 0; i < childs.size(); i++) {
             childs.get(i).setSelected(isChecked);
         }
@@ -360,7 +358,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     public void checkChild(int groupPosition, int childPosition, boolean isChecked) {
         boolean allChildSameState = true;// 判断改组下面的所有子元素是否是同一种状态
         MachineInfo group = groups.get(groupPosition);
-        List<ShopCarInfo> childs = children.get(group.getId());
+        List<ShopCarInfo> childs = children.get(group.getNumber());
         for (int i = 0; i < childs.size(); i++) {
             // 不全选中
             if (childs.get(i).isSelected() != isChecked) {
@@ -399,7 +397,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         for (int i = 0; i < groups.size(); i++) {
             groups.get(i).setSelected(allCheckbox.isChecked());
             MachineInfo group = groups.get(i);
-            List<ShopCarInfo> childs = children.get(group.getId());
+            List<ShopCarInfo> childs = children.get(group.getNumber());
             for (int j = 0; j < childs.size(); j++) {
                 childs.get(j).setSelected(allCheckbox.isChecked());
             }
@@ -421,13 +419,13 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
 
         for (int i = 0; i < groups.size(); i++) {
             MachineInfo group = groups.get(i);
-            List<ShopCarInfo> childs = children.get(group.getId());
+            List<ShopCarInfo> childs = children.get(group.getNumber());
             for (int j = 0; j < childs.size(); j++) {
                 ShopCarInfo product = childs.get(j);
                 if (product.isSelected()) {
                     totalCount++;
-                    totalPrice += product.getP_price() * product.getP_local_number();
-                    totalGcb += product.getP_vr9() * product.getP_local_number();
+                    totalPrice += product.getPrice_cny() * product.getP_local_number();
+                    totalGcb += product.getPrice_vr9() * product.getP_local_number();
                 }
             }
         }
@@ -453,7 +451,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         for (int i = 0; i < groups.size(); i++) {
             groups.get(i).setSelected(allCheckbox.isChecked());
             MachineInfo group = groups.get(i);
-            List<ShopCarInfo> childs = children.get(group.getId());
+            List<ShopCarInfo> childs = children.get(group.getNumber());
             for (ShopCarInfo shopCarInfo : childs) {
                 count += 1;
             }

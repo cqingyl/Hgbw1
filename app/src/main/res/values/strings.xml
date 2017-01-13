@@ -11,11 +11,11 @@
 
     <string name="startlocation">开始定位</string>
     <string name="stoplocation">停止定位</string>
-    <string name="rmb_display">¥%.2f元</string>
-    <string name="gcb_display">%fGCB</string>
+    <string name="rmb_display">%.2f元</string>
+    <string name="gcb_display">%.3fGCB</string>
     <string name="machine_name"><xliff:g id="location">%1$s</xliff:g>-<xliff:g name="num">%2$s</xliff:g></string>
     <string name="take_food_total">合计: ¥%.2f元</string>
-    <string name="take_food_gcb_total">合计: %fGCB</string>
+    <string name="take_food_gcb_total">合计: %.3fGCB</string>
     <string name="take_food_order_num">订单号:%d</string>
     <string name="take_food_num">x%d</string>
     <string name="pay_money">%.2f RMB</string>
@@ -38,4 +38,5 @@
     <string name="machine_list_name">%d号售餐机</string>
     <string name="machine_list_num">售货机编号：%s</string>
     <string name="machine_list_address">地址：%s</string>
+    <string name="title_activity_baidu_map">BaiduMapActivity</string>
 </resources>

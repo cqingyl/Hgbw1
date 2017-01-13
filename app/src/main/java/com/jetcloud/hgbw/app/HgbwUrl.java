@@ -17,6 +17,8 @@ public class HgbwUrl {
     public final static String MACHINE_DATA_URL = HOME_URL + "/post/mechine";
     public final static String FOOD_BY_MACHINE_URL = HOME_URL + "/foodByMechine";
     public final static String VERIFICATION_URL = HOME_URL + "/common/phone";
+    public final static String MACHINE_LOCATION_URL = HOME_URL + "/mechine/bylocate";
+    public final static String FOOD_DETAIL_URL = HOME_URL + "/food";
 
     /**
      * post

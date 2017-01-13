@@ -55,7 +55,7 @@ public class PayBuyingAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        String groupId = groups.get(groupPosition).getId();
+        String groupId = groups.get(groupPosition).getNumber();
         return children.get(groupId).size();
     }
 
@@ -66,7 +66,7 @@ public class PayBuyingAdapter extends BaseExpandableListAdapter {
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        List<ShopCarInfo> products = children.get(groups.get(groupPosition).getId());
+        List<ShopCarInfo> products = children.get(groups.get(groupPosition).getNumber());
         return products.get(childPosition);
     }
 
@@ -96,7 +96,7 @@ public class PayBuyingAdapter extends BaseExpandableListAdapter {
             groupViewHolder = (GroupViewHolder) convertView.getTag();
         }
         final MachineInfo machineInfo = (MachineInfo) getGroup(groupPosition);
-        String machineName = machineInfo.getId();
+        String machineName = machineInfo.getNumber();
         String machineNum = machineName.substring(machineName.length() - 3, machineName.length());
         groupViewHolder.tvMachineTitle.setText(String.format(context.getString(R.string.machine_name),"成都",machineNum));
         groupViewHolder.cbGroup.setChecked(true);
@@ -126,8 +126,8 @@ public class PayBuyingAdapter extends BaseExpandableListAdapter {
 //            x.image().bind(childViewHolder.imgFood, HgbwUrl.BASE_URL + shopCarInfo.getP_picture(), imageOptions);
 //            Log.i(TAG, "getChildView: " +  HgbwUrl.BASE_URL + shopCarInfo.getP_picture());
             childViewHolder.imgFood.setImageResource(R.drawable.jietu);
-            childViewHolder.tvFoodTitle.setText(String.valueOf(shopCarInfo.getP_name()));
-            childViewHolder.tvMoney.setText(context.getString(R.string.rmb_display, shopCarInfo.getP_price()));
+            childViewHolder.tvFoodTitle.setText(String.valueOf(shopCarInfo.getName()));
+            childViewHolder.tvMoney.setText(context.getString(R.string.rmb_display, shopCarInfo.getPrice_cny()));
             childViewHolder.tvNum.setText(String.format(context.getString(R.string.take_food_num), shopCarInfo.getP_local_number()));
 
         }

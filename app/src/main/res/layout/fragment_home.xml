@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/main_bg"
-    android:orientation="vertical" >
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:background="@color/main_bg"
+                android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -242,14 +243,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/top_bar_h"
-        android:layout_alignParentTop="true"
         android:background="#c8ffffff"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="8dp"
-        >
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
+    <LinearLayout
+        android:id="@+id/ll_location"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@drawable/btn"
+        android:orientation="horizontal" >
         <ImageView
+            android:id="@+id/iv_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/dingwei" />
@@ -259,11 +270,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:text="北京"
             android:textColor="@color/black"
             android:textSize="@dimen/text_huge" />
-
+    </LinearLayout>
         <!--<ImageView-->
             <!--android:layout_marginLeft="10dp"-->
             <!--android:layout_marginRight="10dp"-->
@@ -272,15 +282,27 @@
             <!--android:src="@drawable/xiala" />-->
 
         <LinearLayout
-            
+            android:id="@+id/ll_choose_machine"
             android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
             android:gravity="center"
             android:paddingRight="10dp"
-            android:background="@drawable/search_bg"
+            android:background="@drawable/btn"
             android:orientation="horizontal" >
 
+            <TextView
+                android:id="@+id/tv_machine_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:text="1号机"/>
+            <ImageView
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/machine_choose"/>
             <!--<EditText-->
                <!---->
                 <!--android:layout_width="0dp"-->
@@ -290,19 +312,30 @@
                 <!--android:hint="请输入食物或地名"-->
                 <!--android:paddingLeft="10dp"-->
                 <!--android:textSize="@dimen/text_big" />-->
-            <TextView
-                android:id="@+id/tv_top_search"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="请输入食物或地名"
-                android:paddingLeft="10dp"
-                android:gravity="center_vertical"
-                android:background="@null"
-                android:textSize="@dimen/text_big"/>
+            <!--<TextView-->
+                <!--android:id="@+id/tv_top_search"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="请输入食物或地名"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:background="@null"-->
+                <!--android:textSize="@dimen/text_big"/>-->
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:background="@drawable/btn"
+        android:orientation="horizontal" >
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:layout_marginRight="5dp"
                 android:src="@drawable/sousuo" />
         </LinearLayout>
