@@ -39,14 +39,14 @@
                     android:id="@+id/elv_buying"
                     style="@style/MyListView"
                 />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:text="我的优惠券"
-                    android:layout_marginLeft="15dp"
-                    android:textColor="@color/black"/>
-                <View style="@style/lineView"/>
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="我的优惠券"-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:textColor="@color/black"/>-->
+                <!--<View style="@style/lineView"/>-->
                 <com.jetcloud.hgbw.view.MyListView
                     android:id="@+id/lv_my_ticket"
                     style="@style/MyListView"/>
@@ -87,7 +87,7 @@
                     <CheckBox
                         android:id="@+id/cb_gcb"
                         android:layout_width="0dp"
-                        android:checked="false"
+                        android:checked="true"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
@@ -127,7 +127,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:checked="true"
+                        android:checked="false"
                         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                         android:visibility="visible"
                         android:button="@drawable/check_box_bg" />

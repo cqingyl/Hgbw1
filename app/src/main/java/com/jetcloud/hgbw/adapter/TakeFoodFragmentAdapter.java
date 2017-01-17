@@ -59,7 +59,7 @@ public class TakeFoodFragmentAdapter extends BaseAdapter {
         ImageOptions imageOptions = new ImageOptions.Builder()
                 .setFailureDrawableId(R.drawable.ic_launcher)
                 .build();
-        String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + mealBean.getP_picture());
+        String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + mealBean.getP_picture());
         x.image().bind(holder.img_food, imgPath, imageOptions);
         String machineName = mealBean.getT_jiqi();
         String machineNum = machineName.substring(machineName.length() - 3, machineName.length());

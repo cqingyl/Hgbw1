@@ -55,9 +55,6 @@
     <dimen name="top_bottom_10">10dp</dimen>
     <dimen name="top_bottom_20">20dp</dimen>
     <dimen name="top_bottom_5">5dp</dimen>
-    <string name="action_settings">Settings</string>
-    <string name="app_name">Hgbw</string>
-    <string name="hello_world">Hello world!</string>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance.Material"/>
     <style name="Base.TextAppearance.AppCompat.Body1" parent="android:TextAppearance.Material.Body1"/>
     <style name="Base.TextAppearance.AppCompat.Body2" parent="android:TextAppearance.Material.Body2"/>

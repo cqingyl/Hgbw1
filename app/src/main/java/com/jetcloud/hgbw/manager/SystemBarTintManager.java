@@ -435,7 +435,7 @@ public class SystemBarTintManager {
 		}
 
 		/**
-		 * Should a navigation bar appear at the bottom of the screen in the
+		 * Should adssadas navigation bar appear at the bottom of the screen in the
 		 * current device configuration? A navigation bar may appear on the
 		 * right side of the screen in certain configurations.
 		 * 
@@ -465,7 +465,7 @@ public class SystemBarTintManager {
 		}
 
 		/**
-		 * Does this device have a system navigation bar?
+		 * Does this device have adssadas system navigation bar?
 		 * 
 		 * @return True if this device uses soft key navigation, False
 		 *         otherwise.

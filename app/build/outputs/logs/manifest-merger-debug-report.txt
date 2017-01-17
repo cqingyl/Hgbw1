@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:2:1-136:12
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:2:1-148:12
 	package
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:3:11-38
 		INJECTED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml
@@ -95,8 +95,14 @@ uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
 ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:48:5-49:23
 	android:name
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:48:22-81
+uses-feature#0x00020000
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:52:5-54:34
+	android:glEsVersion
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:53:9-41
+	android:required
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:54:9-32
 application
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:51:5-134:19
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:56:5-146:19
 MERGED from [org.xutils:xutils:3.3.38] F:\work\Hgbw1\app\build\intermediates\exploded-aar\org.xutils\xutils\3.3.38\AndroidManifest.xml:12:5-20
 MERGED from [com.android.support:design:25.1.0] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:appcompat-v7:25.1.0] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\AndroidManifest.xml:25:5-20
@@ -110,143 +116,148 @@ MERGED from [com.android.support:support-core-ui:25.1.0] F:\work\Hgbw1\app\build
 MERGED from [com.android.support:support-core-utils:25.1.0] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:25.1.0] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:55:9-41
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:60:9-41
 	android:allowBackup
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:53:9-35
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:58:9-35
 	android:icon
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:54:9-45
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:59:9-38
 	android:theme
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:56:9-40
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:61:9-40
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:52:9-44
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:57:9-44
 meta-data#com.baidu.lbsapi.API_KEY
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:62:9-64:63
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:67:9-69:63
 	android:value
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:64:13-61
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:69:13-61
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:63:13-52
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:68:13-52
 activity#com.jetcloud.hgbw.activity.MainActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:65:9-74:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:70:9-79:20
 	android:label
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:67:13-45
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:72:13-45
 	android:theme
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:68:13-56
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:73:13-56
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:66:13-50
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:69:13-73:29
-action#android.intent.action.MAIN
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:70:17-68
-	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:70:25-66
-category#android.intent.category.LAUNCHER
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:72:17-76
-	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:72:27-74
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:71:13-50
 activity#com.jetcloud.hgbw.activity.LoginActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:75:9-78:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:80:9-83:20
 	android:label
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:77:13-57
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:82:13-57
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:76:13-51
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:81:13-51
 activity#com.jetcloud.hgbw.activity.RegisterActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:79:9-82:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:84:9-87:20
 	android:label
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:81:13-60
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:86:13-60
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:80:13-54
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:85:13-54
 activity#com.jetcloud.hgbw.activity.MyTicketActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:83:9-86:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:88:9-91:20
 	android:label
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:85:13-61
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:90:13-61
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:84:13-54
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:89:13-54
 activity#com.jetcloud.hgbw.activity.DetailsActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:87:9-90:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:92:9-95:20
 	android:label
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:89:13-59
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:94:13-59
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:88:13-53
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:93:13-53
 activity#com.jetcloud.hgbw.activity.demo.LocationActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:91:9-67
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:96:9-67
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:91:19-65
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:96:19-65
 service#com.baidu.location.f
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:94:9-101:19
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:99:9-106:19
 	android:enabled
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:96:13-35
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:101:13-35
 	android:process
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:97:13-38
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:102:13-38
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:95:13-48
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:100:13-48
 intent-filter#com.baidu.location.service_v2.6
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:98:13-100:29
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:103:13-105:29
 action#com.baidu.location.service_v2.6
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:99:17-73
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:104:17-73
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:99:25-71
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:104:25-71
 activity#com.jetcloud.hgbw.activity.QRCodeActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:103:9-104:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:108:9-109:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:103:19-58
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:108:19-58
 activity#com.jetcloud.hgbw.activity.HomePayActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:105:9-106:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:110:9-111:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:105:19-59
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:110:19-59
 activity#com.jetcloud.hgbw.activity.PayNextActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:107:9-108:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:112:9-113:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:107:19-59
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:112:19-59
 activity#com.jetcloud.hgbw.activity.DetailPayActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:109:9-110:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:114:9-115:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:109:19-61
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:114:19-61
 activity#com.jetcloud.hgbw.activity.MyWalletActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:111:9-112:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:116:9-117:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:111:19-60
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:116:19-60
 activity#com.jetcloud.hgbw.activity.BindingActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:113:9-114:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:118:9-119:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:113:19-59
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:118:19-59
 activity#com.jetcloud.hgbw.activity.CarPayActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:115:9-116:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:120:9-121:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:115:19-58
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:120:19-58
 activity#com.jetcloud.hgbw.activity.MyOrderActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:117:9-118:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:122:9-123:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:117:19-59
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:122:19-59
 activity#com.jetcloud.hgbw.activity.MachineListActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:119:9-120:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:124:9-125:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:119:19-63
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:124:19-63
 activity#com.jetcloud.hgbw.activity.RegisterSuccessActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:121:9-122:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:126:9-127:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:121:19-67
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:126:19-67
 activity#com.jetcloud.hgbw.activity.SettingActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:123:9-124:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:128:9-129:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:123:19-59
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:128:19-59
 activity#com.jetcloud.hgbw.activity.ForgotPasswordActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:125:9-126:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:130:9-131:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:125:19-66
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:130:19-66
 activity#com.jetcloud.hgbw.activity.EditAccountActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:127:9-128:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:132:9-133:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:127:19-63
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:132:19-63
 activity#com.jetcloud.hgbw.activity.demo.BaiduMapActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:129:9-133:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:134:9-138:20
 	android:label
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:131:13-61
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:136:13-61
 	android:theme
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:132:13-44
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:137:13-44
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:130:13-59
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:135:13-59
+activity#com.jetcloud.hgbw.activity.LoadingActivity
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:139:9-145:20
+	android:name
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:139:19-59
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:140:13-144:29
+action#android.intent.action.MAIN
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:141:17-68
+	android:name
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:141:25-66
+category#android.intent.category.LAUNCHER
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:143:17-76
+	android:name
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:143:27-74
 uses-sdk
 INJECTED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42
 MERGED from [org.xutils:xutils:3.3.38] F:\work\Hgbw1\app\build\intermediates\exploded-aar\org.xutils\xutils\3.3.38\AndroidManifest.xml:8:5-10:41
 MERGED from [com.android.support:design:25.1.0] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:appcompat-v7:25.1.0] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\AndroidManifest.xml:21:5-23:78

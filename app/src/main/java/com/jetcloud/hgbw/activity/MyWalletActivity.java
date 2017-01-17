@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.adapter.MyWalletAdapter;
 import com.jetcloud.hgbw.app.HgbwUrl;
+import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 
@@ -20,6 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.xutils.common.Callback;
 import org.xutils.ex.HttpException;
+import org.xutils.http.HttpMethod;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
@@ -74,7 +76,8 @@ public class MyWalletActivity extends BaseActivity {
             startActivity(new Intent(MyWalletActivity.this, BindingActivity.class));
             finish();
         } else if (view.getId() == R.id.tv_btn_no) {
-            getNetData();
+            unBindRequest();
+            Out.Toast(MyWalletActivity.this, "hehe");
         }
     }
 
@@ -86,25 +89,24 @@ public class MyWalletActivity extends BaseActivity {
     /**
      * 解绑操作
      */
-    private void getNetData() {
+    private void unBindRequest() {
         final RequestParams params = new RequestParams(HgbwUrl.TRADE_BIND);
-        JSONObject js_request = new JSONObject();//服务器需要传参的json对象
-        try {
-            js_request.put("referer_id", SharedPreferenceUtils.getMyAccount());//根据实际需求添加相应键值对
-//            js_request.put("mobile", SharedPreferenceUtils.getTradeAccount());
-            js_request.put("mobile", "15928038352");
-            js_request.put("referer", "android_hgbw");
-        } catch (JSONException e) {
-            e.printStackTrace();
+
+//        params.addBodyParameter("referer_id", SharedPreferenceUtils.getMyAccount());//根据实际需求添加相应键值对
+//        params.addBodyParameter("referer", "android_hgbw");
+        params.addBodyParameter("mobile", SharedPreferenceUtils.getTradeAccount());
+        if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.BINDING_STATE)){
+            params.addBodyParameter("bind_type", "unbind");
         }
-        params.setBodyContent(js_request.toString());
+        params.addBodyParameter("identity", SharedPreferenceUtils.getIdentity());
+        Log.i(TAG_LOG, "unBindRequest: " + params.toJSONString());
         //缓存时间
         params.setCacheMaxAge(1000 * 60);
 
         x.task().run(new Runnable() {
             @Override
             public void run() {
-                x.http().post(params, new Callback.CacheCallback<String>() {
+                x.http().request(HttpMethod.POST, params, new Callback.CacheCallback<String>() {
 
                     private boolean hasError = false;
                     private String result = null;
@@ -178,10 +180,10 @@ public class MyWalletActivity extends BaseActivity {
         String status = jsonObject.getString("status");
         if (status.equals("200")){
             SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.UNBINDING_STATE);
+            lv_card.setAdapter(null);
             lv_card.setVisibility(View.GONE);
             tv_btn_no.setVisibility(View.GONE);
             tv_btn_ok.setVisibility(View.VISIBLE);
-            lv_card.setAdapter(new MyWalletAdapter(this,null));
         }
     }
 }

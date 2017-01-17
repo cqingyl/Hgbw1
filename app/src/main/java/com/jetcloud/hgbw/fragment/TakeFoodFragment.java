@@ -56,11 +56,11 @@ public class TakeFoodFragment extends BaseFragment{
 
 		adapter = new TakeFoodFragmentAdapter(getActivity(), data);
 		lv_takefood.setAdapter(adapter);
-		getNetData();
+//		getNetData();
 	}
 
 	private void getNetData() {
-		final RequestParams params = new RequestParams(HgbwUrl.TAKE_FOOD);
+		final RequestParams params = new RequestParams(HgbwUrl.FOOD_BY_MACHINE_URL);
 		//缓存时间
 //		params.addBodyParameter("m_id", "ok2SdwCTyMl0B2Vou5NVsv7GCgr4");
 		params.addBodyParameter("m_id", "a43a467afdf-5");

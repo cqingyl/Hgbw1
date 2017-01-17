@@ -11,7 +11,8 @@ import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.adapter.MyOrderOutAdapter;
 import com.jetcloud.hgbw.app.HgbwUrl;
-import com.jetcloud.hgbw.bean.GoodsInfo;
+import com.jetcloud.hgbw.bean.MyOrderBean;
+import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 
 import org.json.JSONException;
@@ -20,8 +21,7 @@ import org.xutils.ex.HttpException;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
-import java.util.ArrayList;
-
+import java.util.List;
 
 
 public class MyOrderActivity extends BaseActivity {
@@ -44,11 +44,7 @@ public class MyOrderActivity extends BaseActivity {
 
         lv_my_order_out = getView(R.id.lv_my_order_out);
 
-        initDatas();
-        adapter = new MyOrderOutAdapter(this, new ArrayList<String>());
-        lv_my_order_out.setAdapter(adapter);
-
-//        getNetData();
+        getOrderRequest();
     }
 
     @Override
@@ -71,28 +67,33 @@ public class MyOrderActivity extends BaseActivity {
 //        }
     }
 
+
+
     /**
      * 处理json数据
      */
-    private void getDataFromJson(String result) throws JSONException {
+    private void getOrderDataFromJson(String result) throws JSONException {
         Gson gson = new Gson();
-        GoodsInfo goodsInfo = gson.fromJson(result, GoodsInfo.class);
-
+        MyOrderBean myOrderBean = gson.fromJson(result, MyOrderBean.class);
+        List<MyOrderBean.OrdersBean> ordersBeenList = myOrderBean.getOrders();
+//        for (int i = 0; i < ordersBeenList.size(); i ++) {
+//            MyOrderBean.OrdersBean ordersBean = ordersBeenList.get(i);
+//        }
+        adapter = new MyOrderOutAdapter(this, ordersBeenList);
+        lv_my_order_out.setAdapter(adapter);
     }
 
 
-    private void getNetData() {
-        final RequestParams params = new RequestParams(HgbwUrl.MY_ORDER);
+    private void getOrderRequest() {
+        final RequestParams params = new RequestParams(HgbwUrl.GET_ORDER_URL);
         //缓存时间
-        params.addBodyParameter("myR_lng", "104.06792346");
-        params.addBodyParameter("myR_lat", "30.67994285");
-        params.addBodyParameter("type", "mobile");
+        params.addBodyParameter("identity", SharedPreferenceUtils.getIdentity());
         params.setCacheMaxAge(1000 * 60);
 
         x.task().run(new Runnable() {
             @Override
             public void run() {
-                x.http().post(params, new Callback.CacheCallback<String>() {
+                x.http().get(params, new Callback.CacheCallback<String>() {
 
                     private boolean hasError = false;
                     private String result = null;
@@ -101,7 +102,7 @@ public class MyOrderActivity extends BaseActivity {
                     @Override
                     public boolean onCache(String result) {
                         this.result = result;
-                        return true; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
+                        return false; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
                     }
 
                     @Override
@@ -116,13 +117,13 @@ public class MyOrderActivity extends BaseActivity {
                     public void onError(Throwable ex, boolean isOnCallback) {
                         hasError = true;
                         Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
-                        Log.e(TAG_LOG, "onError: " + ex.getMessage());
+                        Log.e(TAG_LOG, "getOrderRequest onError: " + ex.getMessage());
                         if (ex instanceof HttpException) { // 网络错误
                             HttpException httpEx = (HttpException) ex;
                             int responseCode = httpEx.getCode();
                             String responseMsg = httpEx.getMessage();
                             String errorResult = httpEx.getResult();
-                            Log.e(TAG_LOG, "onError " + " code: " + responseCode + " message: " + responseMsg);
+                            Log.e(TAG_LOG, "getOrderRequest onError " + " code: " + responseCode + " message: " + responseMsg);
                         } else { // 其他错误
                         }
                     }
@@ -136,12 +137,12 @@ public class MyOrderActivity extends BaseActivity {
                     public void onFinished() {
                         progress.dismiss();
                         if (!hasError && result != null) {
-                        Log.i(TAG_LOG, "onFinished: " + result);
+                        Log.i(TAG_LOG, "getOrderRequest onFinished: " + result);
                             try {
-                                getDataFromJson(result);
+                                getOrderDataFromJson(result);
                             } catch (JSONException e) {
                                 e.printStackTrace();
-                                Log.e(TAG_LOG, " json error: " + e.getMessage());
+                                Log.e(TAG_LOG, "getOrderRequest json error: " + e.getMessage());
                             }
                         }
                     }

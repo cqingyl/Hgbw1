@@ -1,8 +1,11 @@
 package com.jetcloud.hgbw.activity;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -26,6 +29,10 @@ public class MainActivity extends BaseActivity {
 	private ImageView homeimg,takefoodimg,shopimg,mineimg;
 	public static RelativeLayout main_bg;
 	public static MainActivity mainActivity;
+
+	/* 请求码 */
+	public static final int PAY_SUCCESS_REQUEST = 0;
+
 	/**
 	 * 当前选中导航
 	 */
@@ -64,7 +71,7 @@ public class MainActivity extends BaseActivity {
 	}
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		
+
 		setContentView(R.layout.activity_main);
 		mainActivity=this;
 		super.onCreate(savedInstanceState);
@@ -74,6 +81,7 @@ public class MainActivity extends BaseActivity {
 	@Override
 	protected void initView() {
 		// TODO Auto-generated method stub
+		initWindow();
 		home=getViewWithClick(R.id.home);
 		takefood=getViewWithClick(R.id.takefood);
 		shopcar=getViewWithClick(R.id.shopcar);
@@ -93,19 +101,36 @@ public class MainActivity extends BaseActivity {
 
 	@Override
 	protected void loadData() {
-		
-		// 初始化首个fragment
-		if (HgbwApplication.getHomeFragment() == null) {
-			HgbwApplication.setHomeFragment(HomeFragment.newInstance());
-		}
-		manager.beginTransaction()
-				.add(R.id.fl_content, HgbwApplication.getHomeFragment())
-				.commit();
-		currentFragment = HgbwApplication.getHomeFragment();
+		//如果来自 支付成功
+		String jumpResource = getIntent().getStringExtra(getString(R.string.jump_resource));
+		if (jumpResource == null) {
+			// 初始化首个fragment
+			if (HgbwApplication.getHomeFragment() == null) {
+				HgbwApplication.setHomeFragment(HomeFragment.newInstance());
+			}
+			manager.beginTransaction()
+					.add(R.id.fl_content, HgbwApplication.getHomeFragment())
+					.commit();
+			currentFragment = HgbwApplication.getHomeFragment();
+			currentSelect = 1;
 
-		currentSelect = 1;
-		
+
+		} else if (jumpResource.equals(PayNextActivity.class.getSimpleName())) {
+			if (HgbwApplication.getTakeFoodFragment() == null) {
+				HgbwApplication.setTakeFoodFragment(TakeFoodFragment.newInstance());
+			}
+			manager.beginTransaction()
+					.add(R.id.fl_content, HgbwApplication.getTakeFoodFragment())
+					.commit();
+			currentFragment = HgbwApplication.getTakeFoodFragment();
+				currentSelect = 1;
+				changeCurrent(2);
+			}
+
+
 	}
+
+
 	@Override
 	public void onClick(View view) {
 		// 点击事件
@@ -120,7 +145,7 @@ public class MainActivity extends BaseActivity {
 				HgbwApplication.setTakeFoodFragment(TakeFoodFragment.newInstance());
 
 			}
-		
+
 			switchContent(HgbwApplication.getTakeFoodFragment(), R.id.fl_content);
 			changeCurrent(2);
 		} else if (view == shopcar) {
@@ -135,11 +160,13 @@ public class MainActivity extends BaseActivity {
 			}
 			switchContent(HgbwApplication.getMineFragment(), R.id.fl_content);
 			changeCurrent(4);
-		} 
+		}
 	}
+
+
 	/**
 	 * 替换
-	 * 
+	 *
 	 * @param select
 	 */
 	@SuppressWarnings("deprecation")
@@ -205,6 +232,15 @@ public class MainActivity extends BaseActivity {
 				mineimg.setImageResource(R.drawable.minec);
 				break;
 			}
+		}
+	}
+
+
+	@TargetApi(19)
+	private void initWindow() {
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+			getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+			getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 		}
 	}
 

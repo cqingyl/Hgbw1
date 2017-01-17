@@ -814,7 +814,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_settings">Settings</string>
-    <string name="app_name">Hgbw</string>
+    <string name="app_name">禾谷百味</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="cancel">取消</string>
@@ -836,6 +836,7 @@
     <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
     <string name="pay_money">%.2f RMB</string>
+    <string name="pay_way_cny">cny</string>
     <string name="pay_way_gcb">vr9</string>
     <string name="pay_way_weixin">weixin</string>
     <string name="please_enter_charge_amount">请输入充值金额</string>

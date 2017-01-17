@@ -16,6 +16,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,9 +30,11 @@ import com.jetcloud.hgbw.adapter.MyWheelAdapter;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.FoodBean;
+import com.jetcloud.hgbw.bean.MachineBannerBean;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.MachineLocationBean;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
+import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.utils.ShopCarUtil;
@@ -67,7 +70,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     private TextView tv_city;
     private RadioGroup radioGroup;
     private CustomProgressDialog progress;
-
+    private ScrollView sv_all_layout;
     private WheelView wheelView;
     private PopupWindow window;
     String machineNum;
@@ -81,12 +84,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     private static final int CHOOSE_DRINK = 3;
     private LinearLayout ll_choose_machine;
     private TextView tv_machine_name;
-    ////////////
-    List<ShopCarInfo> dataA = new ArrayList<>();
-    List<ShopCarInfo> dataB = new ArrayList<>();
-    List<ShopCarInfo> dataC = new ArrayList<>();
-    List<ShopCarInfo> dataD = new ArrayList<>();
-    List<ShopCarInfo> dataE = new ArrayList<>();
+
     private HgbwApplication app;
     private int total;
 
@@ -100,7 +98,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         }
     };
 
-    // binner图数据
+    // banner图数据
     private ArrayList<String> mImageUrl = new ArrayList<String>();
 
     private MyListView listView;
@@ -153,13 +151,13 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     @Override
     protected void initView() {
-        // 判断 存储的machineName 是不是默认的值，如果是说明是未定位
         PackageManager pm = getActivity().getPackageManager();
         AlertDialog alert;
         boolean permission = (PackageManager.PERMISSION_GRANTED ==
                 pm.checkPermission("android.permission.RECORD_AUDIO", getActivity().getPackageName()));
+        // 判断 存储的machineName 是不是默认的值，如果是说明是未定位
         if (!permission) {
-            Out.Toast(getActivity(),"木有这个权限");
+            Out.Toast(getActivity(),"没有这个权限");
             alert = new AlertDialog.Builder(getActivity()).create();
             alert.setTitle("操作提示");
             alert.setMessage("请打开GPS后再尝试");
@@ -227,6 +225,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                         machineInfo.setAddress(app.getGroups().get(0).getAddress());
                         machineInfo.setNickname(app.getGroups().get(0).getNickname());
                         machineInfo.setNumber(app.getGroups().get(0).getNumber());
+                        machineInfo.setCity(app.getGroups().get(0).getCity());
                         carInfo.setP_machine(app.getGroups().get(0).getNumber());
                         carInfo.setId(dataBean.getId());
                         carInfo.setName(dataBean.getName());
@@ -287,22 +286,6 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     }
 
-    /**
-     * 加载轮播数据
-     * **/
-    private void loadAdData() {
-
-        for (int i = 0; i < dataE.size(); i++) {
-//            String imgPath = dataE.get(i).getP_picture();
-//            mImageUrl.add(HgbwUrl.BASE_URL + imgPath);
-
-//            String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.BASE_URL + dataE.get(i).getPic());
-//            Log.i(TAG_LOG, "loadAdData: " + imgPath);
-//            mImageUrl.add(imgPath);
-        }
-        binner.setImageResources(mImageUrl, mAdCycleViewListener, 0);
-
-    }
 
     /**
      * 点击导航栏
@@ -431,6 +414,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         app.setGroups(machineInfoList);
 
         getFoodByMachine(CHOOSE_NEW_FOOD, machineNum, null);
+        getBannerRequest(machineNum);
     }
 
 
@@ -601,4 +585,95 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         adapter.setData(foodBeanDataBeanList);
 
     }
+   /**
+     * 获取轮播图
+     * */
+    public void getBannerRequest(String machineNum){
+        final RequestParams params = new RequestParams(HgbwUrl.BANNER_URL);
+        final CustomProgressDialog[] dialog = {null};
+        //缓存时间
+        params.addQueryStringParameter("mechine_number", machineNum);
+
+        params.setCacheMaxAge(1000 * 60);
+
+        x.task().run(new Runnable() {
+            @Override
+            public void run() {
+               x.http().get(params, new Callback.CacheCallback<String>() {
+
+                    private boolean hasError = false;
+                    private String result = null;
+
+
+                    @Override
+                    public boolean onCache(String result) {
+                        this.result = result;
+                        return true; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
+                    }
+
+                    @Override
+                    public void onSuccess(String result) {
+                        // 注意: 如果服务返回304 或 onCache 选择了信任缓存, 这时result为null.
+                        if (result != null) {
+                            this.result = result;
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable ex, boolean isOnCallback) {
+                        hasError = true;
+                        Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
+                        Log.e(TAG_LOG, "getBannerRequest onError: " + ex.getMessage());
+                        if (ex instanceof HttpException) { // 网络错误
+                            HttpException httpEx = (HttpException) ex;
+                            int responseCode = httpEx.getCode();
+                            String responseMsg = httpEx.getMessage();
+                            String errorResult = httpEx.getResult();
+                            Log.e(TAG_LOG, "getBannerRequest onError " + " code: " + responseCode + " message: " + responseMsg);
+                        } else { // 其他错误
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(CancelledException cex) {
+                        Toast.makeText(x.app(), "cancelled", Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onFinished() {
+                        dialog[0].dismiss();
+                        if (!hasError && result != null) {
+                            Log.i(TAG_LOG, "getBannerRequest onFinished: " + result);
+                            try {
+                                getBannerFromJson(result);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+
+                });
+                x.task().post(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog[0] = new CustomProgressDialog(getActivity(), "请稍后", R.drawable.fram2);
+                        dialog[0].show();
+                    }
+                });
+            }
+        });
+    }
+    public void getBannerFromJson (String result) throws JSONException{
+        Gson gson = new Gson();
+        MachineBannerBean machineBannerBean = gson.fromJson(result, MachineBannerBean.class);
+        List<MachineBannerBean.BannerBean> bannerBeanList = machineBannerBean.getBanner();
+        for (int i = 0; i < bannerBeanList.size(); i ++) {
+            MachineBannerBean.BannerBean bannerBean = bannerBeanList.get(i);
+            String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL +  bannerBean.getPic());
+            Log.i(TAG_LOG, "getBannerFromJson imgPath: " + imgPath);
+            mImageUrl.add(imgPath);
+        }
+        binner.setImageResources(mImageUrl, mAdCycleViewListener, 0);
+    }
+
 }

@@ -8,6 +8,10 @@
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_dialog_one_btn.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\custom_dialog_one_btn.xml"
+    },
+    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shopjia.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\shopjia.xml"
     },
@@ -34,6 +38,10 @@
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_bg.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\wheel_bg.xml"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dialog.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\dialog.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
@@ -160,6 +168,10 @@
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\upanddown_bg.xml"
     },
     {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_dialog_two_btn_right.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\custom_dialog_two_btn_right.xml"
+    },
+    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
@@ -206,6 +218,10 @@
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_dialog_two_btn_left.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\custom_dialog_two_btn_left.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",

@@ -62,7 +62,7 @@ public class QRCodeActivity extends BaseActivity {
     }
 
     private void getNetData() {
-        final RequestParams params = new RequestParams(HgbwUrl.HOME_DATA_URL);
+        final RequestParams params = new RequestParams(HgbwUrl.FOOD_BY_MACHINE_URL);
         //缓存时间
         params.addQueryStringParameter("myR_lng", "104.06792346");
         params.addQueryStringParameter("myR_lat", "30.67994285");

@@ -150,7 +150,8 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
             String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + shopCarInfo.getPic());
             x.image().bind(childViewHolder.imgFood, imgPath, imageOptions);
             childViewHolder.tvFoodTitle.setText(String.valueOf(shopCarInfo.getName()));
-            childViewHolder.tvMoney.setText(context.getString(R.string.rmb_display, shopCarInfo.getPrice_cny()  ));
+            childViewHolder.tv_price_cny.setText(context.getString(R.string.rmb_display, shopCarInfo.getPrice_cny()  ));
+            childViewHolder.tv_price_vr9.setText(context.getString(R.string.gcb_display, shopCarInfo.getPrice_vr9()  ));
             childViewHolder.tvNum.setText(String.valueOf(shopCarInfo.getP_local_number()));
             childViewHolder.cbChild.setChecked(shopCarInfo.isSelected());
             childViewHolder.cbChild.setOnClickListener(new View.OnClickListener() {
@@ -291,8 +292,11 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
         TextView tvBtnAdd;
         @ViewInject(R.id.tv_num)
         TextView tvNum;
-        @ViewInject(R.id.tv_money)
-        TextView tvMoney;
+        @ViewInject(R.id.tv_price_cny)
+        TextView tv_price_cny;
+        @ViewInject(R.id.tv_price_vr9)
+        TextView tv_price_vr9;
+
         @ViewInject(R.id.img_btn_del)
         ImageButton imgBtnDel;
 

@@ -54,7 +54,4 @@
     <dimen name="top_bottom_10">10dp</dimen>
     <dimen name="top_bottom_20">20dp</dimen>
     <dimen name="top_bottom_5">5dp</dimen>
-    <string name="action_settings">Settings</string>
-    <string name="app_name">Hgbw</string>
-    <string name="hello_world">Hello world!</string>
 </resources>

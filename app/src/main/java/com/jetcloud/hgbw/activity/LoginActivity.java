@@ -209,6 +209,7 @@ public class LoginActivity extends BaseActivity {
         Out.Toast(context, jsonObject.getString("status"));
         if (jsonObject.getString("status").equals("success")) {
             SharedPreferenceUtils.setMyAccount(et_username.getText().toString());
+            SharedPreferenceUtils.setMyPassword(et_password.getText().toString());
             SharedPreferenceUtils.setIdentity(jsonObject.getString("identity"));
             finish();
         }

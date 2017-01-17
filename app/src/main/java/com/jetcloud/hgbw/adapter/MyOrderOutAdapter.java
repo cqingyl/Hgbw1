@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.bean.MyOrderBean;
 import com.jetcloud.hgbw.view.MyListView;
 
 import org.xutils.view.annotation.ViewInject;
@@ -24,13 +25,13 @@ import java.util.List;
 public class MyOrderOutAdapter extends BaseAdapter {
 
     private LayoutInflater mLayoutInflater;
-    private List<String> data;
+    private List<MyOrderBean.OrdersBean> data;
     private int productNum = 1;
     private static final String TAG_LOG = MyOrderOutAdapter.class.getSimpleName();
     private Context context;
 
 
-    public MyOrderOutAdapter(Context context, List<String> data) {
+    public MyOrderOutAdapter(Context context, List<MyOrderBean.OrdersBean> data) {
         super();
         mLayoutInflater = LayoutInflater.from(context);
         this.context = context;

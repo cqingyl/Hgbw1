@@ -7,6 +7,7 @@
                 android:orientation="vertical">
 
     <ScrollView
+        android:id="@+id/sv_all_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
@@ -243,7 +244,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/top_bar_h"
-        android:background="#c8ffffff"
+        android:background="@color/white"
         android:gravity="center"
         android:orientation="horizontal"
         android:layout_alignParentTop="true"

@@ -47,10 +47,6 @@ public class BindingActivity extends BaseActivity {
         tv_btn_ok = getViewWithClick(R.id.tv_btn_ok);
         et_user_count = getView(R.id.et_user_count);
 
-        /***********************************************
-         * 注册后删除*******/
-//        SharedPreferenceUtils.setMyAccount("13340902246");
-        /******************************************************/
         tv_myaccount.setText(SharedPreferenceUtils.getMyAccount());
     }
 
@@ -63,7 +59,7 @@ public class BindingActivity extends BaseActivity {
 //                i.putExtra(JIAOYIBAO_ACCOUNT, et_user_count.getText().toString());
 //                startActivity(i);
 //                finish();
-                    getNetData();
+                    bindRequest();
                 } else {
                     Out.Toast(BindingActivity.this, "账号格式不对");
                 }
@@ -75,21 +71,26 @@ public class BindingActivity extends BaseActivity {
     protected void loadData() {
 
     }
-
-    private void getNetData() {
+    /**
+     * 绑定请求
+     * */
+    private void bindRequest() {
         final RequestParams params = new RequestParams(HgbwUrl.TRADE_BIND);
-        JSONObject js_request = new JSONObject();//服务器需要传参的json对象
-        try {
-            js_request.put("referer_id", SharedPreferenceUtils.getMyAccount());//根据实际需求添加相应键值对
-            js_request.put("mobile", et_user_count.getText().toString());
-            js_request.put("referer", "android_hgbw");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+//        JSONObject js_request = new JSONObject();//服务器需要传参的json对象
+//        try {
+//            js_request.put("referer_id", SharedPreferenceUtils.getMyAccount());//根据实际需求添加相应键值对
+//            js_request.put("mobile", et_user_count.getText().toString());
+//            js_request.put("referer", "android_hgbw");
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
 //        params.addBodyParameter("referer_id", SharedPreferenceUtils.getMyAccount());
-//        params.addBodyParameter("mobile", et_user_count.getText().toString());
-//        params.addBodyParameter("referer", "android_hgbw");
-        params.setBodyContent(js_request.toString());
+        params.addBodyParameter("mobile", et_user_count.getText().toString());
+        if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)){
+            params.addBodyParameter("bind_type", "bind");
+        }
+        params.addBodyParameter("identity", SharedPreferenceUtils.getIdentity());
+        Log.i(TAG_LOG, "bind request: " + params.toJSONString());
         //缓存时间
         params.setCacheMaxAge(1000 * 60);
 
@@ -105,7 +106,7 @@ public class BindingActivity extends BaseActivity {
                     @Override
                     public boolean onCache(String result) {
                         this.result = result;
-                        return true; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
+                        return false; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
                     }
 
                     @Override
@@ -175,15 +176,15 @@ public class BindingActivity extends BaseActivity {
         if (status.equals("200") || status.equals("201")) {
             SharedPreferenceUtils.setTradeAccount(et_user_count.getText().toString());
             SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.BINDING_STATE);
-            finish();
             String jumpResource = BindingActivity.this.getIntent().getStringExtra(BindingActivity.this.getString(R.string.jump_resource));
-            if (jumpResource.isEmpty()) {
+            if (jumpResource == null) {
                 startActivity(new Intent(BindingActivity.this, MyWalletActivity.class));
             } else if (jumpResource.equals(CarPayActivity.class.getSimpleName()) || jumpResource.equals
                     (HomePayActivity.class.getSimpleName()) || jumpResource.equals(DetailPayActivity.class
                     .getSimpleName())) {//如果来源为结算
                 startActivity(new Intent(BindingActivity.this, PayNextActivity.class));
             }
+            finish();
         }
     }
 }

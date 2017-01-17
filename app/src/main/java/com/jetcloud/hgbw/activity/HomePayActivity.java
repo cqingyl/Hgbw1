@@ -14,12 +14,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
-import com.jetcloud.hgbw.adapter.PayTicketAdapter;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.utils.ImageLoaderCfg;
+import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 
 import org.xutils.image.ImageOptions;
@@ -55,8 +55,10 @@ public class HomePayActivity extends BaseActivity {
     private TextView tv_machine_title;
     @ViewInject(R.id.tv_food_title)
     private TextView tv_food_title;
-    @ViewInject(R.id.tv_money)
-    private TextView tv_money;
+    @ViewInject(R.id.tv_price_cny)
+    private TextView tv_price_cny;
+    @ViewInject(R.id.tv_price_vr9)
+    private TextView tv_price_vr9;
     @ViewInject(R.id.tv_btn_dec)
     private TextView tv_btn_dec;
     @ViewInject(R.id.tv_num)
@@ -74,6 +76,7 @@ public class HomePayActivity extends BaseActivity {
     private HgbwApplication app;
     private List<MachineInfo> groups = new ArrayList<>();
     private Map<String, List<ShopCarInfo>> children = new HashMap<>();
+    private MachineInfo machineInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,47 +102,57 @@ public class HomePayActivity extends BaseActivity {
             cb_weixin.setChecked(false);
             cb_gcb.setClickable(false);
             cb_weixin.setClickable(true);
+            tv_total_price.setText(context.getString(R.string.take_food_gcb_total, totalGcb));
         } else if (view.getId() == R.id.cb_weixin){
             cb_gcb.setChecked(false);
             cb_weixin.setChecked(true);
             cb_gcb.setClickable(true);
             cb_weixin.setClickable(false);
+            tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
         } else if (view.getId() == R.id.tv_go_to_pay) {
-                if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
-                    alert = new AlertDialog.Builder(context).create();
-                    alert.setTitle("操作提示");
-                    alert.setMessage("您还未绑定交易宝账号");
-                    alert.getWindow().setBackgroundDrawableResource(R.color.white);
-                    alert.setButton(DialogInterface.BUTTON_NEGATIVE, "取消",
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    return;
-                                }
-                            });
-                    alert.setButton(DialogInterface.BUTTON_POSITIVE, "去绑定",
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-
-                                    Intent intent = new Intent(HomePayActivity.this, BindingActivity.class);
-                                    intent.putExtra(HomePayActivity.this.getString(R.string.jump_resource), CarPayActivity.class.getSimpleName());
-                                    startActivity(intent);
-                                }
-                            });
-                    alert.show();
-                } else {
-                    //只有一种产品
-                    app.setTotalGcb(totalGcb);
-                    app.setTotalPrice(totalPrice);
-                    if (cb_gcb.isChecked()) {
-                        app.setType(HomePayActivity.this.getString(R.string.pay_way_gcb));
-                    } else {
-                        app.setType(HomePayActivity.this.getString(R.string.pay_way_weixin));
-                    }
-                    Intent i = new Intent(HomePayActivity.this, PayNextActivity.class);
-                    startActivity(i);
-                }
+            app.setTotalPrice(totalPrice);
+            app.setTotalGcb(totalGcb);
+            if (cb_gcb.isChecked()) {
+                app.setType(HomePayActivity.this.getString(R.string.pay_way_gcb));
+            } else {
+                app.setType(HomePayActivity.this.getString(R.string.pay_way_weixin));
+                Out.Toast(HomePayActivity.this, "暂未开通，敬请期待");
+                return;
+            }
+            if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
+                alert = new AlertDialog.Builder(context).create();
+                alert.setTitle("操作提示");
+                alert.setMessage("您还未绑定交易宝账号");
+                alert.getWindow().setBackgroundDrawableResource(R.color.white);
+                alert.setButton(DialogInterface.BUTTON_NEGATIVE, "取消",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                return;
+                            }
+                        });
+                alert.setButton(DialogInterface.BUTTON_POSITIVE, "去绑定",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intent = new Intent(HomePayActivity.this, BindingActivity.class);
+                                intent.putExtra(HomePayActivity.this.getString(R.string.jump_resource), CarPayActivity
+                                        .class.getSimpleName());
+                                startActivity(intent);
+                            }
+                        });
+                alert.show();
+            } else {
+//                        for (int i = 0; i < children.get(groups.get(0).getNumber()).size(); i ++) {
+//                            ShopCarInfo shopCarInfo = children.get(groups.get(0).getNumber()).get(i);
+//                            shopCarInfo.getId();
+////                            Log.i(TAG_LOG, "onClick: " + shopCarInfo.getId());
+////                            getFoodNumRequest(shopCarInfo.getId());
+//
+//                        }
+                Intent i = new Intent(HomePayActivity.this, PayNextActivity.class);
+                startActivity(i);
+            }
 
         }
     }
@@ -150,29 +163,34 @@ public class HomePayActivity extends BaseActivity {
 
     private void initListData() {
 
-        wayData = new ArrayList<>();
+       /** wayData = new ArrayList<>();
         wayData.add("20元卡券一张，可抵扣20元");
         wayData.add("40元卡券一张，可抵扣40元");
-        lv_my_ticket.setAdapter(new PayTicketAdapter(this, wayData));
+        lv_my_ticket.setAdapter(new PayTicketAdapter(this, wayData));*/
 
         //只有一件商品
         groups = app.getGroups();
-        listObj = app.getChildren().get(groups.get(0).getNumber());
+        machineInfo = app.getGroups().get(0);
+        listObj = app.getChildren().get(machineInfo.getNumber());
         Log.i(TAG_LOG, "initView: " + listObj.size());
         shopCarInfo = listObj.get(0);
         totalPrice = shopCarInfo.getPrice_cny() * count;
         totalGcb = shopCarInfo.getPrice_vr9() * count;
         gcbBigDecimal = BigDecimal.valueOf(totalGcb);
         shopCarInfo.setP_local_number(count);
-        tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
+        //默认选择 GCB
+        tv_total_price.setText(context.getString(R.string.take_food_gcb_total, totalGcb));
         tv_wei_num.setText(context.getString(R.string.rmb_display, totalPrice));
         tv_gcb_num.setText(context.getString(R.string.gcb_display, gcbBigDecimal));
-        tv_money.setText(String.valueOf(context.getString(R.string.rmb_display, totalPrice)));
+        tv_price_vr9.setText(String.valueOf(context.getString(R.string.rmb_display, totalPrice)));
+        tv_price_cny.setText(String.valueOf(context.getString(R.string.gcb_display, totalGcb)));
+
         tv_num.setText(String.valueOf(count));
         tv_food_title.setText(shopCarInfo.getName());
-        String machineName = shopCarInfo.getP_machine();
-        String machineNum = machineName.substring(machineName.length() - 3, machineName.length());
-        tv_machine_title.setText(String.format(context.getString(R.string.machine_name),"成都",machineNum));
+        String machineName = machineInfo.getNickname();
+        String machineLocation = machineInfo.getCity();
+        /**String machineNum = machineName.substring(machineName.length() - 3, machineName.length());*/
+        tv_machine_title.setText(String.format(context.getString(R.string.machine_name), machineLocation, machineName));
 
         ImageOptions imageOptions = new ImageOptions.Builder()
                 .setFailureDrawableId(R.drawable.ic_launcher)
@@ -187,9 +205,12 @@ public class HomePayActivity extends BaseActivity {
                 tv_num.setText(String.valueOf(count));
                 shopCarInfo.setP_local_number(count);
                 totalPrice = shopCarInfo.getPrice_cny() * count;
-                tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
+                if (cb_gcb.isChecked()) {
+                    tv_total_price.setText(context.getString(R.string.take_food_gcb_total, totalGcb));
+                } else {
+                    tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
+                }
                 tv_wei_num.setText(context.getString(R.string.rmb_display, totalPrice));
-                tv_money.setText(String.valueOf(context.getString(R.string.rmb_display, totalPrice)));
                 totalGcb = shopCarInfo.getPrice_vr9() * count;
                 gcbBigDecimal = BigDecimal.valueOf(totalGcb);
                 tv_gcb_num.setText(context.getString(R.string.gcb_display, gcbBigDecimal));
@@ -203,9 +224,12 @@ public class HomePayActivity extends BaseActivity {
                     tv_num.setText(String.valueOf(count));
                     shopCarInfo.setP_local_number(count);
                     totalPrice = shopCarInfo.getPrice_cny() * count;
-                    tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
+                    if (cb_gcb.isChecked()) {
+                        tv_total_price.setText(context.getString(R.string.take_food_gcb_total, totalGcb));
+                    } else {
+                        tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
+                    }
                     tv_wei_num.setText(context.getString(R.string.rmb_display, totalPrice));
-                    tv_money.setText(String.valueOf(context.getString(R.string.rmb_display, totalPrice)));
                     totalGcb = shopCarInfo.getPrice_vr9() * count;
                     gcbBigDecimal = BigDecimal.valueOf(totalGcb);
                     tv_gcb_num.setText(context.getString(R.string.gcb_display, gcbBigDecimal));

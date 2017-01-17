@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.CarPayActivity;
+import com.jetcloud.hgbw.activity.LoginActivity;
 import com.jetcloud.hgbw.adapter.ShopCarFragmentAdapter;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.bean.MachineInfo;
@@ -46,12 +47,14 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     private ArrayList<ShopCarInfo> listObj;
     @ViewInject(cb_all)
     private CheckBox allCheckbox;
-    @ViewInject(R.id.tv_total_price)
+    @ViewInject(R.id.tv_price_cny)
     private TextView tvTotalPrice;
     @ViewInject(R.id.tv_go_to_pay)
     private TextView tvGoToPay;
     @ViewInject(R.id.layout_car_empty)
     private LinearLayout carEmpty;
+    @ViewInject(R.id.tv_price_vr9)
+    private TextView tv_price_vr9;
     private double totalPrice = 0.00;// 购买的商品总价
     private double totalGcb;
     private int totalCount = 0;// 购买的商品总数量
@@ -163,15 +166,16 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         } else if (!hidden && !isFirst) {
             if (total != SharedPreferenceUtils.getShopCarNumber()){
                 total = SharedPreferenceUtils.getShopCarNumber();
-                Log.i(TAG, "S onHiddenChanged: " + total);
-                totalPrice = 0;
-                totalGcb = 0;
-                allCheckbox.setChecked(false);
-                tvGoToPay.setText("去支付(" + 0 + ")");
-                tvTotalPrice.setText(getString(R.string.take_food_total, totalPrice));
-                initData();
-                isEmptyCar();
+                Log.i(TAG_LOG, "S onHiddenChanged: " + total);
             }
+            totalPrice = 0;
+            totalGcb = 0;
+            allCheckbox.setChecked(false);
+            tvGoToPay.setText("去支付(" + 0 + ")");
+            tvTotalPrice.setText(getString(R.string.take_food_total, totalPrice));
+            tv_price_vr9.setText(getString(R.string.take_food_gcb_total, totalGcb));
+            initData();
+            isEmptyCar();
         }
         super.onHiddenChanged(hidden);
     }
@@ -211,10 +215,14 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
                     Toast.makeText(getActivity(), "请选择要支付的商品", Toast.LENGTH_LONG).show();
                     return;
                 }
+                if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)){
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
+                } else {
                     saveListToApp();
-                Intent intent = new Intent(getActivity(), CarPayActivity.class);
-                startActivity(intent);
-                break;
+                    Intent intent = new Intent(getActivity(), CarPayActivity.class);
+                    startActivity(intent);
+                    break;
+                }
         }
     }
 
@@ -226,7 +234,6 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         Map<String,List<ShopCarInfo>> newList = new HashMap<>();
         for (int i = 0; i < groups.size(); i ++){
             MachineInfo machineInfo = groups.get(i);
-//            if (groups.is)
             List<ShopCarInfo> shopCarInfos = children.get(machineInfo.getNumber());
             List<ShopCarInfo> newInfoList = new ArrayList<>();
             for (int j = 0; j < shopCarInfos.size(); j ++){
@@ -431,6 +438,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         }
 
         tvTotalPrice.setText(getString(R.string.take_food_total, totalPrice));
+        tv_price_vr9.setText(getString(R.string.take_food_gcb_total, totalGcb));
         tvGoToPay.setText("去支付(" + totalCount + ")");
         //计算购物车的金额为0时候清空购物车的视图
         if (totalCount == 0) {

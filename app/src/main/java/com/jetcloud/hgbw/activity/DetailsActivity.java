@@ -31,7 +31,9 @@ import org.xutils.image.ImageOptions;
 import org.xutils.x;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class DetailsActivity extends BaseActivity {
@@ -45,10 +47,10 @@ public class DetailsActivity extends BaseActivity {
 	private ShopCarInfo shopCarInfo;
 	private LinearLayout ll_nav_bottom;
 	private ScrollView sv_all_layout;
+	private TextView tv_empty;
 
 	private double totalPriceCny;
 	private double totalPriceVr9;
-	private double totalGcb;
 	private List<ShopCarInfo> listObj;
 	private List<MachineInfo> groups = new ArrayList<>();
 	private MachineInfo machineInfo;
@@ -81,15 +83,16 @@ public class DetailsActivity extends BaseActivity {
 		number = getViewWithClick(R.id.number);
 		ll_nav_bottom = getView(R.id.ll_nav_bottom);
 		sv_all_layout = getView(R.id.sv_all_layout);
-
+		tv_empty = getView(R.id.tv_empty);
 	}
 
 	@Override
 	protected void loadData() {
 
 		Intent i = getIntent();
-		machineNum = i.getStringExtra("mechine_number");
+		machineInfo = (MachineInfo) i.getSerializableExtra("machine");
 		foodId = i.getStringExtra("food_id");
+		machineNum = machineInfo.getNumber();
 		Log.i("log", "food id: " + foodId);
 		Log.i("log", "machine num: " + machineNum);
 		//只有一件商品
@@ -126,9 +129,9 @@ public class DetailsActivity extends BaseActivity {
 				number.setText(String.valueOf(poductNum));
 				if (shopCarInfo != null) {
 					totalPriceCny = shopCarInfo.getPrice_cny() * poductNum;
-					totalPriceVr9 = shopCarInfo.getPrice_cny() * poductNum;
-					tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), totalPriceCny));
-					tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.gcb_display), totalPriceVr9));
+					totalPriceVr9 = shopCarInfo.getPrice_vr9() * poductNum;
+					tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.take_food_total), totalPriceCny));
+					tv_price_vr9.setText(String.format(DetailsActivity.this.getString(R.string.take_food_gcb_total), totalPriceVr9));
 					shopCarInfo.setP_local_number(poductNum);
 				}
 				break;
@@ -138,9 +141,9 @@ public class DetailsActivity extends BaseActivity {
 					number.setText(String.valueOf(poductNum));
 					if (shopCarInfo != null) {
 						totalPriceCny = shopCarInfo.getPrice_cny() * poductNum;
-						totalPriceVr9 = shopCarInfo.getPrice_cny() * poductNum;
-						tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), totalPriceCny));
-						tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.gcb_display), totalPriceVr9));
+						totalPriceVr9 = shopCarInfo.getPrice_vr9() * poductNum;
+						tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.take_food_total), totalPriceCny));
+						tv_price_vr9.setText(String.format(DetailsActivity.this.getString(R.string.take_food_gcb_total), totalPriceVr9));
 						shopCarInfo.setP_local_number(poductNum);
 					}
 				}
@@ -149,9 +152,20 @@ public class DetailsActivity extends BaseActivity {
 			case R.id.tv_go_to_pay:
 				if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)) {
 					context.startActivity(new Intent(context, LoginActivity.class));
+				} else {
+					List<MachineInfo> groups = new ArrayList<>();
+					groups.add(machineInfo);
+					Map<String, List<ShopCarInfo>> children = new HashMap<>();
+					List<ShopCarInfo> shopCarInfos = new ArrayList<>();
+					shopCarInfos.add(shopCarInfo);
+					children.put(machineInfo.getNumber(),shopCarInfos);
+					app.setGroups(groups);
+					app.setChildren(children);
+					app.setTotalGcb(totalPriceCny);
+					app.setTotalPrice(totalPriceVr9);
+					Intent i = new Intent(DetailsActivity.this, DetailPayActivity.class);
+					startActivity(i);
 				}
-				Intent i = new Intent(DetailsActivity.this, DetailPayActivity.class);
-				startActivity(i);
 				break;
 			//添加到购物车
 			case R.id.tv_add_car:
@@ -207,6 +221,7 @@ public class DetailsActivity extends BaseActivity {
 							ll_nav_bottom.setVisibility(View.GONE);
 							sv_all_layout.setVisibility(View.GONE);
 							topbar.setCenterText("商品不存在");
+							tv_empty.setVisibility(View.VISIBLE);
 						}
 					}
 
@@ -236,13 +251,14 @@ public class DetailsActivity extends BaseActivity {
 		if (foodDetailBean.getStatus().equals("success") && infoBean.getNum() != 0){
 			ll_nav_bottom.setVisibility(View.VISIBLE);
 			sv_all_layout.setVisibility(View.VISIBLE);
+			tv_empty.setVisibility(View.GONE);
 			shopCarInfo = infoBean;
 			titleText = shopCarInfo.getName();
 			topbar.setCenterText(titleText);
 			tv_content.setText(shopCarInfo.getDescription());
-			tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.rmb_display), shopCarInfo
+			tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.take_food_total), shopCarInfo
 					.getPrice_cny()));
-			tv_price_vr9.setText(String.format(DetailsActivity.this.getString(R.string.gcb_display), shopCarInfo
+			tv_price_vr9.setText(String.format(DetailsActivity.this.getString(R.string.take_food_gcb_total), shopCarInfo
 					.getPrice_vr9()));
 			ImageOptions imageOptions = new ImageOptions.Builder()
 					.setFailureDrawableId(R.drawable.ic_launcher)
@@ -256,6 +272,7 @@ public class DetailsActivity extends BaseActivity {
 		} else {
 			ll_nav_bottom.setVisibility(View.GONE);
 			sv_all_layout.setVisibility(View.GONE);
+			tv_empty.setVisibility(View.VISIBLE);
 			topbar.setCenterText("商品不存在");
 		}
 	}
@@ -271,8 +288,10 @@ public class DetailsActivity extends BaseActivity {
 
 				ShopCarInfo carInfo;
 				MachineInfo machineInfo;
+				int oldNum;
+				int newNum;
 				try {
-					carInfo = app.db.selector(ShopCarInfo.class).where("p_id", "=", shopCarInfoId).findFirst();
+					carInfo = app.db.selector(ShopCarInfo.class).where("id", "=", shopCarInfoId).findFirst();
 					//如果数据库里不存在，数量为1,并向数据库添加一项；存在，就取出来+1再存回去
 					if (carInfo == null) {
 						carInfo = new ShopCarInfo();
@@ -280,6 +299,7 @@ public class DetailsActivity extends BaseActivity {
 						machineInfo.setAddress(app.getGroups().get(0).getAddress());
 						machineInfo.setNickname(app.getGroups().get(0).getNickname());
 						machineInfo.setNumber(app.getGroups().get(0).getNumber());
+						machineInfo.setCity(app.getGroups().get(0).getCity());
 						carInfo.setP_machine(app.getGroups().get(0).getNumber());
 						carInfo.setId(shopCarInfo.getId());
 						carInfo.setName(shopCarInfo.getName());
@@ -290,8 +310,8 @@ public class DetailsActivity extends BaseActivity {
 						carInfo.setPrice_vr9(shopCarInfo.getPrice_vr9());
 						app.db.saveOrUpdate(machineInfo);
 					} else {
-						int oldNum = carInfo.getP_local_number();
-						int newNum = oldNum + poductNum;
+						oldNum = carInfo.getP_local_number();
+						newNum = oldNum + poductNum;
 						carInfo.setP_local_number(newNum);
 					}
 					//增加商品数量

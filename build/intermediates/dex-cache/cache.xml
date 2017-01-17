@@ -30,6 +30,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_20d988fd4a3fe3e28a1d075ec5dec55f4ae21876\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -43,7 +52,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="c47be91b6bb046110cfa99d6a35840faec87ce70">
+        sha1="f49ad35e736f2e113ab27f22a7785eaa601f84d9">
         <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\2\BaiduLBS_Android_7d2480db9752fcd04079c64c56b652ffcea9d75e\classes.dex" />
     </item>
     <item
@@ -66,12 +75,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.0_ae2da3f3ab1e0ea895e3bbfd6c413c98edb6285e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
         <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.1.0_a4af2421b4d77a8298bb417e0a25f1defb863759\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\AS_SDK\SDK\extras\android\m2repository\com\android\support\support-annotations\25.1.0\support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.0_adf5c9f3b1308651284139225085da4f94112567\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -93,6 +120,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="F:\work\Hgbw1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="9859af6556861042edc8e5d036939045dc690dad">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0649e7b3d31cac927947fc89324e40ebfaa63724\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\work\Hgbw1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="571d1753dc9743cc0c90dffa8a510d03d811764b">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_232fd2c694f67a766f73068493135485b9cdff13\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -102,57 +147,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="F:\work\Hgbw1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="F:\work\Hgbw1\app\libs\IndoorscapeAlbumPlugin.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="3b09c1d84c42c2841549c153afe5632b1acd970d">
-        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_232fd2c694f67a766f73068493135485b9cdff13\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
-        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.1.0_2b8f424a682e26d6a6d215a1e0d30e3695624493\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Cqing\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
-        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.8.0_a129ccadf92111bd2bdae473e4ed8e78f861100f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.0_ae2da3f3ab1e0ea895e3bbfd6c413c98edb6285e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\AS_SDK\SDK\extras\android\m2repository\com\android\support\support-annotations\25.1.0\support-annotations-25.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.0_adf5c9f3b1308651284139225085da4f94112567\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\work\Hgbw1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="7a6bee183c322ecdf0f8f5e4a8ab6391e40dd5a1">
-        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0649e7b3d31cac927947fc89324e40ebfaa63724\classes.dex" />
+        sha1="f4ac7ae5070911d02290331664a36475fb9a5ebb">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\2\IndoorscapeAlbumPlugin_06827514ed5c8285b5ffb0ca4ab0dcfa18937c22\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -162,6 +162,15 @@
         revision="25.0.1"
         sha1="40595dbd3e3f1b87b27e914340d0e7dfd2d5b3d3">
         <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\2\universal-image-loader-1.9.4-with-sources_8328d5fd6c7bbe509725ac6eaa82d167d650656e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.1.0_2b8f424a682e26d6a6d215a1e0d30e3695624493\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -180,6 +189,15 @@
         revision="25.0.1"
         sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
         <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.1.0_1d9190cef639bde4c0ede7a03f128d3d5481c15b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Cqing\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.8.0_a129ccadf92111bd2bdae473e4ed8e78f861100f\classes.dex" />
     </item>
 
 </items>

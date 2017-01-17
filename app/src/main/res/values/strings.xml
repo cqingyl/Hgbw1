@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
 
-    <string name="app_name">Hgbw</string>
+    <string name="app_name">禾谷百味</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_login">LoginActivity</string>
@@ -32,6 +32,7 @@
     <!-- 静态变量 -->
     <string name="pay_way_gcb">vr9</string>
     <string name="pay_way_weixin">weixin</string>
+    <string name="pay_way_cny">cny</string>
     <string name="weixin">weixin</string>
     <string name="jump_resource">jump resource</string>
     <!-- machine list -->

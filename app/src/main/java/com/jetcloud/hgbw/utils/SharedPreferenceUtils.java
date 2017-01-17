@@ -15,11 +15,11 @@ public class SharedPreferenceUtils {
     private final static String PACKAGE_NAME = "com.jetcloud.hgbw";
     private final static String SHOP_CAR_NUMBER = "shopCarNumber";
     private final static String MY_ACCOUNT = "my_account";
+    private final static String MY_PASSWORD = "my_account";
     private final static String TRADE_ACCOUNT = "trade_account";
-    private final static String BIND_STATUS = "bind_status";
-    public final static String BINDING_STATE = "binding_state";
-    public final static String UNBINDING_STATE = "unbinding-State";
-    public final static String IDENTITY = "identity";
+    private final static String IDENTITY = "identity";
+    public final static String BINDING_STATE = "bind";
+    public final static String UNBINDING_STATE = "unbind";
     public final static String MACHINE_NUM = "machine_num";
     public final static String WITHOUT_LOGIN = "without_login";
     public final static String WITHOUT_LOCATION = "without_location";
@@ -49,11 +49,11 @@ public class SharedPreferenceUtils {
     }
 
     public static String getBindStatus() {
-        return preferences.getString(BIND_STATUS, UNBINDING_STATE);
+        return preferences.getString(BINDING_STATE, UNBINDING_STATE);
     }
 
     public static void setBindStatus(String bindStatus) {
-        editor.putString(BIND_STATUS, bindStatus).commit();
+        editor.putString(BINDING_STATE, bindStatus).commit();
     }
 
     public static String getTradeAccount() {
@@ -78,6 +78,14 @@ public class SharedPreferenceUtils {
 
     public static void setMachineNum(String machineNum) {
         editor.putString(MACHINE_NUM, machineNum).commit();
+    }
+
+    public static String getMyPassword() {
+        return preferences.getString(MY_PASSWORD, WITHOUT_LOGIN);
+    }
+
+    public static void setMyPassword(String myPassword) {
+        editor.putString(MY_PASSWORD, myPassword).commit();
     }
 
 

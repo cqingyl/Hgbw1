@@ -3,12 +3,12 @@
 
  <item 
      android:state_checked="true"
-     ><color android:color="@color/white"/></item>
+     ><color android:color="@color/btn_bg_gray"/></item>
 
 
  <item 
      android:state_checked="false"
-     ><color android:color="@color/btn_bg_gray"/></item>
+     ><color android:color="@color/white"/></item>
 
 
 </selector>

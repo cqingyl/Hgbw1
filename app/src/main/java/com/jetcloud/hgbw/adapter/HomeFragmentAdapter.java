@@ -111,7 +111,7 @@ public class HomeFragmentAdapter extends BaseAdapter {
             public void onClick(View arg0) {
                 Intent i = new Intent(new Intent(context, DetailsActivity.class));
 //                saveListToApp(dataBean);
-                i.putExtra("mechine_number", machineInfo.getNumber());
+                i.putExtra("machine", machineInfo);
                 i.putExtra("food_id", String.valueOf(dataBean.getId()));
                 context.startActivity(i);
             }
@@ -121,10 +121,11 @@ public class HomeFragmentAdapter extends BaseAdapter {
             public void onClick(View view) {
                 if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)) {
                     context.startActivity(new Intent(context, LoginActivity.class));
+                } else {
+                    Intent i = new Intent(context, HomePayActivity.class);
+                    saveListToApp(dataBean);
+                    context.startActivity(i);
                 }
-                Intent i = new Intent(context, HomePayActivity.class);
-                saveListToApp(dataBean);
-                context.startActivity(i);
             }
         });
         return convertView;
@@ -133,10 +134,11 @@ public class HomeFragmentAdapter extends BaseAdapter {
     private void saveListToApp(FoodBean.DataBean dataBean) {
         Map<String,List<ShopCarInfo>> newList = new HashMap<>();
         List<ShopCarInfo> newInfoList = new ArrayList<>();
-        dataBean.setP_machine(machineInfo.getNumber());
+        List<MachineInfo> newMachineList = new ArrayList<>();
+        newMachineList.add(machineInfo);
+        app.setGroups(newMachineList);
         newInfoList.add(dataBean);
         newList.put(machineInfo.getNumber(), newInfoList);
-//        Log.i(TAG, "saveListToApp: " + newList.size());
         app.setChildren(newList);
     }
     public interface AddGoodNumberInterface {

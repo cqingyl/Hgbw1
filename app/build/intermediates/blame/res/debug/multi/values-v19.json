@@ -1027,63 +1027,6 @@
                         "endOffset": 447
                     }
                 }
-            },
-            {
-                "to": {
-                    "startLine": 56,
-                    "startColumn": 4,
-                    "startOffset": 2490,
-                    "endColumn": 52,
-                    "endOffset": 2538
-                },
-                "from": {
-                    "file": "F:\\work\\Hgbw1\\app\\src\\main\\res\\values-v19\\strings.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 101,
-                        "endColumn": 52,
-                        "endOffset": 149
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 57,
-                    "startColumn": 4,
-                    "startOffset": 2543,
-                    "endColumn": 41,
-                    "endOffset": 2580
-                },
-                "from": {
-                    "file": "F:\\work\\Hgbw1\\app\\src\\main\\res\\values-v19\\strings.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 58,
-                        "endColumn": 41,
-                        "endOffset": 95
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 58,
-                    "startColumn": 4,
-                    "startOffset": 2585,
-                    "endColumn": 52,
-                    "endOffset": 2633
-                },
-                "from": {
-                    "file": "F:\\work\\Hgbw1\\app\\src\\main\\res\\values-v19\\strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 155,
-                        "endColumn": 52,
-                        "endOffset": 203
-                    }
-                }
             }
         ]
     }

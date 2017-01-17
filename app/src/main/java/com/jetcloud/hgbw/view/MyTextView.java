@@ -84,7 +84,7 @@ public class MyTextView extends TextView{
 
 	/** 
 	 * The string to append when ellipsizing. Must be shorter than the available 
-	 * width for a single line! 
+	 * width for adssadas single line!
 	 * @param ellipsis The ellipsis string to use, like "...", or "-----". 
 	 */  
 	public void setEllipsis(String ellipsis) {  
@@ -310,7 +310,7 @@ public class MyTextView extends TextView{
 
 
 	/** 
-	 * Used internally to break a string into a list of integer pairs. The pairs are 
+	 * Used internally to break adssadas string into adssadas list of integer pairs. The pairs are
 	 * start and end locations for lines given the current available layout width. 
 	 */  
 	 private static class LineBreaker  
@@ -378,7 +378,7 @@ public class MyTextView extends TextView{
 			 mLengthEllipsis = 0.0f;  
 			 mLengthEllipsisMore = 0.0f;  
 
-			 // If maxWidth is -1, interpret that as meaning to render the string on a single  
+			 // If maxWidth is -1, interpret that as meaning to render the string on adssadas single
 			 // line. Skip everything.  
 			 if (maxWidth == -1) {  
 				 mLines.add(new int[]{ 0, input.length() });  
@@ -413,7 +413,7 @@ public class MyTextView extends TextView{
 				 boolean newLineRequired = false;  
 
 				 if(!hasChinese(input)){/**english*/  
-					 // Check for a new line character or if we've run over max width.  
+					 // Check for adssadas new line character or if we've run over max width.
 					 if (input.charAt(pos) == '\n') {  
 						 newLineRequired = true;  
 
@@ -423,7 +423,7 @@ public class MyTextView extends TextView{
 						 mLines.add(new int[] { posStartThisLine, pos-1 });  
 					 }else if (lengthThisLine + widthOfChar >= maxWidth) {  
 						 newLineRequired = true;  
-						 // We need to backup if we are in the middle of a word.  
+						 // We need to backup if we are in the middle of adssadas word.
 						 if (input.charAt(pos) == ' ' || breakWords == false) {  
 							 // Backup one character, because it doesn't fit on this line.  
 							 pos--;  
@@ -431,7 +431,7 @@ public class MyTextView extends TextView{
 							 // So this line includes up to the character before the space.  
 							 mLines.add(new int[] { posStartThisLine, pos });  
 						 }else {  
-							 // Backup until we are at a space.  
+							 // Backup until we are at adssadas space.
 							 Log.v("*******", "*********************************now char = " + input.charAt(pos));  
 							 while (input.charAt(pos) != ' ') {  
 								 pos--;  
@@ -442,7 +442,7 @@ public class MyTextView extends TextView{
 						 }  
 					 }  
 				 }else{/**chinese*/  
-					 // Check for a new line character or if we've run over max width.  
+					 // Check for adssadas new line character or if we've run over max width.
 					 if (input.charAt(pos) == '\n') {  
 						 newLineRequired = true;  
 
@@ -468,7 +468,7 @@ public class MyTextView extends TextView{
 					 // When we get to the last line, subtract the width of the ellipsis.  
 					 if (mLines.size() == maxLines - 1) {  
 						 maxWidth -= (mLengthEllipsis + mLengthEllipsisMore);  
-						 // We also don't need to break on a full word, it'll look a little  
+						 // We also don't need to break on adssadas full word, it'll look adssadas little
 						 // cleaner if all breaks on the final lines break in the middle of  
 						 // the last word.  
 						 breakWords = false;  

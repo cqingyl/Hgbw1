@@ -104,7 +104,7 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/reameet" />
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -113,53 +113,78 @@
                         android:paddingRight="10dp"
                         android:paddingTop="5dp" >
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:id="@+id/tv_food_title"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:text="午餐肉套饭"
+                            android:textColor="@color/text_b1"
+                            android:textSize="@dimen/text_huge" />
 
-                            <TextView
-                                android:id="@+id/tv_food_title"
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="x2"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/text_bigbig"
+                            android:id="@+id/tv_num"
+                            android:layout_marginRight="21dp"
+                            android:layout_marginEnd="21dp"
+                            android:layout_below="@+id/ll_money_layout"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="14dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_money_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true">
+                            <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                tools:text="午餐肉套饭"
-                                android:textColor="@color/text_b1"
-                                android:textSize="@dimen/text_huge" />
+                                android:src="@drawable/cny"
+                                />
                             <TextView
-                                android:id="@+id/tv_money"
-                                android:layout_width="0dp"
-                                android:layout_weight="0.8"
+                                android:id="@+id/tv_price_cny"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="right"
                                 android:layout_marginLeft="3dp"
-                                tools:text="¥60.00"
+                                android:layout_marginRight="3dp"
+                                tools:text="60.00元"
                                 android:textColor="@color/bottom_nav_text_color_check"
                                 android:textSize="@dimen/text_big" />
-
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/vr9"
+                                />
+                            <TextView
+                                android:id="@+id/tv_price_vr9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="3dp"
+                                tools:text="0.15GCB"
+                                android:textColor="@color/bottom_nav_text_color_check"
+                                android:textSize="@dimen/text_big" />
                         </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/tv_num"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="right|bottom"
-                                android:gravity="center"
-                                android:paddingBottom="8dp"
-                                android:paddingTop="8dp"
-                                tools:text="x1"
-                                android:textColor="@color/gray"
-                                android:textSize="@dimen/text_bigbig" />
-
-                    </LinearLayout>
+                    </RelativeLayout>
                 </LinearLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:text="我的优惠券"
-                    android:layout_marginLeft="15dp"
-                    android:textColor="@color/black"/>
-                <View style="@style/lineView"/>
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="我的优惠券"-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:textColor="@color/black"/>-->
+                <!--<View style="@style/lineView"/>-->
                 <com.jetcloud.hgbw.view.MyListView
                     android:id="@+id/lv_my_ticket"
                     style="@style/MyListView"

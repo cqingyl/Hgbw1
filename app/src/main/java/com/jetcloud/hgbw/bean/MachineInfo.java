@@ -30,7 +30,8 @@ public class MachineInfo implements Serializable{
      */
 
     private String banner_name;
-    private int banner_id;
+    private String banner_id;
+    @Column(name="city")
     private String city;
     @Column(name="id",isId=true,autoGen=false)
     private String number;
@@ -48,7 +49,7 @@ public class MachineInfo implements Serializable{
     @Column(name = "latitude")
     private String latitude;
     private String version;
-
+    private Object own;
     public String getLocate() {
         return locate;
     }
@@ -151,11 +152,11 @@ public class MachineInfo implements Serializable{
         this.banner_name = banner_name;
     }
 
-    public int getBanner_id() {
+    public String getBanner_id() {
         return banner_id;
     }
 
-    public void setBanner_id(int banner_id) {
+    public void setBanner_id(String banner_id) {
         this.banner_id = banner_id;
     }
 
@@ -165,5 +166,13 @@ public class MachineInfo implements Serializable{
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public Object getOwn() {
+        return own;
+    }
+
+    public void setOwn(Object own) {
+        this.own = own;
     }
 }
