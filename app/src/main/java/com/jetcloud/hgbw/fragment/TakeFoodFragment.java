@@ -8,9 +8,10 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
-import com.jetcloud.hgbw.adapter.TakeFoodFragmentAdapter;
+import com.jetcloud.hgbw.adapter.TakeFoodParentAdapter;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.TakeFoodInfo;
+import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 import com.jetcloud.hgbw.view.MyListView;
 
@@ -20,16 +21,14 @@ import org.xutils.ex.HttpException;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TakeFoodFragment extends BaseFragment{
 	private static final String TAG_LOG = TakeFoodFragment.class.getSimpleName();
 	private static TakeFoodFragment takeFoodFragment;
 	private MyListView lv_takefood;
-	private TakeFoodFragmentAdapter adapter;
+	private TakeFoodParentAdapter adapter;
 	private CustomProgressDialog progress;
-	List<TakeFoodInfo.MealBean>data = new ArrayList<TakeFoodInfo.MealBean>();
 	public static TakeFoodFragment newInstance() {
 		if (takeFoodFragment == null) {
 			takeFoodFragment = new TakeFoodFragment();
@@ -44,33 +43,42 @@ public class TakeFoodFragment extends BaseFragment{
 
 	@Override
 	protected void initView() {
-		// TODO Auto-generated method stub
 		topbar.setCenterText("取餐列表");
 		lv_takefood= getView(R.id.lv_takefood);
 	}
 
 	@Override
 	public void initData() {
-		// TODO Auto-generated method stub
-		data = new ArrayList<TakeFoodInfo.MealBean>();
-
-		adapter = new TakeFoodFragmentAdapter(getActivity(), data);
-		lv_takefood.setAdapter(adapter);
-//		getNetData();
+		getOrderRequest();
 	}
 
-	private void getNetData() {
-		final RequestParams params = new RequestParams(HgbwUrl.FOOD_BY_MACHINE_URL);
+	/**
+	 * 处理json数据
+	 */
+	private void getOrderDataFromJson(String result) throws JSONException {
+		Gson gson = new Gson();
+		TakeFoodInfo takeFoodInfo = gson.fromJson(result, TakeFoodInfo.class);
+		List<TakeFoodInfo.OrdersBean> ordersBeenList = takeFoodInfo.getOrders();
+//        for (int i = 0; i < ordersBeenList.size(); i ++) {
+//            MyOrderBean.OrdersBean ordersBean = ordersBeenList.get(i);
+//        }
+
+		adapter = new TakeFoodParentAdapter(getActivity(), ordersBeenList);
+		lv_takefood.setAdapter(adapter);
+
+	}
+
+
+	private void getOrderRequest() {
+		final RequestParams params = new RequestParams(HgbwUrl.GET_ORDER_URL);
 		//缓存时间
-//		params.addBodyParameter("m_id", "ok2SdwCTyMl0B2Vou5NVsv7GCgr4");
-		params.addBodyParameter("m_id", "a43a467afdf-5");
-		params.addBodyParameter("type", "1");
+		params.addBodyParameter("identity", SharedPreferenceUtils.getIdentity());
 		params.setCacheMaxAge(1000 * 60);
 
 		x.task().run(new Runnable() {
 			@Override
 			public void run() {
-				x.http().post(params, new Callback.CacheCallback<String>() {
+				x.http().get(params, new Callback.CacheCallback<String>() {
 
 					private boolean hasError = false;
 					private String result = null;
@@ -94,13 +102,13 @@ public class TakeFoodFragment extends BaseFragment{
 					public void onError(Throwable ex, boolean isOnCallback) {
 						hasError = true;
 						Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
-						Log.e(TAG_LOG, "onError: " + ex.getMessage());
+						Log.e(TAG_LOG, "getOrderRequest onError: " + ex.getMessage());
 						if (ex instanceof HttpException) { // 网络错误
 							HttpException httpEx = (HttpException) ex;
 							int responseCode = httpEx.getCode();
 							String responseMsg = httpEx.getMessage();
 							String errorResult = httpEx.getResult();
-							Log.e(TAG_LOG, "onError " + " code: " + responseCode + " message: " + responseMsg);
+							Log.e(TAG_LOG, "getOrderRequest onError " + " code: " + responseCode + " message: " + responseMsg);
 						} else { // 其他错误
 						}
 					}
@@ -114,13 +122,12 @@ public class TakeFoodFragment extends BaseFragment{
 					public void onFinished() {
 						progress.dismiss();
 						if (!hasError && result != null) {
-                    	Log.i(TAG_LOG, "onFinished: " + result);
+							Log.i(TAG_LOG, "getOrderRequest onFinished: " + result);
 							try {
-								getDataFromJson(result);
-
+								getOrderDataFromJson(result);
 							} catch (JSONException e) {
 								e.printStackTrace();
-								Log.e(TAG_LOG, " json error: " + e.getMessage());
+								Log.e(TAG_LOG, "getOrderRequest json error: " + e.getMessage());
 							}
 						}
 					}
@@ -129,21 +136,12 @@ public class TakeFoodFragment extends BaseFragment{
 				x.task().post(new Runnable() {
 					@Override
 					public void run() {
-						progress = new CustomProgressDialog(getActivity(),"请稍后", R.drawable.fram2);
+						progress = new CustomProgressDialog(getActivity(), "请稍后", R.drawable.fram2);
 						progress.show();
 					}
 				});
 			}
 		});
 
-	}
-	/**
-	 * 处理json数据
-	 * */
-	private void getDataFromJson(String result) throws JSONException {
-		Gson gson = new Gson();
-		TakeFoodInfo takeFoodInfo = gson.fromJson(result, TakeFoodInfo.class);
-		data.addAll(takeFoodInfo.getMeal());
-        adapter.notifyDataSetChanged();
 	}
 }

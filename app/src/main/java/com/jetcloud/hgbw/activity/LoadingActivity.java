@@ -8,7 +8,6 @@ import android.widget.Toast;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
-import com.jetcloud.hgbw.view.CustomProgressDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,7 +19,7 @@ import org.xutils.x;
 public class LoadingActivity extends BaseActivity {
 
     private final static String TAG_LOG = LoadingActivity.class.getSimpleName();
-    private CustomProgressDialog progress;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_loading);
@@ -47,11 +46,11 @@ public class LoadingActivity extends BaseActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)) {
+//                if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)) {
                     jumpMainActivity();
-                }else {
-                    getLoginRequest();
-                }
+//                }else {
+//                    getLoginRequest();
+//                }
 
             }
         }.start();
@@ -110,7 +109,7 @@ public class LoadingActivity extends BaseActivity {
 
                     @Override
                     public void onFinished() {
-                        progress.dismiss();
+
                         if (!hasError && result != null) {
                             Log.i(TAG_LOG, "onFinished: " + result);
                             try {
@@ -123,13 +122,7 @@ public class LoadingActivity extends BaseActivity {
                     }
 
                 });
-                x.task().post(new Runnable() {
-                    @Override
-                    public void run() {
-                        progress = new CustomProgressDialog(LoadingActivity.this, "请稍后", R.drawable.fram2);
-                        progress.show();
-                    }
-                });
+
             }
         });
 
@@ -137,18 +130,13 @@ public class LoadingActivity extends BaseActivity {
 
     /**
      * 处理json数据
-     * 403 重复登录
+     *
      */
     private void getDataFromJson(String result) throws JSONException {
         JSONObject jsonObject = new JSONObject(result);
         if (jsonObject.getString("status").equals("success")) {
             SharedPreferenceUtils.setIdentity(jsonObject.getString("identity"));
-//            Log.i(TAG_LOG, "getDataFromJson identity: " + SharedPreferenceUtils.getIdentity());
             jumpMainActivity();
-        } else if (jsonObject.getString("status").equals("fail") && jsonObject.has("code")) {
-            if (jsonObject.getString("code").equals("403")) {
-                jumpMainActivity();
-            }
         }
 
     }

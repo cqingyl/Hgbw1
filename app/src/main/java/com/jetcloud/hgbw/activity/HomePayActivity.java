@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.app.HgbwApplication;
+import com.jetcloud.hgbw.app.HgbwStaticString;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
@@ -113,9 +114,9 @@ public class HomePayActivity extends BaseActivity {
             app.setTotalPrice(totalPrice);
             app.setTotalGcb(totalGcb);
             if (cb_gcb.isChecked()) {
-                app.setType(HomePayActivity.this.getString(R.string.pay_way_gcb));
+                app.setType(HgbwStaticString.PAY_WAY_VR9);
             } else {
-                app.setType(HomePayActivity.this.getString(R.string.pay_way_weixin));
+                app.setType(HgbwStaticString.PAY_WAY_WEIXIN);
                 Out.Toast(HomePayActivity.this, "暂未开通，敬请期待");
                 return;
             }
@@ -136,7 +137,7 @@ public class HomePayActivity extends BaseActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent intent = new Intent(HomePayActivity.this, BindingActivity.class);
-                                intent.putExtra(HomePayActivity.this.getString(R.string.jump_resource), CarPayActivity
+                                intent.putExtra(HgbwStaticString.JUMP_RESOURCE, CarPayActivity
                                         .class.getSimpleName());
                                 startActivity(intent);
                             }

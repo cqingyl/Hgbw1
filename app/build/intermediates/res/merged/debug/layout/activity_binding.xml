@@ -61,7 +61,37 @@
                 android:textColor="@color/black" />
 
             <EditText
-                android:id="@+id/et_user_count"
+                android:id="@+id/et_trade_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="90dp"
+                android:background="@null"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_big"
+                />
+
+            <View
+                style="@style/lineView"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_light" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" >
+
+            <TextView
+                style="@style/MyTextView2"
+                android:layout_centerVertical="true"
+                android:text="交易宝密码"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/et_trade_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"

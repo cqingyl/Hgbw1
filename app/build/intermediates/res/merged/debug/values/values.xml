@@ -762,10 +762,16 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
     <item name="home" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
     <item name="split_action_bar" type="id"/>
     <item name="textinput_counter" type="id"/>
     <item name="textinput_error" type="id"/>
@@ -823,7 +829,6 @@
     <string name="china_merchants_bank_card">卡号（8888 8888 8888 8888）</string>
     <string name="gcb_display">%.3fGCB</string>
     <string name="hello_world">Hello world!</string>
-    <string name="jump_resource">jump resource</string>
     <string name="machine_list_address">地址：%s</string>
     <string name="machine_list_name">%d号售餐机</string>
     <string name="machine_list_num">售货机编号：%s</string>
@@ -836,9 +841,6 @@
     <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
     <string name="pay_money">%.2f RMB</string>
-    <string name="pay_way_cny">cny</string>
-    <string name="pay_way_gcb">vr9</string>
-    <string name="pay_way_weixin">weixin</string>
     <string name="please_enter_charge_amount">请输入充值金额</string>
     <string name="please_enter_pay_password">请输入支付密码</string>
     <string name="rmb_display">%.2f元</string>
@@ -848,14 +850,14 @@
     <string name="stoplocation">停止定位</string>
     <string name="take_food_gcb_total">合计: %.3fGCB</string>
     <string name="take_food_num">x%d</string>
-    <string name="take_food_order_num">订单号:%d</string>
+    <string name="take_food_order_num">订单号:%s</string>
     <string name="take_food_total">合计: ¥%.2f元</string>
     <string name="title_activity_baidu_map">BaiduMapActivity</string>
     <string name="title_activity_details">DetailsActivity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_my_ticket">MyTicketActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
-    <string name="weixin">weixin</string>
+    <string name="trade_time">交易时间:%s</string>
     <style name="ActivityDialogStyle">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowFrame">@null</item>
@@ -873,6 +875,14 @@
     <style name="Animation.Design.BottomSheetDialog" parent="Animation.AppCompat.Dialog">
         <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
+    </style>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->

@@ -1,15 +1,17 @@
 package com.jetcloud.hgbw.activity.demo;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.baidu.location.BDLocation;
@@ -17,10 +19,14 @@ import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.SDKInitializer;
+import com.baidu.mapapi.bikenavi.BikeNavigateHelper;
+import com.baidu.mapapi.bikenavi.adapter.IBEngineInitListener;
+import com.baidu.mapapi.bikenavi.adapter.IBRoutePlanListener;
+import com.baidu.mapapi.bikenavi.model.BikeRoutePlanError;
+import com.baidu.mapapi.bikenavi.params.BikeNaviLauchParam;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
-import com.baidu.mapapi.map.GroundOverlayOptions;
 import com.baidu.mapapi.map.InfoWindow;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdate;
@@ -28,262 +34,320 @@ import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
+import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
-import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
-import com.baidu.mapapi.model.LatLngBounds;
 import com.jetcloud.hgbw.R;
-import com.jetcloud.hgbw.utils.Out;
+import com.jetcloud.hgbw.activity.LoadingActivity;
+import com.jetcloud.hgbw.bean.MachineLocationBean;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import static com.jetcloud.hgbw.app.HgbwStaticString.MACHINE_LIST;
 
 
 public class LocationActivity extends Activity {
 
-	// 定位相关
-	LocationClient mLocClient;
-	private MyBroadcastReceiver receiver;
-	private MapView mMapView;
-	private BaiduMap mBaiduMap;
-	boolean isFirstLoc = true; // 是否首次定位
-	public MyLocationListenner myListener = new MyLocationListenner();
-
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_location);
-
-		//注册广播
-		receiver = new MyBroadcastReceiver();
-		IntentFilter filter = new IntentFilter();
-		// 网络错误
-		filter.addAction(SDKInitializer.SDK_BROADCAST_ACTION_STRING_NETWORK_ERROR);
-		// 效验key失败
-		filter.addAction(SDKInitializer.SDK_BROADTCAST_ACTION_STRING_PERMISSION_CHECK_ERROR);
-		registerReceiver(receiver, filter);
-		mMapView = (MapView) findViewById(R.id.bmapView);
-		mBaiduMap = mMapView.getMap();
-		init();
-		initOverlay();
-		mBaiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
-			@Override
-			public boolean onMarkerClick(Marker marker) {
-				Log.i("log", "onMarkerClick: ");
-				Out.Toast(LocationActivity.this, "hehe");
-				InfoWindow infoWindow;
-				Button button = new Button(LocationActivity.this);
-				button.setBackgroundResource(R.drawable.popup);
-				if (marker == mMarkerA) {
-					button.setText("更改位置");
-					button.setTextColor(0x0000f);
-					button.setWidth( 300 );
-					button.setOnClickListener(new View.OnClickListener() {
-						@Override
-						public void onClick(View view) {
-							Out.Toast(LocationActivity.this, "yang");
-						}
-					});
-				}
-				infoWindow = new InfoWindow(button,new LatLng(39.963175, 116.400244), 0);
-				mBaiduMap.showInfoWindow(infoWindow);
-				return true;
-			}
-		});
-		//地图渲染完成时回调
-		mBaiduMap.setOnMapRenderCallbadk(new BaiduMap.OnMapRenderCallback() {
-			@Override
-			public void onMapRenderFinished() {
-				drawMark();
-			}
-		});
-
-	}
-
-	private void init() {
-		// 开启定位图层
-		mBaiduMap.setMyLocationEnabled(true);
-		// 定位初始化
-		mLocClient = new LocationClient(this);
-		mLocClient.registerLocationListener(myListener);
-		LocationClientOption option = new LocationClientOption();
-		option.setOpenGps(true); // 打开gps
-		option.setCoorType("bd09ll"); // 设置坐标类型
-		option.setScanSpan(1000);
-		mLocClient.setLocOption(option);
-		mLocClient.start();
-		//描述地图将要发生的变化，使用工厂类MapStatusUpdateFactory创建，设置级别
-		//为18，进去就是18了，默认是12
-		MapStatusUpdate mapStatusUpdate = MapStatusUpdateFactory.zoomTo(18);
-		mBaiduMap.setMapStatus(mapStatusUpdate);
-		//是否显示缩放按钮
-		//mMapView.showZoomControls(false);
-		//显示指南针
-		mBaiduMap.getUiSettings().setCompassEnabled(true);
-		//显示位置
-		mBaiduMap.setCompassPosition(new Point(-1, -1));
-	}
-
-	BitmapDescriptor bitmap;
-
-	// 绘制mark覆盖物
-	private void drawMark() {
+    private final static String TAG_LOG = LoadingActivity.class.getSimpleName();
+    // 定位相关
+    private LocationClient mLocClient;
+    private MyBroadcastReceiver receiver;
+    private MapView mMapView;
+    private BaiduMap mBaiduMap;
+    boolean isFirstLoc = true; // 是否首次定位
+    private MyOrientationListener myOrientationListener;
+    private float mCurrentX;//方向
+    private List<MachineLocationBean.MechinesBean> mechinesBeanList;//含有经纬度
+    public MyLocationListenner myListener = new MyLocationListenner();
+    private Marker[] mMarkers;
+    private BikeNavigateHelper mNaviHelper;//步行导航
+    BikeNaviLauchParam param;
+    private LatLng myLatLng; //我的位置
+    private static boolean isPermissionRequested = false;
 
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_location);
 
-	}
+        //注册广播
+        receiver = new MyBroadcastReceiver();
+        IntentFilter filter = new IntentFilter();
+        // 网络错误
+        filter.addAction(SDKInitializer.SDK_BROADCAST_ACTION_STRING_NETWORK_ERROR);
+        // 效验key失败
+        filter.addAction(SDKInitializer.SDK_BROADTCAST_ACTION_STRING_PERMISSION_CHECK_ERROR);
+        registerReceiver(receiver, filter);
+        mMapView = (MapView) findViewById(R.id.bmapView);
+        mBaiduMap = mMapView.getMap();
+        init();
+        getData();
+        if (mechinesBeanList != null) {
+            initOverlay();
+        }
+        /**
+         * 点击标记物
+         * */
+        mBaiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(final Marker marker) {
+                Log.i("log", "onMarkerClick: ");
+                if (myLatLng != null) {
+                    initBikeNavigateHelper(myLatLng, marker.getPosition());
+                    InfoWindow infoWindow;
+//                    LinearLayout linearLayout = new LinearLayout(LocationActivity.this);
+//                    linearLayout.setOrientation(LinearLayout.HORIZONTAL);
+//                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//                    linearLayout.setBackgroundResource(R.drawable.mark_popu);
+//                    Button button = new Button(LocationActivity.this);
+//                    button.setBackgroundResource(R.drawable.bike_nav_bg);
+//                    button.setText("更改位置");
+//                    button.setTextColor(0x0000f);
+//                    button.setWidth(300);
+//                    linearLayout.addView(button);
+//                    button.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View view) {
+//                            Out.Toast(LocationActivity.this, marker.getPosition().toString());
+//                            startBikeNavi();
+//                        }
+//                    });
+//                    infoWindow = new InfoWindow(button, marker.getPosition(), -47);
+                    View view = View.inflate(LocationActivity.this, R.layout.view_nav, null);
+                    infoWindow = new InfoWindow(view, marker.getPosition(), -47);
+                    mBaiduMap.showInfoWindow(infoWindow);
+                }
 
-	@Override
-	protected void onResume() {
-		mMapView.onResume();
-		super.onResume();
-	}
+                return true;
+            }
+        });
+        //地图渲染完成时回调
+        mBaiduMap.setOnMapRenderCallbadk(new BaiduMap.OnMapRenderCallback() {
+            @Override
+            public void onMapRenderFinished() {
+                drawMark();
+            }
+        });
 
-	@Override
-	protected void onPause() {
-		mMapView.onPause();
-		super.onPause();
-	}
+    }
 
-	@Override
-	protected void onDestroy() {
-		//销毁广播
-		unregisterReceiver(receiver);
+    private void initBikeNavigateHelper(LatLng startPt, LatLng endPt) {
+        mNaviHelper = BikeNavigateHelper.getInstance();
+        param = new BikeNaviLauchParam().stPt(startPt).endPt(endPt);
+    }
+
+    private void getData() {
+        Intent intent = getIntent();
+        if (intent.hasExtra(MACHINE_LIST)) {
+            mechinesBeanList = (List<MachineLocationBean.MechinesBean>) intent.getSerializableExtra(MACHINE_LIST);
+        }
+    }
+
+    private void init() {
+        // 开启定位图层
+        mBaiduMap.setMyLocationEnabled(true);
+        // 定位初始化
+        mLocClient = new LocationClient(this);
+        mLocClient.registerLocationListener(myListener);
+        myOrientationListener = new MyOrientationListener(this);
+        myOrientationListener.setOnOrientationListener(new MyOrientationListener.OnOrientationListener() {
+            @Override
+            public void onOrientationChanged(float x) {
+                mCurrentX = x;
+            }
+        });
+        LocationClientOption option = new LocationClientOption();
+        option.setOpenGps(true); // 打开gps
+        option.setCoorType("bd09ll"); // 设置坐标类型
+        option.setScanSpan(1000);
+        mLocClient.setLocOption(option);
+        mLocClient.start();
+        myOrientationListener.start();
+        //描述地图将要发生的变化，使用工厂类MapStatusUpdateFactory创建，设置级别
+        //为18，进去就是18了，默认是12
+        MapStatusUpdate mapStatusUpdate = MapStatusUpdateFactory.zoomTo(18);
+        mBaiduMap.setMapStatus(mapStatusUpdate);
+        //是否显示缩放按钮
+        //mMapView.showZoomControls(false);
+        /***
+         * 隐藏百度地图logo
+         * */
+        mMapView.removeViewAt(1);
+        //显示指南针
+        mBaiduMap.getUiSettings().setCompassEnabled(true);
+        //显示位置
+        mBaiduMap.setCompassPosition(new Point(-1, -1));
+    }
+
+    BitmapDescriptor bitmap;
+
+    // 绘制mark覆盖物
+    private void drawMark() {
 
 
-		// 退出时销毁定位
-		mLocClient.stop();
-		mLocClient.unRegisterLocationListener(myListener);
-		// 关闭定位图层
-		mBaiduMap.clear();
-		mMapView.onDestroy();
-		super.onDestroy();
-	}
+    }
 
-	class MyBroadcastReceiver extends BroadcastReceiver {
-		//实现一个广播
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			String action = intent.getAction();
-			// 网络错误
-			if (action.equals(SDKInitializer.SDK_BROADCAST_ACTION_STRING_NETWORK_ERROR)) {
-				Toast.makeText(LocationActivity.this, "无法连接网络", Toast.LENGTH_SHORT).show();
-				// key效验失败
-			} else if (action.equals(SDKInitializer.SDK_BROADTCAST_ACTION_STRING_PERMISSION_CHECK_ERROR)) {
-				Toast.makeText(LocationActivity.this, "百度地图key效验失败", Toast.LENGTH_SHORT).show();
-			}
-		}
-	}
+    @Override
+    protected void onResume() {
+        mMapView.onResume();
+        super.onResume();
+    }
 
-	/**
-	 * 定位SDK监听函数
-	 */
-	public class MyLocationListenner implements BDLocationListener {
+    @Override
+    protected void onPause() {
+        mMapView.onPause();
+        super.onPause();
+    }
 
-		@Override
-		public void onReceiveLocation(BDLocation location) {
-			// map view 销毁后不在处理新接收的位置
-			if (location == null || mMapView == null) {
-				return;
-			}
-			MyLocationData locData = new MyLocationData.Builder()
-					.accuracy(location.getRadius())
-					// 此处设置开发者获取到的方向信息，顺时针0-360
-					.direction(100).latitude(location.getLatitude())
-					.longitude(location.getLongitude()).build();
-			mBaiduMap.setMyLocationData(locData);
-			if (isFirstLoc) {
-				isFirstLoc = false;
-				LatLng ll = new LatLng(location.getLatitude(),
-						location.getLongitude());
-				MapStatus.Builder builder = new MapStatus.Builder();
-				builder.target(ll).zoom(18.0f);
-				mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
-			}
-		}
+    @Override
+    protected void onDestroy() {
+        //销毁广播
+        unregisterReceiver(receiver);
 
-		public void onReceivePoi(BDLocation poiLocation) {
 
-		}
-	}
+        // 退出时销毁定位
+        mLocClient.stop();
+        myOrientationListener.stop();
+        mLocClient.unRegisterLocationListener(myListener);
+        // 关闭定位图层
+        mBaiduMap.clear();
+        mMapView.onDestroy();
+        super.onDestroy();
+    }
 
-	public void initOverlay() {
-		// add marker overlay
-		LatLng llA = new LatLng(39.963175, 116.400244);
-		LatLng llB = new LatLng(39.942821, 116.369199);
-		LatLng llC = new LatLng(39.939723, 116.425541);
-		LatLng llD = new LatLng(39.906965, 116.401394);
+    class MyBroadcastReceiver extends BroadcastReceiver {
+        //实现一个广播
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            // 网络错误
+            if (action.equals(SDKInitializer.SDK_BROADCAST_ACTION_STRING_NETWORK_ERROR)) {
+                Toast.makeText(LocationActivity.this, "无法连接网络", Toast.LENGTH_SHORT).show();
+                // key效验失败
+            } else if (action.equals(SDKInitializer.SDK_BROADTCAST_ACTION_STRING_PERMISSION_CHECK_ERROR)) {
+                Toast.makeText(LocationActivity.this, "百度地图key效验失败", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
 
-		MarkerOptions ooA = new MarkerOptions().position(llA).icon(bdA)
-				.zIndex(9).draggable(true);
-			// 掉下动画
-			ooA.animateType(MarkerOptions.MarkerAnimateType.drop);
-		mMarkerA = (Marker) (mBaiduMap.addOverlay(ooA));
-		MarkerOptions ooB = new MarkerOptions().position(llB).icon(bdB)
-				.zIndex(5);
-			// 掉下动画
-			ooB.animateType(MarkerOptions.MarkerAnimateType.drop);
-		mMarkerB = (Marker) (mBaiduMap.addOverlay(ooB));
-		MarkerOptions ooC = new MarkerOptions().position(llC).icon(bdC)
-				.perspective(false).anchor(0.5f, 0.5f).rotate(30).zIndex(7);
-			// 生长动画
-			ooC.animateType(MarkerOptions.MarkerAnimateType.grow);
-		mMarkerC = (Marker) (mBaiduMap.addOverlay(ooC));
-		ArrayList<BitmapDescriptor> giflist = new ArrayList<BitmapDescriptor>();
-		giflist.add(bdA);
-		giflist.add(bdB);
-		giflist.add(bdC);
-		MarkerOptions ooD = new MarkerOptions().position(llD).icons(giflist)
-				.zIndex(0).period(10);
-			// 生长动画
-			ooD.animateType(MarkerOptions.MarkerAnimateType.grow);
-		mMarkerD = (Marker) (mBaiduMap.addOverlay(ooD));
+    /**
+     * 定位SDK监听函数
+     */
+    public class MyLocationListenner implements BDLocationListener {
 
-		// add ground overlay
-		LatLng southwest = new LatLng(39.92235, 116.380338);
-		LatLng northeast = new LatLng(39.947246, 116.414977);
-		LatLngBounds bounds = new LatLngBounds.Builder().include(northeast)
-				.include(southwest).build();
+        @Override
+        public void onReceiveLocation(BDLocation location) {
 
-		OverlayOptions ooGround = new GroundOverlayOptions()
-				.positionFromBounds(bounds).image(bdGround).transparency(0.8f);
-		mBaiduMap.addOverlay(ooGround);
+            // map view 销毁后不在处理新接收的位置
+            if (location == null || mMapView == null) {
+                return;
+            }
+            MyLocationData locData = new MyLocationData.Builder()
+                    .accuracy(location.getRadius())
+                    // 此处设置开发者获取到的方向信息，顺时针0-360
+                    .direction(mCurrentX).latitude(location.getLatitude())
+                    .longitude(location.getLongitude()).build();
+            mBaiduMap.setMyLocationData(locData);
+            // 设置自定义图标  
+            BitmapDescriptor mCurrentMarker = BitmapDescriptorFactory.fromResource(R.drawable.mylocation);
+            MyLocationConfiguration config = new MyLocationConfiguration(MyLocationConfiguration.LocationMode.NORMAL, true, mCurrentMarker);
+            mBaiduMap.setMyLocationConfigeration(config);
+            if (isFirstLoc) {
+                isFirstLoc = false;
+                myLatLng = new LatLng(location.getLatitude(),
+                        location.getLongitude());
+                MapStatus.Builder builder = new MapStatus.Builder();
+                builder.target(myLatLng).zoom(18.0f);
+                mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
+            }
+        }
 
-		MapStatusUpdate u = MapStatusUpdateFactory
-				.newLatLng(bounds.getCenter());
-		mBaiduMap.setMapStatus(u);
+        public void onReceivePoi(BDLocation poiLocation) {
 
-		mBaiduMap.setOnMarkerDragListener(new BaiduMap.OnMarkerDragListener() {
-			public void onMarkerDrag(Marker marker) {
-			}
+        }
+    }
 
-			public void onMarkerDragEnd(Marker marker) {
-				Toast.makeText(
-						LocationActivity.this,
-						"拖拽结束，新位置：" + marker.getPosition().latitude + ", "
-								+ marker.getPosition().longitude,
-						Toast.LENGTH_LONG).show();
-			}
+    public void initOverlay() {
+        // add marker overlay
+        LatLng[] latLngs = new LatLng[mechinesBeanList.size()];
+        mMarkers = new Marker[mechinesBeanList.size()];
+        for (int i = 0; i < mechinesBeanList.size(); i++) {
+            latLngs[i] = new LatLng(Double.parseDouble(mechinesBeanList.get(i).getLatitude()), Double.parseDouble
+                    (mechinesBeanList.get(i).getLongitude()));
+            Log.i(TAG_LOG, "latLngs: " + i + "\nlatitude: " + latLngs[i].latitude + " \nlongitude" + latLngs[i].longitude);
+            MarkerOptions ooA = new MarkerOptions().position(latLngs[i]).icon(bd)
+                    .zIndex(9).draggable(true);
+            // 掉下动画
+            ooA.animateType(MarkerOptions.MarkerAnimateType.drop);
+            mMarkers[i] = (Marker) (mBaiduMap.addOverlay(ooA));
+        }
+    }
 
-			public void onMarkerDragStart(Marker marker) {
-			}
-		});
-	}
+    // 初始化全局 bitmap 信息，不用时及时 recycle
+    BitmapDescriptor bd = BitmapDescriptorFactory
+            .fromResource(R.drawable.mark);
 
-	// 初始化全局 bitmap 信息，不用时及时 recycle
-	BitmapDescriptor bdA = BitmapDescriptorFactory
-			.fromResource(R.drawable.icon_marka);
-	BitmapDescriptor bdB = BitmapDescriptorFactory
-			.fromResource(R.drawable.icon_marka);
-	BitmapDescriptor bdC = BitmapDescriptorFactory
-			.fromResource(R.drawable.icon_marka);
-	BitmapDescriptor bdD = BitmapDescriptorFactory
-			.fromResource(R.drawable.icon_marka);
-	BitmapDescriptor bd = BitmapDescriptorFactory
-			.fromResource(R.drawable.icon_marka);
-	BitmapDescriptor bdGround = BitmapDescriptorFactory
-			.fromResource(R.drawable.icon_marka);
-	private Marker mMarkerA;
-	private Marker mMarkerB;
-	private Marker mMarkerC;
-	private Marker mMarkerD;
+    /**
+     *开始骑行导航
+     * */
+    private void startBikeNavi() {
+        Log.d("View", "startBikeNavi");
+        mNaviHelper.initNaviEngine(this, new IBEngineInitListener() {
+            @Override
+            public void engineInitSuccess() {
+                Log.d("View", "engineInitSuccess");
+                routePlanWithParam();
+            }
+
+            @Override
+            public void engineInitFail() {
+                Log.d("View", "engineInitFail");
+            }
+        });
+    }
+
+    private void routePlanWithParam() {
+        mNaviHelper.routePlanWithParams(param, new IBRoutePlanListener() {
+            @Override
+            public void onRoutePlanStart() {
+                Log.d("View", "onRoutePlanStart");
+            }
+
+            @Override
+            public void onRoutePlanSuccess() {
+                Log.d("View", "onRoutePlanSuccess");
+                Intent intent = new Intent();
+                intent.setClass(LocationActivity.this, BNaviGuideActivity.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onRoutePlanFail(BikeRoutePlanError error) {
+                Log.d("View", "onRoutePlanFail");
+            }
+
+        });
+    }
+
+
+    private void requestPermission() {
+        if (Build.VERSION.SDK_INT >= 23 && !isPermissionRequested) {
+
+            isPermissionRequested = true;
+
+            ArrayList<String> permissions = new ArrayList<>();
+            if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
+            }
+
+            if (permissions.size() == 0) {
+                return;
+            } else {
+                requestPermissions(permissions.toArray(new String[permissions.size()]), 0);
+            }
+        }
+    }
+
 }

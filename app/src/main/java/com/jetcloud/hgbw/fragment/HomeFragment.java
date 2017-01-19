@@ -1,12 +1,9 @@
 package com.jetcloud.hgbw.fragment;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -35,7 +32,6 @@ import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.MachineLocationBean;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.utils.ImageLoaderCfg;
-import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.utils.ShopCarUtil;
 import com.jetcloud.hgbw.utils.TakeInShopCarAnim;
@@ -54,9 +50,11 @@ import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.x;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.jetcloud.hgbw.app.HgbwStaticString.MACHINE_LIST;
 import static org.xutils.x.http;
 
 
@@ -73,11 +71,11 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     private ScrollView sv_all_layout;
     private WheelView wheelView;
     private PopupWindow window;
-    String machineNum;
-    String nickName;
-    List<MachineLocationBean.MechinesBean> mechinesBeanList;
-    List<FoodBean.DataBean> foodBeanDataBeanList;
-    MachineLocationBean.MechinesBean mechinesBean;
+    private String machineNum;
+    private String nickName;
+    private List<MachineLocationBean.MechinesBean> mechinesBeanList;
+    private List<FoodBean.DataBean> foodBeanDataBeanList;
+    private MachineLocationBean.MechinesBean mechinesBean;
     private static final int CHOOSE_NEW_FOOD = 0;
     private static final int CHOOSE_HOT_FOOD = 1;
     private static final int CHOOSE_SET_MEAL = 2;
@@ -148,30 +146,36 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         super.onPause();
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[]
+            grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
 
     @Override
     protected void initView() {
-        PackageManager pm = getActivity().getPackageManager();
-        AlertDialog alert;
-        boolean permission = (PackageManager.PERMISSION_GRANTED ==
-                pm.checkPermission("android.permission.RECORD_AUDIO", getActivity().getPackageName()));
-        // 判断 存储的machineName 是不是默认的值，如果是说明是未定位
-        if (!permission) {
-            Out.Toast(getActivity(),"没有这个权限");
-            alert = new AlertDialog.Builder(getActivity()).create();
-            alert.setTitle("操作提示");
-            alert.setMessage("请打开GPS后再尝试");
-            alert.getWindow().setBackgroundDrawableResource(R.color.white);
 
-            alert.setButton(DialogInterface.BUTTON_POSITIVE, "去开启",
-                    new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-                        }
-                    });
-            alert.show();
-        }
+//        PackageManager pm = getActivity().getPackageManager();
+//        CusAlertDialog alert;
+//        boolean permission = (PackageManager.PERMISSION_GRANTED ==
+//                pm.checkPermission("android.permission.RECORD_AUDIO", getActivity().getPackageName()));
+//        // 判断 存储的machineName 是不是默认的值，如果是说明是未定位
+//        if (!permission) {
+//            Out.Toast(getActivity(),"没有这个权限");
+//            alert = new CusAlertDialog(getActivity());
+//            alert.setTitle("操作提示");
+//            alert.setContent("请打开权限后再尝试");
+//
+//            alert.setPositiveButton("去开启",
+//                    new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View view) {
+//                            startActivity(new Intent(Settings.ACTION_APPLICATION_SETTINGS));
+//                            app.removeAll();
+//                        }
+//                    });
+//            alert.show();
+//        }
 
         app = (HgbwApplication) getActivity().getApplication();
         binner = getView(R.id.binner);
@@ -295,7 +299,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         switch (view.getId()) {
             case R.id.ll_location:
                 Intent intent = new Intent(getActivity(), LocationActivity.class);
-//                intent.putExtra("from", 0);
+                intent.putExtra(MACHINE_LIST, (Serializable) mechinesBeanList);
                 startActivity(intent);
                 break;
             case R.id.ll_choose_machine :
@@ -309,7 +313,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     }
 
     /**
-     *  获取location
+     *  获取 定位后的location
      * */
     @Override
     public void myLocation(double mylongitude, double mylatitude, String city, String street) {
@@ -322,6 +326,9 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         }
     }
 
+    /**
+     * 获取机器列表
+     * **/
     private void loadMachineList(double mylongitude, double mylatitude) {
         final RequestParams params = new RequestParams(HgbwUrl.MACHINE_LOCATION_URL);
         final CustomProgressDialog[] dialog = {null};

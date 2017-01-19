@@ -43,26 +43,26 @@ public final class R {
         public static final int design_appbar_state_list_animator=0x7f060000;
     }
     public static final class attr {
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionBarDivider=0x7f010046;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionBarItemBackground=0x7f010047;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionBarPopupTheme=0x7f010040;
-        /** <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
 <p>May be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -73,219 +73,219 @@ containing adssadas value of this type.
 </table>
          */
         public static final int actionBarSize=0x7f010045;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionBarSplitStyle=0x7f010042;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionBarStyle=0x7f010041;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionBarTabBarStyle=0x7f01003c;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionBarTabStyle=0x7f01003b;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionBarTabTextStyle=0x7f01003d;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionBarTheme=0x7f010043;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionBarWidgetTheme=0x7f010044;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionButtonStyle=0x7f010061;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionDropDownStyle=0x7f01005d;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionLayout=0x7f0100d8;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionMenuTextAppearance=0x7f010048;
-        /** <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
         public static final int actionMenuTextColor=0x7f010049;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionModeBackground=0x7f01004c;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionModeCloseButtonStyle=0x7f01004b;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionModeCloseDrawable=0x7f01004e;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionModeCopyDrawable=0x7f010050;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionModeCutDrawable=0x7f01004f;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionModeFindDrawable=0x7f010054;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionModePasteDrawable=0x7f010051;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionModePopupWindowStyle=0x7f010056;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionModeSelectAllDrawable=0x7f010052;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionModeShareDrawable=0x7f010053;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionModeSplitBackground=0x7f01004d;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionModeStyle=0x7f01004a;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionModeWebSearchDrawable=0x7f010055;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionOverflowButtonStyle=0x7f01003e;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int actionOverflowMenuStyle=0x7f01003f;
-        /** <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int actionProviderClass=0x7f0100da;
-        /** <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int actionViewClass=0x7f0100d9;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int activityChooserViewStyle=0x7f010069;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int alertDialogButtonGroupStyle=0x7f01008d;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int alertDialogCenterButtons=0x7f01008e;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int alertDialogStyle=0x7f01008c;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int alertDialogTheme=0x7f01008f;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int allowStacking=0x7f0100a5;
-        /** <p>Must be adssadas floating point value, such as "<code>1.2</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int alpha=0x7f0100b7;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int arrowHeadLength=0x7f0100c9;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int arrowShaftLength=0x7f0100ca;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int autoCompleteTextViewStyle=0x7f010094;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int background=0x7f01000c;
-        /** <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
         public static final int backgroundSplit=0x7f01000e;
-        /** <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
         public static final int backgroundStacked=0x7f01000d;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int backgroundTint=0x7f01013f;
         /** <p>Must be one of the following constant values.</p>
@@ -302,50 +302,50 @@ containing adssadas value of this type.
 </table>
          */
         public static final int backgroundTintMode=0x7f010140;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int barLength=0x7f0100cb;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int behavior_autoHide=0x7f0100d2;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int behavior_hideable=0x7f0100a3;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int behavior_overlapTop=0x7f0100f3;
-        /** <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
 <p>May be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -356,54 +356,54 @@ containing adssadas value of this type.
 </table>
          */
         public static final int behavior_peekHeight=0x7f0100a2;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int behavior_skipCollapsed=0x7f0100a4;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int borderWidth=0x7f0100d0;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int borderlessButtonStyle=0x7f010066;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int bottomSheetDialogTheme=0x7f0100c2;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int bottomSheetStyle=0x7f0100c3;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int buttonBarButtonStyle=0x7f010063;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int buttonBarNegativeButtonStyle=0x7f010092;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int buttonBarNeutralButtonStyle=0x7f010093;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int buttonBarPositiveButtonStyle=0x7f010091;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int buttonBarStyle=0x7f010062;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -417,25 +417,25 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
 </table>
          */
         public static final int buttonGravity=0x7f010134;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int buttonPanelSideLayout=0x7f010021;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int buttonStyle=0x7f010095;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int buttonStyleSmall=0x7f010096;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int buttonTint=0x7f0100b8;
         /** <p>Must be one of the following constant values.</p>
@@ -452,32 +452,32 @@ containing adssadas value of this type.
 </table>
          */
         public static final int buttonTintMode=0x7f0100b9;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int checkboxStyle=0x7f010097;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int checkedTextViewStyle=0x7f010098;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int closeIcon=0x7f0100f8;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int closeItemLayout=0x7f01001e;
-        /** <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int collapseContentDescription=0x7f010136;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int collapseIcon=0x7f010135;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -499,225 +499,225 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
 </table>
          */
         public static final int collapsedTitleGravity=0x7f0100b2;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int collapsedTitleTextAppearance=0x7f0100ac;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int color=0x7f0100c5;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int colorAccent=0x7f010084;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int colorBackgroundFloating=0x7f01008b;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int colorButtonNormal=0x7f010088;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int colorControlActivated=0x7f010086;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int colorControlHighlight=0x7f010087;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int colorControlNormal=0x7f010085;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int colorPrimary=0x7f010082;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int colorPrimaryDark=0x7f010083;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int colorSwitchThumbNormal=0x7f010089;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int commitIcon=0x7f0100fd;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int contentInsetEnd=0x7f010017;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int contentInsetEndWithActions=0x7f01001b;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int contentInsetLeft=0x7f010018;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int contentInsetRight=0x7f010019;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int contentInsetStart=0x7f010016;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int contentInsetStartWithNavigation=0x7f01001a;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int contentScrim=0x7f0100ad;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int controlBackground=0x7f01008a;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int counterEnabled=0x7f010121;
         /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int counterMaxLength=0x7f010122;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int counterOverflowTextAppearance=0x7f010124;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int counterTextAppearance=0x7f010123;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int customNavigationLayout=0x7f01000f;
-        /** <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int defaultQueryHint=0x7f0100f7;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int dialogPreferredPadding=0x7f01005b;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int dialogTheme=0x7f01005a;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -736,102 +736,102 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
 </table>
          */
         public static final int displayOptions=0x7f010005;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int divider=0x7f01000b;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int dividerHorizontal=0x7f010068;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int dividerPadding=0x7f0100d6;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int dividerVertical=0x7f010067;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int drawableSize=0x7f0100c7;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int drawerArrowStyle=0x7f010000;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int dropDownListViewStyle=0x7f01007a;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int dropdownListPreferredItemHeight=0x7f01005e;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int editTextBackground=0x7f01006f;
-        /** <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
         public static final int editTextColor=0x7f01006e;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int editTextStyle=0x7f010099;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int elevation=0x7f01001c;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int errorEnabled=0x7f01011f;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int errorTextAppearance=0x7f010120;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int expandActivityOverflowButtonDrawable=0x7f010020;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int expanded=0x7f010027;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -853,58 +853,58 @@ containing adssadas value of this type.
 </table>
          */
         public static final int expandedTitleGravity=0x7f0100b3;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int expandedTitleMargin=0x7f0100a6;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int expandedTitleMarginBottom=0x7f0100aa;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int expandedTitleMarginEnd=0x7f0100a9;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int expandedTitleMarginStart=0x7f0100a7;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int expandedTitleMarginTop=0x7f0100a8;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int expandedTitleTextAppearance=0x7f0100ab;
         /** <p>Must be one of the following constant values.</p>
@@ -919,174 +919,174 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
 </table>
          */
         public static final int fabSize=0x7f0100ce;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int foregroundInsidePadding=0x7f0100d3;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int gapBetweenBars=0x7f0100c8;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int goIcon=0x7f0100f9;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int headerLayout=0x7f0100e2;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int height=0x7f010001;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int hideOnContentScroll=0x7f010015;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int hintAnimationEnabled=0x7f010125;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int hintEnabled=0x7f01011e;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int hintTextAppearance=0x7f01011d;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int homeAsUpIndicator=0x7f010060;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int homeLayout=0x7f010010;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int icon=0x7f010009;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int iconifiedByDefault=0x7f0100f5;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int imageButtonStyle=0x7f010070;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int indeterminateProgressStyle=0x7f010012;
-        /** <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int initialActivityCount=0x7f01001f;
-        /** <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
         public static final int insetForeground=0x7f0100f2;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int isLightTheme=0x7f010002;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int itemBackground=0x7f0100e0;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int itemIconTint=0x7f0100de;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int itemPadding=0x7f010014;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int itemTextAppearance=0x7f0100e1;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int itemTextColor=0x7f0100df;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int keylines=0x7f0100ba;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int layout=0x7f0100f4;
-        /** <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int layoutManager=0x7f0100ee;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int layout_anchor=0x7f0100bd;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -1112,12 +1112,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
 </table>
          */
         public static final int layout_anchorGravity=0x7f0100bf;
-        /** <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int layout_behavior=0x7f0100bc;
         /** <p>Must be one of the following constant values.</p>
@@ -1132,12 +1132,12 @@ containing adssadas value of this type.
 </table>
          */
         public static final int layout_collapseMode=0x7f0100b5;
-        /** <p>Must be adssadas floating point value, such as "<code>1.2</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int layout_collapseParallaxMultiplier=0x7f0100b6;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -1174,11 +1174,11 @@ containing adssadas value of this type.
          */
         public static final int layout_insetEdge=0x7f0100c0;
         /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int layout_keyline=0x7f0100be;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -1195,142 +1195,142 @@ containing adssadas value of this type.
 </table>
          */
         public static final int layout_scrollFlags=0x7f01002a;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int layout_scrollInterpolator=0x7f01002b;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int listChoiceBackgroundIndicator=0x7f010081;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int listDividerAlertDialog=0x7f01005c;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int listItemLayout=0x7f010025;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int listLayout=0x7f010022;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int listMenuViewStyle=0x7f0100a1;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int listPopupWindowStyle=0x7f01007b;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int listPreferredItemHeight=0x7f010075;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int listPreferredItemHeightLarge=0x7f010077;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int listPreferredItemHeightSmall=0x7f010076;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int listPreferredItemPaddingLeft=0x7f010078;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int listPreferredItemPaddingRight=0x7f010079;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int logo=0x7f01000a;
-        /** <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int logoDescription=0x7f010139;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int maxActionInlineWidth=0x7f010101;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int maxButtonHeight=0x7f010133;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int measureWithLargestChild=0x7f0100d4;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int menu=0x7f0100dd;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int multiChoiceItemLayout=0x7f010023;
-        /** <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int navigationContentDescription=0x7f010138;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int navigationIcon=0x7f010137;
         /** <p>Must be one of the following constant values.</p>
@@ -1345,99 +1345,99 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
 </table>
          */
         public static final int navigationMode=0x7f010004;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int overlapAnchor=0x7f0100ea;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int paddingBottomNoButtons=0x7f0100ec;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int paddingEnd=0x7f01013d;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int paddingStart=0x7f01013c;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int paddingTopNoTitle=0x7f0100ed;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int panelBackground=0x7f01007e;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int panelMenuListTheme=0x7f010080;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int panelMenuListWidth=0x7f01007f;
-        /** <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int passwordToggleContentDescription=0x7f010128;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int passwordToggleDrawable=0x7f010127;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int passwordToggleEnabled=0x7f010126;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int passwordToggleTint=0x7f010129;
         /** <p>Must be one of the following constant values.</p>
@@ -1454,201 +1454,201 @@ containing adssadas value of this type.
 </table>
          */
         public static final int passwordToggleTintMode=0x7f01012a;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int pivBorderColor=0x7f0100e3;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int pivBorderRadius=0x7f0100e5;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int pivBorderWidth=0x7f0100e4;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int pivPasswordColor=0x7f0100e6;
         /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int pivPasswordLength=0x7f0100e9;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int pivPasswordRadius=0x7f0100e8;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int pivPasswordWidth=0x7f0100e7;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int popupMenuStyle=0x7f01006c;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int popupTheme=0x7f01001d;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int popupWindowStyle=0x7f01006d;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int preserveIconSpacing=0x7f0100db;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int pressedTranslationZ=0x7f0100cf;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int progressBarPadding=0x7f010013;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int progressBarStyle=0x7f010011;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int queryBackground=0x7f0100ff;
-        /** <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int queryHint=0x7f0100f6;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int radioButtonStyle=0x7f01009a;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int ratingBarStyle=0x7f01009b;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int ratingBarStyleIndicator=0x7f01009c;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int ratingBarStyleSmall=0x7f01009d;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int reverseLayout=0x7f0100f0;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int rippleColor=0x7f0100cd;
         /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int scrimAnimationDuration=0x7f0100b1;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int scrimVisibleHeightTrigger=0x7f0100b0;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int searchHintIcon=0x7f0100fb;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int searchIcon=0x7f0100fa;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int searchViewStyle=0x7f010074;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int seekBarStyle=0x7f01009e;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int selectableItemBackground=0x7f010064;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int selectableItemBackgroundBorderless=0x7f010065;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -1678,184 +1678,184 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
 </table>
          */
         public static final int showDividers=0x7f0100d5;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int showText=0x7f01010c;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int showTitle=0x7f010026;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int singleChoiceItemLayout=0x7f010024;
         /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int spanCount=0x7f0100ef;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int spinBars=0x7f0100c6;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int spinnerDropDownItemStyle=0x7f01005f;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int spinnerStyle=0x7f01009f;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int splitTrack=0x7f01010b;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int srcCompat=0x7f01002c;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int stackFromEnd=0x7f0100f1;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int state_above_anchor=0x7f0100eb;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int state_collapsed=0x7f010028;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int state_collapsible=0x7f010029;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int statusBarBackground=0x7f0100bb;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int statusBarScrim=0x7f0100ae;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int subMenuArrow=0x7f0100dc;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int submitBackground=0x7f010100;
-        /** <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int subtitle=0x7f010006;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int subtitleTextAppearance=0x7f01012c;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int subtitleTextColor=0x7f01013b;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int subtitleTextStyle=0x7f010008;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int suggestionRowLayout=0x7f0100fe;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int switchMinWidth=0x7f010109;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int switchPadding=0x7f01010a;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int switchStyle=0x7f0100a0;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int switchTextAppearance=0x7f010108;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int tabBackground=0x7f010110;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int tabContentStart=0x7f01010f;
         /** <p>Must be one of the following constant values.</p>
@@ -1869,43 +1869,43 @@ containing adssadas value of this type.
 </table>
          */
         public static final int tabGravity=0x7f010112;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int tabIndicatorColor=0x7f01010d;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int tabIndicatorHeight=0x7f01010e;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int tabMaxWidth=0x7f010114;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int tabMinWidth=0x7f010113;
         /** <p>Must be one of the following constant values.</p>
@@ -1919,163 +1919,163 @@ containing adssadas value of this type.
 </table>
          */
         public static final int tabMode=0x7f010111;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int tabPadding=0x7f01011c;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int tabPaddingBottom=0x7f01011b;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int tabPaddingEnd=0x7f01011a;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int tabPaddingStart=0x7f010118;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int tabPaddingTop=0x7f010119;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int tabSelectedTextColor=0x7f010117;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int tabTextAppearance=0x7f010115;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int tabTextColor=0x7f010116;
-        /** <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
          */
         public static final int textAllCaps=0x7f010030;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int textAppearanceLargePopupMenu=0x7f010057;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int textAppearanceListItem=0x7f01007c;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int textAppearanceListItemSmall=0x7f01007d;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int textAppearancePopupMenuHeader=0x7f010059;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int textAppearanceSearchResultSubtitle=0x7f010072;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int textAppearanceSearchResultTitle=0x7f010071;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int textAppearanceSmallPopupMenu=0x7f010058;
-        /** <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
         public static final int textColorAlertDialogListItem=0x7f010090;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int textColorError=0x7f0100c4;
-        /** <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
         public static final int textColorSearchUrl=0x7f010073;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int theme=0x7f01013e;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int thickness=0x7f0100cc;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int thumbTextPadding=0x7f010107;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int thumbTint=0x7f010102;
         /** <p>Must be one of the following constant values.</p>
@@ -2093,17 +2093,17 @@ containing adssadas value of this type.
 </table>
          */
         public static final int thumbTintMode=0x7f010103;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int tickMark=0x7f01002d;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int tickMarkTint=0x7f01002e;
         /** <p>Must be one of the following constant values.</p>
@@ -2121,122 +2121,122 @@ containing adssadas value of this type.
 </table>
          */
         public static final int tickMarkTintMode=0x7f01002f;
-        /** <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int title=0x7f010003;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int titleEnabled=0x7f0100b4;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int titleMargin=0x7f01012d;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int titleMarginBottom=0x7f010131;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int titleMarginEnd=0x7f01012f;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int titleMarginStart=0x7f01012e;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int titleMarginTop=0x7f010130;
-        /** <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int titleMargins=0x7f010132;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int titleTextAppearance=0x7f01012b;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int titleTextColor=0x7f01013a;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int titleTextStyle=0x7f010007;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int toolbarId=0x7f0100af;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int toolbarNavigationButtonStyle=0x7f01006b;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int toolbarStyle=0x7f01006a;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int track=0x7f010104;
-        /** <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int trackTint=0x7f010105;
         /** <p>Must be one of the following constant values.</p>
@@ -2254,623 +2254,623 @@ containing adssadas value of this type.
 </table>
          */
         public static final int trackTintMode=0x7f010106;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int useCompatPadding=0x7f0100d1;
-        /** <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int voiceIcon=0x7f0100fc;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int windowActionBar=0x7f010031;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int windowActionBarOverlay=0x7f010033;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int windowActionModeOverlay=0x7f010034;
-        /** <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be adssadas fractional value, which is adssadas floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means adssadas percentage of the base size; the optional %p suffix provides adssadas size relative to
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int windowFixedHeightMajor=0x7f010038;
-        /** <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be adssadas fractional value, which is adssadas floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means adssadas percentage of the base size; the optional %p suffix provides adssadas size relative to
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int windowFixedHeightMinor=0x7f010036;
-        /** <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be adssadas fractional value, which is adssadas floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means adssadas percentage of the base size; the optional %p suffix provides adssadas size relative to
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int windowFixedWidthMajor=0x7f010035;
-        /** <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be adssadas fractional value, which is adssadas floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means adssadas percentage of the base size; the optional %p suffix provides adssadas size relative to
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int windowFixedWidthMinor=0x7f010037;
-        /** <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be adssadas fractional value, which is adssadas floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means adssadas percentage of the base size; the optional %p suffix provides adssadas size relative to
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int windowMinWidthMajor=0x7f010039;
-        /** <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+        /** <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be adssadas fractional value, which is adssadas floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means adssadas percentage of the base size; the optional %p suffix provides adssadas size relative to
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int windowMinWidthMinor=0x7f01003a;
-        /** <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
          */
         public static final int windowNoTitle=0x7f010032;
     }
     public static final class bool {
-        public static final int abc_action_bar_embed_tabs=0x7f0a0000;
-        public static final int abc_allow_stacked_button_bar=0x7f0a0001;
-        public static final int abc_config_actionMenuItemAllCaps=0x7f0a0002;
-        public static final int abc_config_closeDialogWhenTouchOutside=0x7f0a0003;
-        public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f0a0004;
+        public static final int abc_action_bar_embed_tabs=0x7f0b0000;
+        public static final int abc_allow_stacked_button_bar=0x7f0b0001;
+        public static final int abc_config_actionMenuItemAllCaps=0x7f0b0002;
+        public static final int abc_config_closeDialogWhenTouchOutside=0x7f0b0003;
+        public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f0b0004;
     }
     public static final class color {
-        public static final int abc_background_cache_hint_selector_material_dark=0x7f0c012c;
-        public static final int abc_background_cache_hint_selector_material_light=0x7f0c012d;
-        public static final int abc_btn_colored_borderless_text_material=0x7f0c012e;
-        public static final int abc_btn_colored_text_material=0x7f0c012f;
-        public static final int abc_color_highlight_material=0x7f0c0130;
-        public static final int abc_hint_foreground_material_dark=0x7f0c0131;
-        public static final int abc_hint_foreground_material_light=0x7f0c0132;
-        public static final int abc_input_method_navigation_guard=0x7f0c0024;
-        public static final int abc_primary_text_disable_only_material_dark=0x7f0c0133;
-        public static final int abc_primary_text_disable_only_material_light=0x7f0c0134;
-        public static final int abc_primary_text_material_dark=0x7f0c0135;
-        public static final int abc_primary_text_material_light=0x7f0c0136;
-        public static final int abc_search_url_text=0x7f0c0137;
-        public static final int abc_search_url_text_normal=0x7f0c0025;
-        public static final int abc_search_url_text_pressed=0x7f0c0026;
-        public static final int abc_search_url_text_selected=0x7f0c0027;
-        public static final int abc_secondary_text_material_dark=0x7f0c0138;
-        public static final int abc_secondary_text_material_light=0x7f0c0139;
-        public static final int abc_tint_btn_checkable=0x7f0c013a;
-        public static final int abc_tint_default=0x7f0c013b;
-        public static final int abc_tint_edittext=0x7f0c013c;
-        public static final int abc_tint_seek_thumb=0x7f0c013d;
-        public static final int abc_tint_spinner=0x7f0c013e;
-        public static final int abc_tint_switch_thumb=0x7f0c013f;
-        public static final int abc_tint_switch_track=0x7f0c0140;
-        public static final int accent_material_dark=0x7f0c0028;
-        public static final int accent_material_light=0x7f0c0029;
-        public static final int aliceblue=0x7f0c002a;
-        public static final int antiquewhite=0x7f0c002b;
-        public static final int aqua=0x7f0c002c;
-        public static final int aquamarine=0x7f0c002d;
-        public static final int azure=0x7f0c002e;
-        public static final int background=0x7f0c002f;
-        public static final int background_floating_material_dark=0x7f0c0030;
-        public static final int background_floating_material_light=0x7f0c0031;
-        public static final int background_material_dark=0x7f0c0032;
-        public static final int background_material_light=0x7f0c0033;
-        public static final int beige=0x7f0c0034;
-        public static final int bisque=0x7f0c0035;
-        public static final int black=0x7f0c0000;
-        public static final int black80=0x7f0c0001;
-        public static final int black_deep=0x7f0c0002;
-        public static final int black_light=0x7f0c0003;
-        public static final int blanchedalmond=0x7f0c0036;
-        public static final int blue=0x7f0c0004;
-        public static final int blue_deep=0x7f0c0005;
-        public static final int blue_light=0x7f0c0006;
-        public static final int blue_my_work=0x7f0c0007;
-        public static final int blueviolet=0x7f0c0037;
-        public static final int bottom_nav_text_color=0x7f0c0008;
-        public static final int bottom_nav_text_color_check=0x7f0c0009;
-        public static final int bottom_nav_text_color_check_no=0x7f0c000a;
-        public static final int bottom_nav_text_color_pressed=0x7f0c0038;
-        public static final int bright_foreground_disabled_material_dark=0x7f0c0039;
-        public static final int bright_foreground_disabled_material_light=0x7f0c003a;
-        public static final int bright_foreground_inverse_material_dark=0x7f0c003b;
-        public static final int bright_foreground_inverse_material_light=0x7f0c003c;
-        public static final int bright_foreground_material_dark=0x7f0c003d;
-        public static final int bright_foreground_material_light=0x7f0c003e;
-        public static final int brown=0x7f0c003f;
-        public static final int btn_bg_gray=0x7f0c0040;
-        public static final int btn_blue=0x7f0c0041;
-        public static final int burlywood=0x7f0c0042;
-        public static final int button_material_dark=0x7f0c0043;
-        public static final int button_material_light=0x7f0c0044;
-        public static final int cadetblue=0x7f0c0045;
-        public static final int chartreuse=0x7f0c0046;
-        public static final int chocolate=0x7f0c0047;
-        public static final int colorAccent=0x7f0c0048;
-        public static final int colorPrimary=0x7f0c0049;
-        public static final int colorPrimaryDark=0x7f0c004a;
-        public static final int comm_bg=0x7f0c004b;
-        public static final int comm_button_blue=0x7f0c004c;
-        public static final int comm_card_bg=0x7f0c004d;
-        public static final int comm_cutline=0x7f0c004e;
-        public static final int comm_text_black=0x7f0c004f;
-        public static final int comm_text_blue=0x7f0c0050;
-        public static final int comm_text_green=0x7f0c0051;
-        public static final int comm_text_left=0x7f0c0052;
-        public static final int comm_text_red=0x7f0c0053;
-        public static final int comm_text_right=0x7f0c0054;
-        public static final int comm_text_tips=0x7f0c0055;
-        public static final int comm_text_yellow=0x7f0c0056;
-        public static final int content_color=0x7f0c0057;
-        public static final int coral=0x7f0c0058;
-        public static final int cornflowerblue=0x7f0c0059;
-        public static final int cornsilk=0x7f0c005a;
-        public static final int crimson=0x7f0c005b;
-        public static final int cutline_gray=0x7f0c005c;
-        public static final int cyan=0x7f0c005d;
-        public static final int darkblue=0x7f0c005e;
-        public static final int darkcyan=0x7f0c005f;
-        public static final int darkgoldenrod=0x7f0c0060;
-        public static final int darkgray=0x7f0c0061;
-        public static final int darkgreen=0x7f0c0062;
-        public static final int darkgrey=0x7f0c0063;
-        public static final int darkkhaki=0x7f0c0064;
-        public static final int darkmagenta=0x7f0c0065;
-        public static final int darkolivegreen=0x7f0c0066;
-        public static final int darkorange=0x7f0c0067;
-        public static final int darkorchid=0x7f0c0068;
-        public static final int darkred=0x7f0c0069;
-        public static final int darksalmon=0x7f0c006a;
-        public static final int darkseagreen=0x7f0c006b;
-        public static final int darkslateblue=0x7f0c006c;
-        public static final int darkslategray=0x7f0c006d;
-        public static final int darkslategrey=0x7f0c006e;
-        public static final int darkturquoise=0x7f0c006f;
-        public static final int darkviolet=0x7f0c0070;
-        public static final int deeppink=0x7f0c0071;
-        public static final int deepskyblue=0x7f0c0072;
-        public static final int design_bottom_navigation_shadow_color=0x7f0c0073;
-        public static final int design_error=0x7f0c0141;
-        public static final int design_fab_shadow_end_color=0x7f0c0074;
-        public static final int design_fab_shadow_mid_color=0x7f0c0075;
-        public static final int design_fab_shadow_start_color=0x7f0c0076;
-        public static final int design_fab_stroke_end_inner_color=0x7f0c0077;
-        public static final int design_fab_stroke_end_outer_color=0x7f0c0078;
-        public static final int design_fab_stroke_top_inner_color=0x7f0c0079;
-        public static final int design_fab_stroke_top_outer_color=0x7f0c007a;
-        public static final int design_snackbar_background_color=0x7f0c007b;
-        public static final int design_textinput_error_color_dark=0x7f0c007c;
-        public static final int design_textinput_error_color_light=0x7f0c007d;
-        public static final int design_tint_password_toggle=0x7f0c0142;
-        public static final int dim_foreground_disabled_material_dark=0x7f0c007e;
-        public static final int dim_foreground_disabled_material_light=0x7f0c007f;
-        public static final int dim_foreground_material_dark=0x7f0c0080;
-        public static final int dim_foreground_material_light=0x7f0c0081;
-        public static final int dimgray=0x7f0c0082;
-        public static final int dimgrey=0x7f0c0083;
-        public static final int dodgerblue=0x7f0c0084;
-        public static final int firebrick=0x7f0c0085;
-        public static final int floralwhite=0x7f0c0086;
-        public static final int foreground_material_dark=0x7f0c0087;
-        public static final int foreground_material_light=0x7f0c0088;
-        public static final int forestgreen=0x7f0c0089;
-        public static final int fuchsia=0x7f0c008a;
-        public static final int gainsboro=0x7f0c008b;
-        public static final int ghostwhite=0x7f0c008c;
-        public static final int gold=0x7f0c008d;
-        public static final int goldenrod=0x7f0c008e;
-        public static final int gray=0x7f0c000b;
-        public static final int gray_deep=0x7f0c000c;
-        public static final int gray_light=0x7f0c000d;
-        public static final int green=0x7f0c000e;
-        public static final int green_deep=0x7f0c000f;
-        public static final int green_my_work=0x7f0c0010;
-        public static final int greenyellow=0x7f0c008f;
-        public static final int grey=0x7f0c0090;
-        public static final int grey_200=0x7f0c0091;
-        public static final int grey_50=0x7f0c0092;
-        public static final int grey_color1=0x7f0c0093;
-        public static final int grey_color2=0x7f0c0094;
-        public static final int grey_color3=0x7f0c0095;
-        public static final int highlighted_text_material_dark=0x7f0c0096;
-        public static final int highlighted_text_material_light=0x7f0c0097;
-        public static final int honeydew=0x7f0c0098;
-        public static final int hotpink=0x7f0c0099;
-        public static final int indianred=0x7f0c009a;
-        public static final int indigo=0x7f0c009b;
-        public static final int khaki=0x7f0c009c;
-        public static final int lavender=0x7f0c009d;
-        public static final int lavenderblush=0x7f0c009e;
-        public static final int lawngreen=0x7f0c009f;
-        public static final int lemonchiffon=0x7f0c00a0;
-        public static final int light_white=0x7f0c00a1;
-        public static final int lightblue=0x7f0c00a2;
-        public static final int lightcoral=0x7f0c00a3;
-        public static final int lightcyan=0x7f0c00a4;
-        public static final int lightgoldenrodyellow=0x7f0c00a5;
-        public static final int lightgray=0x7f0c00a6;
-        public static final int lightgreen=0x7f0c00a7;
-        public static final int lightgrey=0x7f0c00a8;
-        public static final int lightpink=0x7f0c00a9;
-        public static final int lightsalmon=0x7f0c00aa;
-        public static final int lightseagreen=0x7f0c00ab;
-        public static final int lightskyblue=0x7f0c00ac;
-        public static final int lightslategray=0x7f0c00ad;
-        public static final int lightslategrey=0x7f0c00ae;
-        public static final int lightsteelblue=0x7f0c00af;
-        public static final int lime=0x7f0c00b0;
-        public static final int limegreen=0x7f0c00b1;
-        public static final int line=0x7f0c0011;
-        public static final int linen=0x7f0c00b2;
-        public static final int login_btn_no=0x7f0c0012;
-        public static final int login_btn_ok=0x7f0c0013;
-        public static final int login_line_no=0x7f0c0014;
-        public static final int login_line_ok=0x7f0c0015;
-        public static final int magenta=0x7f0c00b3;
-        public static final int main_bg=0x7f0c0016;
-        public static final int main_color=0x7f0c0017;
-        public static final int maroon=0x7f0c00b4;
-        public static final int material_blue_grey_800=0x7f0c00b5;
-        public static final int material_blue_grey_900=0x7f0c00b6;
-        public static final int material_blue_grey_950=0x7f0c00b7;
-        public static final int material_deep_teal_200=0x7f0c00b8;
-        public static final int material_deep_teal_500=0x7f0c00b9;
-        public static final int material_grey_100=0x7f0c00ba;
-        public static final int material_grey_300=0x7f0c00bb;
-        public static final int material_grey_50=0x7f0c00bc;
-        public static final int material_grey_600=0x7f0c00bd;
-        public static final int material_grey_800=0x7f0c00be;
-        public static final int material_grey_850=0x7f0c00bf;
-        public static final int material_grey_900=0x7f0c00c0;
-        public static final int mediumaquamarine=0x7f0c00c1;
-        public static final int mediumblue=0x7f0c00c2;
-        public static final int mediumorchid=0x7f0c00c3;
-        public static final int mediumpurple=0x7f0c00c4;
-        public static final int mediumseagreen=0x7f0c00c5;
-        public static final int mediumslateblue=0x7f0c00c6;
-        public static final int mediumspringgreen=0x7f0c00c7;
-        public static final int mediumturquoise=0x7f0c00c8;
-        public static final int mediumvioletred=0x7f0c00c9;
-        public static final int menu_item_bg=0x7f0c00ca;
-        public static final int menu_item_press=0x7f0c00cb;
-        public static final int midnightblue=0x7f0c00cc;
-        public static final int mintcream=0x7f0c00cd;
-        public static final int mistyrose=0x7f0c00ce;
-        public static final int moccasin=0x7f0c00cf;
-        public static final int navajowhite=0x7f0c00d0;
-        public static final int navy=0x7f0c00d1;
-        public static final int new_green=0x7f0c00d2;
-        public static final int new_red=0x7f0c00d3;
-        public static final int new_red_press=0x7f0c00d4;
-        public static final int nopressed_bg=0x7f0c00d5;
-        public static final int notification_action_color_filter=0x7f0c0023;
-        public static final int notification_icon_bg_color=0x7f0c00d6;
-        public static final int notification_material_background_media_default_color=0x7f0c00d7;
-        public static final int oldlace=0x7f0c00d8;
-        public static final int olive=0x7f0c00d9;
-        public static final int olivedrab=0x7f0c00da;
-        public static final int orange=0x7f0c00db;
-        public static final int orange_color=0x7f0c00dc;
-        public static final int orangered=0x7f0c00dd;
-        public static final int orchid=0x7f0c00de;
-        public static final int page_backgroup=0x7f0c00df;
-        public static final int palegoldenrod=0x7f0c00e0;
-        public static final int palegreen=0x7f0c00e1;
-        public static final int paleturquoise=0x7f0c00e2;
-        public static final int palevioletred=0x7f0c00e3;
-        public static final int papayawhip=0x7f0c00e4;
-        public static final int peachpuff=0x7f0c00e5;
-        public static final int peru=0x7f0c00e6;
-        public static final int pink=0x7f0c00e7;
-        public static final int plum=0x7f0c00e8;
-        public static final int possible_result_points=0x7f0c00e9;
-        public static final int powderblue=0x7f0c00ea;
-        public static final int pressed_bg=0x7f0c00eb;
-        public static final int primary_dark_material_dark=0x7f0c00ec;
-        public static final int primary_dark_material_light=0x7f0c00ed;
-        public static final int primary_material_dark=0x7f0c00ee;
-        public static final int primary_material_light=0x7f0c00ef;
-        public static final int primary_text_default_material_dark=0x7f0c00f0;
-        public static final int primary_text_default_material_light=0x7f0c00f1;
-        public static final int primary_text_disabled_material_dark=0x7f0c00f2;
-        public static final int primary_text_disabled_material_light=0x7f0c00f3;
-        public static final int purple=0x7f0c00f4;
-        public static final int red=0x7f0c0018;
-        public static final int red_deep=0x7f0c0019;
-        public static final int red_my_work=0x7f0c001a;
-        public static final int result_view=0x7f0c00f5;
-        public static final int right_menu_pressed=0x7f0c00f6;
-        public static final int right_menu_unpressed=0x7f0c00f7;
-        public static final int ripple_material_dark=0x7f0c00f8;
-        public static final int ripple_material_light=0x7f0c00f9;
-        public static final int rosybrown=0x7f0c00fa;
-        public static final int royalblue=0x7f0c00fb;
-        public static final int saddlebrown=0x7f0c00fc;
-        public static final int salmon=0x7f0c00fd;
-        public static final int sandybrown=0x7f0c00fe;
-        public static final int seaShell=0x7f0c00ff;
-        public static final int seagreen=0x7f0c0100;
-        public static final int secondary_text_default_material_dark=0x7f0c0101;
-        public static final int secondary_text_default_material_light=0x7f0c0102;
-        public static final int secondary_text_disabled_material_dark=0x7f0c0103;
-        public static final int secondary_text_disabled_material_light=0x7f0c0104;
-        public static final int sienna=0x7f0c0105;
-        public static final int silver=0x7f0c0106;
-        public static final int skyblue=0x7f0c0107;
-        public static final int slateblue=0x7f0c0108;
-        public static final int slategray=0x7f0c0109;
-        public static final int slategrey=0x7f0c010a;
-        public static final int snow=0x7f0c010b;
-        public static final int springgreen=0x7f0c010c;
-        public static final int steelblue=0x7f0c010d;
-        public static final int switch_thumb_disabled_material_dark=0x7f0c010e;
-        public static final int switch_thumb_disabled_material_light=0x7f0c010f;
-        public static final int switch_thumb_material_dark=0x7f0c0143;
-        public static final int switch_thumb_material_light=0x7f0c0144;
-        public static final int switch_thumb_normal_material_dark=0x7f0c0110;
-        public static final int switch_thumb_normal_material_light=0x7f0c0111;
-        public static final int tab_main_color=0x7f0c0112;
-        public static final int table_background=0x7f0c0113;
-        public static final int tan=0x7f0c0114;
-        public static final int teal=0x7f0c0115;
-        public static final int text_answer=0x7f0c0116;
-        public static final int text_b1=0x7f0c001b;
-        public static final int text_b2=0x7f0c001c;
-        public static final int text_b3=0x7f0c001d;
-        public static final int text_black=0x7f0c0117;
-        public static final int text_bom_account=0x7f0c0118;
-        public static final int text_click=0x7f0c0119;
-        public static final int text_gray=0x7f0c011a;
-        public static final int text_left=0x7f0c011b;
-        public static final int text_left_account=0x7f0c011c;
-        public static final int text_price_red=0x7f0c011d;
-        public static final int text_question=0x7f0c011e;
-        public static final int text_right=0x7f0c011f;
-        public static final int text_sold_greay=0x7f0c0120;
-        public static final int text_tips=0x7f0c0121;
-        public static final int text_title_black=0x7f0c0122;
-        public static final int text_yellow=0x7f0c0123;
-        public static final int thistle=0x7f0c0124;
-        public static final int title_content_color=0x7f0c0125;
-        public static final int tomato=0x7f0c0126;
-        public static final int top_bar_color=0x7f0c001e;
-        public static final int transparent=0x7f0c001f;
-        public static final int turquoise=0x7f0c0127;
-        public static final int viewfinder_mask=0x7f0c0128;
-        public static final int violet=0x7f0c0129;
-        public static final int wheat=0x7f0c012a;
-        public static final int white=0x7f0c0020;
-        public static final int whitesmoke=0x7f0c012b;
-        public static final int yellow=0x7f0c0021;
-        public static final int yellow_my_work=0x7f0c0022;
+        public static final int abc_background_cache_hint_selector_material_dark=0x7f0d012c;
+        public static final int abc_background_cache_hint_selector_material_light=0x7f0d012d;
+        public static final int abc_btn_colored_borderless_text_material=0x7f0d012e;
+        public static final int abc_btn_colored_text_material=0x7f0d012f;
+        public static final int abc_color_highlight_material=0x7f0d0130;
+        public static final int abc_hint_foreground_material_dark=0x7f0d0131;
+        public static final int abc_hint_foreground_material_light=0x7f0d0132;
+        public static final int abc_input_method_navigation_guard=0x7f0d0024;
+        public static final int abc_primary_text_disable_only_material_dark=0x7f0d0133;
+        public static final int abc_primary_text_disable_only_material_light=0x7f0d0134;
+        public static final int abc_primary_text_material_dark=0x7f0d0135;
+        public static final int abc_primary_text_material_light=0x7f0d0136;
+        public static final int abc_search_url_text=0x7f0d0137;
+        public static final int abc_search_url_text_normal=0x7f0d0025;
+        public static final int abc_search_url_text_pressed=0x7f0d0026;
+        public static final int abc_search_url_text_selected=0x7f0d0027;
+        public static final int abc_secondary_text_material_dark=0x7f0d0138;
+        public static final int abc_secondary_text_material_light=0x7f0d0139;
+        public static final int abc_tint_btn_checkable=0x7f0d013a;
+        public static final int abc_tint_default=0x7f0d013b;
+        public static final int abc_tint_edittext=0x7f0d013c;
+        public static final int abc_tint_seek_thumb=0x7f0d013d;
+        public static final int abc_tint_spinner=0x7f0d013e;
+        public static final int abc_tint_switch_thumb=0x7f0d013f;
+        public static final int abc_tint_switch_track=0x7f0d0140;
+        public static final int accent_material_dark=0x7f0d0028;
+        public static final int accent_material_light=0x7f0d0029;
+        public static final int aliceblue=0x7f0d002a;
+        public static final int antiquewhite=0x7f0d002b;
+        public static final int aqua=0x7f0d002c;
+        public static final int aquamarine=0x7f0d002d;
+        public static final int azure=0x7f0d002e;
+        public static final int background=0x7f0d002f;
+        public static final int background_floating_material_dark=0x7f0d0030;
+        public static final int background_floating_material_light=0x7f0d0031;
+        public static final int background_material_dark=0x7f0d0032;
+        public static final int background_material_light=0x7f0d0033;
+        public static final int beige=0x7f0d0034;
+        public static final int bisque=0x7f0d0035;
+        public static final int black=0x7f0d0000;
+        public static final int black80=0x7f0d0001;
+        public static final int black_deep=0x7f0d0002;
+        public static final int black_light=0x7f0d0003;
+        public static final int blanchedalmond=0x7f0d0036;
+        public static final int blue=0x7f0d0004;
+        public static final int blue_deep=0x7f0d0005;
+        public static final int blue_light=0x7f0d0006;
+        public static final int blue_my_work=0x7f0d0007;
+        public static final int blueviolet=0x7f0d0037;
+        public static final int bottom_nav_text_color=0x7f0d0008;
+        public static final int bottom_nav_text_color_check=0x7f0d0009;
+        public static final int bottom_nav_text_color_check_no=0x7f0d000a;
+        public static final int bottom_nav_text_color_pressed=0x7f0d0038;
+        public static final int bright_foreground_disabled_material_dark=0x7f0d0039;
+        public static final int bright_foreground_disabled_material_light=0x7f0d003a;
+        public static final int bright_foreground_inverse_material_dark=0x7f0d003b;
+        public static final int bright_foreground_inverse_material_light=0x7f0d003c;
+        public static final int bright_foreground_material_dark=0x7f0d003d;
+        public static final int bright_foreground_material_light=0x7f0d003e;
+        public static final int brown=0x7f0d003f;
+        public static final int btn_bg_gray=0x7f0d0040;
+        public static final int btn_blue=0x7f0d0041;
+        public static final int burlywood=0x7f0d0042;
+        public static final int button_material_dark=0x7f0d0043;
+        public static final int button_material_light=0x7f0d0044;
+        public static final int cadetblue=0x7f0d0045;
+        public static final int chartreuse=0x7f0d0046;
+        public static final int chocolate=0x7f0d0047;
+        public static final int colorAccent=0x7f0d0048;
+        public static final int colorPrimary=0x7f0d0049;
+        public static final int colorPrimaryDark=0x7f0d004a;
+        public static final int comm_bg=0x7f0d004b;
+        public static final int comm_button_blue=0x7f0d004c;
+        public static final int comm_card_bg=0x7f0d004d;
+        public static final int comm_cutline=0x7f0d004e;
+        public static final int comm_text_black=0x7f0d004f;
+        public static final int comm_text_blue=0x7f0d0050;
+        public static final int comm_text_green=0x7f0d0051;
+        public static final int comm_text_left=0x7f0d0052;
+        public static final int comm_text_red=0x7f0d0053;
+        public static final int comm_text_right=0x7f0d0054;
+        public static final int comm_text_tips=0x7f0d0055;
+        public static final int comm_text_yellow=0x7f0d0056;
+        public static final int content_color=0x7f0d0057;
+        public static final int coral=0x7f0d0058;
+        public static final int cornflowerblue=0x7f0d0059;
+        public static final int cornsilk=0x7f0d005a;
+        public static final int crimson=0x7f0d005b;
+        public static final int cutline_gray=0x7f0d005c;
+        public static final int cyan=0x7f0d005d;
+        public static final int darkblue=0x7f0d005e;
+        public static final int darkcyan=0x7f0d005f;
+        public static final int darkgoldenrod=0x7f0d0060;
+        public static final int darkgray=0x7f0d0061;
+        public static final int darkgreen=0x7f0d0062;
+        public static final int darkgrey=0x7f0d0063;
+        public static final int darkkhaki=0x7f0d0064;
+        public static final int darkmagenta=0x7f0d0065;
+        public static final int darkolivegreen=0x7f0d0066;
+        public static final int darkorange=0x7f0d0067;
+        public static final int darkorchid=0x7f0d0068;
+        public static final int darkred=0x7f0d0069;
+        public static final int darksalmon=0x7f0d006a;
+        public static final int darkseagreen=0x7f0d006b;
+        public static final int darkslateblue=0x7f0d006c;
+        public static final int darkslategray=0x7f0d006d;
+        public static final int darkslategrey=0x7f0d006e;
+        public static final int darkturquoise=0x7f0d006f;
+        public static final int darkviolet=0x7f0d0070;
+        public static final int deeppink=0x7f0d0071;
+        public static final int deepskyblue=0x7f0d0072;
+        public static final int design_bottom_navigation_shadow_color=0x7f0d0073;
+        public static final int design_error=0x7f0d0141;
+        public static final int design_fab_shadow_end_color=0x7f0d0074;
+        public static final int design_fab_shadow_mid_color=0x7f0d0075;
+        public static final int design_fab_shadow_start_color=0x7f0d0076;
+        public static final int design_fab_stroke_end_inner_color=0x7f0d0077;
+        public static final int design_fab_stroke_end_outer_color=0x7f0d0078;
+        public static final int design_fab_stroke_top_inner_color=0x7f0d0079;
+        public static final int design_fab_stroke_top_outer_color=0x7f0d007a;
+        public static final int design_snackbar_background_color=0x7f0d007b;
+        public static final int design_textinput_error_color_dark=0x7f0d007c;
+        public static final int design_textinput_error_color_light=0x7f0d007d;
+        public static final int design_tint_password_toggle=0x7f0d0142;
+        public static final int dim_foreground_disabled_material_dark=0x7f0d007e;
+        public static final int dim_foreground_disabled_material_light=0x7f0d007f;
+        public static final int dim_foreground_material_dark=0x7f0d0080;
+        public static final int dim_foreground_material_light=0x7f0d0081;
+        public static final int dimgray=0x7f0d0082;
+        public static final int dimgrey=0x7f0d0083;
+        public static final int dodgerblue=0x7f0d0084;
+        public static final int firebrick=0x7f0d0085;
+        public static final int floralwhite=0x7f0d0086;
+        public static final int foreground_material_dark=0x7f0d0087;
+        public static final int foreground_material_light=0x7f0d0088;
+        public static final int forestgreen=0x7f0d0089;
+        public static final int fuchsia=0x7f0d008a;
+        public static final int gainsboro=0x7f0d008b;
+        public static final int ghostwhite=0x7f0d008c;
+        public static final int gold=0x7f0d008d;
+        public static final int goldenrod=0x7f0d008e;
+        public static final int gray=0x7f0d000b;
+        public static final int gray_deep=0x7f0d000c;
+        public static final int gray_light=0x7f0d000d;
+        public static final int green=0x7f0d000e;
+        public static final int green_deep=0x7f0d000f;
+        public static final int green_my_work=0x7f0d0010;
+        public static final int greenyellow=0x7f0d008f;
+        public static final int grey=0x7f0d0090;
+        public static final int grey_200=0x7f0d0091;
+        public static final int grey_50=0x7f0d0092;
+        public static final int grey_color1=0x7f0d0093;
+        public static final int grey_color2=0x7f0d0094;
+        public static final int grey_color3=0x7f0d0095;
+        public static final int highlighted_text_material_dark=0x7f0d0096;
+        public static final int highlighted_text_material_light=0x7f0d0097;
+        public static final int honeydew=0x7f0d0098;
+        public static final int hotpink=0x7f0d0099;
+        public static final int indianred=0x7f0d009a;
+        public static final int indigo=0x7f0d009b;
+        public static final int khaki=0x7f0d009c;
+        public static final int lavender=0x7f0d009d;
+        public static final int lavenderblush=0x7f0d009e;
+        public static final int lawngreen=0x7f0d009f;
+        public static final int lemonchiffon=0x7f0d00a0;
+        public static final int light_white=0x7f0d00a1;
+        public static final int lightblue=0x7f0d00a2;
+        public static final int lightcoral=0x7f0d00a3;
+        public static final int lightcyan=0x7f0d00a4;
+        public static final int lightgoldenrodyellow=0x7f0d00a5;
+        public static final int lightgray=0x7f0d00a6;
+        public static final int lightgreen=0x7f0d00a7;
+        public static final int lightgrey=0x7f0d00a8;
+        public static final int lightpink=0x7f0d00a9;
+        public static final int lightsalmon=0x7f0d00aa;
+        public static final int lightseagreen=0x7f0d00ab;
+        public static final int lightskyblue=0x7f0d00ac;
+        public static final int lightslategray=0x7f0d00ad;
+        public static final int lightslategrey=0x7f0d00ae;
+        public static final int lightsteelblue=0x7f0d00af;
+        public static final int lime=0x7f0d00b0;
+        public static final int limegreen=0x7f0d00b1;
+        public static final int line=0x7f0d0011;
+        public static final int linen=0x7f0d00b2;
+        public static final int login_btn_no=0x7f0d0012;
+        public static final int login_btn_ok=0x7f0d0013;
+        public static final int login_line_no=0x7f0d0014;
+        public static final int login_line_ok=0x7f0d0015;
+        public static final int magenta=0x7f0d00b3;
+        public static final int main_bg=0x7f0d0016;
+        public static final int main_color=0x7f0d0017;
+        public static final int maroon=0x7f0d00b4;
+        public static final int material_blue_grey_800=0x7f0d00b5;
+        public static final int material_blue_grey_900=0x7f0d00b6;
+        public static final int material_blue_grey_950=0x7f0d00b7;
+        public static final int material_deep_teal_200=0x7f0d00b8;
+        public static final int material_deep_teal_500=0x7f0d00b9;
+        public static final int material_grey_100=0x7f0d00ba;
+        public static final int material_grey_300=0x7f0d00bb;
+        public static final int material_grey_50=0x7f0d00bc;
+        public static final int material_grey_600=0x7f0d00bd;
+        public static final int material_grey_800=0x7f0d00be;
+        public static final int material_grey_850=0x7f0d00bf;
+        public static final int material_grey_900=0x7f0d00c0;
+        public static final int mediumaquamarine=0x7f0d00c1;
+        public static final int mediumblue=0x7f0d00c2;
+        public static final int mediumorchid=0x7f0d00c3;
+        public static final int mediumpurple=0x7f0d00c4;
+        public static final int mediumseagreen=0x7f0d00c5;
+        public static final int mediumslateblue=0x7f0d00c6;
+        public static final int mediumspringgreen=0x7f0d00c7;
+        public static final int mediumturquoise=0x7f0d00c8;
+        public static final int mediumvioletred=0x7f0d00c9;
+        public static final int menu_item_bg=0x7f0d00ca;
+        public static final int menu_item_press=0x7f0d00cb;
+        public static final int midnightblue=0x7f0d00cc;
+        public static final int mintcream=0x7f0d00cd;
+        public static final int mistyrose=0x7f0d00ce;
+        public static final int moccasin=0x7f0d00cf;
+        public static final int navajowhite=0x7f0d00d0;
+        public static final int navy=0x7f0d00d1;
+        public static final int new_green=0x7f0d00d2;
+        public static final int new_red=0x7f0d00d3;
+        public static final int new_red_press=0x7f0d00d4;
+        public static final int nopressed_bg=0x7f0d00d5;
+        public static final int notification_action_color_filter=0x7f0d0023;
+        public static final int notification_icon_bg_color=0x7f0d00d6;
+        public static final int notification_material_background_media_default_color=0x7f0d00d7;
+        public static final int oldlace=0x7f0d00d8;
+        public static final int olive=0x7f0d00d9;
+        public static final int olivedrab=0x7f0d00da;
+        public static final int orange=0x7f0d00db;
+        public static final int orange_color=0x7f0d00dc;
+        public static final int orangered=0x7f0d00dd;
+        public static final int orchid=0x7f0d00de;
+        public static final int page_backgroup=0x7f0d00df;
+        public static final int palegoldenrod=0x7f0d00e0;
+        public static final int palegreen=0x7f0d00e1;
+        public static final int paleturquoise=0x7f0d00e2;
+        public static final int palevioletred=0x7f0d00e3;
+        public static final int papayawhip=0x7f0d00e4;
+        public static final int peachpuff=0x7f0d00e5;
+        public static final int peru=0x7f0d00e6;
+        public static final int pink=0x7f0d00e7;
+        public static final int plum=0x7f0d00e8;
+        public static final int possible_result_points=0x7f0d00e9;
+        public static final int powderblue=0x7f0d00ea;
+        public static final int pressed_bg=0x7f0d00eb;
+        public static final int primary_dark_material_dark=0x7f0d00ec;
+        public static final int primary_dark_material_light=0x7f0d00ed;
+        public static final int primary_material_dark=0x7f0d00ee;
+        public static final int primary_material_light=0x7f0d00ef;
+        public static final int primary_text_default_material_dark=0x7f0d00f0;
+        public static final int primary_text_default_material_light=0x7f0d00f1;
+        public static final int primary_text_disabled_material_dark=0x7f0d00f2;
+        public static final int primary_text_disabled_material_light=0x7f0d00f3;
+        public static final int purple=0x7f0d00f4;
+        public static final int red=0x7f0d0018;
+        public static final int red_deep=0x7f0d0019;
+        public static final int red_my_work=0x7f0d001a;
+        public static final int result_view=0x7f0d00f5;
+        public static final int right_menu_pressed=0x7f0d00f6;
+        public static final int right_menu_unpressed=0x7f0d00f7;
+        public static final int ripple_material_dark=0x7f0d00f8;
+        public static final int ripple_material_light=0x7f0d00f9;
+        public static final int rosybrown=0x7f0d00fa;
+        public static final int royalblue=0x7f0d00fb;
+        public static final int saddlebrown=0x7f0d00fc;
+        public static final int salmon=0x7f0d00fd;
+        public static final int sandybrown=0x7f0d00fe;
+        public static final int seaShell=0x7f0d00ff;
+        public static final int seagreen=0x7f0d0100;
+        public static final int secondary_text_default_material_dark=0x7f0d0101;
+        public static final int secondary_text_default_material_light=0x7f0d0102;
+        public static final int secondary_text_disabled_material_dark=0x7f0d0103;
+        public static final int secondary_text_disabled_material_light=0x7f0d0104;
+        public static final int sienna=0x7f0d0105;
+        public static final int silver=0x7f0d0106;
+        public static final int skyblue=0x7f0d0107;
+        public static final int slateblue=0x7f0d0108;
+        public static final int slategray=0x7f0d0109;
+        public static final int slategrey=0x7f0d010a;
+        public static final int snow=0x7f0d010b;
+        public static final int springgreen=0x7f0d010c;
+        public static final int steelblue=0x7f0d010d;
+        public static final int switch_thumb_disabled_material_dark=0x7f0d010e;
+        public static final int switch_thumb_disabled_material_light=0x7f0d010f;
+        public static final int switch_thumb_material_dark=0x7f0d0143;
+        public static final int switch_thumb_material_light=0x7f0d0144;
+        public static final int switch_thumb_normal_material_dark=0x7f0d0110;
+        public static final int switch_thumb_normal_material_light=0x7f0d0111;
+        public static final int tab_main_color=0x7f0d0112;
+        public static final int table_background=0x7f0d0113;
+        public static final int tan=0x7f0d0114;
+        public static final int teal=0x7f0d0115;
+        public static final int text_answer=0x7f0d0116;
+        public static final int text_b1=0x7f0d001b;
+        public static final int text_b2=0x7f0d001c;
+        public static final int text_b3=0x7f0d001d;
+        public static final int text_black=0x7f0d0117;
+        public static final int text_bom_account=0x7f0d0118;
+        public static final int text_click=0x7f0d0119;
+        public static final int text_gray=0x7f0d011a;
+        public static final int text_left=0x7f0d011b;
+        public static final int text_left_account=0x7f0d011c;
+        public static final int text_price_red=0x7f0d011d;
+        public static final int text_question=0x7f0d011e;
+        public static final int text_right=0x7f0d011f;
+        public static final int text_sold_greay=0x7f0d0120;
+        public static final int text_tips=0x7f0d0121;
+        public static final int text_title_black=0x7f0d0122;
+        public static final int text_yellow=0x7f0d0123;
+        public static final int thistle=0x7f0d0124;
+        public static final int title_content_color=0x7f0d0125;
+        public static final int tomato=0x7f0d0126;
+        public static final int top_bar_color=0x7f0d001e;
+        public static final int transparent=0x7f0d001f;
+        public static final int turquoise=0x7f0d0127;
+        public static final int viewfinder_mask=0x7f0d0128;
+        public static final int violet=0x7f0d0129;
+        public static final int wheat=0x7f0d012a;
+        public static final int white=0x7f0d0020;
+        public static final int whitesmoke=0x7f0d012b;
+        public static final int yellow=0x7f0d0021;
+        public static final int yellow_my_work=0x7f0d0022;
     }
     public static final class dimen {
-        public static final int abc_action_bar_content_inset_material=0x7f08000c;
-        public static final int abc_action_bar_content_inset_with_nav=0x7f08000d;
-        public static final int abc_action_bar_default_height_material=0x7f080001;
-        public static final int abc_action_bar_default_padding_end_material=0x7f08000e;
-        public static final int abc_action_bar_default_padding_start_material=0x7f08000f;
-        public static final int abc_action_bar_elevation_material=0x7f080030;
-        public static final int abc_action_bar_icon_vertical_padding_material=0x7f080031;
-        public static final int abc_action_bar_overflow_padding_end_material=0x7f080032;
-        public static final int abc_action_bar_overflow_padding_start_material=0x7f080033;
-        public static final int abc_action_bar_progress_bar_size=0x7f080002;
-        public static final int abc_action_bar_stacked_max_height=0x7f080034;
-        public static final int abc_action_bar_stacked_tab_max_width=0x7f080035;
-        public static final int abc_action_bar_subtitle_bottom_margin_material=0x7f080036;
-        public static final int abc_action_bar_subtitle_top_margin_material=0x7f080037;
-        public static final int abc_action_button_min_height_material=0x7f080038;
-        public static final int abc_action_button_min_width_material=0x7f080039;
-        public static final int abc_action_button_min_width_overflow_material=0x7f08003a;
-        public static final int abc_alert_dialog_button_bar_height=0x7f080000;
-        public static final int abc_button_inset_horizontal_material=0x7f08003b;
-        public static final int abc_button_inset_vertical_material=0x7f08003c;
-        public static final int abc_button_padding_horizontal_material=0x7f08003d;
-        public static final int abc_button_padding_vertical_material=0x7f08003e;
-        public static final int abc_cascading_menus_min_smallest_width=0x7f08003f;
-        public static final int abc_config_prefDialogWidth=0x7f080005;
-        public static final int abc_control_corner_material=0x7f080040;
-        public static final int abc_control_inset_material=0x7f080041;
-        public static final int abc_control_padding_material=0x7f080042;
-        public static final int abc_dialog_fixed_height_major=0x7f080006;
-        public static final int abc_dialog_fixed_height_minor=0x7f080007;
-        public static final int abc_dialog_fixed_width_major=0x7f080008;
-        public static final int abc_dialog_fixed_width_minor=0x7f080009;
-        public static final int abc_dialog_list_padding_bottom_no_buttons=0x7f080043;
-        public static final int abc_dialog_list_padding_top_no_title=0x7f080044;
-        public static final int abc_dialog_min_width_major=0x7f08000a;
-        public static final int abc_dialog_min_width_minor=0x7f08000b;
-        public static final int abc_dialog_padding_material=0x7f080045;
-        public static final int abc_dialog_padding_top_material=0x7f080046;
-        public static final int abc_dialog_title_divider_material=0x7f080047;
-        public static final int abc_disabled_alpha_material_dark=0x7f080048;
-        public static final int abc_disabled_alpha_material_light=0x7f080049;
-        public static final int abc_dropdownitem_icon_width=0x7f08004a;
-        public static final int abc_dropdownitem_text_padding_left=0x7f08004b;
-        public static final int abc_dropdownitem_text_padding_right=0x7f08004c;
-        public static final int abc_edit_text_inset_bottom_material=0x7f08004d;
-        public static final int abc_edit_text_inset_horizontal_material=0x7f08004e;
-        public static final int abc_edit_text_inset_top_material=0x7f08004f;
-        public static final int abc_floating_window_z=0x7f080050;
-        public static final int abc_list_item_padding_horizontal_material=0x7f080051;
-        public static final int abc_panel_menu_list_width=0x7f080052;
-        public static final int abc_progress_bar_height_material=0x7f080053;
-        public static final int abc_search_view_preferred_height=0x7f080054;
-        public static final int abc_search_view_preferred_width=0x7f080055;
-        public static final int abc_seekbar_track_background_height_material=0x7f080056;
-        public static final int abc_seekbar_track_progress_height_material=0x7f080057;
-        public static final int abc_select_dialog_padding_start_material=0x7f080058;
-        public static final int abc_switch_padding=0x7f08001a;
-        public static final int abc_text_size_body_1_material=0x7f080059;
-        public static final int abc_text_size_body_2_material=0x7f08005a;
-        public static final int abc_text_size_button_material=0x7f08005b;
-        public static final int abc_text_size_caption_material=0x7f08005c;
-        public static final int abc_text_size_display_1_material=0x7f08005d;
-        public static final int abc_text_size_display_2_material=0x7f08005e;
-        public static final int abc_text_size_display_3_material=0x7f08005f;
-        public static final int abc_text_size_display_4_material=0x7f080060;
-        public static final int abc_text_size_headline_material=0x7f080061;
-        public static final int abc_text_size_large_material=0x7f080062;
-        public static final int abc_text_size_medium_material=0x7f080063;
-        public static final int abc_text_size_menu_header_material=0x7f080064;
-        public static final int abc_text_size_menu_material=0x7f080065;
-        public static final int abc_text_size_small_material=0x7f080066;
-        public static final int abc_text_size_subhead_material=0x7f080067;
-        public static final int abc_text_size_subtitle_material_toolbar=0x7f080003;
-        public static final int abc_text_size_title_material=0x7f080068;
-        public static final int abc_text_size_title_material_toolbar=0x7f080004;
-        public static final int activity_horizontal_margin=0x7f080018;
-        public static final int activity_vertical_margin=0x7f08001b;
-        public static final int bottom_bar_h=0x7f08001c;
-        public static final int design_appbar_elevation=0x7f080069;
-        public static final int design_bottom_navigation_active_item_max_width=0x7f08006a;
-        public static final int design_bottom_navigation_active_text_size=0x7f08006b;
-        public static final int design_bottom_navigation_elevation=0x7f08006c;
-        public static final int design_bottom_navigation_height=0x7f08006d;
-        public static final int design_bottom_navigation_item_max_width=0x7f08006e;
-        public static final int design_bottom_navigation_item_min_width=0x7f08006f;
-        public static final int design_bottom_navigation_margin=0x7f080070;
-        public static final int design_bottom_navigation_shadow_height=0x7f080071;
-        public static final int design_bottom_navigation_text_size=0x7f080072;
-        public static final int design_bottom_sheet_modal_elevation=0x7f080073;
-        public static final int design_bottom_sheet_peek_height_min=0x7f080074;
-        public static final int design_fab_border_width=0x7f080075;
-        public static final int design_fab_elevation=0x7f080076;
-        public static final int design_fab_image_size=0x7f080077;
-        public static final int design_fab_size_mini=0x7f080078;
-        public static final int design_fab_size_normal=0x7f080079;
-        public static final int design_fab_translation_z_pressed=0x7f08007a;
-        public static final int design_navigation_elevation=0x7f08007b;
-        public static final int design_navigation_icon_padding=0x7f08007c;
-        public static final int design_navigation_icon_size=0x7f08007d;
-        public static final int design_navigation_max_width=0x7f080010;
-        public static final int design_navigation_padding_bottom=0x7f08007e;
-        public static final int design_navigation_separator_vertical_padding=0x7f08007f;
-        public static final int design_snackbar_action_inline_max_width=0x7f080011;
-        public static final int design_snackbar_background_corner_radius=0x7f080012;
-        public static final int design_snackbar_elevation=0x7f080080;
-        public static final int design_snackbar_extra_spacing_horizontal=0x7f080013;
-        public static final int design_snackbar_max_width=0x7f080014;
-        public static final int design_snackbar_min_width=0x7f080015;
-        public static final int design_snackbar_padding_horizontal=0x7f080081;
-        public static final int design_snackbar_padding_vertical=0x7f080082;
-        public static final int design_snackbar_padding_vertical_2lines=0x7f080016;
-        public static final int design_snackbar_text_size=0x7f080083;
-        public static final int design_tab_max_width=0x7f080084;
-        public static final int design_tab_scrollable_min_width=0x7f080017;
-        public static final int design_tab_text_size=0x7f080085;
-        public static final int design_tab_text_size_2line=0x7f080086;
-        public static final int disabled_alpha_material_dark=0x7f080087;
-        public static final int disabled_alpha_material_light=0x7f080088;
-        public static final int fab_margin=0x7f080089;
-        public static final int highlight_alpha_material_colored=0x7f08008a;
-        public static final int highlight_alpha_material_dark=0x7f08008b;
-        public static final int highlight_alpha_material_light=0x7f08008c;
-        public static final int hint_alpha_material_dark=0x7f08008d;
-        public static final int hint_alpha_material_light=0x7f08008e;
-        public static final int hint_pressed_alpha_material_dark=0x7f08008f;
-        public static final int hint_pressed_alpha_material_light=0x7f080090;
-        public static final int item_touch_helper_max_drag_scroll_per_frame=0x7f080091;
-        public static final int item_touch_helper_swipe_escape_max_velocity=0x7f080092;
-        public static final int item_touch_helper_swipe_escape_velocity=0x7f080093;
-        public static final int left_right_10=0x7f08001d;
-        public static final int left_right_20=0x7f08001e;
-        public static final int left_right_5=0x7f08001f;
-        public static final int loging_bar_h=0x7f080020;
-        public static final int notification_action_icon_size=0x7f080094;
-        public static final int notification_action_text_size=0x7f080095;
-        public static final int notification_big_circle_margin=0x7f080096;
-        public static final int notification_content_margin_start=0x7f08002d;
-        public static final int notification_large_icon_height=0x7f080097;
-        public static final int notification_large_icon_width=0x7f080098;
-        public static final int notification_main_column_padding_top=0x7f08002e;
-        public static final int notification_media_narrow_margin=0x7f08002f;
-        public static final int notification_right_icon_size=0x7f080099;
-        public static final int notification_right_side_padding_top=0x7f080019;
-        public static final int notification_small_icon_background_padding=0x7f08009a;
-        public static final int notification_small_icon_size_as_large=0x7f08009b;
-        public static final int notification_subtext_size=0x7f08009c;
-        public static final int notification_top_pad=0x7f08009d;
-        public static final int notification_top_pad_large_text=0x7f08009e;
-        public static final int text_big=0x7f080021;
-        public static final int text_bigbig=0x7f080022;
-        public static final int text_bighuge=0x7f080023;
-        public static final int text_huge=0x7f080024;
-        public static final int text_normal=0x7f080025;
-        public static final int text_padding_top=0x7f080026;
-        public static final int text_small=0x7f080027;
-        public static final int text_sosmall=0x7f080028;
-        public static final int top_bar_h=0x7f080029;
-        public static final int top_bottom_10=0x7f08002a;
-        public static final int top_bottom_20=0x7f08002b;
-        public static final int top_bottom_5=0x7f08002c;
+        public static final int abc_action_bar_content_inset_material=0x7f09000c;
+        public static final int abc_action_bar_content_inset_with_nav=0x7f09000d;
+        public static final int abc_action_bar_default_height_material=0x7f090001;
+        public static final int abc_action_bar_default_padding_end_material=0x7f09000e;
+        public static final int abc_action_bar_default_padding_start_material=0x7f09000f;
+        public static final int abc_action_bar_elevation_material=0x7f090030;
+        public static final int abc_action_bar_icon_vertical_padding_material=0x7f090031;
+        public static final int abc_action_bar_overflow_padding_end_material=0x7f090032;
+        public static final int abc_action_bar_overflow_padding_start_material=0x7f090033;
+        public static final int abc_action_bar_progress_bar_size=0x7f090002;
+        public static final int abc_action_bar_stacked_max_height=0x7f090034;
+        public static final int abc_action_bar_stacked_tab_max_width=0x7f090035;
+        public static final int abc_action_bar_subtitle_bottom_margin_material=0x7f090036;
+        public static final int abc_action_bar_subtitle_top_margin_material=0x7f090037;
+        public static final int abc_action_button_min_height_material=0x7f090038;
+        public static final int abc_action_button_min_width_material=0x7f090039;
+        public static final int abc_action_button_min_width_overflow_material=0x7f09003a;
+        public static final int abc_alert_dialog_button_bar_height=0x7f090000;
+        public static final int abc_button_inset_horizontal_material=0x7f09003b;
+        public static final int abc_button_inset_vertical_material=0x7f09003c;
+        public static final int abc_button_padding_horizontal_material=0x7f09003d;
+        public static final int abc_button_padding_vertical_material=0x7f09003e;
+        public static final int abc_cascading_menus_min_smallest_width=0x7f09003f;
+        public static final int abc_config_prefDialogWidth=0x7f090005;
+        public static final int abc_control_corner_material=0x7f090040;
+        public static final int abc_control_inset_material=0x7f090041;
+        public static final int abc_control_padding_material=0x7f090042;
+        public static final int abc_dialog_fixed_height_major=0x7f090006;
+        public static final int abc_dialog_fixed_height_minor=0x7f090007;
+        public static final int abc_dialog_fixed_width_major=0x7f090008;
+        public static final int abc_dialog_fixed_width_minor=0x7f090009;
+        public static final int abc_dialog_list_padding_bottom_no_buttons=0x7f090043;
+        public static final int abc_dialog_list_padding_top_no_title=0x7f090044;
+        public static final int abc_dialog_min_width_major=0x7f09000a;
+        public static final int abc_dialog_min_width_minor=0x7f09000b;
+        public static final int abc_dialog_padding_material=0x7f090045;
+        public static final int abc_dialog_padding_top_material=0x7f090046;
+        public static final int abc_dialog_title_divider_material=0x7f090047;
+        public static final int abc_disabled_alpha_material_dark=0x7f090048;
+        public static final int abc_disabled_alpha_material_light=0x7f090049;
+        public static final int abc_dropdownitem_icon_width=0x7f09004a;
+        public static final int abc_dropdownitem_text_padding_left=0x7f09004b;
+        public static final int abc_dropdownitem_text_padding_right=0x7f09004c;
+        public static final int abc_edit_text_inset_bottom_material=0x7f09004d;
+        public static final int abc_edit_text_inset_horizontal_material=0x7f09004e;
+        public static final int abc_edit_text_inset_top_material=0x7f09004f;
+        public static final int abc_floating_window_z=0x7f090050;
+        public static final int abc_list_item_padding_horizontal_material=0x7f090051;
+        public static final int abc_panel_menu_list_width=0x7f090052;
+        public static final int abc_progress_bar_height_material=0x7f090053;
+        public static final int abc_search_view_preferred_height=0x7f090054;
+        public static final int abc_search_view_preferred_width=0x7f090055;
+        public static final int abc_seekbar_track_background_height_material=0x7f090056;
+        public static final int abc_seekbar_track_progress_height_material=0x7f090057;
+        public static final int abc_select_dialog_padding_start_material=0x7f090058;
+        public static final int abc_switch_padding=0x7f09001a;
+        public static final int abc_text_size_body_1_material=0x7f090059;
+        public static final int abc_text_size_body_2_material=0x7f09005a;
+        public static final int abc_text_size_button_material=0x7f09005b;
+        public static final int abc_text_size_caption_material=0x7f09005c;
+        public static final int abc_text_size_display_1_material=0x7f09005d;
+        public static final int abc_text_size_display_2_material=0x7f09005e;
+        public static final int abc_text_size_display_3_material=0x7f09005f;
+        public static final int abc_text_size_display_4_material=0x7f090060;
+        public static final int abc_text_size_headline_material=0x7f090061;
+        public static final int abc_text_size_large_material=0x7f090062;
+        public static final int abc_text_size_medium_material=0x7f090063;
+        public static final int abc_text_size_menu_header_material=0x7f090064;
+        public static final int abc_text_size_menu_material=0x7f090065;
+        public static final int abc_text_size_small_material=0x7f090066;
+        public static final int abc_text_size_subhead_material=0x7f090067;
+        public static final int abc_text_size_subtitle_material_toolbar=0x7f090003;
+        public static final int abc_text_size_title_material=0x7f090068;
+        public static final int abc_text_size_title_material_toolbar=0x7f090004;
+        public static final int activity_horizontal_margin=0x7f090018;
+        public static final int activity_vertical_margin=0x7f09001b;
+        public static final int bottom_bar_h=0x7f09001c;
+        public static final int design_appbar_elevation=0x7f090069;
+        public static final int design_bottom_navigation_active_item_max_width=0x7f09006a;
+        public static final int design_bottom_navigation_active_text_size=0x7f09006b;
+        public static final int design_bottom_navigation_elevation=0x7f09006c;
+        public static final int design_bottom_navigation_height=0x7f09006d;
+        public static final int design_bottom_navigation_item_max_width=0x7f09006e;
+        public static final int design_bottom_navigation_item_min_width=0x7f09006f;
+        public static final int design_bottom_navigation_margin=0x7f090070;
+        public static final int design_bottom_navigation_shadow_height=0x7f090071;
+        public static final int design_bottom_navigation_text_size=0x7f090072;
+        public static final int design_bottom_sheet_modal_elevation=0x7f090073;
+        public static final int design_bottom_sheet_peek_height_min=0x7f090074;
+        public static final int design_fab_border_width=0x7f090075;
+        public static final int design_fab_elevation=0x7f090076;
+        public static final int design_fab_image_size=0x7f090077;
+        public static final int design_fab_size_mini=0x7f090078;
+        public static final int design_fab_size_normal=0x7f090079;
+        public static final int design_fab_translation_z_pressed=0x7f09007a;
+        public static final int design_navigation_elevation=0x7f09007b;
+        public static final int design_navigation_icon_padding=0x7f09007c;
+        public static final int design_navigation_icon_size=0x7f09007d;
+        public static final int design_navigation_max_width=0x7f090010;
+        public static final int design_navigation_padding_bottom=0x7f09007e;
+        public static final int design_navigation_separator_vertical_padding=0x7f09007f;
+        public static final int design_snackbar_action_inline_max_width=0x7f090011;
+        public static final int design_snackbar_background_corner_radius=0x7f090012;
+        public static final int design_snackbar_elevation=0x7f090080;
+        public static final int design_snackbar_extra_spacing_horizontal=0x7f090013;
+        public static final int design_snackbar_max_width=0x7f090014;
+        public static final int design_snackbar_min_width=0x7f090015;
+        public static final int design_snackbar_padding_horizontal=0x7f090081;
+        public static final int design_snackbar_padding_vertical=0x7f090082;
+        public static final int design_snackbar_padding_vertical_2lines=0x7f090016;
+        public static final int design_snackbar_text_size=0x7f090083;
+        public static final int design_tab_max_width=0x7f090084;
+        public static final int design_tab_scrollable_min_width=0x7f090017;
+        public static final int design_tab_text_size=0x7f090085;
+        public static final int design_tab_text_size_2line=0x7f090086;
+        public static final int disabled_alpha_material_dark=0x7f090087;
+        public static final int disabled_alpha_material_light=0x7f090088;
+        public static final int fab_margin=0x7f090089;
+        public static final int highlight_alpha_material_colored=0x7f09008a;
+        public static final int highlight_alpha_material_dark=0x7f09008b;
+        public static final int highlight_alpha_material_light=0x7f09008c;
+        public static final int hint_alpha_material_dark=0x7f09008d;
+        public static final int hint_alpha_material_light=0x7f09008e;
+        public static final int hint_pressed_alpha_material_dark=0x7f09008f;
+        public static final int hint_pressed_alpha_material_light=0x7f090090;
+        public static final int item_touch_helper_max_drag_scroll_per_frame=0x7f090091;
+        public static final int item_touch_helper_swipe_escape_max_velocity=0x7f090092;
+        public static final int item_touch_helper_swipe_escape_velocity=0x7f090093;
+        public static final int left_right_10=0x7f09001d;
+        public static final int left_right_20=0x7f09001e;
+        public static final int left_right_5=0x7f09001f;
+        public static final int loging_bar_h=0x7f090020;
+        public static final int notification_action_icon_size=0x7f090094;
+        public static final int notification_action_text_size=0x7f090095;
+        public static final int notification_big_circle_margin=0x7f090096;
+        public static final int notification_content_margin_start=0x7f09002d;
+        public static final int notification_large_icon_height=0x7f090097;
+        public static final int notification_large_icon_width=0x7f090098;
+        public static final int notification_main_column_padding_top=0x7f09002e;
+        public static final int notification_media_narrow_margin=0x7f09002f;
+        public static final int notification_right_icon_size=0x7f090099;
+        public static final int notification_right_side_padding_top=0x7f090019;
+        public static final int notification_small_icon_background_padding=0x7f09009a;
+        public static final int notification_small_icon_size_as_large=0x7f09009b;
+        public static final int notification_subtext_size=0x7f09009c;
+        public static final int notification_top_pad=0x7f09009d;
+        public static final int notification_top_pad_large_text=0x7f09009e;
+        public static final int text_big=0x7f090021;
+        public static final int text_bigbig=0x7f090022;
+        public static final int text_bighuge=0x7f090023;
+        public static final int text_huge=0x7f090024;
+        public static final int text_normal=0x7f090025;
+        public static final int text_padding_top=0x7f090026;
+        public static final int text_small=0x7f090027;
+        public static final int text_sosmall=0x7f090028;
+        public static final int top_bar_h=0x7f090029;
+        public static final int top_bottom_10=0x7f09002a;
+        public static final int top_bottom_20=0x7f09002b;
+        public static final int top_bottom_5=0x7f09002c;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha=0x7f020000;
@@ -2959,493 +2959,516 @@ containing adssadas value of this type.
         public static final int aboutus=0x7f020053;
         public static final int add_state=0x7f020054;
         public static final int avd_hide_password=0x7f020055;
-        public static final int avd_hide_password_1=0x7f0200d9;
-        public static final int avd_hide_password_2=0x7f0200da;
-        public static final int avd_hide_password_3=0x7f0200db;
+        public static final int avd_hide_password_1=0x7f0200dd;
+        public static final int avd_hide_password_2=0x7f0200de;
+        public static final int avd_hide_password_3=0x7f0200df;
         public static final int avd_show_password=0x7f020056;
-        public static final int avd_show_password_1=0x7f0200dc;
-        public static final int avd_show_password_2=0x7f0200dd;
-        public static final int avd_show_password_3=0x7f0200de;
+        public static final int avd_show_password_1=0x7f0200e0;
+        public static final int avd_show_password_2=0x7f0200e1;
+        public static final int avd_show_password_3=0x7f0200e2;
         public static final int banner_dian_blur=0x7f020057;
         public static final int banner_dian_focus=0x7f020058;
         public static final int bg_my_ed=0x7f020059;
         public static final int bg_my_edtwo=0x7f02005a;
         public static final int bg_tv_add_shop_car=0x7f02005b;
         public static final int bg_tv_go_to_pay=0x7f02005c;
-        public static final int bt_loging_bg=0x7f02005d;
-        public static final int bt_loging_bg_no=0x7f02005e;
-        public static final int btn=0x7f02005f;
-        public static final int btn_popu=0x7f020060;
-        public static final int bybuttonbg=0x7f020061;
-        public static final int card_bg_red=0x7f020062;
-        public static final int check_box_bg=0x7f020063;
-        public static final int checked_1=0x7f020064;
-        public static final int checkede=0x7f020065;
-        public static final int cicle_banner_dian_blur=0x7f020066;
-        public static final int cicle_banner_dian_focus=0x7f020067;
-        public static final int click_bg=0x7f020068;
-        public static final int cny=0x7f020069;
-        public static final int custom_dialog_one_btn=0x7f02006a;
-        public static final int custom_dialog_two_btn_left=0x7f02006b;
-        public static final int custom_dialog_two_btn_right=0x7f02006c;
-        public static final int del_bg=0x7f02006d;
-        public static final int del_pressed=0x7f02006e;
-        public static final int del_unpressed=0x7f02006f;
-        public static final int design_bottom_navigation_item_background=0x7f020070;
-        public static final int design_fab_background=0x7f020071;
-        public static final int design_ic_visibility=0x7f020072;
-        public static final int design_ic_visibility_off=0x7f020073;
-        public static final int design_password_eye=0x7f020074;
-        public static final int design_snackbar_background=0x7f020075;
-        public static final int dialog=0x7f020076;
-        public static final int dialog_bg=0x7f020077;
-        public static final int dialog_btn_left=0x7f020078;
-        public static final int dialog_btn_right=0x7f020079;
-        public static final int dingcan=0x7f02007a;
-        public static final int dingwei=0x7f02007b;
-        public static final int drink=0x7f02007c;
-        public static final int empty_cart=0x7f02007d;
-        public static final int fanhui=0x7f02007e;
-        public static final int fram2=0x7f02007f;
-        public static final int frame=0x7f020080;
-        public static final int geshushape=0x7f020081;
-        public static final int go=0x7f020082;
-        public static final int groupfood=0x7f020083;
-        public static final int hgbw=0x7f020084;
-        public static final int home=0x7f020085;
-        public static final int homec=0x7f020086;
-        public static final int hot=0x7f020087;
-        public static final int ic_checked=0x7f020088;
-        public static final int ic_launcher=0x7f020089;
-        public static final int ic_uncheck=0x7f02008a;
-        public static final int icon_geo=0x7f02008b;
-        public static final int icon_marka=0x7f02008c;
-        public static final int item_bg=0x7f02008d;
-        public static final int jietu=0x7f02008e;
-        public static final int l=0x7f02008f;
-        public static final int l1=0x7f020090;
-        public static final int l2=0x7f020091;
-        public static final int l3=0x7f020092;
-        public static final int l4=0x7f020093;
-        public static final int l5=0x7f020094;
-        public static final int l6=0x7f020095;
-        public static final int l7=0x7f020096;
-        public static final int load=0x7f020097;
-        public static final int locate_popup=0x7f020098;
-        public static final int logout=0x7f020099;
-        public static final int longredmeet=0x7f02009a;
-        public static final int machine_choose=0x7f02009b;
-        public static final int mima=0x7f02009c;
-        public static final int mine=0x7f02009d;
-        public static final int mine_bg=0x7f02009e;
-        public static final int minec=0x7f02009f;
-        public static final int minemoney_bg=0x7f0200a0;
-        public static final int mineorder=0x7f0200a1;
+        public static final int bike_nav_bg=0x7f02005d;
+        public static final int bt_loging_bg=0x7f02005e;
+        public static final int bt_loging_bg_no=0x7f02005f;
+        public static final int btn=0x7f020060;
+        public static final int btn_popu=0x7f020061;
+        public static final int bybuttonbg=0x7f020062;
+        public static final int card_bg_red=0x7f020063;
+        public static final int check_box_bg=0x7f020064;
+        public static final int cicle_banner_dian_blur=0x7f020065;
+        public static final int cicle_banner_dian_focus=0x7f020066;
+        public static final int click_bg=0x7f020067;
+        public static final int cny=0x7f020068;
+        public static final int custom_dialog_one_btn=0x7f020069;
+        public static final int custom_dialog_two_btn_left=0x7f02006a;
+        public static final int custom_dialog_two_btn_right=0x7f02006b;
+        public static final int del_bg=0x7f02006c;
+        public static final int del_pressed=0x7f02006d;
+        public static final int del_unpressed=0x7f02006e;
+        public static final int design_bottom_navigation_item_background=0x7f02006f;
+        public static final int design_fab_background=0x7f020070;
+        public static final int design_ic_visibility=0x7f020071;
+        public static final int design_ic_visibility_off=0x7f020072;
+        public static final int design_password_eye=0x7f020073;
+        public static final int design_snackbar_background=0x7f020074;
+        public static final int dialog=0x7f020075;
+        public static final int dialog_bg=0x7f020076;
+        public static final int dialog_btn_left=0x7f020077;
+        public static final int dialog_btn_right=0x7f020078;
+        public static final int dingcan=0x7f020079;
+        public static final int dingwei=0x7f02007a;
+        public static final int drink=0x7f02007b;
+        public static final int empty_cart=0x7f02007c;
+        public static final int fanhui=0x7f02007d;
+        public static final int fram2=0x7f02007e;
+        public static final int frame=0x7f02007f;
+        public static final int geshushape=0x7f020080;
+        public static final int go=0x7f020081;
+        public static final int groupfood=0x7f020082;
+        public static final int hgbw=0x7f020083;
+        public static final int home=0x7f020084;
+        public static final int homec=0x7f020085;
+        public static final int hot=0x7f020086;
+        public static final int ic_checked=0x7f020087;
+        public static final int ic_launcher=0x7f020088;
+        public static final int ic_unchecked=0x7f020089;
+        public static final int item_bg=0x7f02008a;
+        public static final int jietu=0x7f02008b;
+        public static final int l=0x7f02008c;
+        public static final int l1=0x7f02008d;
+        public static final int l2=0x7f02008e;
+        public static final int l3=0x7f02008f;
+        public static final int l4=0x7f020090;
+        public static final int l5=0x7f020091;
+        public static final int l6=0x7f020092;
+        public static final int l7=0x7f020093;
+        public static final int load=0x7f020094;
+        public static final int locate_popup=0x7f020095;
+        public static final int logout=0x7f020096;
+        public static final int longredmeet=0x7f020097;
+        public static final int machine_choose=0x7f020098;
+        public static final int mark=0x7f020099;
+        public static final int mark_popu=0x7f02009a;
+        public static final int mima=0x7f02009b;
+        public static final int mine=0x7f02009c;
+        public static final int mine_bg=0x7f02009d;
+        public static final int minec=0x7f02009e;
+        public static final int minemoney_bg=0x7f02009f;
+        public static final int mineorder=0x7f0200a0;
+        public static final int mylocation=0x7f0200a1;
         public static final int mymoney=0x7f0200a2;
         public static final int mypoint=0x7f0200a3;
         public static final int myticket=0x7f0200a4;
-        public static final int navigation_empty_icon=0x7f0200a5;
-        public static final int newfood=0x7f0200a6;
-        public static final int next_btn_ok=0x7f0200a7;
-        public static final int notification_action_background=0x7f0200a8;
-        public static final int notification_bg=0x7f0200a9;
-        public static final int notification_bg_low=0x7f0200aa;
-        public static final int notification_bg_low_normal=0x7f0200ab;
-        public static final int notification_bg_low_pressed=0x7f0200ac;
-        public static final int notification_bg_normal=0x7f0200ad;
-        public static final int notification_bg_normal_pressed=0x7f0200ae;
-        public static final int notification_icon_background=0x7f0200af;
-        public static final int notification_template_icon_bg=0x7f0200d7;
-        public static final int notification_template_icon_low_bg=0x7f0200d8;
-        public static final int notification_tile_bg=0x7f0200b0;
-        public static final int notify_panel_notification_icon_bg=0x7f0200b1;
-        public static final int numberbg=0x7f0200b2;
-        public static final int otherloging=0x7f0200b3;
-        public static final int pen=0x7f0200b4;
-        public static final int phone=0x7f0200b5;
-        public static final int popup=0x7f0200b6;
-        public static final int radbtn_bg=0x7f0200b7;
-        public static final int radiobutton=0x7f0200b8;
-        public static final int rdo_btn_bg=0x7f0200b9;
-        public static final int rdo_btn_text_color=0x7f0200ba;
-        public static final int reameet=0x7f0200bb;
-        public static final int regisitersuccess=0x7f0200bc;
-        public static final int search_bg=0x7f0200bd;
-        public static final int setting=0x7f0200be;
-        public static final int shop=0x7f0200bf;
-        public static final int shopbuttonbg=0x7f0200c0;
-        public static final int shopc=0x7f0200c1;
-        public static final int shopcarshapre=0x7f0200c2;
-        public static final int shopcut=0x7f0200c3;
-        public static final int shopjia=0x7f0200c4;
-        public static final int sousuo=0x7f0200c5;
-        public static final int sub_state=0x7f0200c6;
-        public static final int takefood=0x7f0200c7;
-        public static final int takefoodc=0x7f0200c8;
-        public static final int ticketleft=0x7f0200c9;
-        public static final int ticketright=0x7f0200ca;
-        public static final int tv_btn_qr_code=0x7f0200cb;
-        public static final int upanddown_bg=0x7f0200cc;
-        public static final int vr9=0x7f0200cd;
-        public static final int vr9logo=0x7f0200ce;
-        public static final int weixin=0x7f0200cf;
-        public static final int wheel_bg=0x7f0200d0;
-        public static final int wheel_val=0x7f0200d1;
-        public static final int xiala=0x7f0200d2;
-        public static final int xinlang=0x7f0200d3;
-        public static final int youhuijuan=0x7f0200d4;
-        public static final int zhanghao=0x7f0200d5;
-        public static final int zhankai=0x7f0200d6;
+        public static final int nav_normal=0x7f0200a5;
+        public static final int nav_pressed=0x7f0200a6;
+        public static final int navigation_empty_icon=0x7f0200a7;
+        public static final int newfood=0x7f0200a8;
+        public static final int next_btn_ok=0x7f0200a9;
+        public static final int notification_action_background=0x7f0200aa;
+        public static final int notification_bg=0x7f0200ab;
+        public static final int notification_bg_low=0x7f0200ac;
+        public static final int notification_bg_low_normal=0x7f0200ad;
+        public static final int notification_bg_low_pressed=0x7f0200ae;
+        public static final int notification_bg_normal=0x7f0200af;
+        public static final int notification_bg_normal_pressed=0x7f0200b0;
+        public static final int notification_icon_background=0x7f0200b1;
+        public static final int notification_template_icon_bg=0x7f0200db;
+        public static final int notification_template_icon_low_bg=0x7f0200dc;
+        public static final int notification_tile_bg=0x7f0200b2;
+        public static final int notify_panel_notification_icon_bg=0x7f0200b3;
+        public static final int numberbg=0x7f0200b4;
+        public static final int otherloging=0x7f0200b5;
+        public static final int pen=0x7f0200b6;
+        public static final int phone=0x7f0200b7;
+        public static final int qr_code_bg=0x7f0200b8;
+        public static final int radbtn_bg=0x7f0200b9;
+        public static final int radiobutton=0x7f0200ba;
+        public static final int rdo_btn_bg=0x7f0200bb;
+        public static final int rdo_btn_text_color=0x7f0200bc;
+        public static final int reameet=0x7f0200bd;
+        public static final int regisitersuccess=0x7f0200be;
+        public static final int scan_line=0x7f0200bf;
+        public static final int search_bg=0x7f0200c0;
+        public static final int setting=0x7f0200c1;
+        public static final int shadow=0x7f0200c2;
+        public static final int shop=0x7f0200c3;
+        public static final int shopbuttonbg=0x7f0200c4;
+        public static final int shopc=0x7f0200c5;
+        public static final int shopcarshapre=0x7f0200c6;
+        public static final int shopcut=0x7f0200c7;
+        public static final int shopjia=0x7f0200c8;
+        public static final int sousuo=0x7f0200c9;
+        public static final int sub_state=0x7f0200ca;
+        public static final int takefood=0x7f0200cb;
+        public static final int takefoodc=0x7f0200cc;
+        public static final int ticketleft=0x7f0200cd;
+        public static final int ticketright=0x7f0200ce;
+        public static final int tv_btn_qr_code=0x7f0200cf;
+        public static final int upanddown_bg=0x7f0200d0;
+        public static final int vr9=0x7f0200d1;
+        public static final int vr9logo=0x7f0200d2;
+        public static final int weixin=0x7f0200d3;
+        public static final int wheel_bg=0x7f0200d4;
+        public static final int wheel_val=0x7f0200d5;
+        public static final int xiala=0x7f0200d6;
+        public static final int xinlang=0x7f0200d7;
+        public static final int youhuijuan=0x7f0200d8;
+        public static final int zhanghao=0x7f0200d9;
+        public static final int zhankai=0x7f0200da;
     }
     public static final class id {
-        public static final int aboutus=0x7f0d010f;
-        public static final int action0=0x7f0d012c;
-        public static final int action_bar=0x7f0d0064;
-        public static final int action_bar_activity_content=0x7f0d0000;
-        public static final int action_bar_container=0x7f0d0063;
-        public static final int action_bar_root=0x7f0d005f;
-        public static final int action_bar_spinner=0x7f0d0001;
-        public static final int action_bar_subtitle=0x7f0d0042;
-        public static final int action_bar_title=0x7f0d0041;
-        public static final int action_container=0x7f0d0129;
-        public static final int action_context_bar=0x7f0d0065;
-        public static final int action_divider=0x7f0d0130;
-        public static final int action_image=0x7f0d012a;
-        public static final int action_menu_divider=0x7f0d0002;
-        public static final int action_menu_presenter=0x7f0d0003;
-        public static final int action_mode_bar=0x7f0d0061;
-        public static final int action_mode_bar_stub=0x7f0d0060;
-        public static final int action_mode_close_button=0x7f0d0043;
-        public static final int action_settings=0x7f0d0150;
-        public static final int action_text=0x7f0d012b;
-        public static final int actions=0x7f0d0139;
-        public static final int activity_binding=0x7f0d0078;
-        public static final int activity_car_pay=0x7f0d0080;
-        public static final int activity_chooser_view_content=0x7f0d0044;
-        public static final int activity_comfirm_pay=0x7f0d008d;
-        public static final int activity_edit_account=0x7f0d00a6;
-        public static final int activity_loading=0x7f0d00b1;
-        public static final int activity_machine_list=0x7f0d00b8;
-        public static final int activity_my_order=0x7f0d00cc;
-        public static final int activity_overlay=0x7f0d00d6;
-        public static final int activity_pay=0x7f0d0090;
-        public static final int activity_qrcode=0x7f0d00d7;
-        public static final int ad_rl=0x7f0d00db;
-        public static final int add=0x7f0d001e;
-        public static final int adv_pager=0x7f0d00dc;
-        public static final int alertTitle=0x7f0d0058;
-        public static final int all=0x7f0d0036;
-        public static final int always=0x7f0d003a;
-        public static final int auto=0x7f0d0025;
-        public static final int bdmcNaviBtn=0x7f0d007e;
-        public static final int beginning=0x7f0d0038;
-        public static final int binner=0x7f0d00f9;
-        public static final int bmapView=0x7f0d00b4;
-        public static final int bottom=0x7f0d0026;
-        public static final int bottom_bar=0x7f0d00be;
-        public static final int bt_gologing=0x7f0d00d9;
-        public static final int bt_loging=0x7f0d00b7;
-        public static final int bt_register=0x7f0d00ae;
-        public static final int btn_cancel=0x7f0d0122;
-        public static final int btn_go_to_pay=0x7f0d0123;
-        public static final int btn_logout=0x7f0d00da;
-        public static final int btn_pay=0x7f0d008f;
-        public static final int btn_shenghui=0x7f0d00b9;
-        public static final int buttonPanel=0x7f0d004b;
-        public static final int button_add=0x7f0d0076;
-        public static final int button_sub=0x7f0d0077;
-        public static final int cancel_action=0x7f0d012d;
-        public static final int cb_agree=0x7f0d00ad;
-        public static final int cb_all=0x7f0d0113;
-        public static final int cb_child=0x7f0d0093;
-        public static final int cb_gcb=0x7f0d0087;
-        public static final int cb_group=0x7f0d0091;
-        public static final int cb_item=0x7f0d0125;
-        public static final int cb_ticket=0x7f0d0127;
-        public static final int cb_weixin=0x7f0d008a;
-        public static final int center=0x7f0d0027;
-        public static final int center_horizontal=0x7f0d0028;
-        public static final int center_vertical=0x7f0d0029;
-        public static final int checkbox=0x7f0d005b;
-        public static final int chronometer=0x7f0d0135;
-        public static final int civ_head=0x7f0d0105;
-        public static final int clip_horizontal=0x7f0d0032;
-        public static final int clip_vertical=0x7f0d0033;
-        public static final int collapseActionView=0x7f0d003b;
-        public static final int contentPanel=0x7f0d004e;
-        public static final int custom=0x7f0d0055;
-        public static final int customPanel=0x7f0d0054;
-        public static final int decor_content_parent=0x7f0d0062;
-        public static final int default_activity_button=0x7f0d0047;
-        public static final int design_bottom_sheet=0x7f0d00e9;
-        public static final int design_menu_item_action_area=0x7f0d00f0;
-        public static final int design_menu_item_action_area_stub=0x7f0d00ef;
-        public static final int design_menu_item_text=0x7f0d00ee;
-        public static final int design_navigation_view=0x7f0d00ed;
-        public static final int dialog_content=0x7f0d00e0;
-        public static final int dialog_title=0x7f0d00df;
-        public static final int disableHome=0x7f0d0012;
-        public static final int edit_query=0x7f0d0066;
-        public static final int elv_buying=0x7f0d0083;
-        public static final int elv_shopcar=0x7f0d0112;
-        public static final int end=0x7f0d002a;
-        public static final int end_padder=0x7f0d013f;
-        public static final int enterAlways=0x7f0d0019;
-        public static final int enterAlwaysCollapsed=0x7f0d001a;
-        public static final int et_account=0x7f0d00a7;
-        public static final int et_password=0x7f0d00ab;
-        public static final int et_passwordag=0x7f0d00ac;
-        public static final int et_user_count=0x7f0d007a;
-        public static final int et_username=0x7f0d00a8;
-        public static final int et_vernumber=0x7f0d00a9;
-        public static final int exitUntilCollapsed=0x7f0d001b;
-        public static final int expand_activities_button=0x7f0d0045;
-        public static final int expanded_menu=0x7f0d005a;
-        public static final int fill=0x7f0d0034;
-        public static final int fill_horizontal=0x7f0d0035;
-        public static final int fill_vertical=0x7f0d002b;
-        public static final int fixed=0x7f0d003f;
-        public static final int fl_content=0x7f0d00bd;
-        public static final int fromcamera=0x7f0d00f3;
-        public static final int fromphoto=0x7f0d00f4;
-        public static final int gcjNaviBtn=0x7f0d007d;
-        public static final int home=0x7f0d0004;
-        public static final int homeAsUp=0x7f0d0013;
-        public static final int homeimg=0x7f0d00bf;
-        public static final int hometxt=0x7f0d00c0;
-        public static final int icon=0x7f0d0049;
-        public static final int icon_group=0x7f0d013a;
-        public static final int ifRoom=0x7f0d003c;
-        public static final int image=0x7f0d0046;
-        public static final int imageView=0x7f0d010d;
-        public static final int imageView2=0x7f0d00b3;
-        public static final int img_btn_del=0x7f0d0145;
-        public static final int img_food=0x7f0d0094;
-        public static final int include=0x7f0d009c;
-        public static final int info=0x7f0d0136;
-        public static final int item_touch_helper_previous_elevation=0x7f0d0005;
-        public static final int iv_detils=0x7f0d011b;
-        public static final int iv_food=0x7f0d009e;
-        public static final int iv_location=0x7f0d00ff;
-        public static final int iv_qr_code=0x7f0d00d8;
-        public static final int largeLabel=0x7f0d00e7;
-        public static final int layout_car_empty=0x7f0d0111;
-        public static final int left=0x7f0d002c;
-        public static final int line1=0x7f0d013b;
-        public static final int line3=0x7f0d013d;
-        public static final int linearlayout_clientRise_back=0x7f0d0074;
-        public static final int listMode=0x7f0d000f;
-        public static final int list_item=0x7f0d0048;
-        public static final int ll_btn_layout=0x7f0d00ba;
-        public static final int ll_choose_machine=0x7f0d0101;
-        public static final int ll_content_empty=0x7f0d00d3;
-        public static final int ll_edit=0x7f0d0106;
-        public static final int ll_gcb=0x7f0d0085;
-        public static final int ll_info=0x7f0d0114;
-        public static final int ll_lav_bottom=0x7f0d0081;
-        public static final int ll_location=0x7f0d00fe;
-        public static final int ll_login_layout=0x7f0d0104;
-        public static final int ll_logout=0x7f0d0110;
-        public static final int ll_logout_layout=0x7f0d0108;
-        public static final int ll_money_layout=0x7f0d0097;
-        public static final int ll_nav_bottom=0x7f0d009a;
-        public static final int ll_num_layout=0x7f0d00a0;
-        public static final int ll_one_btn_layout=0x7f0d00e4;
-        public static final int ll_search=0x7f0d0103;
-        public static final int ll_two_btn_layout=0x7f0d00e1;
-        public static final int ll_weixin=0x7f0d0088;
-        public static final int loadingIv=0x7f0d0143;
-        public static final int loadingTv=0x7f0d0144;
-        public static final int lv_card=0x7f0d00d4;
-        public static final int lv_home=0x7f0d00fd;
-        public static final int lv_machine=0x7f0d00bb;
-        public static final int lv_my_order_out=0x7f0d00d1;
-        public static final int lv_my_ticket=0x7f0d0084;
-        public static final int lv_myorder_in=0x7f0d0120;
-        public static final int lv_myticket=0x7f0d00d2;
-        public static final int lv_takefood=0x7f0d0116;
-        public static final int mDb06llNaviBtn=0x7f0d007f;
-        public static final int main_bg=0x7f0d00bc;
-        public static final int mapView_client_raise=0x7f0d0075;
-        public static final int masked=0x7f0d014f;
-        public static final int media_actions=0x7f0d012f;
-        public static final int middle=0x7f0d0039;
-        public static final int mine=0x7f0d00c9;
-        public static final int mineimg=0x7f0d00ca;
-        public static final int minetxt=0x7f0d00cb;
-        public static final int mini=0x7f0d0037;
-        public static final int multiply=0x7f0d001f;
-        public static final int mymoney=0x7f0d010e;
-        public static final int myorder=0x7f0d010a;
-        public static final int mypoint=0x7f0d010c;
-        public static final int myticket=0x7f0d010b;
-        public static final int navigation_header_container=0x7f0d00ec;
-        public static final int never=0x7f0d003d;
-        public static final int none=0x7f0d0014;
-        public static final int normal=0x7f0d0010;
-        public static final int notification_background=0x7f0d0138;
-        public static final int notification_main_column=0x7f0d0132;
-        public static final int notification_main_column_container=0x7f0d0131;
-        public static final int number=0x7f0d00a3;
-        public static final int parallax=0x7f0d0030;
-        public static final int parentPanel=0x7f0d004d;
-        public static final int passwordInputView=0x7f0d00f6;
-        public static final int password_negative_btn=0x7f0d00f8;
-        public static final int password_positive_btn=0x7f0d00f7;
-        public static final int pin=0x7f0d0031;
-        public static final int progress_circular=0x7f0d0006;
-        public static final int progress_horizontal=0x7f0d0007;
-        public static final int radio=0x7f0d005d;
-        public static final int rb_3od=0x7f0d00d0;
-        public static final int rb_home=0x7f0d00fa;
-        public static final int rb_mine=0x7f0d00fc;
-        public static final int rb_shopcar=0x7f0d00fb;
-        public static final int rb_tak3efood=0x7f0d00cf;
-        public static final int rb_takefood=0x7f0d00ce;
-        public static final int rdo_group=0x7f0d00cd;
-        public static final int relativeLayout_top_clientRaise=0x7f0d0073;
-        public static final int rg_photo=0x7f0d00f2;
-        public static final int right=0x7f0d002d;
-        public static final int right_icon=0x7f0d0137;
-        public static final int right_side=0x7f0d0133;
-        public static final int rl_shop_car=0x7f0d00c6;
-        public static final int screen=0x7f0d0020;
-        public static final int scroll=0x7f0d001c;
-        public static final int scrollIndicatorDown=0x7f0d0053;
-        public static final int scrollIndicatorUp=0x7f0d004f;
-        public static final int scrollView=0x7f0d0050;
-        public static final int scrollable=0x7f0d0040;
-        public static final int search_badge=0x7f0d0068;
-        public static final int search_bar=0x7f0d0067;
-        public static final int search_button=0x7f0d0069;
-        public static final int search_close_btn=0x7f0d006e;
-        public static final int search_edit_frame=0x7f0d006a;
-        public static final int search_go_btn=0x7f0d0070;
-        public static final int search_mag_icon=0x7f0d006b;
-        public static final int search_plate=0x7f0d006c;
-        public static final int search_src_text=0x7f0d006d;
-        public static final int search_voice_btn=0x7f0d0071;
-        public static final int select_dialog_listview=0x7f0d0072;
-        public static final int shopcar=0x7f0d00c4;
-        public static final int shopcarimg=0x7f0d00c5;
-        public static final int shopcartxt=0x7f0d00c8;
-        public static final int shortcut=0x7f0d005c;
-        public static final int showCustom=0x7f0d0015;
-        public static final int showHome=0x7f0d0016;
-        public static final int showTitle=0x7f0d0017;
-        public static final int sl_takefood=0x7f0d0115;
-        public static final int smallLabel=0x7f0d00e6;
-        public static final int snackbar_action=0x7f0d00eb;
-        public static final int snackbar_text=0x7f0d00ea;
-        public static final int snap=0x7f0d001d;
-        public static final int spacer=0x7f0d004c;
-        public static final int split_action_bar=0x7f0d0008;
-        public static final int src_atop=0x7f0d0021;
-        public static final int src_in=0x7f0d0022;
-        public static final int src_over=0x7f0d0023;
-        public static final int start=0x7f0d002e;
-        public static final int status_bar_latest_event_content=0x7f0d012e;
-        public static final int submenuarrow=0x7f0d005e;
-        public static final int submit_area=0x7f0d006f;
-        public static final int sv_all_layout=0x7f0d009d;
-        public static final int tabMode=0x7f0d0011;
-        public static final int takefood=0x7f0d00c1;
-        public static final int takefoodimg=0x7f0d00c2;
-        public static final int takefoodtxt=0x7f0d00c3;
-        public static final int text=0x7f0d013e;
-        public static final int text2=0x7f0d013c;
-        public static final int textSpacerNoButtons=0x7f0d0052;
-        public static final int textSpacerNoTitle=0x7f0d0051;
-        public static final int textView=0x7f0d00b2;
-        public static final int text_input_password_toggle=0x7f0d00f1;
-        public static final int textinput_counter=0x7f0d0009;
-        public static final int textinput_error=0x7f0d000a;
-        public static final int time=0x7f0d0134;
-        public static final int title=0x7f0d004a;
-        public static final int titleDividerNoCustom=0x7f0d0059;
-        public static final int title_template=0x7f0d0057;
-        public static final int top=0x7f0d002f;
-        public static final int topPanel=0x7f0d0056;
-        public static final int topbar=0x7f0d014a;
-        public static final int touch_outside=0x7f0d00e8;
-        public static final int transition_current_scene=0x7f0d000b;
-        public static final int transition_scene_layoutid_cache=0x7f0d000c;
-        public static final int tv_account=0x7f0d011c;
-        public static final int tv_add_car=0x7f0d009b;
-        public static final int tv_address=0x7f0d0118;
-        public static final int tv_btn_add=0x7f0d00b0;
-        public static final int tv_btn_apply=0x7f0d011a;
-        public static final int tv_btn_dec=0x7f0d00af;
-        public static final int tv_btn_no=0x7f0d00d5;
-        public static final int tv_btn_ok=0x7f0d007b;
-        public static final int tv_btn_qr=0x7f0d0147;
-        public static final int tv_cancel=0x7f0d0140;
-        public static final int tv_cardnumber=0x7f0d0124;
-        public static final int tv_city=0x7f0d0100;
-        public static final int tv_content=0x7f0d009f;
-        public static final int tv_corner=0x7f0d00c7;
-        public static final int tv_down=0x7f0d00a2;
-        public static final int tv_empty=0x7f0d00a5;
-        public static final int tv_food_name=0x7f0d0117;
-        public static final int tv_food_title=0x7f0d0095;
-        public static final int tv_forget_pwd=0x7f0d00b6;
-        public static final int tv_gcb_num=0x7f0d0086;
-        public static final int tv_getver=0x7f0d00aa;
-        public static final int tv_go_to_pay=0x7f0d008c;
-        public static final int tv_good_name=0x7f0d0148;
-        public static final int tv_good_num=0x7f0d0149;
-        public static final int tv_incar=0x7f0d0119;
-        public static final int tv_login=0x7f0d0109;
-        public static final int tv_machine_address=0x7f0d011e;
-        public static final int tv_machine_name=0x7f0d0102;
-        public static final int tv_machine_num=0x7f0d011d;
-        public static final int tv_machine_title=0x7f0d0092;
-        public static final int tv_money=0x7f0d00f5;
-        public static final int tv_myaccount=0x7f0d0079;
-        public static final int tv_negative_btn=0x7f0d00e2;
-        public static final int tv_nick=0x7f0d0107;
-        public static final int tv_num=0x7f0d0096;
-        public static final int tv_ok_btn=0x7f0d00e5;
-        public static final int tv_order=0x7f0d0146;
-        public static final int tv_order_number=0x7f0d011f;
-        public static final int tv_phone=0x7f0d00a1;
-        public static final int tv_positive_btn=0x7f0d00e3;
-        public static final int tv_price=0x7f0d008e;
-        public static final int tv_price_cny=0x7f0d0098;
-        public static final int tv_price_vr9=0x7f0d0099;
-        public static final int tv_register=0x7f0d00b5;
-        public static final int tv_save=0x7f0d0141;
-        public static final int tv_ticket_content=0x7f0d0126;
-        public static final int tv_time=0x7f0d0121;
-        public static final int tv_top_left=0x7f0d014b;
-        public static final int tv_top_right=0x7f0d014d;
-        public static final int tv_top_search=0x7f0d014c;
-        public static final int tv_total_price=0x7f0d008b;
-        public static final int tv_up=0x7f0d00a4;
-        public static final int tv_wei_num=0x7f0d0089;
-        public static final int up=0x7f0d000d;
-        public static final int useLogo=0x7f0d0018;
-        public static final int viewGroup=0x7f0d00dd;
-        public static final int viewGroup2=0x7f0d00de;
-        public static final int view_offset_helper=0x7f0d000e;
-        public static final int view_one=0x7f0d0082;
-        public static final int visible=0x7f0d014e;
-        public static final int wgsNaviBtn=0x7f0d007c;
-        public static final int wheelview=0x7f0d0142;
-        public static final int withText=0x7f0d003e;
-        public static final int wrap_content=0x7f0d0024;
-        public static final int youxiaoqi=0x7f0d0128;
+        public static final int aboutus=0x7f0e011f;
+        public static final int action0=0x7f0e0140;
+        public static final int action_bar=0x7f0e006a;
+        public static final int action_bar_activity_content=0x7f0e0000;
+        public static final int action_bar_container=0x7f0e0069;
+        public static final int action_bar_root=0x7f0e0065;
+        public static final int action_bar_spinner=0x7f0e0001;
+        public static final int action_bar_subtitle=0x7f0e0048;
+        public static final int action_bar_title=0x7f0e0047;
+        public static final int action_container=0x7f0e013d;
+        public static final int action_context_bar=0x7f0e006b;
+        public static final int action_divider=0x7f0e0144;
+        public static final int action_image=0x7f0e013e;
+        public static final int action_menu_divider=0x7f0e0002;
+        public static final int action_menu_presenter=0x7f0e0003;
+        public static final int action_mode_bar=0x7f0e0067;
+        public static final int action_mode_bar_stub=0x7f0e0066;
+        public static final int action_mode_close_button=0x7f0e0049;
+        public static final int action_settings=0x7f0e0163;
+        public static final int action_text=0x7f0e013f;
+        public static final int actions=0x7f0e014d;
+        public static final int activity_binding=0x7f0e007e;
+        public static final int activity_bnavi_guide=0x7f0e0083;
+        public static final int activity_car_pay=0x7f0e0090;
+        public static final int activity_chooser_view_content=0x7f0e004a;
+        public static final int activity_comfirm_pay=0x7f0e009d;
+        public static final int activity_edit_account=0x7f0e00b6;
+        public static final int activity_loading=0x7f0e00c1;
+        public static final int activity_machine_list=0x7f0e00c8;
+        public static final int activity_my_order=0x7f0e00dc;
+        public static final int activity_overlay=0x7f0e00e6;
+        public static final int activity_pay=0x7f0e00a0;
+        public static final int activity_qrcode=0x7f0e00e7;
+        public static final int ad_rl=0x7f0e00eb;
+        public static final int add=0x7f0e0024;
+        public static final int adv_pager=0x7f0e00ec;
+        public static final int alertTitle=0x7f0e005e;
+        public static final int all=0x7f0e003c;
+        public static final int always=0x7f0e0040;
+        public static final int auto=0x7f0e002b;
+        public static final int bdmcNaviBtn=0x7f0e0086;
+        public static final int beginning=0x7f0e003e;
+        public static final int binner=0x7f0e0109;
+        public static final int bmapView=0x7f0e00c4;
+        public static final int bottom=0x7f0e002c;
+        public static final int bottom_bar=0x7f0e00ce;
+        public static final int bt_gologing=0x7f0e00e9;
+        public static final int bt_loging=0x7f0e00c7;
+        public static final int bt_register=0x7f0e00be;
+        public static final int btn_cancel=0x7f0e0133;
+        public static final int btn_go_to_take_food=0x7f0e0134;
+        public static final int btn_logout=0x7f0e00ea;
+        public static final int btn_pay=0x7f0e009f;
+        public static final int btn_shenghui=0x7f0e00c9;
+        public static final int buttonPanel=0x7f0e0051;
+        public static final int button_add=0x7f0e007c;
+        public static final int button_sub=0x7f0e007d;
+        public static final int cancel_action=0x7f0e0141;
+        public static final int capture_container=0x7f0e0089;
+        public static final int capture_crop_view=0x7f0e008b;
+        public static final int capture_mask_bottom=0x7f0e008d;
+        public static final int capture_mask_left=0x7f0e008e;
+        public static final int capture_mask_right=0x7f0e008f;
+        public static final int capture_mask_top=0x7f0e008a;
+        public static final int capture_preview=0x7f0e0088;
+        public static final int capture_scan_line=0x7f0e008c;
+        public static final int cb_agree=0x7f0e00bd;
+        public static final int cb_all=0x7f0e0123;
+        public static final int cb_child=0x7f0e00a3;
+        public static final int cb_gcb=0x7f0e0097;
+        public static final int cb_group=0x7f0e00a1;
+        public static final int cb_item=0x7f0e0137;
+        public static final int cb_ticket=0x7f0e0139;
+        public static final int cb_weixin=0x7f0e009a;
+        public static final int center=0x7f0e002d;
+        public static final int center_horizontal=0x7f0e002e;
+        public static final int center_vertical=0x7f0e002f;
+        public static final int checkbox=0x7f0e0061;
+        public static final int chronometer=0x7f0e0149;
+        public static final int civ_head=0x7f0e0115;
+        public static final int clip_horizontal=0x7f0e0038;
+        public static final int clip_vertical=0x7f0e0039;
+        public static final int collapseActionView=0x7f0e0041;
+        public static final int contentPanel=0x7f0e0054;
+        public static final int custom=0x7f0e005b;
+        public static final int customPanel=0x7f0e005a;
+        public static final int decode=0x7f0e0004;
+        public static final int decode_failed=0x7f0e0005;
+        public static final int decode_succeeded=0x7f0e0006;
+        public static final int decor_content_parent=0x7f0e0068;
+        public static final int default_activity_button=0x7f0e004d;
+        public static final int design_bottom_sheet=0x7f0e00f9;
+        public static final int design_menu_item_action_area=0x7f0e0100;
+        public static final int design_menu_item_action_area_stub=0x7f0e00ff;
+        public static final int design_menu_item_text=0x7f0e00fe;
+        public static final int design_navigation_view=0x7f0e00fd;
+        public static final int dialog_content=0x7f0e00f0;
+        public static final int dialog_title=0x7f0e00ef;
+        public static final int disableHome=0x7f0e0018;
+        public static final int edit_query=0x7f0e006c;
+        public static final int elv_buying=0x7f0e0093;
+        public static final int elv_shopcar=0x7f0e0122;
+        public static final int end=0x7f0e0030;
+        public static final int end_padder=0x7f0e0153;
+        public static final int enterAlways=0x7f0e001f;
+        public static final int enterAlwaysCollapsed=0x7f0e0020;
+        public static final int et_account=0x7f0e00b7;
+        public static final int et_password=0x7f0e00bb;
+        public static final int et_passwordag=0x7f0e00bc;
+        public static final int et_trade_account=0x7f0e0080;
+        public static final int et_trade_password=0x7f0e0081;
+        public static final int et_username=0x7f0e00b8;
+        public static final int et_vernumber=0x7f0e00b9;
+        public static final int exitUntilCollapsed=0x7f0e0021;
+        public static final int expand_activities_button=0x7f0e004b;
+        public static final int expanded_menu=0x7f0e0060;
+        public static final int fill=0x7f0e003a;
+        public static final int fill_horizontal=0x7f0e003b;
+        public static final int fill_vertical=0x7f0e0031;
+        public static final int fixed=0x7f0e0045;
+        public static final int fl_content=0x7f0e00cd;
+        public static final int fromcamera=0x7f0e0103;
+        public static final int fromphoto=0x7f0e0104;
+        public static final int gcjNaviBtn=0x7f0e0085;
+        public static final int home=0x7f0e0007;
+        public static final int homeAsUp=0x7f0e0019;
+        public static final int homeimg=0x7f0e00cf;
+        public static final int hometxt=0x7f0e00d0;
+        public static final int icon=0x7f0e004f;
+        public static final int icon_group=0x7f0e014e;
+        public static final int ifRoom=0x7f0e0042;
+        public static final int image=0x7f0e004c;
+        public static final int imageView=0x7f0e011d;
+        public static final int imageView2=0x7f0e00c3;
+        public static final int img_btn_del=0x7f0e0159;
+        public static final int img_food=0x7f0e00a4;
+        public static final int include=0x7f0e00ac;
+        public static final int info=0x7f0e014a;
+        public static final int item_touch_helper_previous_elevation=0x7f0e0008;
+        public static final int iv_detils=0x7f0e012c;
+        public static final int iv_food=0x7f0e00ae;
+        public static final int iv_location=0x7f0e010f;
+        public static final int iv_qr_code=0x7f0e00e8;
+        public static final int largeLabel=0x7f0e00f7;
+        public static final int layout_car_empty=0x7f0e0121;
+        public static final int left=0x7f0e0032;
+        public static final int line1=0x7f0e014f;
+        public static final int line3=0x7f0e0151;
+        public static final int linearlayout_clientRise_back=0x7f0e007a;
+        public static final int listMode=0x7f0e0015;
+        public static final int list_item=0x7f0e004e;
+        public static final int ll_all_layout=0x7f0e0127;
+        public static final int ll_btn_layout=0x7f0e00ca;
+        public static final int ll_btn_qr=0x7f0e013a;
+        public static final int ll_choose_machine=0x7f0e0111;
+        public static final int ll_content_empty=0x7f0e00e3;
+        public static final int ll_edit=0x7f0e0116;
+        public static final int ll_gcb=0x7f0e0095;
+        public static final int ll_info=0x7f0e0124;
+        public static final int ll_lav_bottom=0x7f0e0091;
+        public static final int ll_location=0x7f0e010e;
+        public static final int ll_login_layout=0x7f0e0114;
+        public static final int ll_logout=0x7f0e0120;
+        public static final int ll_logout_layout=0x7f0e0118;
+        public static final int ll_money_layout=0x7f0e00a7;
+        public static final int ll_nav_bottom=0x7f0e00aa;
+        public static final int ll_num_layout=0x7f0e00b0;
+        public static final int ll_one_btn_layout=0x7f0e00f4;
+        public static final int ll_search=0x7f0e0113;
+        public static final int ll_two_btn_layout=0x7f0e00f1;
+        public static final int ll_weixin=0x7f0e0098;
+        public static final int loadingIv=0x7f0e0157;
+        public static final int loadingTv=0x7f0e0158;
+        public static final int lv_card=0x7f0e00e4;
+        public static final int lv_home=0x7f0e010d;
+        public static final int lv_machine=0x7f0e00cb;
+        public static final int lv_my_order_out=0x7f0e00e1;
+        public static final int lv_my_ticket=0x7f0e0094;
+        public static final int lv_myorder_in=0x7f0e0131;
+        public static final int lv_myticket=0x7f0e00e2;
+        public static final int lv_takefood=0x7f0e0126;
+        public static final int mDb06llNaviBtn=0x7f0e0087;
+        public static final int main_bg=0x7f0e00cc;
+        public static final int mapView_client_raise=0x7f0e007b;
+        public static final int masked=0x7f0e0162;
+        public static final int media_actions=0x7f0e0143;
+        public static final int middle=0x7f0e003f;
+        public static final int mine=0x7f0e00d9;
+        public static final int mineimg=0x7f0e00da;
+        public static final int minetxt=0x7f0e00db;
+        public static final int mini=0x7f0e003d;
+        public static final int multiply=0x7f0e0025;
+        public static final int mymoney=0x7f0e011e;
+        public static final int myorder=0x7f0e011a;
+        public static final int mypoint=0x7f0e011c;
+        public static final int myticket=0x7f0e011b;
+        public static final int navigation_header_container=0x7f0e00fc;
+        public static final int never=0x7f0e0043;
+        public static final int none=0x7f0e001a;
+        public static final int normal=0x7f0e0016;
+        public static final int notification_background=0x7f0e014b;
+        public static final int notification_main_column=0x7f0e0146;
+        public static final int notification_main_column_container=0x7f0e0145;
+        public static final int number=0x7f0e00b3;
+        public static final int parallax=0x7f0e0036;
+        public static final int parentPanel=0x7f0e0053;
+        public static final int passwordInputView=0x7f0e0106;
+        public static final int password_negative_btn=0x7f0e0108;
+        public static final int password_positive_btn=0x7f0e0107;
+        public static final int pin=0x7f0e0037;
+        public static final int progress_circular=0x7f0e0009;
+        public static final int progress_horizontal=0x7f0e000a;
+        public static final int quit=0x7f0e000b;
+        public static final int radio=0x7f0e0063;
+        public static final int rb_3od=0x7f0e00e0;
+        public static final int rb_home=0x7f0e010a;
+        public static final int rb_mine=0x7f0e010c;
+        public static final int rb_shopcar=0x7f0e010b;
+        public static final int rb_tak3efood=0x7f0e00df;
+        public static final int rb_takefood=0x7f0e00de;
+        public static final int rdo_group=0x7f0e00dd;
+        public static final int relativeLayout_top_clientRaise=0x7f0e0079;
+        public static final int restart_preview=0x7f0e000c;
+        public static final int return_scan_result=0x7f0e000d;
+        public static final int rg_photo=0x7f0e0102;
+        public static final int right=0x7f0e0033;
+        public static final int right_icon=0x7f0e014c;
+        public static final int right_side=0x7f0e0147;
+        public static final int rl_shop_car=0x7f0e00d6;
+        public static final int screen=0x7f0e0026;
+        public static final int scroll=0x7f0e0022;
+        public static final int scrollIndicatorDown=0x7f0e0059;
+        public static final int scrollIndicatorUp=0x7f0e0055;
+        public static final int scrollView=0x7f0e0056;
+        public static final int scrollable=0x7f0e0046;
+        public static final int search_badge=0x7f0e006e;
+        public static final int search_bar=0x7f0e006d;
+        public static final int search_button=0x7f0e006f;
+        public static final int search_close_btn=0x7f0e0074;
+        public static final int search_edit_frame=0x7f0e0070;
+        public static final int search_go_btn=0x7f0e0076;
+        public static final int search_mag_icon=0x7f0e0071;
+        public static final int search_plate=0x7f0e0072;
+        public static final int search_src_text=0x7f0e0073;
+        public static final int search_voice_btn=0x7f0e0077;
+        public static final int select_dialog_listview=0x7f0e0078;
+        public static final int shopcar=0x7f0e00d4;
+        public static final int shopcarimg=0x7f0e00d5;
+        public static final int shopcartxt=0x7f0e00d8;
+        public static final int shortcut=0x7f0e0062;
+        public static final int showCustom=0x7f0e001b;
+        public static final int showHome=0x7f0e001c;
+        public static final int showTitle=0x7f0e001d;
+        public static final int sl_takefood=0x7f0e0125;
+        public static final int smallLabel=0x7f0e00f6;
+        public static final int snackbar_action=0x7f0e00fb;
+        public static final int snackbar_text=0x7f0e00fa;
+        public static final int snap=0x7f0e0023;
+        public static final int spacer=0x7f0e0052;
+        public static final int split_action_bar=0x7f0e000e;
+        public static final int src_atop=0x7f0e0027;
+        public static final int src_in=0x7f0e0028;
+        public static final int src_over=0x7f0e0029;
+        public static final int start=0x7f0e0034;
+        public static final int status_bar_latest_event_content=0x7f0e0142;
+        public static final int submenuarrow=0x7f0e0064;
+        public static final int submit_area=0x7f0e0075;
+        public static final int sv_all_layout=0x7f0e00ad;
+        public static final int tabMode=0x7f0e0017;
+        public static final int takefood=0x7f0e00d1;
+        public static final int takefoodimg=0x7f0e00d2;
+        public static final int takefoodtxt=0x7f0e00d3;
+        public static final int text=0x7f0e0152;
+        public static final int text2=0x7f0e0150;
+        public static final int textSpacerNoButtons=0x7f0e0058;
+        public static final int textSpacerNoTitle=0x7f0e0057;
+        public static final int textView=0x7f0e00c2;
+        public static final int text_input_password_toggle=0x7f0e0101;
+        public static final int textinput_counter=0x7f0e000f;
+        public static final int textinput_error=0x7f0e0010;
+        public static final int time=0x7f0e0148;
+        public static final int title=0x7f0e0050;
+        public static final int titleDividerNoCustom=0x7f0e005f;
+        public static final int title_template=0x7f0e005d;
+        public static final int top=0x7f0e0035;
+        public static final int topPanel=0x7f0e005c;
+        public static final int topbar=0x7f0e015d;
+        public static final int touch_outside=0x7f0e00f8;
+        public static final int transition_current_scene=0x7f0e0011;
+        public static final int transition_scene_layoutid_cache=0x7f0e0012;
+        public static final int tv_account=0x7f0e012d;
+        public static final int tv_add_car=0x7f0e00ab;
+        public static final int tv_address=0x7f0e0129;
+        public static final int tv_balance=0x7f0e0135;
+        public static final int tv_btn_add=0x7f0e00c0;
+        public static final int tv_btn_apply=0x7f0e012b;
+        public static final int tv_btn_dec=0x7f0e00bf;
+        public static final int tv_btn_no=0x7f0e00e5;
+        public static final int tv_btn_ok=0x7f0e0082;
+        public static final int tv_btn_qr=0x7f0e013b;
+        public static final int tv_cancel=0x7f0e0154;
+        public static final int tv_cardnumber=0x7f0e0136;
+        public static final int tv_city=0x7f0e0110;
+        public static final int tv_content=0x7f0e00af;
+        public static final int tv_corner=0x7f0e00d7;
+        public static final int tv_down=0x7f0e00b2;
+        public static final int tv_empty=0x7f0e00b5;
+        public static final int tv_food_name=0x7f0e0128;
+        public static final int tv_food_title=0x7f0e00a5;
+        public static final int tv_forget_pwd=0x7f0e00c6;
+        public static final int tv_gcb_num=0x7f0e0096;
+        public static final int tv_getver=0x7f0e00ba;
+        public static final int tv_go_to_pay=0x7f0e009c;
+        public static final int tv_good_name=0x7f0e015b;
+        public static final int tv_good_num=0x7f0e015c;
+        public static final int tv_incar=0x7f0e012a;
+        public static final int tv_login=0x7f0e0119;
+        public static final int tv_machine_address=0x7f0e012f;
+        public static final int tv_machine_name=0x7f0e0112;
+        public static final int tv_machine_num=0x7f0e012e;
+        public static final int tv_machine_title=0x7f0e00a2;
+        public static final int tv_money=0x7f0e0105;
+        public static final int tv_myaccount=0x7f0e007f;
+        public static final int tv_negative_btn=0x7f0e00f2;
+        public static final int tv_nick=0x7f0e0117;
+        public static final int tv_num=0x7f0e00a6;
+        public static final int tv_ok_btn=0x7f0e00f5;
+        public static final int tv_order=0x7f0e015a;
+        public static final int tv_order_number=0x7f0e0130;
+        public static final int tv_phone=0x7f0e00b1;
+        public static final int tv_positive_btn=0x7f0e00f3;
+        public static final int tv_price=0x7f0e009e;
+        public static final int tv_price_cny=0x7f0e00a8;
+        public static final int tv_price_vr9=0x7f0e00a9;
+        public static final int tv_register=0x7f0e00c5;
+        public static final int tv_save=0x7f0e0155;
+        public static final int tv_ticket_content=0x7f0e0138;
+        public static final int tv_time=0x7f0e0132;
+        public static final int tv_top_left=0x7f0e015e;
+        public static final int tv_top_right=0x7f0e0160;
+        public static final int tv_top_search=0x7f0e015f;
+        public static final int tv_total_price=0x7f0e009b;
+        public static final int tv_up=0x7f0e00b4;
+        public static final int tv_wei_num=0x7f0e0099;
+        public static final int up=0x7f0e0013;
+        public static final int useLogo=0x7f0e001e;
+        public static final int viewGroup=0x7f0e00ed;
+        public static final int viewGroup2=0x7f0e00ee;
+        public static final int view_offset_helper=0x7f0e0014;
+        public static final int view_one=0x7f0e0092;
+        public static final int visible=0x7f0e0161;
+        public static final int wgsNaviBtn=0x7f0e0084;
+        public static final int wheelview=0x7f0e0156;
+        public static final int withText=0x7f0e0044;
+        public static final int wrap_content=0x7f0e002a;
+        public static final int youxiaoqi=0x7f0e013c;
     }
     public static final class integer {
-        public static final int abc_config_activityDefaultDur=0x7f0b0001;
-        public static final int abc_config_activityShortDur=0x7f0b0002;
-        public static final int app_bar_elevation_anim_duration=0x7f0b0003;
-        public static final int bottom_sheet_slide_duration=0x7f0b0004;
-        public static final int cancel_button_image_alpha=0x7f0b0005;
-        public static final int design_snackbar_text_max_lines=0x7f0b0000;
-        public static final int hide_password_duration=0x7f0b0006;
-        public static final int show_password_duration=0x7f0b0007;
-        public static final int status_bar_notification_info_maxnum=0x7f0b0008;
+        public static final int abc_config_activityDefaultDur=0x7f0c0001;
+        public static final int abc_config_activityShortDur=0x7f0c0002;
+        public static final int app_bar_elevation_anim_duration=0x7f0c0003;
+        public static final int bottom_sheet_slide_duration=0x7f0c0004;
+        public static final int cancel_button_image_alpha=0x7f0c0005;
+        public static final int design_snackbar_text_max_lines=0x7f0c0000;
+        public static final int hide_password_duration=0x7f0c0006;
+        public static final int show_password_duration=0x7f0c0007;
+        public static final int status_bar_notification_info_maxnum=0x7f0c0008;
     }
     public static final class layout {
         public static final int abc_action_bar_title_item=0x7f040000;
@@ -3477,92 +3500,97 @@ containing adssadas value of this type.
         public static final int abc_select_dialog_material=0x7f04001a;
         public static final int activity_baidu_map=0x7f04001b;
         public static final int activity_binding=0x7f04001c;
-        public static final int activity_bndemoguide=0x7f04001d;
-        public static final int activity_car_pay=0x7f04001e;
-        public static final int activity_comfirm_pay=0x7f04001f;
-        public static final int activity_detail_pay=0x7f040020;
-        public static final int activity_details=0x7f040021;
-        public static final int activity_edit_account=0x7f040022;
-        public static final int activity_forget_password=0x7f040023;
-        public static final int activity_homepay=0x7f040024;
-        public static final int activity_loading=0x7f040025;
-        public static final int activity_location=0x7f040026;
-        public static final int activity_login=0x7f040027;
-        public static final int activity_machine_list=0x7f040028;
-        public static final int activity_main=0x7f040029;
-        public static final int activity_my_order=0x7f04002a;
-        public static final int activity_my_ticket=0x7f04002b;
-        public static final int activity_my_wallet=0x7f04002c;
-        public static final int activity_overlay=0x7f04002d;
-        public static final int activity_qrcode=0x7f04002e;
-        public static final int activity_register=0x7f04002f;
-        public static final int activity_register_success=0x7f040030;
-        public static final int activity_setting=0x7f040031;
-        public static final int ad_cycle_view=0x7f040032;
-        public static final int car_empty=0x7f040033;
-        public static final int custom_alert_dialog=0x7f040034;
-        public static final int design_bottom_navigation_item=0x7f040035;
-        public static final int design_bottom_sheet_dialog=0x7f040036;
-        public static final int design_layout_snackbar=0x7f040037;
-        public static final int design_layout_snackbar_include=0x7f040038;
-        public static final int design_layout_tab_icon=0x7f040039;
-        public static final int design_layout_tab_text=0x7f04003a;
-        public static final int design_menu_item_action_area=0x7f04003b;
-        public static final int design_navigation_item=0x7f04003c;
-        public static final int design_navigation_item_header=0x7f04003d;
-        public static final int design_navigation_item_separator=0x7f04003e;
-        public static final int design_navigation_item_subheader=0x7f04003f;
-        public static final int design_navigation_menu=0x7f040040;
-        public static final int design_navigation_menu_item=0x7f040041;
-        public static final int design_text_input_password_icon=0x7f040042;
-        public static final int dialog_choosephoto=0x7f040043;
-        public static final int dialog_passwordinputview=0x7f040044;
-        public static final int fragment_home=0x7f040045;
-        public static final int fragment_mine=0x7f040046;
-        public static final int fragment_shopcar=0x7f040047;
-        public static final int fragment_takefood=0x7f040048;
-        public static final int homefragment_list_item=0x7f040049;
-        public static final int item_into_account=0x7f04004a;
-        public static final int item_machine_list=0x7f04004b;
-        public static final int item_my_order_in=0x7f04004c;
-        public static final int item_my_order_out=0x7f04004d;
-        public static final int item_my_wallet_gcb_card=0x7f04004e;
-        public static final int item_pay_buying=0x7f04004f;
-        public static final int item_pay_ticket=0x7f040050;
-        public static final int myticket_item=0x7f040051;
-        public static final int notification_action=0x7f040052;
-        public static final int notification_action_tombstone=0x7f040053;
-        public static final int notification_media_action=0x7f040054;
-        public static final int notification_media_cancel_action=0x7f040055;
-        public static final int notification_template_big_media=0x7f040056;
-        public static final int notification_template_big_media_custom=0x7f040057;
-        public static final int notification_template_big_media_narrow=0x7f040058;
-        public static final int notification_template_big_media_narrow_custom=0x7f040059;
-        public static final int notification_template_custom_big=0x7f04005a;
-        public static final int notification_template_icon_group=0x7f04005b;
-        public static final int notification_template_lines_media=0x7f04005c;
-        public static final int notification_template_media=0x7f04005d;
-        public static final int notification_template_media_custom=0x7f04005e;
-        public static final int notification_template_part_chronometer=0x7f04005f;
-        public static final int notification_template_part_time=0x7f040060;
-        public static final int popu_machine_list_choose=0x7f040061;
-        public static final int progress_dialog=0x7f040062;
-        public static final int select_dialog_item_material=0x7f040063;
-        public static final int select_dialog_multichoice_material=0x7f040064;
-        public static final int select_dialog_singlechoice_material=0x7f040065;
-        public static final int shopcarfragmentlist_child_item=0x7f040066;
-        public static final int shopcarfragmentlist_grop_item=0x7f040067;
-        public static final int support_simple_spinner_dropdown_item=0x7f040068;
-        public static final int takefoodfragment_list_item=0x7f040069;
-        public static final int top_bar=0x7f04006a;
-        public static final int top_bar_struct=0x7f04006b;
+        public static final int activity_bnavi_guide=0x7f04001d;
+        public static final int activity_bndemoguide=0x7f04001e;
+        public static final int activity_capture=0x7f04001f;
+        public static final int activity_car_pay=0x7f040020;
+        public static final int activity_comfirm_pay=0x7f040021;
+        public static final int activity_detail_pay=0x7f040022;
+        public static final int activity_details=0x7f040023;
+        public static final int activity_edit_account=0x7f040024;
+        public static final int activity_forget_password=0x7f040025;
+        public static final int activity_homepay=0x7f040026;
+        public static final int activity_loading=0x7f040027;
+        public static final int activity_location=0x7f040028;
+        public static final int activity_login=0x7f040029;
+        public static final int activity_machine_list=0x7f04002a;
+        public static final int activity_main=0x7f04002b;
+        public static final int activity_my_order=0x7f04002c;
+        public static final int activity_my_ticket=0x7f04002d;
+        public static final int activity_my_wallet=0x7f04002e;
+        public static final int activity_overlay=0x7f04002f;
+        public static final int activity_qrcode=0x7f040030;
+        public static final int activity_register=0x7f040031;
+        public static final int activity_register_success=0x7f040032;
+        public static final int activity_setting=0x7f040033;
+        public static final int ad_cycle_view=0x7f040034;
+        public static final int car_empty=0x7f040035;
+        public static final int custom_alert_dialog=0x7f040036;
+        public static final int design_bottom_navigation_item=0x7f040037;
+        public static final int design_bottom_sheet_dialog=0x7f040038;
+        public static final int design_layout_snackbar=0x7f040039;
+        public static final int design_layout_snackbar_include=0x7f04003a;
+        public static final int design_layout_tab_icon=0x7f04003b;
+        public static final int design_layout_tab_text=0x7f04003c;
+        public static final int design_menu_item_action_area=0x7f04003d;
+        public static final int design_navigation_item=0x7f04003e;
+        public static final int design_navigation_item_header=0x7f04003f;
+        public static final int design_navigation_item_separator=0x7f040040;
+        public static final int design_navigation_item_subheader=0x7f040041;
+        public static final int design_navigation_menu=0x7f040042;
+        public static final int design_navigation_menu_item=0x7f040043;
+        public static final int design_text_input_password_icon=0x7f040044;
+        public static final int dialog_choosephoto=0x7f040045;
+        public static final int dialog_passwordinputview=0x7f040046;
+        public static final int fragment_home=0x7f040047;
+        public static final int fragment_mine=0x7f040048;
+        public static final int fragment_shopcar=0x7f040049;
+        public static final int fragment_takefood=0x7f04004a;
+        public static final int homefragment_list_item=0x7f04004b;
+        public static final int item_into_account=0x7f04004c;
+        public static final int item_machine_list=0x7f04004d;
+        public static final int item_my_order_chilren=0x7f04004e;
+        public static final int item_my_order_parent=0x7f04004f;
+        public static final int item_my_wallet_gcb_card=0x7f040050;
+        public static final int item_pay_buying=0x7f040051;
+        public static final int item_pay_ticket=0x7f040052;
+        public static final int item_take_food_children=0x7f040053;
+        public static final int item_take_food_parent=0x7f040054;
+        public static final int myticket_item=0x7f040055;
+        public static final int notification_action=0x7f040056;
+        public static final int notification_action_tombstone=0x7f040057;
+        public static final int notification_media_action=0x7f040058;
+        public static final int notification_media_cancel_action=0x7f040059;
+        public static final int notification_template_big_media=0x7f04005a;
+        public static final int notification_template_big_media_custom=0x7f04005b;
+        public static final int notification_template_big_media_narrow=0x7f04005c;
+        public static final int notification_template_big_media_narrow_custom=0x7f04005d;
+        public static final int notification_template_custom_big=0x7f04005e;
+        public static final int notification_template_icon_group=0x7f04005f;
+        public static final int notification_template_lines_media=0x7f040060;
+        public static final int notification_template_media=0x7f040061;
+        public static final int notification_template_media_custom=0x7f040062;
+        public static final int notification_template_part_chronometer=0x7f040063;
+        public static final int notification_template_part_time=0x7f040064;
+        public static final int popu_machine_list_choose=0x7f040065;
+        public static final int progress_dialog=0x7f040066;
+        public static final int select_dialog_item_material=0x7f040067;
+        public static final int select_dialog_multichoice_material=0x7f040068;
+        public static final int select_dialog_singlechoice_material=0x7f040069;
+        public static final int shopcarfragmentlist_child_item=0x7f04006a;
+        public static final int shopcarfragmentlist_grop_item=0x7f04006b;
+        public static final int support_simple_spinner_dropdown_item=0x7f04006c;
+        public static final int takefoodfragment_list_item=0x7f04006d;
+        public static final int top_bar=0x7f04006e;
+        public static final int top_bar_struct=0x7f04006f;
+        public static final int view_nav=0x7f040070;
     }
     public static final class menu {
-        public static final int details=0x7f0e0000;
-        public static final int login=0x7f0e0001;
-        public static final int main=0x7f0e0002;
-        public static final int my_ticket=0x7f0e0003;
-        public static final int register=0x7f0e0004;
+        public static final int details=0x7f0f0000;
+        public static final int login=0x7f0f0001;
+        public static final int main=0x7f0f0002;
+        public static final int my_ticket=0x7f0f0003;
+        public static final int register=0x7f0f0004;
     }
     public static final class mipmap {
         public static final int add_group=0x7f030000;
@@ -3571,516 +3599,525 @@ containing adssadas value of this type.
         public static final int btn_reduction_group=0x7f030003;
         public static final int btn_reduction_group_press=0x7f030004;
     }
+    public static final class raw {
+        public static final int beep=0x7f070000;
+    }
     public static final class string {
-        public static final int abc_action_bar_home_description=0x7f070000;
-        public static final int abc_action_bar_home_description_format=0x7f070001;
-        public static final int abc_action_bar_home_subtitle_description_format=0x7f070002;
-        public static final int abc_action_bar_up_description=0x7f070003;
-        public static final int abc_action_menu_overflow_description=0x7f070004;
-        public static final int abc_action_mode_done=0x7f070005;
-        public static final int abc_activity_chooser_view_see_all=0x7f070006;
-        public static final int abc_activitychooserview_choose_application=0x7f070007;
-        public static final int abc_capital_off=0x7f070008;
-        public static final int abc_capital_on=0x7f070009;
-        public static final int abc_font_family_body_1_material=0x7f070015;
-        public static final int abc_font_family_body_2_material=0x7f070016;
-        public static final int abc_font_family_button_material=0x7f070017;
-        public static final int abc_font_family_caption_material=0x7f070018;
-        public static final int abc_font_family_display_1_material=0x7f070019;
-        public static final int abc_font_family_display_2_material=0x7f07001a;
-        public static final int abc_font_family_display_3_material=0x7f07001b;
-        public static final int abc_font_family_display_4_material=0x7f07001c;
-        public static final int abc_font_family_headline_material=0x7f07001d;
-        public static final int abc_font_family_menu_material=0x7f07001e;
-        public static final int abc_font_family_subhead_material=0x7f07001f;
-        public static final int abc_font_family_title_material=0x7f070020;
-        public static final int abc_search_hint=0x7f07000a;
-        public static final int abc_searchview_description_clear=0x7f07000b;
-        public static final int abc_searchview_description_query=0x7f07000c;
-        public static final int abc_searchview_description_search=0x7f07000d;
-        public static final int abc_searchview_description_submit=0x7f07000e;
-        public static final int abc_searchview_description_voice=0x7f07000f;
-        public static final int abc_shareactionprovider_share_with=0x7f070010;
-        public static final int abc_shareactionprovider_share_with_application=0x7f070011;
-        public static final int abc_toolbar_collapse_description=0x7f070012;
-        public static final int action_settings=0x7f070021;
-        public static final int app_name=0x7f070022;
-        public static final int appbar_scrolling_view_behavior=0x7f070023;
-        public static final int bottom_sheet_behavior=0x7f070024;
-        public static final int cancel=0x7f070025;
-        public static final int character_counter_pattern=0x7f070026;
-        public static final int charge_amount=0x7f070027;
-        public static final int china_merchants_bank_card=0x7f070028;
-        public static final int gcb_display=0x7f070029;
-        public static final int hello_world=0x7f07002a;
-        public static final int jump_resource=0x7f07002b;
-        public static final int machine_list_address=0x7f07002c;
-        public static final int machine_list_name=0x7f07002d;
-        public static final int machine_list_num=0x7f07002e;
-        public static final int machine_name=0x7f07002f;
-        public static final int number=0x7f070030;
-        public static final int ok=0x7f070031;
-        public static final int password_toggle_content_description=0x7f070032;
-        public static final int path_password_eye=0x7f070033;
-        public static final int path_password_eye_mask_strike_through=0x7f070034;
-        public static final int path_password_eye_mask_visible=0x7f070035;
-        public static final int path_password_strike_through=0x7f070036;
-        public static final int pay_money=0x7f070037;
-        public static final int pay_way_cny=0x7f070038;
-        public static final int pay_way_gcb=0x7f070039;
-        public static final int pay_way_weixin=0x7f07003a;
-        public static final int please_enter_charge_amount=0x7f07003b;
-        public static final int please_enter_pay_password=0x7f07003c;
-        public static final int rmb_display=0x7f07003d;
-        public static final int search_menu_title=0x7f070013;
-        public static final int startlocation=0x7f07003e;
-        public static final int status_bar_notification_info_overflow=0x7f070014;
-        public static final int stoplocation=0x7f07003f;
-        public static final int take_food_gcb_total=0x7f070040;
-        public static final int take_food_num=0x7f070041;
-        public static final int take_food_order_num=0x7f070042;
-        public static final int take_food_total=0x7f070043;
-        public static final int title_activity_baidu_map=0x7f070044;
-        public static final int title_activity_details=0x7f070045;
-        public static final int title_activity_login=0x7f070046;
-        public static final int title_activity_my_ticket=0x7f070047;
-        public static final int title_activity_register=0x7f070048;
-        public static final int weixin=0x7f070049;
+        public static final int abc_action_bar_home_description=0x7f080000;
+        public static final int abc_action_bar_home_description_format=0x7f080001;
+        public static final int abc_action_bar_home_subtitle_description_format=0x7f080002;
+        public static final int abc_action_bar_up_description=0x7f080003;
+        public static final int abc_action_menu_overflow_description=0x7f080004;
+        public static final int abc_action_mode_done=0x7f080005;
+        public static final int abc_activity_chooser_view_see_all=0x7f080006;
+        public static final int abc_activitychooserview_choose_application=0x7f080007;
+        public static final int abc_capital_off=0x7f080008;
+        public static final int abc_capital_on=0x7f080009;
+        public static final int abc_font_family_body_1_material=0x7f080015;
+        public static final int abc_font_family_body_2_material=0x7f080016;
+        public static final int abc_font_family_button_material=0x7f080017;
+        public static final int abc_font_family_caption_material=0x7f080018;
+        public static final int abc_font_family_display_1_material=0x7f080019;
+        public static final int abc_font_family_display_2_material=0x7f08001a;
+        public static final int abc_font_family_display_3_material=0x7f08001b;
+        public static final int abc_font_family_display_4_material=0x7f08001c;
+        public static final int abc_font_family_headline_material=0x7f08001d;
+        public static final int abc_font_family_menu_material=0x7f08001e;
+        public static final int abc_font_family_subhead_material=0x7f08001f;
+        public static final int abc_font_family_title_material=0x7f080020;
+        public static final int abc_search_hint=0x7f08000a;
+        public static final int abc_searchview_description_clear=0x7f08000b;
+        public static final int abc_searchview_description_query=0x7f08000c;
+        public static final int abc_searchview_description_search=0x7f08000d;
+        public static final int abc_searchview_description_submit=0x7f08000e;
+        public static final int abc_searchview_description_voice=0x7f08000f;
+        public static final int abc_shareactionprovider_share_with=0x7f080010;
+        public static final int abc_shareactionprovider_share_with_application=0x7f080011;
+        public static final int abc_toolbar_collapse_description=0x7f080012;
+        public static final int action_settings=0x7f080021;
+        public static final int app_name=0x7f080022;
+        public static final int appbar_scrolling_view_behavior=0x7f080023;
+        public static final int bottom_sheet_behavior=0x7f080024;
+        public static final int cancel=0x7f080025;
+        public static final int character_counter_pattern=0x7f080026;
+        public static final int charge_amount=0x7f080027;
+        public static final int china_merchants_bank_card=0x7f080028;
+        public static final int gcb_display=0x7f080029;
+        public static final int hello_world=0x7f08002a;
+        public static final int machine_list_address=0x7f08002b;
+        public static final int machine_list_name=0x7f08002c;
+        public static final int machine_list_num=0x7f08002d;
+        public static final int machine_name=0x7f08002e;
+        public static final int number=0x7f08002f;
+        public static final int ok=0x7f080030;
+        public static final int password_toggle_content_description=0x7f080031;
+        public static final int path_password_eye=0x7f080032;
+        public static final int path_password_eye_mask_strike_through=0x7f080033;
+        public static final int path_password_eye_mask_visible=0x7f080034;
+        public static final int path_password_strike_through=0x7f080035;
+        public static final int pay_money=0x7f080036;
+        public static final int please_enter_charge_amount=0x7f080037;
+        public static final int please_enter_pay_password=0x7f080038;
+        public static final int rmb_display=0x7f080039;
+        public static final int search_menu_title=0x7f080013;
+        public static final int startlocation=0x7f08003a;
+        public static final int status_bar_notification_info_overflow=0x7f080014;
+        public static final int stoplocation=0x7f08003b;
+        public static final int take_food_gcb_total=0x7f08003c;
+        public static final int take_food_num=0x7f08003d;
+        public static final int take_food_order_num=0x7f08003e;
+        public static final int take_food_total=0x7f08003f;
+        public static final int title_activity_baidu_map=0x7f080040;
+        public static final int title_activity_details=0x7f080041;
+        public static final int title_activity_login=0x7f080042;
+        public static final int title_activity_my_ticket=0x7f080043;
+        public static final int title_activity_register=0x7f080044;
+        public static final int trade_time=0x7f080045;
     }
     public static final class style {
-        public static final int ActivityDialogStyle=0x7f0900a1;
-        public static final int AlertDialog_AppCompat=0x7f0900a2;
-        public static final int AlertDialog_AppCompat_Light=0x7f0900a3;
-        public static final int Animation_AppCompat_Dialog=0x7f0900a4;
-        public static final int Animation_AppCompat_DropDownUp=0x7f0900a5;
-        public static final int Animation_Design_BottomSheetDialog=0x7f0900a6;
-        public static final int AppTheme=0x7f0900a7;
-        public static final int AppTheme_AppBarOverlay=0x7f0900a8;
-        public static final int AppTheme_NoActionBar=0x7f0900a9;
-        public static final int AppTheme_PopupOverlay=0x7f0900aa;
-        public static final int Base_AlertDialog_AppCompat=0x7f0900ab;
-        public static final int Base_AlertDialog_AppCompat_Light=0x7f0900ac;
-        public static final int Base_Animation_AppCompat_Dialog=0x7f0900ad;
-        public static final int Base_Animation_AppCompat_DropDownUp=0x7f0900ae;
-        public static final int Base_DialogWindowTitle_AppCompat=0x7f0900af;
-        public static final int Base_DialogWindowTitleBackground_AppCompat=0x7f0900b0;
-        public static final int Base_TextAppearance_AppCompat=0x7f090040;
-        public static final int Base_TextAppearance_AppCompat_Body1=0x7f090041;
-        public static final int Base_TextAppearance_AppCompat_Body2=0x7f090042;
-        public static final int Base_TextAppearance_AppCompat_Button=0x7f090028;
-        public static final int Base_TextAppearance_AppCompat_Caption=0x7f090043;
-        public static final int Base_TextAppearance_AppCompat_Display1=0x7f090044;
-        public static final int Base_TextAppearance_AppCompat_Display2=0x7f090045;
-        public static final int Base_TextAppearance_AppCompat_Display3=0x7f090046;
-        public static final int Base_TextAppearance_AppCompat_Display4=0x7f090047;
-        public static final int Base_TextAppearance_AppCompat_Headline=0x7f090048;
-        public static final int Base_TextAppearance_AppCompat_Inverse=0x7f09000c;
-        public static final int Base_TextAppearance_AppCompat_Large=0x7f090049;
-        public static final int Base_TextAppearance_AppCompat_Large_Inverse=0x7f09000d;
-        public static final int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f09004a;
-        public static final int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f09004b;
-        public static final int Base_TextAppearance_AppCompat_Medium=0x7f09004c;
-        public static final int Base_TextAppearance_AppCompat_Medium_Inverse=0x7f09000e;
-        public static final int Base_TextAppearance_AppCompat_Menu=0x7f09004d;
-        public static final int Base_TextAppearance_AppCompat_SearchResult=0x7f0900b1;
-        public static final int Base_TextAppearance_AppCompat_SearchResult_Subtitle=0x7f09004e;
-        public static final int Base_TextAppearance_AppCompat_SearchResult_Title=0x7f09004f;
-        public static final int Base_TextAppearance_AppCompat_Small=0x7f090050;
-        public static final int Base_TextAppearance_AppCompat_Small_Inverse=0x7f09000f;
-        public static final int Base_TextAppearance_AppCompat_Subhead=0x7f090051;
-        public static final int Base_TextAppearance_AppCompat_Subhead_Inverse=0x7f090010;
-        public static final int Base_TextAppearance_AppCompat_Title=0x7f090052;
-        public static final int Base_TextAppearance_AppCompat_Title_Inverse=0x7f090011;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f090096;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f090053;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f090054;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f090055;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f090056;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f090057;
-        public static final int Base_TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f090058;
-        public static final int Base_TextAppearance_AppCompat_Widget_Button=0x7f090059;
-        public static final int Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored=0x7f09009d;
-        public static final int Base_TextAppearance_AppCompat_Widget_Button_Colored=0x7f09009e;
-        public static final int Base_TextAppearance_AppCompat_Widget_Button_Inverse=0x7f090097;
-        public static final int Base_TextAppearance_AppCompat_Widget_DropDownItem=0x7f0900b2;
-        public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Header=0x7f09005a;
-        public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f09005b;
-        public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f09005c;
-        public static final int Base_TextAppearance_AppCompat_Widget_Switch=0x7f09005d;
-        public static final int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f09005e;
-        public static final int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0900b3;
-        public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f09005f;
-        public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f090060;
-        public static final int Base_Theme_AppCompat=0x7f090061;
-        public static final int Base_Theme_AppCompat_CompactMenu=0x7f0900b4;
-        public static final int Base_Theme_AppCompat_Dialog=0x7f090012;
-        public static final int Base_Theme_AppCompat_Dialog_Alert=0x7f090013;
-        public static final int Base_Theme_AppCompat_Dialog_FixedSize=0x7f0900b5;
-        public static final int Base_Theme_AppCompat_Dialog_MinWidth=0x7f090014;
-        public static final int Base_Theme_AppCompat_DialogWhenLarge=0x7f090002;
-        public static final int Base_Theme_AppCompat_Light=0x7f090062;
-        public static final int Base_Theme_AppCompat_Light_DarkActionBar=0x7f0900b6;
-        public static final int Base_Theme_AppCompat_Light_Dialog=0x7f090015;
-        public static final int Base_Theme_AppCompat_Light_Dialog_Alert=0x7f090016;
-        public static final int Base_Theme_AppCompat_Light_Dialog_FixedSize=0x7f0900b7;
-        public static final int Base_Theme_AppCompat_Light_Dialog_MinWidth=0x7f090017;
-        public static final int Base_Theme_AppCompat_Light_DialogWhenLarge=0x7f090003;
-        public static final int Base_ThemeOverlay_AppCompat=0x7f0900b8;
-        public static final int Base_ThemeOverlay_AppCompat_ActionBar=0x7f0900b9;
-        public static final int Base_ThemeOverlay_AppCompat_Dark=0x7f0900ba;
-        public static final int Base_ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0900bb;
-        public static final int Base_ThemeOverlay_AppCompat_Dialog=0x7f090018;
-        public static final int Base_ThemeOverlay_AppCompat_Dialog_Alert=0x7f090019;
-        public static final int Base_ThemeOverlay_AppCompat_Light=0x7f0900bc;
-        public static final int Base_V11_Theme_AppCompat_Dialog=0x7f09001a;
-        public static final int Base_V11_Theme_AppCompat_Light_Dialog=0x7f09001b;
-        public static final int Base_V11_ThemeOverlay_AppCompat_Dialog=0x7f09001c;
-        public static final int Base_V12_Widget_AppCompat_AutoCompleteTextView=0x7f090024;
-        public static final int Base_V12_Widget_AppCompat_EditText=0x7f090025;
-        public static final int Base_V21_Theme_AppCompat=0x7f090063;
-        public static final int Base_V21_Theme_AppCompat_Dialog=0x7f090064;
-        public static final int Base_V21_Theme_AppCompat_Light=0x7f090065;
-        public static final int Base_V21_Theme_AppCompat_Light_Dialog=0x7f090066;
-        public static final int Base_V21_ThemeOverlay_AppCompat_Dialog=0x7f090067;
-        public static final int Base_V22_Theme_AppCompat=0x7f090094;
-        public static final int Base_V22_Theme_AppCompat_Light=0x7f090095;
-        public static final int Base_V23_Theme_AppCompat=0x7f090098;
-        public static final int Base_V23_Theme_AppCompat_Light=0x7f090099;
-        public static final int Base_V7_Theme_AppCompat=0x7f0900bd;
-        public static final int Base_V7_Theme_AppCompat_Dialog=0x7f0900be;
-        public static final int Base_V7_Theme_AppCompat_Light=0x7f0900bf;
-        public static final int Base_V7_Theme_AppCompat_Light_Dialog=0x7f0900c0;
-        public static final int Base_V7_ThemeOverlay_AppCompat_Dialog=0x7f0900c1;
-        public static final int Base_V7_Widget_AppCompat_AutoCompleteTextView=0x7f0900c2;
-        public static final int Base_V7_Widget_AppCompat_EditText=0x7f0900c3;
-        public static final int Base_Widget_AppCompat_ActionBar=0x7f0900c4;
-        public static final int Base_Widget_AppCompat_ActionBar_Solid=0x7f0900c5;
-        public static final int Base_Widget_AppCompat_ActionBar_TabBar=0x7f0900c6;
-        public static final int Base_Widget_AppCompat_ActionBar_TabText=0x7f090068;
-        public static final int Base_Widget_AppCompat_ActionBar_TabView=0x7f090069;
-        public static final int Base_Widget_AppCompat_ActionButton=0x7f09006a;
-        public static final int Base_Widget_AppCompat_ActionButton_CloseMode=0x7f09006b;
-        public static final int Base_Widget_AppCompat_ActionButton_Overflow=0x7f09006c;
-        public static final int Base_Widget_AppCompat_ActionMode=0x7f0900c7;
-        public static final int Base_Widget_AppCompat_ActivityChooserView=0x7f0900c8;
-        public static final int Base_Widget_AppCompat_AutoCompleteTextView=0x7f090026;
-        public static final int Base_Widget_AppCompat_Button=0x7f09006d;
-        public static final int Base_Widget_AppCompat_Button_Borderless=0x7f09006e;
-        public static final int Base_Widget_AppCompat_Button_Borderless_Colored=0x7f09006f;
-        public static final int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0900c9;
-        public static final int Base_Widget_AppCompat_Button_Colored=0x7f09009a;
-        public static final int Base_Widget_AppCompat_Button_Small=0x7f090070;
-        public static final int Base_Widget_AppCompat_ButtonBar=0x7f090071;
-        public static final int Base_Widget_AppCompat_ButtonBar_AlertDialog=0x7f0900ca;
-        public static final int Base_Widget_AppCompat_CompoundButton_CheckBox=0x7f090072;
-        public static final int Base_Widget_AppCompat_CompoundButton_RadioButton=0x7f090073;
-        public static final int Base_Widget_AppCompat_CompoundButton_Switch=0x7f0900cb;
-        public static final int Base_Widget_AppCompat_DrawerArrowToggle=0x7f090000;
-        public static final int Base_Widget_AppCompat_DrawerArrowToggle_Common=0x7f0900cc;
-        public static final int Base_Widget_AppCompat_DropDownItem_Spinner=0x7f090074;
-        public static final int Base_Widget_AppCompat_EditText=0x7f090027;
-        public static final int Base_Widget_AppCompat_ImageButton=0x7f090075;
-        public static final int Base_Widget_AppCompat_Light_ActionBar=0x7f0900cd;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_Solid=0x7f0900ce;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_TabBar=0x7f0900cf;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_TabText=0x7f090076;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f090077;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_TabView=0x7f090078;
-        public static final int Base_Widget_AppCompat_Light_PopupMenu=0x7f090079;
-        public static final int Base_Widget_AppCompat_Light_PopupMenu_Overflow=0x7f09007a;
-        public static final int Base_Widget_AppCompat_ListMenuView=0x7f0900d0;
-        public static final int Base_Widget_AppCompat_ListPopupWindow=0x7f09007b;
-        public static final int Base_Widget_AppCompat_ListView=0x7f09007c;
-        public static final int Base_Widget_AppCompat_ListView_DropDown=0x7f09007d;
-        public static final int Base_Widget_AppCompat_ListView_Menu=0x7f09007e;
-        public static final int Base_Widget_AppCompat_PopupMenu=0x7f09007f;
-        public static final int Base_Widget_AppCompat_PopupMenu_Overflow=0x7f090080;
-        public static final int Base_Widget_AppCompat_PopupWindow=0x7f0900d1;
-        public static final int Base_Widget_AppCompat_ProgressBar=0x7f09001d;
-        public static final int Base_Widget_AppCompat_ProgressBar_Horizontal=0x7f09001e;
-        public static final int Base_Widget_AppCompat_RatingBar=0x7f090081;
-        public static final int Base_Widget_AppCompat_RatingBar_Indicator=0x7f09009b;
-        public static final int Base_Widget_AppCompat_RatingBar_Small=0x7f09009c;
-        public static final int Base_Widget_AppCompat_SearchView=0x7f0900d2;
-        public static final int Base_Widget_AppCompat_SearchView_ActionBar=0x7f0900d3;
-        public static final int Base_Widget_AppCompat_SeekBar=0x7f090082;
-        public static final int Base_Widget_AppCompat_SeekBar_Discrete=0x7f0900d4;
-        public static final int Base_Widget_AppCompat_Spinner=0x7f090083;
-        public static final int Base_Widget_AppCompat_Spinner_Underlined=0x7f090004;
-        public static final int Base_Widget_AppCompat_TextView_SpinnerItem=0x7f090084;
-        public static final int Base_Widget_AppCompat_Toolbar=0x7f0900d5;
-        public static final int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f090085;
-        public static final int Base_Widget_Design_AppBarLayout=0x7f0900d6;
-        public static final int Base_Widget_Design_TabLayout=0x7f0900d7;
-        public static final int Dialog=0x7f0900d8;
+        public static final int ActivityDialogStyle=0x7f0a00a2;
+        public static final int AlertDialog_AppCompat=0x7f0a00a3;
+        public static final int AlertDialog_AppCompat_Light=0x7f0a00a4;
+        public static final int Animation_AppCompat_Dialog=0x7f0a00a5;
+        public static final int Animation_AppCompat_DropDownUp=0x7f0a00a6;
+        public static final int Animation_Design_BottomSheetDialog=0x7f0a00a7;
+        /**  API 11 theme customizations can go here. 
+ API 14 theme customizations can go here. 
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        
+         */
+        public static final int AppBaseTheme=0x7f0a000c;
+        public static final int AppTheme=0x7f0a00a8;
+        public static final int AppTheme_AppBarOverlay=0x7f0a00a9;
+        public static final int AppTheme_NoActionBar=0x7f0a00aa;
+        public static final int AppTheme_PopupOverlay=0x7f0a00ab;
+        public static final int Base_AlertDialog_AppCompat=0x7f0a00ac;
+        public static final int Base_AlertDialog_AppCompat_Light=0x7f0a00ad;
+        public static final int Base_Animation_AppCompat_Dialog=0x7f0a00ae;
+        public static final int Base_Animation_AppCompat_DropDownUp=0x7f0a00af;
+        public static final int Base_DialogWindowTitle_AppCompat=0x7f0a00b0;
+        public static final int Base_DialogWindowTitleBackground_AppCompat=0x7f0a00b1;
+        public static final int Base_TextAppearance_AppCompat=0x7f0a0041;
+        public static final int Base_TextAppearance_AppCompat_Body1=0x7f0a0042;
+        public static final int Base_TextAppearance_AppCompat_Body2=0x7f0a0043;
+        public static final int Base_TextAppearance_AppCompat_Button=0x7f0a0029;
+        public static final int Base_TextAppearance_AppCompat_Caption=0x7f0a0044;
+        public static final int Base_TextAppearance_AppCompat_Display1=0x7f0a0045;
+        public static final int Base_TextAppearance_AppCompat_Display2=0x7f0a0046;
+        public static final int Base_TextAppearance_AppCompat_Display3=0x7f0a0047;
+        public static final int Base_TextAppearance_AppCompat_Display4=0x7f0a0048;
+        public static final int Base_TextAppearance_AppCompat_Headline=0x7f0a0049;
+        public static final int Base_TextAppearance_AppCompat_Inverse=0x7f0a000d;
+        public static final int Base_TextAppearance_AppCompat_Large=0x7f0a004a;
+        public static final int Base_TextAppearance_AppCompat_Large_Inverse=0x7f0a000e;
+        public static final int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0a004b;
+        public static final int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0a004c;
+        public static final int Base_TextAppearance_AppCompat_Medium=0x7f0a004d;
+        public static final int Base_TextAppearance_AppCompat_Medium_Inverse=0x7f0a000f;
+        public static final int Base_TextAppearance_AppCompat_Menu=0x7f0a004e;
+        public static final int Base_TextAppearance_AppCompat_SearchResult=0x7f0a00b2;
+        public static final int Base_TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0a004f;
+        public static final int Base_TextAppearance_AppCompat_SearchResult_Title=0x7f0a0050;
+        public static final int Base_TextAppearance_AppCompat_Small=0x7f0a0051;
+        public static final int Base_TextAppearance_AppCompat_Small_Inverse=0x7f0a0010;
+        public static final int Base_TextAppearance_AppCompat_Subhead=0x7f0a0052;
+        public static final int Base_TextAppearance_AppCompat_Subhead_Inverse=0x7f0a0011;
+        public static final int Base_TextAppearance_AppCompat_Title=0x7f0a0053;
+        public static final int Base_TextAppearance_AppCompat_Title_Inverse=0x7f0a0012;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0a0097;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0a0054;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0a0055;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0a0056;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0a0057;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0a0058;
+        public static final int Base_TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0a0059;
+        public static final int Base_TextAppearance_AppCompat_Widget_Button=0x7f0a005a;
+        public static final int Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored=0x7f0a009e;
+        public static final int Base_TextAppearance_AppCompat_Widget_Button_Colored=0x7f0a009f;
+        public static final int Base_TextAppearance_AppCompat_Widget_Button_Inverse=0x7f0a0098;
+        public static final int Base_TextAppearance_AppCompat_Widget_DropDownItem=0x7f0a00b3;
+        public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Header=0x7f0a005b;
+        public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0a005c;
+        public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0a005d;
+        public static final int Base_TextAppearance_AppCompat_Widget_Switch=0x7f0a005e;
+        public static final int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0a005f;
+        public static final int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0a00b4;
+        public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0a0060;
+        public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0a0061;
+        public static final int Base_Theme_AppCompat=0x7f0a0062;
+        public static final int Base_Theme_AppCompat_CompactMenu=0x7f0a00b5;
+        public static final int Base_Theme_AppCompat_Dialog=0x7f0a0013;
+        public static final int Base_Theme_AppCompat_Dialog_Alert=0x7f0a0014;
+        public static final int Base_Theme_AppCompat_Dialog_FixedSize=0x7f0a00b6;
+        public static final int Base_Theme_AppCompat_Dialog_MinWidth=0x7f0a0015;
+        public static final int Base_Theme_AppCompat_DialogWhenLarge=0x7f0a0002;
+        public static final int Base_Theme_AppCompat_Light=0x7f0a0063;
+        public static final int Base_Theme_AppCompat_Light_DarkActionBar=0x7f0a00b7;
+        public static final int Base_Theme_AppCompat_Light_Dialog=0x7f0a0016;
+        public static final int Base_Theme_AppCompat_Light_Dialog_Alert=0x7f0a0017;
+        public static final int Base_Theme_AppCompat_Light_Dialog_FixedSize=0x7f0a00b8;
+        public static final int Base_Theme_AppCompat_Light_Dialog_MinWidth=0x7f0a0018;
+        public static final int Base_Theme_AppCompat_Light_DialogWhenLarge=0x7f0a0003;
+        public static final int Base_ThemeOverlay_AppCompat=0x7f0a00b9;
+        public static final int Base_ThemeOverlay_AppCompat_ActionBar=0x7f0a00ba;
+        public static final int Base_ThemeOverlay_AppCompat_Dark=0x7f0a00bb;
+        public static final int Base_ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0a00bc;
+        public static final int Base_ThemeOverlay_AppCompat_Dialog=0x7f0a0019;
+        public static final int Base_ThemeOverlay_AppCompat_Dialog_Alert=0x7f0a001a;
+        public static final int Base_ThemeOverlay_AppCompat_Light=0x7f0a00bd;
+        public static final int Base_V11_Theme_AppCompat_Dialog=0x7f0a001b;
+        public static final int Base_V11_Theme_AppCompat_Light_Dialog=0x7f0a001c;
+        public static final int Base_V11_ThemeOverlay_AppCompat_Dialog=0x7f0a001d;
+        public static final int Base_V12_Widget_AppCompat_AutoCompleteTextView=0x7f0a0025;
+        public static final int Base_V12_Widget_AppCompat_EditText=0x7f0a0026;
+        public static final int Base_V21_Theme_AppCompat=0x7f0a0064;
+        public static final int Base_V21_Theme_AppCompat_Dialog=0x7f0a0065;
+        public static final int Base_V21_Theme_AppCompat_Light=0x7f0a0066;
+        public static final int Base_V21_Theme_AppCompat_Light_Dialog=0x7f0a0067;
+        public static final int Base_V21_ThemeOverlay_AppCompat_Dialog=0x7f0a0068;
+        public static final int Base_V22_Theme_AppCompat=0x7f0a0095;
+        public static final int Base_V22_Theme_AppCompat_Light=0x7f0a0096;
+        public static final int Base_V23_Theme_AppCompat=0x7f0a0099;
+        public static final int Base_V23_Theme_AppCompat_Light=0x7f0a009a;
+        public static final int Base_V7_Theme_AppCompat=0x7f0a00be;
+        public static final int Base_V7_Theme_AppCompat_Dialog=0x7f0a00bf;
+        public static final int Base_V7_Theme_AppCompat_Light=0x7f0a00c0;
+        public static final int Base_V7_Theme_AppCompat_Light_Dialog=0x7f0a00c1;
+        public static final int Base_V7_ThemeOverlay_AppCompat_Dialog=0x7f0a00c2;
+        public static final int Base_V7_Widget_AppCompat_AutoCompleteTextView=0x7f0a00c3;
+        public static final int Base_V7_Widget_AppCompat_EditText=0x7f0a00c4;
+        public static final int Base_Widget_AppCompat_ActionBar=0x7f0a00c5;
+        public static final int Base_Widget_AppCompat_ActionBar_Solid=0x7f0a00c6;
+        public static final int Base_Widget_AppCompat_ActionBar_TabBar=0x7f0a00c7;
+        public static final int Base_Widget_AppCompat_ActionBar_TabText=0x7f0a0069;
+        public static final int Base_Widget_AppCompat_ActionBar_TabView=0x7f0a006a;
+        public static final int Base_Widget_AppCompat_ActionButton=0x7f0a006b;
+        public static final int Base_Widget_AppCompat_ActionButton_CloseMode=0x7f0a006c;
+        public static final int Base_Widget_AppCompat_ActionButton_Overflow=0x7f0a006d;
+        public static final int Base_Widget_AppCompat_ActionMode=0x7f0a00c8;
+        public static final int Base_Widget_AppCompat_ActivityChooserView=0x7f0a00c9;
+        public static final int Base_Widget_AppCompat_AutoCompleteTextView=0x7f0a0027;
+        public static final int Base_Widget_AppCompat_Button=0x7f0a006e;
+        public static final int Base_Widget_AppCompat_Button_Borderless=0x7f0a006f;
+        public static final int Base_Widget_AppCompat_Button_Borderless_Colored=0x7f0a0070;
+        public static final int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0a00ca;
+        public static final int Base_Widget_AppCompat_Button_Colored=0x7f0a009b;
+        public static final int Base_Widget_AppCompat_Button_Small=0x7f0a0071;
+        public static final int Base_Widget_AppCompat_ButtonBar=0x7f0a0072;
+        public static final int Base_Widget_AppCompat_ButtonBar_AlertDialog=0x7f0a00cb;
+        public static final int Base_Widget_AppCompat_CompoundButton_CheckBox=0x7f0a0073;
+        public static final int Base_Widget_AppCompat_CompoundButton_RadioButton=0x7f0a0074;
+        public static final int Base_Widget_AppCompat_CompoundButton_Switch=0x7f0a00cc;
+        public static final int Base_Widget_AppCompat_DrawerArrowToggle=0x7f0a0000;
+        public static final int Base_Widget_AppCompat_DrawerArrowToggle_Common=0x7f0a00cd;
+        public static final int Base_Widget_AppCompat_DropDownItem_Spinner=0x7f0a0075;
+        public static final int Base_Widget_AppCompat_EditText=0x7f0a0028;
+        public static final int Base_Widget_AppCompat_ImageButton=0x7f0a0076;
+        public static final int Base_Widget_AppCompat_Light_ActionBar=0x7f0a00ce;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_Solid=0x7f0a00cf;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_TabBar=0x7f0a00d0;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_TabText=0x7f0a0077;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0a0078;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_TabView=0x7f0a0079;
+        public static final int Base_Widget_AppCompat_Light_PopupMenu=0x7f0a007a;
+        public static final int Base_Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0a007b;
+        public static final int Base_Widget_AppCompat_ListMenuView=0x7f0a00d1;
+        public static final int Base_Widget_AppCompat_ListPopupWindow=0x7f0a007c;
+        public static final int Base_Widget_AppCompat_ListView=0x7f0a007d;
+        public static final int Base_Widget_AppCompat_ListView_DropDown=0x7f0a007e;
+        public static final int Base_Widget_AppCompat_ListView_Menu=0x7f0a007f;
+        public static final int Base_Widget_AppCompat_PopupMenu=0x7f0a0080;
+        public static final int Base_Widget_AppCompat_PopupMenu_Overflow=0x7f0a0081;
+        public static final int Base_Widget_AppCompat_PopupWindow=0x7f0a00d2;
+        public static final int Base_Widget_AppCompat_ProgressBar=0x7f0a001e;
+        public static final int Base_Widget_AppCompat_ProgressBar_Horizontal=0x7f0a001f;
+        public static final int Base_Widget_AppCompat_RatingBar=0x7f0a0082;
+        public static final int Base_Widget_AppCompat_RatingBar_Indicator=0x7f0a009c;
+        public static final int Base_Widget_AppCompat_RatingBar_Small=0x7f0a009d;
+        public static final int Base_Widget_AppCompat_SearchView=0x7f0a00d3;
+        public static final int Base_Widget_AppCompat_SearchView_ActionBar=0x7f0a00d4;
+        public static final int Base_Widget_AppCompat_SeekBar=0x7f0a0083;
+        public static final int Base_Widget_AppCompat_SeekBar_Discrete=0x7f0a00d5;
+        public static final int Base_Widget_AppCompat_Spinner=0x7f0a0084;
+        public static final int Base_Widget_AppCompat_Spinner_Underlined=0x7f0a0004;
+        public static final int Base_Widget_AppCompat_TextView_SpinnerItem=0x7f0a0085;
+        public static final int Base_Widget_AppCompat_Toolbar=0x7f0a00d6;
+        public static final int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f0a0086;
+        public static final int Base_Widget_Design_AppBarLayout=0x7f0a00d7;
+        public static final int Base_Widget_Design_TabLayout=0x7f0a00d8;
+        public static final int Dialog=0x7f0a00d9;
         /** 在Android 4.4之前的版本上运行，直接跟随系统主题
          */
-        public static final int ImageTranslucentTheme=0x7f0900d9;
-        public static final int MatchParent=0x7f0900da;
-        public static final int MyDialog=0x7f0900db;
-        public static final int MyDialogTheme=0x7f0900dc;
-        public static final int MyEditText2=0x7f0900dd;
-        public static final int MyLinearLayoutMatchHorizontal=0x7f0900de;
-        public static final int MyLinearLayoutMatchVertical=0x7f0900df;
-        public static final int MyLinearLayoutMatchWidthWrapHeightHorizontal=0x7f0900e0;
-        public static final int MyLinearLayoutMatchWidthWrapHeightVertical=0x7f0900e1;
-        public static final int MyLinearLayoutWrapHorizontal=0x7f0900e2;
-        public static final int MyLinearLayoutWrapVertical=0x7f0900e3;
-        public static final int MyListView=0x7f0900e4;
-        public static final int MyRatingBar=0x7f0900e5;
-        public static final int MyRatingBarAvailable=0x7f0900e6;
-        public static final int MyRatingBarDisabled=0x7f0900e7;
-        public static final int MyScrollView=0x7f0900e8;
-        public static final int MyTextView=0x7f0900e9;
-        public static final int MyTextView10=0x7f0900ea;
-        public static final int MyTextView12=0x7f0900eb;
-        public static final int MyTextView14=0x7f0900ec;
-        public static final int MyTextView16=0x7f0900ed;
-        public static final int MyTextView18=0x7f0900ee;
-        public static final int MyTextView2=0x7f0900ef;
-        public static final int MyTextViewBlack=0x7f0900f0;
-        public static final int MyTextViewGray=0x7f0900f1;
-        public static final int MyTextViewRed=0x7f0900f2;
-        public static final int MyTextViewWhite=0x7f0900f3;
-        public static final int Platform_AppCompat=0x7f09001f;
-        public static final int Platform_AppCompat_Light=0x7f090020;
-        public static final int Platform_ThemeOverlay_AppCompat=0x7f090086;
-        public static final int Platform_ThemeOverlay_AppCompat_Dark=0x7f090087;
-        public static final int Platform_ThemeOverlay_AppCompat_Light=0x7f090088;
-        public static final int Platform_V11_AppCompat=0x7f090021;
-        public static final int Platform_V11_AppCompat_Light=0x7f090022;
-        public static final int Platform_V14_AppCompat=0x7f090029;
-        public static final int Platform_V14_AppCompat_Light=0x7f09002a;
-        public static final int Platform_V21_AppCompat=0x7f090089;
-        public static final int Platform_V21_AppCompat_Light=0x7f09008a;
-        public static final int Platform_V25_AppCompat=0x7f09009f;
-        public static final int Platform_V25_AppCompat_Light=0x7f0900a0;
-        public static final int Platform_Widget_AppCompat_Spinner=0x7f090023;
-        public static final int RtlOverlay_DialogWindowTitle_AppCompat=0x7f090032;
-        public static final int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem=0x7f090033;
-        public static final int RtlOverlay_Widget_AppCompat_DialogTitle_Icon=0x7f090034;
-        public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem=0x7f090035;
-        public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup=0x7f090036;
-        public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text=0x7f090037;
-        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown=0x7f090038;
-        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1=0x7f090039;
-        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2=0x7f09003a;
-        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Query=0x7f09003b;
-        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Text=0x7f09003c;
-        public static final int RtlOverlay_Widget_AppCompat_SearchView_MagIcon=0x7f09003d;
-        public static final int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f09003e;
-        public static final int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f09003f;
-        public static final int TextAppearance_AppCompat=0x7f0900f4;
-        public static final int TextAppearance_AppCompat_Body1=0x7f0900f5;
-        public static final int TextAppearance_AppCompat_Body2=0x7f0900f6;
-        public static final int TextAppearance_AppCompat_Button=0x7f0900f7;
-        public static final int TextAppearance_AppCompat_Caption=0x7f0900f8;
-        public static final int TextAppearance_AppCompat_Display1=0x7f0900f9;
-        public static final int TextAppearance_AppCompat_Display2=0x7f0900fa;
-        public static final int TextAppearance_AppCompat_Display3=0x7f0900fb;
-        public static final int TextAppearance_AppCompat_Display4=0x7f0900fc;
-        public static final int TextAppearance_AppCompat_Headline=0x7f0900fd;
-        public static final int TextAppearance_AppCompat_Inverse=0x7f0900fe;
-        public static final int TextAppearance_AppCompat_Large=0x7f0900ff;
-        public static final int TextAppearance_AppCompat_Large_Inverse=0x7f090100;
-        public static final int TextAppearance_AppCompat_Light_SearchResult_Subtitle=0x7f090101;
-        public static final int TextAppearance_AppCompat_Light_SearchResult_Title=0x7f090102;
-        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f090103;
-        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f090104;
-        public static final int TextAppearance_AppCompat_Medium=0x7f090105;
-        public static final int TextAppearance_AppCompat_Medium_Inverse=0x7f090106;
-        public static final int TextAppearance_AppCompat_Menu=0x7f090107;
-        public static final int TextAppearance_AppCompat_Notification=0x7f09002b;
-        public static final int TextAppearance_AppCompat_Notification_Info=0x7f09008b;
-        public static final int TextAppearance_AppCompat_Notification_Info_Media=0x7f09008c;
-        public static final int TextAppearance_AppCompat_Notification_Line2=0x7f090108;
-        public static final int TextAppearance_AppCompat_Notification_Line2_Media=0x7f090109;
-        public static final int TextAppearance_AppCompat_Notification_Media=0x7f09008d;
-        public static final int TextAppearance_AppCompat_Notification_Time=0x7f09008e;
-        public static final int TextAppearance_AppCompat_Notification_Time_Media=0x7f09008f;
-        public static final int TextAppearance_AppCompat_Notification_Title=0x7f09002c;
-        public static final int TextAppearance_AppCompat_Notification_Title_Media=0x7f090090;
-        public static final int TextAppearance_AppCompat_SearchResult_Subtitle=0x7f09010a;
-        public static final int TextAppearance_AppCompat_SearchResult_Title=0x7f09010b;
-        public static final int TextAppearance_AppCompat_Small=0x7f09010c;
-        public static final int TextAppearance_AppCompat_Small_Inverse=0x7f09010d;
-        public static final int TextAppearance_AppCompat_Subhead=0x7f09010e;
-        public static final int TextAppearance_AppCompat_Subhead_Inverse=0x7f09010f;
-        public static final int TextAppearance_AppCompat_Title=0x7f090110;
-        public static final int TextAppearance_AppCompat_Title_Inverse=0x7f090111;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f090112;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f090113;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f090114;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f090115;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f090116;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f090117;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse=0x7f090118;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f090119;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse=0x7f09011a;
-        public static final int TextAppearance_AppCompat_Widget_Button=0x7f09011b;
-        public static final int TextAppearance_AppCompat_Widget_Button_Borderless_Colored=0x7f09011c;
-        public static final int TextAppearance_AppCompat_Widget_Button_Colored=0x7f09011d;
-        public static final int TextAppearance_AppCompat_Widget_Button_Inverse=0x7f09011e;
-        public static final int TextAppearance_AppCompat_Widget_DropDownItem=0x7f09011f;
-        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Header=0x7f090120;
-        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f090121;
-        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f090122;
-        public static final int TextAppearance_AppCompat_Widget_Switch=0x7f090123;
-        public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f090124;
-        public static final int TextAppearance_Design_CollapsingToolbar_Expanded=0x7f090125;
-        public static final int TextAppearance_Design_Counter=0x7f090126;
-        public static final int TextAppearance_Design_Counter_Overflow=0x7f090127;
-        public static final int TextAppearance_Design_Error=0x7f090128;
-        public static final int TextAppearance_Design_Hint=0x7f090129;
-        public static final int TextAppearance_Design_Snackbar_Message=0x7f09012a;
-        public static final int TextAppearance_Design_Tab=0x7f09012b;
-        public static final int TextAppearance_StatusBar_EventContent=0x7f09002d;
-        public static final int TextAppearance_StatusBar_EventContent_Info=0x7f09002e;
-        public static final int TextAppearance_StatusBar_EventContent_Line2=0x7f09002f;
-        public static final int TextAppearance_StatusBar_EventContent_Time=0x7f090030;
-        public static final int TextAppearance_StatusBar_EventContent_Title=0x7f090031;
-        public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f09012c;
-        public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f09012d;
-        public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f09012e;
-        public static final int TextViewButton=0x7f09012f;
-        public static final int TextViewWatchInfo=0x7f090130;
-        public static final int TextViewWatchInfo1=0x7f090131;
-        public static final int Theme_AppCompat=0x7f090132;
-        public static final int Theme_AppCompat_CompactMenu=0x7f090133;
-        public static final int Theme_AppCompat_DayNight=0x7f090005;
-        public static final int Theme_AppCompat_DayNight_DarkActionBar=0x7f090006;
-        public static final int Theme_AppCompat_DayNight_Dialog=0x7f090007;
-        public static final int Theme_AppCompat_DayNight_Dialog_Alert=0x7f090008;
-        public static final int Theme_AppCompat_DayNight_Dialog_MinWidth=0x7f090009;
-        public static final int Theme_AppCompat_DayNight_DialogWhenLarge=0x7f09000a;
-        public static final int Theme_AppCompat_DayNight_NoActionBar=0x7f09000b;
-        public static final int Theme_AppCompat_Dialog=0x7f090134;
-        public static final int Theme_AppCompat_Dialog_Alert=0x7f090135;
-        public static final int Theme_AppCompat_Dialog_MinWidth=0x7f090136;
-        public static final int Theme_AppCompat_DialogWhenLarge=0x7f090137;
-        public static final int Theme_AppCompat_Light=0x7f090138;
-        public static final int Theme_AppCompat_Light_DarkActionBar=0x7f090139;
-        public static final int Theme_AppCompat_Light_Dialog=0x7f09013a;
-        public static final int Theme_AppCompat_Light_Dialog_Alert=0x7f09013b;
-        public static final int Theme_AppCompat_Light_Dialog_MinWidth=0x7f09013c;
-        public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f09013d;
-        public static final int Theme_AppCompat_Light_NoActionBar=0x7f09013e;
-        public static final int Theme_AppCompat_NoActionBar=0x7f09013f;
-        public static final int Theme_Design=0x7f090140;
-        public static final int Theme_Design_BottomSheetDialog=0x7f090141;
-        public static final int Theme_Design_Light=0x7f090142;
-        public static final int Theme_Design_Light_BottomSheetDialog=0x7f090143;
-        public static final int Theme_Design_Light_NoActionBar=0x7f090144;
-        public static final int Theme_Design_NoActionBar=0x7f090145;
-        public static final int ThemeOverlay_AppCompat=0x7f090146;
-        public static final int ThemeOverlay_AppCompat_ActionBar=0x7f090147;
-        public static final int ThemeOverlay_AppCompat_Dark=0x7f090148;
-        public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f090149;
-        public static final int ThemeOverlay_AppCompat_Dialog=0x7f09014a;
-        public static final int ThemeOverlay_AppCompat_Dialog_Alert=0x7f09014b;
-        public static final int ThemeOverlay_AppCompat_Light=0x7f09014c;
-        public static final int Widget_AppCompat_ActionBar=0x7f09014d;
-        public static final int Widget_AppCompat_ActionBar_Solid=0x7f09014e;
-        public static final int Widget_AppCompat_ActionBar_TabBar=0x7f09014f;
-        public static final int Widget_AppCompat_ActionBar_TabText=0x7f090150;
-        public static final int Widget_AppCompat_ActionBar_TabView=0x7f090151;
-        public static final int Widget_AppCompat_ActionButton=0x7f090152;
-        public static final int Widget_AppCompat_ActionButton_CloseMode=0x7f090153;
-        public static final int Widget_AppCompat_ActionButton_Overflow=0x7f090154;
-        public static final int Widget_AppCompat_ActionMode=0x7f090155;
-        public static final int Widget_AppCompat_ActivityChooserView=0x7f090156;
-        public static final int Widget_AppCompat_AutoCompleteTextView=0x7f090157;
-        public static final int Widget_AppCompat_Button=0x7f090158;
-        public static final int Widget_AppCompat_Button_Borderless=0x7f090159;
-        public static final int Widget_AppCompat_Button_Borderless_Colored=0x7f09015a;
-        public static final int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f09015b;
-        public static final int Widget_AppCompat_Button_Colored=0x7f09015c;
-        public static final int Widget_AppCompat_Button_Small=0x7f09015d;
-        public static final int Widget_AppCompat_ButtonBar=0x7f09015e;
-        public static final int Widget_AppCompat_ButtonBar_AlertDialog=0x7f09015f;
-        public static final int Widget_AppCompat_CompoundButton_CheckBox=0x7f090160;
-        public static final int Widget_AppCompat_CompoundButton_RadioButton=0x7f090161;
-        public static final int Widget_AppCompat_CompoundButton_Switch=0x7f090162;
-        public static final int Widget_AppCompat_DrawerArrowToggle=0x7f090163;
-        public static final int Widget_AppCompat_DropDownItem_Spinner=0x7f090164;
-        public static final int Widget_AppCompat_EditText=0x7f090165;
-        public static final int Widget_AppCompat_ImageButton=0x7f090166;
-        public static final int Widget_AppCompat_Light_ActionBar=0x7f090167;
-        public static final int Widget_AppCompat_Light_ActionBar_Solid=0x7f090168;
-        public static final int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f090169;
-        public static final int Widget_AppCompat_Light_ActionBar_TabBar=0x7f09016a;
-        public static final int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f09016b;
-        public static final int Widget_AppCompat_Light_ActionBar_TabText=0x7f09016c;
-        public static final int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f09016d;
-        public static final int Widget_AppCompat_Light_ActionBar_TabView=0x7f09016e;
-        public static final int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f09016f;
-        public static final int Widget_AppCompat_Light_ActionButton=0x7f090170;
-        public static final int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f090171;
-        public static final int Widget_AppCompat_Light_ActionButton_Overflow=0x7f090172;
-        public static final int Widget_AppCompat_Light_ActionMode_Inverse=0x7f090173;
-        public static final int Widget_AppCompat_Light_ActivityChooserView=0x7f090174;
-        public static final int Widget_AppCompat_Light_AutoCompleteTextView=0x7f090175;
-        public static final int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f090176;
-        public static final int Widget_AppCompat_Light_ListPopupWindow=0x7f090177;
-        public static final int Widget_AppCompat_Light_ListView_DropDown=0x7f090178;
-        public static final int Widget_AppCompat_Light_PopupMenu=0x7f090179;
-        public static final int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f09017a;
-        public static final int Widget_AppCompat_Light_SearchView=0x7f09017b;
-        public static final int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f09017c;
-        public static final int Widget_AppCompat_ListMenuView=0x7f09017d;
-        public static final int Widget_AppCompat_ListPopupWindow=0x7f09017e;
-        public static final int Widget_AppCompat_ListView=0x7f09017f;
-        public static final int Widget_AppCompat_ListView_DropDown=0x7f090180;
-        public static final int Widget_AppCompat_ListView_Menu=0x7f090181;
-        public static final int Widget_AppCompat_NotificationActionContainer=0x7f090091;
-        public static final int Widget_AppCompat_NotificationActionText=0x7f090092;
-        public static final int Widget_AppCompat_PopupMenu=0x7f090182;
-        public static final int Widget_AppCompat_PopupMenu_Overflow=0x7f090183;
-        public static final int Widget_AppCompat_PopupWindow=0x7f090184;
-        public static final int Widget_AppCompat_ProgressBar=0x7f090185;
-        public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f090186;
-        public static final int Widget_AppCompat_RatingBar=0x7f090187;
-        public static final int Widget_AppCompat_RatingBar_Indicator=0x7f090188;
-        public static final int Widget_AppCompat_RatingBar_Small=0x7f090189;
-        public static final int Widget_AppCompat_SearchView=0x7f09018a;
-        public static final int Widget_AppCompat_SearchView_ActionBar=0x7f09018b;
-        public static final int Widget_AppCompat_SeekBar=0x7f09018c;
-        public static final int Widget_AppCompat_SeekBar_Discrete=0x7f09018d;
-        public static final int Widget_AppCompat_Spinner=0x7f09018e;
-        public static final int Widget_AppCompat_Spinner_DropDown=0x7f09018f;
-        public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f090190;
-        public static final int Widget_AppCompat_Spinner_Underlined=0x7f090191;
-        public static final int Widget_AppCompat_TextView_SpinnerItem=0x7f090192;
-        public static final int Widget_AppCompat_Toolbar=0x7f090193;
-        public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f090194;
-        public static final int Widget_Design_AppBarLayout=0x7f090093;
-        public static final int Widget_Design_BottomNavigationView=0x7f090195;
-        public static final int Widget_Design_BottomSheet_Modal=0x7f090196;
-        public static final int Widget_Design_CollapsingToolbar=0x7f090197;
-        public static final int Widget_Design_CoordinatorLayout=0x7f090198;
-        public static final int Widget_Design_FloatingActionButton=0x7f090199;
-        public static final int Widget_Design_NavigationView=0x7f09019a;
-        public static final int Widget_Design_ScrimInsetsFrameLayout=0x7f09019b;
-        public static final int Widget_Design_Snackbar=0x7f09019c;
-        public static final int Widget_Design_TabLayout=0x7f090001;
-        public static final int Widget_Design_TextInputLayout=0x7f09019d;
-        public static final int WrapContent=0x7f09019e;
-        public static final int WrapHeightMatchWidth=0x7f09019f;
-        public static final int WrapWidthMatchHeight=0x7f0901a0;
-        public static final int fragment_bottom_line=0x7f0901a1;
-        public static final int fragment_top_nav=0x7f0901a2;
-        public static final int iphone_progress_dialog=0x7f0901a3;
-        public static final int lineView=0x7f0901a4;
-        public static final int lineViewVertical=0x7f0901a5;
-        public static final int linestype=0x7f0901a6;
+        public static final int ImageTranslucentTheme=0x7f0a00da;
+        public static final int MatchParent=0x7f0a00db;
+        public static final int MyDialog=0x7f0a00dc;
+        public static final int MyDialogTheme=0x7f0a00dd;
+        public static final int MyEditText2=0x7f0a00de;
+        public static final int MyLinearLayoutMatchHorizontal=0x7f0a00df;
+        public static final int MyLinearLayoutMatchVertical=0x7f0a00e0;
+        public static final int MyLinearLayoutMatchWidthWrapHeightHorizontal=0x7f0a00e1;
+        public static final int MyLinearLayoutMatchWidthWrapHeightVertical=0x7f0a00e2;
+        public static final int MyLinearLayoutWrapHorizontal=0x7f0a00e3;
+        public static final int MyLinearLayoutWrapVertical=0x7f0a00e4;
+        public static final int MyListView=0x7f0a00e5;
+        public static final int MyRatingBar=0x7f0a00e6;
+        public static final int MyRatingBarAvailable=0x7f0a00e7;
+        public static final int MyRatingBarDisabled=0x7f0a00e8;
+        public static final int MyScrollView=0x7f0a00e9;
+        public static final int MyTextView=0x7f0a00ea;
+        public static final int MyTextView10=0x7f0a00eb;
+        public static final int MyTextView12=0x7f0a00ec;
+        public static final int MyTextView14=0x7f0a00ed;
+        public static final int MyTextView16=0x7f0a00ee;
+        public static final int MyTextView18=0x7f0a00ef;
+        public static final int MyTextView2=0x7f0a00f0;
+        public static final int MyTextViewBlack=0x7f0a00f1;
+        public static final int MyTextViewGray=0x7f0a00f2;
+        public static final int MyTextViewRed=0x7f0a00f3;
+        public static final int MyTextViewWhite=0x7f0a00f4;
+        public static final int Platform_AppCompat=0x7f0a0020;
+        public static final int Platform_AppCompat_Light=0x7f0a0021;
+        public static final int Platform_ThemeOverlay_AppCompat=0x7f0a0087;
+        public static final int Platform_ThemeOverlay_AppCompat_Dark=0x7f0a0088;
+        public static final int Platform_ThemeOverlay_AppCompat_Light=0x7f0a0089;
+        public static final int Platform_V11_AppCompat=0x7f0a0022;
+        public static final int Platform_V11_AppCompat_Light=0x7f0a0023;
+        public static final int Platform_V14_AppCompat=0x7f0a002a;
+        public static final int Platform_V14_AppCompat_Light=0x7f0a002b;
+        public static final int Platform_V21_AppCompat=0x7f0a008a;
+        public static final int Platform_V21_AppCompat_Light=0x7f0a008b;
+        public static final int Platform_V25_AppCompat=0x7f0a00a0;
+        public static final int Platform_V25_AppCompat_Light=0x7f0a00a1;
+        public static final int Platform_Widget_AppCompat_Spinner=0x7f0a0024;
+        public static final int RtlOverlay_DialogWindowTitle_AppCompat=0x7f0a0033;
+        public static final int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem=0x7f0a0034;
+        public static final int RtlOverlay_Widget_AppCompat_DialogTitle_Icon=0x7f0a0035;
+        public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem=0x7f0a0036;
+        public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup=0x7f0a0037;
+        public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text=0x7f0a0038;
+        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown=0x7f0a0039;
+        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1=0x7f0a003a;
+        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2=0x7f0a003b;
+        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Query=0x7f0a003c;
+        public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Text=0x7f0a003d;
+        public static final int RtlOverlay_Widget_AppCompat_SearchView_MagIcon=0x7f0a003e;
+        public static final int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f0a003f;
+        public static final int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f0a0040;
+        public static final int TextAppearance_AppCompat=0x7f0a00f5;
+        public static final int TextAppearance_AppCompat_Body1=0x7f0a00f6;
+        public static final int TextAppearance_AppCompat_Body2=0x7f0a00f7;
+        public static final int TextAppearance_AppCompat_Button=0x7f0a00f8;
+        public static final int TextAppearance_AppCompat_Caption=0x7f0a00f9;
+        public static final int TextAppearance_AppCompat_Display1=0x7f0a00fa;
+        public static final int TextAppearance_AppCompat_Display2=0x7f0a00fb;
+        public static final int TextAppearance_AppCompat_Display3=0x7f0a00fc;
+        public static final int TextAppearance_AppCompat_Display4=0x7f0a00fd;
+        public static final int TextAppearance_AppCompat_Headline=0x7f0a00fe;
+        public static final int TextAppearance_AppCompat_Inverse=0x7f0a00ff;
+        public static final int TextAppearance_AppCompat_Large=0x7f0a0100;
+        public static final int TextAppearance_AppCompat_Large_Inverse=0x7f0a0101;
+        public static final int TextAppearance_AppCompat_Light_SearchResult_Subtitle=0x7f0a0102;
+        public static final int TextAppearance_AppCompat_Light_SearchResult_Title=0x7f0a0103;
+        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0a0104;
+        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0a0105;
+        public static final int TextAppearance_AppCompat_Medium=0x7f0a0106;
+        public static final int TextAppearance_AppCompat_Medium_Inverse=0x7f0a0107;
+        public static final int TextAppearance_AppCompat_Menu=0x7f0a0108;
+        public static final int TextAppearance_AppCompat_Notification=0x7f0a002c;
+        public static final int TextAppearance_AppCompat_Notification_Info=0x7f0a008c;
+        public static final int TextAppearance_AppCompat_Notification_Info_Media=0x7f0a008d;
+        public static final int TextAppearance_AppCompat_Notification_Line2=0x7f0a0109;
+        public static final int TextAppearance_AppCompat_Notification_Line2_Media=0x7f0a010a;
+        public static final int TextAppearance_AppCompat_Notification_Media=0x7f0a008e;
+        public static final int TextAppearance_AppCompat_Notification_Time=0x7f0a008f;
+        public static final int TextAppearance_AppCompat_Notification_Time_Media=0x7f0a0090;
+        public static final int TextAppearance_AppCompat_Notification_Title=0x7f0a002d;
+        public static final int TextAppearance_AppCompat_Notification_Title_Media=0x7f0a0091;
+        public static final int TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0a010b;
+        public static final int TextAppearance_AppCompat_SearchResult_Title=0x7f0a010c;
+        public static final int TextAppearance_AppCompat_Small=0x7f0a010d;
+        public static final int TextAppearance_AppCompat_Small_Inverse=0x7f0a010e;
+        public static final int TextAppearance_AppCompat_Subhead=0x7f0a010f;
+        public static final int TextAppearance_AppCompat_Subhead_Inverse=0x7f0a0110;
+        public static final int TextAppearance_AppCompat_Title=0x7f0a0111;
+        public static final int TextAppearance_AppCompat_Title_Inverse=0x7f0a0112;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0a0113;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0a0114;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0a0115;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0a0116;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0a0117;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0a0118;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse=0x7f0a0119;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0a011a;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse=0x7f0a011b;
+        public static final int TextAppearance_AppCompat_Widget_Button=0x7f0a011c;
+        public static final int TextAppearance_AppCompat_Widget_Button_Borderless_Colored=0x7f0a011d;
+        public static final int TextAppearance_AppCompat_Widget_Button_Colored=0x7f0a011e;
+        public static final int TextAppearance_AppCompat_Widget_Button_Inverse=0x7f0a011f;
+        public static final int TextAppearance_AppCompat_Widget_DropDownItem=0x7f0a0120;
+        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Header=0x7f0a0121;
+        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0a0122;
+        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0a0123;
+        public static final int TextAppearance_AppCompat_Widget_Switch=0x7f0a0124;
+        public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0a0125;
+        public static final int TextAppearance_Design_CollapsingToolbar_Expanded=0x7f0a0126;
+        public static final int TextAppearance_Design_Counter=0x7f0a0127;
+        public static final int TextAppearance_Design_Counter_Overflow=0x7f0a0128;
+        public static final int TextAppearance_Design_Error=0x7f0a0129;
+        public static final int TextAppearance_Design_Hint=0x7f0a012a;
+        public static final int TextAppearance_Design_Snackbar_Message=0x7f0a012b;
+        public static final int TextAppearance_Design_Tab=0x7f0a012c;
+        public static final int TextAppearance_StatusBar_EventContent=0x7f0a002e;
+        public static final int TextAppearance_StatusBar_EventContent_Info=0x7f0a002f;
+        public static final int TextAppearance_StatusBar_EventContent_Line2=0x7f0a0030;
+        public static final int TextAppearance_StatusBar_EventContent_Time=0x7f0a0031;
+        public static final int TextAppearance_StatusBar_EventContent_Title=0x7f0a0032;
+        public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0a012d;
+        public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0a012e;
+        public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0a012f;
+        public static final int TextViewButton=0x7f0a0130;
+        public static final int TextViewWatchInfo=0x7f0a0131;
+        public static final int TextViewWatchInfo1=0x7f0a0132;
+        public static final int Theme_AppCompat=0x7f0a0133;
+        public static final int Theme_AppCompat_CompactMenu=0x7f0a0134;
+        public static final int Theme_AppCompat_DayNight=0x7f0a0005;
+        public static final int Theme_AppCompat_DayNight_DarkActionBar=0x7f0a0006;
+        public static final int Theme_AppCompat_DayNight_Dialog=0x7f0a0007;
+        public static final int Theme_AppCompat_DayNight_Dialog_Alert=0x7f0a0008;
+        public static final int Theme_AppCompat_DayNight_Dialog_MinWidth=0x7f0a0009;
+        public static final int Theme_AppCompat_DayNight_DialogWhenLarge=0x7f0a000a;
+        public static final int Theme_AppCompat_DayNight_NoActionBar=0x7f0a000b;
+        public static final int Theme_AppCompat_Dialog=0x7f0a0135;
+        public static final int Theme_AppCompat_Dialog_Alert=0x7f0a0136;
+        public static final int Theme_AppCompat_Dialog_MinWidth=0x7f0a0137;
+        public static final int Theme_AppCompat_DialogWhenLarge=0x7f0a0138;
+        public static final int Theme_AppCompat_Light=0x7f0a0139;
+        public static final int Theme_AppCompat_Light_DarkActionBar=0x7f0a013a;
+        public static final int Theme_AppCompat_Light_Dialog=0x7f0a013b;
+        public static final int Theme_AppCompat_Light_Dialog_Alert=0x7f0a013c;
+        public static final int Theme_AppCompat_Light_Dialog_MinWidth=0x7f0a013d;
+        public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f0a013e;
+        public static final int Theme_AppCompat_Light_NoActionBar=0x7f0a013f;
+        public static final int Theme_AppCompat_NoActionBar=0x7f0a0140;
+        public static final int Theme_Design=0x7f0a0141;
+        public static final int Theme_Design_BottomSheetDialog=0x7f0a0142;
+        public static final int Theme_Design_Light=0x7f0a0143;
+        public static final int Theme_Design_Light_BottomSheetDialog=0x7f0a0144;
+        public static final int Theme_Design_Light_NoActionBar=0x7f0a0145;
+        public static final int Theme_Design_NoActionBar=0x7f0a0146;
+        public static final int ThemeOverlay_AppCompat=0x7f0a0147;
+        public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0a0148;
+        public static final int ThemeOverlay_AppCompat_Dark=0x7f0a0149;
+        public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0a014a;
+        public static final int ThemeOverlay_AppCompat_Dialog=0x7f0a014b;
+        public static final int ThemeOverlay_AppCompat_Dialog_Alert=0x7f0a014c;
+        public static final int ThemeOverlay_AppCompat_Light=0x7f0a014d;
+        public static final int Widget_AppCompat_ActionBar=0x7f0a014e;
+        public static final int Widget_AppCompat_ActionBar_Solid=0x7f0a014f;
+        public static final int Widget_AppCompat_ActionBar_TabBar=0x7f0a0150;
+        public static final int Widget_AppCompat_ActionBar_TabText=0x7f0a0151;
+        public static final int Widget_AppCompat_ActionBar_TabView=0x7f0a0152;
+        public static final int Widget_AppCompat_ActionButton=0x7f0a0153;
+        public static final int Widget_AppCompat_ActionButton_CloseMode=0x7f0a0154;
+        public static final int Widget_AppCompat_ActionButton_Overflow=0x7f0a0155;
+        public static final int Widget_AppCompat_ActionMode=0x7f0a0156;
+        public static final int Widget_AppCompat_ActivityChooserView=0x7f0a0157;
+        public static final int Widget_AppCompat_AutoCompleteTextView=0x7f0a0158;
+        public static final int Widget_AppCompat_Button=0x7f0a0159;
+        public static final int Widget_AppCompat_Button_Borderless=0x7f0a015a;
+        public static final int Widget_AppCompat_Button_Borderless_Colored=0x7f0a015b;
+        public static final int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0a015c;
+        public static final int Widget_AppCompat_Button_Colored=0x7f0a015d;
+        public static final int Widget_AppCompat_Button_Small=0x7f0a015e;
+        public static final int Widget_AppCompat_ButtonBar=0x7f0a015f;
+        public static final int Widget_AppCompat_ButtonBar_AlertDialog=0x7f0a0160;
+        public static final int Widget_AppCompat_CompoundButton_CheckBox=0x7f0a0161;
+        public static final int Widget_AppCompat_CompoundButton_RadioButton=0x7f0a0162;
+        public static final int Widget_AppCompat_CompoundButton_Switch=0x7f0a0163;
+        public static final int Widget_AppCompat_DrawerArrowToggle=0x7f0a0164;
+        public static final int Widget_AppCompat_DropDownItem_Spinner=0x7f0a0165;
+        public static final int Widget_AppCompat_EditText=0x7f0a0166;
+        public static final int Widget_AppCompat_ImageButton=0x7f0a0167;
+        public static final int Widget_AppCompat_Light_ActionBar=0x7f0a0168;
+        public static final int Widget_AppCompat_Light_ActionBar_Solid=0x7f0a0169;
+        public static final int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f0a016a;
+        public static final int Widget_AppCompat_Light_ActionBar_TabBar=0x7f0a016b;
+        public static final int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f0a016c;
+        public static final int Widget_AppCompat_Light_ActionBar_TabText=0x7f0a016d;
+        public static final int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0a016e;
+        public static final int Widget_AppCompat_Light_ActionBar_TabView=0x7f0a016f;
+        public static final int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f0a0170;
+        public static final int Widget_AppCompat_Light_ActionButton=0x7f0a0171;
+        public static final int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f0a0172;
+        public static final int Widget_AppCompat_Light_ActionButton_Overflow=0x7f0a0173;
+        public static final int Widget_AppCompat_Light_ActionMode_Inverse=0x7f0a0174;
+        public static final int Widget_AppCompat_Light_ActivityChooserView=0x7f0a0175;
+        public static final int Widget_AppCompat_Light_AutoCompleteTextView=0x7f0a0176;
+        public static final int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f0a0177;
+        public static final int Widget_AppCompat_Light_ListPopupWindow=0x7f0a0178;
+        public static final int Widget_AppCompat_Light_ListView_DropDown=0x7f0a0179;
+        public static final int Widget_AppCompat_Light_PopupMenu=0x7f0a017a;
+        public static final int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0a017b;
+        public static final int Widget_AppCompat_Light_SearchView=0x7f0a017c;
+        public static final int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f0a017d;
+        public static final int Widget_AppCompat_ListMenuView=0x7f0a017e;
+        public static final int Widget_AppCompat_ListPopupWindow=0x7f0a017f;
+        public static final int Widget_AppCompat_ListView=0x7f0a0180;
+        public static final int Widget_AppCompat_ListView_DropDown=0x7f0a0181;
+        public static final int Widget_AppCompat_ListView_Menu=0x7f0a0182;
+        public static final int Widget_AppCompat_NotificationActionContainer=0x7f0a0092;
+        public static final int Widget_AppCompat_NotificationActionText=0x7f0a0093;
+        public static final int Widget_AppCompat_PopupMenu=0x7f0a0183;
+        public static final int Widget_AppCompat_PopupMenu_Overflow=0x7f0a0184;
+        public static final int Widget_AppCompat_PopupWindow=0x7f0a0185;
+        public static final int Widget_AppCompat_ProgressBar=0x7f0a0186;
+        public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0a0187;
+        public static final int Widget_AppCompat_RatingBar=0x7f0a0188;
+        public static final int Widget_AppCompat_RatingBar_Indicator=0x7f0a0189;
+        public static final int Widget_AppCompat_RatingBar_Small=0x7f0a018a;
+        public static final int Widget_AppCompat_SearchView=0x7f0a018b;
+        public static final int Widget_AppCompat_SearchView_ActionBar=0x7f0a018c;
+        public static final int Widget_AppCompat_SeekBar=0x7f0a018d;
+        public static final int Widget_AppCompat_SeekBar_Discrete=0x7f0a018e;
+        public static final int Widget_AppCompat_Spinner=0x7f0a018f;
+        public static final int Widget_AppCompat_Spinner_DropDown=0x7f0a0190;
+        public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0a0191;
+        public static final int Widget_AppCompat_Spinner_Underlined=0x7f0a0192;
+        public static final int Widget_AppCompat_TextView_SpinnerItem=0x7f0a0193;
+        public static final int Widget_AppCompat_Toolbar=0x7f0a0194;
+        public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f0a0195;
+        public static final int Widget_Design_AppBarLayout=0x7f0a0094;
+        public static final int Widget_Design_BottomNavigationView=0x7f0a0196;
+        public static final int Widget_Design_BottomSheet_Modal=0x7f0a0197;
+        public static final int Widget_Design_CollapsingToolbar=0x7f0a0198;
+        public static final int Widget_Design_CoordinatorLayout=0x7f0a0199;
+        public static final int Widget_Design_FloatingActionButton=0x7f0a019a;
+        public static final int Widget_Design_NavigationView=0x7f0a019b;
+        public static final int Widget_Design_ScrimInsetsFrameLayout=0x7f0a019c;
+        public static final int Widget_Design_Snackbar=0x7f0a019d;
+        public static final int Widget_Design_TabLayout=0x7f0a0001;
+        public static final int Widget_Design_TextInputLayout=0x7f0a019e;
+        public static final int WrapContent=0x7f0a019f;
+        public static final int WrapHeightMatchWidth=0x7f0a01a0;
+        public static final int WrapWidthMatchHeight=0x7f0a01a1;
+        public static final int fragment_bottom_line=0x7f0a01a2;
+        public static final int fragment_top_nav=0x7f0a01a3;
+        public static final int iphone_progress_dialog=0x7f0a01a4;
+        public static final int lineView=0x7f0a01a5;
+        public static final int lineViewVertical=0x7f0a01a6;
+        public static final int linestype=0x7f0a01a7;
         /**  指定消失的动画xml 
          */
-        public static final int mypopwindow_anim_style=0x7f0901a7;
-        public static final int vertical_bar=0x7f0901a8;
-        public static final int viewone=0x7f0901a9;
+        public static final int mypopwindow_anim_style=0x7f0a01a8;
+        public static final int vertical_bar=0x7f0a01a9;
+        public static final int viewone=0x7f0a01aa;
     }
     public static final class styleable {
-        /** Attributes that can be used with adssadas ActionBar.
+        /** Attributes that can be used with a ActionBar.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -4161,8 +4198,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:background
         */
         public static final int ActionBar_background = 10;
@@ -4171,9 +4208,9 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           @attr name com.jetcloud.hgbw:backgroundSplit
         */
@@ -4183,9 +4220,9 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           @attr name com.jetcloud.hgbw:backgroundStacked
         */
@@ -4195,14 +4232,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:contentInsetEnd
         */
         public static final int ActionBar_contentInsetEnd = 21;
@@ -4211,14 +4248,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:contentInsetEndWithActions
         */
         public static final int ActionBar_contentInsetEndWithActions = 25;
@@ -4227,14 +4264,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:contentInsetLeft
         */
         public static final int ActionBar_contentInsetLeft = 22;
@@ -4243,14 +4280,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:contentInsetRight
         */
         public static final int ActionBar_contentInsetRight = 23;
@@ -4259,14 +4296,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:contentInsetStart
         */
         public static final int ActionBar_contentInsetStart = 20;
@@ -4275,14 +4312,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:contentInsetStartWithNavigation
         */
         public static final int ActionBar_contentInsetStartWithNavigation = 24;
@@ -4291,8 +4328,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 13;
@@ -4323,8 +4360,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:divider
         */
         public static final int ActionBar_divider = 9;
@@ -4333,14 +4370,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:elevation
         */
         public static final int ActionBar_elevation = 26;
@@ -4349,14 +4386,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:height
         */
         public static final int ActionBar_height = 0;
@@ -4365,12 +4402,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:hideOnContentScroll
         */
         public static final int ActionBar_hideOnContentScroll = 19;
@@ -4379,8 +4416,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:homeAsUpIndicator
         */
         public static final int ActionBar_homeAsUpIndicator = 28;
@@ -4389,8 +4426,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:homeLayout
         */
         public static final int ActionBar_homeLayout = 14;
@@ -4399,8 +4436,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:icon
         */
         public static final int ActionBar_icon = 7;
@@ -4409,8 +4446,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
@@ -4419,14 +4456,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:itemPadding
         */
         public static final int ActionBar_itemPadding = 18;
@@ -4435,8 +4472,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:logo
         */
         public static final int ActionBar_logo = 8;
@@ -4463,8 +4500,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:popupTheme
         */
         public static final int ActionBar_popupTheme = 27;
@@ -4473,14 +4510,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 17;
@@ -4489,8 +4526,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 15;
@@ -4499,12 +4536,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:subtitle
         */
         public static final int ActionBar_subtitle = 4;
@@ -4513,8 +4550,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 6;
@@ -4523,12 +4560,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:title
         */
         public static final int ActionBar_title = 1;
@@ -4537,12 +4574,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionBar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 5;
-        /** Attributes that can be used with adssadas ActionBarLayout.
+        /** Attributes that can be used with a ActionBarLayout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -4561,7 +4598,7 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           @attr name android:layout_gravity
         */
         public static final int ActionBarLayout_android_layout_gravity = 0;
-        /** Attributes that can be used with adssadas ActionMenuItemView.
+        /** Attributes that can be used with a ActionMenuItemView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -4580,12 +4617,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           @attr name android:minWidth
         */
         public static final int ActionMenuItemView_android_minWidth = 0;
-        /** Attributes that can be used with adssadas ActionMenuView.
+        /** Attributes that can be used with a ActionMenuView.
          */
         public static final int[] ActionMenuView = {
             
         };
-        /** Attributes that can be used with adssadas ActionMode.
+        /** Attributes that can be used with a ActionMode.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -4614,8 +4651,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionMode} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:background
         */
         public static final int ActionMode_background = 3;
@@ -4624,9 +4661,9 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionMode} array.
 
 
-          <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           @attr name com.jetcloud.hgbw:backgroundSplit
         */
@@ -4636,8 +4673,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionMode} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:closeItemLayout
         */
         public static final int ActionMode_closeItemLayout = 5;
@@ -4646,14 +4683,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionMode} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:height
         */
         public static final int ActionMode_height = 0;
@@ -4662,8 +4699,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ActionMode} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
@@ -4672,12 +4709,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActionMode} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
-        /** Attributes that can be used with adssadas ActivityChooserView.
+        /** Attributes that can be used with a ActivityChooserView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -4697,8 +4734,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
@@ -4707,16 +4744,16 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
-        /** Attributes that can be used with adssadas AlertDialog.
+        /** Attributes that can be used with a AlertDialog.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -4753,8 +4790,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:buttonPanelSideLayout
         */
         public static final int AlertDialog_buttonPanelSideLayout = 1;
@@ -4763,8 +4800,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:listItemLayout
         */
         public static final int AlertDialog_listItemLayout = 5;
@@ -4773,8 +4810,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:listLayout
         */
         public static final int AlertDialog_listLayout = 2;
@@ -4783,8 +4820,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:multiChoiceItemLayout
         */
         public static final int AlertDialog_multiChoiceItemLayout = 3;
@@ -4793,12 +4830,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:showTitle
         */
         public static final int AlertDialog_showTitle = 6;
@@ -4807,12 +4844,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:singleChoiceItemLayout
         */
         public static final int AlertDialog_singleChoiceItemLayout = 4;
-        /** Attributes that can be used with adssadas AppBarLayout.
+        /** Attributes that can be used with a AppBarLayout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -4840,14 +4877,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppBarLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:elevation
         */
         public static final int AppBarLayout_elevation = 1;
@@ -4856,16 +4893,16 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppBarLayout} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:expanded
         */
         public static final int AppBarLayout_expanded = 2;
-        /** Attributes that can be used with adssadas AppBarLayoutStates.
+        /** Attributes that can be used with a AppBarLayoutStates.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -4885,12 +4922,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppBarLayoutStates} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:state_collapsed
         */
         public static final int AppBarLayoutStates_state_collapsed = 0;
@@ -4899,16 +4936,16 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppBarLayoutStates} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:state_collapsible
         */
         public static final int AppBarLayoutStates_state_collapsible = 1;
-        /** Attributes that can be used with adssadas AppBarLayout_Layout.
+        /** Attributes that can be used with a AppBarLayout_Layout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -4948,12 +4985,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppBarLayout_Layout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:layout_scrollInterpolator
         */
         public static final int AppBarLayout_Layout_layout_scrollInterpolator = 1;
-        /** Attributes that can be used with adssadas AppCompatImageView.
+        /** Attributes that can be used with a AppCompatImageView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -4979,12 +5016,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatImageView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:srcCompat
         */
         public static final int AppCompatImageView_srcCompat = 1;
-        /** Attributes that can be used with adssadas AppCompatSeekBar.
+        /** Attributes that can be used with a AppCompatSeekBar.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -5014,8 +5051,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatSeekBar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:tickMark
         */
         public static final int AppCompatSeekBar_tickMark = 1;
@@ -5024,13 +5061,13 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatSeekBar} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:tickMarkTint
         */
         public static final int AppCompatSeekBar_tickMarkTint = 2;
@@ -5055,7 +5092,7 @@ containing adssadas value of this type.
           @attr name com.jetcloud.hgbw:tickMarkTintMode
         */
         public static final int AppCompatSeekBar_tickMarkTintMode = 3;
-        /** Attributes that can be used with adssadas AppCompatTextHelper.
+        /** Attributes that can be used with a AppCompatTextHelper.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -5123,7 +5160,7 @@ containing adssadas value of this type.
           @attr name android:textAppearance
         */
         public static final int AppCompatTextHelper_android_textAppearance = 0;
-        /** Attributes that can be used with adssadas AppCompatTextView.
+        /** Attributes that can be used with a AppCompatTextView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -5149,13 +5186,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
-          <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
           @attr name com.jetcloud.hgbw:textAllCaps
         */
         public static final int AppCompatTextView_textAllCaps = 1;
-        /** Attributes that can be used with adssadas AppCompatTheme.
+        /** Attributes that can be used with a AppCompatTheme.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -5429,8 +5466,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionBarDivider
         */
         public static final int AppCompatTheme_actionBarDivider = 23;
@@ -5439,8 +5476,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionBarItemBackground
         */
         public static final int AppCompatTheme_actionBarItemBackground = 24;
@@ -5449,8 +5486,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionBarPopupTheme
         */
         public static final int AppCompatTheme_actionBarPopupTheme = 17;
@@ -5459,14 +5496,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
 <p>May be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -5483,8 +5520,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionBarSplitStyle
         */
         public static final int AppCompatTheme_actionBarSplitStyle = 19;
@@ -5493,8 +5530,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionBarStyle
         */
         public static final int AppCompatTheme_actionBarStyle = 18;
@@ -5503,8 +5540,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionBarTabBarStyle
         */
         public static final int AppCompatTheme_actionBarTabBarStyle = 13;
@@ -5513,8 +5550,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionBarTabStyle
         */
         public static final int AppCompatTheme_actionBarTabStyle = 12;
@@ -5523,8 +5560,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionBarTabTextStyle
         */
         public static final int AppCompatTheme_actionBarTabTextStyle = 14;
@@ -5533,8 +5570,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionBarTheme
         */
         public static final int AppCompatTheme_actionBarTheme = 20;
@@ -5543,8 +5580,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionBarWidgetTheme
         */
         public static final int AppCompatTheme_actionBarWidgetTheme = 21;
@@ -5553,8 +5590,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionButtonStyle
         */
         public static final int AppCompatTheme_actionButtonStyle = 50;
@@ -5563,8 +5600,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionDropDownStyle
         */
         public static final int AppCompatTheme_actionDropDownStyle = 46;
@@ -5573,8 +5610,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionMenuTextAppearance
         */
         public static final int AppCompatTheme_actionMenuTextAppearance = 25;
@@ -5583,9 +5620,9 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           @attr name com.jetcloud.hgbw:actionMenuTextColor
         */
@@ -5595,8 +5632,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionModeBackground
         */
         public static final int AppCompatTheme_actionModeBackground = 29;
@@ -5605,8 +5642,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionModeCloseButtonStyle
         */
         public static final int AppCompatTheme_actionModeCloseButtonStyle = 28;
@@ -5615,8 +5652,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionModeCloseDrawable
         */
         public static final int AppCompatTheme_actionModeCloseDrawable = 31;
@@ -5625,8 +5662,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionModeCopyDrawable
         */
         public static final int AppCompatTheme_actionModeCopyDrawable = 33;
@@ -5635,8 +5672,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionModeCutDrawable
         */
         public static final int AppCompatTheme_actionModeCutDrawable = 32;
@@ -5645,8 +5682,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionModeFindDrawable
         */
         public static final int AppCompatTheme_actionModeFindDrawable = 37;
@@ -5655,8 +5692,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionModePasteDrawable
         */
         public static final int AppCompatTheme_actionModePasteDrawable = 34;
@@ -5665,8 +5702,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionModePopupWindowStyle
         */
         public static final int AppCompatTheme_actionModePopupWindowStyle = 39;
@@ -5675,8 +5712,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionModeSelectAllDrawable
         */
         public static final int AppCompatTheme_actionModeSelectAllDrawable = 35;
@@ -5685,8 +5722,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionModeShareDrawable
         */
         public static final int AppCompatTheme_actionModeShareDrawable = 36;
@@ -5695,8 +5732,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionModeSplitBackground
         */
         public static final int AppCompatTheme_actionModeSplitBackground = 30;
@@ -5705,8 +5742,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionModeStyle
         */
         public static final int AppCompatTheme_actionModeStyle = 27;
@@ -5715,8 +5752,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionModeWebSearchDrawable
         */
         public static final int AppCompatTheme_actionModeWebSearchDrawable = 38;
@@ -5725,8 +5762,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionOverflowButtonStyle
         */
         public static final int AppCompatTheme_actionOverflowButtonStyle = 15;
@@ -5735,8 +5772,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionOverflowMenuStyle
         */
         public static final int AppCompatTheme_actionOverflowMenuStyle = 16;
@@ -5745,8 +5782,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:activityChooserViewStyle
         */
         public static final int AppCompatTheme_activityChooserViewStyle = 58;
@@ -5755,8 +5792,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:alertDialogButtonGroupStyle
         */
         public static final int AppCompatTheme_alertDialogButtonGroupStyle = 94;
@@ -5765,12 +5802,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:alertDialogCenterButtons
         */
         public static final int AppCompatTheme_alertDialogCenterButtons = 95;
@@ -5779,8 +5816,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:alertDialogStyle
         */
         public static final int AppCompatTheme_alertDialogStyle = 93;
@@ -5789,8 +5826,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:alertDialogTheme
         */
         public static final int AppCompatTheme_alertDialogTheme = 96;
@@ -5811,8 +5848,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:autoCompleteTextViewStyle
         */
         public static final int AppCompatTheme_autoCompleteTextViewStyle = 101;
@@ -5821,8 +5858,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:borderlessButtonStyle
         */
         public static final int AppCompatTheme_borderlessButtonStyle = 55;
@@ -5831,8 +5868,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:buttonBarButtonStyle
         */
         public static final int AppCompatTheme_buttonBarButtonStyle = 52;
@@ -5841,8 +5878,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:buttonBarNegativeButtonStyle
         */
         public static final int AppCompatTheme_buttonBarNegativeButtonStyle = 99;
@@ -5851,8 +5888,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:buttonBarNeutralButtonStyle
         */
         public static final int AppCompatTheme_buttonBarNeutralButtonStyle = 100;
@@ -5861,8 +5898,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:buttonBarPositiveButtonStyle
         */
         public static final int AppCompatTheme_buttonBarPositiveButtonStyle = 98;
@@ -5871,8 +5908,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:buttonBarStyle
         */
         public static final int AppCompatTheme_buttonBarStyle = 51;
@@ -5881,8 +5918,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:buttonStyle
         */
         public static final int AppCompatTheme_buttonStyle = 102;
@@ -5891,8 +5928,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:buttonStyleSmall
         */
         public static final int AppCompatTheme_buttonStyleSmall = 103;
@@ -5901,8 +5938,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:checkboxStyle
         */
         public static final int AppCompatTheme_checkboxStyle = 104;
@@ -5911,8 +5948,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:checkedTextViewStyle
         */
         public static final int AppCompatTheme_checkedTextViewStyle = 105;
@@ -5921,13 +5958,13 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:colorAccent
         */
         public static final int AppCompatTheme_colorAccent = 85;
@@ -5936,13 +5973,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:colorBackgroundFloating
         */
         public static final int AppCompatTheme_colorBackgroundFloating = 92;
@@ -5951,13 +5988,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:colorButtonNormal
         */
         public static final int AppCompatTheme_colorButtonNormal = 89;
@@ -5966,13 +6003,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:colorControlActivated
         */
         public static final int AppCompatTheme_colorControlActivated = 87;
@@ -5981,13 +6018,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:colorControlHighlight
         */
         public static final int AppCompatTheme_colorControlHighlight = 88;
@@ -5996,13 +6033,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:colorControlNormal
         */
         public static final int AppCompatTheme_colorControlNormal = 86;
@@ -6011,13 +6048,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:colorPrimary
         */
         public static final int AppCompatTheme_colorPrimary = 83;
@@ -6026,13 +6063,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:colorPrimaryDark
         */
         public static final int AppCompatTheme_colorPrimaryDark = 84;
@@ -6041,13 +6078,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:colorSwitchThumbNormal
         */
         public static final int AppCompatTheme_colorSwitchThumbNormal = 90;
@@ -6056,8 +6093,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:controlBackground
         */
         public static final int AppCompatTheme_controlBackground = 91;
@@ -6066,14 +6103,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:dialogPreferredPadding
         */
         public static final int AppCompatTheme_dialogPreferredPadding = 44;
@@ -6082,8 +6119,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:dialogTheme
         */
         public static final int AppCompatTheme_dialogTheme = 43;
@@ -6092,8 +6129,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:dividerHorizontal
         */
         public static final int AppCompatTheme_dividerHorizontal = 57;
@@ -6102,8 +6139,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:dividerVertical
         */
         public static final int AppCompatTheme_dividerVertical = 56;
@@ -6112,8 +6149,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:dropDownListViewStyle
         */
         public static final int AppCompatTheme_dropDownListViewStyle = 75;
@@ -6122,14 +6159,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:dropdownListPreferredItemHeight
         */
         public static final int AppCompatTheme_dropdownListPreferredItemHeight = 47;
@@ -6138,8 +6175,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:editTextBackground
         */
         public static final int AppCompatTheme_editTextBackground = 64;
@@ -6148,9 +6185,9 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           @attr name com.jetcloud.hgbw:editTextColor
         */
@@ -6160,8 +6197,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:editTextStyle
         */
         public static final int AppCompatTheme_editTextStyle = 106;
@@ -6170,8 +6207,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:homeAsUpIndicator
         */
         public static final int AppCompatTheme_homeAsUpIndicator = 49;
@@ -6180,8 +6217,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:imageButtonStyle
         */
         public static final int AppCompatTheme_imageButtonStyle = 65;
@@ -6190,8 +6227,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:listChoiceBackgroundIndicator
         */
         public static final int AppCompatTheme_listChoiceBackgroundIndicator = 82;
@@ -6200,8 +6237,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:listDividerAlertDialog
         */
         public static final int AppCompatTheme_listDividerAlertDialog = 45;
@@ -6210,8 +6247,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:listMenuViewStyle
         */
         public static final int AppCompatTheme_listMenuViewStyle = 114;
@@ -6220,8 +6257,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:listPopupWindowStyle
         */
         public static final int AppCompatTheme_listPopupWindowStyle = 76;
@@ -6230,14 +6267,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:listPreferredItemHeight
         */
         public static final int AppCompatTheme_listPreferredItemHeight = 70;
@@ -6246,14 +6283,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:listPreferredItemHeightLarge
         */
         public static final int AppCompatTheme_listPreferredItemHeightLarge = 72;
@@ -6262,14 +6299,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:listPreferredItemHeightSmall
         */
         public static final int AppCompatTheme_listPreferredItemHeightSmall = 71;
@@ -6278,14 +6315,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:listPreferredItemPaddingLeft
         */
         public static final int AppCompatTheme_listPreferredItemPaddingLeft = 73;
@@ -6294,14 +6331,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:listPreferredItemPaddingRight
         */
         public static final int AppCompatTheme_listPreferredItemPaddingRight = 74;
@@ -6310,8 +6347,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:panelBackground
         */
         public static final int AppCompatTheme_panelBackground = 79;
@@ -6320,8 +6357,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:panelMenuListTheme
         */
         public static final int AppCompatTheme_panelMenuListTheme = 81;
@@ -6330,14 +6367,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:panelMenuListWidth
         */
         public static final int AppCompatTheme_panelMenuListWidth = 80;
@@ -6346,8 +6383,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:popupMenuStyle
         */
         public static final int AppCompatTheme_popupMenuStyle = 61;
@@ -6356,8 +6393,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:popupWindowStyle
         */
         public static final int AppCompatTheme_popupWindowStyle = 62;
@@ -6366,8 +6403,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:radioButtonStyle
         */
         public static final int AppCompatTheme_radioButtonStyle = 107;
@@ -6376,8 +6413,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:ratingBarStyle
         */
         public static final int AppCompatTheme_ratingBarStyle = 108;
@@ -6386,8 +6423,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:ratingBarStyleIndicator
         */
         public static final int AppCompatTheme_ratingBarStyleIndicator = 109;
@@ -6396,8 +6433,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:ratingBarStyleSmall
         */
         public static final int AppCompatTheme_ratingBarStyleSmall = 110;
@@ -6406,8 +6443,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:searchViewStyle
         */
         public static final int AppCompatTheme_searchViewStyle = 69;
@@ -6416,8 +6453,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:seekBarStyle
         */
         public static final int AppCompatTheme_seekBarStyle = 111;
@@ -6426,8 +6463,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:selectableItemBackground
         */
         public static final int AppCompatTheme_selectableItemBackground = 53;
@@ -6436,8 +6473,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:selectableItemBackgroundBorderless
         */
         public static final int AppCompatTheme_selectableItemBackgroundBorderless = 54;
@@ -6446,8 +6483,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:spinnerDropDownItemStyle
         */
         public static final int AppCompatTheme_spinnerDropDownItemStyle = 48;
@@ -6456,8 +6493,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:spinnerStyle
         */
         public static final int AppCompatTheme_spinnerStyle = 112;
@@ -6466,8 +6503,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:switchStyle
         */
         public static final int AppCompatTheme_switchStyle = 113;
@@ -6476,8 +6513,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:textAppearanceLargePopupMenu
         */
         public static final int AppCompatTheme_textAppearanceLargePopupMenu = 40;
@@ -6486,8 +6523,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:textAppearanceListItem
         */
         public static final int AppCompatTheme_textAppearanceListItem = 77;
@@ -6496,8 +6533,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:textAppearanceListItemSmall
         */
         public static final int AppCompatTheme_textAppearanceListItemSmall = 78;
@@ -6506,8 +6543,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:textAppearancePopupMenuHeader
         */
         public static final int AppCompatTheme_textAppearancePopupMenuHeader = 42;
@@ -6516,8 +6553,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:textAppearanceSearchResultSubtitle
         */
         public static final int AppCompatTheme_textAppearanceSearchResultSubtitle = 67;
@@ -6526,8 +6563,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:textAppearanceSearchResultTitle
         */
         public static final int AppCompatTheme_textAppearanceSearchResultTitle = 66;
@@ -6536,8 +6573,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:textAppearanceSmallPopupMenu
         */
         public static final int AppCompatTheme_textAppearanceSmallPopupMenu = 41;
@@ -6546,9 +6583,9 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           @attr name com.jetcloud.hgbw:textColorAlertDialogListItem
         */
@@ -6558,9 +6595,9 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           @attr name com.jetcloud.hgbw:textColorSearchUrl
         */
@@ -6570,8 +6607,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:toolbarNavigationButtonStyle
         */
         public static final int AppCompatTheme_toolbarNavigationButtonStyle = 60;
@@ -6580,8 +6617,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:toolbarStyle
         */
         public static final int AppCompatTheme_toolbarStyle = 59;
@@ -6590,12 +6627,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:windowActionBar
         */
         public static final int AppCompatTheme_windowActionBar = 2;
@@ -6604,12 +6641,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:windowActionBarOverlay
         */
         public static final int AppCompatTheme_windowActionBarOverlay = 4;
@@ -6618,12 +6655,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:windowActionModeOverlay
         */
         public static final int AppCompatTheme_windowActionModeOverlay = 5;
@@ -6632,17 +6669,17 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be adssadas fractional value, which is adssadas floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means adssadas percentage of the base size; the optional %p suffix provides adssadas size relative to
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:windowFixedHeightMajor
         */
         public static final int AppCompatTheme_windowFixedHeightMajor = 9;
@@ -6651,17 +6688,17 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be adssadas fractional value, which is adssadas floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means adssadas percentage of the base size; the optional %p suffix provides adssadas size relative to
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:windowFixedHeightMinor
         */
         public static final int AppCompatTheme_windowFixedHeightMinor = 7;
@@ -6670,17 +6707,17 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be adssadas fractional value, which is adssadas floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means adssadas percentage of the base size; the optional %p suffix provides adssadas size relative to
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:windowFixedWidthMajor
         */
         public static final int AppCompatTheme_windowFixedWidthMajor = 6;
@@ -6689,17 +6726,17 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be adssadas fractional value, which is adssadas floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means adssadas percentage of the base size; the optional %p suffix provides adssadas size relative to
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:windowFixedWidthMinor
         */
         public static final int AppCompatTheme_windowFixedWidthMinor = 8;
@@ -6708,17 +6745,17 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be adssadas fractional value, which is adssadas floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means adssadas percentage of the base size; the optional %p suffix provides adssadas size relative to
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:windowMinWidthMajor
         */
         public static final int AppCompatTheme_windowMinWidthMajor = 10;
@@ -6727,17 +6764,17 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>May be adssadas fractional value, which is adssadas floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means adssadas percentage of the base size; the optional %p suffix provides adssadas size relative to
+<p>May be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:windowMinWidthMinor
         */
         public static final int AppCompatTheme_windowMinWidthMinor = 11;
@@ -6746,16 +6783,16 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:windowNoTitle
         */
         public static final int AppCompatTheme_windowNoTitle = 3;
-        /** Attributes that can be used with adssadas BottomNavigationView.
+        /** Attributes that can be used with a BottomNavigationView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -6782,14 +6819,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #BottomNavigationView} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:elevation
         */
         public static final int BottomNavigationView_elevation = 0;
@@ -6798,8 +6835,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #BottomNavigationView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:itemBackground
         */
         public static final int BottomNavigationView_itemBackground = 4;
@@ -6808,13 +6845,13 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #BottomNavigationView} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:itemIconTint
         */
         public static final int BottomNavigationView_itemIconTint = 2;
@@ -6823,13 +6860,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #BottomNavigationView} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:itemTextColor
         */
         public static final int BottomNavigationView_itemTextColor = 3;
@@ -6838,12 +6875,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #BottomNavigationView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:menu
         */
         public static final int BottomNavigationView_menu = 1;
-        /** Attributes that can be used with adssadas BottomSheetBehavior_Layout.
+        /** Attributes that can be used with a BottomSheetBehavior_Layout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -6865,12 +6902,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #BottomSheetBehavior_Layout} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:behavior_hideable
         */
         public static final int BottomSheetBehavior_Layout_behavior_hideable = 1;
@@ -6879,14 +6916,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #BottomSheetBehavior_Layout} array.
 
 
-          <p>May be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
 <p>May be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -6903,16 +6940,16 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #BottomSheetBehavior_Layout} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:behavior_skipCollapsed
         */
         public static final int BottomSheetBehavior_Layout_behavior_skipCollapsed = 2;
-        /** Attributes that can be used with adssadas ButtonBarLayout.
+        /** Attributes that can be used with a ButtonBarLayout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -6930,16 +6967,16 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ButtonBarLayout} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:allowStacking
         */
         public static final int ButtonBarLayout_allowStacking = 0;
-        /** Attributes that can be used with adssadas CollapsingToolbarLayout.
+        /** Attributes that can be used with a CollapsingToolbarLayout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -7015,8 +7052,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:collapsedTitleTextAppearance
         */
         public static final int CollapsingToolbarLayout_collapsedTitleTextAppearance = 7;
@@ -7025,13 +7062,13 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:contentScrim
         */
         public static final int CollapsingToolbarLayout_contentScrim = 8;
@@ -7065,14 +7102,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:expandedTitleMargin
         */
         public static final int CollapsingToolbarLayout_expandedTitleMargin = 1;
@@ -7081,14 +7118,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:expandedTitleMarginBottom
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginBottom = 5;
@@ -7097,14 +7134,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:expandedTitleMarginEnd
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginEnd = 4;
@@ -7113,14 +7150,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:expandedTitleMarginStart
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginStart = 2;
@@ -7129,14 +7166,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:expandedTitleMarginTop
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginTop = 3;
@@ -7145,8 +7182,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:expandedTitleTextAppearance
         */
         public static final int CollapsingToolbarLayout_expandedTitleTextAppearance = 6;
@@ -7156,11 +7193,11 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
 
 
           <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:scrimAnimationDuration
         */
         public static final int CollapsingToolbarLayout_scrimAnimationDuration = 12;
@@ -7169,14 +7206,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:scrimVisibleHeightTrigger
         */
         public static final int CollapsingToolbarLayout_scrimVisibleHeightTrigger = 11;
@@ -7185,13 +7222,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:statusBarScrim
         */
         public static final int CollapsingToolbarLayout_statusBarScrim = 9;
@@ -7200,12 +7237,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:title
         */
         public static final int CollapsingToolbarLayout_title = 0;
@@ -7214,12 +7251,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:titleEnabled
         */
         public static final int CollapsingToolbarLayout_titleEnabled = 15;
@@ -7228,12 +7265,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:toolbarId
         */
         public static final int CollapsingToolbarLayout_toolbarId = 10;
-        /** Attributes that can be used with adssadas CollapsingToolbarLayout_Layout.
+        /** Attributes that can be used with a CollapsingToolbarLayout_Layout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -7271,16 +7308,16 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #CollapsingToolbarLayout_Layout} array.
 
 
-          <p>Must be adssadas floating point value, such as "<code>1.2</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:layout_collapseParallaxMultiplier
         */
         public static final int CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = 1;
-        /** Attributes that can be used with adssadas ColorStateListItem.
+        /** Attributes that can be used with a ColorStateListItem.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -7302,12 +7339,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ColorStateListItem} array.
 
 
-          <p>Must be adssadas floating point value, such as "<code>1.2</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:alpha
         */
         public static final int ColorStateListItem_alpha = 2;
@@ -7323,7 +7360,7 @@ containing adssadas value of this type.
           @attr name android:color
         */
         public static final int ColorStateListItem_android_color = 0;
-        /** Attributes that can be used with adssadas CompoundButton.
+        /** Attributes that can be used with a CompoundButton.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -7351,13 +7388,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CompoundButton} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:buttonTint
         */
         public static final int CompoundButton_buttonTint = 1;
@@ -7381,7 +7418,7 @@ containing adssadas value of this type.
           @attr name com.jetcloud.hgbw:buttonTintMode
         */
         public static final int CompoundButton_buttonTintMode = 2;
-        /** Attributes that can be used with adssadas CoordinatorLayout.
+        /** Attributes that can be used with a CoordinatorLayout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -7401,8 +7438,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #CoordinatorLayout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:keylines
         */
         public static final int CoordinatorLayout_keylines = 0;
@@ -7411,12 +7448,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #CoordinatorLayout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:statusBarBackground
         */
         public static final int CoordinatorLayout_statusBarBackground = 1;
-        /** Attributes that can be used with adssadas CoordinatorLayout_Layout.
+        /** Attributes that can be used with a CoordinatorLayout_Layout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -7453,8 +7490,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:layout_anchor
         */
         public static final int CoordinatorLayout_Layout_layout_anchor = 2;
@@ -7492,12 +7529,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:layout_behavior
         */
         public static final int CoordinatorLayout_Layout_layout_behavior = 1;
@@ -7552,15 +7589,15 @@ containing adssadas value of this type.
 
 
           <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:layout_keyline
         */
         public static final int CoordinatorLayout_Layout_layout_keyline = 3;
-        /** Attributes that can be used with adssadas DesignTheme.
+        /** Attributes that can be used with a DesignTheme.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -7582,8 +7619,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #DesignTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:bottomSheetDialogTheme
         */
         public static final int DesignTheme_bottomSheetDialogTheme = 0;
@@ -7592,8 +7629,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #DesignTheme} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:bottomSheetStyle
         */
         public static final int DesignTheme_bottomSheetStyle = 1;
@@ -7602,17 +7639,17 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #DesignTheme} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:textColorError
         */
         public static final int DesignTheme_textColorError = 2;
-        /** Attributes that can be used with adssadas DrawerArrowToggle.
+        /** Attributes that can be used with a DrawerArrowToggle.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -7645,14 +7682,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:arrowHeadLength
         */
         public static final int DrawerArrowToggle_arrowHeadLength = 4;
@@ -7661,14 +7698,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:arrowShaftLength
         */
         public static final int DrawerArrowToggle_arrowShaftLength = 5;
@@ -7677,14 +7714,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:barLength
         */
         public static final int DrawerArrowToggle_barLength = 6;
@@ -7693,13 +7730,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:color
         */
         public static final int DrawerArrowToggle_color = 0;
@@ -7708,14 +7745,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:drawableSize
         */
         public static final int DrawerArrowToggle_drawableSize = 2;
@@ -7724,14 +7761,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:gapBetweenBars
         */
         public static final int DrawerArrowToggle_gapBetweenBars = 3;
@@ -7740,12 +7777,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:spinBars
         */
         public static final int DrawerArrowToggle_spinBars = 1;
@@ -7754,18 +7791,18 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:thickness
         */
         public static final int DrawerArrowToggle_thickness = 7;
-        /** Attributes that can be used with adssadas FloatingActionButton.
+        /** Attributes that can be used with a FloatingActionButton.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -7798,13 +7835,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:backgroundTint
         */
         public static final int FloatingActionButton_backgroundTint = 6;
@@ -7833,14 +7870,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:borderWidth
         */
         public static final int FloatingActionButton_borderWidth = 4;
@@ -7849,14 +7886,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:elevation
         */
         public static final int FloatingActionButton_elevation = 0;
@@ -7883,14 +7920,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:pressedTranslationZ
         */
         public static final int FloatingActionButton_pressedTranslationZ = 3;
@@ -7899,13 +7936,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:rippleColor
         */
         public static final int FloatingActionButton_rippleColor = 1;
@@ -7914,16 +7951,16 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:useCompatPadding
         */
         public static final int FloatingActionButton_useCompatPadding = 5;
-        /** Attributes that can be used with adssadas FloatingActionButton_Behavior_Layout.
+        /** Attributes that can be used with a FloatingActionButton_Behavior_Layout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -7941,16 +7978,16 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #FloatingActionButton_Behavior_Layout} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:behavior_autoHide
         */
         public static final int FloatingActionButton_Behavior_Layout_behavior_autoHide = 0;
-        /** Attributes that can be used with adssadas ForegroundLinearLayout.
+        /** Attributes that can be used with a ForegroundLinearLayout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -7984,16 +8021,16 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ForegroundLinearLayout} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:foregroundInsidePadding
         */
         public static final int ForegroundLinearLayout_foregroundInsidePadding = 2;
-        /** Attributes that can be used with adssadas LinearLayoutCompat.
+        /** Attributes that can be used with a LinearLayoutCompat.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -8059,8 +8096,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:divider
         */
         public static final int LinearLayoutCompat_divider = 5;
@@ -8069,14 +8106,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:dividerPadding
         */
         public static final int LinearLayoutCompat_dividerPadding = 8;
@@ -8085,12 +8122,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:measureWithLargestChild
         */
         public static final int LinearLayoutCompat_measureWithLargestChild = 6;
@@ -8113,7 +8150,7 @@ containing adssadas value of this type.
           @attr name com.jetcloud.hgbw:showDividers
         */
         public static final int LinearLayoutCompat_showDividers = 7;
-        /** Attributes that can be used with adssadas LinearLayoutCompat_Layout.
+        /** Attributes that can be used with a LinearLayoutCompat_Layout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -8156,7 +8193,7 @@ containing adssadas value of this type.
           @attr name android:layout_width
         */
         public static final int LinearLayoutCompat_Layout_android_layout_width = 1;
-        /** Attributes that can be used with adssadas ListPopupWindow.
+        /** Attributes that can be used with a ListPopupWindow.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -8183,7 +8220,7 @@ containing adssadas value of this type.
           @attr name android:dropDownVerticalOffset
         */
         public static final int ListPopupWindow_android_dropDownVerticalOffset = 1;
-        /** Attributes that can be used with adssadas MenuGroup.
+        /** Attributes that can be used with a MenuGroup.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -8243,7 +8280,7 @@ containing adssadas value of this type.
           @attr name android:visible
         */
         public static final int MenuGroup_android_visible = 2;
-        /** Attributes that can be used with adssadas MenuItem.
+        /** Attributes that can be used with a MenuItem.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -8297,8 +8334,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #MenuItem} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:actionLayout
         */
         public static final int MenuItem_actionLayout = 14;
@@ -8307,12 +8344,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #MenuItem} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 16;
@@ -8321,12 +8358,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #MenuItem} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 15;
@@ -8428,7 +8465,7 @@ containing adssadas value of this type.
           @attr name com.jetcloud.hgbw:showAsAction
         */
         public static final int MenuItem_showAsAction = 13;
-        /** Attributes that can be used with adssadas MenuView.
+        /** Attributes that can be used with a MenuView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -8506,12 +8543,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #MenuView} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:preserveIconSpacing
         */
         public static final int MenuView_preserveIconSpacing = 7;
@@ -8520,12 +8557,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #MenuView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:subMenuArrow
         */
         public static final int MenuView_subMenuArrow = 8;
-        /** Attributes that can be used with adssadas NavigationView.
+        /** Attributes that can be used with a NavigationView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -8581,14 +8618,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #NavigationView} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:elevation
         */
         public static final int NavigationView_elevation = 3;
@@ -8597,8 +8634,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #NavigationView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:headerLayout
         */
         public static final int NavigationView_headerLayout = 9;
@@ -8607,8 +8644,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #NavigationView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:itemBackground
         */
         public static final int NavigationView_itemBackground = 7;
@@ -8617,13 +8654,13 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #NavigationView} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:itemIconTint
         */
         public static final int NavigationView_itemIconTint = 5;
@@ -8632,8 +8669,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #NavigationView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:itemTextAppearance
         */
         public static final int NavigationView_itemTextAppearance = 8;
@@ -8642,13 +8679,13 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #NavigationView} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:itemTextColor
         */
         public static final int NavigationView_itemTextColor = 6;
@@ -8657,12 +8694,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #NavigationView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:menu
         */
         public static final int NavigationView_menu = 4;
-        /** Attributes that can be used with adssadas PasswordInputView.
+        /** Attributes that can be used with a PasswordInputView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -8693,13 +8730,13 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #PasswordInputView} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:pivBorderColor
         */
         public static final int PasswordInputView_pivBorderColor = 0;
@@ -8708,14 +8745,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #PasswordInputView} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:pivBorderRadius
         */
         public static final int PasswordInputView_pivBorderRadius = 2;
@@ -8724,14 +8761,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #PasswordInputView} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:pivBorderWidth
         */
         public static final int PasswordInputView_pivBorderWidth = 1;
@@ -8740,13 +8777,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #PasswordInputView} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:pivPasswordColor
         */
         public static final int PasswordInputView_pivPasswordColor = 3;
@@ -8756,11 +8793,11 @@ containing adssadas value of this type.
 
 
           <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:pivPasswordLength
         */
         public static final int PasswordInputView_pivPasswordLength = 6;
@@ -8769,14 +8806,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #PasswordInputView} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:pivPasswordRadius
         */
         public static final int PasswordInputView_pivPasswordRadius = 5;
@@ -8785,18 +8822,18 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #PasswordInputView} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:pivPasswordWidth
         */
         public static final int PasswordInputView_pivPasswordWidth = 4;
-        /** Attributes that can be used with adssadas PopupWindow.
+        /** Attributes that can be used with a PopupWindow.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -8830,16 +8867,16 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #PopupWindow} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:overlapAnchor
         */
         public static final int PopupWindow_overlapAnchor = 2;
-        /** Attributes that can be used with adssadas PopupWindowBackgroundState.
+        /** Attributes that can be used with a PopupWindowBackgroundState.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -8857,16 +8894,16 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:state_above_anchor
         */
         public static final int PopupWindowBackgroundState_state_above_anchor = 0;
-        /** Attributes that can be used with adssadas RecycleListView.
+        /** Attributes that can be used with a RecycleListView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -8886,14 +8923,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #RecycleListView} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:paddingBottomNoButtons
         */
         public static final int RecycleListView_paddingBottomNoButtons = 0;
@@ -8902,18 +8939,18 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #RecycleListView} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:paddingTopNoTitle
         */
         public static final int RecycleListView_paddingTopNoTitle = 1;
-        /** Attributes that can be used with adssadas RecyclerView.
+        /** Attributes that can be used with a RecyclerView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -8954,12 +8991,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:layoutManager
         */
         public static final int RecyclerView_layoutManager = 2;
@@ -8968,12 +9005,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:reverseLayout
         */
         public static final int RecyclerView_reverseLayout = 4;
@@ -8983,11 +9020,11 @@ containing adssadas value of this type.
 
 
           <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:spanCount
         */
         public static final int RecyclerView_spanCount = 3;
@@ -8996,16 +9033,16 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:stackFromEnd
         */
         public static final int RecyclerView_stackFromEnd = 5;
-        /** Attributes that can be used with adssadas ScrimInsetsFrameLayout.
+        /** Attributes that can be used with a ScrimInsetsFrameLayout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -9023,14 +9060,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #ScrimInsetsFrameLayout} array.
 
 
-          <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           @attr name com.jetcloud.hgbw:insetForeground
         */
         public static final int ScrimInsetsFrameLayout_insetForeground = 0;
-        /** Attributes that can be used with adssadas ScrollingViewBehavior_Layout.
+        /** Attributes that can be used with a ScrollingViewBehavior_Layout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -9048,18 +9085,18 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ScrollingViewBehavior_Layout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:behavior_overlapTop
         */
         public static final int ScrollingViewBehavior_Layout_behavior_overlapTop = 0;
-        /** Attributes that can be used with adssadas SearchView.
+        /** Attributes that can be used with a SearchView.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -9137,8 +9174,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #SearchView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:closeIcon
         */
         public static final int SearchView_closeIcon = 8;
@@ -9147,8 +9184,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #SearchView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:commitIcon
         */
         public static final int SearchView_commitIcon = 13;
@@ -9157,12 +9194,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #SearchView} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:defaultQueryHint
         */
         public static final int SearchView_defaultQueryHint = 7;
@@ -9171,8 +9208,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #SearchView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:goIcon
         */
         public static final int SearchView_goIcon = 9;
@@ -9181,12 +9218,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #SearchView} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 5;
@@ -9195,8 +9232,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #SearchView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:layout
         */
         public static final int SearchView_layout = 4;
@@ -9205,8 +9242,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #SearchView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:queryBackground
         */
         public static final int SearchView_queryBackground = 15;
@@ -9215,12 +9252,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #SearchView} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:queryHint
         */
         public static final int SearchView_queryHint = 6;
@@ -9229,8 +9266,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #SearchView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:searchHintIcon
         */
         public static final int SearchView_searchHintIcon = 11;
@@ -9239,8 +9276,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #SearchView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:searchIcon
         */
         public static final int SearchView_searchIcon = 10;
@@ -9249,8 +9286,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #SearchView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:submitBackground
         */
         public static final int SearchView_submitBackground = 16;
@@ -9259,8 +9296,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #SearchView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:suggestionRowLayout
         */
         public static final int SearchView_suggestionRowLayout = 14;
@@ -9269,12 +9306,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #SearchView} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:voiceIcon
         */
         public static final int SearchView_voiceIcon = 12;
-        /** Attributes that can be used with adssadas SnackbarLayout.
+        /** Attributes that can be used with a SnackbarLayout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -9302,14 +9339,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #SnackbarLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:elevation
         */
         public static final int SnackbarLayout_elevation = 1;
@@ -9318,18 +9355,18 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #SnackbarLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:maxActionInlineWidth
         */
         public static final int SnackbarLayout_maxActionInlineWidth = 2;
-        /** Attributes that can be used with adssadas Spinner.
+        /** Attributes that can be used with a Spinner.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -9380,12 +9417,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Spinner} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:popupTheme
         */
         public static final int Spinner_popupTheme = 4;
-        /** Attributes that can be used with adssadas SwitchCompat.
+        /** Attributes that can be used with a SwitchCompat.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -9450,12 +9487,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:showText
         */
         public static final int SwitchCompat_showText = 13;
@@ -9464,12 +9501,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:splitTrack
         */
         public static final int SwitchCompat_splitTrack = 12;
@@ -9478,14 +9515,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:switchMinWidth
         */
         public static final int SwitchCompat_switchMinWidth = 10;
@@ -9494,14 +9531,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:switchPadding
         */
         public static final int SwitchCompat_switchPadding = 11;
@@ -9510,8 +9547,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:switchTextAppearance
         */
         public static final int SwitchCompat_switchTextAppearance = 9;
@@ -9520,14 +9557,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:thumbTextPadding
         */
         public static final int SwitchCompat_thumbTextPadding = 8;
@@ -9536,13 +9573,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:thumbTint
         */
         public static final int SwitchCompat_thumbTint = 3;
@@ -9572,8 +9609,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:track
         */
         public static final int SwitchCompat_track = 5;
@@ -9582,13 +9619,13 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:trackTint
         */
         public static final int SwitchCompat_trackTint = 6;
@@ -9613,7 +9650,7 @@ containing adssadas value of this type.
           @attr name com.jetcloud.hgbw:trackTintMode
         */
         public static final int SwitchCompat_trackTintMode = 7;
-        /** Attributes that can be used with adssadas TabItem.
+        /** Attributes that can be used with a TabItem.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -9648,7 +9685,7 @@ containing adssadas value of this type.
           @attr name android:text
         */
         public static final int TabItem_android_text = 2;
-        /** Attributes that can be used with adssadas TabLayout.
+        /** Attributes that can be used with a TabLayout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -9699,8 +9736,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:tabBackground
         */
         public static final int TabLayout_tabBackground = 3;
@@ -9709,14 +9746,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:tabContentStart
         */
         public static final int TabLayout_tabContentStart = 2;
@@ -9742,13 +9779,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:tabIndicatorColor
         */
         public static final int TabLayout_tabIndicatorColor = 0;
@@ -9757,14 +9794,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:tabIndicatorHeight
         */
         public static final int TabLayout_tabIndicatorHeight = 1;
@@ -9773,14 +9810,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:tabMaxWidth
         */
         public static final int TabLayout_tabMaxWidth = 7;
@@ -9789,14 +9826,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:tabMinWidth
         */
         public static final int TabLayout_tabMinWidth = 6;
@@ -9822,14 +9859,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:tabPadding
         */
         public static final int TabLayout_tabPadding = 15;
@@ -9838,14 +9875,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:tabPaddingBottom
         */
         public static final int TabLayout_tabPaddingBottom = 14;
@@ -9854,14 +9891,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:tabPaddingEnd
         */
         public static final int TabLayout_tabPaddingEnd = 13;
@@ -9870,14 +9907,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:tabPaddingStart
         */
         public static final int TabLayout_tabPaddingStart = 11;
@@ -9886,14 +9923,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:tabPaddingTop
         */
         public static final int TabLayout_tabPaddingTop = 12;
@@ -9902,13 +9939,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:tabSelectedTextColor
         */
         public static final int TabLayout_tabSelectedTextColor = 10;
@@ -9917,8 +9954,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:tabTextAppearance
         */
         public static final int TabLayout_tabTextAppearance = 8;
@@ -9927,17 +9964,17 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #TabLayout} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:tabTextColor
         */
         public static final int TabLayout_tabTextColor = 9;
-        /** Attributes that can be used with adssadas TextAppearance.
+        /** Attributes that can be used with a TextAppearance.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -10029,13 +10066,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TextAppearance} array.
 
 
-          <p>May be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
           @attr name com.jetcloud.hgbw:textAllCaps
         */
         public static final int TextAppearance_textAllCaps = 9;
-        /** Attributes that can be used with adssadas TextInputLayout.
+        /** Attributes that can be used with a TextInputLayout.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -10098,12 +10135,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:counterEnabled
         */
         public static final int TextInputLayout_counterEnabled = 6;
@@ -10113,11 +10150,11 @@ containing adssadas value of this type.
 
 
           <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:counterMaxLength
         */
         public static final int TextInputLayout_counterMaxLength = 7;
@@ -10126,8 +10163,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:counterOverflowTextAppearance
         */
         public static final int TextInputLayout_counterOverflowTextAppearance = 9;
@@ -10136,8 +10173,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:counterTextAppearance
         */
         public static final int TextInputLayout_counterTextAppearance = 8;
@@ -10146,12 +10183,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:errorEnabled
         */
         public static final int TextInputLayout_errorEnabled = 4;
@@ -10160,8 +10197,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:errorTextAppearance
         */
         public static final int TextInputLayout_errorTextAppearance = 5;
@@ -10170,12 +10207,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:hintAnimationEnabled
         */
         public static final int TextInputLayout_hintAnimationEnabled = 10;
@@ -10184,12 +10221,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:hintEnabled
         */
         public static final int TextInputLayout_hintEnabled = 3;
@@ -10198,8 +10235,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:hintTextAppearance
         */
         public static final int TextInputLayout_hintTextAppearance = 2;
@@ -10208,12 +10245,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:passwordToggleContentDescription
         */
         public static final int TextInputLayout_passwordToggleContentDescription = 13;
@@ -10222,8 +10259,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:passwordToggleDrawable
         */
         public static final int TextInputLayout_passwordToggleDrawable = 12;
@@ -10232,12 +10269,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
-          <p>Must be adssadas boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:passwordToggleEnabled
         */
         public static final int TextInputLayout_passwordToggleEnabled = 11;
@@ -10246,13 +10283,13 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:passwordToggleTint
         */
         public static final int TextInputLayout_passwordToggleTint = 14;
@@ -10276,7 +10313,7 @@ containing adssadas value of this type.
           @attr name com.jetcloud.hgbw:passwordToggleTintMode
         */
         public static final int TextInputLayout_passwordToggleTintMode = 15;
-        /** Attributes that can be used with adssadas Toolbar.
+        /** Attributes that can be used with a Toolbar.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -10386,12 +10423,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:collapseContentDescription
         */
         public static final int Toolbar_collapseContentDescription = 23;
@@ -10400,8 +10437,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:collapseIcon
         */
         public static final int Toolbar_collapseIcon = 22;
@@ -10410,14 +10447,14 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:contentInsetEnd
         */
         public static final int Toolbar_contentInsetEnd = 6;
@@ -10426,14 +10463,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:contentInsetEndWithActions
         */
         public static final int Toolbar_contentInsetEndWithActions = 10;
@@ -10442,14 +10479,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:contentInsetLeft
         */
         public static final int Toolbar_contentInsetLeft = 7;
@@ -10458,14 +10495,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:contentInsetRight
         */
         public static final int Toolbar_contentInsetRight = 8;
@@ -10474,14 +10511,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:contentInsetStart
         */
         public static final int Toolbar_contentInsetStart = 5;
@@ -10490,14 +10527,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:contentInsetStartWithNavigation
         */
         public static final int Toolbar_contentInsetStartWithNavigation = 9;
@@ -10506,8 +10543,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:logo
         */
         public static final int Toolbar_logo = 4;
@@ -10516,12 +10553,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:logoDescription
         */
         public static final int Toolbar_logoDescription = 26;
@@ -10530,14 +10567,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:maxButtonHeight
         */
         public static final int Toolbar_maxButtonHeight = 20;
@@ -10546,12 +10583,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:navigationContentDescription
         */
         public static final int Toolbar_navigationContentDescription = 25;
@@ -10560,8 +10597,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:navigationIcon
         */
         public static final int Toolbar_navigationIcon = 24;
@@ -10570,8 +10607,8 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:popupTheme
         */
         public static final int Toolbar_popupTheme = 11;
@@ -10580,12 +10617,12 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:subtitle
         */
         public static final int Toolbar_subtitle = 3;
@@ -10594,8 +10631,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:subtitleTextAppearance
         */
         public static final int Toolbar_subtitleTextAppearance = 13;
@@ -10604,13 +10641,13 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:subtitleTextColor
         */
         public static final int Toolbar_subtitleTextColor = 28;
@@ -10619,12 +10656,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for adssadas unicode character.
-<p>This may also be adssadas reference to adssadas resource (in the form
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:title
         */
         public static final int Toolbar_title = 2;
@@ -10633,14 +10670,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:titleMargin
         */
         public static final int Toolbar_titleMargin = 14;
@@ -10649,14 +10686,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:titleMarginBottom
         */
         public static final int Toolbar_titleMarginBottom = 18;
@@ -10665,14 +10702,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:titleMarginEnd
         */
         public static final int Toolbar_titleMarginEnd = 16;
@@ -10681,14 +10718,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:titleMarginStart
         */
         public static final int Toolbar_titleMarginStart = 15;
@@ -10697,14 +10734,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:titleMarginTop
         */
         public static final int Toolbar_titleMarginTop = 17;
@@ -10713,14 +10750,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:titleMargins
         */
         public static final int Toolbar_titleMargins = 19;
@@ -10729,8 +10766,8 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:titleTextAppearance
         */
         public static final int Toolbar_titleTextAppearance = 12;
@@ -10739,17 +10776,17 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:titleTextColor
         */
         public static final int Toolbar_titleTextColor = 27;
-        /** Attributes that can be used with adssadas View.
+        /** Attributes that can be used with a View.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -10788,14 +10825,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #View} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:paddingEnd
         */
         public static final int View_paddingEnd = 3;
@@ -10804,14 +10841,14 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #View} array.
 
 
-          <p>Must be adssadas dimension value, which is adssadas floating point number appended with adssadas unit such as "<code>14.5sp</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:paddingStart
         */
         public static final int View_paddingStart = 2;
@@ -10820,12 +10857,12 @@ containing adssadas value of this type.
           attribute's value can be found in the {@link #View} array.
 
 
-          <p>Must be adssadas reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.jetcloud.hgbw:theme
         */
         public static final int View_theme = 4;
-        /** Attributes that can be used with adssadas ViewBackgroundHelper.
+        /** Attributes that can be used with a ViewBackgroundHelper.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
@@ -10853,13 +10890,13 @@ or to adssadas theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>
           attribute's value can be found in the {@link #ViewBackgroundHelper} array.
 
 
-          <p>Must be adssadas color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be adssadas reference to adssadas resource (in the form
+<p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing adssadas value of this type.
+containing a value of this type.
           @attr name com.jetcloud.hgbw:backgroundTint
         */
         public static final int ViewBackgroundHelper_backgroundTint = 1;
@@ -10883,7 +10920,7 @@ containing adssadas value of this type.
           @attr name com.jetcloud.hgbw:backgroundTintMode
         */
         public static final int ViewBackgroundHelper_backgroundTintMode = 2;
-        /** Attributes that can be used with adssadas ViewStubCompat.
+        /** Attributes that can be used with a ViewStubCompat.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />

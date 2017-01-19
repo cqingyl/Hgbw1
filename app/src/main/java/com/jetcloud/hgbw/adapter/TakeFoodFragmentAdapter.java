@@ -1,7 +1,6 @@
 package com.jetcloud.hgbw.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -9,12 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
-import com.jetcloud.hgbw.activity.QRCodeActivity;
-import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.TakeFoodInfo;
-import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 
-import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
@@ -22,17 +17,17 @@ import java.util.List;
 
 public class TakeFoodFragmentAdapter extends BaseAdapter {
     private Context context;
-    private List<TakeFoodInfo.MealBean> list;
+    private List<TakeFoodInfo.OrdersBean> list;
 
-    @Override
-    public int getCount() {
-        return list.size();
-    }
-
-    public TakeFoodFragmentAdapter(Context context, List<TakeFoodInfo.MealBean> list) {
+    public TakeFoodFragmentAdapter(Context context, List<TakeFoodInfo.OrdersBean> list) {
         super();
         this.context = context;
         this.list = list;
+    }
+
+    @Override
+    public int getCount() {
+        return list == null ? 0 : list.size();
     }
 
     @Override
@@ -55,27 +50,7 @@ public class TakeFoodFragmentAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        TakeFoodInfo.MealBean mealBean = list.get(position);
-        ImageOptions imageOptions = new ImageOptions.Builder()
-                .setFailureDrawableId(R.drawable.ic_launcher)
-                .build();
-        String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + mealBean.getP_picture());
-        x.image().bind(holder.img_food, imgPath, imageOptions);
-        String machineName = mealBean.getT_jiqi();
-        String machineNum = machineName.substring(machineName.length() - 3, machineName.length());
-        holder.tv_machine_name.setText(String.format(context.getString(R.string.machine_name), "成都",machineNum));
-        holder.tv_order.setText(String.format(context.getString(R.string.take_food_order_num), mealBean.getT_num()));
-        holder.tv_good_name.setText(mealBean.getT_name());
-        holder.tv_good_num.setText(String.format(context.getString(R.string.take_food_num),mealBean.getT_total()));
-        holder.tv_price.setText(String.format(context.getString(R.string.rmb_display),(double)mealBean.getT_price()));
-        holder.tv_time.setText(mealBean.getT_time());
-        holder.tv_total_price.setText(String.format(context.getString(R.string.take_food_total),(double)mealBean.getT_totalprice()));
-        holder.tv_btn_qr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                context.startActivity(new Intent(context, QRCodeActivity.class));
-            }
-        });
+
         return convertView;
     }
 

@@ -7,32 +7,47 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.app.HgbwStaticString;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
+import com.jetcloud.hgbw.view.TopBar;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.xutils.common.Callback;
 import org.xutils.ex.HttpException;
 import org.xutils.http.RequestParams;
+import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
 public class BindingActivity extends BaseActivity {
 
     private final static String TAG_LOG = BindingActivity.class.getSimpleName();
-    private EditText et_user_count;
+    @ViewInject(R.id.topbar)
+    TopBar topbar;
+    @ViewInject(R.id.tv_myaccount)
+    TextView tv_myaccount;
+    @ViewInject(R.id.et_trade_account)
+    EditText et_trade_account;
+    @ViewInject(R.id.et_trade_password)
+    EditText et_trade_password;
+    @ViewInject(R.id.tv_btn_ok)
+    TextView tv_btn_ok;
+    @ViewInject(R.id.activity_binding)
+    LinearLayout activity_binding;
     private CustomProgressDialog progress;
-    private TextView tv_btn_ok, tv_myaccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_binding);
+        x.view().inject(this);
         super.onCreate(savedInstanceState);
 
     }
@@ -43,9 +58,7 @@ public class BindingActivity extends BaseActivity {
         Resources resources = this.getResources();
         Drawable drawable = resources.getDrawable(R.drawable.fanhui);
         topbar.setLeftDrawable(false, drawable);
-        tv_myaccount = getView(R.id.tv_myaccount);
-        tv_btn_ok = getViewWithClick(R.id.tv_btn_ok);
-        et_user_count = getView(R.id.et_user_count);
+        tv_btn_ok.setOnClickListener(this);
 
         tv_myaccount.setText(SharedPreferenceUtils.getMyAccount());
     }
@@ -54,7 +67,7 @@ public class BindingActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_btn_ok:
-                if (et_user_count.getText().toString().length() == 11) {
+                if (et_trade_account.getText().toString().length() == 11) {
 //                Intent i = new Intent(BindingActivity.this, BindNextActivity.class);
 //                i.putExtra(JIAOYIBAO_ACCOUNT, et_user_count.getText().toString());
 //                startActivity(i);
@@ -71,9 +84,10 @@ public class BindingActivity extends BaseActivity {
     protected void loadData() {
 
     }
+
     /**
      * 绑定请求
-     * */
+     */
     private void bindRequest() {
         final RequestParams params = new RequestParams(HgbwUrl.TRADE_BIND);
 //        JSONObject js_request = new JSONObject();//服务器需要传参的json对象
@@ -85,8 +99,8 @@ public class BindingActivity extends BaseActivity {
 //            e.printStackTrace();
 //        }
 //        params.addBodyParameter("referer_id", SharedPreferenceUtils.getMyAccount());
-        params.addBodyParameter("mobile", et_user_count.getText().toString());
-        if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)){
+        params.addBodyParameter("mobile", et_trade_account.getText().toString());
+        if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
             params.addBodyParameter("bind_type", "bind");
         }
         params.addBodyParameter("identity", SharedPreferenceUtils.getIdentity());
@@ -174,9 +188,9 @@ public class BindingActivity extends BaseActivity {
         Out.Toast(BindingActivity.this, jsonObject.getString("message"));
         String status = jsonObject.getString("status");
         if (status.equals("200") || status.equals("201")) {
-            SharedPreferenceUtils.setTradeAccount(et_user_count.getText().toString());
+            SharedPreferenceUtils.setTradeAccount(et_trade_account.getText().toString());
             SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.BINDING_STATE);
-            String jumpResource = BindingActivity.this.getIntent().getStringExtra(BindingActivity.this.getString(R.string.jump_resource));
+            String jumpResource = BindingActivity.this.getIntent().getStringExtra(HgbwStaticString.JUMP_RESOURCE);
             if (jumpResource == null) {
                 startActivity(new Intent(BindingActivity.this, MyWalletActivity.class));
             } else if (jumpResource.equals(CarPayActivity.class.getSimpleName()) || jumpResource.equals

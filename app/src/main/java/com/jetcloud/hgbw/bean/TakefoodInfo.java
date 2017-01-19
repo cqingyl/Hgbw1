@@ -1,166 +1,247 @@
 package com.jetcloud.hgbw.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /***
  * Created by Cqing on 2016/12/27.
  */
 
-public class TakeFoodInfo {
+public class TakeFoodInfo{
 
-    private List<MealBean> meal;
+    /**
+     * orders : [{"cost_total":0.03,"cost_real":0.03,"number":"1484639761484883","state":"1",
+     * "create_time":"2017-01-16 23:56:02","id":54,"user_phone":"13340902246","pay_type":"10",
+     * "food_info":{"mechine_number":"1234567890","foodd_out":{"5":"1"},"foods":[{"food_name":"苏打水",
+     * "food_pic":"/static/food/85cadf38-d7c3-11e6-a470-6807159ba7ea.png","num":"1","food_pay_way":"10","id":"30",
+     * "food_price":"0.03"}]}},{"cost_total":0.04,"cost_real":0.04,"number":"1484637392611403","state":"1",
+     * "create_time":"2017-01-16 23:16:33","id":50,"user_phone":"13340902246","pay_type":"10",
+     * "food_info":{"mechine_number":"1234567890","foodd_out":{"7":"1"},"foods":[{"num":"1","food_name":"橙汁",
+     * "food_pay_way":"10","id":"29","food_price":"0.04"}]}}]
+     * status : success
+     */
 
-    public List<MealBean> getMeal() {
-        return meal;
+    private String status;
+    private List<TakeFoodInfo.OrdersBean> orders;
+
+    public String getStatus() {
+        return status;
     }
 
-    public void setMeal(List<MealBean> meal) {
-        this.meal = meal;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public static class MealBean {
+    public List<TakeFoodInfo.OrdersBean> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<TakeFoodInfo.OrdersBean> orders) {
+        this.orders = orders;
+    }
+
+    public static class OrdersBean{
         /**
-         * m_id : a43a467afdf-5
-         * p_id : 1
-         * t_name : 小炒杏鲍菇
-         * p_picture : ../../images/小炒杏鲍菇.png
-         * t_adderss : 成都市新希望国际
-         * t_price : 15
-         * t_total : 2
-         * t_totalprice : 30
-         * t_totalorderprice : 30
-         * t_time : 2016-12-26T06:47:00.000Z
-         * t_singletime : (NULL)
-         * t_num : 1482734836393
-         * t_state : 待取餐
-         * t_jiqi : hg010100001
+         * cost_total : 0.03
+         * cost_real : 0.03
+         * number : 1484639761484883
+         * state : 1
+         * create_time : 2017-01-16 23:56:02
+         * id : 54
+         * user_phone : 13340902246
+         * pay_type : 10
+         * food_info : {"mechine_number":"1234567890","foodd_out":{"5":"1"},"foods":[{"food_name":"苏打水",
+         * "food_pic":"/static/food/85cadf38-d7c3-11e6-a470-6807159ba7ea.png","num":"1","food_pay_way":"10",
+         * "id":"30","food_price":"0.03"}]}
          */
 
-        private String m_id;
-        private int p_id;
-        private String t_name;
-        private String p_picture;
-        private String t_adderss;
-        private int t_price;
-        private int t_total;
-        private int t_totalprice;
-        private int t_totalorderprice;
-        private String t_time;
-        private String t_singletime;
-        private long t_num;
-        private String t_state;
-        private String t_jiqi;
+        private double cost_total;
+        private double cost_real;
+        private String number;
+        private String state;
+        private String create_time;
+        private int id;
+        private String user_phone;
+        private String pay_type;
+        private TakeFoodInfo.OrdersBean.FoodInfoBean food_info;
 
-        public String getM_id() {
-            return m_id;
+        public double getCost_total() {
+            return cost_total;
         }
 
-        public void setM_id(String m_id) {
-            this.m_id = m_id;
+        public void setCost_total(double cost_total) {
+            this.cost_total = cost_total;
         }
 
-        public int getP_id() {
-            return p_id;
+        public double getCost_real() {
+            return cost_real;
         }
 
-        public void setP_id(int p_id) {
-            this.p_id = p_id;
+        public void setCost_real(double cost_real) {
+            this.cost_real = cost_real;
         }
 
-        public String getT_name() {
-            return t_name;
+        public String getNumber() {
+            return number;
         }
 
-        public void setT_name(String t_name) {
-            this.t_name = t_name;
+        public void setNumber(String number) {
+            this.number = number;
         }
 
-        public String getP_picture() {
-            return p_picture;
+        public String getState() {
+            return state;
         }
 
-        public void setP_picture(String p_picture) {
-            this.p_picture = p_picture;
+        public void setState(String state) {
+            this.state = state;
         }
 
-        public String getT_adderss() {
-            return t_adderss;
+        public String getCreate_time() {
+            return create_time;
         }
 
-        public void setT_adderss(String t_adderss) {
-            this.t_adderss = t_adderss;
+        public void setCreate_time(String create_time) {
+            this.create_time = create_time;
         }
 
-        public int getT_price() {
-            return t_price;
+        public int getId() {
+            return id;
         }
 
-        public void setT_price(int t_price) {
-            this.t_price = t_price;
+        public void setId(int id) {
+            this.id = id;
         }
 
-        public int getT_total() {
-            return t_total;
+        public String getUser_phone() {
+            return user_phone;
         }
 
-        public void setT_total(int t_total) {
-            this.t_total = t_total;
+        public void setUser_phone(String user_phone) {
+            this.user_phone = user_phone;
         }
 
-        public int getT_totalprice() {
-            return t_totalprice;
+        public String getPay_type() {
+            return pay_type;
         }
 
-        public void setT_totalprice(int t_totalprice) {
-            this.t_totalprice = t_totalprice;
+        public void setPay_type(String pay_type) {
+            this.pay_type = pay_type;
         }
 
-        public int getT_totalorderprice() {
-            return t_totalorderprice;
+        public TakeFoodInfo.OrdersBean.FoodInfoBean getFood_info() {
+            return food_info;
         }
 
-        public void setT_totalorderprice(int t_totalorderprice) {
-            this.t_totalorderprice = t_totalorderprice;
+        public void setFood_info(TakeFoodInfo.OrdersBean.FoodInfoBean food_info) {
+            this.food_info = food_info;
         }
 
-        public String getT_time() {
-            return t_time;
-        }
+        public static class FoodInfoBean implements Serializable{
+            /**
+             * mechine_number : 1234567890
+             * foodd_out : {"5":"1"}
+             * foods : [{"food_name":"苏打水","food_pic":"/static/food/85cadf38-d7c3-11e6-a470-6807159ba7ea.png",
+             * "num":"1","food_pay_way":"10","id":"30","food_price":"0.03"}]
+             */
 
-        public void setT_time(String t_time) {
-            this.t_time = t_time;
-        }
+            private String mechine_number;
+            private FooddOutBean foodd_out;
+            private List<TakeFoodInfo.OrdersBean.FoodInfoBean.FoodsBean> foods;
 
-        public String getT_singletime() {
-            return t_singletime;
-        }
+            public String getMechine_number() {
+                return mechine_number;
+            }
 
-        public void setT_singletime(String t_singletime) {
-            this.t_singletime = t_singletime;
-        }
+            public void setMechine_number(String mechine_number) {
+                this.mechine_number = mechine_number;
+            }
 
-        public long getT_num() {
-            return t_num;
-        }
+            public FooddOutBean getFoodd_out() {
+                return foodd_out;
+            }
 
-        public void setT_num(long t_num) {
-            this.t_num = t_num;
-        }
+            public void setFoodd_out(FooddOutBean foodd_out) {
+                this.foodd_out = foodd_out;
+            }
 
-        public String getT_state() {
-            return t_state;
-        }
+            public List<TakeFoodInfo.OrdersBean.FoodInfoBean.FoodsBean> getFoods() {
+                return foods;
+            }
 
-        public void setT_state(String t_state) {
-            this.t_state = t_state;
-        }
+            public void setFoods(List<TakeFoodInfo.OrdersBean.FoodInfoBean.FoodsBean> foods) {
+                this.foods = foods;
+            }
 
-        public String getT_jiqi() {
-            return t_jiqi;
-        }
 
-        public void setT_jiqi(String t_jiqi) {
-            this.t_jiqi = t_jiqi;
+
+
+            public static class FoodsBean implements Serializable {
+                /**
+                 * food_name : 苏打水
+                 * food_pic : /static/food/85cadf38-d7c3-11e6-a470-6807159ba7ea.png
+                 * num : 1
+                 * food_pay_way : 10
+                 * id : 30
+                 * food_price : 0.03
+                 */
+
+                private String food_name;
+                private String food_pic;
+                private String num;
+                private String food_pay_way;
+                private String id;
+                private String food_price;
+
+                public String getFood_name() {
+                    return food_name;
+                }
+
+                public void setFood_name(String food_name) {
+                    this.food_name = food_name;
+                }
+
+                public String getFood_pic() {
+                    return food_pic;
+                }
+
+                public void setFood_pic(String food_pic) {
+                    this.food_pic = food_pic;
+                }
+
+                public String getNum() {
+                    return num;
+                }
+
+                public void setNum(String num) {
+                    this.num = num;
+                }
+
+                public String getFood_pay_way() {
+                    return food_pay_way;
+                }
+
+                public void setFood_pay_way(String food_pay_way) {
+                    this.food_pay_way = food_pay_way;
+                }
+
+                public String getId() {
+                    return id;
+                }
+
+                public void setId(String id) {
+                    this.id = id;
+                }
+
+                public String getFood_price() {
+                    return food_price;
+                }
+
+                public void setFood_price(String food_price) {
+                    this.food_price = food_price;
+                }
+            }
         }
     }
+
 }

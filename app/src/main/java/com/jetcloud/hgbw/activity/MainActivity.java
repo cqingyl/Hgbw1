@@ -1,8 +1,13 @@
 package com.jetcloud.hgbw.activity;
 
+import android.Manifest;
 import android.annotation.TargetApi;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -13,12 +18,14 @@ import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.app.HgbwApplication;
+import com.jetcloud.hgbw.app.HgbwStaticString;
 import com.jetcloud.hgbw.fragment.HomeFragment;
 import com.jetcloud.hgbw.fragment.MineFragment;
 import com.jetcloud.hgbw.fragment.ShopCarFragment;
 import com.jetcloud.hgbw.fragment.TakeFoodFragment;
 import com.jetcloud.hgbw.utils.Out;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -82,6 +89,7 @@ public class MainActivity extends BaseActivity {
 	protected void initView() {
 		// TODO Auto-generated method stub
 		initWindow();
+		requestPermission();
 		home=getViewWithClick(R.id.home);
 		takefood=getViewWithClick(R.id.takefood);
 		shopcar=getViewWithClick(R.id.shopcar);
@@ -102,7 +110,7 @@ public class MainActivity extends BaseActivity {
 	@Override
 	protected void loadData() {
 		//如果来自 支付成功
-		String jumpResource = getIntent().getStringExtra(getString(R.string.jump_resource));
+		String jumpResource = getIntent().getStringExtra(HgbwStaticString.JUMP_RESOURCE);
 		if (jumpResource == null) {
 			// 初始化首个fragment
 			if (HgbwApplication.getHomeFragment() == null) {
@@ -129,8 +137,31 @@ public class MainActivity extends BaseActivity {
 
 
 	}
+	private static final String SCHEME = "package";
+	private static boolean isPermissionRequested = false;
+		private void requestPermission() {
+			if (Build.VERSION.SDK_INT >= 23 && !isPermissionRequested) {
 
+				isPermissionRequested = true;
 
+				ArrayList<String> permissions = new ArrayList<>();
+				if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//					permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
+					Out.Toast(mainActivity, "请打开定位权限");
+					Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+					Uri uri = Uri.fromParts(SCHEME, getApplication().getPackageName(), null);
+					intent.setData(uri);
+					startActivity(intent);
+				}
+
+				if (permissions.size() == 0) {
+					return;
+				} else {
+					requestPermissions(permissions.toArray(new String[permissions.size()]), 0);
+				}
+			}
+
+	}
 	@Override
 	public void onClick(View view) {
 		// 点击事件

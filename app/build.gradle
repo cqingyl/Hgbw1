@@ -11,8 +11,8 @@ android {
     }
     defaultConfig {
         applicationId "com.jetcloud.hgbw"
-        minSdkVersion 14
-        targetSdkVersion 19
+        minSdkVersion 19
+        targetSdkVersion 25
         multiDexEnabled true
 
     }
@@ -41,4 +41,5 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.android.support:recyclerview-v7:25.1.0'
     compile 'com.android.support:design:25.1.0'
+    compile project(':zxinglibrary')
 }

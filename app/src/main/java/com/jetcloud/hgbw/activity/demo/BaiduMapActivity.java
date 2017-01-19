@@ -163,7 +163,7 @@ public class BaiduMapActivity extends AppCompatActivity implements View.OnClickL
         Marker marker = null;
         LatLng point = null;
         MarkerOptions option = null;
-        BitmapDescriptor bitmap =BitmapDescriptorFactory.fromResource(R.drawable.icon_marka);;
+        BitmapDescriptor bitmap =BitmapDescriptorFactory.fromResource(R.drawable.mark);;
         for (BDMapData data : bdMapClientList) {
             point = new LatLng(data.getLatitude(), data.getLongitude());
             option = new MarkerOptions().position(point).icon(bitmap);

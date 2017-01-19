@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
@@ -105,17 +106,13 @@ public class HomeFragmentAdapter extends BaseAdapter {
                 }
             }
         });
-        holder.ivDetils.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent i = new Intent(new Intent(context, DetailsActivity.class));
-//                saveListToApp(dataBean);
-                i.putExtra("machine", machineInfo);
-                i.putExtra("food_id", String.valueOf(dataBean.getId()));
-                context.startActivity(i);
-            }
-        });
+//        holder.ivDetils.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View arg0) {
+//
+//            }
+//        });
         holder.tvBtnApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -126,6 +123,16 @@ public class HomeFragmentAdapter extends BaseAdapter {
                     saveListToApp(dataBean);
                     context.startActivity(i);
                 }
+            }
+        });
+        holder.ll_all_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(new Intent(context, DetailsActivity.class));
+//                saveListToApp(dataBean);
+                i.putExtra("machine", machineInfo);
+                i.putExtra("food_id", String.valueOf(dataBean.getId()));
+                context.startActivity(i);
             }
         });
         return convertView;
@@ -158,8 +165,9 @@ public class HomeFragmentAdapter extends BaseAdapter {
         public void onHolderClick(Drawable drawable, int[] start_location);
     }
 
-
     class ViewHolder {
+        @ViewInject(R.id.ll_all_layout)
+        private LinearLayout ll_all_layout;
         @ViewInject(R.id.iv_detils)
         private ImageView ivDetils;
         @ViewInject(R.id.tv_btn_apply)

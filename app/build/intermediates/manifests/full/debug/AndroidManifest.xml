@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="19" />
+        android:minSdkVersion="19"
+        android:targetSdkVersion="25" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
@@ -60,8 +60,10 @@
     <application
         android:name="com.jetcloud.hgbw.app.HgbwApplication"
         android:allowBackup="true"
+        android:anyDensity="true"
         android:icon="@drawable/hgbw"
         android:label="@string/app_name"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
         <!-- android:theme="@android:style/Theme.Black.NoTitleBar" -->
@@ -149,6 +151,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.jetcloud.hgbw.activity.demo.BNaviGuideActivity" >
+        </activity>
+        <activity android:name="com.zxing.activity.CaptureActivity" />
     </application>
 
 </manifest>

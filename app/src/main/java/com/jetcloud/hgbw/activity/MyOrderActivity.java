@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
-import com.jetcloud.hgbw.adapter.MyOrderOutAdapter;
+import com.jetcloud.hgbw.adapter.MyOrderParentAdapter;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.MyOrderBean;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
@@ -28,8 +28,8 @@ public class MyOrderActivity extends BaseActivity {
 
     private final static String TAG_LOG = MyOrderActivity.class.getSimpleName();
     private CustomProgressDialog progress;
-    MyOrderOutAdapter adapter;
-    ListView lv_my_order_out;
+    private MyOrderParentAdapter adapter;
+    private ListView lv_my_order_out;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_my_order);
@@ -79,7 +79,7 @@ public class MyOrderActivity extends BaseActivity {
 //        for (int i = 0; i < ordersBeenList.size(); i ++) {
 //            MyOrderBean.OrdersBean ordersBean = ordersBeenList.get(i);
 //        }
-        adapter = new MyOrderOutAdapter(this, ordersBeenList);
+        adapter = new MyOrderParentAdapter(this, ordersBeenList);
         lv_my_order_out.setAdapter(adapter);
     }
 

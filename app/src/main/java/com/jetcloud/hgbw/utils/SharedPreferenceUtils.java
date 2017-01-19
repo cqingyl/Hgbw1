@@ -15,7 +15,7 @@ public class SharedPreferenceUtils {
     private final static String PACKAGE_NAME = "com.jetcloud.hgbw";
     private final static String SHOP_CAR_NUMBER = "shopCarNumber";
     private final static String MY_ACCOUNT = "my_account";
-    private final static String MY_PASSWORD = "my_account";
+    private final static String MY_PASSWORD = "my_password";
     private final static String TRADE_ACCOUNT = "trade_account";
     private final static String IDENTITY = "identity";
     public final static String BINDING_STATE = "bind";
@@ -57,7 +57,7 @@ public class SharedPreferenceUtils {
     }
 
     public static String getTradeAccount() {
-        return preferences.getString(TRADE_ACCOUNT, WITHOUT_LOGIN);
+        return preferences.getString(TRADE_ACCOUNT, UNBINDING_STATE);
     }
 
     public static void setTradeAccount(String tradePhoneNum) {

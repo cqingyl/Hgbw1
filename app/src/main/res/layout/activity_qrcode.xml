@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_qrcode"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray_light"
-    android:clipToPadding="true"
-    android:fitsSystemWindows="true"
+
+
+    android:orientation="vertical"
     tools:context="com.jetcloud.hgbw.activity.QRCodeActivity">
 
     <include layout="@layout/top_bar"/>
@@ -17,6 +18,7 @@
         android:layout_gravity="center"
         android:background="#fff"
         android:orientation="vertical"
+        android:layout_marginTop="8dp"
         android:padding="15dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
@@ -26,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:src="@drawable/ic_launcher"
             />
 
         <TextView
@@ -35,4 +38,73 @@
             android:layout_height="wrap_content"
             android:text="扫描当前二维码进行转账" />
     </LinearLayout>
-</RelativeLayout>
+    <!--<Button-->
+
+        <!--android:text="Strat Scan"-->
+
+        <!--android:layout_width="match_parent"-->
+
+        <!--android:layout_height="wrap_content"-->
+
+        <!--android:onClick="scan"/>-->
+
+
+
+    <!--<TextView-->
+
+        <!--android:id="@+id/tv_showResult"-->
+
+        <!--android:layout_width="wrap_content"-->
+
+        <!--android:layout_height="wrap_content"-->
+
+        <!--android:text="Hello World!"/>-->
+
+
+
+    <!--<EditText-->
+
+        <!--android:id="@+id/et_text"-->
+
+        <!--android:hint="Imput"-->
+
+        <!--android:layout_width="match_parent"-->
+
+        <!--android:layout_height="wrap_content"/>-->
+
+    <!--<Button-->
+
+        <!--android:layout_width="match_parent"-->
+
+        <!--android:layout_height="wrap_content"-->
+
+        <!--android:onClick="make"-->
+
+        <!--android:text="Make QRCode"/>-->
+
+    <!--<CheckBox-->
+
+        <!--android:id="@+id/cb_logo"-->
+
+        <!--android:layout_width="wrap_content"-->
+
+        <!--android:text="Logo"-->
+
+        <!--android:layout_height="wrap_content"/>-->
+
+
+
+    <!--<ImageView-->
+
+        <!--android:id="@+id/img_shouw"-->
+
+        <!--android:layout_width="wrap_content"-->
+
+        <!--android:layout_gravity="center"-->
+
+        <!--android:background="@drawable/ic_launcher"-->
+
+        <!--android:layout_height="wrap_content"/>-->
+
+
+</LinearLayout>

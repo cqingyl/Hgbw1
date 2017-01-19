@@ -22,6 +22,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.EditAccountActivity;
 import com.jetcloud.hgbw.activity.LoginActivity;
@@ -31,6 +32,7 @@ import com.jetcloud.hgbw.activity.MyTicketActivity;
 import com.jetcloud.hgbw.activity.MyWalletActivity;
 import com.jetcloud.hgbw.activity.RegisterActivity;
 import com.jetcloud.hgbw.app.HgbwUrl;
+import com.jetcloud.hgbw.bean.UserBean;
 import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 import com.jetcloud.hgbw.utils.ImagePath;
 import com.jetcloud.hgbw.utils.Out;
@@ -53,7 +55,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URLDecoder;
-
 
 
 @SuppressLint("ResourceAsColor")
@@ -141,7 +142,7 @@ public class MineFragment extends BaseFragment {
     public void onResume() {
         isFirst = false;
         if (!isHideBtnResiterAndLogin())
-            getPicAndTitle();
+            getUserInfoRequest();
         super.onResume();
     }
 
@@ -150,7 +151,7 @@ public class MineFragment extends BaseFragment {
         Log.i(TAG_LOG, "H onHiddenChanged: " + hidden);
         if (!hidden && !isFirst) {
             if (!isHideBtnResiterAndLogin())
-            getPicAndTitle();
+                getUserInfoRequest();
         }
         super.onHiddenChanged(hidden);
     }
@@ -181,7 +182,9 @@ public class MineFragment extends BaseFragment {
             if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)){
                 startActivity(new Intent(getActivity(), LoginActivity.class));
             } else {
-                startActivity(new Intent(getActivity(), MyOrderActivity.class));
+                Intent i = new Intent(getActivity(), MyOrderActivity.class);
+
+                startActivity(i);
             }
         } else if (view == myticket) {
             if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)){
@@ -200,7 +203,8 @@ public class MineFragment extends BaseFragment {
             if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)){
                 startActivity(new Intent(getActivity(), LoginActivity.class));
             } else {
-                startActivity(new Intent(getActivity(), MyWalletActivity.class));
+                Intent i = new Intent(getActivity(), MyWalletActivity.class);
+                startActivity(i);
             }
         } else if (view == aboutus) {
             Out.Toast(getActivity(), "关于我们");
@@ -479,8 +483,10 @@ public class MineFragment extends BaseFragment {
             return null;
         }
     }
-
-    private void getPicAndTitle() {
+    /**
+     * 获取用户信息
+     * */
+    private void getUserInfoRequest() {
         final RequestParams params = new RequestParams(HgbwUrl.PIC_AND_NICK_URL);
         //缓存时间
         params.addQueryStringParameter("identity", SharedPreferenceUtils.getIdentity());
@@ -534,13 +540,11 @@ public class MineFragment extends BaseFragment {
                         if (!hasError && result != null) {
                             Log.i(TAG_LOG, "get nick and pic onFinished: " + result);
                             try {
+                                getUserDataFromJson(result);
                                 JSONObject jsonObject = new JSONObject(result);
-                                Log.i(TAG_LOG, "onFinished: "  + jsonObject.getString("nickname") + "\n" + jsonObject.getString("pic"));
-                                tv_nick.setText(jsonObject.getString("nickname"));
-                                ImageLoader.getInstance().displayImage(
-                                        URLDecoder.decode(HgbwUrl.HOME_URL + jsonObject.getString("pic")),
-                                        civ_head,
-                                        ImageLoaderCfg.options2);
+
+
+//                                jsonObject.getString("")
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
@@ -553,6 +557,24 @@ public class MineFragment extends BaseFragment {
 
     }
 
+    /**
+     * 获取用户数据
+     * */
+    public void getUserDataFromJson(String result) {
+        Gson gson = new Gson();
+        UserBean userBean = gson.fromJson(result, UserBean.class);
+
+        tv_nick.setText(userBean.getNickname());
+        ImageLoader.getInstance().displayImage(
+                URLDecoder.decode(HgbwUrl.HOME_URL +  userBean.getPic()),
+                civ_head,
+                ImageLoaderCfg.options2);
+        String tradeAccount = userBean.getTradebook_acct();
+        if (tradeAccount != null && !tradeAccount.isEmpty()) {
+            SharedPreferenceUtils.setTradeAccount(tradeAccount);
+            SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.BINDING_STATE);
+        }
+    }
     /***
      * 注销请求
      */

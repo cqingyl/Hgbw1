@@ -16,9 +16,10 @@
     <string name="machine_name"><xliff:g id="location">%1$s</xliff:g>-<xliff:g name="num">%2$s</xliff:g></string>
     <string name="take_food_total">合计: ¥%.2f元</string>
     <string name="take_food_gcb_total">合计: %.3fGCB</string>
-    <string name="take_food_order_num">订单号:%d</string>
+    <string name="take_food_order_num">订单号:%s</string>
     <string name="take_food_num">x%d</string>
     <string name="pay_money">%.2f RMB</string>
+    <string name="trade_time">交易时间:%s</string>
 
     <!-- 充值 -->
     <string name="charge_amount">充值金额(CNY)</string>
@@ -30,11 +31,13 @@
     <string name="cancel">取消</string>
 
     <!-- 静态变量 -->
-    <string name="pay_way_gcb">vr9</string>
-    <string name="pay_way_weixin">weixin</string>
-    <string name="pay_way_cny">cny</string>
-    <string name="weixin">weixin</string>
-    <string name="jump_resource">jump resource</string>
+    <!--<string name="pay_way_gcb">vr9</string>-->
+    <!--<string name="pay_way_weixin">weixin</string>-->
+    <!--<string name="pay_way_cny">cny</string>-->
+    <!--<string name="weixin">weixin</string>-->
+    <!--<string name="jump_resource">jump resource</string>-->
+    <!--<string name="PAY_WAY_VR9">10</string>-->
+    <!--<string name="PAY_WAY_CNY">20</string>-->
     <!-- machine list -->
     <string name="machine_list_name">%d号售餐机</string>
     <string name="machine_list_num">售货机编号：%s</string>

@@ -178,7 +178,7 @@ public class DetailsActivity extends BaseActivity {
 	/***
 	 * 详情请求
 	 * */
-	private void getNetDataRequest() {
+	public void getNetDataRequest() {
 		final RequestParams params = new RequestParams(HgbwUrl.FOOD_DETAIL_URL);
 		//缓存时间
 		params.addQueryStringParameter("food_id", foodId);

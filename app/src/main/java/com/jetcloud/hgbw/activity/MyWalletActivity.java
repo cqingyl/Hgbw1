@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.adapter.MyWalletAdapter;
+import com.jetcloud.hgbw.app.HgbwStaticString;
 import com.jetcloud.hgbw.app.HgbwUrl;
-import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 
@@ -34,6 +34,7 @@ public class MyWalletActivity extends BaseActivity {
     private TextView tv_btn_ok, tv_btn_no;
     private ListView lv_card;
     private ArrayList<String> list;
+    private String tradeAccount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_my_wallet);
@@ -54,6 +55,7 @@ public class MyWalletActivity extends BaseActivity {
 //        SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.UNBINDING_STATE);
 //        getNetData();
         /****/
+
         String status = SharedPreferenceUtils.getBindStatus();
         if (status.equals(SharedPreferenceUtils.UNBINDING_STATE)) {
             lv_card.setVisibility(View.GONE);
@@ -70,6 +72,21 @@ public class MyWalletActivity extends BaseActivity {
         }
     }
 
+
+    @Override
+    protected void loadData() {
+        Intent i = getIntent();
+        if (i.hasExtra(HgbwStaticString.TRADEBOOK_ACCT)) {
+            tradeAccount = SharedPreferenceUtils.getTradeAccount();
+            Log.i(TAG_LOG, "tradeAccount: " + tradeAccount);
+            if (tradeAccount != null && !tradeAccount.isEmpty()) {
+                list.clear();
+                list.add(tradeAccount);
+                lv_card.setAdapter(new MyWalletAdapter(MyWalletActivity.this, list));
+            }
+        }
+    }
+
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.tv_btn_ok){
@@ -77,13 +94,7 @@ public class MyWalletActivity extends BaseActivity {
             finish();
         } else if (view.getId() == R.id.tv_btn_no) {
             unBindRequest();
-            Out.Toast(MyWalletActivity.this, "hehe");
         }
-    }
-
-    @Override
-    protected void loadData() {
-
     }
 
     /**
@@ -180,6 +191,7 @@ public class MyWalletActivity extends BaseActivity {
         String status = jsonObject.getString("status");
         if (status.equals("200")){
             SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.UNBINDING_STATE);
+            SharedPreferenceUtils.setTradeAccount(SharedPreferenceUtils.UNBINDING_STATE);
             lv_card.setAdapter(null);
             lv_card.setVisibility(View.GONE);
             tv_btn_no.setVisibility(View.GONE);

@@ -30,6 +30,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="F:\work\Hgbw1\app\libs\core-3.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="fb52cf43975eb06d1696b341b5b7d8e40e8a59e5">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\2\core-3.0.0_c1912fad04c60d8eef44efddfab94f454af672fb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -75,30 +84,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.0_ae2da3f3ab1e0ea895e3bbfd6c413c98edb6285e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
         <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.1.0_a4af2421b4d77a8298bb417e0a25f1defb863759\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\AS_SDK\SDK\extras\android\m2repository\com\android\support\support-annotations\25.1.0\support-annotations-25.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.0_adf5c9f3b1308651284139225085da4f94112567\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -111,6 +102,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\Hgbw1\zxinglibrary\unspecified\jars\libs\zxing.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="657431ffc6f0c763c22579b392e0bdfab26fc817">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\8\zxing_994911b941ec1328b429e72e72543e8965baddbe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -120,20 +120,11 @@
     </item>
     <item
         is-multidex="true"
-        jar="F:\work\Hgbw1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="9859af6556861042edc8e5d036939045dc690dad">
-        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0649e7b3d31cac927947fc89324e40ebfaa63724\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="F:\work\Hgbw1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="571d1753dc9743cc0c90dffa8a510d03d811764b">
+        sha1="c5c44875e4765f29d839c5fc9e653e80ee8d18ee">
         <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_232fd2c694f67a766f73068493135485b9cdff13\classes.dex" />
     </item>
     <item
@@ -156,21 +147,57 @@
     </item>
     <item
         is-multidex="true"
-        jar="F:\work\Hgbw1\app\libs\universal-image-loader-1.9.4-with-sources.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="40595dbd3e3f1b87b27e914340d0e7dfd2d5b3d3">
-        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\2\universal-image-loader-1.9.4-with-sources_8328d5fd6c7bbe509725ac6eaa82d167d650656e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
         <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.1.0_2b8f424a682e26d6a6d215a1e0d30e3695624493\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Cqing\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.8.0_a129ccadf92111bd2bdae473e4ed8e78f861100f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.0_ae2da3f3ab1e0ea895e3bbfd6c413c98edb6285e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\AS_SDK\SDK\extras\android\m2repository\com\android\support\support-annotations\25.1.0\support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.0_adf5c9f3b1308651284139225085da4f94112567\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\work\Hgbw1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b8cec633199382a8fcf594eb0d1f9025c1c56226">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0649e7b3d31cac927947fc89324e40ebfaa63724\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\work\Hgbw1\app\libs\universal-image-loader-1.9.4-with-sources.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="40595dbd3e3f1b87b27e914340d0e7dfd2d5b3d3">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\2\universal-image-loader-1.9.4-with-sources_8328d5fd6c7bbe509725ac6eaa82d167d650656e\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -189,15 +216,6 @@
         revision="25.0.1"
         sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
         <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.1.0_1d9190cef639bde4c0ede7a03f128d3d5481c15b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Cqing\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
-        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.8.0_a129ccadf92111bd2bdae473e4ed8e78f861100f\classes.dex" />
     </item>
 
 </items>
