@@ -96,7 +96,7 @@
             android:name=".activity.DetailsActivity"
             android:label="@string/title_activity_details">
         </activity>
-        <activity android:name=".activity.demo.LocationActivity"/>
+        <activity android:name=".baidumap.LocationActivity"/>
 
         <!-- 百度地图server -->
         <service
@@ -135,7 +135,7 @@
         <activity android:name=".activity.EditAccountActivity">
         </activity>
         <activity
-            android:name=".activity.demo.BaiduMapActivity"
+            android:name=".baidumap.BaiduMapActivity"
             android:label="@string/title_activity_baidu_map"
             android:theme="@style/AppTheme">
         </activity>
@@ -146,7 +146,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.demo.BNaviGuideActivity">
+        <activity android:name=".baidumap.BNaviGuideActivity">
         </activity>
     </application>
 

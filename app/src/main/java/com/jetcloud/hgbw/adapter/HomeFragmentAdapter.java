@@ -31,6 +31,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static com.jetcloud.hgbw.app.HgbwStaticString.FOOD_ID;
+import static com.jetcloud.hgbw.app.HgbwStaticString.MACHINE;
+
 
 public class HomeFragmentAdapter extends BaseAdapter {
     private Activity context;
@@ -130,8 +133,8 @@ public class HomeFragmentAdapter extends BaseAdapter {
             public void onClick(View view) {
                 Intent i = new Intent(new Intent(context, DetailsActivity.class));
 //                saveListToApp(dataBean);
-                i.putExtra("machine", machineInfo);
-                i.putExtra("food_id", String.valueOf(dataBean.getId()));
+                i.putExtra(MACHINE, machineInfo);
+                i.putExtra(FOOD_ID, String.valueOf(dataBean.getId()));
                 context.startActivity(i);
             }
         });

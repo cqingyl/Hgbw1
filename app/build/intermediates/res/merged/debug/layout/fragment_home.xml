@@ -6,7 +6,7 @@
                 android:background="@color/main_bg"
                 android:orientation="vertical">
 
-    <ScrollView
+    <com.jetcloud.hgbw.view.ObservableScrollView
         android:id="@+id/sv_all_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
@@ -239,9 +239,10 @@
                 android:layout_height="1dp"
                 android:background="@color/line" />
         </LinearLayout>
-    </ScrollView>
+    </com.jetcloud.hgbw.view.ObservableScrollView>
 
     <LinearLayout
+        android:id="@+id/ll_top_nav"
         android:layout_width="match_parent"
         android:layout_height="@dimen/top_bar_h"
         android:background="@color/white"
@@ -327,7 +328,7 @@
     <LinearLayout
         android:id="@+id/ll_search"
         android:layout_width="0dp"
-        android:layout_height="30dp"
+        android:layout_height="match_parent"
         android:layout_weight="2"
         android:gravity="center"
         android:background="@drawable/btn"

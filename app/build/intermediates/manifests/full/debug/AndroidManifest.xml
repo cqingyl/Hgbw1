@@ -101,7 +101,7 @@
             android:name="com.jetcloud.hgbw.activity.DetailsActivity"
             android:label="@string/title_activity_details" >
         </activity>
-        <activity android:name="com.jetcloud.hgbw.activity.demo.LocationActivity" />
+        <activity android:name="com.jetcloud.hgbw.baidumap.LocationActivity" />
 
         <!-- 百度地图server -->
         <service
@@ -140,7 +140,7 @@
         <activity android:name="com.jetcloud.hgbw.activity.EditAccountActivity" >
         </activity>
         <activity
-            android:name="com.jetcloud.hgbw.activity.demo.BaiduMapActivity"
+            android:name="com.jetcloud.hgbw.baidumap.BaiduMapActivity"
             android:label="@string/title_activity_baidu_map"
             android:theme="@style/AppTheme" >
         </activity>
@@ -151,7 +151,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.jetcloud.hgbw.activity.demo.BNaviGuideActivity" >
+        <activity android:name="com.jetcloud.hgbw.baidumap.BNaviGuideActivity" >
         </activity>
         <activity android:name="com.zxing.activity.CaptureActivity" />
     </application>

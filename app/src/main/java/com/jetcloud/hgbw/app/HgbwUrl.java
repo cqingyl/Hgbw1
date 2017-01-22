@@ -6,8 +6,7 @@ package com.jetcloud.hgbw.app;
 
 public class HgbwUrl {
 
-    public final static String HOME_URL = "http://192.168.3.19:9000";
-    public final static String TRADE_BASE_URL = "http://120.76.137.157:8089";
+    public final static String HOME_URL = "http://192.168.3.16:9000";
     /**
      * get
      * */
@@ -33,7 +32,6 @@ public class HgbwUrl {
     /***
      * Put
      * */
-    public final static String TRADE_UNBIND = TRADE_BASE_URL + "/gateway/bind_profile";
 
 
     private HgbwUrl(){}

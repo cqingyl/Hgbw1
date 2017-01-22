@@ -1,4 +1,4 @@
-package com.jetcloud.hgbw.activity.demo;
+package com.jetcloud.hgbw.baidumap;
 
 import android.Manifest;
 import android.app.Activity;
@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baidu.location.BDLocation;
@@ -28,6 +29,7 @@ import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
 import com.baidu.mapapi.map.InfoWindow;
+import com.baidu.mapapi.map.MapPoi;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
@@ -40,6 +42,7 @@ import com.baidu.mapapi.model.LatLng;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.LoadingActivity;
 import com.jetcloud.hgbw.bean.MachineLocationBean;
+import com.jetcloud.hgbw.utils.Out;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +68,8 @@ public class LocationActivity extends Activity {
     BikeNaviLauchParam param;
     private LatLng myLatLng; //我的位置
     private static boolean isPermissionRequested = false;
-
+    View view;
+    InfoWindow infoWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,12 +98,14 @@ public class LocationActivity extends Activity {
             @Override
             public boolean onMarkerClick(final Marker marker) {
                 Log.i("log", "onMarkerClick: ");
+
                 if (myLatLng != null) {
                     initBikeNavigateHelper(myLatLng, marker.getPosition());
-                    InfoWindow infoWindow;
+
 //                    LinearLayout linearLayout = new LinearLayout(LocationActivity.this);
 //                    linearLayout.setOrientation(LinearLayout.HORIZONTAL);
-//                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams
+// .WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 //                    linearLayout.setBackgroundResource(R.drawable.mark_popu);
 //                    Button button = new Button(LocationActivity.this);
 //                    button.setBackgroundResource(R.drawable.bike_nav_bg);
@@ -114,15 +120,30 @@ public class LocationActivity extends Activity {
 //                            startBikeNavi();
 //                        }
 //                    });
-//                    infoWindow = new InfoWindow(button, marker.getPosition(), -47);
-                    View view = View.inflate(LocationActivity.this, R.layout.view_nav, null);
-                    infoWindow = new InfoWindow(view, marker.getPosition(), -47);
+//                    infoWindow = new InfoWindow(button, marker.getPosition(), -70);
+                    view = View.inflate(LocationActivity.this, R.layout.view_nav, null);
+                    view.findViewById(R.id.ib_go_to_navi).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Out.Toast(LocationActivity.this, marker.getPosition().toString());
+                            startBikeNavi();
+                        }
+                    });
+                    TextView tv_nick = (TextView) view.findViewById(R.id.tv_nick);
+                    for (int i = 0; i < mMarkers.length; i ++) {
+                        if (mMarkers[i] == marker)
+                            tv_nick.setText(mechinesBeanList.get(i).getNickname());
+                    }
+
+                    infoWindow = new InfoWindow(view, marker.getPosition(), -70);
                     mBaiduMap.showInfoWindow(infoWindow);
+
                 }
 
                 return true;
             }
         });
+
         //地图渲染完成时回调
         mBaiduMap.setOnMapRenderCallbadk(new BaiduMap.OnMapRenderCallback() {
             @Override
@@ -130,7 +151,17 @@ public class LocationActivity extends Activity {
                 drawMark();
             }
         });
+        mBaiduMap.setOnMapClickListener(new BaiduMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+                mBaiduMap.hideInfoWindow();
+            }
 
+            @Override
+            public boolean onMapPoiClick(MapPoi mapPoi) {
+                return false;
+            }
+        });
     }
 
     private void initBikeNavigateHelper(LatLng startPt, LatLng endPt) {
@@ -169,6 +200,7 @@ public class LocationActivity extends Activity {
         //为18，进去就是18了，默认是12
         MapStatusUpdate mapStatusUpdate = MapStatusUpdateFactory.zoomTo(18);
         mBaiduMap.setMapStatus(mapStatusUpdate);
+        mBaiduMap.setMaxAndMinZoomLevel(3.0f, 18.0f);
         //是否显示缩放按钮
         //mMapView.showZoomControls(false);
         /***
@@ -252,7 +284,8 @@ public class LocationActivity extends Activity {
             mBaiduMap.setMyLocationData(locData);
             // 设置自定义图标  
             BitmapDescriptor mCurrentMarker = BitmapDescriptorFactory.fromResource(R.drawable.mylocation);
-            MyLocationConfiguration config = new MyLocationConfiguration(MyLocationConfiguration.LocationMode.NORMAL, true, mCurrentMarker);
+            MyLocationConfiguration config = new MyLocationConfiguration(MyLocationConfiguration.LocationMode.NORMAL,
+                    true, mCurrentMarker);
             mBaiduMap.setMyLocationConfigeration(config);
             if (isFirstLoc) {
                 isFirstLoc = false;
@@ -276,7 +309,8 @@ public class LocationActivity extends Activity {
         for (int i = 0; i < mechinesBeanList.size(); i++) {
             latLngs[i] = new LatLng(Double.parseDouble(mechinesBeanList.get(i).getLatitude()), Double.parseDouble
                     (mechinesBeanList.get(i).getLongitude()));
-            Log.i(TAG_LOG, "latLngs: " + i + "\nlatitude: " + latLngs[i].latitude + " \nlongitude" + latLngs[i].longitude);
+            Log.i(TAG_LOG, "latLngs: " + i + "\nlatitude: " + latLngs[i].latitude + " \nlongitude" + latLngs[i]
+                    .longitude);
             MarkerOptions ooA = new MarkerOptions().position(latLngs[i]).icon(bd)
                     .zIndex(9).draggable(true);
             // 掉下动画
@@ -290,8 +324,8 @@ public class LocationActivity extends Activity {
             .fromResource(R.drawable.mark);
 
     /**
-     *开始骑行导航
-     * */
+     * 开始骑行导航
+     */
     private void startBikeNavi() {
         Log.d("View", "startBikeNavi");
         mNaviHelper.initNaviEngine(this, new IBEngineInitListener() {

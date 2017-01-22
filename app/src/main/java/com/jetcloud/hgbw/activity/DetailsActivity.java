@@ -35,6 +35,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static com.jetcloud.hgbw.app.HgbwStaticString.FOOD_ID;
+import static com.jetcloud.hgbw.app.HgbwStaticString.MACHINE;
+
 
 public class DetailsActivity extends BaseActivity {
 	private final static String TAG_LOG = DetailsActivity.class.getSimpleName();
@@ -90,13 +93,15 @@ public class DetailsActivity extends BaseActivity {
 	protected void loadData() {
 
 		Intent i = getIntent();
-		machineInfo = (MachineInfo) i.getSerializableExtra("machine");
-		foodId = i.getStringExtra("food_id");
-		machineNum = machineInfo.getNumber();
-		Log.i("log", "food id: " + foodId);
-		Log.i("log", "machine num: " + machineNum);
+		if (i.hasExtra(MACHINE) && i.hasExtra(FOOD_ID)) {
+			machineInfo = (MachineInfo) i.getSerializableExtra(MACHINE);
+			foodId = i.getStringExtra(FOOD_ID);
+			machineNum = machineInfo.getNumber();
+			Log.i("log", "food id: " + foodId);
+			Log.i("log", "machine num: " + machineNum);
+			getDetailDataRequest();
+		}
 		//只有一件商品
-		getNetDataRequest();
 //		groups = app.getGroups();
 //		listObj = app.getChildren().get(groups.get(0).getNumber());
 //		shopCarInfo = listObj.get(0);
@@ -178,7 +183,7 @@ public class DetailsActivity extends BaseActivity {
 	/***
 	 * 详情请求
 	 * */
-	public void getNetDataRequest() {
+	public void getDetailDataRequest() {
 		final RequestParams params = new RequestParams(HgbwUrl.FOOD_DETAIL_URL);
 		//缓存时间
 		params.addQueryStringParameter("food_id", foodId);
@@ -210,13 +215,13 @@ public class DetailsActivity extends BaseActivity {
 					public void onError(Throwable ex, boolean isOnCallback) {
 						hasError = true;
 						Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
-						Log.e(TAG_LOG, "getNetDataRequest onError: " + ex.getMessage());
+						Log.e(TAG_LOG, "getDetailDataRequest onError: " + ex.getMessage());
 						if (ex instanceof HttpException) { // 网络错误
 							HttpException httpEx = (HttpException) ex;
 							int responseCode = httpEx.getCode();
 							String responseMsg = httpEx.getMessage();
 							String errorResult = httpEx.getResult();
-							Log.e(TAG_LOG, "getNetDataRequest onError " + " code: " + responseCode + " message: " + responseMsg);
+							Log.e(TAG_LOG, "getDetailDataRequest onError " + " code: " + responseCode + " message: " + responseMsg);
 						} else { // 其他错误
 							ll_nav_bottom.setVisibility(View.GONE);
 							sv_all_layout.setVisibility(View.GONE);
@@ -233,7 +238,7 @@ public class DetailsActivity extends BaseActivity {
 					@Override
 					public void onFinished() {
 						if (!hasError && result != null) {
-							Log.i(TAG_LOG, "getNetDataRequest onFinished: " + result);
+							Log.i(TAG_LOG, "getDetailDataRequest onFinished: " + result);
 							getDataFromJson(result);
 						}
 					}

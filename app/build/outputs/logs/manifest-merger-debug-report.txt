@@ -168,10 +168,10 @@ ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:95:9-98:20
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:97:13-59
 	android:name
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:96:13-53
-activity#com.jetcloud.hgbw.activity.demo.LocationActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:99:9-67
+activity#com.jetcloud.hgbw.baidumap.LocationActivity
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:99:9-62
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:99:19-65
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:99:19-60
 service#com.baidu.location.f
 ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:102:9-109:19
 	android:enabled
@@ -238,14 +238,14 @@ activity#com.jetcloud.hgbw.activity.EditAccountActivity
 ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:135:9-136:20
 	android:name
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:135:19-63
-activity#com.jetcloud.hgbw.activity.demo.BaiduMapActivity
+activity#com.jetcloud.hgbw.baidumap.BaiduMapActivity
 ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:137:9-141:20
 	android:label
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:139:13-61
 	android:theme
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:140:13-44
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:138:13-59
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:138:13-54
 activity#com.jetcloud.hgbw.activity.LoadingActivity
 ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:142:9-148:20
 	android:name
@@ -260,10 +260,10 @@ category#android.intent.category.LAUNCHER
 ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:146:17-76
 	android:name
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:146:27-74
-activity#com.jetcloud.hgbw.activity.demo.BNaviGuideActivity
+activity#com.jetcloud.hgbw.baidumap.BNaviGuideActivity
 ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:149:9-150:20
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:149:19-67
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:149:19-62
 uses-sdk
 INJECTED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42

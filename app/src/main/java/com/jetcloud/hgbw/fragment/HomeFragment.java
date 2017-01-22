@@ -3,6 +3,7 @@ package com.jetcloud.hgbw.fragment;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.Gravity;
@@ -10,22 +11,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.activity.DetailsActivity;
 import com.jetcloud.hgbw.activity.MainActivity;
-import com.jetcloud.hgbw.activity.demo.BaiduLocation;
-import com.jetcloud.hgbw.activity.demo.LocationActivity;
 import com.jetcloud.hgbw.adapter.HomeFragmentAdapter;
 import com.jetcloud.hgbw.adapter.MyWheelAdapter;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwUrl;
+import com.jetcloud.hgbw.baidumap.BaiduLocation;
+import com.jetcloud.hgbw.baidumap.LocationActivity;
 import com.jetcloud.hgbw.bean.FoodBean;
 import com.jetcloud.hgbw.bean.MachineBannerBean;
 import com.jetcloud.hgbw.bean.MachineInfo;
@@ -39,6 +42,8 @@ import com.jetcloud.hgbw.view.CustomProgressDialog;
 import com.jetcloud.hgbw.view.ImageCycleView;
 import com.jetcloud.hgbw.view.ImageCycleView.ImageCycleViewListener;
 import com.jetcloud.hgbw.view.MyListView;
+import com.jetcloud.hgbw.view.ObservableScrollView;
+import com.jetcloud.hgbw.view.ScrollViewListener;
 import com.wx.wheelview.widget.WheelView;
 
 import org.json.JSONException;
@@ -48,27 +53,57 @@ import org.xutils.ex.HttpException;
 import org.xutils.http.RequestParams;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
+import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.jetcloud.hgbw.app.HgbwStaticString.FOOD_ID;
+import static com.jetcloud.hgbw.app.HgbwStaticString.MACHINE;
 import static com.jetcloud.hgbw.app.HgbwStaticString.MACHINE_LIST;
 import static org.xutils.x.http;
 
 
 @ContentView(R.layout.fragment_home)
-public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.AddGoodNumberInterface, BaiduLocation.MyLocationListener {
+public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.AddGoodNumberInterface, BaiduLocation
+        .MyLocationListener {
     private final static String TAG_LOG = HomeFragment.class.getSimpleName();
     private static HomeFragment homeFragment;
-    private ImageCycleView binner;
+    @ViewInject(R.id.binner)
+    ImageCycleView binner;
+    @ViewInject(R.id.rb_home)
+    RadioButton rb_home;
+    @ViewInject(R.id.rb_takefood)
+    RadioButton rb_takefood;
+    @ViewInject(R.id.rb_shopcar)
+    RadioButton rb_shopcar;
+    @ViewInject(R.id.rb_mine)
+    RadioButton rb_mine;
+    @ViewInject(R.id.rdo_group)
+    RadioGroup rdo_group;
+    @ViewInject(R.id.bottom_bar)
+    LinearLayout bottom_bar;
+    @ViewInject(R.id.lv_home)
+    MyListView lv_home;
+    @ViewInject(R.id.sv_all_layout)
+    ObservableScrollView sv_all_layout;
+    @ViewInject(R.id.iv_location)
+    ImageView iv_location;
+    @ViewInject(R.id.tv_city)
+    TextView tv_city;
+    @ViewInject(R.id.ll_location)
+    LinearLayout ll_location;
+    @ViewInject(R.id.tv_machine_name)
+    TextView tv_machine_name;
+    @ViewInject(R.id.ll_choose_machine)
+    LinearLayout ll_choose_machine;
+    @ViewInject(R.id.ll_search)
+    LinearLayout ll_search;
+    @ViewInject(R.id.ll_top_nav)
+    LinearLayout ll_top_nav;
     private HomeFragmentAdapter adapter;
-    private TextView tvTopSearch;
-    private TextView tv_city;
-    private RadioGroup radioGroup;
-    private CustomProgressDialog progress;
-    private ScrollView sv_all_layout;
     private WheelView wheelView;
     private PopupWindow window;
     private String machineNum;
@@ -76,30 +111,35 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     private List<MachineLocationBean.MechinesBean> mechinesBeanList;
     private List<FoodBean.DataBean> foodBeanDataBeanList;
     private MachineLocationBean.MechinesBean mechinesBean;
+    private List<MachineBannerBean.BannerBean> bannerBeanList;
     private static final int CHOOSE_NEW_FOOD = 0;
     private static final int CHOOSE_HOT_FOOD = 1;
     private static final int CHOOSE_SET_MEAL = 2;
     private static final int CHOOSE_DRINK = 3;
-    private LinearLayout ll_choose_machine;
-    private TextView tv_machine_name;
 
     private HgbwApplication app;
     private int total;
-
-    //轮播图点击事件
+//坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑
+    /**
+     * 轮播图点击事件
+    * */
     private ImageCycleViewListener mAdCycleViewListener = new ImageCycleViewListener() {
 
         @Override
         public void onImageClick(int position, View imageView) {
-            // TODO Auto-generated method stub
-
+            if (bannerBeanList.get(position).getBtype().equals("A")) {
+                String foodId = String.valueOf(bannerBeanList.get(position).getUrl());
+                Log.i("log", "onImageClick: " + foodId);
+                Intent intent = new Intent(getActivity(), DetailsActivity.class);
+                intent.putExtra(MACHINE, mechinesBean);
+                intent.putExtra(FOOD_ID, foodId);
+                startActivity(intent);
+            }
         }
     };
-
+//坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑
     // banner图数据
     private ArrayList<String> mImageUrl = new ArrayList<String>();
-
-    private MyListView listView;
 
     public static HomeFragment newInstance() {
         if (homeFragment == null) {
@@ -117,13 +157,13 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     @Override
     public void onHiddenChanged(boolean hidden) {
 //        Log.i(TAG, "H onHiddenChanged: " + hidden);
-        if (hidden){
+        if (hidden) {
             SharedPreferenceUtils.setShopCarNumber(total);
 //            Log.i(TAG, "H onHiddenChanged: " + total);
         } else {
             //购物车角标
             total = SharedPreferenceUtils.getShopCarNumber();
-            ShopCarUtil.ChangeCorner(getActivity(),total);
+            ShopCarUtil.ChangeCorner(getActivity(), total);
 //            Log.i(TAG, "H onHiddenChanged: " + total);
         }
         super.onHiddenChanged(hidden);
@@ -135,7 +175,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
         total = SharedPreferenceUtils.getShopCarNumber();
         //购物车角标
-        ShopCarUtil.ChangeCorner(getActivity(),total);
+        ShopCarUtil.ChangeCorner(getActivity(), total);
 //        Log.i(TAG, "onResume: " + total);
         super.onResume();
     }
@@ -155,38 +195,37 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     @Override
     protected void initView() {
 
-//        PackageManager pm = getActivity().getPackageManager();
-//        CusAlertDialog alert;
-//        boolean permission = (PackageManager.PERMISSION_GRANTED ==
-//                pm.checkPermission("android.permission.RECORD_AUDIO", getActivity().getPackageName()));
-//        // 判断 存储的machineName 是不是默认的值，如果是说明是未定位
-//        if (!permission) {
-//            Out.Toast(getActivity(),"没有这个权限");
-//            alert = new CusAlertDialog(getActivity());
-//            alert.setTitle("操作提示");
-//            alert.setContent("请打开权限后再尝试");
-//
-//            alert.setPositiveButton("去开启",
-//                    new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View view) {
-//                            startActivity(new Intent(Settings.ACTION_APPLICATION_SETTINGS));
-//                            app.removeAll();
-//                        }
-//                    });
-//            alert.show();
-//        }
-
         app = (HgbwApplication) getActivity().getApplication();
-        binner = getView(R.id.binner);
-        tv_city = getView(R.id.tv_city);
-        listView = getView(R.id.lv_home);
-        ll_choose_machine = getView(R.id.ll_choose_machine);
-        tv_machine_name = getView(R.id.tv_machine_name);
+//        binner = getView(R.id.binner);
+//        tv_city = getView(R.id.tv_city);
+//        listView = getView(R.id.lv_home);
+//        ll_choose_machine = getView(R.id.ll_choose_machine);
+//        tv_machine_name = getView(R.id.tv_machine_name);
 
+        /**滚动时设置透明度*/
+        sv_all_layout.setScrollViewListener(new ScrollViewListener() {
+            @Override
+            public void onScrollChanged(ObservableScrollView scrollView, int l, int t, int oldl, int oldt, boolean isStop) {
+//                Log.i("log", "onScrollChanged --> l:" + l + "t: " + t + "oldl :" + oldl + "oldt:" + oldt);
+                if (isStop) {
+                    ll_top_nav.setBackgroundResource(R.drawable.btn);
+                    ll_location.setBackgroundResource(R.drawable.btn);
+                    ll_search.setBackgroundResource(R.drawable.btn);
+                    ll_choose_machine.setBackgroundResource(R.drawable.btn);
+                } else {
+                    ll_top_nav.setBackgroundResource(R.color.transparent);
+                    ll_location.setBackgroundResource(R.color.transparent);
+                    ll_search.setBackgroundResource(R.color.transparent);
+                    ll_choose_machine.setBackgroundResource(R.color.transparent);
+                }
+//                Log.i(TAG_LOG, "onScrollChanged: " + t + " " + oldt);
+//                Log.i(TAG_LOG, "onScrollChanged: " + isStop);
+
+            }
+        });
         adapter = new HomeFragmentAdapter(getActivity());
         adapter.setNumberInterface(HomeFragment.this);
-        listView.setAdapter(adapter);
+        lv_home.setAdapter(adapter);
         //设置飞入动画
         adapter.SetOnSetHolderClickListener(new HomeFragmentAdapter.HolderClickListener() {
 
@@ -203,6 +242,10 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         BaiduLocation.getLocation(app);
     }
 
+    @Override
+    public void initData() {
+
+    }
 
     /***
      * 添加goods和machine到数据库 或者 增加商品数量
@@ -285,10 +328,6 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         getFoodByMachine(type, machineNum, null);
     }
 
-    @Override
-    public void initData() {
-
-    }
 
 
     /**
@@ -302,7 +341,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                 intent.putExtra(MACHINE_LIST, (Serializable) mechinesBeanList);
                 startActivity(intent);
                 break;
-            case R.id.ll_choose_machine :
+            case R.id.ll_choose_machine:
 //                Log.i("onclick", "onClick: ");
 
                 if (mechinesBeanList != null) {
@@ -313,12 +352,12 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     }
 
     /**
-     *  获取 定位后的location
-     * */
+     * 获取 定位后的location
+     */
     @Override
     public void myLocation(double mylongitude, double mylatitude, String city, String street) {
 //        Log.i(TAG_LOG, "myLocation: " + mylatitude);
-        if (city != null){
+        if (city != null) {
             tv_city.setText(city);
             loadMachineList(mylongitude, mylatitude);
         } else {
@@ -328,7 +367,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     /**
      * 获取机器列表
-     * **/
+     **/
     private void loadMachineList(double mylongitude, double mylatitude) {
         final RequestParams params = new RequestParams(HgbwUrl.MACHINE_LOCATION_URL);
         final CustomProgressDialog[] dialog = {null};
@@ -370,7 +409,8 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                             int responseCode = httpEx.getCode();
                             String responseMsg = httpEx.getMessage();
                             String errorResult = httpEx.getResult();
-                            Log.e(TAG_LOG, "getMachineListFromJson onError " + " code: " + responseCode + " message: " + responseMsg);
+                            Log.e(TAG_LOG, "getMachineListFromJson onError " + " code: " + responseCode + " message: " +
+                                    "" + responseMsg);
                         } else { // 其他错误
                         }
                     }
@@ -384,7 +424,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                     public void onFinished() {
                         dialog[0].dismiss();
                         if (!hasError && result != null) {
-                        Log.i(TAG_LOG, "getMachineListFromJson onFinished: " + result);
+                            Log.i(TAG_LOG, "getMachineListFromJson onFinished: " + result);
                             try {
                                 getMachineListFromJson(result);
                             } catch (JSONException e) {
@@ -405,6 +445,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         });
 
     }
+
     private void getMachineListFromJson(String result) throws JSONException {
         Gson gson = new Gson();
         MachineLocationBean machineLocationBean = gson.fromJson(result, MachineLocationBean.class);
@@ -427,7 +468,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     /**
      * 点击标题时的弹窗
-     * */
+     */
     private void initIntoPopwindow(final List<MachineLocationBean.MechinesBean> data) {
 
         View view = View.inflate(getActivity(), R.layout.popu_machine_list_choose,
@@ -435,7 +476,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         WindowManager wm = (WindowManager) getActivity().getSystemService(getActivity().WINDOW_SERVICE);
         int height = wm.getDefaultDisplay().getHeight();
         window = new PopupWindow(view, WindowManager.LayoutParams.MATCH_PARENT,
-                height /5*2);
+                height / 5 * 2);
         // 实例化一个ColorDrawable颜色为半透明
         ColorDrawable dw = new ColorDrawable(0xb0000000);
         window.setBackgroundDrawable(dw);
@@ -487,8 +528,8 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     /**
      * 获取食品列表
-     * */
-    public void getFoodByMachine(int type, String machineNum, final MachineInfo machineInfo){
+     */
+    public void getFoodByMachine(int type, String machineNum, final MachineInfo machineInfo) {
         final RequestParams params = new RequestParams(HgbwUrl.FOOD_BY_MACHINE_URL);
         final CustomProgressDialog[] dialog = {null};
         //缓存时间
@@ -514,7 +555,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         x.task().run(new Runnable() {
             @Override
             public void run() {
-               x.http().get(params, new Callback.CacheCallback<String>() {
+                x.http().get(params, new Callback.CacheCallback<String>() {
 
                     private boolean hasError = false;
                     private String result = null;
@@ -544,7 +585,8 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                             int responseCode = httpEx.getCode();
                             String responseMsg = httpEx.getMessage();
                             String errorResult = httpEx.getResult();
-                            Log.e(TAG_LOG, "getFoodByMachine onError " + " code: " + responseCode + " message: " + responseMsg);
+                            Log.e(TAG_LOG, "getFoodByMachine onError " + " code: " + responseCode + " message: " +
+                                    responseMsg);
                         } else { // 其他错误
                         }
                     }
@@ -561,7 +603,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                             Log.i(TAG_LOG, "getFoodByMachineFromJson onFinished: " + result);
                             try {
                                 //切换机器成功时调用
-                                if (machineInfo != null){
+                                if (machineInfo != null) {
                                     List<MachineInfo> machineInfoList = new ArrayList<MachineInfo>();
                                     machineInfoList.add(machineInfo);
                                     app.setGroups(machineInfoList);
@@ -585,17 +627,19 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
             }
         });
     }
-    public void getFoodByMachineFromJson (String result) throws JSONException{
+
+    public void getFoodByMachineFromJson(String result) throws JSONException {
         Gson gson = new Gson();
         FoodBean foodBean = gson.fromJson(result, FoodBean.class);
         foodBeanDataBeanList = foodBean.getData();
         adapter.setData(foodBeanDataBeanList);
 
     }
-   /**
+
+    /**
      * 获取轮播图
-     * */
-    public void getBannerRequest(String machineNum){
+     */
+    public void getBannerRequest(String machineNum) {
         final RequestParams params = new RequestParams(HgbwUrl.BANNER_URL);
         final CustomProgressDialog[] dialog = {null};
         //缓存时间
@@ -606,7 +650,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         x.task().run(new Runnable() {
             @Override
             public void run() {
-               x.http().get(params, new Callback.CacheCallback<String>() {
+                x.http().get(params, new Callback.CacheCallback<String>() {
 
                     private boolean hasError = false;
                     private String result = null;
@@ -636,7 +680,8 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                             int responseCode = httpEx.getCode();
                             String responseMsg = httpEx.getMessage();
                             String errorResult = httpEx.getResult();
-                            Log.e(TAG_LOG, "getBannerRequest onError " + " code: " + responseCode + " message: " + responseMsg);
+                            Log.e(TAG_LOG, "getBannerRequest onError " + " code: " + responseCode + " message: " +
+                                    responseMsg);
                         } else { // 其他错误
                         }
                     }
@@ -670,17 +715,27 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
             }
         });
     }
-    public void getBannerFromJson (String result) throws JSONException{
+
+    public void getBannerFromJson(String result) throws JSONException {
         Gson gson = new Gson();
         MachineBannerBean machineBannerBean = gson.fromJson(result, MachineBannerBean.class);
-        List<MachineBannerBean.BannerBean> bannerBeanList = machineBannerBean.getBanner();
-        for (int i = 0; i < bannerBeanList.size(); i ++) {
+        bannerBeanList = machineBannerBean.getBanner();
+        for (int i = 0; i < bannerBeanList.size(); i++) {
+//        Log.i(TAG_LOG, "getBannerFromJson: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + bannerBeanList.get(i).getUrl());
             MachineBannerBean.BannerBean bannerBean = bannerBeanList.get(i);
-            String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL +  bannerBean.getPic());
+            String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + bannerBean.getPic());
             Log.i(TAG_LOG, "getBannerFromJson imgPath: " + imgPath);
             mImageUrl.add(imgPath);
         }
         binner.setImageResources(mImageUrl, mAdCycleViewListener, 0);
+
     }
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        x.view().inject(this, rootView);
+        return rootView;
+    }
 }

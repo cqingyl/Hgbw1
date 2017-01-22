@@ -19,6 +19,7 @@
           android:layout_marginTop="8dp"
           android:background="@color/line"/>
     <RadioGroup
+        android:visibility="gone"
         android:id="@+id/rdo_group"
         android:layout_width="match_parent"
         android:layout_height="50dp"

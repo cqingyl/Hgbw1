@@ -1,4 +1,4 @@
-package com.jetcloud.hgbw.activity.demo;
+package com.jetcloud.hgbw.baidumap;
 
 import android.content.Context;
 import android.util.Log;

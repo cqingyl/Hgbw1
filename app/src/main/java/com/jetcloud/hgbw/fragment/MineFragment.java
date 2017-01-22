@@ -26,7 +26,6 @@ import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.EditAccountActivity;
 import com.jetcloud.hgbw.activity.LoginActivity;
-import com.jetcloud.hgbw.activity.MainActivity;
 import com.jetcloud.hgbw.activity.MyOrderActivity;
 import com.jetcloud.hgbw.activity.MyTicketActivity;
 import com.jetcloud.hgbw.activity.MyWalletActivity;
@@ -115,9 +114,6 @@ public class MineFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-//        SharedPreferenceUtils.setIdentity(SharedPreferenceUtils.WITHOUT_LOGIN);
-        // TODO Auto-generated method stub
-        MainActivity.main_bg.setBackgroundResource(R.drawable.mine_bg);
         initWindow();
         takefood.setOnClickListener(this);
         myorder.setOnClickListener(this);
