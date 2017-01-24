@@ -32,6 +32,9 @@ public class CusAlertDialog  {
         ll_one_btn_layout.setVisibility(View.VISIBLE);
         ll_two_btn_layout.setVisibility(View.GONE);
     }
+    public void canceledOnTouchOutside () {
+        dialog.setCanceledOnTouchOutside(false);
+    }
     public void intView(Dialog dialog){
         tv_negative_btn = (TextView) dialog.findViewById(R.id.tv_negative_btn);
         tv_positive_btn = (TextView) dialog.findViewById(R.id.tv_positive_btn);

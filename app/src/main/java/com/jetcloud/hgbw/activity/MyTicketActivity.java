@@ -3,6 +3,7 @@ package com.jetcloud.hgbw.activity;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.adapter.MyticketAdapter;
@@ -11,6 +12,7 @@ import com.jetcloud.hgbw.view.MyListView;
 public class MyTicketActivity extends BaseActivity {
 	private MyListView lv_myticket;
 	private MyticketAdapter adapter;
+	private LinearLayout activity_my_ticket;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
@@ -28,6 +30,8 @@ public class MyTicketActivity extends BaseActivity {
 		lv_myticket = getView(R.id.lv_myticket);
 		adapter = new MyticketAdapter(MyTicketActivity.this);
 		lv_myticket.setAdapter(adapter);
+		activity_my_ticket = getView(R.id.activity_my_ticket);
+		activity_my_ticket.setBackgroundResource(R.drawable.mine_bg);
 		
 	}
 

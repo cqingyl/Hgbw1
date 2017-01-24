@@ -2,7 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_pay"
+    android:id="@+id/activity_details_pay"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -17,6 +17,7 @@
         android:orientation="vertical"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
+        android:background="@color/gray_light"
         android:layout_alignParentStart="true">
 
         <include layout="@layout/top_bar"/>

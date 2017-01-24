@@ -43,9 +43,9 @@ OnClickListener {
 
 		initApplication();
 		initTopBar();
-		//initWindow();
-		
+		initWindow();
 		initView();
+//		initStatusBar();
 		if (savedInstanceState == null) {
 			loadData();
 		}
@@ -145,9 +145,9 @@ OnClickListener {
 		setTranslucentStatus(true);
 		SystemBarTintManager mTintManager = new SystemBarTintManager(this);
 		mTintManager.setStatusBarTintEnabled(true);
+		mTintManager.setStatusBarTintResource(R.drawable.mine_bg);
 		mTintManager.setNavigationBarTintEnabled(true);
-		mTintManager.setTintColor(R.color.top_bar_color);
-		mTintManager.setNavigationBarTintColor(R.color.top_bar_color);
+		mTintManager.setNavigationBarTintResource(R.drawable.mine_bg);
 	}
 
 	private void setTranslucentStatus(boolean on) {

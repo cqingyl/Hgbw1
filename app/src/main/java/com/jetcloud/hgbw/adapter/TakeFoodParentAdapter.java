@@ -13,16 +13,17 @@ import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.QRCodeActivity;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwStaticString;
-import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.TakeFoodInfo;
 import com.jetcloud.hgbw.view.MyListView;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
+import java.io.Serializable;
 import java.util.List;
 
 import static com.jetcloud.hgbw.app.HgbwStaticString.FOOD_OUT;
+import static com.jetcloud.hgbw.app.HgbwStaticString.MACHINE_NAME;
 import static com.jetcloud.hgbw.app.HgbwStaticString.ORDER_NUM;
 
 /***
@@ -36,7 +37,7 @@ public class TakeFoodParentAdapter extends BaseAdapter {
     private static final String TAG_LOG = TakeFoodParentAdapter.class.getSimpleName();
     private Context context;
     private HgbwApplication app;
-    private MachineInfo machineInfo;
+
     private List<TakeFoodInfo.OrdersBean.FoodInfoBean.FoodsBean> foodInfoBeanList;
 
     public TakeFoodParentAdapter(Context context, List<TakeFoodInfo.OrdersBean> data) {
@@ -46,10 +47,18 @@ public class TakeFoodParentAdapter extends BaseAdapter {
         this.data = data;
         app = (HgbwApplication) context.getApplicationContext();
         //只有一个机器
-        machineInfo = app.getGroups().get(0);
+
     }
 
+    public void setData(List<TakeFoodInfo.OrdersBean> data) {
+        this.data = data;
+        notifyDataSetChanged();
+    }
 
+    public void addNewData(List<TakeFoodInfo.OrdersBean> data) {
+        this.data.addAll(data);
+        notifyDataSetChanged();
+    }
     @Override
     public int getCount() {
         return data == null ? 0 : data.size();
@@ -82,9 +91,8 @@ public class TakeFoodParentAdapter extends BaseAdapter {
         foodInfoBeanList = ordersBean.getFood_info().getFoods();
         holder.lv_myorder_in.setAdapter(new TakeFoodChildrenAdapter(context, foodInfoBeanList));
 
-        String machineName = machineInfo.getNumber();
-        String machineNum = machineName.substring(machineName.length() - 3, machineName.length());
-        holder.tv_machine_name.setText(String.format(context.getString(R.string.machine_name), "成都", machineNum));
+
+        holder.tv_machine_name.setText(ordersBean.getFood_info().getMechine_name());
         holder.tv_order_number.setText(String.format(context.getString(R.string.take_food_order_num), ordersBean
                 .getNumber()));
         holder.tv_time.setText(String.format(context.getString(R.string.trade_time), ordersBean
@@ -100,7 +108,9 @@ public class TakeFoodParentAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, QRCodeActivity.class);
-                intent.putExtra(FOOD_OUT, ordersBean.getFood_info().getFoodd_out());
+                intent.putExtra(FOOD_OUT, (Serializable) ordersBean.getFood_info().getFoodd_out());
+//                Log.i(TAG_LOG, "jump food_out: " + ordersBean.getFood_info().getFoodd_out().getValue5());
+                intent.putExtra(MACHINE_NAME, ordersBean.getFood_info().getMechine_number());
                 intent.putExtra(ORDER_NUM, ordersBean.getNumber());
                 context.startActivity(intent);
             }

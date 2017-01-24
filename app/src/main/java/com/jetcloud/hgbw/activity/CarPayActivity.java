@@ -1,14 +1,13 @@
 package com.jetcloud.hgbw.activity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
@@ -19,6 +18,7 @@ import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
+import com.jetcloud.hgbw.view.CusAlertDialogWithTwoBtn;
 import com.jetcloud.hgbw.view.MyExpandableListView;
 import com.jetcloud.hgbw.view.MyListView;
 
@@ -38,6 +38,7 @@ public class CarPayActivity extends BaseActivity {
     private CheckBox cb_weixin;
     private CheckBox cb_gcb;
     private TextView tv_total_price;
+    private RelativeLayout activity_car_pay;
     private MyExpandableListView elv_buying;
     private MyListView lv_my_ticket;
     private int totalNum;
@@ -46,6 +47,7 @@ public class CarPayActivity extends BaseActivity {
     private double totalGcb;
     private List<String> wayData;
     private HgbwApplication app;
+    private CusAlertDialogWithTwoBtn alert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +70,8 @@ public class CarPayActivity extends BaseActivity {
         tv_go_to_pay = getViewWithClick(R.id.tv_go_to_pay);
         cb_gcb = getViewWithClick(R.id.cb_gcb);
         cb_weixin = getViewWithClick(R.id.cb_weixin);
-
+        activity_car_pay = getView(R.id.activity_car_pay);
+        activity_car_pay.setBackgroundResource(R.drawable.mine_bg);
     }
 
     @Override
@@ -111,7 +114,6 @@ public class CarPayActivity extends BaseActivity {
 
     @Override
     public void onClick(View view) {
-        AlertDialog alert;
         if (view.getId() == R.id.cb_gcb) {
             cb_gcb.setChecked(true);
             cb_weixin.setChecked(false);
@@ -133,24 +135,24 @@ public class CarPayActivity extends BaseActivity {
                 return;
             }
             if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
-                alert = new AlertDialog.Builder(context).create();
+                alert = new CusAlertDialogWithTwoBtn(context);
                 alert.setTitle("操作提示");
-                alert.setMessage("您还未绑定交易宝账号");
-                alert.getWindow().setBackgroundDrawableResource(R.color.white);
-                alert.setButton(DialogInterface.BUTTON_NEGATIVE, "取消",
-                        new DialogInterface.OnClickListener() {
+                alert.setContent("您还未绑定交易宝账号");
+                alert.setNegativeButton("取消",
+                        new View.OnClickListener() {
                             @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                return;
+                            public void onClick(View view) {
+                                alert.dismiss();
                             }
                         });
-                alert.setButton(DialogInterface.BUTTON_POSITIVE, "去绑定",
-                        new DialogInterface.OnClickListener() {
+                alert.setPositiveButton("去绑定",
+                        new View.OnClickListener() {
                             @Override
-                            public void onClick(DialogInterface dialog, int which) {
+                            public void onClick(View view) {
                                 Intent intent = new Intent(CarPayActivity.this, BindingActivity.class);
                                 intent.putExtra(HgbwStaticString.JUMP_RESOURCE, CarPayActivity
                                         .class.getSimpleName());
+                                alert.dismiss();
                                 startActivity(intent);
                             }
                         });
@@ -164,6 +166,7 @@ public class CarPayActivity extends BaseActivity {
 //
 //                        }
                 Intent i = new Intent(CarPayActivity.this, PayNextActivity.class);
+                i.putExtra(HgbwStaticString.JUMP_RESOURCE, CarPayActivity.class.getSimpleName());
                 startActivity(i);
             }
         }

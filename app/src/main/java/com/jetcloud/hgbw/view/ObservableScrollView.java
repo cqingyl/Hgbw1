@@ -1,6 +1,7 @@
 package com.jetcloud.hgbw.view;
 
 import android.content.Context;
+import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.widget.ScrollView;
 
@@ -39,7 +40,8 @@ public class ObservableScrollView extends ScrollView {
 
     private ScrollViewListener scrollViewListener = null;
     private boolean mIsStop = false;
-
+    private int scrollX;
+    private int scrollY;
     public ObservableScrollView(Context context) {
         super(context);
     }
@@ -66,6 +68,21 @@ public class ObservableScrollView extends ScrollView {
 
     }
 
+    public void sScrollTo(int scrollX, int scrollY) {
+        this.scrollTo(scrollX, scrollY);
+    }
+    @Override
+    protected void onRestoreInstanceState(Parcelable state) {
+        super.onRestoreInstanceState(state);
+        scrollTo(scrollX, scrollY);
+    }
+
+    @Override
+    protected Parcelable onSaveInstanceState() {
+        scrollX = getScrollY();
+        scrollY = getScrollX();
+        return super.onSaveInstanceState();
+    }
 
     public void setScrollViewListener(ScrollViewListener scrollViewListener) {
         this.scrollViewListener = scrollViewListener;

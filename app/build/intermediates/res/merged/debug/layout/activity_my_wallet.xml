@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/activity_my_wallet"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@color/gray_light"
@@ -10,37 +11,43 @@
 
     <include layout="@layout/top_bar"/>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
-        <LinearLayout
-            android:id="@+id/ll_content_empty"
+        android:layout_height="match_parent"
+        android:background="@color/gray_light">
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            >
 
-            <TextView
-                android:id="@+id/tv_btn_ok"
-                style="@style/TextViewButton"
-                android:background="@drawable/next_btn_ok"
-                android:text="绑定交易宝帐号"
-                android:textColor="@color/white"/>
-            <com.jetcloud.hgbw.view.MyListView
-                android:id="@+id/lv_card"
+            <LinearLayout
+                android:id="@+id/ll_content_empty"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/gray_light"
+                android:orientation="vertical">
 
-            </com.jetcloud.hgbw.view.MyListView>
-            <TextView
-                android:id="@+id/tv_btn_no"
-                style="@style/TextViewButton"
-                android:background="@drawable/next_btn_ok"
-                android:text="解除绑定"
-                android:textColor="@color/white"/>
+                <TextView
+                    android:id="@+id/tv_btn_ok"
+                    style="@style/TextViewButton"
+                    android:background="@drawable/next_btn_ok"
+                    android:text="绑定交易宝帐号"
+                    android:textColor="@color/white"/>
+                <com.jetcloud.hgbw.view.MyListView
+                    android:id="@+id/lv_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-        </LinearLayout>
+                </com.jetcloud.hgbw.view.MyListView>
+                <TextView
+                    android:id="@+id/tv_btn_no"
+                    style="@style/TextViewButton"
+                    android:background="@drawable/next_btn_ok"
+                    android:text="解除绑定"
+                    android:textColor="@color/white"/>
 
-    </ScrollView>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
 </LinearLayout>

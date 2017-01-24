@@ -14,6 +14,8 @@ public class HgbwStaticString {
     public final static String ORDER_NUM = "number";
     public final static String MACHINE_LIST = "machine_list";
     public final static String MACHINE = "machine";
+    public final static String MACHINE_NAME = "machine_name";
     public final static String FOOD_ID = "food_id";
+    public final static int PER_PAGE_ALL_NUM = 10;
 
 }

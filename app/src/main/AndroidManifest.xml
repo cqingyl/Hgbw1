@@ -124,8 +124,6 @@
         </activity>
         <activity android:name=".activity.MyOrderActivity">
         </activity>
-        <activity android:name=".activity.MachineListActivity">
-        </activity>
         <activity android:name=".activity.RegisterSuccessActivity">
         </activity>
         <activity android:name=".activity.SettingActivity">
@@ -137,9 +135,10 @@
         <activity
             android:name=".baidumap.BaiduMapActivity"
             android:label="@string/title_activity_baidu_map"
-            android:theme="@style/AppTheme">
+            >
         </activity>
-        <activity android:name=".activity.LoadingActivity">
+        <activity android:name=".activity.LoadingActivity"
+                  android:theme="@style/StartAppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

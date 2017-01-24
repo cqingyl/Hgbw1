@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -51,6 +52,7 @@ public class DetailsActivity extends BaseActivity {
 	private LinearLayout ll_nav_bottom;
 	private ScrollView sv_all_layout;
 	private TextView tv_empty;
+	private RelativeLayout activity_details;
 
 	private double totalPriceCny;
 	private double totalPriceVr9;
@@ -87,6 +89,8 @@ public class DetailsActivity extends BaseActivity {
 		ll_nav_bottom = getView(R.id.ll_nav_bottom);
 		sv_all_layout = getView(R.id.sv_all_layout);
 		tv_empty = getView(R.id.tv_empty);
+		activity_details = getView(R.id.activity_details);
+		activity_details.setBackgroundResource(R.drawable.mine_bg);
 	}
 
 	@Override
@@ -254,9 +258,9 @@ public class DetailsActivity extends BaseActivity {
 		FoodDetailBean foodDetailBean = gson.fromJson(result, FoodDetailBean.class);
 		FoodDetailBean.InfoBean infoBean = foodDetailBean.getInfo();
 		if (foodDetailBean.getStatus().equals("success") && infoBean.getNum() != 0){
+			tv_empty.setVisibility(View.GONE);
 			ll_nav_bottom.setVisibility(View.VISIBLE);
 			sv_all_layout.setVisibility(View.VISIBLE);
-			tv_empty.setVisibility(View.GONE);
 			shopCarInfo = infoBean;
 			titleText = shopCarInfo.getName();
 			topbar.setCenterText(titleText);

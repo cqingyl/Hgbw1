@@ -213,6 +213,7 @@ public class LoginActivity extends BaseActivity {
             SharedPreferenceUtils.setMyAccount(et_username.getText().toString());
             SharedPreferenceUtils.setMyPassword(et_password.getText().toString());
             SharedPreferenceUtils.setIdentity(jsonObject.getString("identity"));
+//            Log.i(TAG_LOG, "getDataFromJson: " + jsonObject.getString("identity"));
 //            finish();
             getUserInfoRequest();
         }
@@ -295,13 +296,14 @@ public class LoginActivity extends BaseActivity {
     /**
      * 判断用户是否绑定交易宝
      * */
-    public void getUserDataFromJson(String result) {
+    private void getUserDataFromJson(String result) {
         Gson gson = new Gson();
         UserBean userBean = gson.fromJson(result, UserBean.class);
 
         String tradeAccount = userBean.getTradebook_acct();
         if (tradeAccount != null && !tradeAccount.isEmpty()) {
             SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.BINDING_STATE);
+            SharedPreferenceUtils.setTradeAccount(userBean.getTradebook_acct());
         }
         finish();
     }

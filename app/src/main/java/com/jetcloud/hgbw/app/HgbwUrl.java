@@ -6,7 +6,8 @@ package com.jetcloud.hgbw.app;
 
 public class HgbwUrl {
 
-    public final static String HOME_URL = "http://192.168.3.16:9000";
+//    public final static String HOME_URL = "http://192.168.3.16:9000";
+    public final static String HOME_URL = "http://120.25.159.143";
     /**
      * get
      * */

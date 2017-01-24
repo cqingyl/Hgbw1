@@ -1,7 +1,5 @@
 package com.jetcloud.hgbw.bean;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.io.Serializable;
 
 /***
@@ -35,19 +33,29 @@ import java.io.Serializable;
  */
 
 
-public class FooddOutBean implements Serializable{
+public class FooddOutBean implements Serializable {
+
     /**
-     * 5 : 1
+     * num : 1
+     * pos : 6
      */
 
-    @SerializedName("5")
-    private String value5;
+    private String num;
+    private int pos;
 
-    public String getValue5() {
-        return value5;
+    public String getNum() {
+        return num;
     }
 
-    public void setValue5(String value5) {
-        this.value5 = value5;
+    public void setNum(String num) {
+        this.num = num;
+    }
+
+    public int getPos() {
+        return pos;
+    }
+
+    public void setPos(int pos) {
+        this.pos = pos;
     }
 }

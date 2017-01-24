@@ -36,8 +36,8 @@ public class BindingActivity extends BaseActivity {
     TextView tv_myaccount;
     @ViewInject(R.id.et_trade_account)
     EditText et_trade_account;
-    @ViewInject(R.id.et_trade_password)
-    EditText et_trade_password;
+//    @ViewInject(R.id.et_trade_password)
+//    EditText et_trade_password;
     @ViewInject(R.id.tv_btn_ok)
     TextView tv_btn_ok;
     @ViewInject(R.id.activity_binding)
@@ -61,6 +61,7 @@ public class BindingActivity extends BaseActivity {
         tv_btn_ok.setOnClickListener(this);
 
         tv_myaccount.setText(SharedPreferenceUtils.getMyAccount());
+        activity_binding.setBackgroundResource(R.drawable.mine_bg);
     }
 
     @Override

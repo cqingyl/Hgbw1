@@ -21,6 +21,14 @@
         <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
     </style>
 
+    <style name="StartAppTheme" parent="android:Theme.Light.NoTitleBar">
+                
+           <item name="android:windowNoTitle">true</item> 
+           
+        <item name="android:windowBackground">@drawable/layout_list_start_pic</item>
+                <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+           
+    </style>
     <!--
     <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
         <item name="android:progressDrawable">@drawable/order_rating_bar</item>
@@ -125,6 +133,7 @@
         <item name="android:fadingEdge">none</item>
         <item name="android:scrollbars">none</item>
     </style>
+
     <style name="mypopwindow_anim_style">
         <item name="android:windowEnterAnimation">@anim/popshow_anim</item>
         <!-- 指定显示的动画xml -->

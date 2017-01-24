@@ -341,8 +341,9 @@ public class RegisterActivity extends BaseActivity {
 	private void getDataFromJson(String result) throws JSONException {
 		JSONObject jsonObject = new JSONObject(result);
 		Out.Toast(context, jsonObject.getString("status"));
-		if (jsonObject.getString("code").equals("302")){
-			Out.Toast(context,"不需要重复注册");
+		if (jsonObject.has("code")){
+			if (jsonObject.getString("code").equals("302"))
+				Out.Toast(context,"此账号已经注册");
 		} else if (jsonObject.getString("status").equals("success")) {
 			startActivity(new Intent(context, RegisterSuccessActivity.class));
 			finish();

@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.jetcloud.hgbw.R;
@@ -20,7 +21,8 @@ import org.xutils.x;
 public class EditAccountActivity extends BaseActivity {
     private final static String TAG_LOG = EditAccountActivity.class.getSimpleName();
     private EditText et_account;
-    private  ProgressDialog progressDialog;
+    private ProgressDialog progressDialog;
+    private RelativeLayout activity_edit_account;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_edit_account);
@@ -29,6 +31,8 @@ public class EditAccountActivity extends BaseActivity {
     @Override
     protected void initView() {
         et_account = getView(R.id.et_account);
+        activity_edit_account = getView(R.id.activity_edit_account);
+        activity_edit_account.setBackgroundResource(R.drawable.mine_bg);
     }
 
     @Override

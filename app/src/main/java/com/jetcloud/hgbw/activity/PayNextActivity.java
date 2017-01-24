@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +27,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.xutils.common.Callback;
+import org.xutils.db.sqlite.WhereBuilder;
+import org.xutils.ex.DbException;
 import org.xutils.ex.HttpException;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
@@ -44,6 +47,7 @@ public class PayNextActivity extends BaseActivity {
     private TextView tv_price;
     private CustomProgressDialog progress;
     private Button btn_pay;
+    private LinearLayout activity_comfirm_pay;
     private double money;
     private String payWay;
     private String orderNum;
@@ -63,6 +67,9 @@ public class PayNextActivity extends BaseActivity {
         topbar.setLeftDrawable(false, drawable);
         tv_price = getView(R.id.tv_price);
         btn_pay = getViewWithClick(R.id.btn_pay);
+
+        activity_comfirm_pay = getView(R.id.activity_comfirm_pay);
+        activity_comfirm_pay.setBackgroundResource(R.drawable.mine_bg);
     }
 
     @Override
@@ -137,6 +144,31 @@ public class PayNextActivity extends BaseActivity {
         Log.i(TAG_LOG, "getPayDataFromJson: " + jsonObject.getString("message"));
         Out.Toast(PayNextActivity.this, jsonObject.getString("status"));
             cusAlertDialog = new CusAlertDialog(PayNextActivity.this);
+        Intent intent = getIntent();
+        //如来自购物车购买
+        if (intent.hasExtra(HgbwStaticString.JUMP_RESOURCE)){
+            String jumpResource = getIntent().getStringExtra(HgbwStaticString.JUMP_RESOURCE);
+            if (jumpResource.equals(CarPayActivity.class.getSimpleName())){
+                for (int i = 0; i < foodList.size(); i ++) {
+                    WhereBuilder whereBuilder = WhereBuilder.b("id", "=", foodList.get(i).getId());
+                    try {
+                        app.db.delete(ShopCarInfo.class,whereBuilder);
+                        if (app.db.selector(ShopCarInfo.class).findAll() == null){
+                            app.db.delete(MachineInfo.class);
+                        }
+                    } catch (DbException e) {
+                        e.printStackTrace();
+                    }
+                }
+                int oldNum = SharedPreferenceUtils.getShopCarNumber();
+                int newNum = oldNum - foodList.size();
+                if (newNum > 0) {
+                    SharedPreferenceUtils.setShopCarNumber(newNum);
+                } else {
+                    SharedPreferenceUtils.setShopCarNumber(0);
+                }
+            }
+        }
         //成功
         if (jsonObject.getString("status").equals("200")) {
             cusAlertDialog.setTitle(jsonObject.getString("message"));
@@ -192,14 +224,17 @@ public class PayNextActivity extends BaseActivity {
                 foodObj.put("food_name", String.valueOf(shopCarInfo.getName()));
                 foodObj.put("food_pay_way", payWay);
                 foodObj.put("food_pic", String.valueOf(shopCarInfo.getPic()));
-                if (payWay.equals(HgbwStaticString.PAY_WAY_VR9)) {
-                    foodObj.put("food_price", String.valueOf(shopCarInfo.getPrice_vr9()));
-                }
+                foodObj.put("food_price_vr9", String.valueOf(shopCarInfo.getPrice_vr9()));
+                foodObj.put("food_price_rmb", String.valueOf(shopCarInfo.getPrice_cny()));
+                foodObj.put("food_des", String.valueOf(shopCarInfo.getDescription()));
                 Log.i(TAG_LOG, "food_id: " + String.valueOf(shopCarInfo.getId()));
                 Log.i(TAG_LOG, "food_num: " + String.valueOf(shopCarInfo.getP_local_number()));
                 Log.i(TAG_LOG, "food_name: " + String.valueOf(shopCarInfo.getName()));
                 Log.i(TAG_LOG, "food_price: " + money);
                 Log.i(TAG_LOG, "food_pay_way: " + payWay);
+                Log.i(TAG_LOG, "food_price_vr9: " + String.valueOf(shopCarInfo.getPrice_vr9()));
+                Log.i(TAG_LOG, "food_price_rmb: " + String.valueOf(shopCarInfo.getPrice_cny()));
+                Log.i(TAG_LOG, "food_des: " + String.valueOf(shopCarInfo.getDescription()));
                 foodArray.put(i, foodObj);
             }
 //            jsonObject = new JSONObject();
@@ -228,6 +263,7 @@ public class PayNextActivity extends BaseActivity {
         }
             params.addBodyParameter("pay_pwd", paypwd);
             params.addBodyParameter("mechine_number", app.getGroups().get(0).getNumber());
+            params.addBodyParameter("mechine_name", app.getGroups().get(0).getNickname());
             params.addBodyParameter("identity", SharedPreferenceUtils.getIdentity());
             params.addBodyParameter("foods", String.valueOf(stringArray));
 //        if (jsonObject != null)

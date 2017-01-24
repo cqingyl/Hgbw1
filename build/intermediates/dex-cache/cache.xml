@@ -102,15 +102,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\Hgbw1\zxinglibrary\unspecified\jars\libs\zxing.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="657431ffc6f0c763c22579b392e0bdfab26fc817">
-        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\8\zxing_994911b941ec1328b429e72e72543e8965baddbe\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -120,12 +111,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="F:\work\Hgbw1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="F:\work\Hgbw1\app\build\intermediates\exploded-aar\Hgbw1\zxinglibrary\unspecified\jars\libs\zxing.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="d342e2eafb191b70fd1dbe644c8d407cf1ef2f96">
-        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_232fd2c694f67a766f73068493135485b9cdff13\classes.dex" />
+        sha1="657431ffc6f0c763c22579b392e0bdfab26fc817">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\8\zxing_994911b941ec1328b429e72e72543e8965baddbe\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -135,6 +126,15 @@
         revision="25.0.1"
         sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
         <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.0_c774364f516f64926ade9b0cdca8e3f4c29439d6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\work\Hgbw1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="31c28aad9f512dae5c94ca90fcc63534b436e9a5">
+        <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_232fd2c694f67a766f73068493135485b9cdff13\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -187,7 +187,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="b8cec633199382a8fcf594eb0d1f9025c1c56226">
+        sha1="5b085c3de676a9381374c1e6e19627abb48263d3">
         <dex dex="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0649e7b3d31cac927947fc89324e40ebfaa63724\classes.dex" />
     </item>
     <item

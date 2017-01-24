@@ -5,59 +5,33 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="917185846855904"
+    timestamp="154325799068296"
     token="-4339596543094837819"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1671" />
+        duration="1424" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="78" />
+        duration="4958" />
     <task
         name="verifier"
-        duration="22" />
+        duration="963" />
 
     <artifact
-        location="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-        type="DEX" />
-    <artifact
-        location="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-        type="DEX" />
+        location="F:\work\Hgbw1\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="916973128484463"
+        timestamp="154325799068296"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="F:\work\Hgbw1\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="917075045975677"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
-            type="DEX" />
-        <artifact
-            location="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-            type="DEX" />
-        <artifact
-            location="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="917185846855904"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-            type="DEX" />
-        <artifact
-            location="F:\work\Hgbw1\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

@@ -8,17 +8,13 @@ import java.util.List;
 
 public class MyOrderBean {
 
-
     /**
-     * orders : [{"cost_total":0.03,"cost_real":0.03,"number":"1484639761484883","state":"1",
-     * "create_time":"2017-01-16 23:56:02","id":54,"user_phone":"13340902246","pay_type":"10",
-     * "food_info":{"mechine_number":"1234567890","foodd_out":{"5":"1"},"foods":[{"food_name":"苏打水",
-     * "food_pic":"/static/food/85cadf38-d7c3-11e6-a470-6807159ba7ea.png","num":"1","food_pay_way":"10","id":"30",
-     * "food_price":"0.03"}]}},{"cost_total":0.04,"cost_real":0.04,"number":"1484637392611403","state":"1",
-     * "create_time":"2017-01-16 23:16:33","id":50,"user_phone":"13340902246","pay_type":"10",
-     * "food_info":{"mechine_number":"1234567890","foodd_out":{"7":"1"},"foods":[{"num":"1","food_name":"橙汁",
-     * "food_pay_way":"10","id":"29","food_price":"0.04"}]}}]
      * status : success
+     * orders : [{"number":"14850724841750824",
+     * "food_info":{"foods":[{"food_pic":"/static/food/ef12639c-d2f0-11e6-b743-6807159ba7ea.jpg","food_price":"0.15",
+     * "id":"12","num":"1","food_pay_way":"10","food_name":"麻辣香锅"}],"mechine_number":"1234567890",
+     * "foodd_out":[{"num":"1","pos":3}]},"create_time":"2017-01-22 16:08:04","pay_type":"10","id":63,"cost_real":0
+     * .15,"user_phone":"13340902246","state":"1","cost_total":0.15}]
      */
 
     private String status;
@@ -42,44 +38,28 @@ public class MyOrderBean {
 
     public static class OrdersBean {
         /**
-         * cost_total : 0.03
-         * cost_real : 0.03
-         * number : 1484639761484883
-         * state : 1
-         * create_time : 2017-01-16 23:56:02
-         * id : 54
-         * user_phone : 13340902246
+         * number : 14850724841750824
+         * food_info : {"foods":[{"food_pic":"/static/food/ef12639c-d2f0-11e6-b743-6807159ba7ea.jpg","food_price":"0
+         * .15","id":"12","num":"1","food_pay_way":"10","food_name":"麻辣香锅"}],"mechine_number":"1234567890",
+         * "foodd_out":[{"num":"1","pos":3}]}
+         * create_time : 2017-01-22 16:08:04
          * pay_type : 10
-         * food_info : {"mechine_number":"1234567890","foodd_out":{"5":"1"},"foods":[{"food_name":"苏打水",
-         * "food_pic":"/static/food/85cadf38-d7c3-11e6-a470-6807159ba7ea.png","num":"1","food_pay_way":"10",
-         * "id":"30","food_price":"0.03"}]}
+         * id : 63
+         * cost_real : 0.15
+         * user_phone : 13340902246
+         * state : 1
+         * cost_total : 0.15
          */
 
-        private double cost_total;
-        private double cost_real;
         private String number;
-        private String state;
-        private String create_time;
-        private int id;
-        private String user_phone;
-        private String pay_type;
         private FoodInfoBean food_info;
-
-        public double getCost_total() {
-            return cost_total;
-        }
-
-        public void setCost_total(double cost_total) {
-            this.cost_total = cost_total;
-        }
-
-        public double getCost_real() {
-            return cost_real;
-        }
-
-        public void setCost_real(double cost_real) {
-            this.cost_real = cost_real;
-        }
+        private String create_time;
+        private String pay_type;
+        private int id;
+        private double cost_real;
+        private String user_phone;
+        private String state;
+        private double cost_total;
 
         public String getNumber() {
             return number;
@@ -87,46 +67,6 @@ public class MyOrderBean {
 
         public void setNumber(String number) {
             this.number = number;
-        }
-
-        public String getState() {
-            return state;
-        }
-
-        public void setState(String state) {
-            this.state = state;
-        }
-
-        public String getCreate_time() {
-            return create_time;
-        }
-
-        public void setCreate_time(String create_time) {
-            this.create_time = create_time;
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public String getUser_phone() {
-            return user_phone;
-        }
-
-        public void setUser_phone(String user_phone) {
-            this.user_phone = user_phone;
-        }
-
-        public String getPay_type() {
-            return pay_type;
-        }
-
-        public void setPay_type(String pay_type) {
-            this.pay_type = pay_type;
         }
 
         public FoodInfoBean getFood_info() {
@@ -137,18 +77,75 @@ public class MyOrderBean {
             this.food_info = food_info;
         }
 
+        public String getCreate_time() {
+            return create_time;
+        }
+
+        public void setCreate_time(String create_time) {
+            this.create_time = create_time;
+        }
+
+        public String getPay_type() {
+            return pay_type;
+        }
+
+        public void setPay_type(String pay_type) {
+            this.pay_type = pay_type;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public double getCost_real() {
+            return cost_real;
+        }
+
+        public void setCost_real(double cost_real) {
+            this.cost_real = cost_real;
+        }
+
+        public String getUser_phone() {
+            return user_phone;
+        }
+
+        public void setUser_phone(String user_phone) {
+            this.user_phone = user_phone;
+        }
+
+        public String getState() {
+            return state;
+        }
+
+        public void setState(String state) {
+            this.state = state;
+        }
+
+        public double getCost_total() {
+            return cost_total;
+        }
+
+        public void setCost_total(double cost_total) {
+            this.cost_total = cost_total;
+        }
+
         public static class FoodInfoBean {
             /**
+             * foods : [{"food_pic":"/static/food/ef12639c-d2f0-11e6-b743-6807159ba7ea.jpg","food_price":"0.15",
+             * "id":"12","num":"1","food_pay_way":"10","food_name":"麻辣香锅"}]
              * mechine_number : 1234567890
-             * foodd_out : {"5":"1"}
-             * foods : [{"food_name":"苏打水","food_pic":"/static/food/85cadf38-d7c3-11e6-a470-6807159ba7ea.png",
-             * "num":"1","food_pay_way":"10","id":"30","food_price":"0.03"}]
+             * foodd_out : [{"num":"1","pos":3}]
+             * mechine_name : "新希望国际B"
              */
 
             private String mechine_number;
-            private FooddOutBean foodd_out;
+            private String mechine_name;
             private List<FoodsBean> foods;
-
+            private List<FooddOutBean> foodd_out;
             public String getMechine_number() {
                 return mechine_number;
             }
@@ -157,12 +154,12 @@ public class MyOrderBean {
                 this.mechine_number = mechine_number;
             }
 
-            public FooddOutBean getFoodd_out() {
-                return foodd_out;
+            public String getMechine_name() {
+                return mechine_name;
             }
 
-            public void setFoodd_out(FooddOutBean foodd_out) {
-                this.foodd_out = foodd_out;
+            public void setMechine_name(String mechine_name) {
+                this.mechine_name = mechine_name;
             }
 
             public List<FoodsBean> getFoods() {
@@ -173,32 +170,32 @@ public class MyOrderBean {
                 this.foods = foods;
             }
 
+            public List<FooddOutBean> getFoodd_out() {
+                return foodd_out;
+            }
 
+            public void setFoodd_out(List<FooddOutBean> foodd_out) {
+                this.foodd_out = foodd_out;
+            }
 
             public static class FoodsBean {
                 /**
-                 * food_name : 苏打水
-                 * food_pic : /static/food/85cadf38-d7c3-11e6-a470-6807159ba7ea.png
+                 * food_pic : /static/food/ef12639c-d2f0-11e6-b743-6807159ba7ea.jpg
+                 * food_price : 0.15
+                 * id : 12
                  * num : 1
                  * food_pay_way : 10
-                 * id : 30
-                 * food_price : 0.03
+                 * food_name : 麻辣香锅
                  */
 
-                private String food_name;
                 private String food_pic;
+                private String food_price_vr9;
+                private String food_price_rmb;
+                private String id;
                 private String num;
                 private String food_pay_way;
-                private String id;
-                private String food_price;
-
-                public String getFood_name() {
-                    return food_name;
-                }
-
-                public void setFood_name(String food_name) {
-                    this.food_name = food_name;
-                }
+                private String food_name;
+                private String food_des;
 
                 public String getFood_pic() {
                     return food_pic;
@@ -206,6 +203,38 @@ public class MyOrderBean {
 
                 public void setFood_pic(String food_pic) {
                     this.food_pic = food_pic;
+                }
+
+                public String getFood_price_vr9() {
+                    return food_price_vr9;
+                }
+
+                public void setFood_price_vr9(String food_price_vr9) {
+                    this.food_price_vr9 = food_price_vr9;
+                }
+
+                public String getFood_price_rmb() {
+                    return food_price_rmb;
+                }
+
+                public void setFood_price_rmb(String food_price_rmb) {
+                    this.food_price_rmb = food_price_rmb;
+                }
+
+                public String getFood_des() {
+                    return food_des;
+                }
+
+                public void setFood_des(String food_des) {
+                    this.food_des = food_des;
+                }
+
+                public String getId() {
+                    return id;
+                }
+
+                public void setId(String id) {
+                    this.id = id;
                 }
 
                 public String getNum() {
@@ -224,22 +253,16 @@ public class MyOrderBean {
                     this.food_pay_way = food_pay_way;
                 }
 
-                public String getId() {
-                    return id;
+                public String getFood_name() {
+                    return food_name;
                 }
 
-                public void setId(String id) {
-                    this.id = id;
-                }
-
-                public String getFood_price() {
-                    return food_price;
-                }
-
-                public void setFood_price(String food_price) {
-                    this.food_price = food_price;
+                public void setFood_name(String food_name) {
+                    this.food_name = food_name;
                 }
             }
+
+
         }
     }
 }

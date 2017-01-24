@@ -20,6 +20,7 @@
     <string name="take_food_num">x%d</string>
     <string name="pay_money">%.2f RMB</string>
     <string name="trade_time">交易时间:%s</string>
+    <string name="hide_phone">*** **** %s</string>
 
     <!-- 充值 -->
     <string name="charge_amount">充值金额(CNY)</string>
@@ -30,17 +31,16 @@
     <string name="ok">确定</string>
     <string name="cancel">取消</string>
 
-    <!-- 静态变量 -->
-    <!--<string name="pay_way_gcb">vr9</string>-->
-    <!--<string name="pay_way_weixin">weixin</string>-->
-    <!--<string name="pay_way_cny">cny</string>-->
-    <!--<string name="weixin">weixin</string>-->
-    <!--<string name="jump_resource">jump resource</string>-->
-    <!--<string name="PAY_WAY_VR9">10</string>-->
-    <!--<string name="PAY_WAY_CNY">20</string>-->
-    <!-- machine list -->
     <string name="machine_list_name">%d号售餐机</string>
     <string name="machine_list_num">售货机编号：%s</string>
     <string name="machine_list_address">地址：%s</string>
     <string name="title_activity_baidu_map">BaiduMapActivity</string>
+
+    <string name="header_hint_refresh_normal">下拉刷新</string>
+    <string name="header_hint_refresh_ready">松开手指刷新</string>
+    <string name="header_hint_refresh_loading">刷新&#8230;</string>
+    <string name="header_hint_refresh_time">时间：</string>
+    <string name="footer_hint_load_normal">加载更多</string>
+    <string name="footer_hint_load_ready">松开手指加载更多</string>
+
 </resources>

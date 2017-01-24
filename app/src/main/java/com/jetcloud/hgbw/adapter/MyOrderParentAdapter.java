@@ -10,11 +10,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
-import com.jetcloud.hgbw.activity.QRCodeActivity;
+import com.jetcloud.hgbw.activity.MainActivity;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwStaticString;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.MyOrderBean;
+import com.jetcloud.hgbw.utils.Out;
+import com.jetcloud.hgbw.view.CusAlertDialog;
 import com.jetcloud.hgbw.view.MyListView;
 
 import org.xutils.view.annotation.ViewInject;
@@ -22,8 +24,7 @@ import org.xutils.x;
 
 import java.util.List;
 
-import static com.jetcloud.hgbw.app.HgbwStaticString.FOOD_OUT;
-import static com.jetcloud.hgbw.app.HgbwStaticString.ORDER_NUM;
+import static com.jetcloud.hgbw.app.HgbwStaticString.JUMP_RESOURCE;
 
 /***
  * Created by Cqing on 2016/12/30.
@@ -45,8 +46,17 @@ public class MyOrderParentAdapter extends BaseAdapter {
         this.context = context;
         this.data = data;
         app = (HgbwApplication) context.getApplicationContext();
-        //只有一个机器
-        machineInfo = app.getGroups().get(0);
+
+    }
+
+    public void setData(List<MyOrderBean.OrdersBean> data) {
+        this.data = data;
+        notifyDataSetChanged();
+    }
+
+    public void addNewData(List<MyOrderBean.OrdersBean> data) {
+        this.data.addAll(data);
+        notifyDataSetChanged();
     }
 
 
@@ -82,9 +92,9 @@ public class MyOrderParentAdapter extends BaseAdapter {
         foodInfoBeanList = ordersBean.getFood_info().getFoods();
         holder.lv_myorder_in.setAdapter(new MyOrderChildrenAdapter(context, foodInfoBeanList));
 
-        String machineName = machineInfo.getNumber();
-        String machineNum = machineName.substring(machineName.length() - 3, machineName.length());
-        holder.tv_machine_name.setText(String.format(context.getString(R.string.machine_name),"成都",machineNum));
+//        machineInfo.setNumber(ordersBean.getNumber());
+//        String machineName = machineInfo.getNumber();
+        holder.tv_machine_name.setText(ordersBean.getFood_info().getMechine_name());
         holder.tv_order_number.setText(String.format(context.getString(R.string.take_food_order_num), ordersBean.getNumber()));
         holder.tv_time.setText(String.format(context.getString(R.string.trade_time), ordersBean
                 .getCreate_time()));
@@ -94,20 +104,42 @@ public class MyOrderParentAdapter extends BaseAdapter {
         } else if (ordersBean.getPay_type().equals(HgbwStaticString.PAY_WAY_CNY)){
             holder.tv_total_price.setText(String.format(context.getString(R.string.take_food_total), ordersBean.getCost_real()));
         }
+        String foodStateText;
+        if (ordersBean.getState().equals("1")) {
+            holder.tv_food_type.setTextColor(context.getResources().getColor(R.color.red));
+            foodStateText = "待取餐";
+        } else {
+            foodStateText = "已取餐";
+            holder.tv_food_type.setTextColor(context.getResources().getColor(R.color.gray));
+            holder.btn_go_to_take_food.setVisibility(View.GONE);
+        }
+        holder.tv_food_type.setText(foodStateText);
 
         holder.btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Out.Toast(context, "未开通");
             }
         });
         holder.btn_go_to_take_food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, QRCodeActivity.class);
-                intent.putExtra(FOOD_OUT, ordersBean.getFood_info().getFoodd_out());
-                intent.putExtra(ORDER_NUM, ordersBean.getNumber());
-                context.startActivity(intent);
+                if (ordersBean.getState().equals("1")){
+                    Intent intent = new Intent(context, MainActivity.class);
+                    intent.putExtra(JUMP_RESOURCE, MyOrderParentAdapter.class.getSimpleName());
+                    app.removeAll();
+                    context.startActivity(intent);
+                } else {
+                    final CusAlertDialog dialog = new CusAlertDialog(context);
+                    dialog.setTitle("该商品已被取餐");
+                    dialog.setPositiveButton("确定", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            dialog.dismiss();
+                        }
+                    });
+                    dialog.show();
+                }
             }
         });
         return convertView;
@@ -118,8 +150,8 @@ public class MyOrderParentAdapter extends BaseAdapter {
         TextView tv_machine_name;
         @ViewInject(R.id.tv_order_number)
         TextView tv_order_number;
-        @ViewInject(R.id.tv_btn_apply)
-        TextView tv_btn_apply;
+        @ViewInject(R.id.tv_food_type)
+        TextView tv_food_type;
         @ViewInject(R.id.lv_myorder_in)
         MyListView lv_myorder_in;
         @ViewInject(R.id.tv_time)

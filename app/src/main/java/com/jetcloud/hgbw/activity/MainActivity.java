@@ -17,6 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
+import com.jetcloud.hgbw.adapter.MyOrderParentAdapter;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwStaticString;
 import com.jetcloud.hgbw.fragment.HomeFragment;
@@ -112,6 +113,20 @@ public class MainActivity extends BaseActivity {
         MainActivity.main_bg.setBackgroundResource(R.drawable.mine_bg);
     }
 
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        ShopCarUtil.ChangeCorner(this, SharedPreferenceUtils.getShopCarNumber());
+//    }
+//    Handler handler = new Handler(){
+//        @Override
+//        public boolean sendMessageAtTime(Message msg, long uptimeMillis) {
+//            if (msg.what == 1) {
+//                ShopCarUtil.ChangeCorner(MainActivity.this, SharedPreferenceUtils.getShopCarNumber());
+//            }
+//            return true;
+//        }
+//    };
     @Override
     protected void loadData() {
         //如果来自 支付成功
@@ -128,7 +143,7 @@ public class MainActivity extends BaseActivity {
             currentSelect = 1;
 
 
-        } else if (jumpResource.equals(PayNextActivity.class.getSimpleName())) {
+        } else if (jumpResource.equals(PayNextActivity.class.getSimpleName()) || jumpResource.equals(MyOrderParentAdapter.class.getSimpleName())) {
             if (HgbwApplication.getTakeFoodFragment() == null) {
                 HgbwApplication.setTakeFoodFragment(TakeFoodFragment.newInstance());
             }
@@ -144,7 +159,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private static final String SCHEME = "package";
-    private static boolean isPermissionRequested = false;
+    public static boolean isPermissionRequested = false;
 
     private void requestPermission() {
         if (Build.VERSION.SDK_INT >= 23 && !isPermissionRequested) {
@@ -157,12 +172,12 @@ public class MainActivity extends BaseActivity {
 //					Out.Toast(mainActivity, "请打开定位权限");
 
                 PackageManager pm = mainActivity.getPackageManager();
-                CusAlertDialog alert;
+                final CusAlertDialog alert;
 //						Out.Toast(mainActivity, "没有这个权限");
                 alert = new CusAlertDialog(mainActivity);
                 alert.setTitle("操作提示");
-                alert.setContent("请打开权限后再尝试");
-
+                alert.setContent("请打开定位权限后再尝试");
+                alert.canceledOnTouchOutside();
                 alert.setPositiveButton("去开启",
                         new View.OnClickListener() {
                             @Override
@@ -170,18 +185,19 @@ public class MainActivity extends BaseActivity {
                                 Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                                 Uri uri = Uri.fromParts(SCHEME, getApplication().getPackageName(), null);
                                 intent.setData(uri);
+                                alert.dismiss();
+                                MainActivity.this.finish();
                                 startActivity(intent);
-                                finish();
                             }
                         });
                 alert.show();
             }
 
-            if (permissions.size() == 0) {
-                return;
-            } else {
-                requestPermissions(permissions.toArray(new String[permissions.size()]), 0);
-            }
+//            if (permissions.size() == 0) {
+//                return;
+//            } else {
+//                requestPermissions(permissions.toArray(new String[permissions.size()]), 0);
+//            }
         }
 
     }

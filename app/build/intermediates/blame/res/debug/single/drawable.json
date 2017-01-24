@@ -200,6 +200,10 @@
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\layout_list_start_pic.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\layout_list_start_pic.xml"
+    },
+    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
@@ -320,12 +324,12 @@
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
-    },
-    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bike_nav_bg.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\bike_nav_bg.xml"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",

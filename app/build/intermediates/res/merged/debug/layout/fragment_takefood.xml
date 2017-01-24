@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/main_bg"
-    android:orientation="vertical" >
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/main_bg"
+              android:orientation="vertical">
 
-    <include layout="@layout/top_bar" />
+    <include layout="@layout/top_bar"/>
 
-    <ScrollView
-        android:id="@+id/sl_takefood"
+    <com.jetcloud.hgbw.view.widget.XListView
+        android:id="@+id/xlv_takefood"
+        style="@style/MyListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"/>
+    <TextView
+        android:id="@+id/tv_empty"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="你还未登陆"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:background="@color/gray_light"
+        android:textColor="@color/blue"
+        />
 
-            <com.jetcloud.hgbw.view.MyListView
-                android:id="@+id/lv_takefood"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:divider="#ffffff"
-                android:dividerHeight="0dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/line" />
-        </LinearLayout>
-    </ScrollView>
 
 </LinearLayout>

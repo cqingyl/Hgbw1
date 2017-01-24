@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +33,7 @@ public class MyWalletActivity extends BaseActivity {
     private final static String TAG_LOG = MyWalletActivity.class.getSimpleName();
     private CustomProgressDialog progress;
     private TextView tv_btn_ok, tv_btn_no;
+    private LinearLayout activity_my_wallet;
     private ListView lv_card;
     private ArrayList<String> list;
     private String tradeAccount;
@@ -51,6 +53,9 @@ public class MyWalletActivity extends BaseActivity {
         tv_btn_ok = getViewWithClick(R.id.tv_btn_ok);
         tv_btn_no = getViewWithClick(R.id.tv_btn_no);
         lv_card = getView(R.id.lv_card);
+
+        activity_my_wallet = getView(R.id.activity_my_wallet);
+        activity_my_wallet.setBackgroundResource(R.drawable.mine_bg);
         /****/
 //        SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.UNBINDING_STATE);
 //        getNetData();

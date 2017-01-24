@@ -153,16 +153,17 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     /**
      * fragment 采用 add(),hide()方式，它的生命周期依赖于activity，so当切换fragment时onResume只会实现一次，
      * so，当其他fragment变化时，点会此个fragment，此个fragment 会做出相应的变化
-     * onHiddenChanged() 在initRootView（）之前执行,在onCreate()之后执行
+     * onHiddenChanged() 在 触发isHide() 后执行
      */
 
     @Override
     public void onHiddenChanged(boolean hidden) {
-//        if (!isFirst)
-//        Log.i(TAG, "S onHiddenChanged: " + hidden );
+        if (!isFirst) {
+            Log.i(TAG_LOG, "3 onHiddenChanged: " + hidden);
+        }
         if (hidden && !isFirst) {
             SharedPreferenceUtils.setShopCarNumber(total);
-//            Log.i(TAG, "S onHiddenChanged: " + total);
+            Log.i(TAG_LOG, "S onHiddenChanged: " + total);
         } else if (!hidden && !isFirst) {
             if (total != SharedPreferenceUtils.getShopCarNumber()){
                 total = SharedPreferenceUtils.getShopCarNumber();
@@ -177,26 +178,21 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
             initData();
             isEmptyCar();
         }
+        isFirst = false;
         super.onHiddenChanged(hidden);
     }
 
     @Override
     public void onResume() {
-
+        Log.i(TAG_LOG, "3 onResume: ");
         total = SharedPreferenceUtils.getShopCarNumber();
         //购物车角标
         ShopCarUtil.ChangeCorner(getActivity(), total);
         isEmptyCar();
-//        Log.i(TAG, "onResume: " + total);
-        isFirst = false;
+//        Log.i(TAG_LOG, "onResume: " + total);
         super.onResume();
     }
 
-    @Override
-    public void onPause() {
-        SharedPreferenceUtils.setShopCarNumber(total);
-        super.onPause();
-    }
 
     /**
      * 事件
@@ -209,8 +205,6 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
                 break;
             case R.id.tv_go_to_pay:
                 //结算
-                //弹出dialog
-                //确定后清空购物车
                 if (totalCount == 0) {
                     Toast.makeText(getActivity(), "请选择要支付的商品", Toast.LENGTH_LONG).show();
                     return;
@@ -261,6 +255,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         int countNum = product.getP_local_number();
         product.setP_local_number(++countNum);
         ShopCarUtil.ChangeCorner(getActivity(), ++total);
+        SharedPreferenceUtils.setShopCarNumber(total);
         Log.i(TAG, "doIncrease: " + total);
         isEmptyCar();
         try {
@@ -289,6 +284,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
             product.setP_local_number(--countNum);
 //            ShopCarUtil.decCornerNum(getActivity(),1);
             ShopCarUtil.ChangeCorner(getActivity(), --total);
+            SharedPreferenceUtils.setShopCarNumber(total);
             isEmptyCar();
             try {
                 app.db.saveOrUpdate(product);
@@ -326,6 +322,7 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
             total = 0;
         }
         ShopCarUtil.ChangeCorner(getActivity(), total);
+        SharedPreferenceUtils.setShopCarNumber(total);
         isEmptyCar();
         MachineInfo group = groups.get(groupPosition);
         List<ShopCarInfo> childs = children.get(group.getNumber());

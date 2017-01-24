@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray_light"
-
-
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
     android:orientation="vertical"
     tools:context="com.jetcloud.hgbw.activity.QRCodeActivity">
 
@@ -36,7 +36,7 @@
             android:layout_gravity="bottom|center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="扫描当前二维码进行转账" />
+            android:text="扫描当前二维码进行取餐" />
     </LinearLayout>
     <!--<Button-->
 

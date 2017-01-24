@@ -55,7 +55,7 @@ public class MyWalletAdapter extends BaseAdapter {
         } else {
             holder = (WalletViewHolder) view.getTag();
         }
-        holder.tv_cardnumber.setText(mData.get(i));
+        holder.tv_cardnumber.setText(context.getString(R.string.hide_phone, mData.get(i).substring(7)));
         return view;
     }
 

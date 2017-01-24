@@ -1,8 +1,12 @@
 package com.jetcloud.hgbw.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.jetcloud.hgbw.R;
@@ -16,27 +20,40 @@ import org.xutils.ex.HttpException;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
-public class LoadingActivity extends BaseActivity {
+public class LoadingActivity extends Activity {
 
     private final static String TAG_LOG = LoadingActivity.class.getSimpleName();
-
+    private final static int MSG_FINISH_LAUNCHERACTIVITY = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_loading);
         super.onCreate(savedInstanceState);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        mHandler.sendEmptyMessageDelayed(MSG_FINISH_LAUNCHERACTIVITY, 3000);
+//        doGoOn();
+        setContentView(R.layout.activity_loading);
+
     }
 
-    @Override
-    protected void initView() {
-        doGoOn();
 
-    }
-
-    @Override
-    protected void loadData() {
-
-    }
-
+    public Handler mHandler = new Handler () {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case MSG_FINISH_LAUNCHERACTIVITY:
+                    jumpMainActivity();
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
     private void doGoOn() {
         new Thread() {
             @Override
@@ -47,7 +64,7 @@ public class LoadingActivity extends BaseActivity {
                     e.printStackTrace();
                 }
 //                if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)) {
-                    jumpMainActivity();
+//                    jumpMainActivity();
 //                }else {
 //                    getLoginRequest();
 //                }
@@ -136,6 +153,7 @@ public class LoadingActivity extends BaseActivity {
         JSONObject jsonObject = new JSONObject(result);
         if (jsonObject.getString("status").equals("success")) {
             SharedPreferenceUtils.setIdentity(jsonObject.getString("identity"));
+            Log.i(TAG_LOG, "getDataFromJson: " + jsonObject.getString("identity"));
             jumpMainActivity();
         }
 

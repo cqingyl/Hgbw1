@@ -14,10 +14,7 @@
     tools:context="com.jetcloud.hgbw.activity.MyOrderActivity">
 
     <include layout="@layout/top_bar"/>
-    <View android:layout_width="match_parent"
-          android:layout_height="1dp"
-          android:layout_marginTop="8dp"
-          android:background="@color/line"/>
+
     <RadioGroup
         android:visibility="gone"
         android:id="@+id/rdo_group"
@@ -81,10 +78,21 @@
     <View android:layout_width="match_parent"
           android:layout_height="1dp"
           android:background="@color/line"/>
-    <ListView
+    <com.jetcloud.hgbw.view.widget.XListView
         style="@style/MyListView"
-        android:id="@+id/lv_my_order_out"
+        android:id="@+id/xlv_my_order_out"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
+        />
+    <TextView
+        android:id="@+id/tv_empty"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="你还未登陆"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:background="@color/gray_light"
+        android:textColor="@color/blue"
         />
 </LinearLayout>

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\fanhui.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-ldpi\\fanhui.png"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\cicle_banner_dian_blur.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-ldpi\\cicle_banner_dian_blur.png"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\sousuo.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-ldpi\\sousuo.png"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\cicle_banner_dian_focus.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-ldpi\\cicle_banner_dian_focus.png"
+    }
+]

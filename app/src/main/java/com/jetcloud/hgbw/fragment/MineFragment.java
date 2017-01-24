@@ -136,19 +136,22 @@ public class MineFragment extends BaseFragment {
 
     @Override
     public void onResume() {
-        isFirst = false;
         if (!isHideBtnResiterAndLogin())
             getUserInfoRequest();
         super.onResume();
+        Log.i(TAG_LOG, "4 onResume: ");
     }
 
     @Override
     public void onHiddenChanged(boolean hidden) {
-        Log.i(TAG_LOG, "H onHiddenChanged: " + hidden);
+        if (!isFirst) {
+            Log.i(TAG_LOG, "4 onHiddenChanged: " + hidden);
+        }
         if (!hidden && !isFirst) {
             if (!isHideBtnResiterAndLogin())
                 getUserInfoRequest();
         }
+        isFirst = false;
         super.onHiddenChanged(hidden);
     }
 
@@ -561,10 +564,12 @@ public class MineFragment extends BaseFragment {
         UserBean userBean = gson.fromJson(result, UserBean.class);
 
         tv_nick.setText(userBean.getNickname());
-        ImageLoader.getInstance().displayImage(
-                URLDecoder.decode(HgbwUrl.HOME_URL +  userBean.getPic()),
-                civ_head,
-                ImageLoaderCfg.options2);
+        if (!userBean.getPic().isEmpty()) {
+            ImageLoader.getInstance().displayImage(
+                    URLDecoder.decode(HgbwUrl.HOME_URL +  userBean.getPic()),
+                    civ_head,
+                    ImageLoaderCfg.options2);
+        }
         String tradeAccount = userBean.getTradebook_acct();
         if (tradeAccount != null && !tradeAccount.isEmpty()) {
             SharedPreferenceUtils.setTradeAccount(tradeAccount);

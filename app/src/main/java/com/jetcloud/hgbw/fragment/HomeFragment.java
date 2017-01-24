@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -38,12 +37,12 @@ import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.utils.ShopCarUtil;
 import com.jetcloud.hgbw.utils.TakeInShopCarAnim;
+import com.jetcloud.hgbw.view.CusAlertDialogWithTwoBtn;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 import com.jetcloud.hgbw.view.ImageCycleView;
 import com.jetcloud.hgbw.view.ImageCycleView.ImageCycleViewListener;
 import com.jetcloud.hgbw.view.MyListView;
 import com.jetcloud.hgbw.view.ObservableScrollView;
-import com.jetcloud.hgbw.view.ScrollViewListener;
 import com.wx.wheelview.widget.WheelView;
 
 import org.json.JSONException;
@@ -60,6 +59,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.content.ContentValues.TAG;
 import static com.jetcloud.hgbw.app.HgbwStaticString.FOOD_ID;
 import static com.jetcloud.hgbw.app.HgbwStaticString.MACHINE;
 import static com.jetcloud.hgbw.app.HgbwStaticString.MACHINE_LIST;
@@ -116,13 +116,15 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     private static final int CHOOSE_HOT_FOOD = 1;
     private static final int CHOOSE_SET_MEAL = 2;
     private static final int CHOOSE_DRINK = 3;
-
+    private int scrollX;
+    private int scrollY;
     private HgbwApplication app;
     private int total;
+    private boolean isFirst = true;
 //坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑
     /**
      * 轮播图点击事件
-    * */
+     */
     private ImageCycleViewListener mAdCycleViewListener = new ImageCycleViewListener() {
 
         @Override
@@ -137,7 +139,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
             }
         }
     };
-//坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑
+    //坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑
     // banner图数据
     private ArrayList<String> mImageUrl = new ArrayList<String>();
 
@@ -156,41 +158,40 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     @Override
     public void onHiddenChanged(boolean hidden) {
-//        Log.i(TAG, "H onHiddenChanged: " + hidden);
-        if (hidden) {
-            SharedPreferenceUtils.setShopCarNumber(total);
-//            Log.i(TAG, "H onHiddenChanged: " + total);
-        } else {
-            //购物车角标
-            total = SharedPreferenceUtils.getShopCarNumber();
-            ShopCarUtil.ChangeCorner(getActivity(), total);
-//            Log.i(TAG, "H onHiddenChanged: " + total);
+    if (!isFirst) {
+        Log.i(TAG_LOG, "1 onHiddenChanged: " + hidden);
+    }
+        if (!hidden && !isFirst) {
+            ShopCarUtil.ChangeCorner(getActivity(), SharedPreferenceUtils.getShopCarNumber());
+//            mHandler.postDelayed(mScrollView, 100);
+//            ll_top_nav.setBackgroundResource(R.drawable.btn);
+//            ll_location.setBackgroundResource(R.drawable.btn);
+//            ll_search.setBackgroundResource(R.drawable.btn);
+//            ll_choose_machine.setBackgroundResource(R.drawable.btn);
         }
+        isFirst = false;
         super.onHiddenChanged(hidden);
     }
-
+//    Handler  mHandler = new Handler();
+//    private Runnable mScrollView = new Runnable(){
+//        @Override
+//        public void run() {
+//            sv_all_layout.scrollTo(scrollX, scrollY);//改变滚动条的位置  
+//        }
+//    };
     @Override
     public void onResume() {
-
-
-        total = SharedPreferenceUtils.getShopCarNumber();
-        //购物车角标
-        ShopCarUtil.ChangeCorner(getActivity(), total);
-//        Log.i(TAG, "onResume: " + total);
+//        Log.i(TAG_LOG, "1 onResume: ");
+        ShopCarUtil.ChangeCorner(getActivity(), SharedPreferenceUtils.getShopCarNumber());
+//        mHandler.postDelayed(mScrollView, 100);
+//        ll_top_nav.setBackgroundResource(R.drawable.btn);
+//        ll_location.setBackgroundResource(R.drawable.btn);
+//        ll_search.setBackgroundResource(R.drawable.btn);
+//        ll_choose_machine.setBackgroundResource(R.drawable.btn);
         super.onResume();
     }
 
-    @Override
-    public void onPause() {
-        SharedPreferenceUtils.setShopCarNumber(total);
-        super.onPause();
-    }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[]
-            grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
 
     @Override
     protected void initView() {
@@ -202,27 +203,29 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 //        ll_choose_machine = getView(R.id.ll_choose_machine);
 //        tv_machine_name = getView(R.id.tv_machine_name);
 
-        /**滚动时设置透明度*/
-        sv_all_layout.setScrollViewListener(new ScrollViewListener() {
-            @Override
-            public void onScrollChanged(ObservableScrollView scrollView, int l, int t, int oldl, int oldt, boolean isStop) {
-//                Log.i("log", "onScrollChanged --> l:" + l + "t: " + t + "oldl :" + oldl + "oldt:" + oldt);
-                if (isStop) {
-                    ll_top_nav.setBackgroundResource(R.drawable.btn);
-                    ll_location.setBackgroundResource(R.drawable.btn);
-                    ll_search.setBackgroundResource(R.drawable.btn);
-                    ll_choose_machine.setBackgroundResource(R.drawable.btn);
-                } else {
-                    ll_top_nav.setBackgroundResource(R.color.transparent);
-                    ll_location.setBackgroundResource(R.color.transparent);
-                    ll_search.setBackgroundResource(R.color.transparent);
-                    ll_choose_machine.setBackgroundResource(R.color.transparent);
-                }
+//        /**滚动时设置透明度*/
+//        sv_all_layout.setScrollViewListener(new ScrollViewListener() {
+//            @Override
+//            public void onScrollChanged(ObservableScrollView scrollView, int l, int t, int oldl, int oldt, boolean
+//                    isStop) {
+//                if (isStop) {
+//                    ll_top_nav.setBackgroundResource(R.drawable.btn);
+//                    ll_location.setBackgroundResource(R.drawable.btn);
+//                    ll_search.setBackgroundResource(R.drawable.btn);
+//                    ll_choose_machine.setBackgroundResource(R.drawable.btn);
+//                } else {
+//                    ll_top_nav.setBackgroundResource(R.color.transparent);
+//                    ll_location.setBackgroundResource(R.color.transparent);
+//                    ll_search.setBackgroundResource(R.color.transparent);
+//                    ll_choose_machine.setBackgroundResource(R.color.transparent);
+//                }
+//                scrollX = l;
+//                scrollY = t;
 //                Log.i(TAG_LOG, "onScrollChanged: " + t + " " + oldt);
 //                Log.i(TAG_LOG, "onScrollChanged: " + isStop);
-
-            }
-        });
+//
+//            }
+//        });
         adapter = new HomeFragmentAdapter(getActivity());
         adapter.setNumberInterface(HomeFragment.this);
         lv_home.setAdapter(adapter);
@@ -293,8 +296,11 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                         @Override
                         public void run() {
                             //        改变购物车角标
-                            ShopCarUtil.ChangeCorner(getActivity(), ++total);
-//                            SharedPreferenceUtils.setShopCarNumber(total);
+                            int oldTotalNum = SharedPreferenceUtils.getShopCarNumber();
+                            Log.i(TAG, "run: "+ oldTotalNum);
+                            int newTotalNum = ++oldTotalNum  ;
+                            SharedPreferenceUtils.setShopCarNumber(newTotalNum);
+                            ShopCarUtil.ChangeCorner(getActivity(), newTotalNum);
                         }
                     });
                 } catch (DbException e) {
@@ -329,7 +335,6 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     }
 
 
-
     /**
      * 点击导航栏
      */
@@ -356,10 +361,12 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
      */
     @Override
     public void myLocation(double mylongitude, double mylatitude, String city, String street) {
-//        Log.i(TAG_LOG, "myLocation: " + mylatitude);
+//        Log.i(TAG_LOG, "myLocation: " + "\n" + mylatitude + "\n" + mylongitude);
         if (city != null) {
             tv_city.setText(city);
-            loadMachineList(mylongitude, mylatitude);
+            if (MainActivity.isPermissionRequested) {
+                loadMachineList(mylongitude, mylatitude);
+            }
         } else {
 
         }
@@ -512,9 +519,39 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                     public void onClick(View v) {
                         // TODO Auto-generated method stub
                         System.out.println(wheelView.getCurrentPosition());
-                        MachineInfo machineInfo = data.get(wheelView.getCurrentPosition());
-                        machineNum = machineInfo.getNumber();
-                        getFoodByMachine(CHOOSE_NEW_FOOD, machineNum, machineInfo);
+                        final MachineInfo machineInfo = data.get(wheelView.getCurrentPosition());
+                        if (!machineNum.equals(machineInfo.getNumber())) {
+                            machineNum = machineInfo.getNumber();
+
+                            final CusAlertDialogWithTwoBtn alertDialog = new CusAlertDialogWithTwoBtn(getActivity());
+                            alertDialog.setTitle("警告");
+                            alertDialog.setContent("你的购物车会消失");
+                            alertDialog.setPositiveButton("确定", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    getFoodByMachine(CHOOSE_NEW_FOOD, machineNum, machineInfo);
+                                    window.dismiss();
+                                    alertDialog.dismiss();
+                                    //删除购物车
+                                    try {
+                                        app.db.delete(ShopCarInfo.class);
+                                        app.db.delete(MachineInfo.class);
+                                        total = 0;
+                                        ShopCarUtil.ChangeCorner(getActivity(), total);
+                                        SharedPreferenceUtils.setShopCarNumber(total);
+                                    } catch (DbException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            });
+                            alertDialog.setNegativeButton("取消", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    alertDialog.dismiss();
+                                }
+                            });
+                            alertDialog.show();
+                        }
                         window.dismiss();
                     }
                 });
@@ -721,7 +758,8 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         MachineBannerBean machineBannerBean = gson.fromJson(result, MachineBannerBean.class);
         bannerBeanList = machineBannerBean.getBanner();
         for (int i = 0; i < bannerBeanList.size(); i++) {
-//        Log.i(TAG_LOG, "getBannerFromJson: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + bannerBeanList.get(i).getUrl());
+//        Log.i(TAG_LOG, "getBannerFromJson: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + bannerBeanList
+// .get(i).getUrl());
             MachineBannerBean.BannerBean bannerBean = bannerBeanList.get(i);
             String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + bannerBean.getPic());
             Log.i(TAG_LOG, "getBannerFromJson imgPath: " + imgPath);

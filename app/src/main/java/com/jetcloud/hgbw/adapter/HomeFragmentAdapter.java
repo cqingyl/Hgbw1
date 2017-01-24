@@ -21,6 +21,7 @@ import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
+import com.jetcloud.hgbw.view.CusAlertDialog;
 
 import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ViewInject;
@@ -100,12 +101,24 @@ public class HomeFragmentAdapter extends BaseAdapter {
             @Override
             public void onClick(View arg0) {
                 // TODO Auto-generated method stub
-                if (mHolderClickListener != null) {
-                    int[] start_location = new int[2];
-                    img_food.getLocationInWindow(start_location);//获取点击商品图片的位置
-                    Drawable drawable = img_food.getDrawable();//复制一个新的商品图标
-                    mHolderClickListener.onHolderClick(drawable, start_location);
-                    numberInterface.addGoodNumber(dataBean);
+                if (dataBean.getNum() > 0) {
+                    if (mHolderClickListener != null) {
+                        int[] start_location = new int[2];
+                        img_food.getLocationInWindow(start_location);//获取点击商品图片的位置
+                        Drawable drawable = img_food.getDrawable();//复制一个新的商品图标
+                        mHolderClickListener.onHolderClick(drawable, start_location);
+                        numberInterface.addGoodNumber(dataBean);
+                    }
+                } else {
+                    final CusAlertDialog cusAlertDialog = new CusAlertDialog(context);
+                    cusAlertDialog.setTitle("已经没这个餐了");
+                    cusAlertDialog.setPositiveButton("确定", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            cusAlertDialog.dismiss();
+                        }
+                    });
+                    cusAlertDialog.show();
                 }
             }
         });

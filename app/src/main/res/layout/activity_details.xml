@@ -3,14 +3,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
-
+                android:id="@+id/activity_details"
+                android:clipToPadding="true"
+                android:fitsSystemWindows="true"
                 tools:context="com.jetcloud.hgbw.activity.DetailsActivity">
-    <!--android:clipToPadding="true"-->
-    <!--android:fitsSystemWindows="true"-->
 
     <LinearLayout
         android:id="@+id/ll_nav_bottom"
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottom_bar_h"
         android:gravity="center"
@@ -45,34 +45,34 @@
                 android:textSize="16sp"
                 android:textStyle="bold"/>
             <!--<ImageView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:src="@drawable/vr9"-->
-                <!--/>-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/vr9"-->
+            <!--/>-->
 
             <!--<TextView-->
-                <!--android:id="@+id/tv_price_vr9"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginLeft="3dp"-->
-                <!--android:text="0.03币"-->
-                <!--android:textColor="@color/bottom_nav_text_color_check"-->
-                <!--android:textSize="@dimen/text_big" />-->
+            <!--android:id="@+id/tv_price_vr9"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="3dp"-->
+            <!--android:text="0.03币"-->
+            <!--android:textColor="@color/bottom_nav_text_color_check"-->
+            <!--android:textSize="@dimen/text_big" />-->
             <!--<ImageView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginLeft="3dp"-->
-                <!--android:src="@drawable/cny"-->
-                <!--/>-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="3dp"-->
+            <!--android:src="@drawable/cny"-->
+            <!--/>-->
 
             <!--<TextView-->
-                <!--android:id="@+id/tv_price_cny"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginLeft="3dp"-->
-                <!--android:text="60.00元"-->
-                <!--android:textColor="@color/bottom_nav_text_color_check"-->
-                <!--android:textSize="@dimen/text_big" />-->
+            <!--android:id="@+id/tv_price_cny"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="3dp"-->
+            <!--android:text="60.00元"-->
+            <!--android:textColor="@color/bottom_nav_text_color_check"-->
+            <!--android:textSize="@dimen/text_big" />-->
         </LinearLayout>
 
 
@@ -108,15 +108,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <include
             android:id="@+id/include"
             layout="@layout/top_bar"/>
         <View android:layout_height="1dp"
-            android:layout_width="match_parent"
-            android:background="@color/line"/>
+              android:layout_width="match_parent"
+              android:background="@color/line"/>
         <ScrollView
             android:visibility="gone"
             android:id="@+id/sv_all_layout"
@@ -170,7 +169,6 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
                         android:src="@drawable/phone"/>
                     <TextView
                         android:id="@+id/tv_phone"
@@ -216,16 +214,17 @@
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
-            <TextView
-                android:id="@+id/tv_empty"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="未找到该商品"
-                android:textSize="18sp"
-                android:gravity="center"
-                android:textColor="@color/blue"
-                />
+        <TextView
+            android:id="@+id/tv_empty"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="未找到该商品"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="@color/gray_light"
+            android:textColor="@color/blue"
+            />
     </LinearLayout>
 
 </RelativeLayout>

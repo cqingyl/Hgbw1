@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3B3B3B</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#eb4f38</color>
 
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black_light">#999999</color>
+    <color name="black_deep">#000000</color>
+    <color name="black80">#80000000</color>
+    <color name="green_deep">#18b997</color>
+    <color name="green_my_work">#4ae298</color>
+    <color name="gray_light">#EEEEEE</color>
+    <color name="gray_deep">#aaaaaa</color>
+    <color name="blue_light">#52c0ff</color>
+    <color name="blue_deep">#0d86cd</color>
+    <color name="blue_my_work">#66c5ed</color>
+    <color name="red_deep">#ff2121</color>
+    <color name="red_my_work">#ff8080</color>
+    <color name="yellow_my_work">#faca55</color>
     <!-- 亮黄色 -->
     <color name="yellow">#ffff00</color>
     <!-- 黄色 -->
@@ -384,6 +399,10 @@
 
     <!-- 底部导航字体颜色 -->
     <!--  -->
+
+    <!-- 底部导航字体颜色 -->
+
+    <color name="bottom_nav_text_color_check_no">#50eb4f38</color>
     <color name="bottom_nav_text_color">#333333</color>
     <color name="bottom_nav_text_color_check">#eb4f38</color>
 
@@ -393,4 +412,12 @@
     <!-- 登录页btn -->
     <color name="login_btn_no">#0083b3</color>
     <color name="login_btn_ok">#00bbff</color>
+
+    <color name="title_color">#000</color>
+
+   
+
+
+
+
 </resources>

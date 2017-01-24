@@ -64,11 +64,12 @@ public class TakeFoodChildrenAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
         holder.tv_food_title.setText(data.get(i).getFood_name());
-        double price = Double.valueOf(data.get(i).getFood_price());
+        double priceGcb = Double.valueOf(data.get(i).getFood_price_vr9());
+        double priceRmb = Double.valueOf(data.get(i).getFood_price_rmb());
         if (data.get(i).getFood_pay_way().equals(HgbwStaticString.PAY_WAY_VR9)) {
-            holder.tv_money.setText(context.getString(R.string.gcb_display, price));
+            holder.tv_money.setText(context.getString(R.string.gcb_display, priceGcb));
         } else {
-            holder.tv_money.setText(context.getString(R.string.rmb_display, price));
+            holder.tv_money.setText(context.getString(R.string.rmb_display, priceRmb));
         }
         int num = Integer.parseInt(data.get(i).getNum());
         holder.tv_num.setText(context.getString(R.string.take_food_num, num));

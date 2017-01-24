@@ -84,12 +84,20 @@
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xxhdpi\\mark_popu.png"
     },
     {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\arrow_down.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xxhdpi\\arrow_down.png"
+    },
+    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\newfood.png",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xxhdpi\\newfood.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\empty_cart.png",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xxhdpi\\empty_cart.png"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\arrow_up.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xxhdpi\\arrow_up.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
@@ -380,12 +388,12 @@
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xxhdpi\\mima.png"
     },
     {
-        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
-    },
-    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\mark.png",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xxhdpi\\mark.png"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
+        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\dingwei.png",

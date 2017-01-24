@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,6 +49,7 @@ public class ForgotPasswordActivity extends BaseActivity {
     private boolean isCheck = false;
     private MyEditeListener editeListener ;
     private CustomProgressDialog progress;
+    private LinearLayout activity_forget_password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -75,6 +77,10 @@ public class ForgotPasswordActivity extends BaseActivity {
         cb_agree=getView(R.id.cb_agree);
         bt_register=getViewWithClick(R.id.bt_register);
         tv_getver=getViewWithClick(R.id.tv_getver);
+
+        activity_forget_password = getView(R.id.activity_forget_password);
+        activity_forget_password.setBackgroundResource(R.drawable.mine_bg);
+
         //chebox监听
         cb_agree.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
