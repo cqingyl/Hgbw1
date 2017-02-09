@@ -163,9 +163,6 @@ public class MainActivity extends BaseActivity {
 
     private void requestPermission() {
         if (Build.VERSION.SDK_INT >= 23 && !isPermissionRequested) {
-
-            isPermissionRequested = true;
-
             ArrayList<String> permissions = new ArrayList<>();
             if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 //					permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
@@ -191,13 +188,37 @@ public class MainActivity extends BaseActivity {
                             }
                         });
                 alert.show();
+            } else {
+                isPermissionRequested = true;
             }
-
-//            if (permissions.size() == 0) {
-//                return;
-//            } else {
-//                requestPermissions(permissions.toArray(new String[permissions.size()]), 0);
-//            }
+        } else {
+            PackageManager pm = getPackageManager();
+            boolean permission = (PackageManager.PERMISSION_GRANTED ==
+                    pm.checkPermission("android.permission.ACCESS_FINE_LOCATION", "com.jetcloud.hgbw"));
+            if (permission) {
+                isPermissionRequested = true;
+            }else {
+                isPermissionRequested = false;
+                final CusAlertDialog alert;
+//						Out.Toast(mainActivity, "没有这个权限");
+                alert = new CusAlertDialog(mainActivity);
+                alert.setTitle("操作提示");
+                alert.setContent("请打开定位权限后再尝试");
+                alert.canceledOnTouchOutside();
+                alert.setPositiveButton("去开启",
+                        new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                                Uri uri = Uri.fromParts(SCHEME, getApplication().getPackageName(), null);
+                                intent.setData(uri);
+                                alert.dismiss();
+                                MainActivity.this.finish();
+                                startActivity(intent);
+                            }
+                        });
+                alert.show();
+            }
         }
 
     }

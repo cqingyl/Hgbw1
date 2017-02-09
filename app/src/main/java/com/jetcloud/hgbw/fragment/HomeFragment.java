@@ -129,14 +129,16 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
         @Override
         public void onImageClick(int position, View imageView) {
-            if (bannerBeanList.get(position).getBtype().equals("A")) {
-                String foodId = String.valueOf(bannerBeanList.get(position).getUrl());
-                Log.i("log", "onImageClick: " + foodId);
-                Intent intent = new Intent(getActivity(), DetailsActivity.class);
-                intent.putExtra(MACHINE, mechinesBean);
-                intent.putExtra(FOOD_ID, foodId);
-                startActivity(intent);
-            }
+            Log.i(TAG, "onImageClick: " + position);
+                position = position % bannerBeanList.size();
+                if (bannerBeanList.get(position).getBtype().equals("A")) {
+                    String foodId = String.valueOf(bannerBeanList.get(position).getUrl());
+                    Log.i("log", "onImageClick: " + foodId);
+                    Intent intent = new Intent(getActivity(), DetailsActivity.class);
+                    intent.putExtra(MACHINE, mechinesBean);
+                    intent.putExtra(FOOD_ID, foodId);
+                    startActivity(intent);
+                }
         }
     };
     //坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑
@@ -240,9 +242,10 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                 anim.doAnim(drawable, start_location);
             }
         });
-
-        BaiduLocation.setMyLocationListener(this);
-        BaiduLocation.getLocation(app);
+        if (MainActivity.isPermissionRequested) {
+            BaiduLocation.setMyLocationListener(this);
+            BaiduLocation.getLocation(app);
+        }
     }
 
     @Override
@@ -361,12 +364,10 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
      */
     @Override
     public void myLocation(double mylongitude, double mylatitude, String city, String street) {
-//        Log.i(TAG_LOG, "myLocation: " + "\n" + mylatitude + "\n" + mylongitude);
+        Log.i(TAG_LOG, "myLocation: " + "\n" + mylatitude + "\n" + mylongitude);
         if (city != null) {
             tv_city.setText(city);
-            if (MainActivity.isPermissionRequested) {
-                loadMachineList(mylongitude, mylatitude);
-            }
+            loadMachineList(mylongitude, mylatitude);
         } else {
 
         }
@@ -757,6 +758,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         Gson gson = new Gson();
         MachineBannerBean machineBannerBean = gson.fromJson(result, MachineBannerBean.class);
         bannerBeanList = machineBannerBean.getBanner();
+        mImageUrl = new ArrayList<String>();
         for (int i = 0; i < bannerBeanList.size(); i++) {
 //        Log.i(TAG_LOG, "getBannerFromJson: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + bannerBeanList
 // .get(i).getUrl());

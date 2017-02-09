@@ -17,6 +17,7 @@ import com.jetcloud.hgbw.app.HgbwStaticString;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
+import com.jetcloud.hgbw.utils.JumpUtils;
 import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CusAlertDialog;
@@ -139,48 +140,50 @@ public class PayNextActivity extends BaseActivity {
      *  {"msg": "\u5269\u4f59\u51fa\u9910\u91cf\u4e0d\u591f", "status": "fail", "remain": 0, "food_id": "14"}
      */
     private void getPayDataFromJson(String result) throws JSONException {
+        JumpUtils.check405(PayNextActivity.this, result);
         final CusAlertDialog cusAlertDialog;
         final JSONObject jsonObject = new JSONObject(result);
         Log.i(TAG_LOG, "getPayDataFromJson: " + jsonObject.getString("message"));
         Out.Toast(PayNextActivity.this, jsonObject.getString("status"));
             cusAlertDialog = new CusAlertDialog(PayNextActivity.this);
-        Intent intent = getIntent();
-        //如来自购物车购买
-        if (intent.hasExtra(HgbwStaticString.JUMP_RESOURCE)){
-            String jumpResource = getIntent().getStringExtra(HgbwStaticString.JUMP_RESOURCE);
-            if (jumpResource.equals(CarPayActivity.class.getSimpleName())){
-                for (int i = 0; i < foodList.size(); i ++) {
-                    WhereBuilder whereBuilder = WhereBuilder.b("id", "=", foodList.get(i).getId());
-                    try {
-                        app.db.delete(ShopCarInfo.class,whereBuilder);
-                        if (app.db.selector(ShopCarInfo.class).findAll() == null){
-                            app.db.delete(MachineInfo.class);
-                        }
-                    } catch (DbException e) {
-                        e.printStackTrace();
-                    }
-                }
-                int oldNum = SharedPreferenceUtils.getShopCarNumber();
-                int newNum = oldNum - foodList.size();
-                if (newNum > 0) {
-                    SharedPreferenceUtils.setShopCarNumber(newNum);
-                } else {
-                    SharedPreferenceUtils.setShopCarNumber(0);
-                }
-            }
-        }
+
         //成功
         if (jsonObject.getString("status").equals("200")) {
             cusAlertDialog.setTitle(jsonObject.getString("message"));
             cusAlertDialog.setPositiveButton("确定", new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Intent intent = getIntent();
+                    //如来自购物车购买
+                    if (intent.hasExtra(HgbwStaticString.JUMP_RESOURCE)){
+                        String jumpResource = getIntent().getStringExtra(HgbwStaticString.JUMP_RESOURCE);
+                        if (jumpResource.equals(CarPayActivity.class.getSimpleName())){
+                            for (int i = 0; i < foodList.size(); i ++) {
+                                WhereBuilder whereBuilder = WhereBuilder.b("id", "=", foodList.get(i).getId());
+                                try {
+                                    app.db.delete(ShopCarInfo.class,whereBuilder);
+                                    if (app.db.selector(ShopCarInfo.class).findAll() == null){
+                                        app.db.delete(MachineInfo.class);
+                                    }
+                                } catch (DbException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                            int oldNum = SharedPreferenceUtils.getShopCarNumber();
+                            int newNum = oldNum - foodList.size();
+                            if (newNum > 0) {
+                                SharedPreferenceUtils.setShopCarNumber(newNum);
+                            } else {
+                                SharedPreferenceUtils.setShopCarNumber(0);
+                            }
+                        }
+                    }
                     cusAlertDialog.dismiss();
                     app.removeAll();
-                    Intent intent = new Intent(PayNextActivity.this, MainActivity.class);
-                    intent.putExtra(HgbwStaticString.JUMP_RESOURCE, PayNextActivity
+                    Intent i = new Intent(PayNextActivity.this, MainActivity.class);
+                    i.putExtra(HgbwStaticString.JUMP_RESOURCE, PayNextActivity
                             .class.getSimpleName());
-                    startActivity(intent);
+                    startActivity(i);
                 }
             });
             //失败

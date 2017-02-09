@@ -152,6 +152,8 @@
         </activity>
         <activity android:name="com.jetcloud.hgbw.baidumap.BNaviGuideActivity" >
         </activity>
+        <activity android:name="com.jetcloud.hgbw.activity.BindNextActivity" >
+        </activity>
         <activity android:name="com.zxing.activity.CaptureActivity" />
     </application>
 

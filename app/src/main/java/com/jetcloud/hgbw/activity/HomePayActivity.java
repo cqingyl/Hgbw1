@@ -139,6 +139,7 @@ public class HomePayActivity extends BaseActivity {
                 alert.setPositiveButton("去绑定", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        alert.dismiss();
                         Intent intent = new Intent(HomePayActivity.this, BindingActivity.class);
                         intent.putExtra(HgbwStaticString.JUMP_RESOURCE, CarPayActivity
                                 .class.getSimpleName());
@@ -160,10 +161,10 @@ public class HomePayActivity extends BaseActivity {
                     alert.setPositiveButton("去绑定", new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            alert.dismiss();
                             Intent intent = new Intent(HomePayActivity.this, BindingActivity.class);
                             intent.putExtra(HgbwStaticString.JUMP_RESOURCE, CarPayActivity
                                     .class.getSimpleName());
-                            alert.dismiss();
                             startActivity(intent);
                         }
                     });
@@ -208,8 +209,8 @@ public class HomePayActivity extends BaseActivity {
         tv_total_price.setText(context.getString(R.string.take_food_gcb_total, totalGcb));
         tv_wei_num.setText(context.getString(R.string.rmb_display, totalPrice));
         tv_gcb_num.setText(context.getString(R.string.gcb_display, gcbBigDecimal));
-        tv_price_vr9.setText(String.valueOf(context.getString(R.string.rmb_display, totalPrice)));
-        tv_price_cny.setText(String.valueOf(context.getString(R.string.gcb_display, totalGcb)));
+        tv_price_cny.setText(String.valueOf(context.getString(R.string.rmb_display, totalPrice)));
+        tv_price_vr9.setText(String.valueOf(context.getString(R.string.gcb_display, totalGcb)));
 
         tv_num.setText(String.valueOf(count));
         tv_food_title.setText(shopCarInfo.getName());
@@ -231,13 +232,13 @@ public class HomePayActivity extends BaseActivity {
                 tv_num.setText(String.valueOf(count));
                 shopCarInfo.setP_local_number(count);
                 totalPrice = shopCarInfo.getPrice_cny() * count;
+                totalGcb = shopCarInfo.getPrice_vr9() * count;
                 if (cb_gcb.isChecked()) {
                     tv_total_price.setText(context.getString(R.string.take_food_gcb_total, totalGcb));
                 } else {
                     tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
                 }
                 tv_wei_num.setText(context.getString(R.string.rmb_display, totalPrice));
-                totalGcb = shopCarInfo.getPrice_vr9() * count;
                 gcbBigDecimal = BigDecimal.valueOf(totalGcb);
                 tv_gcb_num.setText(context.getString(R.string.gcb_display, gcbBigDecimal));
             }
@@ -250,13 +251,13 @@ public class HomePayActivity extends BaseActivity {
                     tv_num.setText(String.valueOf(count));
                     shopCarInfo.setP_local_number(count);
                     totalPrice = shopCarInfo.getPrice_cny() * count;
+                    totalGcb = shopCarInfo.getPrice_vr9() * count;
                     if (cb_gcb.isChecked()) {
                         tv_total_price.setText(context.getString(R.string.take_food_gcb_total, totalGcb));
                     } else {
                         tv_total_price.setText(context.getString(R.string.take_food_total, totalPrice));
                     }
                     tv_wei_num.setText(context.getString(R.string.rmb_display, totalPrice));
-                    totalGcb = shopCarInfo.getPrice_vr9() * count;
                     gcbBigDecimal = BigDecimal.valueOf(totalGcb);
                     tv_gcb_num.setText(context.getString(R.string.gcb_display, gcbBigDecimal));
                 }

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:2:1-152:12
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:2:1-154:12
 	package
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:3:11-38
 		INJECTED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml
@@ -102,7 +102,7 @@ ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:52:5-54:34
 	android:required
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:54:9-32
 application
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:56:5-150:19
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:56:5-152:19
 MERGED from [org.xutils:xutils:3.3.38] F:\work\Hgbw1\app\build\intermediates\exploded-aar\org.xutils\xutils\3.3.38\AndroidManifest.xml:12:5-20
 MERGED from [com.android.support:design:25.1.0] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:transition:25.1.0] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.0\AndroidManifest.xml:22:5-20
@@ -235,17 +235,17 @@ ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:133:9-134:20
 	android:name
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:133:19-63
 activity#com.jetcloud.hgbw.baidumap.BaiduMapActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:135:9-139:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:135:9-138:20
 	android:label
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:137:13-61
 	android:name
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:136:13-54
 activity#com.jetcloud.hgbw.activity.LoadingActivity
-ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:140:9-147:20
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:139:9-147:20
 	android:theme
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:141:19-55
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:141:13-49
 	android:name
-		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:140:19-59
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:140:13-53
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:142:13-146:29
 action#android.intent.action.MAIN
@@ -260,6 +260,10 @@ activity#com.jetcloud.hgbw.baidumap.BNaviGuideActivity
 ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:148:9-149:20
 	android:name
 		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:148:19-62
+activity#com.jetcloud.hgbw.activity.BindNextActivity
+ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:150:9-151:20
+	android:name
+		ADDED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml:150:19-60
 uses-sdk
 INJECTED from F:\work\Hgbw1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] F:\work\Hgbw1\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42

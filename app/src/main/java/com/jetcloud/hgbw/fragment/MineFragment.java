@@ -37,6 +37,7 @@ import com.jetcloud.hgbw.utils.ImagePath;
 import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CircleImageView;
+import com.jetcloud.hgbw.view.CusAlertDialogWithTwoBtn;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -87,6 +88,8 @@ public class MineFragment extends BaseFragment {
     TextView tv_nick;
     @ViewInject(R.id.ll_logout)
     LinearLayout ll_logout;
+    @ViewInject(R.id.ll_edit)
+    LinearLayout ll_edit;
 
     boolean isFirst = true;
     private AlertDialog dialog2;
@@ -97,8 +100,11 @@ public class MineFragment extends BaseFragment {
     private static final int CAMERA_REQUEST_CODE = 1;
     private static final int RESULT_REQUEST_CODE = 2;
 
-    private static final String IMAGE_FILE_NAME = SharedPreferenceUtils.getIdentity();
 
+    private static final int NORMAL_STATUS = 0;
+    private static final int CHANGE_HEAD_STATUS = 1;
+
+    private static final String IMAGE_FILE_NAME = SharedPreferenceUtils.getIdentity();
     public static MineFragment newInstance() {
 
         if (mineFragment == null) {
@@ -124,7 +130,7 @@ public class MineFragment extends BaseFragment {
         tv_login.setOnClickListener(this);
         tv_register.setOnClickListener(this);
         civ_head.setOnClickListener(this);
-        tv_nick.setOnClickListener(this);
+        ll_edit.setOnClickListener(this);
         ll_logout.setOnClickListener(this);
 
     }
@@ -137,23 +143,23 @@ public class MineFragment extends BaseFragment {
     @Override
     public void onResume() {
         if (!isHideBtnResiterAndLogin())
-            getUserInfoRequest();
+            getUserInfoRequest(NORMAL_STATUS);
         super.onResume();
         Log.i(TAG_LOG, "4 onResume: ");
     }
 
-    @Override
-    public void onHiddenChanged(boolean hidden) {
-        if (!isFirst) {
-            Log.i(TAG_LOG, "4 onHiddenChanged: " + hidden);
-        }
-        if (!hidden && !isFirst) {
-            if (!isHideBtnResiterAndLogin())
-                getUserInfoRequest();
-        }
-        isFirst = false;
-        super.onHiddenChanged(hidden);
-    }
+//    @Override
+//    public void onHiddenChanged(boolean hidden) {
+//        if (!isFirst) {
+//            Log.i(TAG_LOG, "4 onHiddenChanged: " + hidden);
+//        }
+//        if (!hidden && !isFirst) {
+//            if (!isHideBtnResiterAndLogin())
+//                getUserInfoRequest(NORMAL_STATUS);
+//        }
+//        isFirst = false;
+//        super.onHiddenChanged(hidden);
+//    }
 
     /**
      * 显示“登录/注册”与否
@@ -181,6 +187,7 @@ public class MineFragment extends BaseFragment {
             if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)){
                 startActivity(new Intent(getActivity(), LoginActivity.class));
             } else {
+                getUserInfoRequest(NORMAL_STATUS);
                 Intent i = new Intent(getActivity(), MyOrderActivity.class);
 
                 startActivity(i);
@@ -189,6 +196,7 @@ public class MineFragment extends BaseFragment {
             if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)){
                 startActivity(new Intent(getActivity(), LoginActivity.class));
             } else {
+                getUserInfoRequest(NORMAL_STATUS);
                 startActivity(new Intent(getActivity(), MyTicketActivity.class));
 
             }
@@ -196,12 +204,14 @@ public class MineFragment extends BaseFragment {
             if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)){
                 startActivity(new Intent(getActivity(), LoginActivity.class));
             } else {
+                getUserInfoRequest(NORMAL_STATUS);
                 Out.Toast(getActivity(), "我的卡积分");
             }
         } else if (view == mymoney) {
             if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)){
                 startActivity(new Intent(getActivity(), LoginActivity.class));
             } else {
+                getUserInfoRequest(NORMAL_STATUS);
                 Intent i = new Intent(getActivity(), MyWalletActivity.class);
                 startActivity(i);
             }
@@ -212,95 +222,115 @@ public class MineFragment extends BaseFragment {
         } else if (view == tv_register) {
             startActivity(new Intent(getActivity(), RegisterActivity.class));
         } else if (view == ll_logout) {
-            getLogout();
+            final CusAlertDialogWithTwoBtn cusAlertDialog = new CusAlertDialogWithTwoBtn(getActivity());
+            cusAlertDialog.setTitle("提示");
+            cusAlertDialog.setContent("您确定要退出登录吗");
+            cusAlertDialog.setPositiveButton("确定", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    cusAlertDialog.dismiss();
+                    getLogout();
+                }
+            });
+            cusAlertDialog.setNegativeButton("取消", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    cusAlertDialog.dismiss();
+                }
+            });
+            cusAlertDialog.show();
+
 //            startActivity(new Intent(getActivity(), SettingActivity.class));
-        } else if (view == tv_nick) {
+        } else if (view == ll_edit) {
             startActivity(new Intent(getActivity(), EditAccountActivity.class));
         } else if (view == civ_head) {
-
-            PackageManager pm = getActivity().getPackageManager();
-            boolean permission = (PackageManager.PERMISSION_GRANTED ==
-                    pm.checkPermission("android.permission.WRITE_EXTERNAL_STORAGE", "com.jetcloud.hgbw"));
-            if (!permission) {
-                Out.Toast(getActivity(), "请在设置→应用管理→VR9钱包→打开存储权限");
-            }else {
-                //照片选择
-                LinearLayout lin_dailog_item = (LinearLayout) View.inflate(
-                        getActivity(), R.layout.dialog_choosephoto, null);
-                dialog2 = new AlertDialog.Builder(getActivity()).create();
-                dialog2.show();
-                WindowManager.LayoutParams params = dialog2.getWindow()
-                        .getAttributes();
-                WindowManager wm = (WindowManager) getActivity()
-                        .getSystemService(Context.WINDOW_SERVICE);
-                int height = wm.getDefaultDisplay().getHeight() / 4;
-                int weith = wm.getDefaultDisplay().getWidth() / 4 * 3;
-                params.width = weith;
-                params.height = height;
-                dialog2.getWindow().setContentView(lin_dailog_item);
-                dialog2.getWindow().setAttributes(params);
-
-                //切换到全屏
-                dialog2.getWindow()
-                        .clearFlags(
-                                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
-                                        | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
-                dialog2.getWindow().setSoftInputMode(
-                        WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
-                RadioGroup rg_photo = (RadioGroup) lin_dailog_item
-                        .findViewById(R.id.rg_photo);
-                rg_photo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(RadioGroup group, int checkedId) {
-                        switch (checkedId) {
-                            case R.id.fromcamera:
-                                PackageManager pm = getActivity().getPackageManager();
-                                boolean permission = (PackageManager.PERMISSION_GRANTED ==
-                                        pm.checkPermission("android.permission.CAMERA", "com.jetcloud.hgbw"));
-                                if (permission) {
-                                    Intent intentFromCapture = new Intent(
-                                            MediaStore.ACTION_IMAGE_CAPTURE);
-                                    // 判断存储卡是否可以用，可用进行存储
-
-
-                                    intentFromCapture.putExtra(MediaStore.EXTRA_OUTPUT,
-                                            Uri.fromFile(new File(Environment
-                                                    .getExternalStorageDirectory(),
-                                                    IMAGE_FILE_NAME)));
-
-                                    startActivityForResult(intentFromCapture,
-                                            CAMERA_REQUEST_CODE);
-
-                                    dialog2.dismiss();
-                                }else {
-                                    Out.Toast(getActivity(), "请在设置→应用管理→VR9钱包→打开相机权限");
-                                }
-
-                                break;
-                            case R.id.fromphoto:
-
-                                Intent intent1 = new Intent(
-                                        Intent.ACTION_GET_CONTENT);
-                                intent1.addCategory(Intent.CATEGORY_OPENABLE);
-                                intent1.setType("image/*");
-                                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-                                    startActivityForResult(intent1,
-                                            SELECT_PIC_KITKAT);
-                                } else {
-                                    startActivityForResult(intent1,
-                                            IMAGE_REQUEST_CODE);
-                                }
-                                dialog2.dismiss();
-                                break;
-
-                            default:
-                                break;
-                        }
-                    }
-                });
+            if (!SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)) {
+                getUserInfoRequest(CHANGE_HEAD_STATUS);
             }
         }
 
+    }
+
+    public void changeHead () {
+        PackageManager pm = getActivity().getPackageManager();
+        boolean permission = (PackageManager.PERMISSION_GRANTED ==
+                pm.checkPermission("android.permission.WRITE_EXTERNAL_STORAGE", "com.jetcloud.hgbw"));
+        if (!permission) {
+            Out.Toast(getActivity(), "请在设置→应用管理→禾谷百味→打开存储权限");
+        } else {
+            //照片选择
+            LinearLayout lin_dailog_item = (LinearLayout) View.inflate(
+                    getActivity(), R.layout.dialog_choosephoto, null);
+            dialog2 = new AlertDialog.Builder(getActivity()).create();
+            dialog2.show();
+            WindowManager.LayoutParams params = dialog2.getWindow()
+                    .getAttributes();
+            WindowManager wm = (WindowManager) getActivity()
+                    .getSystemService(Context.WINDOW_SERVICE);
+            int height = wm.getDefaultDisplay().getHeight() / 4;
+            int weith = wm.getDefaultDisplay().getWidth() / 4 * 3;
+            params.width = weith;
+            params.height = height;
+            dialog2.getWindow().setContentView(lin_dailog_item);
+            dialog2.getWindow().setAttributes(params);
+
+            //切换到全屏
+            dialog2.getWindow()
+                    .clearFlags(
+                            WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+                                    | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
+            dialog2.getWindow().setSoftInputMode(
+                    WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+            RadioGroup rg_photo = (RadioGroup) lin_dailog_item
+                    .findViewById(R.id.rg_photo);
+            rg_photo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    switch (checkedId) {
+                        case R.id.fromcamera:
+                            PackageManager pm = getActivity().getPackageManager();
+                            boolean permission = (PackageManager.PERMISSION_GRANTED ==
+                                    pm.checkPermission("android.permission.CAMERA", "com.jetcloud.hgbw"));
+                            if (permission) {
+                                Intent intentFromCapture = new Intent(
+                                        MediaStore.ACTION_IMAGE_CAPTURE);
+                                // 判断存储卡是否可以用，可用进行存储
+                                intentFromCapture.putExtra(MediaStore.EXTRA_OUTPUT,
+                                        Uri.fromFile(new File(Environment
+                                                .getExternalStorageDirectory(),
+                                                IMAGE_FILE_NAME)));
+
+                                startActivityForResult(intentFromCapture,
+                                        CAMERA_REQUEST_CODE);
+
+                                dialog2.dismiss();
+                            } else {
+                                Out.Toast(getActivity(), "请在设置→应用管理→禾谷百味→打开相机权限");
+                            }
+
+                            break;
+                        case R.id.fromphoto:
+
+                            Intent intent1 = new Intent(
+                                    Intent.ACTION_GET_CONTENT);
+                            intent1.addCategory(Intent.CATEGORY_OPENABLE);
+                            intent1.setType("image/*");
+                            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+                                startActivityForResult(intent1,
+                                        SELECT_PIC_KITKAT);
+                            } else {
+                                startActivityForResult(intent1,
+                                        IMAGE_REQUEST_CODE);
+                            }
+                            dialog2.dismiss();
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            });
+        }
     }
 
     @Override
@@ -400,7 +430,7 @@ public class MineFragment extends BaseFragment {
                     @Override
                     public boolean onCache(String result) {
                         this.result = result;
-                        return true; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
+                        return false; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
                     }
 
                     @Override
@@ -485,7 +515,7 @@ public class MineFragment extends BaseFragment {
     /**
      * 获取用户信息
      * */
-    private void getUserInfoRequest() {
+    private void getUserInfoRequest(final int status) {
         final RequestParams params = new RequestParams(HgbwUrl.PIC_AND_NICK_URL);
         //缓存时间
         params.addQueryStringParameter("identity", SharedPreferenceUtils.getIdentity());
@@ -539,11 +569,23 @@ public class MineFragment extends BaseFragment {
                         if (!hasError && result != null) {
                             Log.i(TAG_LOG, "get nick and pic onFinished: " + result);
                             try {
-                                getUserDataFromJson(result);
                                 JSONObject jsonObject = new JSONObject(result);
-
-
-//                                jsonObject.getString("")
+                                if (jsonObject.has("code")) {
+                                    if (jsonObject.getString("code").equals("409")) {
+                                        Out.Toast(getActivity(), "你的账号已在其他设备登录");
+                                        SharedPreferenceUtils.setIdentity(SharedPreferenceUtils.WITHOUT_LOGIN);
+                                        SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.UNBINDING_STATE);
+                                        SharedPreferenceUtils.setMyAccount(SharedPreferenceUtils.WITHOUT_LOGIN);
+                                        SharedPreferenceUtils.setTradeAccount(SharedPreferenceUtils.WITHOUT_LOGIN);
+                                        isHideBtnResiterAndLogin();
+                                    }
+                                } else {
+                                    if (status == CHANGE_HEAD_STATUS) {
+                                        changeHead();
+                                    } else {
+                                        getUserDataFromJson(result);
+                                    }
+                                }
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
@@ -559,22 +601,32 @@ public class MineFragment extends BaseFragment {
     /**
      * 获取用户数据
      * */
-    public void getUserDataFromJson(String result) {
-        Gson gson = new Gson();
-        UserBean userBean = gson.fromJson(result, UserBean.class);
+    public void getUserDataFromJson(String result) throws JSONException {
 
-        tv_nick.setText(userBean.getNickname());
-        if (!userBean.getPic().isEmpty()) {
-            ImageLoader.getInstance().displayImage(
-                    URLDecoder.decode(HgbwUrl.HOME_URL +  userBean.getPic()),
-                    civ_head,
-                    ImageLoaderCfg.options2);
-        }
-        String tradeAccount = userBean.getTradebook_acct();
-        if (tradeAccount != null && !tradeAccount.isEmpty()) {
-            SharedPreferenceUtils.setTradeAccount(tradeAccount);
-            SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.BINDING_STATE);
-        }
+
+            Gson gson = new Gson();
+            UserBean userBean = gson.fromJson(result, UserBean.class);
+            tv_nick.setText(userBean.getNickname());
+            if (!userBean.getPic().isEmpty() && userBean.getPic() != null) {
+                String imgPath;
+                if (userBean.getPic().contains("http")) {
+                    imgPath = userBean.getPic();
+                } else {
+                    imgPath = HgbwUrl.HOME_URL +  userBean.getPic();
+                }
+                ImageLoader.getInstance().displayImage(
+                        URLDecoder.decode(imgPath),
+                        civ_head,
+                        ImageLoaderCfg.options2);
+            } else if (userBean.getPic().isEmpty()) {
+                civ_head.setImageResource(R.drawable.drink);
+            }
+            String tradeAccount = userBean.getTradebook_acct();
+            if (tradeAccount != null && !tradeAccount.isEmpty()) {
+                SharedPreferenceUtils.setTradeAccount(tradeAccount);
+                SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.BINDING_STATE);
+            }
+
     }
     /***
      * 注销请求
@@ -660,11 +712,22 @@ public class MineFragment extends BaseFragment {
         JSONObject jsonObject = new JSONObject(result);
         Out.Toast(getActivity(), jsonObject.getString("status"));
         if (jsonObject.has("status") && jsonObject.getString("status").equals("success")) {
+            civ_head.setImageResource(R.drawable.drink);
             SharedPreferenceUtils.setIdentity(SharedPreferenceUtils.WITHOUT_LOGIN);
             SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.UNBINDING_STATE);
             SharedPreferenceUtils.setMyAccount(SharedPreferenceUtils.WITHOUT_LOGIN);
             SharedPreferenceUtils.setTradeAccount(SharedPreferenceUtils.WITHOUT_LOGIN);
             isHideBtnResiterAndLogin();
+        } else if (jsonObject.has("code")) {
+            if (jsonObject.getString("code").equals("409")) {
+                civ_head.setImageResource(R.drawable.drink);
+                Out.Toast(getActivity(), "你的账号已在其他设备登录");
+                SharedPreferenceUtils.setIdentity(SharedPreferenceUtils.WITHOUT_LOGIN);
+                SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.UNBINDING_STATE);
+                SharedPreferenceUtils.setMyAccount(SharedPreferenceUtils.WITHOUT_LOGIN);
+                SharedPreferenceUtils.setTradeAccount(SharedPreferenceUtils.WITHOUT_LOGIN);
+                isHideBtnResiterAndLogin();
+            }
         }
     }
 

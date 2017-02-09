@@ -402,10 +402,11 @@
 
     <!-- 底部导航字体颜色 -->
 
-    <color name="bottom_nav_text_color_check_no">#50eb4f38</color>
+    <color name="bottom_nav_text_color_check_no">#50fa8334</color>
     <color name="bottom_nav_text_color">#333333</color>
     <color name="bottom_nav_text_color_check">#eb4f38</color>
-
+    <color name="login_nav_btn_no">#ffae5f</color>
+    <color name="login_nav_btn_ok">#f99534</color>
     <!-- 登录页输入框line -->
     <color name="login_line_no">#37394b</color>
     <color name="login_line_ok">#ace5fa</color>

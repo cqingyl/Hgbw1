@@ -72,6 +72,7 @@ public class MyOrderChildrenAdapter extends BaseAdapter {
             holder.tv_money.setText(context.getString(R.string.rmb_display, priceRmb));
         }
         int num = Integer.parseInt(data.get(i).getNum());
+        holder.tv_description.setText(data.get(i).getFood_des());
         holder.tv_num.setText(context.getString(R.string.take_food_num, num));
                     ImageOptions imageOptions = new ImageOptions.Builder()
                     .setFailureDrawableId(R.drawable.ic_launcher)
@@ -89,6 +90,8 @@ public class MyOrderChildrenAdapter extends BaseAdapter {
         TextView tv_money;
         @ViewInject(R.id.tv_num)
         TextView tv_num;
+        @ViewInject(R.id.tv_description)
+        TextView tv_description;
 
         ViewHolder(View view) {
             x.view().inject(this, view);

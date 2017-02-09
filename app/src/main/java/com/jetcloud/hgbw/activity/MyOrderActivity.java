@@ -15,6 +15,7 @@ import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.adapter.MyOrderParentAdapter;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.MyOrderBean;
+import com.jetcloud.hgbw.utils.JumpUtils;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 import com.jetcloud.hgbw.view.widget.XListView;
@@ -100,6 +101,7 @@ public class MyOrderActivity extends BaseActivity implements XListView.IXListVie
      * 处理json数据
      */
     private void getOrderDataFromJson(String result, int page) throws JSONException {
+        JumpUtils.check405(MyOrderActivity.this, result);
         Gson gson = new Gson();
         MyOrderBean myOrderBean = gson.fromJson(result, MyOrderBean.class);
         List<MyOrderBean.OrdersBean> newOrdersBeenList = myOrderBean.getOrders();

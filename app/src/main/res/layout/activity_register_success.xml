@@ -4,62 +4,79 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@color/main_bg"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
               android:orientation="vertical"
-              tools:context=".activity.RegisterSuccessActivity" >
-    <include layout="@layout/top_bar" />
+              tools:context=".activity.RegisterSuccessActivity">
+
+    <include layout="@layout/top_bar"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="40dp"
-
+        android:layout_height="match_parent"
+        android:background="@color/gray_light"
+        android:orientation="vertical"
         >
-        <ImageView
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/regisitersuccess"
-            />
-        <TextView
-            android:layout_marginLeft="15dp"
-            android:layout_width="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/regisitersuccess"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="恭喜你,注册成功"
+                android:textColor="@color/text_b1"
+                android:textSize="@dimen/text_huge"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="恭喜你,注册成功"
-            android:textColor="@color/text_b1"
-            android:textSize="@dimen/text_huge"
-            />
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+
+            >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:id="@+id/bt_gologing"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="8"
+                android:background="@drawable/next_btn_ok"
+                android:text="去登录"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_huge"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="40dp"
-
-        >
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            />
-        <Button
-            android:id="@+id/bt_gologing"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:text="去登录"
-            android:textColor="#ffffff"
-            android:textSize="@dimen/text_huge"
-            android:background="@drawable/next_btn_ok"
-            android:layout_weight="8"
-            />
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            />
-
-    </LinearLayout>
-
 </LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_next_binding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.jetcloud.hgbw.activity.BindingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_light"
+        android:orientation="vertical" >
+
+        <include layout="@layout/top_bar" />
+
+        <View
+            style="@style/lineView"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_light" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" >
+
+            <TextView
+                style="@style/MyTextView2"
+                android:layout_centerVertical="true"
+                android:text="交易宝账号"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/et_trade_account"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="90dp"
+                android:background="@null"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_big"
+                />
+
+            <View
+                style="@style/lineView"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_light" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:paddingLeft="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/MyTextView2"
+                android:layout_centerVertical="true"
+                android:text="交易宝登录密码"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/et_trade_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:textColor="@color/black"
+                android:inputType="textPassword"
+                android:textSize="@dimen/text_big"
+                />
+
+            <View
+                style="@style/lineView"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_light" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_btn_ok"
+            style="@style/TextViewButton"
+            android:background="@drawable/next_btn_ok"
+            android:text="确定"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

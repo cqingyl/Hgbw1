@@ -17,6 +17,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +43,7 @@ public class RegisterActivity extends BaseActivity {
 	private CheckBox cb_agree;
 	private Button bt_register;
 	private TextView tv_getver;
+	private LinearLayout activity_register;
 	private Timer mTimer;
 	private TimerTask mTask;
 	private int time = 60;
@@ -63,7 +65,8 @@ public class RegisterActivity extends BaseActivity {
 		Resources resources = RegisterActivity.this.getResources();
 		 Drawable drawable = resources.getDrawable(R.drawable.fanhui);
 		topbar.setLeftDrawable(false, drawable);
-		
+		activity_register=getView(R.id.activity_register);
+		activity_register.setBackgroundResource(R.drawable.mine_bg);
 		editeListener=new MyEditeListener();
 		et_username=getView(R.id.et_username);
 		et_username.addTextChangedListener(editeListener);
@@ -229,13 +232,13 @@ public class RegisterActivity extends BaseActivity {
 					public void onError(Throwable ex, boolean isOnCallback) {
 						hasError = true;
 						Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
-						Log.e(TAG_LOG, "onError: " + ex.getMessage());
+						Log.e(TAG_LOG, "verificationRequest onError: " + ex.getMessage());
 						if (ex instanceof HttpException) { // 网络错误
 							HttpException httpEx = (HttpException) ex;
 							int responseCode = httpEx.getCode();
 							String responseMsg = httpEx.getMessage();
 							String errorResult = httpEx.getResult();
-							Log.e(TAG_LOG, "onError " + " code: " + responseCode + " message: " + responseMsg);
+							Log.e(TAG_LOG, "verificationRequest onError " + " code: " + responseCode + " message: " + responseMsg);
 						} else { // 其他错误
 						}
 					}
@@ -248,8 +251,8 @@ public class RegisterActivity extends BaseActivity {
 					@Override
 					public void onFinished() {
 						if (!hasError && result != null) {
-							Log.i(TAG_LOG, "onFinished: " + result);
-
+							Log.i(TAG_LOG, "verificationRequest onFinished: " + result);
+							Out.Toast(RegisterActivity.this, result);
 						}
 					}
 				});
@@ -263,7 +266,7 @@ public class RegisterActivity extends BaseActivity {
 	private void getNetData() {
 		final RequestParams params = new RequestParams(HgbwUrl.REGISTER_URL);
 		//缓存时间
-		params.addBodyParameter("phone",et_username.getText().toString());
+		params.addBodyParameter("phone",et_username.getText().toString().trim());
 		params.addBodyParameter("pwd",et_password.getText().toString());
 		params.addBodyParameter("code",et_vernumber.getText().toString());
 		params.setCacheMaxAge(1000 * 60);

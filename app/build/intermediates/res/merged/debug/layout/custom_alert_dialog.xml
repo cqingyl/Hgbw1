@@ -22,7 +22,11 @@
             android:text="支付成功"
             android:textColor="@color/black"
             android:textSize="@dimen/text_bighuge" />
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/gray"
+            />
         <TextView
             android:id="@+id/dialog_content"
             android:visibility="gone"

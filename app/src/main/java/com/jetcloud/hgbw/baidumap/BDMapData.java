@@ -11,8 +11,7 @@ public class BDMapData implements Serializable{
     private double latitude;//纬度
     private double longitude;//经度
 
-    public BDMapData(String name, double latitude, double longitude) {
-        this.name = name;
+    public BDMapData(double latitude, double longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
     }

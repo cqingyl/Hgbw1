@@ -11,8 +11,10 @@ import android.widget.Toast;
 
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.app.HgbwUrl;
+import com.jetcloud.hgbw.utils.JumpUtils;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 
+import org.json.JSONException;
 import org.xutils.common.Callback;
 import org.xutils.ex.HttpException;
 import org.xutils.http.RequestParams;
@@ -111,6 +113,11 @@ public class EditAccountActivity extends BaseActivity {
                         progressDialog.dismiss();
                         if (!hasError && result != null) {
                             Log.i(TAG_LOG, "upload onFinished: " + result);
+                            try {
+                                JumpUtils.check405(EditAccountActivity.this, result);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
                             AlertDialog dialog = new AlertDialog.Builder(EditAccountActivity.this).create();
                             dialog.setTitle("保存成功！");
                             dialog.setButton(DialogInterface.BUTTON_POSITIVE, "确定", new DialogInterface.OnClickListener() {

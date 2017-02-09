@@ -66,9 +66,6 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
     public final static String MACHINE_OBJECT = "machine_object";
     public final static String PRODUC_OBJECT = "product_object";
 
-
-    //    private SharedPreferences preferences;
-//    private static final String SHOP_CAR_NUM = "shop car num";
     public static ShopCarFragment newInstance() {
         if (shopCarFragment == null) {
             shopCarFragment = new ShopCarFragment();

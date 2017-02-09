@@ -22,6 +22,7 @@ import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.utils.ImageLoaderCfg;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
+import com.jetcloud.hgbw.view.CusAlertDialog;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 
 import org.xutils.common.Callback;
@@ -42,7 +43,7 @@ import static com.jetcloud.hgbw.app.HgbwStaticString.MACHINE;
 
 public class DetailsActivity extends BaseActivity {
 	private final static String TAG_LOG = DetailsActivity.class.getSimpleName();
-	private TextView tv_up,tv_down,number,tv_content,tv_price_vr9,tv_price_cny,tv_add_car,tv_go_to_pay,tv_phone;
+	private TextView tv_up,tv_down,number,tv_content,tv_price_vr9,tv_price_cny,tv_add_car,tv_go_to_pay;
 	private int poductNum = 1;
 	private CustomProgressDialog progress;
 	private String titleText;
@@ -84,7 +85,6 @@ public class DetailsActivity extends BaseActivity {
 		tv_go_to_pay = getViewWithClick(R.id.tv_go_to_pay);
 		tv_up = getViewWithClick(R.id.tv_up);
 		tv_down = getViewWithClick(R.id.tv_down);
-		tv_phone = getView(R.id.tv_phone);
 		number = getViewWithClick(R.id.number);
 		ll_nav_bottom = getView(R.id.ll_nav_bottom);
 		sv_all_layout = getView(R.id.sv_all_layout);
@@ -124,7 +124,6 @@ public class DetailsActivity extends BaseActivity {
 //				.build();
 //		String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + shopCarInfo.getPic());
 //		x.image().bind(iv_food, imgPath, imageOptions);
-//		tv_phone.setText("13340902246");
 //		shopCarInfo.setP_local_number(1);
 //		shopCarInfo.setPrice_cny(shopCarInfo.getPrice_cny());
 //		shopCarInfo.setName(shopCarInfo.getName());
@@ -229,8 +228,8 @@ public class DetailsActivity extends BaseActivity {
 						} else { // 其他错误
 							ll_nav_bottom.setVisibility(View.GONE);
 							sv_all_layout.setVisibility(View.GONE);
-							topbar.setCenterText("商品不存在");
 							tv_empty.setVisibility(View.VISIBLE);
+							tv_empty.setText("找不到该商品");
 						}
 					}
 
@@ -257,13 +256,13 @@ public class DetailsActivity extends BaseActivity {
 		Gson gson = new Gson();
 		FoodDetailBean foodDetailBean = gson.fromJson(result, FoodDetailBean.class);
 		FoodDetailBean.InfoBean infoBean = foodDetailBean.getInfo();
+		titleText = infoBean.getName();
+		topbar.setCenterText(titleText);
 		if (foodDetailBean.getStatus().equals("success") && infoBean.getNum() != 0){
 			tv_empty.setVisibility(View.GONE);
 			ll_nav_bottom.setVisibility(View.VISIBLE);
 			sv_all_layout.setVisibility(View.VISIBLE);
 			shopCarInfo = infoBean;
-			titleText = shopCarInfo.getName();
-			topbar.setCenterText(titleText);
 			tv_content.setText(shopCarInfo.getDescription());
 			tv_price_cny.setText(String.format(DetailsActivity.this.getString(R.string.take_food_total), shopCarInfo
 					.getPrice_cny()));
@@ -274,7 +273,6 @@ public class DetailsActivity extends BaseActivity {
 					.build();
 			String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + shopCarInfo.getPic());
 			x.image().bind(iv_food, imgPath, imageOptions);
-			tv_phone.setText("13340902246");
 			shopCarInfo.setP_local_number(1);
 			shopCarInfo.setPrice_cny(shopCarInfo.getPrice_cny());
 			shopCarInfo.setName(shopCarInfo.getName());
@@ -282,7 +280,7 @@ public class DetailsActivity extends BaseActivity {
 			ll_nav_bottom.setVisibility(View.GONE);
 			sv_all_layout.setVisibility(View.GONE);
 			tv_empty.setVisibility(View.VISIBLE);
-			topbar.setCenterText("商品不存在");
+			tv_empty.setText("该商品已售罄");
 		}
 	}
 	/***
@@ -328,6 +326,21 @@ public class DetailsActivity extends BaseActivity {
 					int oldTotalNum = SharedPreferenceUtils.getShopCarNumber();
 					int newTotalNum = oldTotalNum + poductNum;
 					SharedPreferenceUtils.setShopCarNumber(newTotalNum);
+					x.task().post(new Runnable() {
+						@Override
+						public void run() {
+							final CusAlertDialog cusAlertDialog = new CusAlertDialog(DetailsActivity.this);
+							cusAlertDialog.setTitle("提示");
+							cusAlertDialog.setContent("加入购物车成功");
+							cusAlertDialog.setPositiveButton("确定", new View.OnClickListener() {
+								@Override
+								public void onClick(View view) {
+									cusAlertDialog.dismiss();
+								}
+							});
+							cusAlertDialog.show();
+						}
+					});
 				} catch (DbException e) {
 					e.printStackTrace();
 					Log.e(TAG_LOG, "添加失败: " + e.getMessage());

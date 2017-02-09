@@ -56,6 +56,10 @@
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xhdpi\\l3.png"
     },
     {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\unbinded.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xhdpi\\unbinded.png"
+    },
+    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
         "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
@@ -328,6 +332,10 @@
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xhdpi\\dingwei.png"
     },
     {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\loading.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xhdpi\\loading.png"
+    },
+    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\setting.png",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xhdpi\\setting.png"
     },
@@ -462,6 +470,10 @@
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\myticket.png",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xhdpi\\myticket.png"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\load_text.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-xhdpi\\load_text.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",

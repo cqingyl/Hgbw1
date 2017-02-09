@@ -132,7 +132,7 @@ public class PayBuyingAdapter extends BaseExpandableListAdapter {
             x.image().bind(childViewHolder.img_food, HgbwUrl.HOME_URL + shopCarInfo.getPic(), imageOptions);
             childViewHolder.tv_food_title.setText(String.valueOf(shopCarInfo.getName()));
             childViewHolder.tv_price_cny.setText(context.getString(R.string.rmb_display, shopCarInfo.getPrice_cny()));
-            childViewHolder.tv_price_vr9.setText(context.getString(R.string.gcb_display, shopCarInfo.getPrice_cny()));
+            childViewHolder.tv_price_vr9.setText(context.getString(R.string.gcb_display, shopCarInfo.getPrice_vr9()));
             childViewHolder.tv_num.setText(String.format(context.getString(R.string.take_food_num), shopCarInfo
                     .getP_local_number()));
 

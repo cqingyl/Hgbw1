@@ -23,8 +23,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.3"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:paddingTop="3dp"
+            android:paddingLeft="16dp"
             android:paddingBottom="3dp"
             android:background="@color/gray_light"
             android:orientation="vertical" >
@@ -164,21 +165,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
+                    android:gravity="right"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/phone"/>
-                    <TextView
-                        android:id="@+id/tv_phone"
-                        android:layout_width="0dp"
-                        android:layout_height="30dp"
-                        android:layout_weight="1"
-                        android:gravity="left|center_vertical"
-                        tools:text="15715484521"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/text_huge"/>
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/phone"/>-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_phone"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="left|center_vertical"-->
+                        <!--tools:text="15715484521"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:textSize="@dimen/text_huge"/>-->
 
                     <TextView
                         android:id="@+id/tv_down"
@@ -219,7 +221,6 @@
             android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="未找到该商品"
             android:textSize="18sp"
             android:gravity="center"
             android:background="@color/gray_light"

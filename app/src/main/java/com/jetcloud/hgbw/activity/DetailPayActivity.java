@@ -134,10 +134,10 @@ public class DetailPayActivity extends BaseActivity {
                         new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                alert.dismiss();
                                 Intent intent = new Intent(DetailPayActivity.this, BindingActivity.class);
                                 intent.putExtra(HgbwStaticString.JUMP_RESOURCE, CarPayActivity
                                         .class.getSimpleName());
-                                alert.dismiss();
                                 startActivity(intent);
                             }
                         });

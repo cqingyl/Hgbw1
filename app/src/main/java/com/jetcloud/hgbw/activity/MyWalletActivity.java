@@ -15,7 +15,10 @@ import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.adapter.MyWalletAdapter;
 import com.jetcloud.hgbw.app.HgbwStaticString;
 import com.jetcloud.hgbw.app.HgbwUrl;
+import com.jetcloud.hgbw.utils.JumpUtils;
+import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
+import com.jetcloud.hgbw.view.CusAlertDialogWithPassword;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 
 import org.json.JSONException;
@@ -33,6 +36,7 @@ public class MyWalletActivity extends BaseActivity {
     private final static String TAG_LOG = MyWalletActivity.class.getSimpleName();
     private CustomProgressDialog progress;
     private TextView tv_btn_ok, tv_btn_no;
+    private LinearLayout ll_content, ll_content_empty;
     private LinearLayout activity_my_wallet;
     private ListView lv_card;
     private ArrayList<String> list;
@@ -53,7 +57,8 @@ public class MyWalletActivity extends BaseActivity {
         tv_btn_ok = getViewWithClick(R.id.tv_btn_ok);
         tv_btn_no = getViewWithClick(R.id.tv_btn_no);
         lv_card = getView(R.id.lv_card);
-
+        ll_content_empty = getView(R.id.ll_content_empty);
+        ll_content = getView(R.id.ll_content);
         activity_my_wallet = getView(R.id.activity_my_wallet);
         activity_my_wallet.setBackgroundResource(R.drawable.mine_bg);
         /****/
@@ -63,13 +68,11 @@ public class MyWalletActivity extends BaseActivity {
 
         String status = SharedPreferenceUtils.getBindStatus();
         if (status.equals(SharedPreferenceUtils.UNBINDING_STATE)) {
-            lv_card.setVisibility(View.GONE);
-            tv_btn_no.setVisibility(View.GONE);
-            tv_btn_ok.setVisibility(View.VISIBLE);
+            ll_content_empty.setVisibility(View.VISIBLE);
+            ll_content.setVisibility(View.GONE);
         } else {
-            lv_card.setVisibility(View.VISIBLE);
-            tv_btn_no.setVisibility(View.VISIBLE);
-            tv_btn_ok.setVisibility(View.GONE);
+            ll_content_empty.setVisibility(View.GONE);
+            ll_content.setVisibility(View.VISIBLE);
 
             list = new ArrayList<>();
             list.add(SharedPreferenceUtils.getTradeAccount());
@@ -98,19 +101,39 @@ public class MyWalletActivity extends BaseActivity {
             startActivity(new Intent(MyWalletActivity.this, BindingActivity.class));
             finish();
         } else if (view.getId() == R.id.tv_btn_no) {
-            unBindRequest();
+            final CusAlertDialogWithPassword cusAlertDialogWithPassword = new CusAlertDialogWithPassword(MyWalletActivity.this);
+            cusAlertDialogWithPassword.setTitle("提示");
+            cusAlertDialogWithPassword.setPositiveButton("确定", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (cusAlertDialogWithPassword.getPassword().length() > 0) {
+                        cusAlertDialogWithPassword.dismiss();
+                        unBindRequest(cusAlertDialogWithPassword.getPassword());
+                    } else {
+                        Out.Toast(MyWalletActivity.this, "密码不能为空");
+                    }
+                }
+            });
+            cusAlertDialogWithPassword.setNegativeButton("取消", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    cusAlertDialogWithPassword.dismiss();
+                }
+            });
+            cusAlertDialogWithPassword.show();
         }
     }
 
     /**
      * 解绑操作
      */
-    private void unBindRequest() {
+    private void unBindRequest(String payPwd) {
         final RequestParams params = new RequestParams(HgbwUrl.TRADE_BIND);
 
 //        params.addBodyParameter("referer_id", SharedPreferenceUtils.getMyAccount());//根据实际需求添加相应键值对
 //        params.addBodyParameter("referer", "android_hgbw");
         params.addBodyParameter("mobile", SharedPreferenceUtils.getTradeAccount());
+        params.addBodyParameter("pay_pwd", payPwd);
         if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.BINDING_STATE)){
             params.addBodyParameter("bind_type", "unbind");
         }
@@ -191,6 +214,7 @@ public class MyWalletActivity extends BaseActivity {
      * 处理json数据
      */
     private void getDataFromJson(String result) throws JSONException {
+        JumpUtils.check405(MyWalletActivity.this, result);
         JSONObject jsonObject = new JSONObject(result);
         Log.i(TAG_LOG, "getDataFromJson: " + jsonObject.getString("message"));
         String status = jsonObject.getString("status");
@@ -198,9 +222,8 @@ public class MyWalletActivity extends BaseActivity {
             SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.UNBINDING_STATE);
             SharedPreferenceUtils.setTradeAccount(SharedPreferenceUtils.UNBINDING_STATE);
             lv_card.setAdapter(null);
-            lv_card.setVisibility(View.GONE);
-            tv_btn_no.setVisibility(View.GONE);
-            tv_btn_ok.setVisibility(View.VISIBLE);
+            ll_content_empty.setVisibility(View.VISIBLE);
+            ll_content.setVisibility(View.GONE);
         }
     }
 }

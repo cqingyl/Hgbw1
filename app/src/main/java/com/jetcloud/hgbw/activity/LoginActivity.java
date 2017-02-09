@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +19,7 @@ import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.UserBean;
+import com.jetcloud.hgbw.utils.JumpUtils;
 import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
@@ -42,6 +45,12 @@ public class LoginActivity extends BaseActivity {
     TextView tv_forget_pwd;
     @ViewInject(R.id.bt_loging)
     Button bt_loging;
+    @ViewInject(R.id.activity_login)
+    LinearLayout activity_login;
+    @ViewInject(R.id.iv_weixin)
+    ImageView iv_weixin;
+    @ViewInject(R.id.iv_xinlang)
+    ImageView iv_xinlang;
 
     private MyEditeListener editeListener;
 
@@ -59,13 +68,15 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void initView() {
         // TODO Auto-generated method stub
-
+        activity_login.setBackgroundResource(R.drawable.mine_bg);
         bt_loging.setOnClickListener(this);
         editeListener = new MyEditeListener();
         et_username.addTextChangedListener(editeListener);
         et_password.addTextChangedListener(editeListener);
         tv_register.setOnClickListener(this);
         tv_forget_pwd.setOnClickListener(this);
+        iv_weixin.setOnClickListener(this);
+        iv_xinlang.setOnClickListener(this);
 
     }
 
@@ -84,13 +95,16 @@ public class LoginActivity extends BaseActivity {
                 Out.Toast(context, "手机位数不对");
             } else {
                 Out.Toast(LoginActivity.this, "登录");
-                getNetData();
+                loginRequest();
             }
         } else if (view == tv_register) {
             startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
         } else if (view == tv_forget_pwd) {
             startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
-
+        } else if (view == iv_weixin) {
+            Out.Toast(LoginActivity.this, "该功能未开通");
+        } else if (view == iv_xinlang) {
+            Out.Toast(LoginActivity.this, "该功能未开通");
         }
     }
 
@@ -99,7 +113,8 @@ public class LoginActivity extends BaseActivity {
         @Override
         public void afterTextChanged(Editable arg0) {
             // TODO Auto-generated method stub
-            if (TextUtils.isEmpty(et_username.getText().toString()) || TextUtils.isEmpty(et_password.getText().toString())) {
+            if (TextUtils.isEmpty(et_username.getText().toString()) || TextUtils.isEmpty(et_password.getText()
+                    .toString())) {
                 bt_loging.setBackground(getResources().getDrawable(
                         R.drawable.bt_loging_bg_no));
                 bt_loging.setEnabled(false);
@@ -128,11 +143,11 @@ public class LoginActivity extends BaseActivity {
     /***
      * 登录请求
      */
-    private void getNetData() {
+    private void loginRequest() {
         final RequestParams params = new RequestParams(HgbwUrl.LOGIN_URL);
         //缓存时间
-        params.addBodyParameter("phone", et_username.getText().toString());
-        params.addBodyParameter("pwd", et_password.getText().toString());
+        params.addBodyParameter("phone", et_username.getText().toString().trim());
+        params.addBodyParameter("pwd", et_password.getText().toString().trim());
         params.setCacheMaxAge(1000 * 60);
         x.task().run(new Runnable() {
             @Override
@@ -145,7 +160,7 @@ public class LoginActivity extends BaseActivity {
                     @Override
                     public boolean onCache(String result) {
                         this.result = result;
-                        return true; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
+                        return false; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
                     }
 
                     @Override
@@ -160,27 +175,28 @@ public class LoginActivity extends BaseActivity {
                     public void onError(Throwable ex, boolean isOnCallback) {
                         hasError = true;
                         Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
-                        Log.e(TAG_LOG, "onError: " + ex.getMessage());
+                        Log.e(TAG_LOG, "loginRequest onError: " + ex.getMessage());
                         if (ex instanceof HttpException) { // 网络错误
                             HttpException httpEx = (HttpException) ex;
                             int responseCode = httpEx.getCode();
                             String responseMsg = httpEx.getMessage();
                             String errorResult = httpEx.getResult();
-                            Log.e(TAG_LOG, "onError " + " code: " + responseCode + " message: " + responseMsg);
+                            Log.e(TAG_LOG, "loginRequest onError " + " code: " + responseCode + " message: " +
+                                    responseMsg);
                         } else { // 其他错误
                         }
                     }
 
                     @Override
                     public void onCancelled(CancelledException cex) {
-                        Toast.makeText(x.app(), "cancelled", Toast.LENGTH_LONG).show();
+                        Toast.makeText(x.app(), "loginRequest cancelled", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onFinished() {
                         progress.dismiss();
                         if (!hasError && result != null) {
-                            Log.i(TAG_LOG, "onFinished: " + result);
+                            Log.i(TAG_LOG, "loginRequest onFinished: " + result);
                             try {
                                 getDataFromJson(result);
                             } catch (JSONException e) {
@@ -207,21 +223,31 @@ public class LoginActivity extends BaseActivity {
      * 处理json数据
      */
     private void getDataFromJson(String result) throws JSONException {
+        JumpUtils.check405(LoginActivity.this, result);
         JSONObject jsonObject = new JSONObject(result);
         Out.Toast(context, jsonObject.getString("status"));
-        if (jsonObject.getString("status").equals("success")) {
-            SharedPreferenceUtils.setMyAccount(et_username.getText().toString());
-            SharedPreferenceUtils.setMyPassword(et_password.getText().toString());
-            SharedPreferenceUtils.setIdentity(jsonObject.getString("identity"));
-//            Log.i(TAG_LOG, "getDataFromJson: " + jsonObject.getString("identity"));
-//            finish();
-            getUserInfoRequest();
+        if (jsonObject.has("status")) {
+            if (jsonObject.getString("status").equals("success")) {
+                SharedPreferenceUtils.setMyAccount(et_username.getText().toString());
+                SharedPreferenceUtils.setMyPassword(et_password.getText().toString());
+                SharedPreferenceUtils.setIdentity(jsonObject.getString("identity"));
+                //            Log.i(TAG_LOG, "getDataFromJson: " + jsonObject.getString("identity"));
+                //            finish();
+                getUserInfoRequest();
+            } else if (jsonObject.getString("status").equals("fail")) {
+                if (jsonObject.has("code")) {
+                    if (jsonObject.getString("code").equals("404")) {
+                        Out.Toast(LoginActivity.this, "该手机号未注册");
+                    }
+                }
+            }
         }
 
     }
+
     /**
      * 获取用户信息
-     * */
+     */
     private void getUserInfoRequest() {
         final RequestParams params = new RequestParams(HgbwUrl.PIC_AND_NICK_URL);
         //缓存时间
@@ -295,7 +321,7 @@ public class LoginActivity extends BaseActivity {
 
     /**
      * 判断用户是否绑定交易宝
-     * */
+     */
     private void getUserDataFromJson(String result) {
         Gson gson = new Gson();
         UserBean userBean = gson.fromJson(result, UserBean.class);

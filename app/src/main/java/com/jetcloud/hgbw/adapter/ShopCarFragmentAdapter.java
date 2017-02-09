@@ -71,7 +71,7 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
     @Override
     public int getChildrenCount(int groupPosition) {
         String groupId = groups.get(groupPosition).getNumber();
-//        Log.i(TAG, "getChildrenCount: ");
+//        Log.i(TAG, "getChildrenCount: " + children.get(groupId).size());
         return children.get(groupId).size();
     }
 
@@ -112,9 +112,8 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
             groupViewHolder = (GroupViewHolder) convertView.getTag();
         }
         final MachineInfo machineInfo = (MachineInfo) getGroup(groupPosition);
-        String machineName = machineInfo.getNumber();
-        String machineNum = machineName.substring(machineName.length() - 3, machineName.length());
-        groupViewHolder.tvMachineTitle.setText(String.format(context.getString(R.string.machine_name),"成都",machineNum));
+
+        groupViewHolder.tvMachineTitle.setText(machineInfo.getNickname());
         groupViewHolder.cbGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

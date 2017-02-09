@@ -34,7 +34,7 @@
                     android:id="@+id/view_one"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:background="@color/main_bg" />
+                    android:background="@color/gray_light" />
 
                 <com.jetcloud.hgbw.view.MyExpandableListView
                     android:id="@+id/elv_buying"
@@ -74,7 +74,7 @@
                         android:paddingLeft="8dp"
                         android:gravity="center_vertical"
                         android:textColor="@color/black"
-                        android:text="全球付GCB支付"/>
+                        android:text="全球付VR9支付"/>
                     <TextView
                         android:id="@+id/tv_gcb_num"
                         android:layout_width="0dp"

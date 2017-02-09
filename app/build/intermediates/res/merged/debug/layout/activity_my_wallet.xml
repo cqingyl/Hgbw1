@@ -12,6 +12,38 @@
     <include layout="@layout/top_bar"/>
 
     <LinearLayout
+        android:id="@+id/ll_content_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_light"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/unbinded"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_big"
+            android:textColor="@color/gray"
+            android:text="您还未绑定交易宝账号"/>
+        <TextView
+            android:id="@+id/tv_btn_ok"
+            style="@style/TextViewButton"
+            android:layout_width="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@drawable/next_btn_ok"
+            android:text="去绑定"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/gray_light">
@@ -21,18 +53,11 @@
             >
 
             <LinearLayout
-                android:id="@+id/ll_content_empty"
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/gray_light"
                 android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_btn_ok"
-                    style="@style/TextViewButton"
-                    android:background="@drawable/next_btn_ok"
-                    android:text="绑定交易宝帐号"
-                    android:textColor="@color/white"/>
                 <com.jetcloud.hgbw.view.MyListView
                     android:id="@+id/lv_card"
                     android:layout_width="match_parent"
@@ -47,7 +72,6 @@
                     android:textColor="@color/white"/>
 
             </LinearLayout>
-
         </ScrollView>
     </LinearLayout>
 </LinearLayout>

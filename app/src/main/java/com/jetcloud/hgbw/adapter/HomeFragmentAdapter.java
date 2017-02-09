@@ -90,12 +90,13 @@ public class HomeFragmentAdapter extends BaseAdapter {
         x.image().bind(holder.imgFood, imgPath, imageOptions);
         holder.tvFoodName.setText(list.get(position).getName());
         holder.tvMachineName.setText(machineInfo.getNumber());
-        holder.tvAddress.setText(machineInfo.getAddress());
+//        holder.tvAddress.setText(machineInfo.getAddress());
         final ImageView img_food = holder.imgFood;
         final FoodBean.DataBean dataBean = list.get(position);
 
-        holder.tv_price_vr9.setText(context.getString(R.string.rmb_display, dataBean.getPrice_cny()));
+        holder.tv_price_cny.setText(context.getString(R.string.rmb_display, dataBean.getPrice_cny()));
         holder.tv_price_vr9.setText(context.getString(R.string.gcb_display, dataBean.getPrice_vr9()));
+        holder.tv_description.setText(dataBean.getDescription());
         holder.tvIncar.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -135,9 +136,21 @@ public class HomeFragmentAdapter extends BaseAdapter {
                 if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)) {
                     context.startActivity(new Intent(context, LoginActivity.class));
                 } else {
-                    Intent i = new Intent(context, HomePayActivity.class);
-                    saveListToApp(dataBean);
-                    context.startActivity(i);
+                    if (dataBean.getNum() > 0) {
+                        Intent i = new Intent(context, HomePayActivity.class);
+                        saveListToApp(dataBean);
+                        context.startActivity(i);
+                    } else {
+                        final CusAlertDialog cusAlertDialog = new CusAlertDialog(context);
+                        cusAlertDialog.setTitle("已经没这个餐了");
+                        cusAlertDialog.setPositiveButton("确定", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                cusAlertDialog.dismiss();
+                            }
+                        });
+                        cusAlertDialog.show();
+                    }
                 }
             }
         });
@@ -188,8 +201,8 @@ public class HomeFragmentAdapter extends BaseAdapter {
         private ImageView ivDetils;
         @ViewInject(R.id.tv_btn_apply)
         private TextView tvBtnApply;
-        @ViewInject(R.id.tv_address)
-        private TextView tvAddress;
+//        @ViewInject(R.id.tv_address)
+//        private TextView tvAddress;
         @ViewInject(R.id.tv_price_cny)
         private TextView tv_price_cny;
         @ViewInject(R.id.tv_price_vr9)
@@ -202,6 +215,8 @@ public class HomeFragmentAdapter extends BaseAdapter {
         private ImageView imgFood;
         @ViewInject(R.id.tv_incar)
         private TextView tvIncar;
+        @ViewInject(R.id.tv_description)
+        private TextView tv_description;
 
         public ViewHolder(View view) {
             x.view().inject(this, view);

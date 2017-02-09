@@ -205,10 +205,10 @@ public class BaiduMapActivity extends AppCompatActivity implements View.OnClickL
     private void initMapDataList() {
         bdMapClientList = new ArrayList<>();
         //让所有覆盖物的经纬度与你自己的经纬度相近，以便打开地图就能看到那些覆盖物
-        bdMapClientList.add(new BDMapData("中兴创维", latitude - 0.0656, longitude - 0.00354));
-        bdMapClientList.add(new BDMapData("领卓科技", latitude + 0.024, longitude - 0.0105));
-        bdMapClientList.add(new BDMapData("蓝翔驾校", latitude - 0.00052, longitude - 0.01086));
-        bdMapClientList.add(new BDMapData("优衣库折扣店", latitude + 0.0124, longitude + 0.00184));
+        bdMapClientList.add(new BDMapData(latitude - 0.0656, longitude - 0.00354));
+        bdMapClientList.add(new BDMapData(latitude + 0.024, longitude - 0.0105));
+        bdMapClientList.add(new BDMapData(latitude - 0.00052, longitude - 0.01086));
+        bdMapClientList.add(new BDMapData(latitude + 0.0124, longitude + 0.00184));
     }
 
     /**

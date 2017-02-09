@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.app.HgbwUrl;
+import com.jetcloud.hgbw.utils.JumpUtils;
 import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 
@@ -128,7 +129,7 @@ public class ForgotPasswordActivity extends BaseActivity {
             } else if (!et_password.getText().toString().equals(et_passwordag.getText().toString())){
                 Out.Toast(context, "两次密码不一样");
             } else {
-                getNetData();
+                forgetPasswordRequest();
             }
         }
     }
@@ -265,7 +266,7 @@ public class ForgotPasswordActivity extends BaseActivity {
     /***
      * 重设密码请求
      * */
-    private void getNetData() {
+    private void forgetPasswordRequest() {
         final RequestParams params = new RequestParams(HgbwUrl.RESET_PWD_URL);
         //缓存时间
         params.addBodyParameter("phone",et_username.getText().toString());
@@ -298,27 +299,27 @@ public class ForgotPasswordActivity extends BaseActivity {
                     public void onError(Throwable ex, boolean isOnCallback) {
                         hasError = true;
                         Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
-                        Log.e(TAG_LOG, "onError: " + ex.getMessage());
+                        Log.e(TAG_LOG, "forgetPasswordRequest onError: " + ex.getMessage());
                         if (ex instanceof HttpException) { // 网络错误
                             HttpException httpEx = (HttpException) ex;
                             int responseCode = httpEx.getCode();
                             String responseMsg = httpEx.getMessage();
                             String errorResult = httpEx.getResult();
-                            Log.e(TAG_LOG, "onError " + " code: " + responseCode + " message: " + responseMsg);
+                            Log.e(TAG_LOG, "forgetPasswordRequest onError " + " code: " + responseCode + " message: " + responseMsg);
                         } else { // 其他错误
                         }
                     }
 
                     @Override
                     public void onCancelled(CancelledException cex) {
-                        Toast.makeText(x.app(), "cancelled", Toast.LENGTH_LONG).show();
+                        Toast.makeText(x.app(), "forgetPasswordRequest cancelled", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onFinished() {
                         progress.dismiss();
                         if (!hasError && result != null) {
-                            Log.i(TAG_LOG, "onFinished: " + result);
+                            Log.i(TAG_LOG, "forgetPasswordRequest onFinished: " + result);
                             try {
                                 getDataFromJson(result);
                             } catch (JSONException e) {
@@ -345,6 +346,7 @@ public class ForgotPasswordActivity extends BaseActivity {
      */
     private void getDataFromJson(String result) throws JSONException {
         JSONObject jsonObject = new JSONObject(result);
+        JumpUtils.check405(ForgotPasswordActivity.this, result);
         Out.Toast(context, jsonObject.getString("status"));
       if (jsonObject.getString("status").equals("success")) {
             finish();

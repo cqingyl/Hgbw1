@@ -3,7 +3,7 @@
 
     <item>
         <shape>
-            <solid android:color="@color/bottom_nav_text_color_check_no"/>
+            <solid android:color="@color/login_nav_btn_no"/>
 
             <corners android:radius="5dp" />
            

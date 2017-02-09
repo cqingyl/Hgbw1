@@ -31,12 +31,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <View
-                    android:id="@+id/view_one"
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"
-                    android:background="@color/main_bg" />
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/line"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -64,16 +63,7 @@
                         android:textSize="@dimen/text_huge" />
                 </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/line" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"
-                    android:background="@color/main_bg" />
-                <View style="@style/lineView"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -143,6 +133,7 @@
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/cny"
                                 />
+
                             <TextView
                                 android:id="@+id/tv_price_cny"
                                 android:layout_width="wrap_content"
@@ -152,6 +143,7 @@
                                 tools:text="60.00元"
                                 android:textColor="@color/bottom_nav_text_color_check"
                                 android:textSize="@dimen/text_big" />
+
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -227,7 +219,10 @@
                     style="@style/MyListView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
-
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/line"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
@@ -250,7 +245,7 @@
                         android:paddingLeft="8dp"
                         android:gravity="center_vertical"
                         android:textColor="@color/black"
-                        android:text="全球付GCB支付"/>
+                        android:text="全球付VR9支付"/>
                     <TextView
                         android:id="@+id/tv_gcb_num"
                         android:layout_width="0dp"

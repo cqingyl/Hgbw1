@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/main_bg"
+              android:background="@color/gray_light"
               android:orientation="vertical">
 
     <include layout="@layout/top_bar"/>
@@ -17,17 +17,41 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/line"/>
-    <TextView
-        android:id="@+id/tv_empty"
-        android:visibility="gone"
+    <LinearLayout
+        android:id="@+id/ll_empty"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="你还未登陆"
-        android:textSize="18sp"
+        android:orientation="vertical"
         android:gravity="center"
-        android:background="@color/gray_light"
-        android:textColor="@color/blue"
-        />
+        android:visibility="visible">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/unbinded"/>
+        <TextView
+            android:id="@+id/tv_empty"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="你还未登陆"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            />
+        <TextView
+            android:id="@+id/tv_btn_ok"
+            style="@style/TextViewButton"
+            android:layout_width="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@drawable/next_btn_ok"
+            android:text="去登录"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
 
 
 </LinearLayout>
