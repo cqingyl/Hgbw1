@@ -31,7 +31,7 @@ public class MyTicketActivity extends BaseActivity {
 		adapter = new MyticketAdapter(MyTicketActivity.this);
 		lv_myticket.setAdapter(adapter);
 		activity_my_ticket = getView(R.id.activity_my_ticket);
-		activity_my_ticket.setBackgroundResource(R.drawable.mine_bg);
+//		activity_my_ticket.setBackgroundResource(R.drawable.mine_bg);
 		
 	}
 

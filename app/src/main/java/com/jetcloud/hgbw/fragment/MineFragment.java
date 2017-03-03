@@ -120,7 +120,7 @@ public class MineFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        initWindow();
+//        initWindow();
         takefood.setOnClickListener(this);
         myorder.setOnClickListener(this);
         myticket.setOnClickListener(this);
@@ -188,6 +188,7 @@ public class MineFragment extends BaseFragment {
                 startActivity(new Intent(getActivity(), LoginActivity.class));
             } else {
                 getUserInfoRequest(NORMAL_STATUS);
+//                Intent i = new Intent(getActivity(), MyOrderTwoActivity.class);
                 Intent i = new Intent(getActivity(), MyOrderActivity.class);
 
                 startActivity(i);
@@ -722,6 +723,13 @@ public class MineFragment extends BaseFragment {
             if (jsonObject.getString("code").equals("409")) {
                 civ_head.setImageResource(R.drawable.drink);
                 Out.Toast(getActivity(), "你的账号已在其他设备登录");
+                SharedPreferenceUtils.setIdentity(SharedPreferenceUtils.WITHOUT_LOGIN);
+                SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.UNBINDING_STATE);
+                SharedPreferenceUtils.setMyAccount(SharedPreferenceUtils.WITHOUT_LOGIN);
+                SharedPreferenceUtils.setTradeAccount(SharedPreferenceUtils.WITHOUT_LOGIN);
+                isHideBtnResiterAndLogin();
+            } else if (jsonObject.getString("code").equals("405")) {
+                Out.Toast(getActivity(), "登录信息失效");
                 SharedPreferenceUtils.setIdentity(SharedPreferenceUtils.WITHOUT_LOGIN);
                 SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.UNBINDING_STATE);
                 SharedPreferenceUtils.setMyAccount(SharedPreferenceUtils.WITHOUT_LOGIN);

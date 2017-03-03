@@ -173,4 +173,10 @@ public class XFooterView extends LinearLayout {
         mLayout.setLayoutParams(lp);
     }
 
+    /**
+     *  change footer text
+     * */
+    public void setFootText(String footText){
+        mHintView.setText(footText);
+    }
 }

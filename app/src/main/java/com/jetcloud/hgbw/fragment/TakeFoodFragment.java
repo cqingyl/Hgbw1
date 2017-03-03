@@ -146,6 +146,41 @@ public class TakeFoodFragment extends BaseFragment implements XListView.IXListVi
 	/**
 	 * 处理json数据
 	 */
+//	private void getOrderDataFromJson(String result) throws JSONException {
+//		JumpUtils.check405(getActivity(), result);
+//		if (isLogin()) {
+//			Gson gson = new Gson();
+//			TakeFoodInfo takeFoodInfo = gson.fromJson(result, TakeFoodInfo.class);
+//			List<TakeFoodInfo.OrdersBean> newOrdersBeenList = takeFoodInfo.getOrders();
+//
+//			if (newOrdersBeenList == null || newOrdersBeenList.isEmpty()) {
+//				mListView.setVisibility(View.GONE);
+//				ll_empty.setVisibility(View.VISIBLE);
+//				tv_empty.setText("你还没有待取餐");
+//			} else {
+//				if (page == 0) {
+//					ordersBeenList = newOrdersBeenList;
+//					adapter = new TakeFoodParentAdapter(getActivity(), ordersBeenList);
+//					Log.i(TAG_LOG, "getOrderDataFromJson: " + ordersBeenList.size());
+//					mListView.setAdapter(adapter);
+//					perPageNum = ordersBeenList.size();
+//					if (perPageNum >= PER_PAGE_ALL_NUM ) {
+//						mListView.setPullLoadEnable(true);
+//					} else {
+//						mListView.setPullLoadEnable(false);
+//					}
+//					onLoad();
+//
+//				} else {
+//					adapter.addNewData(newOrdersBeenList);
+//					perPageNum = ordersBeenList.size() + newOrdersBeenList.size();
+//					Log.i(TAG_LOG, "getOrderDataFromJson perPageNum: " + perPageNum);
+//					onLoad();
+//				}
+//			}
+//		}
+//	}
+
 	private void getOrderDataFromJson(String result) throws JSONException {
 		JumpUtils.check405(getActivity(), result);
 		if (isLogin()) {
@@ -153,28 +188,44 @@ public class TakeFoodFragment extends BaseFragment implements XListView.IXListVi
 			TakeFoodInfo takeFoodInfo = gson.fromJson(result, TakeFoodInfo.class);
 			List<TakeFoodInfo.OrdersBean> newOrdersBeenList = takeFoodInfo.getOrders();
 
-			if (newOrdersBeenList == null || newOrdersBeenList.isEmpty()) {
-				mListView.setVisibility(View.GONE);
-				ll_empty.setVisibility(View.VISIBLE);
-				tv_empty.setText("你还没有待取餐");
-			} else {
 				if (page == 0) {
-					ordersBeenList = newOrdersBeenList;
-					adapter = new TakeFoodParentAdapter(getActivity(), ordersBeenList);
-					Log.i(TAG_LOG, "getOrderDataFromJson: " + ordersBeenList.size());
-					mListView.setAdapter(adapter);
-					perPageNum = ordersBeenList.size();
-					onLoad();
+					if (newOrdersBeenList == null || newOrdersBeenList.isEmpty()) {
+						mListView.setVisibility(View.GONE);
+						ll_empty.setVisibility(View.VISIBLE);
+						tv_empty.setText("你还没有待取餐");
+						if (ordersBeenList!= null){
+							ordersBeenList.clear();
+							adapter.notifyDataSetChanged();
+						}
+					} else {
+						ordersBeenList = newOrdersBeenList;
+						adapter = new TakeFoodParentAdapter(getActivity(), ordersBeenList);
+						Log.i(TAG_LOG, "getOrderDataFromJson: " + ordersBeenList.size());
+						mListView.setAdapter(adapter);
+						perPageNum = ordersBeenList.size();
+						if (perPageNum >= PER_PAGE_ALL_NUM ) {
+							mListView.setPullLoadEnable(true);
+						} else {
+							mListView.setPullLoadEnable(false);
+						}
+						onLoad();
+					}
 
 				} else {
-					adapter.addNewData(newOrdersBeenList);
-					perPageNum = ordersBeenList.size() + newOrdersBeenList.size();
-					onLoad();
+					if (newOrdersBeenList == null || newOrdersBeenList.isEmpty()) {
+						Log.i(TAG_LOG, "getOrderDataFromJson: " + "没有更多了");
+						mListView.setFootText(getActivity().getString(R.string.footer_hint_load_no_more));
+					} else {
+						mListView.setFootText(getActivity().getString(R.string.footer_hint_load_normal));
+						adapter.addNewData(newOrdersBeenList);
+						perPageNum = ordersBeenList.size() + newOrdersBeenList.size();
+						Log.i(TAG_LOG, "getOrderDataFromJson perPageNum: " + perPageNum);
+						onLoad();
+					}
 				}
-			}
+
 		}
 	}
-
 
 	private void getOrderRequest(int page) {
 		final RequestParams params = new RequestParams(HgbwUrl.GET_ORDER_URL);
@@ -222,6 +273,10 @@ public class TakeFoodFragment extends BaseFragment implements XListView.IXListVi
 							mListView.setVisibility(View.GONE);
 							tv_empty.setVisibility(View.VISIBLE);
 							tv_empty.setText("你还没有待取餐");
+							if (ordersBeenList!= null){
+								ordersBeenList.clear();
+								adapter.notifyDataSetChanged();
+							}
 						}
 					}
 
@@ -266,8 +321,8 @@ public class TakeFoodFragment extends BaseFragment implements XListView.IXListVi
 
 	@Override
 	public void onLoadMore() {
-		Log.i(TAG_LOG, "onLoadMore: " + perPageNum);
-		if (perPageNum > PER_PAGE_ALL_NUM ){
+
+		if (perPageNum >= PER_PAGE_ALL_NUM ){
 			mListView.setPullLoadEnable(true);
 			if (isLogin()){
 				getOrderRequest(++ page);

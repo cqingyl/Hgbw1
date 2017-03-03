@@ -57,7 +57,6 @@ public class RegisterActivity extends BaseActivity {
 		setContentView(R.layout.activity_register);
 		super.onCreate(savedInstanceState);
 	}
-
 	@Override
 	protected void initView() {
 		// TODO Auto-generated method stub

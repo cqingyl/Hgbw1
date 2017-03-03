@@ -212,6 +212,10 @@
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\dialog_btn_left.xml"
     },
     {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bga_refresh_loding.xml",
+        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\cn.bingoogolapple\\bga-refreshlayout\\1.1.7\\res\\drawable\\bga_refresh_loding.xml"
+    },
+    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bt_loging_bg.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable\\bt_loging_bg.xml"
     },

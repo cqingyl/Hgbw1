@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.app.HgbwStaticString;
-import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 import com.jetcloud.hgbw.view.TopBar;
 
@@ -51,15 +50,15 @@ public class BindingActivity extends BaseActivity {
         topbar.setLeftDrawable(false, drawable);
         tv_btn_ok.setOnClickListener(this);
 
-        tv_myaccount.setText(SharedPreferenceUtils.getMyAccount());
-        activity_binding.setBackgroundResource(R.drawable.mine_bg);
+//        tv_myaccount.setText(SharedPreferenceUtils.getMyAccount());
+//        activity_binding.setBackgroundResource(R.drawable.mine_bg);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_btn_ok:
-
+                finish();
                 Intent i = new Intent(BindingActivity.this, BindNextActivity.class);
                 i.putExtra(HgbwStaticString.JUMP_RESOURCE, BindingActivity.this.getIntent().getStringExtra(HgbwStaticString.JUMP_RESOURCE));
                 startActivity(i);

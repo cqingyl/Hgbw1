@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'hgbw'
+            keyPassword '147258'
+            storeFile file('F:/work/jetCloudKeyStore.jks')
+            storePassword '147258369'
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
-
     aaptOptions {
         cruncherEnabled = false
         useNewCruncher = false
@@ -11,16 +18,19 @@ android {
     }
     defaultConfig {
         applicationId "com.jetcloud.hgbw"
-        minSdkVersion 19
+        minSdkVersion 18
         targetSdkVersion 25
         multiDexEnabled true
 
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
         }
     }
     sourceSets {
@@ -42,5 +52,8 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.1.0'
     compile 'com.android.support:design:25.1.0'
     compile project(':zxinglibrary')
-
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
+    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
 }

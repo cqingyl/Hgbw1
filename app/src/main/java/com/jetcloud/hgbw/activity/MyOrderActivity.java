@@ -67,14 +67,14 @@ public class MyOrderActivity extends BaseActivity implements XListView.IXListVie
         mListView.setXListViewListener(this);
         mListView.setRefreshTime(getTime());
         activity_my_order = getView(R.id.activity_my_order);
-        activity_my_order.setBackgroundResource(R.drawable.mine_bg);
+//        activity_my_order.setBackgroundResource(R.drawable.mine_bg);
         //隐藏加载更多
         mListView.setPullLoadEnable(false);
     }
 
     @Override
     protected void loadData() {
-        getOrderRequest(page);
+//        getOrderRequest(page);
 
     }
 
@@ -85,7 +85,7 @@ public class MyOrderActivity extends BaseActivity implements XListView.IXListVie
     private void onLoad() {
         mListView.stopRefresh();
         mListView.stopLoadMore();
-        mListView.setRefreshTime(getTime());
+
     }
 
     @Override
@@ -106,23 +106,35 @@ public class MyOrderActivity extends BaseActivity implements XListView.IXListVie
         MyOrderBean myOrderBean = gson.fromJson(result, MyOrderBean.class);
         List<MyOrderBean.OrdersBean> newOrdersBeenList = myOrderBean.getOrders();
 
-        if (newOrdersBeenList == null || newOrdersBeenList.isEmpty()) {
-            mListView.setVisibility(View.GONE);
-            tv_empty.setVisibility(View.VISIBLE);
-            tv_empty.setText("你还未有订单");
-        } else {
             if (page == 0) {
-                ordersBeenList = newOrdersBeenList;
-                adapter = new MyOrderParentAdapter(MyOrderActivity.this, ordersBeenList);
-                mListView.setAdapter(adapter);
-                perPageNum = ordersBeenList.size();
-                onLoad();
+                if (newOrdersBeenList == null || newOrdersBeenList.isEmpty()) {
+                    mListView.setVisibility(View.GONE);
+                    tv_empty.setVisibility(View.VISIBLE);
+                    tv_empty.setText("你还未有订单");
+                } else {
+                    ordersBeenList = newOrdersBeenList;
+                    adapter = new MyOrderParentAdapter(MyOrderActivity.this, ordersBeenList);
+                    mListView.setAdapter(adapter);
+                    perPageNum = ordersBeenList.size();
+                    if (perPageNum >= PER_PAGE_ALL_NUM ) {
+                        mListView.setPullLoadEnable(true);
+                    } else {
+                        mListView.setPullLoadEnable(false);
+                    }
+                    onLoad();
+                }
             } else {
-                adapter.addNewData(newOrdersBeenList);
-                perPageNum = ordersBeenList.size() + newOrdersBeenList.size();
-                onLoad();
+                if (newOrdersBeenList == null || newOrdersBeenList.isEmpty()) {
+                    Log.i(TAG_LOG, "getOrderDataFromJson: " + "没有更多了");
+                    mListView.setFootText(MyOrderActivity.this.getString(R.string.footer_hint_load_no_more));
+                } else {
+                    mListView.setFootText(MyOrderActivity.this.getString(R.string.footer_hint_load_normal));
+                    adapter.addNewData(newOrdersBeenList);
+                    perPageNum = ordersBeenList.size() + newOrdersBeenList.size();
+                    Log.i(TAG_LOG, "getOrderDataFromJson perPageNum: " + perPageNum);
+                    onLoad();
+                }
             }
-        }
 
     }
 
@@ -208,6 +220,7 @@ public class MyOrderActivity extends BaseActivity implements XListView.IXListVie
     }
     @Override
     public void onRefresh() {
+        mListView.setRefreshTime(getTime());
         page = 0;
         getOrderRequest(page);
     }
@@ -215,7 +228,7 @@ public class MyOrderActivity extends BaseActivity implements XListView.IXListVie
     @Override
     public void onLoadMore() {
         Log.i(TAG_LOG, "onLoadMore: " + perPageNum);
-        if (perPageNum > PER_PAGE_ALL_NUM ){
+        if (perPageNum >= PER_PAGE_ALL_NUM ){
             mListView.setPullLoadEnable(true);
             getOrderRequest(++ page);
         } else {

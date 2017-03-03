@@ -42,7 +42,8 @@ public class HomeFragmentAdapter extends BaseAdapter {
     private HolderClickListener mHolderClickListener;
     private AddGoodNumberInterface numberInterface;
     private HgbwApplication app;
-    private MachineInfo machineInfo;
+    private String machineNum;
+//    private MachineInfo machineInfo;
     @Override
     public int getCount() {
         // TODO Auto-generated method stub
@@ -51,7 +52,7 @@ public class HomeFragmentAdapter extends BaseAdapter {
 
     public void setData(List<FoodBean.DataBean> data){
         this.list = data;
-        machineInfo = app.getGroups().get(0);
+        machineNum = SharedPreferenceUtils.getMachineNum();
         this.notifyDataSetChanged();
     }
     public HomeFragmentAdapter(Activity context) {
@@ -89,7 +90,7 @@ public class HomeFragmentAdapter extends BaseAdapter {
         String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + list.get(position).getPic());
         x.image().bind(holder.imgFood, imgPath, imageOptions);
         holder.tvFoodName.setText(list.get(position).getName());
-        holder.tvMachineName.setText(machineInfo.getNumber());
+        holder.tvMachineName.setText(machineNum);
 //        holder.tvAddress.setText(machineInfo.getAddress());
         final ImageView img_food = holder.imgFood;
         final FoodBean.DataBean dataBean = list.get(position);
@@ -159,7 +160,7 @@ public class HomeFragmentAdapter extends BaseAdapter {
             public void onClick(View view) {
                 Intent i = new Intent(new Intent(context, DetailsActivity.class));
 //                saveListToApp(dataBean);
-                i.putExtra(MACHINE, machineInfo);
+                i.putExtra(MACHINE, machineNum);
                 i.putExtra(FOOD_ID, String.valueOf(dataBean.getId()));
                 context.startActivity(i);
             }
@@ -171,10 +172,8 @@ public class HomeFragmentAdapter extends BaseAdapter {
         Map<String,List<ShopCarInfo>> newList = new HashMap<>();
         List<ShopCarInfo> newInfoList = new ArrayList<>();
         List<MachineInfo> newMachineList = new ArrayList<>();
-        newMachineList.add(machineInfo);
-        app.setGroups(newMachineList);
         newInfoList.add(dataBean);
-        newList.put(machineInfo.getNumber(), newInfoList);
+        newList.put(machineNum, newInfoList);
         app.setChildren(newList);
     }
     public interface AddGoodNumberInterface {

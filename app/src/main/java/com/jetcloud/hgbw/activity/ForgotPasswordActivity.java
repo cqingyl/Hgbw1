@@ -80,7 +80,7 @@ public class ForgotPasswordActivity extends BaseActivity {
         tv_getver=getViewWithClick(R.id.tv_getver);
 
         activity_forget_password = getView(R.id.activity_forget_password);
-        activity_forget_password.setBackgroundResource(R.drawable.mine_bg);
+//        activity_forget_password.setBackgroundResource(R.drawable.mine_bg);
 
         //chebox监听
         cb_agree.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

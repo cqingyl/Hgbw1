@@ -3,13 +3,16 @@ package com.jetcloud.hgbw.activity;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -23,7 +26,7 @@ import com.jetcloud.hgbw.view.TopBar;
 import com.jetcloud.hgbw.view.TopBar.ITopBarClickListener;
 
 
-public abstract class BaseActivity extends FragmentActivity implements
+public abstract class BaseActivity extends AppCompatActivity implements
 OnClickListener {
 
 	public Context context;
@@ -33,6 +36,7 @@ OnClickListener {
 	public FragmentManager manager;
 	public Fragment currentFragment;
 	public Fragment firstFragment;
+	private BroadcastReceiver broadcastReceiver;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +47,31 @@ OnClickListener {
 
 		initApplication();
 		initTopBar();
-		initWindow();
+//		initWindow();
 		initView();
 //		initStatusBar();
 		if (savedInstanceState == null) {
 			loadData();
 		}
+
+		broadcastReceiver = new BroadcastReceiver() {
+			@Override
+			public void onReceive(Context context, Intent intent) {
+				broadcastReceiverDeal(intent);
+			}
+		};
+
+		registerReceiver(broadcastReceiver,getIntentFilter());
 	}
+
+	private void broadcastReceiverDeal(Intent intent) {
+
+	}
+
+	private IntentFilter getIntentFilter() {
+		return new IntentFilter();
+	}
+
 	private void initTopBar() {
 		topbar = (TopBar) findViewById(R.id.topbar);
 
@@ -111,6 +133,7 @@ OnClickListener {
 	protected void onDestroy() {
 		super.onDestroy();
 		application.removeActivity(this);
+		unregisterReceiver(broadcastReceiver);
 
 	}
 	private void initApplication() {

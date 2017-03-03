@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RelativeLayout;
@@ -16,7 +15,6 @@ import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwStaticString;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
-import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CusAlertDialogWithTwoBtn;
 import com.jetcloud.hgbw.view.MyExpandableListView;
@@ -53,6 +51,7 @@ public class CarPayActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_car_pay);
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
@@ -70,17 +69,18 @@ public class CarPayActivity extends BaseActivity {
         tv_go_to_pay = getViewWithClick(R.id.tv_go_to_pay);
         cb_gcb = getViewWithClick(R.id.cb_gcb);
         cb_weixin = getViewWithClick(R.id.cb_weixin);
-        activity_car_pay = getView(R.id.activity_car_pay);
-        activity_car_pay.setBackgroundResource(R.drawable.mine_bg);
+//        activity_car_pay = getView(R.id.activity_car_pay);
+//        activity_car_pay.setBackgroundResource(R.drawable.mine_bg);
     }
 
     @Override
     protected void loadData() {
+
         groups = app.getGroups();
         children = app.getChildren();
         totalPrice = app.getTotalPrice();
         totalGcb = app.getTotalGcb();
-        Log.i(TAG_LOG, "loadData: " + totalGcb);
+
 //        for (int i = 0; i < groups.size(); i ++) {
 //            List<ShopCarInfo> scList = children.get(groups.get(i).getId());
 //            for (int j = 0; j < scList.size(); j ++){
@@ -129,45 +129,41 @@ public class CarPayActivity extends BaseActivity {
         } else if (view.getId() == R.id.tv_go_to_pay) {
             if (cb_gcb.isChecked()) {
                 app.setType(HgbwStaticString.PAY_WAY_VR9);
+                if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
+                    alert = new CusAlertDialogWithTwoBtn(context);
+                    alert.setTitle("操作提示");
+                    alert.setContent("您还未绑定交易宝账号");
+                    alert.setNegativeButton("取消",
+                            new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    alert.dismiss();
+                                }
+                            });
+                    alert.setPositiveButton("去绑定",
+                            new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    alert.dismiss();
+                                    Intent intent = new Intent(CarPayActivity.this, BindingActivity.class);
+                                    intent.putExtra(HgbwStaticString.JUMP_RESOURCE, CarPayActivity
+                                            .class.getSimpleName());
+                                    startActivity(intent);
+                                }
+                            });
+                    alert.show();
+                } else {
+                    Intent i = new Intent(CarPayActivity.this, PayNextActivity.class);
+                    i.putExtra(HgbwStaticString.JUMP_RESOURCE, CarPayActivity.class.getSimpleName());
+                    startActivity(i);
+                }
             } else {
-                app.setType(HgbwStaticString.PAY_WAY_WEIXIN);
-                Out.Toast(CarPayActivity.this, "暂未开通，敬请期待");
-                return;
-            }
-            if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
-                alert = new CusAlertDialogWithTwoBtn(context);
-                alert.setTitle("操作提示");
-                alert.setContent("您还未绑定交易宝账号");
-                alert.setNegativeButton("取消",
-                        new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                alert.dismiss();
-                            }
-                        });
-                alert.setPositiveButton("去绑定",
-                        new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                alert.dismiss();
-                                Intent intent = new Intent(CarPayActivity.this, BindingActivity.class);
-                                intent.putExtra(HgbwStaticString.JUMP_RESOURCE, CarPayActivity
-                                        .class.getSimpleName());
-                                startActivity(intent);
-                            }
-                        });
-                alert.show();
-            } else {
-//                        for (int i = 0; i < children.get(groups.get(0).getNumber()).size(); i ++) {
-//                            ShopCarInfo shopCarInfo = children.get(groups.get(0).getNumber()).get(i);
-//                            shopCarInfo.getId();
-////                            Log.i(TAG_LOG, "onClick: " + shopCarInfo.getId());
-////                            getFoodNumRequest(shopCarInfo.getId());
-//
-//                        }
+                app.setType(HgbwStaticString.PAY_WAY_CNY);
+                SharedPreferenceUtils.setCarpay(SharedPreferenceUtils.WITH_CARPAY);
                 Intent i = new Intent(CarPayActivity.this, PayNextActivity.class);
                 i.putExtra(HgbwStaticString.JUMP_RESOURCE, CarPayActivity.class.getSimpleName());
                 startActivity(i);
+
             }
         }
     }

@@ -57,7 +57,7 @@ public class BindNextActivity extends BaseActivity {
         topbar.setLeftDrawable(false, drawable);
         tv_btn_ok.setOnClickListener(this);
 
-        activity_next_binding.setBackgroundResource(R.drawable.mine_bg);
+//        activity_next_binding.setBackgroundResource(R.drawable.mine_bg);
     }
 
     @Override
@@ -191,10 +191,8 @@ public class BindNextActivity extends BaseActivity {
                 startActivity(new Intent(BindNextActivity.this, PayNextActivity.class));
             }
             finish();
-        } else if (status.equals("201")) {
-            Out.Toast(BindNextActivity.this, "该账号已被其他用户绑定");
-        } else if (status.equals("400")) {
-            Out.Toast(BindNextActivity.this, "该交易宝账号已被绑定,请先解绑");
+        } else if (status.equals("201") || status.equals("400")) {
+            Out.Toast(BindNextActivity.this, jsonObject.getString("message"));
         }
     }
 }

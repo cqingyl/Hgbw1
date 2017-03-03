@@ -57,9 +57,6 @@ public class DetailsActivity extends BaseActivity {
 
 	private double totalPriceCny;
 	private double totalPriceVr9;
-	private List<ShopCarInfo> listObj;
-	private List<MachineInfo> groups = new ArrayList<>();
-	private MachineInfo machineInfo;
 	private String machineNum;
 	private String foodId;
 
@@ -90,7 +87,7 @@ public class DetailsActivity extends BaseActivity {
 		sv_all_layout = getView(R.id.sv_all_layout);
 		tv_empty = getView(R.id.tv_empty);
 		activity_details = getView(R.id.activity_details);
-		activity_details.setBackgroundResource(R.drawable.mine_bg);
+//		activity_details.setBackgroundResource(R.drawable.mine_bg);
 	}
 
 	@Override
@@ -98,9 +95,8 @@ public class DetailsActivity extends BaseActivity {
 
 		Intent i = getIntent();
 		if (i.hasExtra(MACHINE) && i.hasExtra(FOOD_ID)) {
-			machineInfo = (MachineInfo) i.getSerializableExtra(MACHINE);
 			foodId = i.getStringExtra(FOOD_ID);
-			machineNum = machineInfo.getNumber();
+			machineNum = SharedPreferenceUtils.getMachineNum();
 			Log.i("log", "food id: " + foodId);
 			Log.i("log", "machine num: " + machineNum);
 			getDetailDataRequest();
@@ -161,13 +157,10 @@ public class DetailsActivity extends BaseActivity {
 				if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)) {
 					context.startActivity(new Intent(context, LoginActivity.class));
 				} else {
-					List<MachineInfo> groups = new ArrayList<>();
-					groups.add(machineInfo);
 					Map<String, List<ShopCarInfo>> children = new HashMap<>();
 					List<ShopCarInfo> shopCarInfos = new ArrayList<>();
 					shopCarInfos.add(shopCarInfo);
-					children.put(machineInfo.getNumber(),shopCarInfos);
-					app.setGroups(groups);
+					children.put(machineNum,shopCarInfos);
 					app.setChildren(children);
 					app.setTotalGcb(totalPriceCny);
 					app.setTotalPrice(totalPriceVr9);

@@ -46,6 +46,7 @@ import com.jetcloud.hgbw.view.ObservableScrollView;
 import com.wx.wheelview.widget.WheelView;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 import org.xutils.common.Callback;
 import org.xutils.ex.DbException;
 import org.xutils.ex.HttpException;
@@ -103,11 +104,13 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     LinearLayout ll_search;
     @ViewInject(R.id.ll_top_nav)
     LinearLayout ll_top_nav;
+    @ViewInject(R.id.empty_view)
+    TextView empty_view;
     private HomeFragmentAdapter adapter;
     private WheelView wheelView;
     private PopupWindow window;
-    private String machineNum;
-    private String nickName;
+    private String mMachineNum;
+    private String mNickName;
     private List<MachineLocationBean.MechinesBean> mechinesBeanList;
     private List<FoodBean.DataBean> foodBeanDataBeanList;
     private MachineLocationBean.MechinesBean mechinesBean;
@@ -129,16 +132,17 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
         @Override
         public void onImageClick(int position, View imageView) {
-            Log.i(TAG, "onImageClick: " + position);
-                position = position % bannerBeanList.size();
+            Log.i(TAG_LOG, "position: " + position);
+            if (bannerBeanList != null) {
                 if (bannerBeanList.get(position).getBtype().equals("A")) {
-                    String foodId = String.valueOf(bannerBeanList.get(position).getUrl());
+                    String foodId = bannerBeanList.get(position).getUrl();
                     Log.i("log", "onImageClick: " + foodId);
                     Intent intent = new Intent(getActivity(), DetailsActivity.class);
                     intent.putExtra(MACHINE, mechinesBean);
                     intent.putExtra(FOOD_ID, foodId);
                     startActivity(intent);
                 }
+            }
         }
     };
     //坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑坑
@@ -160,9 +164,9 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 
     @Override
     public void onHiddenChanged(boolean hidden) {
-    if (!isFirst) {
-        Log.i(TAG_LOG, "1 onHiddenChanged: " + hidden);
-    }
+        if (!isFirst) {
+            Log.i(TAG_LOG, "1 onHiddenChanged: " + hidden);
+        }
         if (!hidden && !isFirst) {
             ShopCarUtil.ChangeCorner(getActivity(), SharedPreferenceUtils.getShopCarNumber());
 //            mHandler.postDelayed(mScrollView, 100);
@@ -174,7 +178,8 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         isFirst = false;
         super.onHiddenChanged(hidden);
     }
-//    Handler  mHandler = new Handler();
+
+    //    Handler  mHandler = new Handler();
 //    private Runnable mScrollView = new Runnable(){
 //        @Override
 //        public void run() {
@@ -183,7 +188,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 //    };
     @Override
     public void onResume() {
-//        Log.i(TAG_LOG, "1 onResume: ");
+        Log.i(TAG_LOG, "1 onResume: ");
         ShopCarUtil.ChangeCorner(getActivity(), SharedPreferenceUtils.getShopCarNumber());
 //        mHandler.postDelayed(mScrollView, 100);
 //        ll_top_nav.setBackgroundResource(R.drawable.btn);
@@ -192,7 +197,6 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
 //        ll_choose_machine.setBackgroundResource(R.drawable.btn);
         super.onResume();
     }
-
 
 
     @Override
@@ -300,8 +304,8 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                         public void run() {
                             //        改变购物车角标
                             int oldTotalNum = SharedPreferenceUtils.getShopCarNumber();
-                            Log.i(TAG, "run: "+ oldTotalNum);
-                            int newTotalNum = ++oldTotalNum  ;
+                            Log.i(TAG_LOG, "run: " + oldTotalNum);
+                            int newTotalNum = ++oldTotalNum;
                             SharedPreferenceUtils.setShopCarNumber(newTotalNum);
                             ShopCarUtil.ChangeCorner(getActivity(), newTotalNum);
                         }
@@ -334,7 +338,7 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
             default:
                 type = CHOOSE_NEW_FOOD;
         }
-        getFoodByMachine(type, machineNum, null);
+        getFoodByMachine(type, mMachineNum, null);
     }
 
 
@@ -460,17 +464,26 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
         mechinesBeanList = machineLocationBean.getMechines();
         //选择第一个作为默认机器
         mechinesBean = mechinesBeanList.get(0);
-        machineNum = mechinesBean.getNumber();
-        nickName = mechinesBean.getNickname();
-        SharedPreferenceUtils.setMachineNum(machineNum);
-        tv_machine_name.setText(nickName);
+
+
         MachineInfo machineInfo = mechinesBean;
         List<MachineInfo> machineInfoList = new ArrayList<>();
         machineInfoList.add(machineInfo);
         app.setGroups(machineInfoList);
 
-        getFoodByMachine(CHOOSE_NEW_FOOD, machineNum, null);
-        getBannerRequest(machineNum);
+        if (SharedPreferenceUtils.getMachineNum().equals(SharedPreferenceUtils.WITHOUT_MACHINE)) {
+            mNickName = mechinesBean.getNickname();
+            mMachineNum = mechinesBean.getNumber();
+            SharedPreferenceUtils.setMachineNum(mMachineNum);
+            SharedPreferenceUtils.setMachineNickName(mNickName);
+        } else {
+            mMachineNum = SharedPreferenceUtils.getMachineNum();
+            mNickName = SharedPreferenceUtils.getMachineNickName();
+        }
+        Log.e(TAG_LOG, "getMachineListFromJson: " + mNickName);
+        tv_machine_name.setText(mNickName);
+        getFoodByMachine(CHOOSE_NEW_FOOD, mMachineNum, null);
+        getBannerRequest(mMachineNum);
     }
 
 
@@ -521,28 +534,17 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                         // TODO Auto-generated method stub
                         System.out.println(wheelView.getCurrentPosition());
                         final MachineInfo machineInfo = data.get(wheelView.getCurrentPosition());
-                        if (!machineNum.equals(machineInfo.getNumber())) {
-                            machineNum = machineInfo.getNumber();
-
+                        Log.e(TAG, "onClick: " + mMachineNum + "" + machineInfo.getNumber());
+                        if (!mMachineNum.equals(machineInfo.getNumber())) {
                             final CusAlertDialogWithTwoBtn alertDialog = new CusAlertDialogWithTwoBtn(getActivity());
                             alertDialog.setTitle("警告");
                             alertDialog.setContent("你的购物车会消失");
                             alertDialog.setPositiveButton("确定", new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    getFoodByMachine(CHOOSE_NEW_FOOD, machineNum, machineInfo);
+                                    getFoodByMachine(CHOOSE_NEW_FOOD, machineInfo.getNumber(), machineInfo);
                                     window.dismiss();
                                     alertDialog.dismiss();
-                                    //删除购物车
-                                    try {
-                                        app.db.delete(ShopCarInfo.class);
-                                        app.db.delete(MachineInfo.class);
-                                        total = 0;
-                                        ShopCarUtil.ChangeCorner(getActivity(), total);
-                                        SharedPreferenceUtils.setShopCarNumber(total);
-                                    } catch (DbException e) {
-                                        e.printStackTrace();
-                                    }
                                 }
                             });
                             alertDialog.setNegativeButton("取消", new View.OnClickListener() {
@@ -567,7 +569,8 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     /**
      * 获取食品列表
      */
-    public void getFoodByMachine(int type, String machineNum, final MachineInfo machineInfo) {
+    public void getFoodByMachine(int type, final String machineNum, final MachineInfo machineInfo) {
+        Log.e(TAG_LOG, "getFoodByMachine: " + machineNum);
         final RequestParams params = new RequestParams(HgbwUrl.FOOD_BY_MACHINE_URL);
         final CustomProgressDialog[] dialog = {null};
         //缓存时间
@@ -645,9 +648,30 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
                                     List<MachineInfo> machineInfoList = new ArrayList<MachineInfo>();
                                     machineInfoList.add(machineInfo);
                                     app.setGroups(machineInfoList);
+                                    SharedPreferenceUtils.setMachineNum(machineNum);
+                                    SharedPreferenceUtils.setMachineNickName(machineInfo.getNickname());
                                     tv_machine_name.setText(machineInfo.getNickname());
+                                    mMachineNum = machineNum;
+                                    mNickName = machineInfo.getNickname();
+                                    Log.e(TAG, "onFinished: " + machineNum + machineInfo.getNickname());
+                                    //删除购物车
+                                    try {
+                                        app.db.delete(ShopCarInfo.class);
+                                        app.db.delete(MachineInfo.class);
+                                        total = 0;
+                                        ShopCarUtil.ChangeCorner(getActivity(), total);
+                                        SharedPreferenceUtils.setShopCarNumber(total);
+                                    } catch (DbException e) {
+                                        e.printStackTrace();
+                                    }
+                                    getBannerRequest(machineNum);
                                 }
-                                getFoodByMachineFromJson(result);
+                                JSONObject jsonObject = new JSONObject(result);
+                                if (jsonObject.has("code") && jsonObject.getString("code").equals("500")){
+                                    //empty View
+                                } else if (jsonObject.has("status") && jsonObject.getString("status").equals("success")) {
+                                    getFoodByMachineFromJson(result);
+                                }
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
@@ -669,8 +693,10 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     public void getFoodByMachineFromJson(String result) throws JSONException {
         Gson gson = new Gson();
         FoodBean foodBean = gson.fromJson(result, FoodBean.class);
-        foodBeanDataBeanList = foodBean.getData();
-        adapter.setData(foodBeanDataBeanList);
+        if (foodBean != null && foodBean.getData() != null) {
+            foodBeanDataBeanList = foodBean.getData();
+            adapter.setData(foodBeanDataBeanList);
+        }
 
     }
 
@@ -757,17 +783,23 @@ public class HomeFragment extends BaseFragment implements HomeFragmentAdapter.Ad
     public void getBannerFromJson(String result) throws JSONException {
         Gson gson = new Gson();
         MachineBannerBean machineBannerBean = gson.fromJson(result, MachineBannerBean.class);
-        bannerBeanList = machineBannerBean.getBanner();
-        mImageUrl = new ArrayList<String>();
-        for (int i = 0; i < bannerBeanList.size(); i++) {
-//        Log.i(TAG_LOG, "getBannerFromJson: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + bannerBeanList
-// .get(i).getUrl());
-            MachineBannerBean.BannerBean bannerBean = bannerBeanList.get(i);
-            String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + bannerBean.getPic());
-            Log.i(TAG_LOG, "getBannerFromJson imgPath: " + imgPath);
-            mImageUrl.add(imgPath);
+        if (machineBannerBean != null && machineBannerBean.getBanner() != null && !machineBannerBean.getBanner().isEmpty()) {
+
+            bannerBeanList = machineBannerBean.getBanner();
+            mImageUrl = new ArrayList<String>();
+            for (int i = 0; i < bannerBeanList.size(); i++) {
+    //        Log.i(TAG_LOG, "getBannerFromJson: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + bannerBeanList
+    // .get(i).getUrl());
+                MachineBannerBean.BannerBean bannerBean = bannerBeanList.get(i);
+                String imgPath = ImageLoaderCfg.toBrowserCode(HgbwUrl.HOME_URL + bannerBean.getPic());
+                Log.i(TAG_LOG, "getBannerFromJson imgPath: " + imgPath);
+                mImageUrl.add(imgPath);
+            }
+            binner.setImageResources(mImageUrl, mAdCycleViewListener, 0);
+        } else {
+            binner.removeBinner();
+//            binner.removeAllViewsInLayout();
         }
-        binner.setImageResources(mImageUrl, mAdCycleViewListener, 0);
 
     }
 

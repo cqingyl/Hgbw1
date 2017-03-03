@@ -5,10 +5,9 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="19"
+        android:minSdkVersion="18"
         android:targetSdkVersion="25" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_GPS" />
     <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
@@ -118,8 +117,17 @@
         <activity android:name="com.jetcloud.hgbw.activity.HomePayActivity" >
         </activity>
         <activity android:name="com.jetcloud.hgbw.activity.PayNextActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx4d89fdb3c4a613b8" />
+            </intent-filter>
         </activity>
-        <activity android:name="com.jetcloud.hgbw.activity.DetailPayActivity" >
+        <activity
+            android:name="com.jetcloud.hgbw.activity.DetailPayActivity"
+            android:launchMode="singleTop" >
         </activity>
         <activity android:name="com.jetcloud.hgbw.activity.MyWalletActivity" >
         </activity>
@@ -153,6 +161,14 @@
         <activity android:name="com.jetcloud.hgbw.baidumap.BNaviGuideActivity" >
         </activity>
         <activity android:name="com.jetcloud.hgbw.activity.BindNextActivity" >
+        </activity>
+        <activity
+            android:name="com.jetcloud.hgbw.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/WXPayTheme" >
+        </activity>
+        <activity android:name="com.jetcloud.hgbw.activity.MyOrderTwoActivity" >
         </activity>
         <activity android:name="com.zxing.activity.CaptureActivity" />
     </application>

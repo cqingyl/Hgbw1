@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.bingoogolapple.refreshlayout.BGARefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_modulename_refresh"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <cn.bingoogolapple.refreshlayout.BGAStickyNavLayout
+        style="@style/MatchAuto"
+       >
+
+    <RadioGroup
+        android:visibility="gone"
+        android:id="@+id/rdo_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_takefood"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:checked="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:drawablePadding="3dp"
+            android:text="全部订单"
+            android:background="@drawable/rdo_btn_bg"
+            android:textColor="@drawable/rdo_btn_text_color"
+            android:textSize="18sp"
+            />
+        <View android:layout_width="1dp"
+              android:layout_height="wrap_content"
+              android:background="@color/line"/>
+        <RadioButton
+            android:id="@+id/rb_tak3efood"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:drawablePadding="3dp"
+            android:text="待取餐"
+            android:background="@drawable/rdo_btn_bg"
+            android:textColor="@drawable/rdo_btn_text_color"
+            android:textSize="18sp"
+            />
+        <View android:layout_width="1dp"
+              android:layout_height="wrap_content"
+              android:background="@color/line"/>
+        <RadioButton
+            android:id="@+id/rb_3od"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:drawablePadding="3dp"
+            android:text="待支付"
+            android:background="@drawable/rdo_btn_bg"
+            android:textColor="@drawable/rdo_btn_text_color"
+            android:textSize="18sp"
+            />
+    </RadioGroup>
+    <!--<View android:layout_width="match_parent"-->
+          <!--android:layout_height="1dp"-->
+          <!--android:background="@color/line"/>-->
+    <com.jetcloud.hgbw.view.MyListView
+        style="@style/MyListView"
+        android:id="@+id/lv_my_order_out"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        />
+    <TextView
+        android:id="@+id/tv_empty"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="你还未登陆"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:background="@color/gray_light"
+        android:textColor="@color/blue"
+        />
+    </cn.bingoogolapple.refreshlayout.BGAStickyNavLayout>
+</cn.bingoogolapple.refreshlayout.BGARefreshLayout>

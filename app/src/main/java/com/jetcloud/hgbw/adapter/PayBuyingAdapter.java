@@ -1,7 +1,6 @@
 package com.jetcloud.hgbw.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -100,11 +99,8 @@ public class PayBuyingAdapter extends BaseExpandableListAdapter {
         }
         final MachineInfo machineInfo = (MachineInfo) getGroup(groupPosition);
         String machineName = machineInfo.getNickname();
-        String machineLocation = machineInfo.getCity();
-        Log.i(TAG_LOG, "city: " + machineLocation);
         /**String machineNum = machineName.substring(machineName.length() - 3, machineName.length());*/
-        groupViewHolder.tvMachineTitle.setText(String.format(context.getString(R.string.machine_name),
-                machineLocation, machineName));
+        groupViewHolder.tvMachineTitle.setText(machineName);
         groupViewHolder.cbGroup.setChecked(true);
         groupViewHolder.cbGroup.setClickable(false);
         return convertView;

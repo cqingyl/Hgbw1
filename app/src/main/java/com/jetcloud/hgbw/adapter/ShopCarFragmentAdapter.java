@@ -72,7 +72,7 @@ public class ShopCarFragmentAdapter extends BaseExpandableListAdapter {
     public int getChildrenCount(int groupPosition) {
         String groupId = groups.get(groupPosition).getNumber();
 //        Log.i(TAG, "getChildrenCount: " + children.get(groupId).size());
-        return children.get(groupId).size();
+        return (children != null) ? children.get(groupId).size():0;
     }
 
     @Override

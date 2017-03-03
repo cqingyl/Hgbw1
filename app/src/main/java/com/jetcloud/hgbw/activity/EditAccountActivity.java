@@ -34,7 +34,7 @@ public class EditAccountActivity extends BaseActivity {
     protected void initView() {
         et_account = getView(R.id.et_account);
         activity_edit_account = getView(R.id.activity_edit_account);
-        activity_edit_account.setBackgroundResource(R.drawable.mine_bg);
+//        activity_edit_account.setBackgroundResource(R.drawable.mine_bg);
     }
 
     @Override

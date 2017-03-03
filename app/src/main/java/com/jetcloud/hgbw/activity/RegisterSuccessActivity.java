@@ -31,7 +31,7 @@ public class RegisterSuccessActivity extends BaseActivity {
         // TODO Auto-generated method stub
         bt_gologing = getViewWithClick(R.id.bt_gologing);
         activity_register_success = getView(R.id.activity_register_success);
-        activity_register_success.setBackgroundResource(R.drawable.mine_bg);
+//        activity_register_success.setBackgroundResource(R.drawable.mine_bg);
     }
 
     @Override

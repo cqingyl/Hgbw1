@@ -123,8 +123,8 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
         try {
 
             List<MachineInfo> machine = app.db.selector(MachineInfo.class).findAll();
-            Log.i(TAG, "loadListData: ");
             if (machine != null) {
+                Log.i(TAG_LOG, "loadListData: " + machine.size());
                 groups.clear();
                 groups.addAll(machine);
                 for (int i = 0; i < groups.size(); i++) {
@@ -205,14 +205,15 @@ public class ShopCarFragment extends BaseFragment implements ShopCarFragmentAdap
                 if (totalCount == 0) {
                     Toast.makeText(getActivity(), "请选择要支付的商品", Toast.LENGTH_LONG).show();
                     return;
-                }
-                if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)){
-                    startActivity(new Intent(getActivity(), LoginActivity.class));
                 } else {
-                    saveListToApp();
-                    Intent intent = new Intent(getActivity(), CarPayActivity.class);
-                    startActivity(intent);
-                    break;
+                    if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)){
+                        startActivity(new Intent(getActivity(), LoginActivity.class));
+                    } else {
+                        saveListToApp();
+                        Intent intent = new Intent(getActivity(), CarPayActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
                 }
         }
     }

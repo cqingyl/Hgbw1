@@ -12,10 +12,10 @@
     <string name="startlocation">开始定位</string>
     <string name="stoplocation">停止定位</string>
     <string name="rmb_display">%.2f元</string>
-    <string name="gcb_display">%.3f个</string>
-    <string name="machine_name"><xliff:g id="location">%1$s</xliff:g>-<xliff:g name="num">%2$s</xliff:g></string>
+    <string name="gcb_display">%.4f个</string>
+    <!--<string name="machine_name"><xliff:g id="location">%1$s</xliff:g>-<xliff:g name="num">%2$s</xliff:g></string>-->
     <string name="take_food_total">合计: %.2f元</string>
-    <string name="take_food_gcb_total">合计: %.2f个</string>
+    <string name="take_food_gcb_total">合计: %.4f个</string>
     <string name="take_food_order_num">订单号:%s</string>
     <string name="take_food_num">x%d</string>
     <string name="pay_money">%.2f 元</string>
@@ -42,5 +42,10 @@
     <string name="header_hint_refresh_time">时间：</string>
     <string name="footer_hint_load_normal">加载更多</string>
     <string name="footer_hint_load_ready">松开手指加载更多</string>
+    <string name="footer_hint_load_no_more">没有更多了</string>
 
+    <!-- WXPayEntryActivity -->
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="app_tip">提示</string>
 </resources>

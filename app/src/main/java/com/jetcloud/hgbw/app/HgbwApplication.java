@@ -48,6 +48,8 @@ public class HgbwApplication extends Application{
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		// 在使用 SDK 各组间之前初始化 context 信息，传入 ApplicationContext
+		SDKInitializer.initialize(this);
 		activityList = new LinkedList<Activity>();
 		context = getApplicationContext();
 		//初始化imageloader
@@ -58,8 +60,6 @@ public class HgbwApplication extends Application{
 		db = x.getDb(daoConfig);
 		//初始化SharePreference
 		SharedPreferenceUtils.initData(getApplicationContext());
-		// 在使用 SDK 各组间之前初始化 context 信息，传入 ApplicationContext
-		SDKInitializer.initialize(this);
 	}
 
 	public void addActivity(Activity activity) {

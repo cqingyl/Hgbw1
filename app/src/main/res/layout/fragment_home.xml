@@ -238,6 +238,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/line" />
+            <TextView
+                android:id="@+id/empty_view"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="没网络"/>
         </LinearLayout>
     </com.jetcloud.hgbw.view.ObservableScrollView>
 
@@ -342,5 +348,4 @@
                 android:src="@drawable/sousuo" />
         </LinearLayout>
     </LinearLayout>
-
 </RelativeLayout>

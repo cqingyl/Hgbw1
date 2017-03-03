@@ -29,10 +29,7 @@ public class HgbwUrl {
     public final static String LOGOUT_URL = HOME_URL + "/user/logout";
     public final static String PIC_AND_NICK_URL = HOME_URL + "/user/info";//"pic","nickname"
     public final static String PAY_URL = HOME_URL + "/user/buyfood";
-
-    /***
-     * Put
-     * */
+    public final static String PAY_REFUND_URL = HOME_URL + "/user/refund";
 
 
     private HgbwUrl(){}

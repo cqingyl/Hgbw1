@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="http://schemas.android.com/apk/res-auto" xmlns:ns2="http://schemas.android.com/tools">
+<resources xmlns:ns1="http://schemas.android.com/tools">
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -845,15 +845,17 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_settings">Settings</string>
     <string name="app_name">禾谷百味</string>
+    <string name="app_tip">提示</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="cancel">取消</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="charge_amount">充值金额(CNY)</string>
     <string name="china_merchants_bank_card">卡号（8888 8888 8888 8888）</string>
+    <string name="footer_hint_load_no_more">没有更多了</string>
     <string name="footer_hint_load_normal">加载更多</string>
     <string name="footer_hint_load_ready">松开手指加载更多</string>
-    <string name="gcb_display">%.3f个</string>
+    <string name="gcb_display">%.4f个</string>
     <string name="header_hint_refresh_loading">刷新…</string>
     <string name="header_hint_refresh_normal">下拉刷新</string>
     <string name="header_hint_refresh_ready">松开手指刷新</string>
@@ -863,7 +865,6 @@
     <string name="machine_list_address">地址：%s</string>
     <string name="machine_list_name">%d号售餐机</string>
     <string name="machine_list_num">售货机编号：%s</string>
-    <string name="machine_name"><ns1:g id="location">%1$s</ns1:g>-<ns1:g name="num">%2$s</ns1:g></string>
     <string name="number">0.00</string>
     <string name="ok">确定</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
@@ -872,6 +873,8 @@
     <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
     <string name="pay_money">%.2f 元</string>
+    <string formatted="false" name="pay_result_callback_msg">微信支付结果：%s</string>
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
     <string name="please_enter_charge_amount">请输入充值金额</string>
     <string name="please_enter_pay_password">请输入支付密码</string>
     <string name="rmb_display">%.2f元</string>
@@ -879,7 +882,7 @@
     <string name="startlocation">开始定位</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="stoplocation">停止定位</string>
-    <string name="take_food_gcb_total">合计: %.2f个</string>
+    <string name="take_food_gcb_total">合计: %.4f个</string>
     <string name="take_food_num">x%d</string>
     <string name="take_food_order_num">订单号:%s</string>
     <string name="take_food_total">合计: %.2f元</string>
@@ -930,6 +933,28 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AutoMatch">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="AutoMatch.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="AutoMatch.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="AutoWrap">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="AutoWrap.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="AutoWrap.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>
@@ -1965,9 +1990,44 @@
     <style name="ImageTranslucentTheme" parent="AppTheme">
         <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
     </style>
+    <style name="MatchAuto">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+    <style name="MatchAuto.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="MatchAuto.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="MatchMatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="MatchMatch.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="MatchMatch.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="MatchOne">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+    </style>
     <style name="MatchParent">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="MatchWrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="MatchWrap.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="MatchWrap.Vertical">
+        <item name="android:orientation">vertical</item>
     </style>
     <style name="MyDialog" parent="android:style/Theme.Dialog">
         <item name="android:windowIsFloating">true</item>
@@ -2087,6 +2147,10 @@
     </style>
     <style name="MyTextViewWhite" parent="MyTextView">
         <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="OneMatch">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -2442,6 +2506,9 @@
     <style name="ThemeOverlay.AppCompat.Dialog" parent="Base.ThemeOverlay.AppCompat.Dialog"/>
     <style name="ThemeOverlay.AppCompat.Dialog.Alert" parent="Base.ThemeOverlay.AppCompat.Dialog.Alert"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
+    <style name="WXPayTheme" parent="android:Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
     <style name="Widget.AppCompat.ActionBar.Solid" parent="Base.Widget.AppCompat.ActionBar.Solid">
@@ -2546,7 +2613,7 @@
     </style>
     <style name="Widget.Design.BottomSheet.Modal" parent="android:Widget">
         <item name="android:background">?android:attr/colorBackground</item>
-        <item name="android:elevation" ns2:ignore="NewApi">@dimen/design_bottom_sheet_modal_elevation</item>
+        <item name="android:elevation" ns1:ignore="NewApi">@dimen/design_bottom_sheet_modal_elevation</item>
         <item name="behavior_peekHeight">auto</item>
         <item name="behavior_hideable">true</item>
         <item name="behavior_skipCollapsed">false</item>
@@ -2598,6 +2665,17 @@
         <item name="passwordToggleTint">@color/design_tint_password_toggle</item>
         <item name="passwordToggleContentDescription">@string/password_toggle_content_description</item>
     </style>
+    <style name="WrapAuto">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+    <style name="WrapAuto.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="WrapAuto.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
     <style name="WrapContent">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -2606,9 +2684,29 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+    <style name="WrapMatch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="WrapMatch.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="WrapMatch.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
     <style name="WrapWidthMatchHeight">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="WrapWrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="WrapWrap.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="WrapWrap.Vertical">
+        <item name="android:orientation">vertical</item>
     </style>
     <style name="fragment_bottom_line">
         <item name="android:layout_width">1dp</item>

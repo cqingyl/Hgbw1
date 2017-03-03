@@ -18,12 +18,12 @@ import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.app.HgbwApplication;
 import com.jetcloud.hgbw.app.HgbwStaticString;
 import com.jetcloud.hgbw.bean.FooddOutBean;
-import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 import com.zxing.encoding.EncodingUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.xutils.common.util.MD5;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -74,7 +74,7 @@ public class QRCodeActivity extends BaseActivity {
         iv_qr_code.setLayoutParams(layoutParams);
 
         activity_qrcode = getView(R.id.activity_qrcode);
-        activity_qrcode.setBackgroundResource(R.drawable.mine_bg);
+//        activity_qrcode.setBackgroundResource(R.drawable.mine_bg);
     }
 
     @Override
@@ -131,8 +131,9 @@ public class QRCodeActivity extends BaseActivity {
      * identity
      * mechine_number
      * foodd_out
-     * time
-     * number
+     * t : 时间戳
+     * o : 订单号
+     * M : 订单号+“hgbwqc” md5
      **/
     public void make() {
 
@@ -141,11 +142,14 @@ public class QRCodeActivity extends BaseActivity {
         JSONObject fooddOut = null;
         try {
             fooddOut = new JSONObject();
-            fooddOut.put("foodd_out", jsonData);
-            fooddOut.put("identity", SharedPreferenceUtils.getIdentity());
-            fooddOut.put("time", time);
-            fooddOut.put("mechine_number", machineName);
-            fooddOut.put("number", orderNum);
+//            fooddOut.put("foodd_out", jsonData);
+//            fooddOut.put("identity", SharedPreferenceUtils.getIdentity());
+//            fooddOut.put("mechine_number", machineName);
+            Log.i(TAG_LOG, "make: " + machineName);
+            fooddOut.put("t", time);
+            fooddOut.put("n", orderNum);
+            String md5 = MD5.md5(orderNum + "hgbwqc");
+            fooddOut.put("M", md5);
         } catch (JSONException e) {
             e.printStackTrace();
         }

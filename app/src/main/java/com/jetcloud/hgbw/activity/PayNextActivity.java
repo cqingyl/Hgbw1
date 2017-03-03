@@ -23,11 +23,16 @@ import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CusAlertDialog;
 import com.jetcloud.hgbw.view.CustomProgressDialog;
 import com.jetcloud.hgbw.view.PasswordDialog;
+import com.jetcloud.hgbw.wxapi.Constants;
+import com.tencent.mm.opensdk.modelpay.PayReq;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.xutils.common.Callback;
+import org.xutils.common.util.MD5;
 import org.xutils.db.sqlite.WhereBuilder;
 import org.xutils.ex.DbException;
 import org.xutils.ex.HttpException;
@@ -42,9 +47,8 @@ import java.util.Map;
 public class PayNextActivity extends BaseActivity {
     private final static String TAG_LOG = PayNextActivity.class.getSimpleName();
     private List<ShopCarInfo> foodList;
-    private List<MachineInfo> groups = new ArrayList<>();
     private Map<String, List<ShopCarInfo>> children = new HashMap<>();
-    private MachineInfo machineInfo;
+    private String machineNum;
     private TextView tv_price;
     private CustomProgressDialog progress;
     private Button btn_pay;
@@ -53,6 +57,8 @@ public class PayNextActivity extends BaseActivity {
     private String payWay;
     private String orderNum;
     private HgbwApplication app;
+    public static IWXAPI api;
+    private PayReq req;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(com.jetcloud.hgbw.R.layout.activity_comfirm_pay);
@@ -70,15 +76,17 @@ public class PayNextActivity extends BaseActivity {
         btn_pay = getViewWithClick(R.id.btn_pay);
 
         activity_comfirm_pay = getView(R.id.activity_comfirm_pay);
-        activity_comfirm_pay.setBackgroundResource(R.drawable.mine_bg);
+//        activity_comfirm_pay.setBackgroundResource(R.drawable.mine_bg);
+
+//        // 通过WXAPIFactory工厂，获取IWXAPI的实例
+        api = WXAPIFactory.createWXAPI(this, Constants.WX_APP_ID, false);
     }
 
     @Override
     protected void loadData() {
-        groups = app.getGroups();
-        machineInfo = groups.get(0);
+        machineNum = SharedPreferenceUtils.getMachineNum();
         children = app.getChildren();
-        foodList = children.get(machineInfo.getNumber());
+        foodList = children.get(machineNum);
         payWay  = app.getType();
         if (payWay.equals(HgbwStaticString.PAY_WAY_VR9)) {
             money = app.getTotalGcb();
@@ -86,7 +94,7 @@ public class PayNextActivity extends BaseActivity {
                 tv_price.setText(getString(R.string.gcb_display, money));
 //                payWayNum = HgbwStaticString.PAY_WAY_VR9;
             }
-        } else {
+        } else if (payWay.equals(HgbwStaticString.PAY_WAY_CNY)){
             money =  app.getTotalPrice();
             if (children != null) {
                 tv_price.setText(getString(R.string.pay_money, money));
@@ -101,10 +109,8 @@ public class PayNextActivity extends BaseActivity {
         final PasswordDialog passwordDialog;
         if (view.getId() == R.id.btn_pay){
 
-            //如果是vr9
             if (payWay.equals(HgbwStaticString.PAY_WAY_VR9)) {
-
-                passwordDialog = new PasswordDialog(PayNextActivity.this, String.format(PayNextActivity.this.getString(R.string.gcb_display),money));
+                passwordDialog = new PasswordDialog(PayNextActivity.this, String.format(PayNextActivity.this.getString(R.string.gcb_display), money));
                 passwordDialog.setNegativeButton("取消", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -120,7 +126,7 @@ public class PayNextActivity extends BaseActivity {
                             Log.i(TAG_LOG, "cost_total: " + money);
                             Log.i(TAG_LOG, "cost_real: " + money);
                             Log.i(TAG_LOG, "pay_type: " + payWay);
-                            Log.i(TAG_LOG, "mechine_number: " + app.getGroups().get(0).getNumber());
+                            Log.i(TAG_LOG, "mechine_number: " + machineNum);
                             Log.i(TAG_LOG, "pay_pwd: " + paypwd);
                             Log.i(TAG_LOG, "foods size: " + foodList.size());
                             passwordDialog.dismiss();
@@ -129,8 +135,10 @@ public class PayNextActivity extends BaseActivity {
                     }
                 });
                 passwordDialog.show();
-
+            } else if (payWay.equals(HgbwStaticString.PAY_WAY_CNY)){
+                payRequest(String.valueOf(money), null, foodList);
             }
+
         }
     }
 
@@ -139,7 +147,7 @@ public class PayNextActivity extends BaseActivity {
      *  {"identity": "visitor", "status": "200", "message": "\u8ba2\u5355\u652f\u4ed8\u6210\u529f"}订单支付成功
      *  {"msg": "\u5269\u4f59\u51fa\u9910\u91cf\u4e0d\u591f", "status": "fail", "remain": 0, "food_id": "14"}
      */
-    private void getPayDataFromJson(String result) throws JSONException {
+    private void getVR9PayDataFromJson(String result) throws JSONException {
         JumpUtils.check405(PayNextActivity.this, result);
         final CusAlertDialog cusAlertDialog;
         final JSONObject jsonObject = new JSONObject(result);
@@ -162,7 +170,8 @@ public class PayNextActivity extends BaseActivity {
                                 WhereBuilder whereBuilder = WhereBuilder.b("id", "=", foodList.get(i).getId());
                                 try {
                                     app.db.delete(ShopCarInfo.class,whereBuilder);
-                                    if (app.db.selector(ShopCarInfo.class).findAll() == null){
+                                        Log.i(TAG_LOG, "onClick ShopCarInfo size ----->>>>>" + app.db.selector(ShopCarInfo.class).findAll().size());
+                                    if (app.db.selector(ShopCarInfo.class).findAll().size() == 0){
                                         app.db.delete(MachineInfo.class);
                                     }
                                 } catch (DbException e) {
@@ -179,8 +188,8 @@ public class PayNextActivity extends BaseActivity {
                         }
                     }
                     cusAlertDialog.dismiss();
-                    app.removeAll();
                     Intent i = new Intent(PayNextActivity.this, MainActivity.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     i.putExtra(HgbwStaticString.JUMP_RESOURCE, PayNextActivity
                             .class.getSimpleName());
                     startActivity(i);
@@ -194,8 +203,20 @@ public class PayNextActivity extends BaseActivity {
                 @Override
                 public void onClick(View view) {
                     cusAlertDialog.dismiss();
-                    app.removeAll();
                     Intent intent = new Intent(PayNextActivity.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                }
+            });
+        } else if (jsonObject.has("code") && jsonObject.getString("code").equals("500")) {
+            cusAlertDialog.setTitle("支付失败");
+            cusAlertDialog.setContent(jsonObject.getString("message"));
+            cusAlertDialog.setPositiveButton("确定", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    cusAlertDialog.dismiss();
+                    Intent intent = new Intent(PayNextActivity.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }
             });
@@ -213,9 +234,8 @@ public class PayNextActivity extends BaseActivity {
      * cost_real 真实价格
      * mechine_number = XXXX
      * */
-    private void payRequest(String money, String paypwd, List<ShopCarInfo> foodBeanList) {
+    private void payRequest(String money, final String paypwd, List<ShopCarInfo> foodBeanList) {
         final RequestParams params = new RequestParams(HgbwUrl.PAY_URL);
-//        JSONObject jsonObject = null;
         JSONArray foodArray = null;
         try {
             foodArray = new JSONArray();
@@ -231,7 +251,7 @@ public class PayNextActivity extends BaseActivity {
                 foodObj.put("food_price_rmb", String.valueOf(shopCarInfo.getPrice_cny()));
                 foodObj.put("food_des", String.valueOf(shopCarInfo.getDescription()));
                 Log.i(TAG_LOG, "food_id: " + String.valueOf(shopCarInfo.getId()));
-                Log.i(TAG_LOG, "food_num: " + String.valueOf(shopCarInfo.getP_local_number()));
+                Log.i(TAG_LOG, " food_num: " + String.valueOf(shopCarInfo.getP_local_number()));
                 Log.i(TAG_LOG, "food_name: " + String.valueOf(shopCarInfo.getName()));
                 Log.i(TAG_LOG, "food_price: " + money);
                 Log.i(TAG_LOG, "food_pay_way: " + payWay);
@@ -240,12 +260,7 @@ public class PayNextActivity extends BaseActivity {
                 Log.i(TAG_LOG, "food_des: " + String.valueOf(shopCarInfo.getDescription()));
                 foodArray.put(i, foodObj);
             }
-//            jsonObject = new JSONObject();
-//            jsonObject.put("foods", foodArray);
-//            jsonObject.put("pay_type", String.valueOf(payWayNum));
-//            jsonObject.put("cost_total", money);
-//            jsonObject.put("pay_pwd", paypwd);
-//            jsonObject.put("mechine_number",  app.getGroups().get(0).getNumber());
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -258,21 +273,18 @@ public class PayNextActivity extends BaseActivity {
                 e.printStackTrace();
             }
         }
-//        String foodString = stringArray.toString().replace("\"", "");
+        Log.i(TAG_LOG, "payRequest: \npayWay: " + payWay + "\nmoney: " + money + "\npaypwd: " + paypwd + "\nmachineNum: " + machineNum + "\nmachineName: "+ SharedPreferenceUtils.getMachineNickName());
             params.addBodyParameter("pay_type", payWay);
-        if (payWay.equals( HgbwStaticString.PAY_WAY_VR9)) {
             params.addBodyParameter("cost_total", money);
             params.addBodyParameter("cost_real", money);
-        }
             params.addBodyParameter("pay_pwd", paypwd);
-            params.addBodyParameter("mechine_number", app.getGroups().get(0).getNumber());
-            params.addBodyParameter("mechine_name", app.getGroups().get(0).getNickname());
+            params.addBodyParameter("mechine_number", machineNum);
+            params.addBodyParameter("mechine_name", SharedPreferenceUtils.getMachineNickName());
             params.addBodyParameter("identity", SharedPreferenceUtils.getIdentity());
             params.addBodyParameter("foods", String.valueOf(stringArray));
-//        if (jsonObject != null)
-//            params.setBodyContent(jsonObject.toString());
+
             Log.i(TAG_LOG, "getNetData jsonObject: " + stringArray.toString());
-            Log.i(TAG_LOG, "getNetData params: " + params.toJSONString());
+//            Log.i(TAG_LOG, "getNetData params: " + params.toJSONString());
             params.setCacheMaxAge(1000 * 60);
 
             x.task().run(new Runnable() {
@@ -324,7 +336,12 @@ public class PayNextActivity extends BaseActivity {
                             if (!hasError && result != null) {
                                 Log.i(TAG_LOG, "payRequest onFinished: " + result);
                                 try {
-                                    getPayDataFromJson(result);
+                                    if (payWay != null && payWay.equals(HgbwStaticString.PAY_WAY_VR9)){
+                                        getVR9PayDataFromJson(result);
+                                    } else if (payWay != null && payWay.equals(HgbwStaticString.PAY_WAY_CNY)) {
+                                        requestWxPay(result);
+//                                        startActivity(new Intent(PayNextActivity.this, WXPayEntryActivity.class));
+                                    }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                     Log.e(TAG_LOG, " json error: " + e.getMessage());
@@ -345,4 +362,66 @@ public class PayNextActivity extends BaseActivity {
 
         }
 
+
+/**
+     * 微信支付
+     * */
+    public void requestWxPay(final String result) throws JSONException {
+
+        Button payBtn = (Button) findViewById(R.id.btn_pay);
+        payBtn.setEnabled(false);
+//        x.task().run(new Runnable() {
+//            @Override
+//            public void run() {
+                try{
+                    if (api != null) {
+                        if (api.isWXAppInstalled()) {
+                            JSONObject json = new JSONObject(result);
+                            if(!json.has("retcode") ){
+                                PayReq req = new PayReq();
+                                //{   }
+                                req.appId			= json.getString("appid");
+                                req.partnerId		= json.getString("partnerid");
+                                req.prepayId		= json.getString("prepayid");
+                                req.nonceStr		= json.getString("noncestr");
+                                req.timeStamp		= json.getString("timestamp");
+                                req.packageValue	= json.getString("package");
+                                req.sign			= json.getString("sgin");
+                                String s = MD5.md5("appid="+req.appId+
+                                        "&noncestr="+req.nonceStr+
+                                        "&package=Sign=WXPay"+
+                                        "&partnerid="+req.partnerId+
+                                        "&prepayid="+req.prepayId+
+                                        "&timestamp="+req.timeStamp+"&key=f6dc74a523185690019a43fdeaf12596").toUpperCase();
+                                Log.i(TAG_LOG, "requestWxPay: " + s);
+                                // 将该app注册到微信
+                                api.registerApp(Constants.WX_APP_ID);
+                                Toast.makeText(PayNextActivity.this, "正常调起支付", Toast.LENGTH_SHORT).show();
+                                // 在支付之前，如果应用没有注册到微信，应该先调用IWXMsg.registerApp将应用注册到微信
+                                Log.i(TAG_LOG, "requestWxPay: " + api.sendReq(req));
+//                                if (!api.sendReq(req)) {
+//                                    x.task().post(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+//                                            Out.Toast(PayNextActivity.this, "微信未响应");
+//                                        }
+//                                    });
+//                                }
+
+                            }else{
+                                Log.i(TAG_LOG, "返回错误: "+json.getString("retmsg"));
+                                Toast.makeText(PayNextActivity.this, "返回错误 : " + json.getString("retmsg"), Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+                    }
+                }catch(Exception e){
+                    Log.e(TAG_LOG, "异常: " + e.getMessage());
+                    Toast.makeText(PayNextActivity.this, "异常："+e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+//            }
+//        });
+        payBtn.setEnabled(true);
+
+    }
 }

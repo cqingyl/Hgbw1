@@ -60,7 +60,7 @@ public class MyWalletActivity extends BaseActivity {
         ll_content_empty = getView(R.id.ll_content_empty);
         ll_content = getView(R.id.ll_content);
         activity_my_wallet = getView(R.id.activity_my_wallet);
-        activity_my_wallet.setBackgroundResource(R.drawable.mine_bg);
+//        activity_my_wallet.setBackgroundResource(R.drawable.mine_bg);
         /****/
 //        SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.UNBINDING_STATE);
 //        getNetData();

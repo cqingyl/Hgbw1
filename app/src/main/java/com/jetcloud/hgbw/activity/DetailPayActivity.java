@@ -19,7 +19,6 @@ import com.jetcloud.hgbw.app.HgbwUrl;
 import com.jetcloud.hgbw.bean.MachineInfo;
 import com.jetcloud.hgbw.bean.ShopCarInfo;
 import com.jetcloud.hgbw.utils.ImageLoaderCfg;
-import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
 import com.jetcloud.hgbw.view.CusAlertDialogWithTwoBtn;
 
@@ -67,7 +66,7 @@ public class DetailPayActivity extends BaseActivity {
     private List<ShopCarInfo> listObj;
     private Map<String, List<ShopCarInfo>> children = new HashMap<>();
     private List<MachineInfo> groups = new ArrayList<>();
-    private MachineInfo machineInfo;
+    private String machineNum;
     private List<String> wayData;
     private double totalPrice;
     private double totalGcb;
@@ -91,7 +90,7 @@ public class DetailPayActivity extends BaseActivity {
         topbar.setLeftDrawable(false, drawable);
 
         activity_details_pay = getView(R.id.activity_details_pay);
-        activity_details_pay.setBackgroundResource(R.drawable.mine_bg);
+//        activity_details_pay.setBackgroundResource(R.drawable.mine_bg);
     }
 
     @Event(value = {R.id.cb_gcb, R.id.cb_weixin, R.id.tv_go_to_pay})
@@ -114,45 +113,41 @@ public class DetailPayActivity extends BaseActivity {
             app.setTotalGcb(totalGcb);
             if (cb_gcb.isChecked()) {
                 app.setType(HgbwStaticString.PAY_WAY_VR9);
-            } else {
-                app.setType(HgbwStaticString.PAY_WAY_WEIXIN);
-                Out.Toast(DetailPayActivity.this, "暂未开通，敬请期待");
-                return;
-            }
-            if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
-                alert = new CusAlertDialogWithTwoBtn(context);
-                alert.setTitle("操作提示");
-                alert.setContent("您还未绑定交易宝账号");
-                alert.setNegativeButton("取消", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                alert.dismiss();
+                if (SharedPreferenceUtils.getBindStatus().equals(SharedPreferenceUtils.UNBINDING_STATE)) {
+                    alert = new CusAlertDialogWithTwoBtn(context);
+                    alert.setTitle("操作提示");
+                    alert.setContent("您还未绑定交易宝账号");
+                    alert.setNegativeButton("取消", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    alert.dismiss();
+                                }
                             }
-                        }
-                );
-                alert.setPositiveButton("去绑定",
-                        new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                alert.dismiss();
-                                Intent intent = new Intent(DetailPayActivity.this, BindingActivity.class);
-                                intent.putExtra(HgbwStaticString.JUMP_RESOURCE, CarPayActivity
-                                        .class.getSimpleName());
-                                startActivity(intent);
-                            }
-                        });
-                alert.show();
+                    );
+                    alert.setPositiveButton("去绑定",
+                            new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    alert.dismiss();
+                                    Intent intent = new Intent(DetailPayActivity.this, BindingActivity.class);
+                                    intent.putExtra(HgbwStaticString.JUMP_RESOURCE, CarPayActivity
+                                            .class.getSimpleName());
+                                    startActivity(intent);
+                                }
+                            });
+                    alert.show();
+                } else {
+                    Intent i = new Intent(DetailPayActivity.this, PayNextActivity.class);
+                    startActivity(i);
+                }
             } else {
-//                        for (int i = 0; i < children.get(groups.get(0).getNumber()).size(); i ++) {
-//                            ShopCarInfo shopCarInfo = children.get(groups.get(0).getNumber()).get(i);
-//                            shopCarInfo.getId();
-////                            Log.i(TAG_LOG, "onClick: " + shopCarInfo.getId());
-////                            getFoodNumRequest(shopCarInfo.getId());
-//
-//                        }
+                app.setType(HgbwStaticString.PAY_WAY_CNY);
                 Intent i = new Intent(DetailPayActivity.this, PayNextActivity.class);
                 startActivity(i);
             }
+
+
+
 
         }
     }
@@ -169,9 +164,8 @@ public class DetailPayActivity extends BaseActivity {
         lv_my_ticket.setAdapter(new PayTicketAdapter(this, wayData));*/
 
         //只有一种商品
-        groups = app.getGroups();
-        machineInfo = groups.get(0);
-        listObj = app.getChildren().get(machineInfo.getNumber());
+        machineNum = SharedPreferenceUtils.getMachineNum();
+        listObj = app.getChildren().get(machineNum);
         Log.i(TAG_LOG, "initView: " + listObj.size());
         shopCarInfo = listObj.get(0);
         int count = shopCarInfo.getP_local_number();
@@ -187,10 +181,9 @@ public class DetailPayActivity extends BaseActivity {
         tv_price_vr9.setText(String.valueOf(context.getString(R.string.gcb_display, totalGcb)));
         tv_num.setText(String.format(getString(R.string.take_food_num), count));
         tv_food_title.setText(shopCarInfo.getName());
-        String machineName = machineInfo.getNickname();
-        String machineLocation = machineInfo.getCity();
+        String machineLocation = SharedPreferenceUtils.getMachineNickName();
         /**String machineNum = machineName.substring(machineName.length() - 3, machineName.length());*/
-        tv_machine_title.setText(String.format(context.getString(R.string.machine_name), machineLocation, machineName));
+        tv_machine_title.setText(machineLocation);
 
 
         ImageOptions imageOptions = new ImageOptions.Builder()

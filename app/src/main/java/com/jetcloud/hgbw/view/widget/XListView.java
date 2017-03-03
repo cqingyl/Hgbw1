@@ -456,6 +456,6 @@ public class XListView extends ListView implements OnScrollListener {
     }
 
     public void setFootText(String footText){
-
+        mFooterView.setFootText(footText);
     }
 }

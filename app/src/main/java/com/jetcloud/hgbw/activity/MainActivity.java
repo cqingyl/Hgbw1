@@ -25,7 +25,10 @@ import com.jetcloud.hgbw.fragment.MineFragment;
 import com.jetcloud.hgbw.fragment.ShopCarFragment;
 import com.jetcloud.hgbw.fragment.TakeFoodFragment;
 import com.jetcloud.hgbw.utils.Out;
+import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
+import com.jetcloud.hgbw.utils.ShopCarUtil;
 import com.jetcloud.hgbw.view.CusAlertDialog;
+import com.jetcloud.hgbw.wxapi.WXPayEntryActivity;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -92,7 +95,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initView() {
         // TODO Auto-generated method stub
-        initWindow();
+//        initWindow();
         requestPermission();
         home = getViewWithClick(R.id.home);
         takefood = getViewWithClick(R.id.takefood);
@@ -110,7 +113,7 @@ public class MainActivity extends BaseActivity {
         tvCorner = getView(R.id.tv_corner);
         main_bg = getView(R.id.main_bg);
 
-        MainActivity.main_bg.setBackgroundResource(R.drawable.mine_bg);
+//        MainActivity.main_bg.setBackgroundResource(R.drawable.mine_bg);
     }
 
 //    @Override
@@ -143,7 +146,8 @@ public class MainActivity extends BaseActivity {
             currentSelect = 1;
 
 
-        } else if (jumpResource.equals(PayNextActivity.class.getSimpleName()) || jumpResource.equals(MyOrderParentAdapter.class.getSimpleName())) {
+        } else if (jumpResource.equals(PayNextActivity.class.getSimpleName()) || jumpResource.equals(MyOrderParentAdapter.class.getSimpleName()) || jumpResource.equals(WXPayEntryActivity.class.getSimpleName())) {
+
             if (HgbwApplication.getTakeFoodFragment() == null) {
                 HgbwApplication.setTakeFoodFragment(TakeFoodFragment.newInstance());
             }
@@ -154,8 +158,7 @@ public class MainActivity extends BaseActivity {
             currentSelect = 1;
             changeCurrent(2);
         }
-
-
+        ShopCarUtil.ChangeCorner(mainActivity, SharedPreferenceUtils.getShopCarNumber());
     }
 
     private static final String SCHEME = "package";

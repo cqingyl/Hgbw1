@@ -22,6 +22,9 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
 
+import static com.nostra13.universalimageloader.core.ImageLoader.TAG;
+
+
 /**
  * 广告图片自动轮播控件</br>
  * 
@@ -92,12 +95,11 @@ public class ImageCycleView extends LinearLayout {
 	 */
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent event) {
-		if (event.getAction() == MotionEvent.ACTION_UP) {
-			// 开始图片滚动
-			startImageTimerTask();
-		} else {
-			// 停止图片滚动
+		if (event.getAction() == MotionEvent.ACTION_MOVE) {
 			stopImageTimerTask();
+		} else  if(event.getAction() == MotionEvent.ACTION_UP){
+			// 停止图片滚动
+			startImageTimerTask();
 		}
 		return super.dispatchTouchEvent(event);
 	}
@@ -151,6 +153,16 @@ public class ImageCycleView extends LinearLayout {
 
 		startImageTimerTask();
 	}
+	/**
+	 * 重置控件
+	 * */
+	public void removeBinner(){
+		stopImageTimerTask();
+		mGroup.removeAllViews();
+		if (mAdvAdapter != null) {
+			mAdvAdapter.clearList();
+		}
+	}
 
 	/**
 	 * 图片轮播(手动控制自动轮播与否，便于资源控件）
@@ -191,7 +203,7 @@ public class ImageCycleView extends LinearLayout {
 	private Runnable mImageTimerTask = new Runnable() {
 		@Override
 		public void run() {
-			if (mImageViews != null) {
+			if (mImageViews != null&&!isStop) {
 				mAdvPager.setCurrentItem(mAdvPager.getCurrentItem() + 1);
 				if (!isStop) { // if isStop=true //当你退出后 要把这个给停下来 不然 这个一直存在
 								// 就一直在后台循环
@@ -281,8 +293,11 @@ public class ImageCycleView extends LinearLayout {
 
 		@Override
 		public Object instantiateItem(ViewGroup container, final int position) {
-			String imageUrl = mAdList.get(position % mAdList.size());
-			Log.i("imageUrl", imageUrl);
+			Log.i(TAG, "instantiateItem position: " +  position);
+			final int itemPosition = position % (mAdList.size());
+			Log.i(TAG, "instantiateItem itemPosition: " + itemPosition);
+			String imageUrl = mAdList.get(position % (mAdList.size()));
+//			Log.i("imageUrl", imageUrl);
 			RatioImageView imageView = null;
 			if (mImageViewCacheList.isEmpty()) {
 				imageView = new RatioImageView(mContext);
@@ -293,16 +308,17 @@ public class ImageCycleView extends LinearLayout {
 				imageView.setScaleType(ImageView.ScaleType.FIT_XY);
 				imageView.setRatioW(0.6f);
 				// 设置图片点击监听
-				imageView.setOnClickListener(new OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						mImageCycleViewListener.onImageClick(
-								position % mAdList.size(), v);
-					}
-				});
+
 			} else {
 				imageView = mImageViewCacheList.remove(0);
 			}
+			imageView.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					mImageCycleViewListener.onImageClick(itemPosition, v);
+					Log.i("mImageCycleViewListener", "onClick: " + itemPosition);
+				}
+			});
 			imageView.setTag(imageUrl);
 			container.addView(imageView);
 			// 第二个参数为加载本地默认的资源文件
@@ -319,6 +335,12 @@ public class ImageCycleView extends LinearLayout {
 
 		}
 
+		public void clearList() {
+			mImageViewCacheList.clear();
+			mAdvPager.removeAllViews();
+			mAdList.clear();
+			notifyDataSetChanged();
+		}
 	}
 
 	/**

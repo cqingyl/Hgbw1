@@ -4,15 +4,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg_my_ed" >
-    <RadioGroup 
-        android:padding="10dp"
+
+    <RadioGroup
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         android:id="@+id/rg_photo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         >
-        <RadioButton 
-            
+        <RadioButton
+
             android:id="@+id/fromcamera"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,14 +25,13 @@
             android:textColor="#000000"
             android:button="@null"
             android:drawableRight="@drawable/radiobutton"
-            android:padding="10dp"
             />
-         <View 
+         <View
              android:layout_width="match_parent"
              android:layout_height="1dp"
              android:background="#F0F0F0"
              />
-        <RadioButton 
+        <RadioButton
             android:textColor="#000000"
             android:id="@+id/fromphoto"
             android:layout_width="match_parent"
@@ -38,11 +41,10 @@
             android:text="从相册中选取"
             android:button="@null"
             android:drawableRight="@drawable/radiobutton"
-            android:padding="10dp"
             />
-         
-        
-        
+
+
+
     </RadioGroup>
 
 </LinearLayout>

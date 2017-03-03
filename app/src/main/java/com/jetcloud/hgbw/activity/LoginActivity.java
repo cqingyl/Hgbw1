@@ -15,10 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
 import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.app.HgbwUrl;
-import com.jetcloud.hgbw.bean.UserBean;
 import com.jetcloud.hgbw.utils.JumpUtils;
 import com.jetcloud.hgbw.utils.Out;
 import com.jetcloud.hgbw.utils.SharedPreferenceUtils;
@@ -231,13 +229,18 @@ public class LoginActivity extends BaseActivity {
                 SharedPreferenceUtils.setMyAccount(et_username.getText().toString());
                 SharedPreferenceUtils.setMyPassword(et_password.getText().toString());
                 SharedPreferenceUtils.setIdentity(jsonObject.getString("identity"));
-                //            Log.i(TAG_LOG, "getDataFromJson: " + jsonObject.getString("identity"));
-                //            finish();
-                getUserInfoRequest();
+                String tradeAccount = jsonObject.getString("tradebook_acct");
+                if (tradeAccount != null && !tradeAccount.isEmpty()) {
+                    SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.BINDING_STATE);
+                    SharedPreferenceUtils.setTradeAccount(tradeAccount);
+                }
+                finish();
             } else if (jsonObject.getString("status").equals("fail")) {
                 if (jsonObject.has("code")) {
                     if (jsonObject.getString("code").equals("404")) {
                         Out.Toast(LoginActivity.this, "该手机号未注册");
+                    } else if (jsonObject.getString("code").equals("403")) {
+                        Out.Toast(LoginActivity.this, "账号或密码错误");
                     }
                 }
             }
@@ -245,92 +248,92 @@ public class LoginActivity extends BaseActivity {
 
     }
 
-    /**
-     * 获取用户信息
-     */
-    private void getUserInfoRequest() {
-        final RequestParams params = new RequestParams(HgbwUrl.PIC_AND_NICK_URL);
-        //缓存时间
-        params.addQueryStringParameter("identity", SharedPreferenceUtils.getIdentity());
-        params.setCacheMaxAge(1000 * 60);
-
-        x.task().run(new Runnable() {
-            @Override
-            public void run() {
-                x.http().get(params, new Callback.CacheCallback<String>() {
-
-                    private boolean hasError = false;
-                    private String result = null;
-
-
-                    @Override
-                    public boolean onCache(String result) {
-                        this.result = result;
-                        return false; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
-                    }
-
-                    @Override
-                    public void onSuccess(String result) {
-                        // 注意: 如果服务返回304 或 onCache 选择了信任缓存, 这时result为null.
-                        if (result != null) {
-                            this.result = result;
-                        }
-                    }
-
-                    @Override
-                    public void onError(Throwable ex, boolean isOnCallback) {
-                        hasError = true;
-                        Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
-                        Log.e(TAG_LOG, "onError: " + ex.getMessage());
-                        if (ex instanceof HttpException) { // 网络错误
-                            HttpException httpEx = (HttpException) ex;
-                            int responseCode = httpEx.getCode();
-                            String responseMsg = httpEx.getMessage();
-                            String errorResult = httpEx.getResult();
-                            Log.e(TAG_LOG, "onError " + " code: " + responseCode + " message: " + responseMsg);
-                        } else { // 其他错误
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(CancelledException cex) {
-                        Toast.makeText(x.app(), "cancelled", Toast.LENGTH_LONG).show();
-                    }
-
-                    @Override
-                    public void onFinished() {
-                        if (!hasError && result != null) {
-                            Log.i(TAG_LOG, "get nick and pic onFinished: " + result);
-                            try {
-                                getUserDataFromJson(result);
-                                JSONObject jsonObject = new JSONObject(result);
-
-
-//                                jsonObject.getString("")
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    }
-
-                });
-            }
-        });
-
-    }
-
-    /**
-     * 判断用户是否绑定交易宝
-     */
-    private void getUserDataFromJson(String result) {
-        Gson gson = new Gson();
-        UserBean userBean = gson.fromJson(result, UserBean.class);
-
-        String tradeAccount = userBean.getTradebook_acct();
-        if (tradeAccount != null && !tradeAccount.isEmpty()) {
-            SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.BINDING_STATE);
-            SharedPreferenceUtils.setTradeAccount(userBean.getTradebook_acct());
-        }
-        finish();
-    }
+//    /**
+//     * 获取用户信息
+//     */
+//    private void getUserInfoRequest() {
+//        final RequestParams params = new RequestParams(HgbwUrl.PIC_AND_NICK_URL);
+//        //缓存时间
+//        params.addQueryStringParameter("identity", SharedPreferenceUtils.getIdentity());
+//        params.setCacheMaxAge(1000 * 60);
+//
+//        x.task().run(new Runnable() {
+//            @Override
+//            public void run() {
+//                x.http().get(params, new Callback.CacheCallback<String>() {
+//
+//                    private boolean hasError = false;
+//                    private String result = null;
+//
+//
+//                    @Override
+//                    public boolean onCache(String result) {
+//                        this.result = result;
+//                        return false; // true: 信任缓存数据, 不在发起网络请求; false不信任缓存数据.
+//                    }
+//
+//                    @Override
+//                    public void onSuccess(String result) {
+//                        // 注意: 如果服务返回304 或 onCache 选择了信任缓存, 这时result为null.
+//                        if (result != null) {
+//                            this.result = result;
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable ex, boolean isOnCallback) {
+//                        hasError = true;
+//                        Toast.makeText(x.app(), ex.getMessage(), Toast.LENGTH_LONG).show();
+//                        Log.e(TAG_LOG, "onError: " + ex.getMessage());
+//                        if (ex instanceof HttpException) { // 网络错误
+//                            HttpException httpEx = (HttpException) ex;
+//                            int responseCode = httpEx.getCode();
+//                            String responseMsg = httpEx.getMessage();
+//                            String errorResult = httpEx.getResult();
+//                            Log.e(TAG_LOG, "onError " + " code: " + responseCode + " message: " + responseMsg);
+//                        } else { // 其他错误
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(CancelledException cex) {
+//                        Toast.makeText(x.app(), "cancelled", Toast.LENGTH_LONG).show();
+//                    }
+//
+//                    @Override
+//                    public void onFinished() {
+//                        if (!hasError && result != null) {
+//                            Log.i(TAG_LOG, "get nick and pic onFinished: " + result);
+//                            try {
+//                                getUserDataFromJson(result);
+//                                JSONObject jsonObject = new JSONObject(result);
+//
+//
+////                                jsonObject.getString("")
+//                            } catch (JSONException e) {
+//                                e.printStackTrace();
+//                            }
+//                        }
+//                    }
+//
+//                });
+//            }
+//        });
+//
+//    }
+//
+//    /**
+//     * 判断用户是否绑定交易宝
+//     */
+//    private void getUserDataFromJson(String result) {
+//        Gson gson = new Gson();
+//        UserBean userBean = gson.fromJson(result, UserBean.class);
+//
+//        String tradeAccount = userBean.getTradebook_acct();
+//        if (tradeAccount != null && !tradeAccount.isEmpty()) {
+//            SharedPreferenceUtils.setBindStatus(SharedPreferenceUtils.BINDING_STATE);
+//            SharedPreferenceUtils.setTradeAccount(userBean.getTradebook_acct());
+//        }
+//        finish();
+//    }
 }

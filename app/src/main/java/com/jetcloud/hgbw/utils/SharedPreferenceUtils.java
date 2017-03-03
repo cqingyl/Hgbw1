@@ -21,8 +21,13 @@ public class SharedPreferenceUtils {
     public final static String BINDING_STATE = "bind";
     public final static String UNBINDING_STATE = "unbind";
     public final static String MACHINE_NUM = "machine_num";
+    public final static String MACHINE_NICK = "machine_nick";
+    public final static String CARPAY = "carpay";
     public final static String WITHOUT_LOGIN = "without_login";
     public final static String WITHOUT_LOCATION = "without_location";
+    public final static String WITHOUT_MACHINE= "without_machine";
+    public final static String WITHOUT_CARPAY= "without_carpay";
+    public final static String WITH_CARPAY= "with_carpay";
 
     public static void initData (Context context){
         mContext = context;
@@ -73,11 +78,19 @@ public class SharedPreferenceUtils {
     }
 
     public static String getMachineNum() {
-        return preferences.getString(MACHINE_NUM, WITHOUT_LOCATION);
+        return preferences.getString(MACHINE_NUM, WITHOUT_MACHINE);
     }
 
     public static void setMachineNum(String machineNum) {
         editor.putString(MACHINE_NUM, machineNum).commit();
+    }
+
+    public static String getMachineNickName() {
+        return preferences.getString(MACHINE_NICK, WITHOUT_MACHINE);
+    }
+
+    public static void setMachineNickName(String machineNickName) {
+        editor.putString(MACHINE_NICK, machineNickName).commit();
     }
 
     public static String getMyPassword() {
@@ -86,6 +99,14 @@ public class SharedPreferenceUtils {
 
     public static void setMyPassword(String myPassword) {
         editor.putString(MY_PASSWORD, myPassword).commit();
+    }
+
+    public static String getCarPay() {
+        return preferences.getString(CARPAY, WITHOUT_CARPAY);
+    }
+
+    public static void setCarpay(String carpay) {
+        editor.putString(CARPAY, carpay).commit();
     }
 
 
