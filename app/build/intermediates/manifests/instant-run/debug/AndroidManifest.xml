@@ -57,8 +57,7 @@
         android:required="true" />
 
     <application
-        name="com.jetcloud.hgbw.app.HgbwApplication"
-        android:name="com.android.tools.fd.runtime.BootstrapApplication"
+        android:name="com.jetcloud.hgbw.app.HgbwApplication"
         android:allowBackup="true"
         android:anyDensity="true"
         android:icon="@drawable/hgbw"
@@ -172,6 +171,10 @@
         <activity android:name="com.jetcloud.hgbw.activity.MyOrderTwoActivity" >
         </activity>
         <activity android:name="com.zxing.activity.CaptureActivity" />
+
+        <service
+            android:name="com.android.tools.fd.runtime.InstantRunService"
+            android:exported="true" />
     </application>
 
 </manifest>

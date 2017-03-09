@@ -270,26 +270,26 @@ public class MainActivity extends BaseActivity {
 
             switch (currentSelect) {
                 case 1:
-                    home.setBackgroundColor(getResources().getColor(
-                            R.color.white));
+//                    home.setBackgroundColor(getResources().getColor(
+//                            R.color.white));
                     hometxt.setTextColor(getResources().getColor(R.color.bottom_nav_text_color));
                     homeimg.setImageResource(R.drawable.home);
                     break;
                 case 2:
-                    takefood.setBackgroundColor(getResources().getColor(
-                            R.color.white));
+//                    takefood.setBackgroundColor(getResources().getColor(
+//                            R.color.white));
                     takefoodtxt.setTextColor(getResources().getColor(R.color.bottom_nav_text_color));
                     takefoodimg.setImageResource(R.drawable.takefood);
                     break;
                 case 3:
-                    shopcar.setBackgroundColor(getResources().getColor(
-                            R.color.white));
+//                    shopcar.setBackgroundColor(getResources().getColor(
+//                            R.color.white));
                     shopcattxt.setTextColor(getResources().getColor(R.color.bottom_nav_text_color));
                     shopimg.setImageResource(R.drawable.shop);
                     break;
                 case 4:
-                    mine.setBackgroundColor(getResources().getColor(
-                            R.color.white));
+//                    mine.setBackgroundColor(getResources().getColor(
+//                            R.color.white));
                     minetxt.setTextColor(getResources().getColor(R.color.bottom_nav_text_color));
                     mineimg.setImageResource(R.drawable.mine);
                     break;
@@ -299,29 +299,29 @@ public class MainActivity extends BaseActivity {
 
             switch (currentSelect) {
                 case 1:
-                    home.setBackgroundColor(getResources().getColor(
-                            R.color.main_bg));
+//                    home.setBackgroundColor(getResources().getColor(
+//                            R.color.main_bg));
                     hometxt.setTextColor(getResources().getColor(
                             R.color.bottom_nav_text_color_check));
                     homeimg.setImageResource(R.drawable.homec);
                     break;
                 case 2:
-                    takefood.setBackgroundColor(getResources().getColor(
-                            R.color.main_bg));
+//                    takefood.setBackgroundColor(getResources().getColor(
+//                            R.color.main_bg));
                     takefoodtxt.setTextColor(getResources().getColor(
                             R.color.bottom_nav_text_color_check));
                     takefoodimg.setImageResource(R.drawable.takefoodc);
                     break;
                 case 3:
-                    shopcar.setBackgroundColor(getResources().getColor(
-                            R.color.main_bg));
+//                    shopcar.setBackgroundColor(getResources().getColor(
+//                            R.color.main_bg));
                     shopcattxt.setTextColor(getResources().getColor(
                             R.color.bottom_nav_text_color_check));
                     shopimg.setImageResource(R.drawable.shopc);
                     break;
                 case 4:
-                    mine.setBackgroundColor(getResources().getColor(
-                            R.color.main_bg));
+//                    mine.setBackgroundColor(getResources().getColor(
+//                            R.color.main_bg));
                     minetxt.setTextColor(getResources().getColor(
                             R.color.bottom_nav_text_color_check));
                     mineimg.setImageResource(R.drawable.minec);

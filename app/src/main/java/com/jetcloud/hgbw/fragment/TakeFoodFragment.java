@@ -217,8 +217,8 @@ public class TakeFoodFragment extends BaseFragment implements XListView.IXListVi
 						mListView.setFootText(getActivity().getString(R.string.footer_hint_load_no_more));
 					} else {
 						mListView.setFootText(getActivity().getString(R.string.footer_hint_load_normal));
-						adapter.addNewData(newOrdersBeenList);
 						perPageNum = ordersBeenList.size() + newOrdersBeenList.size();
+						adapter.addNewData(newOrdersBeenList);
 						Log.i(TAG_LOG, "getOrderDataFromJson perPageNum: " + perPageNum);
 						onLoad();
 					}
@@ -235,9 +235,6 @@ public class TakeFoodFragment extends BaseFragment implements XListView.IXListVi
 		params.addBodyParameter("page", String.valueOf(page));
 		params.setCacheMaxAge(1000 * 60);
 
-		x.task().run(new Runnable() {
-			@Override
-			public void run() {
 				x.http().get(params, new Callback.CacheCallback<String>() {
 
 					private boolean hasError = false;
@@ -300,15 +297,6 @@ public class TakeFoodFragment extends BaseFragment implements XListView.IXListVi
 					}
 
 				});
-//				x.task().post(new Runnable() {
-//					@Override
-//					public void run() {
-//						progress = new CustomProgressDialog(getActivity(), "请稍后", R.drawable.fram2);
-//						progress.show();
-//					}
-//				});
-			}
-		});
 
 	}
 	@Override

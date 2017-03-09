@@ -100,12 +100,13 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/line"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#ffffff"
-        android:orientation="horizontal"
         android:gravity="center_vertical|right"
+        android:orientation="horizontal"
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
 
@@ -113,11 +114,11 @@
             android:id="@+id/btn_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shopbuttonbg"
             android:text="退款"
             android:textColor="@color/black"
-            android:background="@drawable/shopbuttonbg"
             android:textSize="@dimen/text_big"/>
 
 
@@ -125,13 +126,13 @@
             android:id="@+id/btn_go_to_take_food"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
             android:layout_marginLeft="3dp"
             android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
+            android:background="@drawable/bybuttonbg"
             android:gravity="center"
             android:text="取餐"
             android:textColor="@color/white"
-            android:background="@drawable/bybuttonbg"
             android:textSize="@dimen/text_big"/>
 
     </LinearLayout>

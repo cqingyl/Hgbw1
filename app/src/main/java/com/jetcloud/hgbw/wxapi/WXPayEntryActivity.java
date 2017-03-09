@@ -121,6 +121,7 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
 				Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				intent.putExtra(HgbwStaticString.JUMP_RESOURCE, WXPayEntryActivity.class.getSimpleName());
+				WXPayEntryActivity.this.finish();
 				startActivity(intent);
 			} else {
 				WXPayEntryActivity.this.finish();

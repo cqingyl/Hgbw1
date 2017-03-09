@@ -106,6 +106,11 @@ public class MyOrderActivity extends BaseActivity implements XListView.IXListVie
         MyOrderBean myOrderBean = gson.fromJson(result, MyOrderBean.class);
         List<MyOrderBean.OrdersBean> newOrdersBeenList = myOrderBean.getOrders();
 
+        for(MyOrderBean.OrdersBean bean : newOrdersBeenList){
+            Log.i("state->>>>", "getOrderDataFromJson: " + bean.getState());
+            boolean b =  bean.getState().equals("1");
+            Log.i("state->>>>", String.valueOf(b));
+        }
             if (page == 0) {
                 if (newOrdersBeenList == null || newOrdersBeenList.isEmpty()) {
                     mListView.setVisibility(View.GONE);
@@ -129,8 +134,11 @@ public class MyOrderActivity extends BaseActivity implements XListView.IXListVie
                     mListView.setFootText(MyOrderActivity.this.getString(R.string.footer_hint_load_no_more));
                 } else {
                     mListView.setFootText(MyOrderActivity.this.getString(R.string.footer_hint_load_normal));
-                    adapter.addNewData(newOrdersBeenList);
                     perPageNum = ordersBeenList.size() + newOrdersBeenList.size();
+                    adapter.addNewData(newOrdersBeenList);
+
+//                    Log.i(TAG_LOG, "getOrderDataFromJson: " + ordersBeenList.size());
+//                    Log.i(TAG_LOG, "getOrderDataFromJson new: " +  newOrdersBeenList.size());
                     Log.i(TAG_LOG, "getOrderDataFromJson perPageNum: " + perPageNum);
                     onLoad();
                 }
@@ -146,9 +154,7 @@ public class MyOrderActivity extends BaseActivity implements XListView.IXListVie
         params.addBodyParameter("page", String.valueOf(page));
         params.setCacheMaxAge(1000 * 60);
 
-        x.task().run(new Runnable() {
-            @Override
-            public void run() {
+
                 x.http().get(params, new Callback.CacheCallback<String>() {
 
                     private boolean hasError = false;
@@ -207,15 +213,6 @@ public class MyOrderActivity extends BaseActivity implements XListView.IXListVie
                     }
 
                 });
-//                x.task().post(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        progress = new CustomProgressDialog(MyOrderActivity.this, "请稍后", R.drawable.fram2);
-//                        progress.show();
-//                    }
-//                });
-            }
-        });
 
     }
     @Override

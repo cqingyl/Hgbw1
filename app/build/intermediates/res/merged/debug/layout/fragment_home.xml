@@ -1,351 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                xmlns:tools="http://schemas.android.com/tools"
                 android:background="@color/main_bg"
                 android:orientation="vertical">
 
-    <com.jetcloud.hgbw.view.ObservableScrollView
-        android:id="@+id/sv_all_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+    <include layout="@layout/homefragment_title"/>
+    <!--<com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout-->
+        <!--android:id="@+id/shsrl_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+        <!--<com.scu.miomin.shswiperefresh.view.ShareScrollView-->
+            <!--android:id="@+id/sv_all_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
 
-            <com.jetcloud.hgbw.view.ImageCycleView
-                android:id="@+id/binner"
-                android:layout_width="match_parent"
-                android:layout_height="200dp" />
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
 
-            <LinearLayout
-                android:id="@+id/bottom_bar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:gravity="center"
-                android:orientation="horizontal" >
-
-                <RadioGroup
-                    android:id="@+id/rdo_group"
+                <com.jetcloud.hgbw.view.widget.XListView
+                    android:id="@+id/lv_home"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:divider="@color/line"
+                    android:dividerHeight="1dp"/>
 
-                    <RadioButton
-                        android:id="@+id/rb_home"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:gravity="center"
-                        android:checked="true"
-                        android:button="@null"
-                        android:drawablePadding="3dp"
-                        android:background="@drawable/radbtn_bg"
-                        android:drawableTop="@drawable/newfood"
-                        android:text="新品"
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line"/>
 
-                        android:textColor="@color/bottom_nav_text_color"
-                        android:textSize="@dimen/text_normal"
-                />
+                <TextView
+                    android:id="@+id/empty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="没网络"
+                    android:visibility="gone"/>
+            <!--</LinearLayout>-->
+        <!--</com.scu.miomin.shswiperefresh.view.ShareScrollView>-->
+    <!--</com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout>-->
 
-            <RadioButton
-                android:id="@+id/rb_takefood"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:button="@null"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:background="@drawable/radbtn_bg"
-                android:drawableTop="@drawable/hot"
-                android:drawablePadding="3dp"
-                android:text="热卖"
-                android:textColor="@color/bottom_nav_text_color"
-                android:textSize="@dimen/text_normal"
-                />
-            <RadioButton
-                android:id="@+id/rb_shopcar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:button="@null"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:drawablePadding="3dp"
-                android:background="@drawable/radbtn_bg"
-                android:drawableTop="@drawable/groupfood"
-                android:text="套餐"
-                android:textColor="@color/bottom_nav_text_color"
-                android:textSize="@dimen/text_normal"
-                />
-            <RadioButton
-                android:id="@+id/rb_mine"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:button="@null"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:drawablePadding="3dp"
-                android:background="@drawable/radbtn_bg"
-                android:drawableTop="@drawable/drink"
-                android:text="饮品"
-                android:textColor="@color/bottom_nav_text_color"
-                android:textSize="@dimen/text_normal"
-                />
-        </RadioGroup>
-        <!--<LinearLayout-->
-                    <!--android:id="@+id/home"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:background="@drawable/click_bg"-->
-                    <!--android:clickable="true"-->
-                    <!--android:gravity="center"-->
-                    <!--android:orientation="vertical"-->
-                    <!--android:paddingBottom="6dp"-->
-                    <!--android:paddingTop="6dp" >-->
 
-                    <!--<ImageView-->
-                        <!--android:id="@+id/homeimg"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:paddingBottom="3dp"-->
-                        <!--android:paddingTop="3dp"-->
-                        <!--android:src="@drawable/newfood" />-->
 
-                    <!--<TextView-->
-                        <!--android:id="@+id/hometxt"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginTop="2dp"-->
-                        <!--android:text="新品"-->
-                        <!--android:textColor="@color/bottom_nav_text_color"-->
-                        <!--android:textSize="@dimen/text_normal" />-->
-                <!--</LinearLayout>-->
-
-                <!--<LinearLayout-->
-                    <!--android:id="@+id/takefood"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:background="@drawable/click_bg"-->
-                    <!--android:clickable="true"-->
-                    <!--android:gravity="center"-->
-                    <!--android:orientation="vertical"-->
-                    <!--android:paddingBottom="6dp"-->
-                    <!--android:paddingTop="6dp" >-->
-
-                    <!--<ImageView-->
-                        <!--android:id="@+id/takefoodimg"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:paddingBottom="3dp"-->
-                        <!--android:paddingTop="3dp"-->
-                        <!--android:src="@drawable/hot" />-->
-
-                    <!--<TextView-->
-                        <!--android:id="@+id/takefoodtxt"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:text="热卖"-->
-                        <!--android:textColor="@color/bottom_nav_text_color"-->
-                        <!--android:textSize="@dimen/text_normal" />-->
-                <!--</LinearLayout>-->
-
-                <!--<LinearLayout-->
-                    <!--android:id="@+id/shopcar"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:background="@drawable/click_bg"-->
-                    <!--android:clickable="true"-->
-                    <!--android:gravity="center"-->
-                    <!--android:orientation="vertical"-->
-                    <!--android:paddingBottom="6dp"-->
-                    <!--android:paddingTop="6dp" >-->
-
-                    <!--<ImageView-->
-                        <!--android:id="@+id/shopcarimg"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_centerInParent="true"-->
-                        <!--android:paddingBottom="3dp"-->
-                        <!--android:paddingTop="3dp"-->
-                        <!--android:src="@drawable/groupfood" />-->
-
-                    <!--<TextView-->
-                        <!--android:id="@+id/shopcartxt"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:text="套餐"-->
-                        <!--android:textColor="@color/bottom_nav_text_color"-->
-                        <!--android:textSize="@dimen/text_normal" />-->
-                <!--</LinearLayout>-->
-
-                <!--<LinearLayout-->
-                    <!--android:id="@+id/mine"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:background="@drawable/click_bg"-->
-                    <!--android:clickable="true"-->
-                    <!--android:gravity="center"-->
-                    <!--android:orientation="vertical"-->
-                    <!--android:paddingBottom="6dp"-->
-                    <!--android:paddingTop="6dp" >-->
-
-                    <!--<ImageView-->
-                        <!--android:id="@+id/mineimg"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:paddingBottom="3dp"-->
-                        <!--android:paddingTop="3dp"-->
-                        <!--android:src="@drawable/drink" />-->
-
-                    <!--<TextView-->
-                        <!--android:id="@+id/minetxt"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:text="饮品"-->
-                        <!--android:textColor="@color/bottom_nav_text_color"-->
-                        <!--android:textSize="@dimen/text_normal" />-->
-                <!--</LinearLayout>-->
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/line" />
-
-            <com.jetcloud.hgbw.view.MyListView
-                android:id="@+id/lv_home"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:divider="@color/line"
-                android:dividerHeight="1dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/line" />
-            <TextView
-                android:id="@+id/empty_view"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="没网络"/>
-        </LinearLayout>
-    </com.jetcloud.hgbw.view.ObservableScrollView>
-
-    <LinearLayout
-        android:id="@+id/ll_top_nav"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/top_bar_h"
-        android:background="@color/white"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-    <LinearLayout
-        android:id="@+id/ll_location"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:gravity="center"
-        android:padding="8dp"
-        android:background="@drawable/btn"
-        android:orientation="horizontal" >
-        <ImageView
-            android:id="@+id/iv_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/dingwei" />
-
-        <TextView
-            android:id="@+id/tv_city"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            tools:text="北京"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_huge" />
-    </LinearLayout>
-        <!--<ImageView-->
-            <!--android:layout_marginLeft="10dp"-->
-            <!--android:layout_marginRight="10dp"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/xiala" />-->
-
-        <LinearLayout
-            android:id="@+id/ll_choose_machine"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="7"
-            android:gravity="center"
-            android:paddingRight="10dp"
-            android:background="@drawable/btn"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:id="@+id/tv_machine_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                tools:text="1号机"/>
-            <ImageView
-                android:layout_marginLeft="3dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/machine_choose"/>
-            <!--<EditText-->
-               <!---->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_weight="1"-->
-                <!--android:background="@null"-->
-                <!--android:hint="请输入食物或地名"-->
-                <!--android:paddingLeft="10dp"-->
-                <!--android:textSize="@dimen/text_big" />-->
-            <!--<TextView-->
-                <!--android:id="@+id/tv_top_search"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_weight="1"-->
-                <!--android:text="请输入食物或地名"-->
-                <!--android:paddingLeft="10dp"-->
-                <!--android:gravity="center_vertical"-->
-                <!--android:background="@null"-->
-                <!--android:textSize="@dimen/text_big"/>-->
-        </LinearLayout>
-    <LinearLayout
-        android:id="@+id/ll_search"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:gravity="center"
-        android:background="@drawable/btn"
-        android:orientation="horizontal" >
-            <ImageView
-                android:layout_gravity="center_vertical"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:layout_marginRight="5dp"
-                android:src="@drawable/sousuo" />
-        </LinearLayout>
-    </LinearLayout>
-</RelativeLayout>
+</LinearLayout>

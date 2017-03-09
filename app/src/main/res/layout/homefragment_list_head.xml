@@ -1,0 +1,92 @@
+<LinearLayout
+    android:id="@+id/bottom_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.jetcloud.hgbw.view.ImageCycleView
+        android:id="@+id/binner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <RadioGroup
+        android:id="@+id/rdo_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radbtn_bg"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/newfood"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="新品"
+
+            android:textColor="@color/bottom_nav_text_color"
+            android:textSize="@dimen/text_normal"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_takefood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radbtn_bg"
+            android:button="@null"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/hot"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="热卖"
+            android:textColor="@color/bottom_nav_text_color"
+            android:textSize="@dimen/text_normal"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_shopcar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radbtn_bg"
+            android:button="@null"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/groupfood"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="套餐"
+            android:textColor="@color/bottom_nav_text_color"
+            android:textSize="@dimen/text_normal"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radbtn_bg"
+            android:button="@null"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/drink"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="饮品"
+            android:textColor="@color/bottom_nav_text_color"
+            android:textSize="@dimen/text_normal"
+            />
+    </RadioGroup>
+
+</LinearLayout>

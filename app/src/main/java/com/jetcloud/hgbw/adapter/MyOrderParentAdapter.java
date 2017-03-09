@@ -2,6 +2,7 @@ package com.jetcloud.hgbw.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -86,7 +87,7 @@ public class MyOrderParentAdapter extends BaseAdapter {
 
 
     @Override
-    public View getView(int i, View convertView, ViewGroup viewGroup) {
+    public View getView(final int i, View convertView, ViewGroup viewGroup) {
 
         final MyOrderViewHolder holder;
         if (convertView == null) {
@@ -113,7 +114,6 @@ public class MyOrderParentAdapter extends BaseAdapter {
         } else if (ordersBean.getPay_type().equals(HgbwStaticString.PAY_WAY_CNY)){
             holder.tv_total_price.setText(String.format(context.getString(R.string.take_food_total), ordersBean.getCost_real()));
         }
-        String foodStateText = null;
         /**
          * # state = {
          #     '0': '未支付',
@@ -124,18 +124,28 @@ public class MyOrderParentAdapter extends BaseAdapter {
          # }
          *
          * */
-        if (ordersBean.getState().equals("1")) {
-            holder.tv_food_type.setTextColor(context.getResources().getColor(R.color.red));
+        String foodStateText = null;
+        int color = 0;
+        String state = ordersBean.getState();
+        Log.i("my order-->", "position: " + i + "\nstate: " + state);
+        if (state.equals("1")) {
+            color = context.getResources().getColor(R.color.red);
             foodStateText = "待取餐";
-        } else if (ordersBean.getState().equals("2")){
+            setButtonToWhite(holder.btn_cancel);
+            setButtonToRed(holder.btn_go_to_take_food);
+        } else if (state.equals("2")){
             foodStateText = "已取餐";
-            holder.tv_food_type.setTextColor(context.getResources().getColor(R.color.gray));
-//            holder.btn_go_to_take_food.setVisibility(View.GONE);
-        } else if (ordersBean.getState().equals("3")) {
+            setButtonToGrey(holder.btn_cancel);
+            setButtonToGrey(holder.btn_go_to_take_food);
+            color = context.getResources().getColor(R.color.gray);
+
+        } else if (state.equals("3")) {
             foodStateText = "已退款";
-            holder.tv_food_type.setTextColor(context.getResources().getColor(R.color.gray));
-//            holder.btn_go_to_take_food.setVisibility(View.GONE);
+            setButtonToGrey(holder.btn_cancel);
+            setButtonToGrey(holder.btn_go_to_take_food);
+            color = context.getResources().getColor(R.color.gray);
         }
+        holder.tv_food_type.setTextColor(color);
         holder.tv_food_type.setText(foodStateText);
 
         holder.btn_cancel.setOnClickListener(new View.OnClickListener() {
@@ -165,7 +175,7 @@ public class MyOrderParentAdapter extends BaseAdapter {
                                 dialog.dismiss();
                             }
                         });
-                        dialog.setNegativeButton("确定", new View.OnClickListener() {
+                        dialog.setNegativeButton("取消", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 dialog.dismiss();
@@ -222,6 +232,23 @@ public class MyOrderParentAdapter extends BaseAdapter {
             }
         });
         return convertView;
+    }
+
+    private void setButtonToGrey(Button greyButton){
+        greyButton.setBackground(context.getResources().getDrawable(R.drawable.btn_grey));
+        greyButton.setTextColor(Color.GRAY);
+        greyButton.setEnabled(false);
+    }
+
+    private void setButtonToRed(Button redButton){
+        redButton.setBackground(context.getResources().getDrawable(R.drawable.bybuttonbg));
+        redButton.setTextColor(Color.WHITE);
+        redButton.setEnabled(true);
+    }
+    private void setButtonToWhite(Button redButton){
+        redButton.setBackground(context.getResources().getDrawable(R.drawable.shopbuttonbg));
+        redButton.setTextColor(Color.BLACK);
+        redButton.setEnabled(true);
     }
 
     private void refundRequest(String orderNum) {
@@ -285,6 +312,17 @@ public class MyOrderParentAdapter extends BaseAdapter {
                                     final CusAlertDialog dialog = new CusAlertDialog(context);
                                     dialog.setTitle("提示");
                                     dialog.setContent("退款成功");
+                                    dialog.setPositiveButton("确定", new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            dialog.dismiss();
+                                        }
+                                    });
+                                    dialog.show();
+                                } else if (jsonObject.has("status") && jsonObject.getString("status").equals("fail")) {
+                                    final CusAlertDialog dialog = new CusAlertDialog(context);
+                                    dialog.setTitle("提示");
+                                    dialog.setContent("退款失败");
                                     dialog.setPositiveButton("确定", new View.OnClickListener() {
                                         @Override
                                         public void onClick(View view) {

@@ -12,6 +12,10 @@
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_forget_password.xml"
     },
     {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\toolbar.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\toolbar.xml"
+    },
+    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_my_order_chilren.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\item_my_order_chilren.xml"
     },
@@ -29,11 +33,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_alert_dialog_material.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_list_menu_item_radio.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_bind_next.xml",
@@ -41,11 +45,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_dialog_title_material.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_details.xml",
@@ -53,7 +57,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_navigation_menu_item.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_edit_account.xml",
@@ -61,11 +65,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_navigation_item.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_navigation_item.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_bar_title_item.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_order.xml",
@@ -81,7 +85,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\shopcarfragmentlist_grop_item.xml",
@@ -89,11 +93,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_media.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_action_tombstone.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\notification_action_tombstone.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_nav.xml",
@@ -105,11 +109,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\select_dialog_multichoice_material.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_refresh_header_normal.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\cn.bingoogolapple\\bga-refreshlayout\\1.1.7\\res\\layout\\view_refresh_header_normal.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\fd1ce8200c86c2cbe316f4089261b28dfa134c07\\output\\res\\layout\\view_refresh_header_normal.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_loading.xml",
@@ -117,7 +121,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_list_menu_item_layout.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qrcode.xml",
@@ -137,15 +141,19 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_alert_dialog_title_material.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\homefragment_list_head.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\homefragment_list_head.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_bar_up_container.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popu_machine_list_choose.xml",
@@ -161,7 +169,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_capture.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\Hgbw1\\zxinglibrary\\unspecified\\res\\layout\\activity_capture.xml"
+        "source": "F:\\work\\Hgbw1\\zxinglibrary\\build\\intermediates\\bundles\\default\\res\\layout\\activity_capture.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_takefood.xml",
@@ -169,7 +177,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_refresh_header_meituan.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\cn.bingoogolapple\\bga-refreshlayout\\1.1.7\\res\\layout\\view_refresh_header_meituan.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\fd1ce8200c86c2cbe316f4089261b28dfa134c07\\output\\res\\layout\\view_refresh_header_meituan.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_location.xml",
@@ -177,7 +185,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_list_menu_item_icon.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_alert_dialog_with_password.xml",
@@ -185,7 +193,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_mode_bar.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\ad_cycle_view.xml",
@@ -197,7 +205,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_expanded_menu_layout.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_pay_ticket.xml",
@@ -205,11 +213,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_icon_group.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\notification_template_icon_group.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\vw_header.xml",
@@ -217,19 +225,19 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_screen_simple.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_screen_simple.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_menu_item_layout.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_normal_refresh_footer.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\cn.bingoogolapple\\bga-refreshlayout\\1.1.7\\res\\layout\\view_normal_refresh_footer.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\fd1ce8200c86c2cbe316f4089261b28dfa134c07\\output\\res\\layout\\view_normal_refresh_footer.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pay_result.xml",
@@ -245,11 +253,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_media_custom.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\notification_template_media_custom.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_choosephoto.xml",
@@ -265,15 +273,15 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_navigation_item_separator.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\select_dialog_item_material.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\select_dialog_item_material.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_detail_pay.xml",
@@ -281,7 +289,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_search_view.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_search_view.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_overlay.xml",
@@ -305,11 +313,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_navigation_item_subheader.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_layout_snackbar.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_layout_snackbar.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_bndemoguide.xml",
@@ -317,15 +325,15 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_layout_snackbar_include.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_navigation_menu.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_navigation_menu.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_refresh_header_mooc_style.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\cn.bingoogolapple\\bga-refreshlayout\\1.1.7\\res\\layout\\view_refresh_header_mooc_style.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\fd1ce8200c86c2cbe316f4089261b28dfa134c07\\output\\res\\layout\\view_refresh_header_mooc_style.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_comfirm_pay.xml",
@@ -337,7 +345,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_lines_media.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\notification_template_lines_media.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_order_two.xml",
@@ -345,11 +353,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_select_dialog_material.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_bottom_navigation_item.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_bottom_navigation_item.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_wallet.xml",
@@ -365,11 +373,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_action.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\notification_action.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_screen_toolbar.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_my_order_parent.xml",
@@ -385,11 +393,15 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_ticket.xml",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\activity_my_ticket.xml"
+    },
+    {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\homefragment_title.xml",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\layout\\homefragment_title.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting.xml",
@@ -401,7 +413,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_part_time.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\notification_template_part_time.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\top_bar.xml",
@@ -409,19 +421,19 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_layout_tab_text.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_layout_tab_text.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_menu_item_action_area.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_bottom_sheet_dialog.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_car_pay.xml",
@@ -429,11 +441,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_screen_content_include.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_screen_content_include.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_alert_dialog.xml",
@@ -441,19 +453,19 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_menu_layout.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\notification_template_part_chronometer.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_layout_tab_icon.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_text_input_password_icon.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_text_input_password_icon.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
@@ -461,7 +473,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_into_account.xml",
@@ -469,14 +481,14 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_refresh_header_stickiness.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\cn.bingoogolapple\\bga-refreshlayout\\1.1.7\\res\\layout\\view_refresh_header_stickiness.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\fd1ce8200c86c2cbe316f4089261b28dfa134c07\\output\\res\\layout\\view_refresh_header_stickiness.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_activity_chooser_view.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout\\design_navigation_item_header.xml"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\layout\\design_navigation_item_header.xml"
     }
 ]

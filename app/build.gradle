@@ -56,4 +56,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
     compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    compile 'com.miomin:shswiperefreshlayout:1.2.0'
 }

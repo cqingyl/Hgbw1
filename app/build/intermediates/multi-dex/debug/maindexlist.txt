@@ -112,7 +112,9 @@ android/support/annotation/Nullable.class
 org/apache/http/impl/client/AbstractHttpClient.class
 android/support/v4/view/ViewCompat$Api24ViewCompatImpl.class
 android/support/v4/util/Pools$SimplePool.class
+com/scu/miomin/shswiperefresh/drawable/MaterialProgressDrawable$2.class
 android/support/v4/util/ArrayMap$1.class
+com/scu/miomin/shswiperefresh/drawable/MaterialProgressDrawable$ProgressDrawableSize.class
 android/support/annotation/RequiresPermission$Read.class
 com/jetcloud/hgbw/fragment/BaseFragment.class
 android/support/annotation/ArrayRes.class
@@ -200,7 +202,9 @@ android/support/multidex/MultiDexApplication.class
 android/support/v7/widget/RecyclerView$4.class
 android/support/v4/content/res/ConfigurationHelper.class
 org/xutils/http/RequestParams.class
+com/scu/miomin/shswiperefresh/drawable/MaterialProgressDrawable.class
 android/support/v7/widget/LinearLayoutCompat$DividerMode.class
+com/scu/miomin/shswiperefresh/drawable/MaterialProgressDrawable$Ring.class
 com/jetcloud/hgbw/activity/BindingActivity.class
 android/support/v7/widget/RecyclerView$OnFlingListener.class
 android/support/v7/graphics/drawable/DrawerArrowDrawable$ArrowDirection.class
@@ -312,6 +316,7 @@ org/xutils/http/annotation/HttpResponse.class
 org/apache/http/conn/scheme/SocketFactoryAdaptor.class
 android/support/v7/view/menu/MenuBuilder.class
 android/support/annotation/CheckResult.class
+com/scu/miomin/shswiperefresh/drawable/MaterialProgressDrawable$1.class
 android/support/v4/media/VolumeProviderCompat.class
 android/support/v4/view/ViewCompat$ICSViewCompatImpl.class
 android/support/annotation/AnimRes.class
@@ -435,6 +440,7 @@ com/google/gson/annotations/Until.class
 android/support/design/widget/HeaderBehavior.class
 android/support/v4/widget/EdgeEffectCompat.class
 android/support/v4/widget/MaterialProgressDrawable$Ring.class
+com/scu/miomin/shswiperefresh/drawable/MaterialProgressDrawable$3.class
 com/jetcloud/hgbw/adapter/MachineListAdapter$ViewHolder.class
 android/support/design/widget/TabLayout.class
 android/support/v4/view/InputDeviceCompat.class

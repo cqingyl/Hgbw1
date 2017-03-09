@@ -17,23 +17,23 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png"
-    },
-    {
-        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\go.png",
-        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-hdpi\\go.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\cny.png",
         "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-hdpi\\cny.png"
     },
     {
+        "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\go.png",
+        "source": "F:\\work\\Hgbw1\\app\\src\\main\\res\\drawable-hdpi\\go.png"
+    },
+    {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\empty_cart.png",
@@ -61,11 +61,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\dingcan.png",
@@ -73,7 +73,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\design_ic_visibility_off.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\drawable-hdpi-v4\\design_ic_visibility_off.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\drawable-hdpi-v4\\design_ic_visibility_off.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\mark_popu.png",
@@ -85,7 +85,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\dingwei.png",
@@ -93,7 +93,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\loading.png",
@@ -101,7 +101,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\aboutus.png",
@@ -109,31 +109,31 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_light.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vr9.png",
@@ -141,11 +141,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_text_select_handle_left_mtrl_dark.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\sousuo.png",
@@ -153,7 +153,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\hgbw.png",
@@ -189,11 +189,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\cicle_banner_dian_blur.png",
@@ -201,7 +201,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\banner_dian_blur.png",
@@ -209,7 +209,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\mylocation.png",
@@ -221,11 +221,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\home.png",
@@ -233,7 +233,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_half_black_48dp.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_48dp.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\mymoney.png",
@@ -241,11 +241,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\myticket.png",
@@ -253,7 +253,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_dark.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\banner_dian_focus.png",
@@ -269,11 +269,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\mark.png",
@@ -293,11 +293,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_focused_holo.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\mypoint.png",
@@ -309,7 +309,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\notification_bg_normal.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\setting.png",
@@ -329,7 +329,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ticketleft.png",
@@ -353,19 +353,19 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\design_ic_visibility.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\drawable-hdpi-v4\\design_ic_visibility.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\83986711b6f7e2dae69b0f6ad5eb3db45d8f8843\\output\\res\\drawable-hdpi-v4\\design_ic_visibility.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\takefoodc.png",
@@ -377,11 +377,11 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\homec.png",
@@ -405,7 +405,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\mine_bg.png",
@@ -421,7 +421,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\machine_choose.png",
@@ -429,23 +429,23 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\zhankai.png",
@@ -453,7 +453,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_light.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\shop.png",
@@ -461,7 +461,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\notification_bg_low_normal.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_checked.png",
@@ -481,15 +481,15 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_text_select_handle_left_mtrl_light.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\nav_pressed.png",
@@ -497,7 +497,7 @@
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
-        "source": "F:\\work\\Hgbw1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+        "source": "C:\\Users\\Cqing\\.android\\build-cache\\2d64084cb4583c17d62ae5c8f3dbdab2d3e61cd7\\output\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "F:\\work\\Hgbw1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\takefood.png",

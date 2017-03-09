@@ -31,6 +31,12 @@ import com.jetcloud.hgbw.utils.Out;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 没用这个
+ *
+ *
+ *
+ */
 public class BaiduMapActivity extends AppCompatActivity implements View.OnClickListener {
     private MapView mMapView;
     private BaiduMap mBaiduMap;

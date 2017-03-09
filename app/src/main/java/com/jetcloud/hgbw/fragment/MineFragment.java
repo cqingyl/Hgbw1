@@ -27,7 +27,6 @@ import com.jetcloud.hgbw.R;
 import com.jetcloud.hgbw.activity.EditAccountActivity;
 import com.jetcloud.hgbw.activity.LoginActivity;
 import com.jetcloud.hgbw.activity.MyOrderActivity;
-import com.jetcloud.hgbw.activity.MyTicketActivity;
 import com.jetcloud.hgbw.activity.MyWalletActivity;
 import com.jetcloud.hgbw.activity.RegisterActivity;
 import com.jetcloud.hgbw.app.HgbwUrl;
@@ -198,7 +197,8 @@ public class MineFragment extends BaseFragment {
                 startActivity(new Intent(getActivity(), LoginActivity.class));
             } else {
                 getUserInfoRequest(NORMAL_STATUS);
-                startActivity(new Intent(getActivity(), MyTicketActivity.class));
+                Out.Toast(getActivity(), "该功能暂未开放");
+//                startActivity(new Intent(getActivity(), MyTicketActivity.class));
 
             }
         } else if (view == mypoint) {
@@ -206,7 +206,7 @@ public class MineFragment extends BaseFragment {
                 startActivity(new Intent(getActivity(), LoginActivity.class));
             } else {
                 getUserInfoRequest(NORMAL_STATUS);
-                Out.Toast(getActivity(), "我的卡积分");
+                Out.Toast(getActivity(), "该功能暂未开放");
             }
         } else if (view == mymoney) {
             if (SharedPreferenceUtils.getIdentity().equals(SharedPreferenceUtils.WITHOUT_LOGIN)){
@@ -419,9 +419,10 @@ public class MineFragment extends BaseFragment {
         params.addBodyParameter("identity", SharedPreferenceUtils.getIdentity());
         params.setCacheMaxAge(1000 * 60);
 
-        x.task().run(new Runnable() {
-            @Override
-            public void run() {
+        if (progress == null) {
+            progress = new CustomProgressDialog(getActivity(), "请稍后", R.drawable.fram2);
+        }
+        progress.show();
                 x.http().post(params, new Callback.CacheCallback<String>() {
 
                     private boolean hasError = false;
@@ -482,15 +483,6 @@ public class MineFragment extends BaseFragment {
                     }
 
                 });
-                x.task().post(new Runnable() {
-                    @Override
-                    public void run() {
-                        progress = new CustomProgressDialog(getActivity(), "请稍后", R.drawable.fram2);
-                        progress.show();
-                    }
-                });
-            }
-        });
 
     }
 
@@ -522,9 +514,7 @@ public class MineFragment extends BaseFragment {
         params.addQueryStringParameter("identity", SharedPreferenceUtils.getIdentity());
         params.setCacheMaxAge(1000 * 60);
 
-        x.task().run(new Runnable() {
-            @Override
-            public void run() {
+
                 x.http().get(params, new Callback.CacheCallback<String>() {
 
                     private boolean hasError = false;
@@ -594,8 +584,6 @@ public class MineFragment extends BaseFragment {
                     }
 
                 });
-            }
-        });
 
     }
 
@@ -637,9 +625,7 @@ public class MineFragment extends BaseFragment {
         //缓存时间
         params.addBodyParameter("identity", SharedPreferenceUtils.getIdentity());
         params.setCacheMaxAge(1000 * 60);
-        x.task().run(new Runnable() {
-            @Override
-            public void run() {
+
                 x.http().post(params, new Callback.CacheCallback<String>() {
 
                     private boolean hasError = false;
@@ -694,15 +680,6 @@ public class MineFragment extends BaseFragment {
                     }
 
                 });
-                x.task().post(new Runnable() {
-                    @Override
-                    public void run() {
-                        progress = new CustomProgressDialog(getActivity(), "请稍后", R.drawable.fram2);
-                        progress.show();
-                    }
-                });
-            }
-        });
 
     }
 

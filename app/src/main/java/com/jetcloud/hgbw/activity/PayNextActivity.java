@@ -336,11 +336,28 @@ public class PayNextActivity extends BaseActivity {
                             if (!hasError && result != null) {
                                 Log.i(TAG_LOG, "payRequest onFinished: " + result);
                                 try {
-                                    if (payWay != null && payWay.equals(HgbwStaticString.PAY_WAY_VR9)){
-                                        getVR9PayDataFromJson(result);
-                                    } else if (payWay != null && payWay.equals(HgbwStaticString.PAY_WAY_CNY)) {
-                                        requestWxPay(result);
-//                                        startActivity(new Intent(PayNextActivity.this, WXPayEntryActivity.class));
+                                    JSONObject json = new JSONObject(result);
+                                    if(json.getString("status").equals("fail")) {
+                                        final CusAlertDialog cusAlertDialog = new CusAlertDialog(PayNextActivity.this);
+                                        cusAlertDialog.setTitle("支付失败");
+                                        cusAlertDialog.setContent(json.getString("message"));
+                                        cusAlertDialog.setPositiveButton("确定", new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                cusAlertDialog.dismiss();
+                                                Intent intent = new Intent(PayNextActivity.this, MainActivity.class);
+                                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                                startActivity(intent);
+                                            }
+                                        });
+                                        cusAlertDialog.show();
+                                    } else {
+                                        if (payWay != null && payWay.equals(HgbwStaticString.PAY_WAY_VR9)){
+                                            getVR9PayDataFromJson(result);
+                                        } else if (payWay != null && payWay.equals(HgbwStaticString.PAY_WAY_CNY)) {
+                                            requestWxPay(result);
+    //                                        startActivity(new Intent(PayNextActivity.this, WXPayEntryActivity.class));
+                                        }
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
@@ -367,61 +384,76 @@ public class PayNextActivity extends BaseActivity {
      * 微信支付
      * */
     public void requestWxPay(final String result) throws JSONException {
-
+        final CusAlertDialog cusAlertDialog = new CusAlertDialog(PayNextActivity.this);
         Button payBtn = (Button) findViewById(R.id.btn_pay);
         payBtn.setEnabled(false);
-//        x.task().run(new Runnable() {
-//            @Override
-//            public void run() {
-                try{
-                    if (api != null) {
-                        if (api.isWXAppInstalled()) {
-                            JSONObject json = new JSONObject(result);
-                            if(!json.has("retcode") ){
-                                PayReq req = new PayReq();
-                                //{   }
-                                req.appId			= json.getString("appid");
-                                req.partnerId		= json.getString("partnerid");
-                                req.prepayId		= json.getString("prepayid");
-                                req.nonceStr		= json.getString("noncestr");
-                                req.timeStamp		= json.getString("timestamp");
-                                req.packageValue	= json.getString("package");
-                                req.sign			= json.getString("sgin");
-                                String s = MD5.md5("appid="+req.appId+
-                                        "&noncestr="+req.nonceStr+
-                                        "&package=Sign=WXPay"+
-                                        "&partnerid="+req.partnerId+
-                                        "&prepayid="+req.prepayId+
-                                        "&timestamp="+req.timeStamp+"&key=f6dc74a523185690019a43fdeaf12596").toUpperCase();
-                                Log.i(TAG_LOG, "requestWxPay: " + s);
-                                // 将该app注册到微信
-                                api.registerApp(Constants.WX_APP_ID);
-                                Toast.makeText(PayNextActivity.this, "正常调起支付", Toast.LENGTH_SHORT).show();
-                                // 在支付之前，如果应用没有注册到微信，应该先调用IWXMsg.registerApp将应用注册到微信
-                                Log.i(TAG_LOG, "requestWxPay: " + api.sendReq(req));
-//                                if (!api.sendReq(req)) {
-//                                    x.task().post(new Runnable() {
-//                                        @Override
-//                                        public void run() {
-//                                            Out.Toast(PayNextActivity.this, "微信未响应");
-//                                        }
-//                                    });
-//                                }
-
-                            }else{
-                                Log.i(TAG_LOG, "返回错误: "+json.getString("retmsg"));
-                                Toast.makeText(PayNextActivity.this, "返回错误 : " + json.getString("retmsg"), Toast.LENGTH_SHORT).show();
-                            }
-
-                        }
-                    }
-                }catch(Exception e){
-                    Log.e(TAG_LOG, "异常: " + e.getMessage());
-                    Toast.makeText(PayNextActivity.this, "异常："+e.getMessage(), Toast.LENGTH_SHORT).show();
+        JSONObject json = new JSONObject(result);
+        if(json.getString("status").equals("fail")) {
+            cusAlertDialog.setTitle("支付失败");
+            cusAlertDialog.setContent(json.getString("message"));
+            cusAlertDialog.setPositiveButton("确定", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    cusAlertDialog.dismiss();
+                    Intent intent = new Intent(PayNextActivity.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
                 }
-//            }
-//        });
-        payBtn.setEnabled(true);
+            });
+            cusAlertDialog.show();
+        } else {
 
+    //        x.task().run(new Runnable() {
+    //            @Override
+    //            public void run() {
+                    try{
+                        if (api != null) {
+                            if (api.isWXAppInstalled()) {
+                                if(!json.has("retcode") ){
+                                    PayReq req = new PayReq();
+                                    //{   }
+                                    req.appId			= json.getString("appid");
+                                    req.partnerId		= json.getString("partnerid");
+                                    req.prepayId		= json.getString("prepayid");
+                                    req.nonceStr		= json.getString("noncestr");
+                                    req.timeStamp		= json.getString("timestamp");
+                                    req.packageValue	= json.getString("package");
+                                    req.sign			= json.getString("sgin");
+                                    String s = MD5.md5("appid="+req.appId+
+                                            "&noncestr="+req.nonceStr+
+                                            "&package=Sign=WXPay"+
+                                            "&partnerid="+req.partnerId+
+                                            "&prepayid="+req.prepayId+
+                                            "&timestamp="+req.timeStamp+"&key=f6dc74a523185690019a43fdeaf12596").toUpperCase();
+                                    Log.i(TAG_LOG, "requestWxPay: " + s);
+                                    // 将该app注册到微信
+                                    api.registerApp(Constants.WX_APP_ID);
+                                    Toast.makeText(PayNextActivity.this, "正常调起支付", Toast.LENGTH_SHORT).show();
+                                    // 在支付之前，如果应用没有注册到微信，应该先调用IWXMsg.registerApp将应用注册到微信
+                                    Log.i(TAG_LOG, "requestWxPay: " + api.sendReq(req));
+    //                                if (!api.sendReq(req)) {
+    //                                    x.task().post(new Runnable() {
+    //                                        @Override
+    //                                        public void run() {
+    //                                            Out.Toast(PayNextActivity.this, "微信未响应");
+    //                                        }
+    //                                    });
+    //                                }
+
+                                }else{
+                                    Log.i(TAG_LOG, "返回错误: "+json.getString("retmsg"));
+                                    Toast.makeText(PayNextActivity.this, "返回错误 : " + json.getString("retmsg"), Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        }
+                    }catch(Exception e){
+                        Log.e(TAG_LOG, "异常: " + e.getMessage());
+                        Toast.makeText(PayNextActivity.this, "异常："+e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+    //            }
+    //        });
+        }
+            payBtn.setEnabled(true);
     }
 }

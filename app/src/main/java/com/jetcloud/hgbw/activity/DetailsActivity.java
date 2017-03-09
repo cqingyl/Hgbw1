@@ -308,6 +308,7 @@ public class DetailsActivity extends BaseActivity {
 						carInfo.setP_local_number(1);
 						carInfo.setNum(shopCarInfo.getNum());
 						carInfo.setPrice_vr9(shopCarInfo.getPrice_vr9());
+						carInfo.setDescription(shopCarInfo.getDescription());
 						app.db.saveOrUpdate(machineInfo);
 					} else {
 						oldNum = carInfo.getP_local_number();
